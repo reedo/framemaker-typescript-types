@@ -664,7 +664,7 @@ declare class BodyPage {
 	/**
 	 * PageObject is any Page object i.e., BodyPage, MasterPage, ReferencePage, HiddenPage
 	 */
-	ApplyPageLayout(srcPage: PageObject): number;
+	ApplyPageLayout(srcPage: BodyPage | MasterPage | RefPage | HiddenPage): number;
 
 	Delete(): number;
 
@@ -1414,7 +1414,7 @@ declare class Column {
 
 	readonly ColumnTbl: Tbl;
 
-	InCond: Objects;
+	InCond: object[];
 
 	readonly NextColumnInTbl: Column;
 
@@ -1476,7 +1476,10 @@ declare class Command {
 
 	readonly ExpandOMaticParent: Command;
 
-	readonly Fcode: int;
+	/**
+	 * API declares the type as 'UInt'.
+	 */
+	readonly Fcode: number;
 
 	readonly Fcodes: UInts;
 
@@ -1858,7 +1861,7 @@ declare class Doc {
 
 	readonly HypertextValidateErr: number;
 
-	InCond: Objects;
+	InCond: object[];
 
 	IsIconified: number;
 
@@ -2444,30 +2447,30 @@ declare class Doc {
 
 	NewAnchoredTiApiClient(textloc: TextLoc): TiApiClient;
 
-	NewArc(parent: FrameObject): Arc;
+	NewArc(parent: AFrame | TextFrame | UnanchoredFrame): Arc;
 
-	NewEllipse(parent: FrameObject): Ellipse;
+	NewEllipse(parent: AFrame | TextFrame | UnanchoredFrame): Ellipse;
 
-	NewFlow(parent: FrameObject): Flow;
+	NewFlow(parent: AFrame | TextFrame | UnanchoredFrame): Flow;
 
 	/**
 	 * GraphicObject could be any FM graphic object, i.e,AFrame ,UnanchoredFrame
 	 */
-	NewGraphicObject(objType: number, parent: FrameObject): object;
+	NewGraphicObject(objType: number, parent: AFrame | TextFrame | UnanchoredFrame): object;
 
-	NewGroup(parent: FrameObject): Group;
+	NewGroup(parent: AFrame | TextFrame | UnanchoredFrame): Group;
 
 	NewInlineComponentOfType(inlineCompType: number, tags: Strings, hyperLinks: boolean, textLocp: TextLoc): InlineComponent;
 
-	NewInset(parent: FrameObject): Inset;
+	NewInset(parent: AFrame | TextFrame | UnanchoredFrame): Inset;
 
 	NewIterator(paramsp: PropVals): object;
 
-	NewLine(parent: FrameObject): Line;
+	NewLine(parent: AFrame | TextFrame | UnanchoredFrame): Line;
 
-	NewMath(parent: FrameObject): Math;
+	NewMath(parent: AFrame | TextFrame | UnanchoredFrame): Math;
 
-	NewMathML(parent: FrameObject): MathML;
+	NewMathML(parent: AFrame | TextFrame | UnanchoredFrame): MathML;
 
 	NewNamedAttrCondExpr(name: string): AttrCondExpr;
 
@@ -2503,13 +2506,13 @@ declare class Doc {
 
 	NewNamedXRefFmt(name: string): XRefFmt;
 
-	NewPolygon(parent: FrameObject): Polygon;
+	NewPolygon(parent: AFrame | TextFrame | UnanchoredFrame): Polygon;
 
-	NewPolyline(parent: FrameObject): Polyline;
+	NewPolyline(parent: AFrame | TextFrame | UnanchoredFrame): Polyline;
 
-	NewRectangle(parent: FrameObject): Rectangle;
+	NewRectangle(parent: AFrame | TextFrame | UnanchoredFrame): Rectangle;
 
-	NewRoundRect(parent: FrameObject): RoundRect;
+	NewRoundRect(parent: AFrame | TextFrame | UnanchoredFrame): RoundRect;
 
 	NewSeriesBodyPage(previous: object): BodyPage;
 
@@ -2519,11 +2522,11 @@ declare class Doc {
 
 	NewTable(format: string, numCols: number, numBodyRows: number, numHeaderRows: number, numFooterRows: number, textLoc: TextLoc): Tbl;
 
-	NewTextFrame(parent: FrameObject): TextFrame;
+	NewTextFrame(parent: AFrame | TextFrame | UnanchoredFrame): TextFrame;
 
-	NewTextLine(parent: FrameObject): TextLine;
+	NewTextLine(parent: AFrame | TextFrame | UnanchoredFrame): TextLine;
 
-	NewUnanchoredFrame(parent: FrameObject): UnanchoredFrame;
+	NewUnanchoredFrame(parent: AFrame | TextFrame | UnanchoredFrame): UnanchoredFrame;
 
 	ObjectValid(): number;
 
@@ -2661,17 +2664,17 @@ declare class Element {
 
 	readonly LastChildElement: Element;
 
-	readonly MatchingFirstPgfClauses: Objects;
+	readonly MatchingFirstPgfClauses: object[];
 
-	readonly MatchingLastPgfClauses: Objects;
+	readonly MatchingLastPgfClauses: object[];
 
-	readonly MatchingObjectClauses: Objects;
+	readonly MatchingObjectClauses: object[];
 
-	readonly MatchingPrefixClauses: Objects;
+	readonly MatchingPrefixClauses: object[];
 
-	readonly MatchingSuffixClauses: Objects;
+	readonly MatchingSuffixClauses: object[];
 
-	readonly MatchingTextClauses: Objects;
+	readonly MatchingTextClauses: object[];
 
 	Namespace: Strings;
 
@@ -2759,7 +2762,7 @@ declare class ElementDef {
 
 	Exclusions: Strings;
 
-	readonly FirstPgfRules: Objects;
+	readonly FirstPgfRules: object[];
 
 	GeneralRule: string;
 
@@ -2769,19 +2772,19 @@ declare class ElementDef {
 
 	InitStructurePattern: string;
 
-	readonly LastPgfRules: Objects;
+	readonly LastPgfRules: object[];
 
 	readonly Name: string;
 
 	readonly NextElementDefInDoc: ElementDef;
 
-	readonly ObjectFmtRules: Objects;
+	readonly ObjectFmtRules: object[];
 
-	readonly PrefixRules: Objects;
+	readonly PrefixRules: object[];
 
-	readonly SuffixRules: Objects;
+	readonly SuffixRules: object[];
 
-	readonly TextFmtRules: Objects;
+	readonly TextFmtRules: object[];
 
 	ValidHighestLevel: number;
 
@@ -3157,7 +3160,7 @@ declare class FmtRule {
 
 	FmtRuleClause: FmtRuleClause;
 
-	readonly FmtRuleClauses: Objects;
+	readonly FmtRuleClauses: object[];
 
 	FmtRuleType: number;
 
@@ -3419,7 +3422,7 @@ declare class GraphicsFmt {
 
 }
 
-declare class Group {
+declare interface Group {
 
 	Angle: number;
 
@@ -3526,7 +3529,7 @@ declare class HiddenPage {
 	/**
 	 * PageObject is any Page object i.e., BodyPage, MasterPage, ReferencePage, HiddenPage
 	 */
-	ApplyPageLayout(srcPage: PageObject): number;
+	ApplyPageLayout(srcPage: BodyPage | MasterPage | RefPage | HiddenPage): number;
 
 	GetProps(): PropVals;
 
@@ -3858,7 +3861,7 @@ declare class Marker {
 
 	readonly NextMarkerInDoc: Marker;
 
-	OldTypeNum: int;
+	OldTypeNum: number;
 
 	readonly TextLoc: TextLoc;
 
@@ -3919,7 +3922,7 @@ declare class MasterPage {
 	/**
 	 * PageObject is any Page object i.e., BodyPage, MasterPage, ReferencePage, HiddenPage
 	 */
-	ApplyPageLayout(srcPage: PageObject): number;
+	ApplyPageLayout(srcPage: BodyPage | MasterPage | RefPage | HiddenPage): number;
 
 	Delete(): number;
 
@@ -3931,7 +3934,7 @@ declare class MasterPage {
 
 }
 
-declare class Math {
+declare interface Math {
 
 	Angle: number;
 
@@ -4175,7 +4178,7 @@ declare class Menu {
 
 	GetProps(): PropVals;
 
-	MenuItemInMenu(menuitem: MenuItemComponent, recursive: boolean): Menu;
+	MenuItemInMenu(menuitem: object, recursive: boolean): Menu | number;
 
 	ObjectValid(): number;
 
@@ -4868,7 +4871,7 @@ declare class RefPage {
 	/**
 	 * PageObject is any Page object i.e., BodyPage, MasterPage, ReferencePage, HiddenPage
 	 */
-	ApplyPageLayout(srcPage: PageObject): number;
+	ApplyPageLayout(srcPage: BodyPage | MasterPage | RefPage | HiddenPage): number;
 
 	Delete(): number;
 
@@ -4980,7 +4983,7 @@ declare class Row {
 
 	readonly Height: number;
 
-	InCond: Objects;
+	InCond: object[];
 
 	readonly LocX: number;
 
@@ -6132,8 +6135,6 @@ declare class UnanchoredFrame {
 
 	readonly FirstGraphicInFrame: object;
 
-	readonly FirstGraphicInFrame: object;
-
 	FrameParent: object;
 
 	GraphicCantBeSelected: number;
@@ -6151,8 +6152,6 @@ declare class UnanchoredFrame {
 	HotspotTitle: string;
 
 	IsHotspot: number;
-
-	readonly LastGraphicInFrame: object;
 
 	readonly LastGraphicInFrame: object;
 
@@ -6446,15 +6445,15 @@ declare class CMSProperty {
 
 declare class CMSResult {
 
-	cmsItems: Objects;
+	cmsItems: object[];
 
-	message: sting;
+	message: string;
 
 	opResult: number;
 
 	status: number;
 
-	constructor(status: number, opResult: number, message: string, cmsItems: Objects);
+	constructor(status: number, opResult: number, message: string, cmsItems: object[]);
 
 }
 
@@ -6555,9 +6554,9 @@ declare class IdValuePair {
 
 	id: number;
 
-	value: Value;
+	value: any;
 
-	constructor(id: number, value: Value);
+	constructor(id: number, value: any);
 
 }
 
@@ -6605,15 +6604,15 @@ declare class Tab {
 
 }
 
-declare class TemplateData {
+/* declare class TemplateData {
 
-	templateDataAttrs: strings;
+	templateDataAttrs: string[];
 
 	templateDataType: TemplateDataType;
 
 	constructor(templateDataType: TemplateDataType, templateDataAttrs: strings);
 
-}
+} */
 
 declare class TextItem {
 
@@ -6667,7 +6666,7 @@ declare class TypedVal {
 
 	obj: any;
 
-	osval: Objects;
+	osval: object[];
 
 	psval: Points;
 
@@ -7098,31 +7097,31 @@ declare class Tabs {
 /**
  * An Array of TemplateData objects with integer indexing and a length property.
  */
-declare class TemplateDatas {
-	/**
-	 * The length of the array
-	 */
-	length: number;
+// declare class TemplateDatas {
+// 	/**
+// 	 * The length of the array
+// 	 */
+// 	length: number;
 
-	/**
-	 * Returns a new array created by concatenating the given values to the end of the original array.
-	 * The original array is unchanged.If an array is provided as a parameter to concat(), each of its elements are appended as separate array elements at the end of the new array.Returns a new array, the result of concatenation the given values to the end of the original array.
-	 * @param value Any number of values to be added to the end of the array. Can also be arrays.
-	 */
-	concat(value: TemplateDatas): TemplateDatas;
+// 	/**
+// 	 * Returns a new array created by concatenating the given values to the end of the original array.
+// 	 * The original array is unchanged.If an array is provided as a parameter to concat(), each of its elements are appended as separate array elements at the end of the new array.Returns a new array, the result of concatenation the given values to the end of the original array.
+// 	 * @param value Any number of values to be added to the end of the array. Can also be arrays.
+// 	 */
+// 	concat(value: TemplateDatas): TemplateDatas;
 
-	/**
-	 * Removes the last element from the array.
-	 */
-	pop(): TemplateData;
+// 	/**
+// 	 * Removes the last element from the array.
+// 	 */
+// 	pop(): TemplateData;
 
-	/**
-	 * Places value onto the end of the array.
-	 * Returns the new length of the array.
-	 */
-	push(value: TemplateData): number;
+// 	/**
+// 	 * Places value onto the end of the array.
+// 	 * Returns the new length of the array.
+// 	 */
+// 	push(value: TemplateData): number;
 
-}
+// }
 
 /**
  * An Array of TextItem objects with integer indexing and a length property.
@@ -7254,71 +7253,71 @@ declare enum Constants {
 
 	EXCLUDE_XREF_DEPENDENCIES = 0x08,
 
-	FA_CMSAdvancedSearch = FA_CMSAdvancedSearch,
+	FA_CMSAdvancedSearch = 0,
 
-	FA_CMSBuildContextMenu = FA_CMSBuildContextMenu,
+	FA_CMSBuildContextMenu = 1,
 
-	FA_CMSCloseConnection = FA_CMSCloseConnection,
+	FA_CMSCloseConnection = 2,
 
-	FA_CMSCommandMax = FA_CMSCommandMax,
+	FA_CMSCommandMax = 3,
 
-	FA_CMSCommandMin = FA_CMSCommandMin,
+	FA_CMSCommandMin = 4,
 
-	FA_CMSCreateConnMgrUI = FA_CMSCreateConnMgrUI,
+	FA_CMSCreateConnMgrUI = 5,
 
-	FA_CMSCreateConnection = FA_CMSCreateConnection,
+	FA_CMSCreateConnection = 6,
 
-	FA_CMSGetCommandMaxOpCode = FA_CMSGetCommandMaxOpCode,
+	FA_CMSGetCommandMaxOpCode = 7,
 
-	FA_CMSGetItemFromPath = FA_CMSGetItemFromPath,
+	FA_CMSGetItemFromPath = 8,
 
-	FA_CMSGetItems = FA_CMSGetItems,
+	FA_CMSGetItems = 9,
 
-	FA_CMSGetPropertyMaxOpCode = FA_CMSGetPropertyMaxOpCode,
+	FA_CMSGetPropertyMaxOpCode = 10,
 
-	FA_CMSIsValidCommand = FA_CMSIsValidCommand,
+	FA_CMSIsValidCommand = 11,
 
-	FA_CMSObjectCancelCheckout = FA_CMSObjectCancelCheckout,
+	FA_CMSObjectCancelCheckout = 12,
 
-	FA_CMSObjectCheckin = FA_CMSObjectCheckin,
+	FA_CMSObjectCheckin = 13,
 
-	FA_CMSObjectCheckout = FA_CMSObjectCheckout,
+	FA_CMSObjectCheckout = 14,
 
-	FA_CMSObjectDelete = FA_CMSObjectDelete,
+	FA_CMSObjectDelete = 15,
 
-	FA_CMSObjectDownload = FA_CMSObjectDownload,
+	FA_CMSObjectDownload = 16,
 
-	FA_CMSObjectDownloadForOpen = FA_CMSObjectDownloadForOpen,
+	FA_CMSObjectDownloadForOpen = 17,
 
-	FA_CMSObjectDownloadItem = FA_CMSObjectDownloadItem,
+	FA_CMSObjectDownloadItem = 18,
 
-	FA_CMSObjectEdit = FA_CMSObjectEdit,
+	FA_CMSObjectEdit = 19,
 
-	FA_CMSObjectGetChildren = FA_CMSObjectGetChildren,
+	FA_CMSObjectGetChildren = 20,
 
-	FA_CMSObjectIsSame = FA_CMSObjectIsSame,
+	FA_CMSObjectIsSame = 21,
 
-	FA_CMSObjectOpenReadOnly = FA_CMSObjectOpenReadOnly,
+	FA_CMSObjectOpenReadOnly = 22,
 
-	FA_CMSObjectRefresh = FA_CMSObjectRefresh,
+	FA_CMSObjectRefresh = 23,
 
-	FA_CMSObjectShowCheckOutFiles = FA_CMSObjectShowCheckOutFiles,
+	FA_CMSObjectShowCheckOutFiles = 24,
 
-	FA_CMSObjectShowDependents = FA_CMSObjectShowDependents,
+	FA_CMSObjectShowDependents = 25,
 
-	FA_CMSObjectShowProperties = FA_CMSObjectShowProperties,
+	FA_CMSObjectShowProperties = 26,
 
-	FA_CMSObjectShowVersion = FA_CMSObjectShowVersion,
+	FA_CMSObjectShowVersion = 27,
 
-	FA_CMSObjectUploadFile = FA_CMSObjectUploadFile,
+	FA_CMSObjectUploadFile = 28,
 
-	FA_CMSObjectUploadFolder = FA_CMSObjectUploadFolder,
+	FA_CMSObjectUploadFolder = 29,
 
-	FA_CMSReview = FA_CMSReview,
+	FA_CMSReview = 30,
 
-	FA_CMSSetRootObject = FA_CMSSetRootObject,
+	FA_CMSSetRootObject = 31,
 
-	FA_CMSSimpleSearch = FA_CMSSimpleSearch,
+	FA_CMSSimpleSearch = 32,
 
 	FA_COMPONENT_DEMOTE = 4,
 
@@ -8694,27 +8693,27 @@ declare enum Constants {
 
 	FP_Box_BG_Color = 1722,
 
-	FP_CMSItemProperty_ItemCheckedOutByCurrentUser = FP_CMSItemProperty_ItemCheckedOutByCurrentUser,
+	FP_CMSItemProperty_ItemCheckedOutByCurrentUser = 33,
 
-	FP_CMSItemProperty_ItemFileType = FP_CMSItemProperty_ItemFileType,
+	FP_CMSItemProperty_ItemFileType = 34,
 
-	FP_CMSItemProperty_ItemIsCheckedOut = FP_CMSItemProperty_ItemIsCheckedOut,
+	FP_CMSItemProperty_ItemIsCheckedOut = 35,
 
-	FP_CMSItemProperty_ItemIsContainer = FP_CMSItemProperty_ItemIsContainer,
+	FP_CMSItemProperty_ItemIsContainer = 36,
 
-	FP_CMSItemProperty_ItemLocalPath = FP_CMSItemProperty_ItemLocalPath,
+	FP_CMSItemProperty_ItemLocalPath = 37,
 
-	FP_CMSItemProperty_ItemName = FP_CMSItemProperty_ItemName,
+	FP_CMSItemProperty_ItemName = 38,
 
-	FP_CMSItemProperty_ItemServerPath = FP_CMSItemProperty_ItemServerPath,
+	FP_CMSItemProperty_ItemServerPath = 39,
 
-	FP_CMSItemProperty_ItemType = FP_CMSItemProperty_ItemType,
+	FP_CMSItemProperty_ItemType = 40,
 
-	FP_CMSItemProperty_ItemVersion = FP_CMSItemProperty_ItemVersion,
+	FP_CMSItemProperty_ItemVersion = 41,
 
-	FP_CMSItemProperty_Max = FP_CMSItemProperty_Max,
+	FP_CMSItemProperty_Max = 42,
 
-	FP_CMSItemProperty_Min = FP_CMSItemProperty_Min,
+	FP_CMSItemProperty_Min = 43,
 
 	FP_CMSObjectLocalPath = 2392,
 
@@ -12428,161 +12427,161 @@ declare enum Constants {
 
 	FV_CHAR_CATALOG = 6,
 
-	FV_CMSCheckinUI_Id_CheckinComment = FV_CMSCheckinUI_Id_CheckinComment,
+	FV_CMSCheckinUI_Id_CheckinComment = 44,
 
-	FV_CMSCheckinUI_Id_Description = FV_CMSCheckinUI_Id_Description,
+	FV_CMSCheckinUI_Id_Description = 45,
 
-	FV_CMSCheckinUI_Id_MajorVersion = FV_CMSCheckinUI_Id_MajorVersion,
+	FV_CMSCheckinUI_Id_MajorVersion = 46,
 
-	FV_CMSCheckinUI_Id_MakeThisCurrentVersion = FV_CMSCheckinUI_Id_MakeThisCurrentVersion,
+	FV_CMSCheckinUI_Id_MakeThisCurrentVersion = 47,
 
-	FV_CMSCheckinUI_Id_MinorVersion = FV_CMSCheckinUI_Id_MinorVersion,
+	FV_CMSCheckinUI_Id_MinorVersion = 48,
 
-	FV_CMSCheckinUI_Id_SameVersion = FV_CMSCheckinUI_Id_SameVersion,
+	FV_CMSCheckinUI_Id_SameVersion = 49,
 
-	FV_CMSCheckinUI_Id_VersionLabel = FV_CMSCheckinUI_Id_VersionLabel,
+	FV_CMSCheckinUI_Id_VersionLabel = 50,
 
-	FV_CMSCheckoutUI_Id_ShowDependents = FV_CMSCheckoutUI_Id_ShowDependents,
+	FV_CMSCheckoutUI_Id_ShowDependents = 51,
 
-	FV_CMSCommandAdvancedSearchStringId = FV_CMSCommandAdvancedSearchStringId,
+	FV_CMSCommandAdvancedSearchStringId = 52,
 
-	FV_CMSCommandCheckinCommentId = FV_CMSCommandCheckinCommentId,
+	FV_CMSCommandCheckinCommentId = 53,
 
-	FV_CMSCommandCheckinDescriptionId = FV_CMSCommandCheckinDescriptionId,
+	FV_CMSCommandCheckinDescriptionId = 54,
 
-	FV_CMSCommandCheckinKeepLocalCopyId = FV_CMSCommandCheckinKeepLocalCopyId,
+	FV_CMSCommandCheckinKeepLocalCopyId = 55,
 
-	FV_CMSCommandCheckinMakeCurrentVersionId = FV_CMSCommandCheckinMakeCurrentVersionId,
+	FV_CMSCommandCheckinMakeCurrentVersionId = 56,
 
-	FV_CMSCommandCheckinMinorVersionId = FV_CMSCommandCheckinMinorVersionId,
+	FV_CMSCommandCheckinMinorVersionId = 57,
 
-	FV_CMSCommandCheckinVersionLabelId = FV_CMSCommandCheckinVersionLabelId,
+	FV_CMSCommandCheckinVersionLabelId = 58,
 
-	FV_CMSCommandCheckoutWithDescendentId = FV_CMSCommandCheckoutWithDescendentId,
+	FV_CMSCommandCheckoutWithDescendentId = 59,
 
-	FV_CMSCommandConnTypeId = FV_CMSCommandConnTypeId,
+	FV_CMSCommandConnTypeId = 60,
 
-	FV_CMSCommandDeleteAllDependentsId = FV_CMSCommandDeleteAllDependentsId,
+	FV_CMSCommandDeleteAllDependentsId = 61,
 
-	FV_CMSCommandDeleteAllVersionId = FV_CMSCommandDeleteAllVersionId,
+	FV_CMSCommandDeleteAllVersionId = 62,
 
-	FV_CMSCommandFilePathId = FV_CMSCommandFilePathId,
+	FV_CMSCommandFilePathId = 63,
 
-	FV_CMSCommandId = FV_CMSCommandId,
+	FV_CMSCommandId = 64,
 
-	FV_CMSCommandId_Max = FV_CMSCommandId_Max,
+	FV_CMSCommandId_Max = 65,
 
-	FV_CMSCommandId_Min = FV_CMSCommandId_Min,
+	FV_CMSCommandId_Min = 66,
 
-	FV_CMSCommandNameId = FV_CMSCommandNameId,
+	FV_CMSCommandNameId = 67,
 
-	FV_CMSCommandOpenReadOnlyId = FV_CMSCommandOpenReadOnlyId,
+	FV_CMSCommandOpenReadOnlyId = 68,
 
-	FV_CMSCommandPasswordId = FV_CMSCommandPasswordId,
+	FV_CMSCommandPasswordId = 69,
 
-	FV_CMSCommandRefreshDependentsId = FV_CMSCommandRefreshDependentsId,
+	FV_CMSCommandRefreshDependentsId = 70,
 
-	FV_CMSCommandRepositoryId = FV_CMSCommandRepositoryId,
+	FV_CMSCommandRepositoryId = 71,
 
-	FV_CMSCommandSearchStringId = FV_CMSCommandSearchStringId,
+	FV_CMSCommandSearchStringId = 72,
 
-	FV_CMSCommandServerId = FV_CMSCommandServerId,
+	FV_CMSCommandServerId = 73,
 
-	FV_CMSCommandSilentOpenId = FV_CMSCommandSilentOpenId,
+	FV_CMSCommandSilentOpenId = 74,
 
-	FV_CMSCommandUserField1 = FV_CMSCommandUserField1,
+	FV_CMSCommandUserField1 = 75,
 
-	FV_CMSCommandUserField2 = FV_CMSCommandUserField2,
+	FV_CMSCommandUserField2 = 76,
 
-	FV_CMSCommandUserNameId = FV_CMSCommandUserNameId,
+	FV_CMSCommandUserNameId = 77,
 
-	FV_CMSContextMenuId = FV_CMSContextMenuId,
+	FV_CMSContextMenuId = 78,
 
-	FV_CMSContextMenuString = FV_CMSContextMenuString,
+	FV_CMSContextMenuString = 79,
 
-	FV_CMSDeleteUI_DeleteAllDependents = FV_CMSDeleteUI_DeleteAllDependents,
+	FV_CMSDeleteUI_DeleteAllDependents = 80,
 
-	FV_CMSDeleteUI_DeleteAllVersion = FV_CMSDeleteUI_DeleteAllVersion,
+	FV_CMSDeleteUI_DeleteAllVersion = 81,
 
-	FV_CMSItemFileTypeValue_DitaMap = FV_CMSItemFileTypeValue_DitaMap,
+	FV_CMSItemFileTypeValue_DitaMap = 82,
 
-	FV_CMSItemFileTypeValue_DitaTopic = FV_CMSItemFileTypeValue_DitaTopic,
+	FV_CMSItemFileTypeValue_DitaTopic = 83,
 
-	FV_CMSItemFileTypeValue_FmBook = FV_CMSItemFileTypeValue_FmBook,
+	FV_CMSItemFileTypeValue_FmBook = 84,
 
-	FV_CMSItemFileTypeValue_FmDoc = FV_CMSItemFileTypeValue_FmDoc,
+	FV_CMSItemFileTypeValue_FmDoc = 85,
 
-	FV_CMSItemFileTypeValue_General = FV_CMSItemFileTypeValue_General,
+	FV_CMSItemFileTypeValue_General = 86,
 
-	FV_CMSItemFileTypeValue_Img = FV_CMSItemFileTypeValue_Img,
+	FV_CMSItemFileTypeValue_Img = 87,
 
-	FV_CMSItemFileTypeValue_Max = FV_CMSItemFileTypeValue_Max,
+	FV_CMSItemFileTypeValue_Max = 88,
 
-	FV_CMSItemFileTypeValue_Mif = FV_CMSItemFileTypeValue_Mif,
+	FV_CMSItemFileTypeValue_Mif = 89,
 
-	FV_CMSItemFileTypeValue_Min = FV_CMSItemFileTypeValue_Min,
+	FV_CMSItemFileTypeValue_Min = 90,
 
-	FV_CMSItemFileTypeValue_Text = FV_CMSItemFileTypeValue_Text,
+	FV_CMSItemFileTypeValue_Text = 91,
 
-	FV_CMSItemFileTypeValue_Xml = FV_CMSItemFileTypeValue_Xml,
+	FV_CMSItemFileTypeValue_Xml = 92,
 
-	FV_CMSItemTypeValue_File = FV_CMSItemTypeValue_File,
+	FV_CMSItemTypeValue_File = 93,
 
-	FV_CMSItemTypeValue_Folder = FV_CMSItemTypeValue_Folder,
+	FV_CMSItemTypeValue_Folder = 94,
 
-	FV_CMSItemTypeValue_General = FV_CMSItemTypeValue_General,
+	FV_CMSItemTypeValue_General = 95,
 
-	FV_CMSItemTypeValue_Max = FV_CMSItemTypeValue_Max,
+	FV_CMSItemTypeValue_Max = 96,
 
-	FV_CMSItemTypeValue_Min = FV_CMSItemTypeValue_Min,
+	FV_CMSItemTypeValue_Min = 97,
 
-	FV_CMSItemTypeValue_Root = FV_CMSItemTypeValue_Root,
+	FV_CMSItemTypeValue_Root = 98,
 
-	FV_CMSMajorVersion = FV_CMSMajorVersion,
+	FV_CMSMajorVersion = 99,
 
-	FV_CMSMenu_Is_Disabled = FV_CMSMenu_Is_Disabled,
+	FV_CMSMenu_Is_Disabled = 100,
 
-	FV_CMSMenu_Is_Item = FV_CMSMenu_Is_Item,
+	FV_CMSMenu_Is_Item = 101,
 
-	FV_CMSMenu_Is_Separator = FV_CMSMenu_Is_Separator,
+	FV_CMSMenu_Is_Separator = 102,
 
-	FV_CMSMenu_Is_SubMenu = FV_CMSMenu_Is_SubMenu,
+	FV_CMSMenu_Is_SubMenu = 103,
 
-	FV_CMSMenu_Max = FV_CMSMenu_Max,
+	FV_CMSMenu_Max = 104,
 
-	FV_CMSMenu_Min = FV_CMSMenu_Min,
+	FV_CMSMenu_Min = 105,
 
-	FV_CMSMinorVersion = FV_CMSMinorVersion,
+	FV_CMSMinorVersion = 106,
 
-	FV_CMSOpChildAdded = FV_CMSOpChildAdded,
+	FV_CMSOpChildAdded = 107,
 
-	FV_CMSOpDependentsDeleted = FV_CMSOpDependentsDeleted,
+	FV_CMSOpDependentsDeleted = 108,
 
-	FV_CMSOpDependentsUpdated = FV_CMSOpDependentsUpdated,
+	FV_CMSOpDependentsUpdated = 109,
 
-	FV_CMSOpDocumentOpened = FV_CMSOpDocumentOpened,
+	FV_CMSOpDocumentOpened = 110,
 
-	FV_CMSOpItemDeleted = FV_CMSOpItemDeleted,
+	FV_CMSOpItemDeleted = 111,
 
-	FV_CMSOpItemUpdated = FV_CMSOpItemUpdated,
+	FV_CMSOpItemUpdated = 112,
 
-	FV_CMSOpNone = FV_CMSOpNone,
+	FV_CMSOpNone = 113,
 
-	FV_CMSOpRootUpdated = FV_CMSOpRootUpdated,
+	FV_CMSOpRootUpdated = 114,
 
-	FV_CMSSameVersion = FV_CMSSameVersion,
+	FV_CMSSameVersion = 115,
 
-	FV_CMSSilentOperation = FV_CMSSilentOperation,
+	FV_CMSSilentOperation = 116,
 
-	FV_CMSUserFieldType_Edit = FV_CMSUserFieldType_Edit,
+	FV_CMSUserFieldType_Edit = 117,
 
-	FV_CMSUserFieldType_FileBrowse = FV_CMSUserFieldType_FileBrowse,
+	FV_CMSUserFieldType_FileBrowse = 118,
 
-	FV_CMSUserFieldType_FolderBrowse = FV_CMSUserFieldType_FolderBrowse,
+	FV_CMSUserFieldType_FolderBrowse = 119,
 
-	FV_CMSVersion_Max = FV_CMSVersion_Max,
+	FV_CMSVersion_Max = 120,
 
-	FV_CMSVersion_Min = FV_CMSVersion_Min,
+	FV_CMSVersion_Min = 121,
 
 	FV_CMS_TYPE_DITAEXCHANGE = 0x03,
 

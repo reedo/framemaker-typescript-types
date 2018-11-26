@@ -2111,10 +2111,15 @@ declare class Panel extends _Control {
 
 /**
  * Defines the location of a window or UI element. Contains a 2-element array.
- * Specifies the origin point of an element as horizontal and vertical pixel offsets from the origin of the element's coordinate space.
- * A Point object is created when you set an element’s location property. You can set the property using a JavaScript object with properties named x and y, or an array with 2 values in the order [x, y].
+ * Specifies the origin point of an element as horizontal and vertical pixel offsets from the origin of the element's
+ * coordinate space.
+ * A Point object is created when you set an element’s location property. You can set the property using a JavaScript
+ * object with properties named x and y, or an array with 2 values in the order [x, y].
+ * 
+ * This has been renamed from Point to UIPoint to avoid conflicts with FrameMaker's Point object.
+ * This may cause problems, it needs to be tested.
  */
-declare type Point = _Point | [number, number]
+declare type UIPoint = _Point | [number, number]
 declare class _Point {
   /**
    * The left coordinate.
