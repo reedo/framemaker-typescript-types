@@ -133,12 +133,12 @@ declare class AFrame {
 	/**
 	 * Contains the first object in the anchored frame.
 	 */
-	readonly FirstGraphicInFrame: FMObject;
+	readonly FirstGraphicInFrame: object;
 
 	/**
 	 * Denotes the frame containing the graphic object.
 	 */
-	FrameParent: FMObject;
+	FrameParent: object;
 
 	/**
 	 * Set to 1 if the graphic object cannot be selected. Set to 0, otherwise.
@@ -185,7 +185,7 @@ declare class AFrame {
 	/**
 	 * Indicates the column or text frame in which the anchored frame is placed.
 	 */
-	readonly InTextObj: FMObject;
+	readonly InTextObj: object;
 
 	/**
 	 * Whether the object is a hotspot or not.
@@ -196,7 +196,7 @@ declare class AFrame {
 	/**
 	 * Contains the last object in the anchored frame.
 	 */
-	readonly LastGraphicInFrame: FMObject;
+	readonly LastGraphicInFrame: object;
 
 	/**
 	 * Specifies the type of the end of the line.
@@ -231,22 +231,22 @@ declare class AFrame {
 	/**
 	 * Denotes the next graphic object in the document.
 	 */
-	readonly NextGraphicInDoc: FMObject;
+	readonly NextGraphicInDoc: object;
 
 	/**
 	 * Denotes the next graphic object in the frame.
 	 */
-	NextGraphicInFrame: FMObject;
+	NextGraphicInFrame: object;
 
 	/**
 	 * Denotes the next graphic object in the group.
 	 */
-	readonly NextGraphicInGroup: FMObject;
+	readonly NextGraphicInGroup: object;
 
 	/**
 	 * Denotes the next selected graphic object in the document.
 	 */
-	readonly NextSelectedGraphicInDoc: FMObject;
+	readonly NextSelectedGraphicInDoc: object;
 
 	/**
 	 * A list of strings. Each string expresses an attribute that is specified for an anchored frame in the Object
@@ -281,12 +281,12 @@ declare class AFrame {
 	/**
 	 * Denotes the previous graphic object in the frame.
 	 */
-	PrevGraphicInFrame: FMObject;
+	PrevGraphicInFrame: object;
 
 	/**
 	 * Denotes the previous graphic object in the group.
 	 */
-	readonly PrevGraphicInGroup: FMObject;
+	readonly PrevGraphicInGroup: object;
 
 	/**
 	 * Specifies whether text can flow around the object and, if so, whether the text follows the contour of the object or
@@ -467,7 +467,7 @@ declare class Arc {
 
 	Fill: number;
 
-	FrameParent: FMObject;
+	FrameParent: object;
 
 	GraphicCantBeSelected: number;
 
@@ -491,13 +491,13 @@ declare class Arc {
 
 	LocY: number;
 
-	readonly NextGraphicInDoc: FMObject;
+	readonly NextGraphicInDoc: object;
 
-	NextGraphicInFrame: FMObject;
+	NextGraphicInFrame: object;
 
-	readonly NextGraphicInGroup: FMObject;
+	readonly NextGraphicInGroup: object;
 
-	readonly NextSelectedGraphicInDoc: FMObject;
+	readonly NextSelectedGraphicInDoc: object;
 
 	ObjectAttributes: Strings;
 
@@ -505,9 +505,9 @@ declare class Arc {
 
 	Pen: number;
 
-	PrevGraphicInFrame: FMObject;
+	PrevGraphicInFrame: object;
 
-	readonly PrevGraphicInGroup: FMObject;
+	readonly PrevGraphicInGroup: object;
 
 	Runaround: number;
 
@@ -1164,7 +1164,7 @@ declare class Cell {
 
 declare class CharFmt {
 
-	BkColor: FMObject;
+	BkColor: object;
 
 	Capitalization: number;
 
@@ -1502,11 +1502,11 @@ declare class Command {
 
 	readonly NextCommandInSession: Command;
 
-	NextMenuItemInMenu: FMObject;
+	NextMenuItemInMenu: object;
 
-	readonly NextMenuItemInSession: FMObject;
+	readonly NextMenuItemInSession: object;
 
-	PrevMenuItemInMenu: FMObject;
+	PrevMenuItemInMenu: object;
 
 	Product: number;
 
@@ -1616,7 +1616,7 @@ declare class Doc {
 
 	CondFmtIsShown: number;
 
-	CurrentPage: FMObject;
+	CurrentPage: object;
 
 	CustomElementList: Strings;
 
@@ -1726,7 +1726,7 @@ declare class Doc {
 
 	readonly FirstFnInDoc: Fn;
 
-	readonly FirstGraphicInDoc: FMObject;
+	readonly FirstGraphicInDoc: object;
 
 	readonly FirstGraphicsFmtInDoc: GraphicsFmt;
 
@@ -1752,15 +1752,15 @@ declare class Doc {
 
 	readonly FirstRulingFmtInDoc: RulingFmt;
 
-	readonly FirstSelectedGraphicInDoc: FMObject;
+	readonly FirstSelectedGraphicInDoc: object;
 
-	readonly FirstSelectedTiInDoc: FMObject;
+	readonly FirstSelectedTiInDoc: object;
 
 	readonly FirstTblFmtInDoc: TblFmt;
 
 	readonly FirstTblInDoc: Tbl;
 
-	readonly FirstTiInDoc: FMObject;
+	readonly FirstTiInDoc: object;
 
 	readonly FirstVarFmtInDoc: VarFmt;
 
@@ -2695,7 +2695,7 @@ declare class Element {
 
 	readonly NumNamespaces: number;
 
-	readonly Object: FMObject;
+	readonly Object: object;
 
 	readonly ParentElement: Element;
 
@@ -2841,7 +2841,7 @@ declare class Ellipse {
 
 	Fill: number;
 
-	FrameParent: FMObject;
+	FrameParent: object;
 
 	GraphicCantBeSelected: number;
 
@@ -2865,13 +2865,13 @@ declare class Ellipse {
 
 	LocY: number;
 
-	readonly NextGraphicInDoc: FMObject;
+	readonly NextGraphicInDoc: object;
 
-	NextGraphicInFrame: FMObject;
+	NextGraphicInFrame: object;
 
-	readonly NextGraphicInGroup: FMObject;
+	readonly NextGraphicInGroup: object;
 
-	readonly NextSelectedGraphicInDoc: FMObject;
+	readonly NextSelectedGraphicInDoc: object;
 
 	ObjectAttributes: Strings;
 
@@ -2879,9 +2879,9 @@ declare class Ellipse {
 
 	Pen: number;
 
-	PrevGraphicInFrame: FMObject;
+	PrevGraphicInFrame: object;
 
-	readonly PrevGraphicInGroup: FMObject;
+	readonly PrevGraphicInGroup: object;
 
 	readonly RectangleIsSmoothed: number;
 
@@ -3443,9 +3443,9 @@ declare class Group {
 
 	Fill: number;
 
-	readonly FirstGraphicInGroup: FMObject;
+	readonly FirstGraphicInGroup: object;
 
-	FrameParent: FMObject;
+	FrameParent: object;
 
 	GraphicCantBeSelected: number;
 
@@ -3463,7 +3463,7 @@ declare class Group {
 
 	IsHotspot: number;
 
-	readonly LastGraphicInGroup: FMObject;
+	readonly LastGraphicInGroup: object;
 
 	LineCap: number;
 
@@ -3471,13 +3471,13 @@ declare class Group {
 
 	LocY: number;
 
-	readonly NextGraphicInDoc: FMObject;
+	readonly NextGraphicInDoc: object;
 
-	NextGraphicInFrame: FMObject;
+	NextGraphicInFrame: object;
 
-	readonly NextGraphicInGroup: FMObject;
+	readonly NextGraphicInGroup: object;
 
-	readonly NextSelectedGraphicInDoc: FMObject;
+	readonly NextSelectedGraphicInDoc: object;
 
 	ObjectAttributes: Strings;
 
@@ -3485,9 +3485,9 @@ declare class Group {
 
 	Pen: number;
 
-	PrevGraphicInFrame: FMObject;
+	PrevGraphicInFrame: object;
 
-	readonly PrevGraphicInGroup: FMObject;
+	readonly PrevGraphicInGroup: object;
 
 	Runaround: number;
 
@@ -3584,7 +3584,7 @@ declare class Inset {
 
 	Fill: number;
 
-	FrameParent: FMObject;
+	FrameParent: object;
 
 	GraphicCantBeSelected: number;
 
@@ -3638,13 +3638,13 @@ declare class Inset {
 
 	LocY: number;
 
-	readonly NextGraphicInDoc: FMObject;
+	readonly NextGraphicInDoc: object;
 
-	NextGraphicInFrame: FMObject;
+	NextGraphicInFrame: object;
 
-	readonly NextGraphicInGroup: FMObject;
+	readonly NextGraphicInGroup: object;
 
-	readonly NextSelectedGraphicInDoc: FMObject;
+	readonly NextSelectedGraphicInDoc: object;
 
 	ObjectAttributes: Strings;
 
@@ -3654,9 +3654,9 @@ declare class Inset {
 
 	Pen: number;
 
-	PrevGraphicInFrame: FMObject;
+	PrevGraphicInFrame: object;
 
-	readonly PrevGraphicInGroup: FMObject;
+	readonly PrevGraphicInGroup: object;
 
 	Runaround: number;
 
@@ -3778,7 +3778,7 @@ declare class Line {
 
 	Fill: number;
 
-	FrameParent: FMObject;
+	FrameParent: object;
 
 	GraphicCantBeSelected: number;
 
@@ -3802,13 +3802,13 @@ declare class Line {
 
 	LocY: number;
 
-	readonly NextGraphicInDoc: FMObject;
+	readonly NextGraphicInDoc: object;
 
-	NextGraphicInFrame: FMObject;
+	NextGraphicInFrame: object;
 
-	readonly NextGraphicInGroup: FMObject;
+	readonly NextGraphicInGroup: object;
 
-	readonly NextSelectedGraphicInDoc: FMObject;
+	readonly NextSelectedGraphicInDoc: object;
 
 	readonly NumPoints: number;
 
@@ -3820,9 +3820,9 @@ declare class Line {
 
 	Points: Points;
 
-	PrevGraphicInFrame: FMObject;
+	PrevGraphicInFrame: object;
 
-	readonly PrevGraphicInGroup: FMObject;
+	readonly PrevGraphicInGroup: object;
 
 	Runaround: number;
 
@@ -3959,7 +3959,7 @@ declare class Math {
 
 	Fill: number;
 
-	FrameParent: FMObject;
+	FrameParent: object;
 
 	GraphicCantBeSelected: number;
 
@@ -3987,13 +3987,13 @@ declare class Math {
 
 	MathSize: number;
 
-	readonly NextGraphicInDoc: FMObject;
+	readonly NextGraphicInDoc: object;
 
-	NextGraphicInFrame: FMObject;
+	NextGraphicInFrame: object;
 
-	readonly NextGraphicInGroup: FMObject;
+	readonly NextGraphicInGroup: object;
 
-	readonly NextSelectedGraphicInDoc: FMObject;
+	readonly NextSelectedGraphicInDoc: object;
 
 	ObjectAttributes: Strings;
 
@@ -4001,9 +4001,9 @@ declare class Math {
 
 	Pen: number;
 
-	PrevGraphicInFrame: FMObject;
+	PrevGraphicInFrame: object;
 
-	readonly PrevGraphicInGroup: FMObject;
+	readonly PrevGraphicInGroup: object;
 
 	Runaround: number;
 
@@ -4055,7 +4055,7 @@ declare class MathML {
 
 	Fill: number;
 
-	FrameParent: FMObject;
+	FrameParent: object;
 
 	GraphicCantBeSelected: number;
 
@@ -4099,13 +4099,13 @@ declare class MathML {
 
 	MathMLXmlData: string;
 
-	readonly NextGraphicInDoc: FMObject;
+	readonly NextGraphicInDoc: object;
 
-	NextGraphicInFrame: FMObject;
+	NextGraphicInFrame: object;
 
-	readonly NextGraphicInGroup: FMObject;
+	readonly NextGraphicInGroup: object;
 
-	readonly NextSelectedGraphicInDoc: FMObject;
+	readonly NextSelectedGraphicInDoc: object;
 
 	ObjectAttributes: Strings;
 
@@ -4113,9 +4113,9 @@ declare class MathML {
 
 	Pen: number;
 
-	PrevGraphicInFrame: FMObject;
+	PrevGraphicInFrame: object;
 
-	readonly PrevGraphicInGroup: FMObject;
+	readonly PrevGraphicInGroup: object;
 
 	Runaround: number;
 
@@ -4143,7 +4143,7 @@ declare class MathML {
 
 declare class Menu {
 
-	FirstMenuItemInMenu: FMObject;
+	FirstMenuItemInMenu: object;
 
 	Label: string;
 
@@ -4153,11 +4153,11 @@ declare class Menu {
 
 	readonly Name: string;
 
-	NextMenuItemInMenu: FMObject;
+	NextMenuItemInMenu: object;
 
-	readonly NextMenuItemInSession: FMObject;
+	readonly NextMenuItemInSession: object;
 
-	PrevMenuItemInMenu: FMObject;
+	PrevMenuItemInMenu: object;
 
 	View: number;
 
@@ -4191,11 +4191,11 @@ declare class MenuItemSeparator {
 
 	readonly Name: string;
 
-	NextMenuItemInMenu: FMObject;
+	NextMenuItemInMenu: object;
 
-	readonly NextMenuItemInSession: FMObject;
+	readonly NextMenuItemInSession: object;
 
-	PrevMenuItemInMenu: FMObject;
+	PrevMenuItemInMenu: object;
 
 	Delete(): number;
 
@@ -4275,7 +4275,7 @@ declare class Pgf {
 
 	readonly InTextFrame: TextFrame;
 
-	readonly InTextObj: FMObject;
+	readonly InTextObj: object;
 
 	KeepWithNext: number;
 
@@ -4589,7 +4589,7 @@ declare class Polygon {
 
 	Fill: number;
 
-	FrameParent: FMObject;
+	FrameParent: object;
 
 	GraphicCantBeSelected: number;
 
@@ -4613,13 +4613,13 @@ declare class Polygon {
 
 	LocY: number;
 
-	readonly NextGraphicInDoc: FMObject;
+	readonly NextGraphicInDoc: object;
 
-	NextGraphicInFrame: FMObject;
+	NextGraphicInFrame: object;
 
-	readonly NextGraphicInGroup: FMObject;
+	readonly NextGraphicInGroup: object;
 
-	readonly NextSelectedGraphicInDoc: FMObject;
+	readonly NextSelectedGraphicInDoc: object;
 
 	NumPoints: number;
 
@@ -4633,9 +4633,9 @@ declare class Polygon {
 
 	PolyIsBezier: number;
 
-	PrevGraphicInFrame: FMObject;
+	PrevGraphicInFrame: object;
 
-	readonly PrevGraphicInGroup: FMObject;
+	readonly PrevGraphicInGroup: object;
 
 	Runaround: number;
 
@@ -4685,7 +4685,7 @@ declare class Polyline {
 
 	Fill: number;
 
-	FrameParent: FMObject;
+	FrameParent: object;
 
 	GraphicCantBeSelected: number;
 
@@ -4709,13 +4709,13 @@ declare class Polyline {
 
 	LocY: number;
 
-	readonly NextGraphicInDoc: FMObject;
+	readonly NextGraphicInDoc: object;
 
-	NextGraphicInFrame: FMObject;
+	NextGraphicInFrame: object;
 
-	readonly NextGraphicInGroup: FMObject;
+	readonly NextGraphicInGroup: object;
 
-	readonly NextSelectedGraphicInDoc: FMObject;
+	readonly NextSelectedGraphicInDoc: object;
 
 	NumPoints: number;
 
@@ -4729,9 +4729,9 @@ declare class Polyline {
 
 	PolyIsBezier: number;
 
-	PrevGraphicInFrame: FMObject;
+	PrevGraphicInFrame: object;
 
-	readonly PrevGraphicInGroup: FMObject;
+	readonly PrevGraphicInGroup: object;
 
 	Runaround: number;
 
@@ -4781,7 +4781,7 @@ declare class Rectangle {
 
 	Fill: number;
 
-	FrameParent: FMObject;
+	FrameParent: object;
 
 	GraphicCantBeSelected: number;
 
@@ -4805,13 +4805,13 @@ declare class Rectangle {
 
 	LocY: number;
 
-	readonly NextGraphicInDoc: FMObject;
+	readonly NextGraphicInDoc: object;
 
-	NextGraphicInFrame: FMObject;
+	NextGraphicInFrame: object;
 
-	readonly NextGraphicInGroup: FMObject;
+	readonly NextGraphicInGroup: object;
 
-	readonly NextSelectedGraphicInDoc: FMObject;
+	readonly NextSelectedGraphicInDoc: object;
 
 	ObjectAttributes: Strings;
 
@@ -4819,9 +4819,9 @@ declare class Rectangle {
 
 	Pen: number;
 
-	PrevGraphicInFrame: FMObject;
+	PrevGraphicInFrame: object;
 
-	readonly PrevGraphicInGroup: FMObject;
+	readonly PrevGraphicInGroup: object;
 
 	RectangleIsSmoothed: number;
 
@@ -4904,7 +4904,7 @@ declare class RoundRect {
 
 	Fill: number;
 
-	FrameParent: FMObject;
+	FrameParent: object;
 
 	GraphicCantBeSelected: number;
 
@@ -4928,13 +4928,13 @@ declare class RoundRect {
 
 	LocY: number;
 
-	readonly NextGraphicInDoc: FMObject;
+	readonly NextGraphicInDoc: object;
 
-	NextGraphicInFrame: FMObject;
+	NextGraphicInFrame: object;
 
-	readonly NextGraphicInGroup: FMObject;
+	readonly NextGraphicInGroup: object;
 
-	readonly NextSelectedGraphicInDoc: FMObject;
+	readonly NextSelectedGraphicInDoc: object;
 
 	ObjectAttributes: Strings;
 
@@ -4942,9 +4942,9 @@ declare class RoundRect {
 
 	Pen: number;
 
-	PrevGraphicInFrame: FMObject;
+	PrevGraphicInFrame: object;
 
-	readonly PrevGraphicInGroup: FMObject;
+	readonly PrevGraphicInGroup: object;
 
 	Radius: number;
 
@@ -5138,7 +5138,7 @@ declare class app {
 
 	readonly FirstKeyCatalogInSession: KeyCatalog;
 
-	readonly FirstMenuItemInSession: FMObject;
+	readonly FirstMenuItemInSession: object;
 
 	readonly FirstOpenBook: Book;
 
@@ -5680,7 +5680,7 @@ declare class TextFrame {
 
 	readonly Flow: Flow;
 
-	FrameParent: FMObject;
+	FrameParent: object;
 
 	GraphicCantBeSelected: number;
 
@@ -5716,13 +5716,13 @@ declare class TextFrame {
 
 	LocY: number;
 
-	readonly NextGraphicInDoc: FMObject;
+	readonly NextGraphicInDoc: object;
 
-	NextGraphicInFrame: FMObject;
+	NextGraphicInFrame: object;
 
-	readonly NextGraphicInGroup: FMObject;
+	readonly NextGraphicInGroup: object;
 
-	readonly NextSelectedGraphicInDoc: FMObject;
+	readonly NextSelectedGraphicInDoc: object;
 
 	NextTextFrameInFlow: TextFrame;
 
@@ -5734,9 +5734,9 @@ declare class TextFrame {
 
 	Pen: number;
 
-	PrevGraphicInFrame: FMObject;
+	PrevGraphicInFrame: object;
 
-	readonly PrevGraphicInGroup: FMObject;
+	readonly PrevGraphicInGroup: object;
 
 	PrevTextFrameInFlow: TextFrame;
 
@@ -5804,7 +5804,7 @@ declare class TextLine {
 
 	Fill: number;
 
-	FrameParent: FMObject;
+	FrameParent: object;
 
 	GraphicCantBeSelected: number;
 
@@ -5830,13 +5830,13 @@ declare class TextLine {
 
 	LocY: number;
 
-	readonly NextGraphicInDoc: FMObject;
+	readonly NextGraphicInDoc: object;
 
-	NextGraphicInFrame: FMObject;
+	NextGraphicInFrame: object;
 
-	readonly NextGraphicInGroup: FMObject;
+	readonly NextGraphicInGroup: object;
 
-	readonly NextSelectedGraphicInDoc: FMObject;
+	readonly NextSelectedGraphicInDoc: object;
 
 	ObjectAttributes: Strings;
 
@@ -5844,9 +5844,9 @@ declare class TextLine {
 
 	Pen: number;
 
-	PrevGraphicInFrame: FMObject;
+	PrevGraphicInFrame: object;
 
-	readonly PrevGraphicInGroup: FMObject;
+	readonly PrevGraphicInGroup: object;
 
 	readonly ResolvedDirection: number;
 
@@ -5888,7 +5888,7 @@ declare class TiApiClient {
 
 	Name: string;
 
-	readonly NextTiInDoc: FMObject;
+	readonly NextTiInDoc: object;
 
 	readonly TextRange: TextRange;
 
@@ -5944,7 +5944,7 @@ declare class TiFlow {
 
 	Name: string;
 
-	readonly NextTiInDoc: FMObject;
+	readonly NextTiInDoc: object;
 
 	readonly TextRange: TextRange;
 
@@ -6002,7 +6002,7 @@ declare class TiText {
 
 	Name: string;
 
-	readonly NextTiInDoc: FMObject;
+	readonly NextTiInDoc: object;
 
 	readonly TextRange: TextRange;
 
@@ -6052,7 +6052,7 @@ declare class TiTextTable {
 
 	Name: string;
 
-	readonly NextTiInDoc: FMObject;
+	readonly NextTiInDoc: object;
 
 	readonly TextRange: TextRange;
 
@@ -6130,11 +6130,11 @@ declare class UnanchoredFrame {
 
 	Fill: number;
 
-	readonly FirstGraphicInFrame: FMObject;
+	readonly FirstGraphicInFrame: object;
 
-	readonly FirstGraphicInFrame: FMObject;
+	readonly FirstGraphicInFrame: object;
 
-	FrameParent: FMObject;
+	FrameParent: object;
 
 	GraphicCantBeSelected: number;
 
@@ -6152,9 +6152,9 @@ declare class UnanchoredFrame {
 
 	IsHotspot: number;
 
-	readonly LastGraphicInFrame: FMObject;
+	readonly LastGraphicInFrame: object;
 
-	readonly LastGraphicInFrame: FMObject;
+	readonly LastGraphicInFrame: object;
 
 	LineCap: number;
 
@@ -6164,25 +6164,25 @@ declare class UnanchoredFrame {
 
 	Name: string;
 
-	readonly NextGraphicInDoc: FMObject;
+	readonly NextGraphicInDoc: object;
 
-	NextGraphicInFrame: FMObject;
+	NextGraphicInFrame: object;
 
-	readonly NextGraphicInGroup: FMObject;
+	readonly NextGraphicInGroup: object;
 
-	readonly NextSelectedGraphicInDoc: FMObject;
+	readonly NextSelectedGraphicInDoc: object;
 
 	ObjectAttributes: Strings;
 
 	Overprint: number;
 
-	readonly PageFramePage: FMObject;
+	readonly PageFramePage: object;
 
 	Pen: number;
 
-	PrevGraphicInFrame: FMObject;
+	PrevGraphicInFrame: object;
 
-	readonly PrevGraphicInGroup: FMObject;
+	readonly PrevGraphicInGroup: object;
 
 	Runaround: number;
 
