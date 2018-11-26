@@ -7239,7 +7239,7 @@ declare class UInts {
 
 }
 
-declare enum Constants {
+declare const enum Constants {
 
 	EXCLUDE_CONREF_DEPENDENCIES = 0x20,
 
@@ -8029,8 +8029,7 @@ declare enum Constants {
 
 	FF_ALT_KEY = 0x0004,
 
-	// TODO: check if this is breaking Constants
-	//FF_ATTACH_ALL = FF_ATTACH_BORDER_STATUS || FF_ATTACH_BORDER_PAGENUM || FF_ATTACH_BORDER_ZOOM || FF_ATTACH_BORDER_PAGEUPDOWN || FF_ATTACH_BORDER_RIGHTICONS,
+	//FF_ATTACH_ALL = 0x0001 | 0x0002 | 0x0004 | 0x0008 | 0x0010,
 
 	FF_ATTACH_BORDER_PAGENUM = 0x0002,
 
@@ -8120,8 +8119,7 @@ declare enum Constants {
 
 	FF_DITAUpdateAllLinks = 0x04,
 
-	// TODO: check if this breaks Constants
-	//FF_DITAUpdateAllReferences = FF_DITAUpdateAllConrefs || FF_DITAUpdateAllXrefs || FF_DITAUpdateAllLinks || FF_DITAUpdateAllTopicrefs || FF_DITAUpdateAllTopicsetrefs,
+	//FF_DITAUpdateAllReferences = 0x01 | 0x02 | 0x04 | 0x08 | 0x10,
 
 	FF_DITAUpdateAllTopicrefs = 0x08,
 
@@ -8281,7 +8279,7 @@ declare enum Constants {
 
 	FF_XRUI_CLOSED_DOCS = 0x04,
 
-	//FF_XRUI_EVERYTHING = FF_XRUI_INTERNAL || FF_XRUI_OPEN_DOCS || FF_XRUI_CLOSED_DOCS,
+	//FF_XRUI_EVERYTHING = 0x01 | 0x02 | 0x04,
 
 	FF_XRUI_FORCE_UPDATE = 0x08,
 
@@ -8331,17 +8329,17 @@ declare enum Constants {
 
 	FO_BookComponent = 3,
 
-	FO_CMSConnection = 83 + 15,
+	FO_CMSConnection = 98,
 
 	FO_CMSObject = 76,
 
-	FO_CMSObject2 = 83 + 16,
+	FO_CMSObject2 = 99,
 
 	FO_CMSRegistration = 74,
 
 	FO_CMSSession = 75,
 
-	FO_Cblock = 83 + 3,
+	FO_Cblock = 86,
 
 	FO_Cell = 39,
 
@@ -8363,7 +8361,7 @@ declare enum Constants {
 
 	FO_DialogResource = 43,
 
-	FO_DitaMap = 83 + 13,
+	FO_DitaMap = 96,
 
 	FO_DlgBox = 44,
 
@@ -8411,9 +8409,9 @@ declare enum Constants {
 
 	FO_Fn = 25,
 
-	FO_Frame = 83 + 2,
+	FO_Frame = 85,
 
-	FO_Graphic = 83 + 1,
+	FO_Graphic = 84,
 
 	FO_GraphicsFmt = 73,
 
@@ -8431,7 +8429,7 @@ declare enum Constants {
 
 	FO_Last_Graphic = 22,
 
-	FO_Last_Internal = 83 + 14,
+	FO_Last_Internal = 97,
 
 	FO_Last_Page = 8,
 
@@ -8449,13 +8447,13 @@ declare enum Constants {
 
 	FO_Menu = 55,
 
-	FO_MenuCell = 83 + 11,
+	FO_MenuCell = 94,
 
 	FO_MenuItemSeparator = 57,
 
 	FO_Num = 83,
 
-	FO_Page = 83 + 0,
+	FO_Page = 83,
 
 	FO_Pgf = 31,
 
@@ -8481,21 +8479,21 @@ declare enum Constants {
 
 	FO_StringResource = 1,
 
-	FO_SubCell = 83 + 7,
+	FO_SubCell = 90,
 
 	FO_SubCol = 65,
 
-	FO_SubCond = 83 + 4,
+	FO_SubCond = 87,
 
-	FO_SubDash = 83 + 6,
+	FO_SubDash = 89,
 
-	FO_SubPblock = 83 + 9,
+	FO_SubPblock = 92,
 
-	FO_SubStyle = 83 + 5,
+	FO_SubStyle = 88,
 
-	FO_SubTbl = 83 + 8,
+	FO_SubTbl = 91,
 
-	FO_SubTextDef = 83 + 10,
+	FO_SubTextDef = 93,
 
 	FO_Tbl = 36,
 
@@ -8503,7 +8501,7 @@ declare enum Constants {
 
 	FO_TextFrame = 19,
 
-	FO_TextInset = 83 + 12,
+	FO_TextInset = 95,
 
 	FO_TextLine = 18,
 
@@ -11707,7 +11705,7 @@ declare enum Constants {
 
 	FS_NumSaveReturnParams = 3,
 
-	FS_NumSpellParams = 1007 - 1000 + 1,
+	FS_NumSpellParams = 8,
 
 	FS_NumUpdateBookParams = 14,
 
@@ -12863,15 +12861,15 @@ declare enum Constants {
 
 	FV_DIALOG_DOCK_ALL = 0xFF,
 
-	FV_DIALOG_DOCK_BOTTOM = 0x1 << 3,
+	// //FV_DIALOG_DOCK_BOTTOM = 0x1 << 3,
 
 	FV_DIALOG_DOCK_LEFT = 0x1,
 
 	FV_DIALOG_DOCK_NONE = 0x00,
 
-	FV_DIALOG_DOCK_RIGHT = 0x1 << 1,
+	// FV_DIALOG_DOCK_RIGHT = 0x1 << 1,
 
-	FV_DIALOG_DOCK_TOP = 0x1 << 2,
+	// FV_DIALOG_DOCK_TOP = 0x1 << 2,
 
 	FV_DIALOG_GRIPPERBAR_FALSE = 1,
 
@@ -12879,27 +12877,27 @@ declare enum Constants {
 
 	FV_DIALOG_GROUP_ALL = 0xFF,
 
-	FV_DIALOG_GROUP_ALLPANELS = 0x1 << 7,
+	// //FV_DIALOG_GROUP_ALLPANELS = 0x1 << 7,
 
-	FV_DIALOG_GROUP_ATTRIBUTES = 0x1 << 3,
+	// //FV_DIALOG_GROUP_ATTRIBUTES = 0x1 << 3,
 
-	FV_DIALOG_GROUP_CATALOGS = 0x1 << 1,
+	// //FV_DIALOG_GROUP_CATALOGS = 0x1 << 1,
 
-	FV_DIALOG_GROUP_DESIGNERS = 0x1 << 2,
+	// //FV_DIALOG_GROUP_DESIGNERS = 0x1 << 2,
 
-	FV_DIALOG_GROUP_EDIT = 0x1 << 6,
+	// //FV_DIALOG_GROUP_EDIT = 0x1 << 6,
 
 	FV_DIALOG_GROUP_NONE = 0x0,
 
-	FV_DIALOG_GROUP_PODS = 0x1 << 4,
+	// //FV_DIALOG_GROUP_PODS = 0x1 << 4,
 
-	FV_DIALOG_GROUP_PODSRIGHT = 0x1 << 5,
+	// //FV_DIALOG_GROUP_PODSRIGHT = 0x1 << 5,
 
-	FV_DIALOG_GROUP_RIGHT_BOTTOM = 0x1 << 10,
+	// //FV_DIALOG_GROUP_RIGHT_BOTTOM = 0x1 << 10,
 
-	FV_DIALOG_GROUP_RIGHT_TOP = 0x1 << 9,
+	// //FV_DIALOG_GROUP_RIGHT_TOP = 0x1 << 9,
 
-	FV_DIALOG_GROUP_RMKITS = 0x1 << 8,
+	// //FV_DIALOG_GROUP_RMKITS = 0x1 << 8,
 
 	FV_DIALOG_GROUP_SPECIAL = 0x1,
 
@@ -13231,37 +13229,37 @@ declare enum Constants {
 
 	FV_ENABLE_OBJ_PROPS = 8,
 
-	FV_ENUMERATE_BOOKCOMP_FOLDER = 1 << 8,
+	// FV_ENUMERATE_BOOKCOMP_FOLDER = 1 << 8,
 
-	FV_ENUMERATE_BOOKCOMP_GROUP = 1 << 9,
+	// FV_ENUMERATE_BOOKCOMP_GROUP = 1 << 9,
 
-	FV_ENUMERATE_COMPFILE_BOOKBINARY = 1 << 14,
+	// FV_ENUMERATE_COMPFILE_BOOKBINARY = 1 << 14,
 
-	FV_ENUMERATE_COMPFILE_BOOKMIF = 1 << 15,
+	// FV_ENUMERATE_COMPFILE_BOOKMIF = 1 << 15,
 
-	FV_ENUMERATE_COMPFILE_FMBINARY = 1 << 12,
+	// FV_ENUMERATE_COMPFILE_FMBINARY = 1 << 12,
 
-	FV_ENUMERATE_COMPFILE_FMMIF = 1 << 13,
+	// FV_ENUMERATE_COMPFILE_FMMIF = 1 << 13,
 
-	FV_ENUMERATE_COMPFILE_XML = 1 << 16,
+	// FV_ENUMERATE_COMPFILE_XML = 1 << 16,
 
-	FV_ENUMERATE_COMP_CHILDBOOK_COMPONENTS = 1 << 7,
+	// FV_ENUMERATE_COMP_CHILDBOOK_COMPONENTS = 1 << 7,
 
-	FV_ENUMERATE_COMP_CHILDMAP_COMPONENTS = 1 << 6,
+	// FV_ENUMERATE_COMP_CHILDMAP_COMPONENTS = 1 << 6,
 
-	FV_ENUMERATE_COMP_FOLDER_COMPONENTS = 1 << 10,
+	// FV_ENUMERATE_COMP_FOLDER_COMPONENTS = 1 << 10,
 
-	FV_ENUMERATE_COMP_GROUP_COMPONENTS = 1 << 11,
+	// FV_ENUMERATE_COMP_GROUP_COMPONENTS = 1 << 11,
 
-	FV_ENUMERATE_DITACOMP_KEYDEF = 1 << 5,
+	// FV_ENUMERATE_DITACOMP_KEYDEF = 1 << 5,
 
-	FV_ENUMERATE_DITACOMP_MAPREF = 1 << 2,
+	// FV_ENUMERATE_DITACOMP_MAPREF = 1 << 2,
 
-	FV_ENUMERATE_DITACOMP_TOPICREF = 1 << 1,
+	// FV_ENUMERATE_DITACOMP_TOPICREF = 1 << 1,
 
-	FV_ENUMERATE_DITACOMP_TOPICSET = 1 << 3,
+	// FV_ENUMERATE_DITACOMP_TOPICSET = 1 << 3,
 
-	FV_ENUMERATE_DITACOMP_TOPICSETREF = 1 << 4,
+	// FV_ENUMERATE_DITACOMP_TOPICSETREF = 1 << 4,
 
 	FV_EUC = 7,
 
@@ -13761,7 +13759,7 @@ declare enum Constants {
 
 	FV_KeyDefMaxFields = 11,
 
-	FV_KeyDefMaxPrimaryFields = 4 + 1,
+	FV_KeyDefMaxPrimaryFields = 5,
 
 	FV_KeySrcTypeDitamap = 1,
 
@@ -14107,7 +14105,7 @@ declare enum Constants {
 
 	FV_NumExportStatusFields = 2,
 
-	FV_NumFindElementItems = 2 + 1,
+	FV_NumFindElementItems = 3,
 
 	FV_NumImportStatusFields = 2,
 
@@ -14347,7 +14345,7 @@ declare enum Constants {
 
 	FV_PRINT_SPOT = 0x0,
 
-	//FV_PRODUCT_ALL = FV_PRODUCT_UNSTRUCTURED || FV_PRODUCT_STRUCTURED || FV_PRODUCT_XMLAUTHOR,
+	// //FV_PRODUCT_ALL = 0x01 | 0x02 | 0x04,
 
 	FV_PRODUCT_STRUCTURED = 0x02,
 
@@ -14743,7 +14741,7 @@ declare enum Constants {
 
 	FV_VAR_USER_VARIABLE = 0,
 
-	//FV_VIEW_ALL = FV_VIEW_WYSIWYG || FV_VIEW_AUTHOR || FV_VIEW_XML,
+	// FV_VIEW_ALL = 0x01 | 0x02 | 0x04,
 
 	FV_VIEW_AUTHOR = 0x02,
 
@@ -14767,7 +14765,7 @@ declare enum Constants {
 
 	FV_WIDE = 0,
 
-	//FV_WINDOW_ALL = FV_WINDOW_DOC || FV_WINDOW_BOOK || FV_WINDOW_DITAMAP,
+	// FV_WINDOW_ALL = 0x01 | 0x02 | 0x04,
 
 	FV_WINDOW_BOOK = 0x02,
 
