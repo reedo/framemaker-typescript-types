@@ -1,7 +1,6 @@
 {
 	"useTabs": true,
 	"printWidth": 120,
-	"proseWrap": "always",
 	"semi": true,
 	"tabWidth": 2
 }
