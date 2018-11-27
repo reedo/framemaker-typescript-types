@@ -27,7 +27,7 @@ declare class AFrame {
 	 *   Constants.FV_ALIGN_INSIDE  (3)
 	 *   Constants.FV_ALIGN_OUTSIDE (4)
 	 */
-	Alignment: Constants;
+	Alignment: Constants.FV_ALIGN_LEFT | Constants.FV_ALIGN_CENTER | Constants.FV_ALIGN_RIGHT | Constants.FV_ALIGN_INSIDE | Constants.FV_ALIGN_OUTSIDE;
 
 	/**
 	 * Indicates the location where the frame is anchored.
