@@ -20,37 +20,20 @@ declare class AFrame {
 
 	/**
 	 * Indicates how the anchored frame is aligned.
-	 * Possible values are:
-	 *   Constants.FV_ALIGN_LEFT    (0)
-	 *   Constants.FV_ALIGN_CENTER  (1)
-	 *   Constants.FV_ALIGN_RIGHT   (2)
-	 *   Constants.FV_ALIGN_INSIDE  (3)
-	 *   Constants.FV_ALIGN_OUTSIDE (4)
 	 */
-	Alignment: Constants.FV_ALIGN_LEFT | Constants.FV_ALIGN_CENTER | Constants.FV_ALIGN_RIGHT | Constants.FV_ALIGN_INSIDE | Constants.FV_ALIGN_OUTSIDE;
+	Alignment: Constants.FV_ALIGN_LEFT | Constants.FV_ALIGN_CENTER | Constants.FV_ALIGN_RIGHT |
+	  Constants.FV_ALIGN_INSIDE | Constants.FV_ALIGN_OUTSIDE;
 
 	/**
 	 * Indicates the location where the frame is anchored.
-	 * Possible values are:
-	 *   Constants.FV_ANCHOR_INLINE             ( 1)
-	 *   Constants.FV_ANCHOR_TOP                ( 2)
-	 *   Constants.FV_ANCHOR_BELOW              ( 3)
-	 *   Constants.FV_ANCHOR_BOTTOM             ( 4)
-	 *   Constants.FV_ANCHOR_SUBCOL_LEFT        ( 5)
-	 *   Constants.FV_ANCHOR_SUBCOL_RIGHT       ( 6)
-	 *   Constants.FV_ANCHOR_SUBCOL_NEAREST     ( 7)
-	 *   Constants.FV_ANCHOR_SUBCOL_FARTHEST    ( 8)
-	 *   Constants.FV_ANCHOR_SUBCOL_INSIDE      ( 9)
-	 *   Constants.FV_ANCHOR_SUBCOL_OUTSIDE     (10)
-	 *   Constants.FV_ANCHOR_TEXTFRAME_LEFT     (11)
-	 *   Constants.FV_ANCHOR_TEXTFRAME_RIGHT    (12)
-	 *   Constants.FV_ANCHOR_TEXTFRAME_NEAREST  (13)
-	 *   Constants.FV_ANCHOR_TEXTFRAME_FARTHEST (14)
-	 *   Constants.FV_ANCHOR_TEXTFRAME_INSIDE   (15)
-	 *   Constants.FV_ANCHOR_TEXTFRAME_OUTSIDE  (16)
-	 *   Constants.FV_ANCHOR_RUN_INTO_PARAGRAPH (17)
 	 */
-	AnchorType: Constants;
+	AnchorType: Constants.FV_ANCHOR_INLINE | Constants.FV_ANCHOR_TOP | Constants.FV_ANCHOR_BELOW |
+	  Constants.FV_ANCHOR_BOTTOM | Constants.FV_ANCHOR_SUBCOL_LEFT | Constants.FV_ANCHOR_SUBCOL_RIGHT |
+		Constants.FV_ANCHOR_SUBCOL_NEAREST | Constants.FV_ANCHOR_SUBCOL_FARTHEST | Constants.FV_ANCHOR_SUBCOL_INSIDE |
+		Constants.FV_ANCHOR_SUBCOL_OUTSIDE | Constants.FV_ANCHOR_TEXTFRAME_LEFT | Constants.FV_ANCHOR_TEXTFRAME_RIGHT |
+		Constants.FV_ANCHOR_TEXTFRAME_NEAREST | Constants.FV_ANCHOR_TEXTFRAME_FARTHEST |
+		Constants.FV_ANCHOR_TEXTFRAME_INSIDE | Constants.FV_ANCHOR_TEXTFRAME_OUTSIDE |
+		Constants.FV_ANCHOR_RUN_INTO_PARAGRAPH;
 
 	/**
 	 * Indicates the angle of rotation of the graphic object.
@@ -85,12 +68,8 @@ declare class AFrame {
 
 	/**
 	 * Denotes the style of the arrowhead.
-	 * Possible values are:
-	 *   Constants.FV_ARROW_STICK  (0x1)
-	 *   Constants.FV_ARROW_HOLLOW (0x2)
-	 *   Constants.FV_ARROW_FILLED (0x3)
 	 */
-	ArrowType: Constants;
+	ArrowType: Constants.FV_ARROW_STICK | Constants.FV_ARROW_HOLLOW | Constants.FV_ARROW_FILLED;
 
 	/**
 	 * Baseline Offset
@@ -110,7 +89,7 @@ declare class AFrame {
 	/**
 	 * Specifies a dash pattern that is repeated for the length of an object's border. The pattern is stored in a MetricsT
 	 * structure.
-	 * The 0th element of the MetricsT.MetricsT_val array stores the length of the first dash; the 1st element stores the
+	 * The 0th element of the MetricsT. MetricsT_val array stores the length of the first dash; the 1st element stores the
 	 * following space; the 2nd element stores the next dash; and so on for an even number of elements.
 	 */
 	Dash: Metrics;
@@ -123,12 +102,8 @@ declare class AFrame {
 
 	/**
 	 * Denotes the fill pattern (numbers between 0 and 15).
-	 * Constants are provided for fill patterns 0, 7 and 15, as follows:
-	 *   Constants.FV_FILL_BLACK ( 0)
-	 *   Constants.FV_FILL_WHITE ( 7)
-	 *   Constants.FV_FILL_CLEAR (15)
 	 */
-	Fill: Constants;
+	Fill: Constants.FV_FILL_BLACK | Constants.FV_FILL_WHITE | Constants.FV_FILL_CLEAR | number;
 
 	/**
 	 * Contains the first object in the anchored frame.
@@ -200,12 +175,8 @@ declare class AFrame {
 
 	/**
 	 * Specifies the type of the end of the line.
-	 * The possible values are:
-	 *   Constants.FV_CAP_BUTT   (0x00)
-	 *   Constants.FV_CAP_ROUND  (0x01)
-	 *   Constants.FV_CAP_SQUARE (0x02)
 	 */
-	LineCap: Constants;
+	LineCap: Constants.FV_CAP_BUTT | Constants.FV_CAP_ROUND | Constants.FV_CAP_SQUARE;
 
 	/**
 	 * Specifies the distance of the object from the left side of the parent frame (in inches). The permissible range is
@@ -257,21 +228,14 @@ declare class AFrame {
 	ObjectAttributes: Strings;
 
 	/**
-	 * Specifies the overprint settings for the object. The possible values are:
-	 *   Constants.FV_KNOCKOUT  (0x00)
-	 *   Constants.FV_OVERPRINT (0x01)
-	 *   Constants.FV_FROMCOLOR (0x02)
+	 * Specifies the overprint settings for the object.
 	 */
-	Overprint: Constants;
+	Overprint: Constants.FV_KNOCKOUT | Constants.FV_OVERPRINT | Constants.FV_FROMCOLOR;
 
 	/**
 	 * Specifies the pen pattern (numbers between 0 and 7).
-	 * Constants are provided for pen patterns 0, 7 and 15, as follows:
-	 *   Constants.FV_FILL_BLACK ( 0)
-	 *   Constants.FV_FILL_WHITE ( 7)
-	 *   Constants.FV_FILL_CLEAR (15)
 	 */
-	Pen: Constants.FV_FILL_BLACK;
+	Pen: Constants.FV_FILL_BLACK | Constants.FV_FILL_WHITE | Constants.FV_FILL_CLEAR | number;
 
 	/**
 	 * Contains the previous anchored frame in the text frame.
@@ -290,12 +254,9 @@ declare class AFrame {
 
 	/**
 	 * Specifies whether text can flow around the object and, if so, whether the text follows the contour of the object or
-	 * a box shape surrounding the object. The possible values are:
-	 *   Constants.FV_TR_NONE    (0x01)
-	 *   Constants.FV_TR_CONTOUR (0x02)
-	 *   Constants.FV_TR_BBOX    (0x03)
+	 * a box shape surrounding the object.
 	 */
-	Runaround: number;
+	Runaround: Constants.FV_TR_NONE | Constants.FV_TR_CONTOUR | Constants.FV_TR_BBOX;
 
 	/**
 	 * Denotes the width of the runaround gap, if the object is a runaround object.
@@ -344,7 +305,8 @@ declare class AFrame {
 
 	/**
 	 * UNDOCUMENTED
-	 * @param opcode UNDOCUMENTED
+	 * 
+	 * @param opcode - UNDOCUMENTED
 	 */
 	ApplyFitToFrame(opcode: number): number;
 
@@ -353,17 +315,9 @@ declare class AFrame {
 	 * object, all child objects are also deleted with the parent object. For example, if you delete a frame, all objects
 	 * within the frame are also deleted.
 	 * The Delete() method does not take any arguments.
-	 * The method returns FE_SUCCESS on success, else returns one of the following values in FA_errno:
-	 * 
-	 *   Error                            Reason
-	 *   Constants.FE_BadDocId     (- 2)  Invalid document.
-	 *   Constants.FE_BadObjId     (- 3)  Invalid object.
-	 *   Constants.FE_BadDelete    (-17)  Specified object could not be deleted.
-	 *   Constants.FE_BadOperation (-27)  Function call specified an illegal operation.
-	 *   Constants.FE_BadParameter (-43)  Function call specified an invalid parameter.
-	 *   Constants.FE_NotMenu      ( 72)  Object is a menu item but the document to delete does not belong to the menu.
 	 */
-	Delete(): number;
+	Delete(): Constants.FE_Success | Constants.FE_BadDocId | Constants.FE_BadObjId | Constants.FE_BadDelete |
+	  Constants.FE_BadOperation | Constants.FE_BadParameter | Constants.FE_NotMenu;
 
 	/**
 	 * The GetProps() method retrieves the complete property list for a specified object.
@@ -371,73 +325,67 @@ declare class AFrame {
 	 * The method returns a PropVals object that contains an array of property-value pairs, on success.
 	 * If the GetProps() method fails, it sets the len field of the returned structure to 0 and assigns one of the
 	 * following values to FA_errno.
-	 * 
-	 *   Error                            Reason
-	 *   Constants.FE_BadDocId     (- 2)  Invalid document.
-	 *   Constants.FE_BadObjId     (- 3)  Invalid object.
-	 *   Constants.FE_WrongProduct (-60)  Current FrameMaker version does not support the specified operation.
 	 */
-	GetProps(): PropVals;
+	GetProps(): PropVals | Constants.FE_BadDocId | Constants.FE_BadObjId | Constants.FE_WrongProduct;
 
 	/**
 	 * Indicates whether an object is valid or not.
 	 * The method does not take any arguments.
 	 * The method returns 1 if the object is valid, else returns 0.
 	 */
-	ObjectValid(): number;
+	ObjectValid(): boolean;
 
 	/**
 	 * TheSetProps() method sets the properties of a specified object.
 	 * The method takes one argument - An array containing the values of the object to be set.
 	 * The method does not return anything on success.
-	 * On failure, the method returns one of the following values to FA_errno:
 	 * 
-	 *   Error                                           Reason
-	 *   Constants.FE_BadDocId                    (- 2)  Invalid document.
-	 *   Constants.FE_BadName                     (-33)  Specified name is illegal.
-	 *   Constants.FE_BadNewFrame                 (-14)  The method cannot move the specified object to this frame.
-	 *   Constants.FE_BadNewGroup                 (-15)  The method cannot move the specified object to this graphic
-	 *                                                   object group (FO_Group).
-	 *   Constants.FE_BadNewSibling               (-16)  Object cannot be made a sibling of the specified object.
-	 *   Constants.FE_BadObjId                    (- 3)  Invalid object.
-	 *   Constants.FE_BadPropNum                  (- 4)  Specified property number is invalid.
-	 *   Constants.FE_BadPropType                 (- 5)  Incorrect property type for this function.
-	 *   Constants.FE_BadRange                    (-36)  Specified text range is invalid.
-	 *   Constants.FE_CantSmooth                  (-38)  Object cannot be smoothed.
-	 *   Constants.FE_DupName                     (-32)  Property cannot be set to this name because it is already used by
-	 *                                                   another object.
-	 *   Constants.FE_GenRuleAmbiguous            (-55)  General rule in structured document is ambiguous.
-	 *   Constants.FE_GenRuleConnectorExpected    (-57)  General rule in structured document is missing a connector.
-	 *   Constants.FE_GenRuleItemExpected         (-51)  General rule in structured document is missing a rule item.
-	 *   Constants.FE_GenRuleLeftBracketExpected  (-53)  General rule in structured document is missing a left bracket.
-	 *   Constants.FE_GenRuleMixedConnectors      (-52)  General rule in structured document has mixed connectors.
-	 *   Constants.FE_GenRuleRightBracketExpected (-54)  General rule in structured document is missing a right bracket.
-	 *   Constants.FE_GenRuleSyntaxError          (-56)  General rule in structured document has a syntax error.
-	 *   Constants.FE_GroupSelect                 (- 9)  The method cannot select or deselect an object in the specified
-	 *                                                   group.
-	 *   Constants.FE_HiddenPage                  (-40)  The specified value must be a hidden page (FO_HiddenPage).
-	 *   Constants.FE_InvContextSpec              (   )  The method encountered an invalid context specification in a
-	 *                                                   FrameMaker document.
-	 *   Constants.FE_NotBookComponent            (-26)  The specified value must be a book component (FO_BookComponent).
-	 *   Constants.FE_NotFrame                    (-12)  The specified value must be a frame.
-	 *   Constants.FE_NotGraphic                  (-11)  The specified value must be a graphic object.
-	 *   Constants.FE_NotGroup                    (-13)  The specified value must be a graphic object group (FO_Group).
-	 *   Constants.FE_NotTextFrame                (-39)  The specified value must be a text column (FO_TextFrame).
-	 *   Constants.FE_NotTextObject               (-41)  The specified object must be a text object, such as a paragraph
-	 *                                                   (FO_Pgf) or a flow (FO_Flow).
-	 *   Constants.FE_OffsetNotFound              (-21)  Offset specified for the text location could not be found in the
-	 *                                                   specified paragraph or text line.
-	 *   Constants.FE_OutOfRange                  (- 7)  Specified property value is out of the legal range for the
-	 *                                                   specified property.
-	 *   Constants.FE_PageFrame                   (-37)  The specified value must be a page frame object
-	 *                                                   (FO_UnanchoredFrame).
-	 *   Constants.FE_ReadOnly                    (- 6)  Property is read-only.
-	 *   Constants.FE_WithinFrame                 (-10)  The specified object must first be moved to a different frame.
-	 *   Constants.FE_WrongProduct                (-60)  The current FrameMaker version does not support this operation.
+	 * Constants.FE_BadDocId                    Invalid document.
+	 * Constants.FE_BadName                     Specified name is illegal.
+	 * Constants.FE_BadNewFrame                 The method cannot move the specified object to this frame.
+	 * Constants.FE_BadNewGroup                 The method cannot move the specified object to this graphic object group (FO_Group).
+	 * Constants.FE_BadNewSibling               Object cannot be made a sibling of the specified object.
+	 * Constants.FE_BadObjId                    Invalid object.
+	 * Constants.FE_BadPropNum                  Specified property number is invalid.
+	 * Constants.FE_BadPropType                 Incorrect property type for this function.
+	 * Constants.FE_BadRange                    Specified text range is invalid.
+	 * Constants.FE_CantSmooth                  Object cannot be smoothed.
+	 * Constants.FE_DupName                     Property cannot be set to this name because it is already used by another object.
+	 * Constants.FE_GenRuleAmbiguous            General rule in structured document is ambiguous.
+	 * Constants.FE_GenRuleConnectorExpected    General rule in structured document is missing a connector.
+	 * Constants.FE_GenRuleItemExpected         General rule in structured document is missing a rule item.
+	 * Constants.FE_GenRuleLeftBracketExpected  General rule in structured document is missing a left bracket.
+	 * Constants.FE_GenRuleMixedConnectors      General rule in structured document has mixed connectors.
+	 * Constants.FE_GenRuleRightBracketExpected General rule in structured document is missing a right bracket.
+	 * Constants.FE_GenRuleSyntaxError          General rule in structured document has a syntax error.
+	 * Constants.FE_GroupSelect                 The method cannot select or deselect an object in the specified group.
+	 * Constants.FE_HiddenPage                  The specified value must be a hidden page (FO_HiddenPage).
+	 * Constants.FE_InvContextSpec              The method encountered an invalid context specification in a FrameMaker document.
+	 * Constants.FE_NotBookComponent            The specified value must be a book component (FO_BookComponent).
+	 * Constants.FE_NotFrame                    The specified value must be a frame.
+	 * Constants.FE_NotGraphic                  The specified value must be a graphic object.
+	 * Constants.FE_NotGroup                    The specified value must be a graphic object group (FO_Group).
+	 * Constants.FE_NotTextFrame                The specified value must be a text column (FO_TextFrame).
+	 * Constants.FE_NotTextObject               The specified object must be a text object, such as a paragraph (FO_Pgf) or a flow (FO_Flow).
+	 * Constants.FE_OffsetNotFound              Offset specified for the text location could not be found in the specified paragraph or text line.
+	 * Constants.FE_OutOfRange                  Specified property value is out of the legal range for the specified property.
+	 * Constants.FE_PageFrame                   The specified value must be a page frame object (FO_UnanchoredFrame).
+	 * Constants.FE_ReadOnly                    Property is read-only.
+	 * Constants.FE_WithinFrame                 The specified object must first be moved to a different frame.
+	 * Constants.FE_WrongProduct                The current FrameMaker version does not support this operation.
 	 * 
 	 * @param setVal - The property list
 	 */
-	SetProps(setVal: PropVals): void;
+	SetProps(setVal: PropVals): void | Constants.FE_BadDocId | Constants.FE_BadName | Constants.FE_BadNewFrame |
+		Constants.FE_BadNewGroup | Constants.FE_BadNewSibling | Constants.FE_BadObjId | Constants.FE_BadPropNum |
+		Constants.FE_BadPropType | Constants.FE_BadRange | Constants.FE_CantSmooth | Constants.FE_DupName |
+		Constants.FE_GenRuleAmbiguous | Constants.FE_GenRuleConnectorExpected | Constants.FE_GenRuleItemExpected |
+		Constants.FE_GenRuleLeftBracketExpected | Constants.FE_GenRuleMixedConnectors |
+		Constants.FE_GenRuleRightBracketExpected | Constants.FE_GenRuleSyntaxError | Constants.FE_GroupSelect |
+		Constants.FE_HiddenPage | Constants.FE_InvContextSpec | Constants.FE_NotBookComponent | Constants.FE_NotFrame |
+		Constants.FE_NotGraphic | Constants.FE_NotGroup | Constants.FE_NotTextFrame | Constants.FE_NotTextObject |
+		Constants.FE_OffsetNotFound | Constants.FE_OutOfRange | Constants.FE_PageFrame | Constants.FE_ReadOnly |
+		Constants.FE_WithinFrame | Constants.FE_WrongProduct;
 
 }
 
@@ -7693,8 +7641,10 @@ declare const enum Constants {
 
 	FE_BadContainer = -104,
 
+	/** Specified object could not be deleted. */
 	FE_BadDelete = -17,
 
+	/** Invalid document. */
 	FE_BadDocId = -2,
 
 	FE_BadElementDefId = -28,
@@ -7731,12 +7681,15 @@ declare const enum Constants {
 
 	FE_BadNotificationNum = -30,
 
+	/** Invalid object. */
 	FE_BadObjId = -3,
 
+	/** Function call specified an illegal operation. */
 	FE_BadOperation = -27,
 
 	FE_BadPageDelete = -18,
 
+	/** Function call specified an invalid parameter. */
 	FE_BadParameter = -43,
 
 	FE_BadPropNum = -4,
@@ -7881,6 +7834,8 @@ declare const enum Constants {
 
 	FE_InvAttributeDef = -79,
 
+	FE_InvContextSpec = 0,
+
 	FE_InvalidAttrExpr = -107,
 
 	FE_InvalidEmailId = -201,
@@ -7935,6 +7890,7 @@ declare const enum Constants {
 
 	FE_NotInMenu = -75,
 
+	/** Object is a menu item but the document does not belong to the menu. */
 	FE_NotMenu = -72,
 
 	FE_NotPgf = -25,
@@ -8001,6 +7957,7 @@ declare const enum Constants {
 
 	FE_WithinFrame = -10,
 
+	/** Current FrameMaker version does not support the specified operation. */
 	FE_WrongProduct = -60,
 
 	FE_WrongView = -194,
