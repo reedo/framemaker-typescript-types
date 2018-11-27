@@ -9,7 +9,5 @@
 	// VISUAL
 	"editor.minimap.enabled": false,
 	"editor.rulers": [120]
-	//"editor.wordWrap": "on",
-	//"editor.wrappingIndent": "deepIndent"
 	// MISC
 }
