@@ -1,0 +1,11 @@
+{
+	"javascript.format.enable": false,
+	"editor.formatOnSave": true,
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"editor.links": false,
+	"editor.tabSize": 2,
+	"editor.minimap.enabled": false,
+	"editor.wordWrap": "on",
+	"editor.wrappingIndent": "deepIndent"
+}
