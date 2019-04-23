@@ -6,8 +6,4 @@
 	"editor.insertSpaces": false,
 	"editor.links": false,
 	"editor.tabSize": 2,
-	// VISUAL
-	"editor.minimap.enabled": false,
-	"editor.rulers": [120]
-	// MISC
 }
