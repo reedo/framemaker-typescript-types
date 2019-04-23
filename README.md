@@ -8,5 +8,7 @@ For newer functions, the version it was introduced will be noted at the top of t
 Current progress:
 * ExtendScript Globals - None (high priority).
 * ScriptUI - None (low priority).
-* FrameMaker
-	* N/A
+* FrameMaker (completed classes)
+	* app
+	* Constants
+	* FCodes
