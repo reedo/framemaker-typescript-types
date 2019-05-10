@@ -1,5 +1,5 @@
 // Type definitions for FrameMaker FCodes object
-// Definitions by: Dan Reed <http://danreed.dev>
+// Definitions by Dan Reed <https://danreed.dev>
 
 declare const enum FCodes {
 	ALT_GFX_INSET = 0xB12,

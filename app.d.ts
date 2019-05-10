@@ -1,5 +1,5 @@
 // Type definitions for FrameMaker app object
-// Definitions by: Dan Reed <http://danreed.dev>
+// Definitions by Dan Reed <https://danreed.dev>
 
 /**
  * @todo Check readonly status of all vars.
