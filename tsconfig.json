@@ -1,5 +1,9 @@
 {
-  "compilerOptions": {
-    "strict": true,
-  },
+	"compilerOptions": {
+		"module": "none",
+		"strict": true,
+		"lib": [
+			"es5",
+		]
+	},
 }
