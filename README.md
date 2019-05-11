@@ -9,6 +9,7 @@ Current progress:
 * ExtendScript Globals - None (high priority).
 * ScriptUI - None (low priority).
 * FrameMaker (completed classes)
-	* app
+	* global (all declarations listed. Many are undocumented and others may have incorrect types)
+	* app (needs to be updated to be a Session object)
 	* Constants
 	* FCodes
