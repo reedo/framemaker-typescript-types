@@ -7,6 +7,9 @@ type FMObject = null;
 /** @todo Complete this list. Any FrameMaker graphic object. */
 type FMGraphic = null;
 
+/** @todo Complete this list. Any CMS object. */
+type CMSObject = null;
+
 /** Constants that represent Notification types. */
 type FA_Note = Constants.FA_Note_AI_Supported_File | Constants.FA_Note_Alert | Constants.FA_Note_AssignId | Constants.FA_Note_BackToUser | Constants.FA_Note_BodyPageAdded | Constants.FA_Note_BodyPageDeleted | Constants.FA_Note_CMS_PostCheckOutItem | Constants.FA_Note_CMS_PostOpenItem | Constants.FA_Note_CMS_PreCheckOutItem | Constants.FA_Note_CMS_PreOpenItem |
 	Constants.FA_Note_ClientCall | Constants.FA_Note_ConsoleMessage | Constants.FA_Note_CursorChange | Constants.FA_Note_DITAOptions | Constants.FA_Note_Dialog | Constants.FA_Note_Dialog_Create | Constants.FA_Note_DirtyBook | Constants.FA_Note_DirtyDoc | Constants.FA_Note_DisplayClientTiDialog | Constants.FA_Note_DisplayClientXRefDialog |
