@@ -46,6 +46,27 @@ interface NamespaceConstructor {
 	/** Creates a Namespace object with the given prefix and the given URI. */
 	(prefix: string, uri: string): Namespace;
 
+	/** Creates a namespace with an empty prefix and URI. */
+	new(): Namespace;
+
+	/** Creates a Namespace object with an empty prefix and the given URI. */
+	new(uri: string): Namespace;
+
+	/** Creates a namespace with an empty prefix and the URI set to the URI of the QName object (if the QName object contains a URI). */
+	new(prefix: QName): Namespace;
+
+	/**
+	 * Creates a copy of the given Namespace object.
+	 * 
+	 * If the Namespace() function is called without the new operator, and the only argument is a Namespace object, the function simply returns that object, rather than creating a copy.
+	*/
+	new(ns: Namespace): Namespace;
+
+	/** Creates a Namespace object with the given prefix and the given URI. */
+	new(prefix: string, uri: string): Namespace;
+
+	readonly prototype: Namespace;
+
 }
 
 declare const Namespace: NamespaceConstructor;
