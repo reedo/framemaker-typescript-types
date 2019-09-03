@@ -31,6 +31,7 @@ interface UnitValue {
 
 	/**
 	 * Returns the numeric value of this object in the given unit. If the unit is unknown or cannot be computed, generates a run-time error.
+	 * 
 	 * @param unit The unit type in abbreviated form; for example, “cm” or “in”.
 	 */
 	as(unit: UnitValueUnit): number;

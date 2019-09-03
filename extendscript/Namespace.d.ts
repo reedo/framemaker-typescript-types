@@ -39,7 +39,7 @@ interface NamespaceConstructor {
 	/**
 	 * Creates a copy of the given Namespace object.
 	 * 
-	 * If the Namespace() function is called without the new operator, and the only argument is a Namespace object, the function simply returns that object, rather than creating a copy.
+	 * If the `Namespace()` function is called without the new operator, and the only argument is a Namespace object, the function simply returns that object, rather than creating a copy.
 	*/
 	(ns: Namespace): Namespace;
 
@@ -58,7 +58,7 @@ interface NamespaceConstructor {
 	/**
 	 * Creates a copy of the given Namespace object.
 	 * 
-	 * If the Namespace() function is called without the new operator, and the only argument is a Namespace object, the function simply returns that object, rather than creating a copy.
+	 * If the `Namespace()` function is called without the new operator, and the only argument is a Namespace object, the function simply returns that object, rather than creating a copy.
 	*/
 	new(ns: Namespace): Namespace;
 

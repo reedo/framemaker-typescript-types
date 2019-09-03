@@ -149,9 +149,9 @@ interface FolderConstructor {
 	/**
 	 * Decodes the specified string as required by RFC 2396.
 	 * 
-	 * @param uri String. The encoded string to decode. All special characters must be encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my%20file" is decoded as "my file".
+	 * @param uri String. The encoded string to decode. All special characters must be encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string `my%20file` is decoded as `my file`.
 	 * 
-	 * Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )
+	 * Special characters are those with a numeric value greater than 127, except the following: `/ - _ . ! ~ * ' ( )`
 	 * 
 	 * @returns The decoded string.
 	 */
@@ -161,9 +161,9 @@ interface FolderConstructor {
 	readonly desktop: Folder;
 
 	/**
-	 * Encodes the specified string as required by RFC 2396. All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my file" is encoded as "my%20file".
+	 * Encodes the specified string as required by RFC 2396. All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string `my file` is encoded as `my%20file`.
 	 * 
-	 * Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )
+	 * Special characters are those with a numeric value greater than 127, except the following: `/ - _ . ! ~ * ' ( )`
 	 * 
 	 * @param name The string to encode.
 	 * 
@@ -187,7 +187,7 @@ interface FolderConstructor {
 	readonly myDocuments: Folder;
 
 	/**
-	 * Opens the built-in platform-specific file-browsing dialog, and creates a new File or Folder object for the selected file or folder. Differs from the object method selectDlg() in that it does not preselect a folder.
+	 * Opens the built-in platform-specific file-browsing dialog, and creates a new File or Folder object for the selected file or folder. Differs from the object method `selectDlg()` in that it does not preselect a folder.
 	 * 
 	 * @param prompt A string containing the prompt text, if the dialog allows a prompt.
 	 * 

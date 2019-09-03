@@ -28,6 +28,7 @@ interface File {
 	 * Copies this object’s referenced file to the specified target location. Resolves any aliases to find the source file. If a file exists at the target location, it is overwritten.
 	 * 
 	 * @param target A string with the URI path to the target location, or a File object that references the target location.
+	 * 
 	 * @returns true if the copy was successful, false otherwise.
 	 */
 	copy(target: File | string): boolean;
@@ -189,7 +190,7 @@ interface File {
 	/**
 	 * Opens the built-in platform-specific file-browsing dialog, in which the user can select an existing file location to which to save information, and creates a new File object to represent the selected file.
 	 * 
-	 * Differs from the class method saveDialog() in that it presets the current folder to this File object’s parent folder and the file to this object’s associated file.
+	 * Differs from the class method `saveDialog()` in that it presets the current folder to this File object’s parent folder and the file to this object’s associated file.
 	 * 
 	 * If the user clicks OK, returns a File object for the selected file. If the user cancels, returns null.
 	 * 
@@ -256,16 +257,16 @@ interface FileConstructor {
 	/**
 	 * Decodes the specified string as required by RFC 2396.
 	 * 
-	 * @param uri The encoded string to decode. All special characters must be encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my%20file" is decoded as "my file".
+	 * @param uri The encoded string to decode. All special characters must be encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string `my%20file` is decoded as `my file`.
 	 * 
-	 * Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )
+	 * Special characters are those with a numeric value greater than 127, except the following: `/ - _ . ! ~ * ' ( )`
 	 */
 	decode(uri: string): string;
 
 	/**
-	 * Encodes the specified string as required by RFC 2396. All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my file" is encoded as "my%20file".
+	 * Encodes the specified string as required by RFC 2396. All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string `my file` is encoded as `my%20file`.
 	 * 
-	 * Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )
+	 * Special characters are those with a numeric value greater than 127, except the following: `/ - _ . ! ~ * ' ( )`
 	 * 
 	 * @param name The string to encode.
 	 */
@@ -287,7 +288,7 @@ interface FileConstructor {
 	 * If the user clicks OK, returns a File object for the selected file, or an array of objects if multiple files are selected. If the user cancels, returns null.
 	 * 
 	 * @param prompt A string containing the prompt text, if the dialog allows a prompt.
-	 * @param filter A filter that limits the types of files displayed in the dialog. In Windows, a filter expression, such as "JavaScript:*.jsx;All files:*.*".
+	 * @param filter A filter that limits the types of files displayed in the dialog. In Windows, a filter expression, such as `JavaScript:*.jsx;All files:*.*`.
 	 * @param multiSelect When true, the user can select multiple files and the return value is an array. Default is false.
 	 */
 	openDialog(prompt?: string, filter?: string, multiSelect?: boolean): File | null;
@@ -298,7 +299,7 @@ interface FileConstructor {
 	 * If the user clicks OK, returns a File object for the selected file location. If the user cancels, returns null.
 	 * 
 	 * @param prompt A string containing the prompt text, if the dialog allows a prompt.
-	 * @param filter A filter that limits the types of files displayed in the dialog. A filter expression, such as "JavaScript:\*.jsx;All files:\*.\*".
+	 * @param filter A filter that limits the types of files displayed in the dialog. A filter expression, such as `JavaScript:*.jsx;All files:*.*`.
 	 */
 	saveDialog(prompt: string, filter?: string): File | null;
 }

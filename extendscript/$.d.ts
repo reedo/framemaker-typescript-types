@@ -11,7 +11,13 @@ interface Screen {
 	toString: Function;
 }
 
-/** This global ExtendScript object provides a number of debugging facilities and informational methods. The properties of the $ object allow you to get global information such as the most recent run-time error, and set flags that control debugging and localization behavior. The methods allow you to output text to the JavaScript Console during script execution, control execution and other ExtendScript behavior programmatically, and gather statistics on object use. */
+/**
+ * This global ExtendScript object provides a number of debugging facilities and informational methods.
+ * 
+ * The properties of the $ object allow you to get global information such as the most recent run-time error, and set flags that control debugging and localization behavior.
+ * 
+ * The methods allow you to output text to the JavaScript Console during script execution, control execution and other ExtendScript behavior programmatically, and gather statistics on object use.
+ */
 interface $ {
 
 	/** Displays the About box for the ExtendScript component, and returns the text of the About box as a string. */
@@ -103,7 +109,13 @@ interface $ {
 	/** Provides access to the Global object, which contains the JavaScript global namespace. */
 	readonly global: any;
 
-	/** A high-resolution timer that measures the number of microseconds since this property was last accessed. Value is initialized as early as possible, so the first access returns the startup time for ExtendScript. The property is thread-local; that is, the first access on a thread returns the time needed to create and initialize that thread. */
+	/**
+	 * A high-resolution timer that measures the number of microseconds since this property was last accessed.
+	 * 
+	 * Value is initialized as early as possible, so the first access returns the startup time for ExtendScript.
+	 * 
+	 * The property is thread-local; that is, the first access on a thread returns the time needed to create and initialize that thread.
+	 */
 	readonly hiresTimer: number;
 
 	/** The path for include files for the current script. */
