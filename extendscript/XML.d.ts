@@ -24,7 +24,7 @@ interface XMLSettings {
 /**
  * The XML object provides both static properties and functions, available through the XML class, and dynamic properties and functions available through each instance.
  * 
- * __	WARNING:__ The methods cannot be documented since the object uses string indexing.
+ * __WARNING:__ The methods cannot be documented since the object uses string indexing.
  * 
  * Refer to 'JavaScript Tools Guide CC' for this object's methods and usage.
  */
