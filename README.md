@@ -6,10 +6,10 @@ For newer functions, the version it was introduced will be noted at the top of t
 **This is a work in progress**
 
 Current progress:
-* ExtendScript Globals - None (high priority).
+* ExtendScript Globals
 * ScriptUI - None (low priority).
-* FrameMaker (completed classes)
+* FrameMaker
 	* global (all declarations listed. Many are undocumented and others may have incorrect types)
-	* app (needs to be updated to be a Session object)
+	* app
 	* Constants
 	* FCodes
