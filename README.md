@@ -1,4 +1,4 @@
-# TypeScript Type Definitions for Adobe FrameMaker (ExtendScript)
+# TypeScript Type Declarations for Adobe FrameMaker (ExtendScript)
 
 Contains all definitions up to FrameMaker 2019.
 For newer functions, the version it was introduced will be noted at the top of the function.
