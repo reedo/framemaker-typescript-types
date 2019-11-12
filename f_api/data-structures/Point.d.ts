@@ -1,7 +1,10 @@
 // Type definitions for the Point FMObject
 // Definitions by: Dan Reed <http://danreed.dev>
 
-/** Point describes an individual coordinate pair. FrameMaker measures coordinates from the upper-left corner of the parent frame. */
+/** Point describes an individual coordinate pair.
+ * 
+ * FrameMaker measures coordinates from the upper-left corner of the parent frame.
+ */
 interface Point {
 
 	/** X coordinate. */
