@@ -185,3 +185,6 @@ type FP_Constant = Constants.FP_AFrameIsCropped | Constants.FP_AFrameIsFloating 
 
 /** Types of alert dialog boxes. */
 type FF_ALERT = Constants.FF_ALERT_OK_DEFAULT | Constants.FF_ALERT_CANCEL_DEFAULT | Constants.FF_ALERT_CONTINUE_NOTE | Constants.FF_ALERT_CONTINUE_WARN | Constants.FF_ALERT_YES_DEFAULT | Constants.FF_ALERT_NO_DEFAULT | Constants.FF_ALERT_YES_NO_CANCEL | Constants.FF_ALERT_DNS_OK;
+
+/** Type property of a `Tab` object. */
+type TabType = Constants.FV_TAB_LEFT | Constants.FV_TAB_CENTER | Constants.FV_TAB_RIGHT | Constants.FV_TAB_DECIMAL | Constants.FV_TAB_RELATIVE_LEFT | Constants.FV_TAB_RELATIVE_CENTER | Constants.FV_TAB_RELATIVE_RIGHT | Constants.FV_TAB_RELATIVE_DECIMAL;
