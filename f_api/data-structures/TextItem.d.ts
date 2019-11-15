@@ -1,7 +1,7 @@
 // Type definitions for the TextItem FMObject
 // Definitions by: Dan Reed <http://danreed.dev>
 
-/** A sibgle unit of text in a document. */
+/** A single unit of text in a document. */
 interface TextItem {
 
 	/** Offset from the beginning of the paragraph or the text line. */
@@ -23,7 +23,7 @@ interface TextItem {
 
 interface TextItemConstructor {
 	new(): TextItem;
-	new(): TextItem;
+	new(dataType: TextItemType, data: number | string | FMObject): TextItem;
 	readonly prototype: TextItem;
 }
 
