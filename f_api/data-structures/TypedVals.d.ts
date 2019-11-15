@@ -1,7 +1,8 @@
-// Type definitions for the Tabs FMObject
+// Type definitions for the TypedVals FMObject
 // Definitions by: Dan Reed <http://danreed.dev>
 
-interface Tabs {
+/** An Array of `TypedVal` objects with integer indexing and a length property. */
+interface TypedVals {
 
 	/**
 	 * The original array is unchanged. If an array is provided as a parameter to `concat()`, each of its elements are appended as separate array elements at the end of the new array.
@@ -10,7 +11,7 @@ interface Tabs {
 	 * 
 	 * @returns A new array, the result of concatenation the given values to the end of the original array.
 	 */
-	concat(value: Tabs | Tab[]): Tabs;
+	concat(value: TypedVal | TypedVal[]): TypedVal;
 
 	/** The length of the array. */
 	len: number;
@@ -21,7 +22,7 @@ interface Tabs {
 	/**
 	 * @returns The last element from the array.
 	 */
-	pop(): Tab | undefined;
+	pop(): TypedVal | undefined;
 
 	/**
 	 * Appends a new element to an array.
@@ -30,21 +31,21 @@ interface Tabs {
 	 * 
 	 * @returns The new length of the array.
 	 */
-	push(value: Tab): number;
+	push(value: TypedVal): number;
 
 	/**
 	 * @returns A string representation of an array.
 	 */
 	toString(): string;
 
-	[n: number]: Tab;
+	[n: number]: TypedVal;
 }
 
-interface TabsConstructor {
-	new(): Tabs;
-	new(items: Tab[]): Tab[];
-	new(...items: Tab[]): Tab[];
-	readonly prototype: Tabs;
+interface TypedValsConstructor {
+	new(): TypedVals;
+	new(items: TypedVal[]): TypedVal[];
+	new(...items: TypedVal[]): TypedVal[];
+	readonly prototype: TypedVals;
 }
 
-declare var Tabs: TabsConstructor;
+declare var TypedVals: TypedValsConstructor;
