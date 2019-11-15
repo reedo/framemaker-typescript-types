@@ -166,8 +166,12 @@ declare var Command: Command;
 /** @todo Move to ExtendScript globals. */
 declare function confirm(): void;
 
-/** @todo UNDOCUMENTED */
-declare function Console(): void;
+/**
+ * Prints a message to the FrameMaker console.
+ * 
+ * @param message The message to print.
+ */
+declare function Console(message: string): void;
 
 /** The global Constants object. */
 declare var CONST: Constants;
