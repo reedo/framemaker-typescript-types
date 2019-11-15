@@ -1,8 +1,8 @@
-// Type definitions for the Ints FMObject
+// Type definitions for the UInts FMObject
 // Definitions by: Dan Reed <http://danreed.dev>
 
 /** An Array of numbers with integer indexing and a length property. */
-interface Ints {
+interface UInts {
 
 	/**
 	 * The original array is unchanged. If an array is provided as a parameter to `concat()`, each of its elements are appended as separate array elements at the end of the new array.
@@ -11,7 +11,7 @@ interface Ints {
 	 * 
 	 * @returns A new array, the result of concatenation the given values to the end of the original array.
 	 */
-	concat(value: Ints | number[]): Ints;
+	concat(value: UInts | number[]): UInts;
 
 	/** The length of the array. */
 	len: number;
@@ -41,11 +41,11 @@ interface Ints {
 	[n: number]: number;
 }
 
-interface IntsConstructor {
-	new(): Ints;
+interface UIntsConstructor {
+	new(): UInts;
 	new(items: number[]): number[];
 	new(...items: number[]): number[];
-	readonly prototype: Ints;
+	readonly prototype: UInts;
 }
 
-declare var Ints: IntsConstructor;
+declare var UInts: UIntsConstructor;
