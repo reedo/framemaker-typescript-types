@@ -185,3 +185,12 @@ type FP_Constant = Constants.FP_AFrameIsCropped | Constants.FP_AFrameIsFloating 
 
 /** Types of alert dialog boxes. */
 type FF_ALERT = Constants.FF_ALERT_OK_DEFAULT | Constants.FF_ALERT_CANCEL_DEFAULT | Constants.FF_ALERT_CONTINUE_NOTE | Constants.FF_ALERT_CONTINUE_WARN | Constants.FF_ALERT_YES_DEFAULT | Constants.FF_ALERT_NO_DEFAULT | Constants.FF_ALERT_YES_NO_CANCEL | Constants.FF_ALERT_DNS_OK;
+
+/** Type property of a `Tab` object. */
+type TabType = Constants.FV_TAB_LEFT | Constants.FV_TAB_CENTER | Constants.FV_TAB_RIGHT | Constants.FV_TAB_DECIMAL | Constants.FV_TAB_RELATIVE_LEFT | Constants.FV_TAB_RELATIVE_CENTER | Constants.FV_TAB_RELATIVE_RIGHT | Constants.FV_TAB_RELATIVE_DECIMAL;
+
+/** Type property of `TypedVal` object. */
+type TypedValType = Constants.FT_Integer | Constants.FT_Metric | Constants.FT_String | Constants.FT_Id | Constants.FT_Metrics | Constants.FT_Strings | Constants.FT_Points | Constants.FT_Tabs | Constants.FT_TextLoc | Constants.FT_TextRange | Constants.FT_ElementCatalog | Constants.FT_Ints | Constants.FT_UBytes | Constants.FT_UInts | Constants.FT_AttributeDefs | Constants.FT_Attributes;
+
+/** Type property of `TextItem` object. */
+type TextItemType = Constants.FTI_TextObjId | Constants.FTI_String | Constants.FTI_LineBegin | Constants.FTI_LineEnd | Constants.FTI_PgfBegin | Constants.FTI_PgfEnd | Constants.FTI_FlowBegin | Constants.FTI_FlowEnd | Constants.FTI_PageBegin | Constants.FTI_PageEnd | Constants.FTI_SubColBegin | Constants.FTI_SubColEnd | Constants.FTI_FrameAnchor | Constants.FTI_FnAnchor | Constants.FTI_TblAnchor | Constants.FTI_MarkerAnchor | Constants.FTI_XRefBegin | Constants.FTI_XRefEnd | Constants.FTI_TextFrameBegin | Constants.FTI_TextFrameEnd | Constants.FTI_VarBegin | Constants.FTI_VarEnd | Constants.FTI_ElementBegin | Constants.FTI_ElementEnd | Constants.FTI_ElemPrefixBegin | Constants.FTI_ElemPrefixEnd | Constants.FTI_ElemSuffixBegin | Constants.FTI_ElemSuffixEnd | Constants.FTI_CharPropsChange | Constants.FTI_RubiCompositeBegin | Constants.FTI_RubiCompositeEnd | Constants.FTI_RubiTextBegin | Constants.FTI_RubiTextEnd;
