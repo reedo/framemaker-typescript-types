@@ -188,3 +188,6 @@ type FF_ALERT = Constants.FF_ALERT_OK_DEFAULT | Constants.FF_ALERT_CANCEL_DEFAUL
 
 /** Type property of a `Tab` object. */
 type TabType = Constants.FV_TAB_LEFT | Constants.FV_TAB_CENTER | Constants.FV_TAB_RIGHT | Constants.FV_TAB_DECIMAL | Constants.FV_TAB_RELATIVE_LEFT | Constants.FV_TAB_RELATIVE_CENTER | Constants.FV_TAB_RELATIVE_RIGHT | Constants.FV_TAB_RELATIVE_DECIMAL;
+
+/** Type property of `TypedVal` object. */
+type TypedValType = Constants.FT_Integer | Constants.FT_Metric | Constants.FT_String | Constants.FT_Id | Constants.FT_Metrics | Constants.FT_Strings | Constants.FT_Points | Constants.FT_Tabs | Constants.FT_TextLoc | Constants.FT_TextRange | Constants.FT_ElementCatalog | Constants.FT_Ints | Constants.FT_UBytes | Constants.FT_UInts | Constants.FT_AttributeDefs | Constants.FT_Attributes;
