@@ -1,7628 +1,3843 @@
 // Type definitions for FrameMaker Constants object
-// Definitions by Dan Reed <https =//danreed.dev>
+// Definitions by: Dan Reed <https://danreed.dev>
 
-declare namespace Constants {
+declare enum Constants {
 
-	type FDK_LIBRARY_VERSION = 0x15000000;
-	const FDK_LIBRARY_VERSION: FDK_LIBRARY_VERSION;
-	type FMV_CMDSUPPORTED = -1;
-	const FMV_CMDSUPPORTED: FMV_CMDSUPPORTED;
-	type oldFT_ElementFmts = 11;
-	const oldFT_ElementFmts: oldFT_ElementFmts;
-	type EXCLUDE_CONREF_DEPENDENCIES = 0x20;
-	const EXCLUDE_CONREF_DEPENDENCIES: EXCLUDE_CONREF_DEPENDENCIES;
-	type EXCLUDE_GRAPHICS_DEPENDENCIES = 0x01;
-	const EXCLUDE_GRAPHICS_DEPENDENCIES: EXCLUDE_GRAPHICS_DEPENDENCIES;
-	type EXCLUDE_NONE = 0x10;
-	const EXCLUDE_NONE: EXCLUDE_NONE;
-	type EXCLUDE_OLE_DEPENDENCIES = 0x04;
-	const EXCLUDE_OLE_DEPENDENCIES: EXCLUDE_OLE_DEPENDENCIES;
-	type EXCLUDE_TEXT_INSET_DEPENDENCIES = 0x02;
-	const EXCLUDE_TEXT_INSET_DEPENDENCIES: EXCLUDE_TEXT_INSET_DEPENDENCIES;
-	type EXCLUDE_XREF_DEPENDENCIES = 0x08;
-	const EXCLUDE_XREF_DEPENDENCIES: EXCLUDE_XREF_DEPENDENCIES;
+	FDK_LIBRARY_VERSION = 0x15000000,
+	FMV_CMDSUPPORTED = -1,
+	oldFT_ElementFmts = 11,
+
+	EXCLUDE_CONREF_DEPENDENCIES = 0x20,
+	EXCLUDE_GRAPHICS_DEPENDENCIES = 0x01,
+	EXCLUDE_NONE = 0x10,
+	EXCLUDE_OLE_DEPENDENCIES = 0x04,
+	EXCLUDE_TEXT_INSET_DEPENDENCIES = 0x02,
+	EXCLUDE_XREF_DEPENDENCIES = 0x08,
 
 	// --------------------------------------------------
 	// Frame API codes
 	// --------------------------------------------------
-	type FA_CMSAdvancedSearch = 0;
-	const FA_CMSAdvancedSearch: FA_CMSAdvancedSearch;
-	type FA_CMSBuildContextMenu = 1;
-	const FA_CMSBuildContextMenu: FA_CMSBuildContextMenu;
-	type FA_CMSCloseConnection = 2;
-	const FA_CMSCloseConnection: FA_CMSCloseConnection;
-	type FA_CMSCommandMax = 3;
-	const FA_CMSCommandMax: FA_CMSCommandMax;
-	type FA_CMSCommandMin = 4;
-	const FA_CMSCommandMin: FA_CMSCommandMin;
-	type FA_CMSCreateConnMgrUI = 5;
-	const FA_CMSCreateConnMgrUI: FA_CMSCreateConnMgrUI;
-	type FA_CMSCreateConnection = 6;
-	const FA_CMSCreateConnection: FA_CMSCreateConnection;
-	type FA_CMSGetCommandMaxOpCode = 7;
-	const FA_CMSGetCommandMaxOpCode: FA_CMSGetCommandMaxOpCode;
-	type FA_CMSGetItemFromPath = 8;
-	const FA_CMSGetItemFromPath: FA_CMSGetItemFromPath;
-	type FA_CMSGetItems = 9;
-	const FA_CMSGetItems: FA_CMSGetItems;
-	type FA_CMSGetPropertyMaxOpCode = 10;
-	const FA_CMSGetPropertyMaxOpCode: FA_CMSGetPropertyMaxOpCode;
-	type FA_CMSIsValidCommand = 11;
-	const FA_CMSIsValidCommand: FA_CMSIsValidCommand;
-	type FA_CMSObjectCancelCheckout = 12;
-	const FA_CMSObjectCancelCheckout: FA_CMSObjectCancelCheckout;
-	type FA_CMSObjectCheckin = 13;
-	const FA_CMSObjectCheckin: FA_CMSObjectCheckin;
-	type FA_CMSObjectCheckout = 14;
-	const FA_CMSObjectCheckout: FA_CMSObjectCheckout;
-	type FA_CMSObjectDelete = 15;
-	const FA_CMSObjectDelete: FA_CMSObjectDelete;
-	type FA_CMSObjectDownload = 16;
-	const FA_CMSObjectDownload: FA_CMSObjectDownload;
-	type FA_CMSObjectDownloadForOpen = 17;
-	const FA_CMSObjectDownloadForOpen: FA_CMSObjectDownloadForOpen;
-	type FA_CMSObjectDownloadItem = 18;
-	const FA_CMSObjectDownloadItem: FA_CMSObjectDownloadItem;
-	type FA_CMSObjectEdit = 19;
-	const FA_CMSObjectEdit: FA_CMSObjectEdit;
-	type FA_CMSObjectGetChildren = 20;
-	const FA_CMSObjectGetChildren: FA_CMSObjectGetChildren;
-	type FA_CMSObjectIsSame = 21;
-	const FA_CMSObjectIsSame: FA_CMSObjectIsSame;
-	type FA_CMSObjectOpenReadOnly = 22;
-	const FA_CMSObjectOpenReadOnly: FA_CMSObjectOpenReadOnly;
-	type FA_CMSObjectRefresh = 23;
-	const FA_CMSObjectRefresh: FA_CMSObjectRefresh;
-	type FA_CMSObjectShowCheckOutFiles = 24;
-	const FA_CMSObjectShowCheckOutFiles: FA_CMSObjectShowCheckOutFiles;
-	type FA_CMSObjectShowDependents = 25;
-	const FA_CMSObjectShowDependents: FA_CMSObjectShowDependents;
-	type FA_CMSObjectShowProperties = 26;
-	const FA_CMSObjectShowProperties: FA_CMSObjectShowProperties;
-	type FA_CMSObjectShowVersion = 27;
-	const FA_CMSObjectShowVersion: FA_CMSObjectShowVersion;
-	type FA_CMSObjectUploadFile = 28;
-	const FA_CMSObjectUploadFile: FA_CMSObjectUploadFile;
-	type FA_CMSObjectUploadFolder = 29;
-	const FA_CMSObjectUploadFolder: FA_CMSObjectUploadFolder;
-	type FA_CMSReview = 30;
-	const FA_CMSReview: FA_CMSReview;
-	type FA_CMSSetRootObject = 31;
-	const FA_CMSSetRootObject: FA_CMSSetRootObject;
-	type FA_CMSSimpleSearch = 32;
-	const FA_CMSSimpleSearch: FA_CMSSimpleSearch;
-	type FA_COMPONENT_DEMOTE = 4;
-	const FA_COMPONENT_DEMOTE: FA_COMPONENT_DEMOTE;
-	type FA_COMPONENT_MOVEDOWN = 2;
-	const FA_COMPONENT_MOVEDOWN: FA_COMPONENT_MOVEDOWN;
-	type FA_COMPONENT_MOVEUP = 1;
-	const FA_COMPONENT_MOVEUP: FA_COMPONENT_MOVEUP;
-	type FA_COMPONENT_PROMOTE = 3;
-	const FA_COMPONENT_PROMOTE: FA_COMPONENT_PROMOTE;
-	type FA_Init_DocReport = 4;
-	const FA_Init_DocReport: FA_Init_DocReport;
-	type FA_Init_First = 1;
-	const FA_Init_First: FA_Init_First;
-	type FA_Init_Subsequent = 2;
-	const FA_Init_Subsequent: FA_Init_Subsequent;
-	type FA_Init_TakeControl = 3;
-	const FA_Init_TakeControl: FA_Init_TakeControl;
-	type FA_Note_AI_Supported_File = 137;
-	const FA_Note_AI_Supported_File: FA_Note_AI_Supported_File;
-	type FA_Note_Alert = 85;
-	const FA_Note_Alert: FA_Note_Alert;
-	type FA_Note_AssignId = 115;
-	const FA_Note_AssignId: FA_Note_AssignId;
-	type FA_Note_BackToUser = 34;
-	const FA_Note_BackToUser: FA_Note_BackToUser;
-	type FA_Note_BodyPageAdded = 50;
-	const FA_Note_BodyPageAdded: FA_Note_BodyPageAdded;
-	type FA_Note_BodyPageDeleted = 51;
-	const FA_Note_BodyPageDeleted: FA_Note_BodyPageDeleted;
-	type FA_Note_CMS_PostCheckOutItem = 164;
-	const FA_Note_CMS_PostCheckOutItem: FA_Note_CMS_PostCheckOutItem;
-	type FA_Note_CMS_PostOpenItem = 166;
-	const FA_Note_CMS_PostOpenItem: FA_Note_CMS_PostOpenItem;
-	type FA_Note_CMS_PreCheckOutItem = 163;
-	const FA_Note_CMS_PreCheckOutItem: FA_Note_CMS_PreCheckOutItem;
-	type FA_Note_CMS_PreOpenItem = 165;
-	const FA_Note_CMS_PreOpenItem: FA_Note_CMS_PreOpenItem;
-	type FA_Note_ClientCall = 13;
-	const FA_Note_ClientCall: FA_Note_ClientCall;
-	type FA_Note_ConsoleMessage = 88;
-	const FA_Note_ConsoleMessage: FA_Note_ConsoleMessage;
-	type FA_Note_CursorChange = 91;
-	const FA_Note_CursorChange: FA_Note_CursorChange;
-	type FA_Note_DITAOptions = 116;
-	const FA_Note_DITAOptions: FA_Note_DITAOptions;
-	type FA_Note_Dialog = 84;
-	const FA_Note_Dialog: FA_Note_Dialog;
-	type FA_Note_Dialog_Create = 127;
-	const FA_Note_Dialog_Create: FA_Note_Dialog_Create;
-	type FA_Note_DirtyBook = 25;
-	const FA_Note_DirtyBook: FA_Note_DirtyBook;
-	type FA_Note_DirtyDoc = 12;
-	const FA_Note_DirtyDoc: FA_Note_DirtyDoc;
-	type FA_Note_DisplayClientTiDialog = 35;
-	const FA_Note_DisplayClientTiDialog: FA_Note_DisplayClientTiDialog;
-	type FA_Note_DisplayClientXRefDialog = 108;
-	const FA_Note_DisplayClientXRefDialog: FA_Note_DisplayClientXRefDialog;
-	type FA_Note_ECMInternal = 66;
-	const FA_Note_ECMInternal: FA_Note_ECMInternal;
-	type FA_Note_Enable_Disable_DITA_Menu_Commands = 126;
-	const FA_Note_Enable_Disable_DITA_Menu_Commands: FA_Note_Enable_Disable_DITA_Menu_Commands;
-	type FA_Note_EnumeratedComponent = 145;
-	const FA_Note_EnumeratedComponent: FA_Note_EnumeratedComponent;
-	type FA_Note_FileOpen = 94;
-	const FA_Note_FileOpen: FA_Note_FileOpen;
-	type FA_Note_FilterFileToFile = 75;
-	const FA_Note_FilterFileToFile: FA_Note_FilterFileToFile;
-	type FA_Note_FilterIn = 14;
-	const FA_Note_FilterIn: FA_Note_FilterIn;
-	type FA_Note_FilterOut = 15;
-	const FA_Note_FilterOut: FA_Note_FilterOut;
-	type FA_Note_FontSubstitution = 92;
-	const FA_Note_FontSubstitution: FA_Note_FontSubstitution;
-	type FA_Note_Frame_Idle_State = 162;
-	const FA_Note_Frame_Idle_State: FA_Note_Frame_Idle_State;
-	type FA_Note_GenerateFM = 112;
-	const FA_Note_GenerateFM: FA_Note_GenerateFM;
-	type FA_Note_GraphicPropChanged = 159;
-	const FA_Note_GraphicPropChanged: FA_Note_GraphicPropChanged;
-	type FA_Note_Help = 89;
-	const FA_Note_Help: FA_Note_Help;
-	type FA_Note_HtmlNotify = 170;
-	const FA_Note_HtmlNotify: FA_Note_HtmlNotify;
-	type FA_Note_In_App_Message = 160;
-	const FA_Note_In_App_Message: FA_Note_In_App_Message;
-	type FA_Note_InsertConRef = 111;
-	const FA_Note_InsertConRef: FA_Note_InsertConRef;
-	type FA_Note_InsertTopicRef = 110;
-	const FA_Note_InsertTopicRef: FA_Note_InsertTopicRef;
-	type FA_Note_IsCommandEnabled = 148;
-	const FA_Note_IsCommandEnabled: FA_Note_IsCommandEnabled;
-	type FA_Note_LoadKeyCatalog = 143;
-	const FA_Note_LoadKeyCatalog: FA_Note_LoadKeyCatalog;
-	type FA_Note_MATHML_CHANGE_NSPREFIX = 156;
-	const FA_Note_MATHML_CHANGE_NSPREFIX: FA_Note_MATHML_CHANGE_NSPREFIX;
-	type FA_Note_MATHML_CHANGE_XML_PROPERTY = 168;
-	const FA_Note_MATHML_CHANGE_XML_PROPERTY: FA_Note_MATHML_CHANGE_XML_PROPERTY;
-	type FA_Note_MATHML_DblClicked = 151;
-	const FA_Note_MATHML_DblClicked: FA_Note_MATHML_DblClicked;
-	type FA_Note_MATHML_Deselected = 150;
-	const FA_Note_MATHML_Deselected: FA_Note_MATHML_Deselected;
-	type FA_Note_MATHML_GenerateImage = 152;
-	const FA_Note_MATHML_GenerateImage: FA_Note_MATHML_GenerateImage;
-	type FA_Note_MATHML_PopulateObj = 153;
-	const FA_Note_MATHML_PopulateObj: FA_Note_MATHML_PopulateObj;
-	type FA_Note_MATHML_Selected = 149;
-	const FA_Note_MATHML_Selected: FA_Note_MATHML_Selected;
-	type FA_Note_NewBookmapFile = 118;
-	const FA_Note_NewBookmapFile: FA_Note_NewBookmapFile;
-	type FA_Note_NewConceptFile = 121;
-	const FA_Note_NewConceptFile: FA_Note_NewConceptFile;
-	type FA_Note_NewDitamapFile = 117;
-	const FA_Note_NewDitamapFile: FA_Note_NewDitamapFile;
-	type FA_Note_NewGlossEntryFile = 123;
-	const FA_Note_NewGlossEntryFile: FA_Note_NewGlossEntryFile;
-	type FA_Note_NewReferenceFile = 122;
-	const FA_Note_NewReferenceFile: FA_Note_NewReferenceFile;
-	type FA_Note_NewTaskFile = 120;
-	const FA_Note_NewTaskFile: FA_Note_NewTaskFile;
-	type FA_Note_NewTopicFile = 119;
-	const FA_Note_NewTopicFile: FA_Note_NewTopicFile;
-	type FA_Note_Not_AI_Supported_File = 136;
-	const FA_Note_Not_AI_Supported_File: FA_Note_Not_AI_Supported_File;
-	type FA_Note_Not_RSC_Supported_File = 103;
-	const FA_Note_Not_RSC_Supported_File: FA_Note_Not_RSC_Supported_File;
-	type FA_Note_Not_SWF_File = 125;
-	const FA_Note_Not_SWF_File: FA_Note_Not_SWF_File;
-	type FA_Note_Not_U3DCommand = 102;
-	const FA_Note_Not_U3DCommand: FA_Note_Not_U3DCommand;
-	type FA_Note_Num = 171;
-	const FA_Note_Num: FA_Note_Num;
-	type FA_Note_OpenAllTopicrefs = 113;
-	const FA_Note_OpenAllTopicrefs: FA_Note_OpenAllTopicrefs;
-	type FA_Note_Open_Dtd = 132;
-	const FA_Note_Open_Dtd: FA_Note_Open_Dtd;
-	type FA_Note_Open_EDD_For_App = 134;
-	const FA_Note_Open_EDD_For_App: FA_Note_Open_EDD_For_App;
-	type FA_Note_Open_Schema = 133;
-	const FA_Note_Open_Schema: FA_Note_Open_Schema;
-	type FA_Note_Palette = 86;
-	const FA_Note_Palette: FA_Note_Palette;
-	type FA_Note_PostActiveDocChange = 105;
-	const FA_Note_PostActiveDocChange: FA_Note_PostActiveDocChange;
-	type FA_Note_PostAutoSaveDoc = 33;
-	const FA_Note_PostAutoSaveDoc: FA_Note_PostAutoSaveDoc;
-	type FA_Note_PostBookComponentOpen = 77;
-	const FA_Note_PostBookComponentOpen: FA_Note_PostBookComponentOpen;
-	type FA_Note_PostChangeElement = 55;
-	const FA_Note_PostChangeElement: FA_Note_PostChangeElement;
-	type FA_Note_PostCopyElement = 61;
-	const FA_Note_PostCopyElement: FA_Note_PostCopyElement;
-	type FA_Note_PostCreateMML = 155;
-	const FA_Note_PostCreateMML: FA_Note_PostCreateMML;
-	type FA_Note_PostDistill = 74;
-	const FA_Note_PostDistill: FA_Note_PostDistill;
-	type FA_Note_PostDragElement = 59;
-	const FA_Note_PostDragElement: FA_Note_PostDragElement;
-	type FA_Note_PostExport = 68;
-	const FA_Note_PostExport: FA_Note_PostExport;
-	type FA_Note_PostFileType = 10;
-	const FA_Note_PostFileType: FA_Note_PostFileType;
-	type FA_Note_PostFunction = 43;
-	const FA_Note_PostFunction: FA_Note_PostFunction;
-	type FA_Note_PostGenerate = 79;
-	const FA_Note_PostGenerate: FA_Note_PostGenerate;
-	type FA_Note_PostGoToXrefSrc = 81;
-	const FA_Note_PostGoToXrefSrc: FA_Note_PostGoToXrefSrc;
-	type FA_Note_PostHypertext = 47;
-	const FA_Note_PostHypertext: FA_Note_PostHypertext;
-	type FA_Note_PostImport = 39;
-	const FA_Note_PostImport: FA_Note_PostImport;
-	type FA_Note_PostImportElemDefs = 65;
-	const FA_Note_PostImportElemDefs: FA_Note_PostImportElemDefs;
-	type FA_Note_PostInlineTypeIn = 70;
-	const FA_Note_PostInlineTypeIn: FA_Note_PostInlineTypeIn;
-	type FA_Note_PostInsertElement = 53;
-	const FA_Note_PostInsertElement: FA_Note_PostInsertElement;
-	type FA_Note_PostMouseCommand = 45;
-	const FA_Note_PostMouseCommand: FA_Note_PostMouseCommand;
-	type FA_Note_PostOpenBook = 17;
-	const FA_Note_PostOpenBook: FA_Note_PostOpenBook;
-	type FA_Note_PostOpenBookMIF = 19;
-	const FA_Note_PostOpenBookMIF: FA_Note_PostOpenBookMIF;
-	type FA_Note_PostOpenDoc = 2;
-	const FA_Note_PostOpenDoc: FA_Note_PostOpenDoc;
-	type FA_Note_PostOpenMIF = 4;
-	const FA_Note_PostOpenMIF: FA_Note_PostOpenMIF;
-	type FA_Note_PostOpenSGML = 83;
-	const FA_Note_PostOpenSGML: FA_Note_PostOpenSGML;
-	type FA_Note_PostOpenXML = 96;
-	const FA_Note_PostOpenXML: FA_Note_PostOpenXML;
-	type FA_Note_PostPrint = 49;
-	const FA_Note_PostPrint: FA_Note_PostPrint;
-	type FA_Note_PostPublishDitamap = 140;
-	const FA_Note_PostPublishDitamap: FA_Note_PostPublishDitamap;
-	type FA_Note_PostQuitBook = 41;
-	const FA_Note_PostQuitBook: FA_Note_PostQuitBook;
-	type FA_Note_PostQuitDoc = 40;
-	const FA_Note_PostQuitDoc: FA_Note_PostQuitDoc;
-	type FA_Note_PostQuitSession = 27;
-	const FA_Note_PostQuitSession: FA_Note_PostQuitSession;
-	type FA_Note_PostRevertBook = 31;
-	const FA_Note_PostRevertBook: FA_Note_PostRevertBook;
-	type FA_Note_PostRevertDoc = 29;
-	const FA_Note_PostRevertDoc: FA_Note_PostRevertDoc;
-	type FA_Note_PostSaveAsPDFDialog = 72;
-	const FA_Note_PostSaveAsPDFDialog: FA_Note_PostSaveAsPDFDialog;
-	type FA_Note_PostSaveBook = 21;
-	const FA_Note_PostSaveBook: FA_Note_PostSaveBook;
-	type FA_Note_PostSaveBookMIF = 23;
-	const FA_Note_PostSaveBookMIF: FA_Note_PostSaveBookMIF;
-	type FA_Note_PostSaveDoc = 6;
-	const FA_Note_PostSaveDoc: FA_Note_PostSaveDoc;
-	type FA_Note_PostSaveMIF = 8;
-	const FA_Note_PostSaveMIF: FA_Note_PostSaveMIF;
-	type FA_Note_PostSaveSGML = 100;
-	const FA_Note_PostSaveSGML: FA_Note_PostSaveSGML;
-	type FA_Note_PostSaveXML = 98;
-	const FA_Note_PostSaveXML: FA_Note_PostSaveXML;
-	type FA_Note_PostSetAttrValue = 63;
-	const FA_Note_PostSetAttrValue: FA_Note_PostSetAttrValue;
-	type FA_Note_PostSetPropertyValue = 135;
-	const FA_Note_PostSetPropertyValue: FA_Note_PostSetPropertyValue;
-	type FA_Note_PostSwitchView = 147;
-	const FA_Note_PostSwitchView: FA_Note_PostSwitchView;
-	type FA_Note_PostUpdateXRefs = 107;
-	const FA_Note_PostUpdateXRefs: FA_Note_PostUpdateXRefs;
-	type FA_Note_PostWrapElement = 57;
-	const FA_Note_PostWrapElement: FA_Note_PostWrapElement;
-	type FA_Note_Poster_Applied = 138;
-	const FA_Note_Poster_Applied: FA_Note_Poster_Applied;
-	type FA_Note_PreAutoSaveDoc = 32;
-	const FA_Note_PreAutoSaveDoc: FA_Note_PreAutoSaveDoc;
-	type FA_Note_PreBookComponentOpen = 76;
-	const FA_Note_PreBookComponentOpen: FA_Note_PreBookComponentOpen;
-	type FA_Note_PreChangeElement = 54;
-	const FA_Note_PreChangeElement: FA_Note_PreChangeElement;
-	type FA_Note_PreCopyElement = 60;
-	const FA_Note_PreCopyElement: FA_Note_PreCopyElement;
-	type FA_Note_PreCreateMML = 154;
-	const FA_Note_PreCreateMML: FA_Note_PreCreateMML;
-	type FA_Note_PreDistill = 73;
-	const FA_Note_PreDistill: FA_Note_PreDistill;
-	type FA_Note_PreDragElement = 58;
-	const FA_Note_PreDragElement: FA_Note_PreDragElement;
-	type FA_Note_PreExport = 67;
-	const FA_Note_PreExport: FA_Note_PreExport;
-	type FA_Note_PreFileType = 9;
-	const FA_Note_PreFileType: FA_Note_PreFileType;
-	type FA_Note_PreFunction = 42;
-	const FA_Note_PreFunction: FA_Note_PreFunction;
-	type FA_Note_PreGenerate = 78;
-	const FA_Note_PreGenerate: FA_Note_PreGenerate;
-	type FA_Note_PreGoToXrefSrc = 80;
-	const FA_Note_PreGoToXrefSrc: FA_Note_PreGoToXrefSrc;
-	type FA_Note_PreHypertext = 46;
-	const FA_Note_PreHypertext: FA_Note_PreHypertext;
-	type FA_Note_PreImport = 38;
-	const FA_Note_PreImport: FA_Note_PreImport;
-	type FA_Note_PreImportElemDefs = 64;
-	const FA_Note_PreImportElemDefs: FA_Note_PreImportElemDefs;
-	type FA_Note_PreInlineTypeIn = 69;
-	const FA_Note_PreInlineTypeIn: FA_Note_PreInlineTypeIn;
-	type FA_Note_PreInsertElement = 52;
-	const FA_Note_PreInsertElement: FA_Note_PreInsertElement;
-	type FA_Note_PreMouseCommand = 44;
-	const FA_Note_PreMouseCommand: FA_Note_PreMouseCommand;
-	type FA_Note_PreOpenBook = 16;
-	const FA_Note_PreOpenBook: FA_Note_PreOpenBook;
-	type FA_Note_PreOpenBookMIF = 18;
-	const FA_Note_PreOpenBookMIF: FA_Note_PreOpenBookMIF;
-	type FA_Note_PreOpenDoc = 1;
-	const FA_Note_PreOpenDoc: FA_Note_PreOpenDoc;
-	type FA_Note_PreOpenMIF = 3;
-	const FA_Note_PreOpenMIF: FA_Note_PreOpenMIF;
-	type FA_Note_PreOpenSGML = 82;
-	const FA_Note_PreOpenSGML: FA_Note_PreOpenSGML;
-	type FA_Note_PreOpenXML = 95;
-	const FA_Note_PreOpenXML: FA_Note_PreOpenXML;
-	type FA_Note_PrePrint = 48;
-	const FA_Note_PrePrint: FA_Note_PrePrint;
-	type FA_Note_PrePublishDitamap = 139;
-	const FA_Note_PrePublishDitamap: FA_Note_PrePublishDitamap;
-	type FA_Note_PreQuitBook = 24;
-	const FA_Note_PreQuitBook: FA_Note_PreQuitBook;
-	type FA_Note_PreQuitDoc = 11;
-	const FA_Note_PreQuitDoc: FA_Note_PreQuitDoc;
-	type FA_Note_PreQuitSession = 26;
-	const FA_Note_PreQuitSession: FA_Note_PreQuitSession;
-	type FA_Note_PreRevertBook = 30;
-	const FA_Note_PreRevertBook: FA_Note_PreRevertBook;
-	type FA_Note_PreRevertDoc = 28;
-	const FA_Note_PreRevertDoc: FA_Note_PreRevertDoc;
-	type FA_Note_PreSaveAsPDFDialog = 71;
-	const FA_Note_PreSaveAsPDFDialog: FA_Note_PreSaveAsPDFDialog;
-	type FA_Note_PreSaveBook = 20;
-	const FA_Note_PreSaveBook: FA_Note_PreSaveBook;
-	type FA_Note_PreSaveBookMIF = 22;
-	const FA_Note_PreSaveBookMIF: FA_Note_PreSaveBookMIF;
-	type FA_Note_PreSaveDoc = 5;
-	const FA_Note_PreSaveDoc: FA_Note_PreSaveDoc;
-	type FA_Note_PreSaveMIF = 7;
-	const FA_Note_PreSaveMIF: FA_Note_PreSaveMIF;
-	type FA_Note_PreSaveSGML = 99;
-	const FA_Note_PreSaveSGML: FA_Note_PreSaveSGML;
-	type FA_Note_PreSaveXML = 97;
-	const FA_Note_PreSaveXML: FA_Note_PreSaveXML;
-	type FA_Note_PreSetAttrValue = 62;
-	const FA_Note_PreSetAttrValue: FA_Note_PreSetAttrValue;
-	type FA_Note_PreSetPropertyValue = 158;
-	const FA_Note_PreSetPropertyValue: FA_Note_PreSetPropertyValue;
-	type FA_Note_PreSwitchView = 146;
-	const FA_Note_PreSwitchView: FA_Note_PreSwitchView;
-	type FA_Note_PreUpdateXRefs = 106;
-	const FA_Note_PreUpdateXRefs: FA_Note_PreUpdateXRefs;
-	type FA_Note_PreWrapElement = 56;
-	const FA_Note_PreWrapElement: FA_Note_PreWrapElement;
-	type FA_Note_QuitModelessDialog = 109;
-	const FA_Note_QuitModelessDialog: FA_Note_QuitModelessDialog;
-	type FA_Note_RSC_Supported_File = 104;
-	const FA_Note_RSC_Supported_File: FA_Note_RSC_Supported_File;
-	type FA_Note_RTL_NumberUtility = 167;
-	const FA_Note_RTL_NumberUtility: FA_Note_RTL_NumberUtility;
-	type FA_Note_ReLoadKeyCatalog = 144;
-	const FA_Note_ReLoadKeyCatalog: FA_Note_ReLoadKeyCatalog;
-	type FA_Note_Read_Struct_App = 130;
-	const FA_Note_Read_Struct_App: FA_Note_Read_Struct_App;
-	type FA_Note_Reset_Client_State = 161;
-	const FA_Note_Reset_Client_State: FA_Note_Reset_Client_State;
-	type FA_Note_SWF_File = 124;
-	const FA_Note_SWF_File: FA_Note_SWF_File;
-	type FA_Note_SetAttrValue = 128;
-	const FA_Note_SetAttrValue: FA_Note_SetAttrValue;
-	type FA_Note_SetUniqueAttr = 157;
-	const FA_Note_SetUniqueAttr: FA_Note_SetUniqueAttr;
-	type FA_Note_Struct_Wizard = 131;
-	const FA_Note_Struct_Wizard: FA_Note_Struct_Wizard;
-	type FA_Note_ToolBar = 87;
-	const FA_Note_ToolBar: FA_Note_ToolBar;
-	type FA_Note_U3DCommand = 101;
-	const FA_Note_U3DCommand: FA_Note_U3DCommand;
-	type FA_Note_URL = 90;
-	const FA_Note_URL: FA_Note_URL;
-	type FA_Note_UndoCheckpoint = 93;
-	const FA_Note_UndoCheckpoint: FA_Note_UndoCheckpoint;
-	type FA_Note_UpdateAllClientTi = 36;
-	const FA_Note_UpdateAllClientTi: FA_Note_UpdateAllClientTi;
-	type FA_Note_UpdateClientTi = 37;
-	const FA_Note_UpdateClientTi: FA_Note_UpdateClientTi;
-	type FA_Note_UpdateDITAReference = 141;
-	const FA_Note_UpdateDITAReference: FA_Note_UpdateDITAReference;
-	type FA_Note_UpdateDITAReferences = 142;
-	const FA_Note_UpdateDITAReferences: FA_Note_UpdateDITAReferences;
-	type FA_Note_UpdateRefs = 114;
-	const FA_Note_UpdateRefs: FA_Note_UpdateRefs;
-	type FA_Note_UpdateRefs_On_Save = 129;
-	const FA_Note_UpdateRefs_On_Save: FA_Note_UpdateRefs_On_Save;
-	type FA_Note_WelcomeScreen_Command = 169;
-	const FA_Note_WelcomeScreen_Command: FA_Note_WelcomeScreen_Command;
+	FA_CMSAdvancedSearch = 0,
+	FA_CMSBuildContextMenu = 1,
+	FA_CMSCloseConnection = 2,
+	FA_CMSCommandMax = 3,
+	FA_CMSCommandMin = 4,
+	FA_CMSCreateConnMgrUI = 5,
+	FA_CMSCreateConnection = 6,
+	FA_CMSGetCommandMaxOpCode = 7,
+	FA_CMSGetItemFromPath = 8,
+	FA_CMSGetItems = 9,
+	FA_CMSGetPropertyMaxOpCode = 10,
+	FA_CMSIsValidCommand = 11,
+	FA_CMSObjectCancelCheckout = 12,
+	FA_CMSObjectCheckin = 13,
+	FA_CMSObjectCheckout = 14,
+	FA_CMSObjectDelete = 15,
+	FA_CMSObjectDownload = 16,
+	FA_CMSObjectDownloadForOpen = 17,
+	FA_CMSObjectDownloadItem = 18,
+	FA_CMSObjectEdit = 19,
+	FA_CMSObjectGetChildren = 20,
+	FA_CMSObjectIsSame = 21,
+	FA_CMSObjectOpenReadOnly = 22,
+	FA_CMSObjectRefresh = 23,
+	FA_CMSObjectShowCheckOutFiles = 24,
+	FA_CMSObjectShowDependents = 25,
+	FA_CMSObjectShowProperties = 26,
+	FA_CMSObjectShowVersion = 27,
+	FA_CMSObjectUploadFile = 28,
+	FA_CMSObjectUploadFolder = 29,
+	FA_CMSReview = 30,
+	FA_CMSSetRootObject = 31,
+	FA_CMSSimpleSearch = 32,
+	FA_COMPONENT_DEMOTE = 4,
+	FA_COMPONENT_MOVEDOWN = 2,
+	FA_COMPONENT_MOVEUP = 1,
+	FA_COMPONENT_PROMOTE = 3,
+	FA_Init_DocReport = 4,
+	FA_Init_First = 1,
+	FA_Init_Subsequent = 2,
+	FA_Init_TakeControl = 3,
+	FA_Note_AI_Supported_File = 137,
+	FA_Note_Alert = 85,
+	FA_Note_AssignId = 115,
+	FA_Note_BackToUser = 34,
+	FA_Note_BodyPageAdded = 50,
+	FA_Note_BodyPageDeleted = 51,
+	FA_Note_CMS_PostCheckOutItem = 164,
+	FA_Note_CMS_PostOpenItem = 166,
+	FA_Note_CMS_PreCheckOutItem = 163,
+	FA_Note_CMS_PreOpenItem = 165,
+	FA_Note_ClientCall = 13,
+	FA_Note_ConsoleMessage = 88,
+	FA_Note_CursorChange = 91,
+	FA_Note_DITAOptions = 116,
+	FA_Note_Dialog = 84,
+	FA_Note_Dialog_Create = 127,
+	FA_Note_DirtyBook = 25,
+	FA_Note_DirtyDoc = 12,
+	FA_Note_DisplayClientTiDialog = 35,
+	FA_Note_DisplayClientXRefDialog = 108,
+	FA_Note_ECMInternal = 66,
+	FA_Note_Enable_Disable_DITA_Menu_Commands = 126,
+	FA_Note_EnumeratedComponent = 145,
+	FA_Note_FileOpen = 94,
+	FA_Note_FilterFileToFile = 75,
+	FA_Note_FilterIn = 14,
+	FA_Note_FilterOut = 15,
+	FA_Note_FontSubstitution = 92,
+	FA_Note_Frame_Idle_State = 162,
+	FA_Note_GenerateFM = 112,
+	FA_Note_GraphicPropChanged = 159,
+	FA_Note_Help = 89,
+	FA_Note_HtmlNotify = 170,
+	FA_Note_In_App_Message = 160,
+	FA_Note_InsertConRef = 111,
+	FA_Note_InsertTopicRef = 110,
+	FA_Note_IsCommandEnabled = 148,
+	FA_Note_LoadKeyCatalog = 143,
+	FA_Note_MATHML_CHANGE_NSPREFIX = 156,
+	FA_Note_MATHML_CHANGE_XML_PROPERTY = 168,
+	FA_Note_MATHML_DblClicked = 151,
+	FA_Note_MATHML_Deselected = 150,
+	FA_Note_MATHML_GenerateImage = 152,
+	FA_Note_MATHML_PopulateObj = 153,
+	FA_Note_MATHML_Selected = 149,
+	FA_Note_NewBookmapFile = 118,
+	FA_Note_NewConceptFile = 121,
+	FA_Note_NewDitamapFile = 117,
+	FA_Note_NewGlossEntryFile = 123,
+	FA_Note_NewReferenceFile = 122,
+	FA_Note_NewTaskFile = 120,
+	FA_Note_NewTopicFile = 119,
+	FA_Note_Not_AI_Supported_File = 136,
+	FA_Note_Not_RSC_Supported_File = 103,
+	FA_Note_Not_SWF_File = 125,
+	FA_Note_Not_U3DCommand = 102,
+	FA_Note_Num = 171,
+	FA_Note_OpenAllTopicrefs = 113,
+	FA_Note_Open_Dtd = 132,
+	FA_Note_Open_EDD_For_App = 134,
+	FA_Note_Open_Schema = 133,
+	FA_Note_Palette = 86,
+	FA_Note_PostActiveDocChange = 105,
+	FA_Note_PostAutoSaveDoc = 33,
+	FA_Note_PostBookComponentOpen = 77,
+	FA_Note_PostChangeElement = 55,
+	FA_Note_PostCopyElement = 61,
+	FA_Note_PostCreateMML = 155,
+	FA_Note_PostDistill = 74,
+	FA_Note_PostDragElement = 59,
+	FA_Note_PostExport = 68,
+	FA_Note_PostFileType = 10,
+	FA_Note_PostFunction = 43,
+	FA_Note_PostGenerate = 79,
+	FA_Note_PostGoToXrefSrc = 81,
+	FA_Note_PostHypertext = 47,
+	FA_Note_PostImport = 39,
+	FA_Note_PostImportElemDefs = 65,
+	FA_Note_PostInlineTypeIn = 70,
+	FA_Note_PostInsertElement = 53,
+	FA_Note_PostMouseCommand = 45,
+	FA_Note_PostOpenBook = 17,
+	FA_Note_PostOpenBookMIF = 19,
+	FA_Note_PostOpenDoc = 2,
+	FA_Note_PostOpenMIF = 4,
+	FA_Note_PostOpenSGML = 83,
+	FA_Note_PostOpenXML = 96,
+	FA_Note_PostPrint = 49,
+	FA_Note_PostPublishDitamap = 140,
+	FA_Note_PostQuitBook = 41,
+	FA_Note_PostQuitDoc = 40,
+	FA_Note_PostQuitSession = 27,
+	FA_Note_PostRevertBook = 31,
+	FA_Note_PostRevertDoc = 29,
+	FA_Note_PostSaveAsPDFDialog = 72,
+	FA_Note_PostSaveBook = 21,
+	FA_Note_PostSaveBookMIF = 23,
+	FA_Note_PostSaveDoc = 6,
+	FA_Note_PostSaveMIF = 8,
+	FA_Note_PostSaveSGML = 100,
+	FA_Note_PostSaveXML = 98,
+	FA_Note_PostSetAttrValue = 63,
+	FA_Note_PostSetPropertyValue = 135,
+	FA_Note_PostSwitchView = 147,
+	FA_Note_PostUpdateXRefs = 107,
+	FA_Note_PostWrapElement = 57,
+	FA_Note_Poster_Applied = 138,
+	FA_Note_PreAutoSaveDoc = 32,
+	FA_Note_PreBookComponentOpen = 76,
+	FA_Note_PreChangeElement = 54,
+	FA_Note_PreCopyElement = 60,
+	FA_Note_PreCreateMML = 154,
+	FA_Note_PreDistill = 73,
+	FA_Note_PreDragElement = 58,
+	FA_Note_PreExport = 67,
+	FA_Note_PreFileType = 9,
+	FA_Note_PreFunction = 42,
+	FA_Note_PreGenerate = 78,
+	FA_Note_PreGoToXrefSrc = 80,
+	FA_Note_PreHypertext = 46,
+	FA_Note_PreImport = 38,
+	FA_Note_PreImportElemDefs = 64,
+	FA_Note_PreInlineTypeIn = 69,
+	FA_Note_PreInsertElement = 52,
+	FA_Note_PreMouseCommand = 44,
+	FA_Note_PreOpenBook = 16,
+	FA_Note_PreOpenBookMIF = 18,
+	FA_Note_PreOpenDoc = 1,
+	FA_Note_PreOpenMIF = 3,
+	FA_Note_PreOpenSGML = 82,
+	FA_Note_PreOpenXML = 95,
+	FA_Note_PrePrint = 48,
+	FA_Note_PrePublishDitamap = 139,
+	FA_Note_PreQuitBook = 24,
+	FA_Note_PreQuitDoc = 11,
+	FA_Note_PreQuitSession = 26,
+	FA_Note_PreRevertBook = 30,
+	FA_Note_PreRevertDoc = 28,
+	FA_Note_PreSaveAsPDFDialog = 71,
+	FA_Note_PreSaveBook = 20,
+	FA_Note_PreSaveBookMIF = 22,
+	FA_Note_PreSaveDoc = 5,
+	FA_Note_PreSaveMIF = 7,
+	FA_Note_PreSaveSGML = 99,
+	FA_Note_PreSaveXML = 97,
+	FA_Note_PreSetAttrValue = 62,
+	FA_Note_PreSetPropertyValue = 158,
+	FA_Note_PreSwitchView = 146,
+	FA_Note_PreUpdateXRefs = 106,
+	FA_Note_PreWrapElement = 56,
+	FA_Note_QuitModelessDialog = 109,
+	FA_Note_RSC_Supported_File = 104,
+	FA_Note_RTL_NumberUtility = 167,
+	FA_Note_ReLoadKeyCatalog = 144,
+	FA_Note_Read_Struct_App = 130,
+	FA_Note_Reset_Client_State = 161,
+	FA_Note_SWF_File = 124,
+	FA_Note_SetAttrValue = 128,
+	FA_Note_SetUniqueAttr = 157,
+	FA_Note_Struct_Wizard = 131,
+	FA_Note_ToolBar = 87,
+	FA_Note_U3DCommand = 101,
+	FA_Note_URL = 90,
+	FA_Note_UndoCheckpoint = 93,
+	FA_Note_UpdateAllClientTi = 36,
+	FA_Note_UpdateClientTi = 37,
+	FA_Note_UpdateDITAReference = 141,
+	FA_Note_UpdateDITAReferences = 142,
+	FA_Note_UpdateRefs = 114,
+	FA_Note_UpdateRefs_On_Save = 129,
+	FA_Note_WelcomeScreen_Command = 169,
 
 	// --------------------------------------------------
 	// Frame Error codes
 	// --------------------------------------------------
-	type FE_AcceptRejectCalledOnWrongPreviewState = -110;
-	const FE_AcceptRejectCalledOnWrongPreviewState: FE_AcceptRejectCalledOnWrongPreviewState;
-	type FE_AsianSystemRequired = -90;
-	const FE_AsianSystemRequired: FE_AsianSystemRequired;
-	type FE_BadBaseColor = -97;
-	const FE_BadBaseColor: FE_BadBaseColor;
-	type FE_BadBookId = -66;
-	const FE_BadBookId: FE_BadBookId;
-	type FE_BadCompPath = -68;
-	const FE_BadCompPath: FE_BadCompPath;
-	type FE_BadCompare = -35;
-	const FE_BadCompare: FE_BadCompare;
-	type FE_BadContainer = -104;
-	const FE_BadContainer: FE_BadContainer;
-	type FE_BadDelete = -17;
-	const FE_BadDelete: FE_BadDelete;
-	type FE_BadDocId = -2;
-	const FE_BadDocId: FE_BadDocId;
-	type FE_BadElementDefId = -28;
-	const FE_BadElementDefId: FE_BadElementDefId;
-	type FE_BadElementId = -29;
-	const FE_BadElementId: FE_BadElementId;
-	type FE_BadElementSelection = -69;
-	const FE_BadElementSelection: FE_BadElementSelection;
-	type FE_BadFamilyName = -98;
-	const FE_BadFamilyName: FE_BadFamilyName;
-	type FE_BadFileType = -83;
-	const FE_BadFileType: FE_BadFileType;
-	type FE_BadFilterType = -184;
-	const FE_BadFilterType: FE_BadFilterType;
-	type FE_BadInkName = -99;
-	const FE_BadInkName: FE_BadInkName;
-	type FE_BadInsertPos = -65;
-	const FE_BadInsertPos: FE_BadInsertPos;
-	type FE_BadKey = -177;
-	const FE_BadKey: FE_BadKey;
-	type FE_BadKeyField = -178;
-	const FE_BadKeyField: FE_BadKeyField;
-	type FE_BadMenuBar = -77;
-	const FE_BadMenuBar: FE_BadMenuBar;
-	type FE_BadName = -33;
-	const FE_BadName: FE_BadName;
-	type FE_BadNew = -23;
-	const FE_BadNew: FE_BadNew;
-	type FE_BadNewFrame = -14;
-	const FE_BadNewFrame: FE_BadNewFrame;
-	type FE_BadNewGroup = -15;
-	const FE_BadNewGroup: FE_BadNewGroup;
-	type FE_BadNewSibling = -16;
-	const FE_BadNewSibling: FE_BadNewSibling;
-	type FE_BadNotificationNum = -30;
-	const FE_BadNotificationNum: FE_BadNotificationNum;
-	type FE_BadObjId = -3;
-	const FE_BadObjId: FE_BadObjId;
-	type FE_BadOperation = -27;
-	const FE_BadOperation: FE_BadOperation;
-	type FE_BadPageDelete = -18;
-	const FE_BadPageDelete: FE_BadPageDelete;
-	type FE_BadParameter = -43;
-	const FE_BadParameter: FE_BadParameter;
-	type FE_BadPropNum = -4;
-	const FE_BadPropNum: FE_BadPropNum;
-	type FE_BadPropType = -5;
-	const FE_BadPropType: FE_BadPropType;
-	type FE_BadRange = -36;
-	const FE_BadRange: FE_BadRange;
-	type FE_BadRefElementId = -64;
-	const FE_BadRefElementId: FE_BadRefElementId;
-	type FE_BadRefFlowId = -62;
-	const FE_BadRefFlowId: FE_BadRefFlowId;
-	type FE_BadSaveFileName = -50;
-	const FE_BadSaveFileName: FE_BadSaveFileName;
-	type FE_BadSelectionForOperation = -59;
-	const FE_BadSelectionForOperation: FE_BadSelectionForOperation;
-	type FE_BadShortcut = -76;
-	const FE_BadShortcut: FE_BadShortcut;
-	type FE_BadTemplatePath = -105;
-	const FE_BadTemplatePath: FE_BadTemplatePath;
-	type FE_BadValue = -179;
-	const FE_BadValue: FE_BadValue;
-	type FE_BadXRefSrcDocId = -103;
-	const FE_BadXRefSrcDocId: FE_BadXRefSrcDocId;
-	type FE_BadXmlApplication = -106;
-	const FE_BadXmlApplication: FE_BadXmlApplication;
-	type FE_BookComponentAlreadyHasTrackedEdits = -109;
-	const FE_BookComponentAlreadyHasTrackedEdits: FE_BookComponentAlreadyHasTrackedEdits;
-	type FE_BookStructured = -61;
-	const FE_BookStructured: FE_BookStructured;
-	type FE_BookUnStructured = -67;
-	const FE_BookUnStructured: FE_BookUnStructured;
-	type FE_Busy = -88;
-	const FE_Busy: FE_Busy;
-	type FE_CMSBadCommandId = -116;
-	const FE_CMSBadCommandId: FE_CMSBadCommandId;
-	type FE_CMSBadItemContainerType = -121;
-	const FE_CMSBadItemContainerType: FE_CMSBadItemContainerType;
-	type FE_CMSBadItemFileType = -119;
-	const FE_CMSBadItemFileType: FE_CMSBadItemFileType;
-	type FE_CMSBadItemType = -120;
-	const FE_CMSBadItemType: FE_CMSBadItemType;
-	type FE_CMSBadObjectId = -114;
-	const FE_CMSBadObjectId: FE_CMSBadObjectId;
-	type FE_CMSBadSessionId = -113;
-	const FE_CMSBadSessionId: FE_CMSBadSessionId;
-	type FE_CMSFailedCancelCheckout = -153;
-	const FE_CMSFailedCancelCheckout: FE_CMSFailedCancelCheckout;
-	type FE_CMSFailedCheckin = -152;
-	const FE_CMSFailedCheckin: FE_CMSFailedCheckin;
-	type FE_CMSFailedCheckout = -151;
-	const FE_CMSFailedCheckout: FE_CMSFailedCheckout;
-	type FE_CMSFailedDelete = -154;
-	const FE_CMSFailedDelete: FE_CMSFailedDelete;
-	type FE_CMSFailedDownloadObject = -157;
-	const FE_CMSFailedDownloadObject: FE_CMSFailedDownloadObject;
-	type FE_CMSFailedGetItemFrompath = -158;
-	const FE_CMSFailedGetItemFrompath: FE_CMSFailedGetItemFrompath;
-	type FE_CMSFailedLogin = -150;
-	const FE_CMSFailedLogin: FE_CMSFailedLogin;
-	type FE_CMSFailedLogout = -159;
-	const FE_CMSFailedLogout: FE_CMSFailedLogout;
-	type FE_CMSFailedOpenFile = -155;
-	const FE_CMSFailedOpenFile: FE_CMSFailedOpenFile;
-	type FE_CMSFailedUploadObject = -156;
-	const FE_CMSFailedUploadObject: FE_CMSFailedUploadObject;
-	type FE_CMSIsValidCMSCommand = -123;
-	const FE_CMSIsValidCMSCommand: FE_CMSIsValidCMSCommand;
-	type FE_CMSNameAlreadyRegistered = -112;
-	const FE_CMSNameAlreadyRegistered: FE_CMSNameAlreadyRegistered;
-	type FE_CMSObjectCreationFailed = -117;
-	const FE_CMSObjectCreationFailed: FE_CMSObjectCreationFailed;
-	type FE_CMSRootObjectExists = -118;
-	const FE_CMSRootObjectExists: FE_CMSRootObjectExists;
-	type FE_CMSSessionCreationFailed = -122;
-	const FE_CMSSessionCreationFailed: FE_CMSSessionCreationFailed;
-	type FE_CMSSessionFailed = -115;
-	const FE_CMSSessionFailed: FE_CMSSessionFailed;
-	type FE_Canceled = -44;
-	const FE_Canceled: FE_Canceled;
-	type FE_CanceledByClient = -86;
-	const FE_CanceledByClient: FE_CanceledByClient;
-	type FE_CannotAddEditExpressionsInOneOrMoreComponents = -205;
-	const FE_CannotAddEditExpressionsInOneOrMoreComponents: FE_CannotAddEditExpressionsInOneOrMoreComponents;
-	type FE_CantSmooth = -38;
-	const FE_CantSmooth: FE_CantSmooth;
-	type FE_CantUpdateMacEdition = -85;
-	const FE_CantUpdateMacEdition: FE_CantUpdateMacEdition;
-	type FE_CircularReference = -81;
-	const FE_CircularReference: FE_CircularReference;
-	type FE_CompareTypes = -34;
-	const FE_CompareTypes: FE_CompareTypes;
-	type FE_Disabled = -196;
-	const FE_Disabled: FE_Disabled;
-	type FE_DocAlreadyHasTrackedEdits = -108;
-	const FE_DocAlreadyHasTrackedEdits: FE_DocAlreadyHasTrackedEdits;
-	type FE_DocModified = -8;
-	const FE_DocModified: FE_DocModified;
-	type FE_DupName = -32;
-	const FE_DupName: FE_DupName;
-	type FE_EmptyTextObject = -87;
-	const FE_EmptyTextObject: FE_EmptyTextObject;
-	type FE_ExpressionNotFound = -204;
-	const FE_ExpressionNotFound: FE_ExpressionNotFound;
-	type FE_FDKUndoNotAllowed = -193;
-	const FE_FDKUndoNotAllowed: FE_FDKUndoNotAllowed;
-	type FE_FailedExportedFileInvalid = -111;
-	const FE_FailedExportedFileInvalid: FE_FailedExportedFileInvalid;
-	type FE_FailedState = -45;
-	const FE_FailedState: FE_FailedState;
-	type FE_FailedToApplyOnOneOrMoreComponents = -206;
-	const FE_FailedToApplyOnOneOrMoreComponents: FE_FailedToApplyOnOneOrMoreComponents;
-	type FE_FileClosedByClient = -70;
-	const FE_FileClosedByClient: FE_FileClosedByClient;
-	type FE_FilterFailed = -89;
-	const FE_FilterFailed: FE_FilterFailed;
-	type FE_FlowStructured = -63;
-	const FE_FlowStructured: FE_FlowStructured;
-	type FE_GenRuleAmbiguous = -55;
-	const FE_GenRuleAmbiguous: FE_GenRuleAmbiguous;
-	type FE_GenRuleConnectorExpected = -57;
-	const FE_GenRuleConnectorExpected: FE_GenRuleConnectorExpected;
-	type FE_GenRuleItemExpected = -51;
-	const FE_GenRuleItemExpected: FE_GenRuleItemExpected;
-	type FE_GenRuleLeftBracketExpected = -53;
-	const FE_GenRuleLeftBracketExpected: FE_GenRuleLeftBracketExpected;
-	type FE_GenRuleMixedConnectors = -52;
-	const FE_GenRuleMixedConnectors: FE_GenRuleMixedConnectors;
-	type FE_GenRuleRightBracketExpected = -54;
-	const FE_GenRuleRightBracketExpected: FE_GenRuleRightBracketExpected;
-	type FE_GenRuleSyntaxError = -56;
-	const FE_GenRuleSyntaxError: FE_GenRuleSyntaxError;
-	type FE_GraphicInLockedTi = -207;
-	const FE_GraphicInLockedTi: FE_GraphicInLockedTi;
-	type FE_GroupSelect = -9;
-	const FE_GroupSelect: FE_GroupSelect;
-	type FE_HiddenPage = -40;
-	const FE_HiddenPage: FE_HiddenPage;
-	type FE_InternalErrorFailedToWriteInsets = -94;
-	const FE_InternalErrorFailedToWriteInsets: FE_InternalErrorFailedToWriteInsets;
-	type FE_InvAttribute = -80;
-	const FE_InvAttribute: FE_InvAttribute;
-	type FE_InvAttributeDef = -79;
-	const FE_InvAttributeDef: FE_InvAttributeDef;
-	type FE_InvContextSpec = 0;
-	const FE_InvContextSpec: FE_InvContextSpec;
-	type FE_InvalidAttrExpr = -107;
-	const FE_InvalidAttrExpr: FE_InvalidAttrExpr;
-	type FE_InvalidEmailId = -201;
-	const FE_InvalidEmailId: FE_InvalidEmailId;
-	type FE_InvalidFileName = -200;
-	const FE_InvalidFileName: FE_InvalidFileName;
-	type FE_InvalidFilePath = -199;
-	const FE_InvalidFilePath: FE_InvalidFilePath;
-	type FE_InvalidPhoneNumber = -198;
-	const FE_InvalidPhoneNumber: FE_InvalidPhoneNumber;
-	type FE_InvalidSize = -202;
-	const FE_InvalidSize: FE_InvalidSize;
-	type FE_InvalidString = -58;
-	const FE_InvalidString: FE_InvalidString;
-	type FE_KeyCatalogIsStale = -181;
-	const FE_KeyCatalogIsStale: FE_KeyCatalogIsStale;
-	type FE_KeyCatalogNotLoaded = -180;
-	const FE_KeyCatalogNotLoaded: FE_KeyCatalogNotLoaded;
-	type FE_KeyCatalogNotSpecified = -185;
-	const FE_KeyCatalogNotSpecified: FE_KeyCatalogNotSpecified;
-	type FE_KeyDefinitionAlreadyExists = -183;
-	const FE_KeyDefinitionAlreadyExists: FE_KeyDefinitionAlreadyExists;
-	type FE_KeyDefinitionDoesNotExist = -182;
-	const FE_KeyDefinitionDoesNotExist: FE_KeyDefinitionDoesNotExist;
-	type FE_LanguageNotAvailable = -96;
-	const FE_LanguageNotAvailable: FE_LanguageNotAvailable;
-	type FE_MissingFile = -84;
-	const FE_MissingFile: FE_MissingFile;
-	type FE_NameNotFound = -20;
-	const FE_NameNotFound: FE_NameNotFound;
-	type FE_NoColorFamily = -92;
-	const FE_NoColorFamily: FE_NoColorFamily;
-	type FE_NoSuchFlow = -82;
-	const FE_NoSuchFlow: FE_NoSuchFlow;
-	type FE_NonDITADocument = -186;
-	const FE_NonDITADocument: FE_NonDITADocument;
-	type FE_NotApiCommand = -74;
-	const FE_NotApiCommand: FE_NotApiCommand;
-	type FE_NotBodyPage = -24;
-	const FE_NotBodyPage: FE_NotBodyPage;
-	type FE_NotBookComponent = -26;
-	const FE_NotBookComponent: FE_NotBookComponent;
-	type FE_NotCommand = -73;
-	const FE_NotCommand: FE_NotCommand;
-	type FE_NotFound = -95;
-	const FE_NotFound: FE_NotFound;
-	type FE_NotFrame = -12;
-	const FE_NotFrame: FE_NotFrame;
-	type FE_NotGraphic = -11;
-	const FE_NotGraphic: FE_NotGraphic;
-	type FE_NotGroup = -13;
-	const FE_NotGroup: FE_NotGroup;
-	type FE_NotInMenu = -75;
-	const FE_NotInMenu: FE_NotInMenu;
-	type FE_NotMenu = -72;
-	const FE_NotMenu: FE_NotMenu;
-	type FE_NotPgf = -25;
-	const FE_NotPgf: FE_NotPgf;
-	type FE_NotPgfOrFlow = -71;
-	const FE_NotPgfOrFlow: FE_NotPgfOrFlow;
-	type FE_NotTextFrame = -39;
-	const FE_NotTextFrame: FE_NotTextFrame;
-	type FE_NotTextObject = -41;
-	const FE_NotTextObject: FE_NotTextObject;
-	type FE_OffsetNotFound = -21;
-	const FE_OffsetNotFound: FE_OffsetNotFound;
-	type FE_OutOfRange = -7;
-	const FE_OutOfRange: FE_OutOfRange;
-	type FE_OverWriteError = -203;
-	const FE_OverWriteError: FE_OverWriteError;
-	type FE_PageFrame = -37;
-	const FE_PageFrame: FE_PageFrame;
-	type FE_PropNotSet = -78;
-	const FE_PropNotSet: FE_PropNotSet;
-	type FE_ReadOnly = -6;
-	const FE_ReadOnly: FE_ReadOnly;
-	type FE_ReservedColor = -100;
-	const FE_ReservedColor: FE_ReservedColor;
-	type FE_SomeUnresolved = -22;
-	const FE_SomeUnresolved: FE_SomeUnresolved;
-	type FE_StringTooLong = -93;
-	const FE_StringTooLong: FE_StringTooLong;
-	type FE_Success = 0;
-	const FE_Success: FE_Success;
-	type FE_SystemError = -42;
-	const FE_SystemError: FE_SystemError;
-	type FE_TableInLockedTi = -101;
-	const FE_TableInLockedTi: FE_TableInLockedTi;
-	type FE_TintedColor = -91;
-	const FE_TintedColor: FE_TintedColor;
-	type FE_Transport = -1;
-	const FE_Transport: FE_Transport;
-	type FE_TypeUnNamed = -19;
-	const FE_TypeUnNamed: FE_TypeUnNamed;
-	type FE_UnLicensed = -197;
-	const FE_UnLicensed: FE_UnLicensed;
-	type FE_UpdateDITAReferenceFailed = -192;
-	const FE_UpdateDITAReferenceFailed: FE_UpdateDITAReferenceFailed;
-	type FE_UpdateDITAReferenceFailedCannotConvertToFMObject = -191;
-	const FE_UpdateDITAReferenceFailedCannotConvertToFMObject: FE_UpdateDITAReferenceFailedCannotConvertToFMObject;
-	type FE_UpdateDITAReferenceFailedCannotFindReferencedFile = -189;
-	const FE_UpdateDITAReferenceFailedCannotFindReferencedFile: FE_UpdateDITAReferenceFailedCannotFindReferencedFile;
-	type FE_UpdateDITAReferenceFailedCannotOpenReferencedFile = -190;
-	const FE_UpdateDITAReferenceFailedCannotOpenReferencedFile: FE_UpdateDITAReferenceFailedCannotOpenReferencedFile;
-	type FE_UpdateDITAReferenceFailedCannotResolveReference = -188;
-	const FE_UpdateDITAReferenceFailedCannotResolveReference: FE_UpdateDITAReferenceFailedCannotResolveReference;
-	type FE_UpdateDITAReferenceFailedErrorImportingReferencedFile = -208;
-	const FE_UpdateDITAReferenceFailedErrorImportingReferencedFile: FE_UpdateDITAReferenceFailedErrorImportingReferencedFile;
-	type FE_UpdateDITAReferenceFailedInvalidElementType = -187;
-	const FE_UpdateDITAReferenceFailedInvalidElementType: FE_UpdateDITAReferenceFailedInvalidElementType;
-	type FE_ViewOnly = -49;
-	const FE_ViewOnly: FE_ViewOnly;
-	type FE_WantsCustom = -46;
-	const FE_WantsCustom: FE_WantsCustom;
-	type FE_WantsLandscape = -47;
-	const FE_WantsLandscape: FE_WantsLandscape;
-	type FE_WantsPortrait = -48;
-	const FE_WantsPortrait: FE_WantsPortrait;
-	type FE_WithinFrame = -10;
-	const FE_WithinFrame: FE_WithinFrame;
-	type FE_WrongProduct = -60;
-	const FE_WrongProduct: FE_WrongProduct;
-	type FE_WrongView = -194;
-	const FE_WrongView: FE_WrongView;
-	type FE_WrongWindow = -195;
-	const FE_WrongWindow: FE_WrongWindow;
-	type FE_XRefUnresolved = -102;
-	const FE_XRefUnresolved: FE_XRefUnresolved;
-	type FE_XrefTitleNotFound = -209;
-	const FE_XrefTitleNotFound: FE_XrefTitleNotFound;
+	FE_AcceptRejectCalledOnWrongPreviewState = -110,
+	FE_AsianSystemRequired = -90,
+	FE_BadBaseColor = -97,
+	FE_BadBookId = -66,
+	FE_BadCompPath = -68,
+	FE_BadCompare = -35,
+	FE_BadContainer = -104,
+	FE_BadDelete = -17,
+	FE_BadDocId = -2,
+	FE_BadElementDefId = -28,
+	FE_BadElementId = -29,
+	FE_BadElementSelection = -69,
+	FE_BadFamilyName = -98,
+	FE_BadFileType = -83,
+	FE_BadFilterType = -184,
+	FE_BadInkName = -99,
+	FE_BadInsertPos = -65,
+	FE_BadKey = -177,
+	FE_BadKeyField = -178,
+	FE_BadMenuBar = -77,
+	FE_BadName = -33,
+	FE_BadNew = -23,
+	FE_BadNewFrame = -14,
+	FE_BadNewGroup = -15,
+	FE_BadNewSibling = -16,
+	FE_BadNotificationNum = -30,
+	FE_BadObjId = -3,
+	FE_BadOperation = -27,
+	FE_BadPageDelete = -18,
+	FE_BadParameter = -43,
+	FE_BadPropNum = -4,
+	FE_BadPropType = -5,
+	FE_BadRange = -36,
+	FE_BadRefElementId = -64,
+	FE_BadRefFlowId = -62,
+	FE_BadSaveFileName = -50,
+	FE_BadSelectionForOperation = -59,
+	FE_BadShortcut = -76,
+	FE_BadTemplatePath = -105,
+	FE_BadValue = -179,
+	FE_BadXRefSrcDocId = -103,
+	FE_BadXmlApplication = -106,
+	FE_BookComponentAlreadyHasTrackedEdits = -109,
+	FE_BookStructured = -61,
+	FE_BookUnStructured = -67,
+	FE_Busy = -88,
+	FE_CMSBadCommandId = -116,
+	FE_CMSBadItemContainerType = -121,
+	FE_CMSBadItemFileType = -119,
+	FE_CMSBadItemType = -120,
+	FE_CMSBadObjectId = -114,
+	FE_CMSBadSessionId = -113,
+	FE_CMSFailedCancelCheckout = -153,
+	FE_CMSFailedCheckin = -152,
+	FE_CMSFailedCheckout = -151,
+	FE_CMSFailedDelete = -154,
+	FE_CMSFailedDownloadObject = -157,
+	FE_CMSFailedGetItemFrompath = -158,
+	FE_CMSFailedLogin = -150,
+	FE_CMSFailedLogout = -159,
+	FE_CMSFailedOpenFile = -155,
+	FE_CMSFailedUploadObject = -156,
+	FE_CMSIsValidCMSCommand = -123,
+	FE_CMSNameAlreadyRegistered = -112,
+	FE_CMSObjectCreationFailed = -117,
+	FE_CMSRootObjectExists = -118,
+	FE_CMSSessionCreationFailed = -122,
+	FE_CMSSessionFailed = -115,
+	FE_Canceled = -44,
+	FE_CanceledByClient = -86,
+	FE_CannotAddEditExpressionsInOneOrMoreComponents = -205,
+	FE_CantSmooth = -38,
+	FE_CantUpdateMacEdition = -85,
+	FE_CircularReference = -81,
+	FE_CompareTypes = -34,
+	FE_Disabled = -196,
+	FE_DocAlreadyHasTrackedEdits = -108,
+	FE_DocModified = -8,
+	FE_DupName = -32,
+	FE_EmptyTextObject = -87,
+	FE_ExpressionNotFound = -204,
+	FE_FDKUndoNotAllowed = -193,
+	FE_FailedExportedFileInvalid = -111,
+	FE_FailedState = -45,
+	FE_FailedToApplyOnOneOrMoreComponents = -206,
+	FE_FileClosedByClient = -70,
+	FE_FilterFailed = -89,
+	FE_FlowStructured = -63,
+	FE_GenRuleAmbiguous = -55,
+	FE_GenRuleConnectorExpected = -57,
+	FE_GenRuleItemExpected = -51,
+	FE_GenRuleLeftBracketExpected = -53,
+	FE_GenRuleMixedConnectors = -52,
+	FE_GenRuleRightBracketExpected = -54,
+	FE_GenRuleSyntaxError = -56,
+	FE_GraphicInLockedTi = -207,
+	FE_GroupSelect = -9,
+	FE_HiddenPage = -40,
+	FE_InternalErrorFailedToWriteInsets = -94,
+	FE_InvAttribute = -80,
+	FE_InvAttributeDef = -79,
+	FE_InvContextSpec = 0,
+	FE_InvalidAttrExpr = -107,
+	FE_InvalidEmailId = -201,
+	FE_InvalidFileName = -200,
+	FE_InvalidFilePath = -199,
+	FE_InvalidPhoneNumber = -198,
+	FE_InvalidSize = -202,
+	FE_InvalidString = -58,
+	FE_KeyCatalogIsStale = -181,
+	FE_KeyCatalogNotLoaded = -180,
+	FE_KeyCatalogNotSpecified = -185,
+	FE_KeyDefinitionAlreadyExists = -183,
+	FE_KeyDefinitionDoesNotExist = -182,
+	FE_LanguageNotAvailable = -96,
+	FE_MissingFile = -84,
+	FE_NameNotFound = -20,
+	FE_NoColorFamily = -92,
+	FE_NoSuchFlow = -82,
+	FE_NonDITADocument = -186,
+	FE_NotApiCommand = -74,
+	FE_NotBodyPage = -24,
+	FE_NotBookComponent = -26,
+	FE_NotCommand = -73,
+	FE_NotFound = -95,
+	FE_NotFrame = -12,
+	FE_NotGraphic = -11,
+	FE_NotGroup = -13,
+	FE_NotInMenu = -75,
+	FE_NotMenu = -72,
+	FE_NotPgf = -25,
+	FE_NotPgfOrFlow = -71,
+	FE_NotTextFrame = -39,
+	FE_NotTextObject = -41,
+	FE_OffsetNotFound = -21,
+	FE_OutOfRange = -7,
+	FE_OverWriteError = -203,
+	FE_PageFrame = -37,
+	FE_PropNotSet = -78,
+	FE_ReadOnly = -6,
+	FE_ReservedColor = -100,
+	FE_SomeUnresolved = -22,
+	FE_StringTooLong = -93,
+	FE_Success = 0,
+	FE_SystemError = -42,
+	FE_TableInLockedTi = -101,
+	FE_TintedColor = -91,
+	FE_Transport = -1,
+	FE_TypeUnNamed = -19,
+	FE_UnLicensed = -197,
+	FE_UpdateDITAReferenceFailed = -192,
+	FE_UpdateDITAReferenceFailedCannotConvertToFMObject = -191,
+	FE_UpdateDITAReferenceFailedCannotFindReferencedFile = -189,
+	FE_UpdateDITAReferenceFailedCannotOpenReferencedFile = -190,
+	FE_UpdateDITAReferenceFailedCannotResolveReference = -188,
+	FE_UpdateDITAReferenceFailedErrorImportingReferencedFile = -208,
+	FE_UpdateDITAReferenceFailedInvalidElementType = -187,
+	FE_ViewOnly = -49,
+	FE_WantsCustom = -46,
+	FE_WantsLandscape = -47,
+	FE_WantsPortrait = -48,
+	FE_WithinFrame = -10,
+	FE_WrongProduct = -60,
+	FE_WrongView = -194,
+	FE_WrongWindow = -195,
+	FE_XRefUnresolved = -102,
+	FE_XrefTitleNotFound = -209,
 
 	// --------------------------------------------------
 	// Frame Flags for API functions
 	// --------------------------------------------------
-	type FF_ALERT_CANCEL_DEFAULT = 1;
-	const FF_ALERT_CANCEL_DEFAULT: FF_ALERT_CANCEL_DEFAULT;
-	type FF_ALERT_CONTINUE_NOTE = 2;
-	const FF_ALERT_CONTINUE_NOTE: FF_ALERT_CONTINUE_NOTE;
-	type FF_ALERT_CONTINUE_WARN = 3;
-	const FF_ALERT_CONTINUE_WARN: FF_ALERT_CONTINUE_WARN;
-	type FF_ALERT_DNS_OK = 7;
-	const FF_ALERT_DNS_OK: FF_ALERT_DNS_OK;
-	type FF_ALERT_NO_DEFAULT = 5;
-	const FF_ALERT_NO_DEFAULT: FF_ALERT_NO_DEFAULT;
-	type FF_ALERT_OK_DEFAULT = 0;
-	const FF_ALERT_OK_DEFAULT: FF_ALERT_OK_DEFAULT;
-	type FF_ALERT_YES_DEFAULT = 4;
-	const FF_ALERT_YES_DEFAULT: FF_ALERT_YES_DEFAULT;
-	type FF_ALERT_YES_NO_CANCEL = 6;
-	const FF_ALERT_YES_NO_CANCEL: FF_ALERT_YES_NO_CANCEL;
-	type FF_ALT_KEY = 0x0004;
-	const FF_ALT_KEY: FF_ALT_KEY;
-	type FF_ATTACH_ALL = 31; // (0x0001 | 0x0002 | 0x0004 | 0x0008 | 0x0010)
-	const FF_ATTACH_ALL: FF_ATTACH_ALL;
-	type FF_ATTACH_BORDER_PAGENUM = 0x0002;
-	const FF_ATTACH_BORDER_PAGENUM: FF_ATTACH_BORDER_PAGENUM;
-	type FF_ATTACH_BORDER_PAGEUPDOWN = 0x0008;
-	const FF_ATTACH_BORDER_PAGEUPDOWN: FF_ATTACH_BORDER_PAGEUPDOWN;
-	type FF_ATTACH_BORDER_RIGHTICONS = 0x0010;
-	const FF_ATTACH_BORDER_RIGHTICONS: FF_ATTACH_BORDER_RIGHTICONS;
-	type FF_ATTACH_BORDER_STATUS = 0x0001;
-	const FF_ATTACH_BORDER_STATUS: FF_ATTACH_BORDER_STATUS;
-	type FF_ATTACH_BORDER_ZOOM = 0x0004;
-	const FF_ATTACH_BORDER_ZOOM: FF_ATTACH_BORDER_ZOOM;
-	type FF_ATTRDISP = 86;
-	const FF_ATTRDISP: FF_ATTRDISP;
-	type FF_ATTRDISP_ALL = 87;
-	const FF_ATTRDISP_ALL: FF_ATTRDISP_ALL;
-	type FF_ATTR_SEL = 89;
-	const FF_ATTR_SEL: FF_ATTR_SEL;
-	type FF_BOR_EXT = 72;
-	const FF_BOR_EXT: FF_BOR_EXT;
-	type FF_BOR_SEL = 71;
-	const FF_BOR_SEL: FF_BOR_SEL;
-	type FF_BUBBLE_CONTEXT = 49;
-	const FF_BUBBLE_CONTEXT: FF_BUBBLE_CONTEXT;
-	type FF_BUBBLE_COPY = 55;
-	const FF_BUBBLE_COPY: FF_BUBBLE_COPY;
-	type FF_BUBBLE_EXT = 54;
-	const FF_BUBBLE_EXT: FF_BUBBLE_EXT;
-	type FF_BUBBLE_EXT_CONTEXT = 50;
-	const FF_BUBBLE_EXT_CONTEXT: FF_BUBBLE_EXT_CONTEXT;
-	type FF_BUBBLE_SEL = 53;
-	const FF_BUBBLE_SEL: FF_BUBBLE_SEL;
-	type FF_CELLS_RES = 25;
-	const FF_CELLS_RES: FF_CELLS_RES;
-	type FF_CELL_EXT = 22;
-	const FF_CELL_EXT: FF_CELL_EXT;
-	type FF_CELL_RES = 24;
-	const FF_CELL_RES: FF_CELL_RES;
-	type FF_CELL_SEL = 21;
-	const FF_CELL_SEL: FF_CELL_SEL;
-	type FF_CLEAR_SEL = 0;
-	const FF_CLEAR_SEL: FF_CLEAR_SEL;
-	type FF_CLOSE_MODIFIED = 1;
-	const FF_CLOSE_MODIFIED: FF_CLOSE_MODIFIED;
-	type FF_CMD_KEY = 0x0010;
-	const FF_CMD_KEY: FF_CMD_KEY;
-	type FF_CMP_ATTRIBUTES = 0x20;
-	const FF_CMP_ATTRIBUTES: FF_CMP_ATTRIBUTES;
-	type FF_CMP_CHANGE_BARS = 0x02;
-	const FF_CMP_CHANGE_BARS: FF_CMP_CHANGE_BARS;
-	type FF_CMP_COMPKIT = 0x10;
-	const FF_CMP_COMPKIT: FF_CMP_COMPKIT;
-	type FF_CMP_HYPERLINKS = 0x04;
-	const FF_CMP_HYPERLINKS: FF_CMP_HYPERLINKS;
-	type FF_CMP_SUMKIT = 0x08;
-	const FF_CMP_SUMKIT: FF_CMP_SUMKIT;
-	type FF_CMP_SUMMARY_ONLY = 0x01;
-	const FF_CMP_SUMMARY_ONLY: FF_CMP_SUMMARY_ONLY;
-	type FF_COLLAPSE_ALL = 57;
-	const FF_COLLAPSE_ALL: FF_COLLAPSE_ALL;
-	type FF_COLLAPSE_ELEM = 56;
-	const FF_COLLAPSE_ELEM: FF_COLLAPSE_ELEM;
-	type FF_CONTEXT_DRAG = 73;
-	const FF_CONTEXT_DRAG: FF_CONTEXT_DRAG;
-	type FF_CONTEXT_DRAGTXT = 4;
-	const FF_CONTEXT_DRAGTXT: FF_CONTEXT_DRAGTXT;
-	type FF_CONTEXT_DRAG_EXT = 74;
-	const FF_CONTEXT_DRAG_EXT: FF_CONTEXT_DRAG_EXT;
-	type FF_CONTEXT_MENU = 33;
-	const FF_CONTEXT_MENU: FF_CONTEXT_MENU;
-	type FF_CONTROL_KEY = 0x0002;
-	const FF_CONTROL_KEY: FF_CONTROL_KEY;
-	type FF_COPY_TO_CLIP = 13;
-	const FF_COPY_TO_CLIP: FF_COPY_TO_CLIP;
-	type FF_CUT_TBL_CELLS = 0x0002;
-	const FF_CUT_TBL_CELLS: FF_CUT_TBL_CELLS;
-	type FF_Custom_FirstPageLeft = 2;
-	const FF_Custom_FirstPageLeft: FF_Custom_FirstPageLeft;
-	type FF_Custom_FirstPageRight = 1;
-	const FF_Custom_FirstPageRight: FF_Custom_FirstPageRight;
-	type FF_Custom_SingleSided = 0;
-	const FF_Custom_SingleSided: FF_Custom_SingleSided;
-	type FF_DIALOG_ALL = 0xFFFF;
-	const FF_DIALOG_ALL: FF_DIALOG_ALL;
-	type FF_DIALOG_INSET_POD = 0x01;
-	const FF_DIALOG_INSET_POD: FF_DIALOG_INSET_POD;
-	type FF_DITAUpdateAllConrefs = 0x01;
-	const FF_DITAUpdateAllConrefs: FF_DITAUpdateAllConrefs;
-	type FF_DITAUpdateAllLinks = 0x04;
-	const FF_DITAUpdateAllLinks: FF_DITAUpdateAllLinks;
-	type FF_DITAUpdateAllReferences = 31; // (0x01 | 0x02 | 0x04 | 0x08 | 0x10)
-	const FF_DITAUpdateAllReferences: FF_DITAUpdateAllReferences;
-	type FF_DITAUpdateAllTopicrefs = 0x08;
-	const FF_DITAUpdateAllTopicrefs: FF_DITAUpdateAllTopicrefs;
-	type FF_DITAUpdateAllTopicsetrefs = 0x10;
-	const FF_DITAUpdateAllTopicsetrefs: FF_DITAUpdateAllTopicsetrefs;
-	type FF_DITAUpdateAllXrefs = 0x02;
-	const FF_DITAUpdateAllXrefs: FF_DITAUpdateAllXrefs;
-	type FF_DONT_APPLY_ALL_ROWS = 0x0040;
-	const FF_DONT_APPLY_ALL_ROWS: FF_DONT_APPLY_ALL_ROWS;
-	type FF_DONT_DELETE_HIDDEN_TEXT = 0x0004;
-	const FF_DONT_DELETE_HIDDEN_TEXT: FF_DONT_DELETE_HIDDEN_TEXT;
-	type FF_DUPLICATE_KEY_DEFINITION = 0x01;
-	const FF_DUPLICATE_KEY_DEFINITION: FF_DUPLICATE_KEY_DEFINITION;
-	type FF_EDIT_ATTRIBUTE = 88;
-	const FF_EDIT_ATTRIBUTE: FF_EDIT_ATTRIBUTE;
-	type FF_ELEMENT_CONTEXT = 47;
-	const FF_ELEMENT_CONTEXT: FF_ELEMENT_CONTEXT;
-	type FF_ELEMENT_EXT = 52;
-	const FF_ELEMENT_EXT: FF_ELEMENT_EXT;
-	type FF_ELEMENT_EXT_CONTEXT = 48;
-	const FF_ELEMENT_EXT_CONTEXT: FF_ELEMENT_EXT_CONTEXT;
-	type FF_ELEMENT_SEL = 51;
-	const FF_ELEMENT_SEL: FF_ELEMENT_SEL;
-	type FF_FIND_BACKWARDS = 0x08;
-	const FF_FIND_BACKWARDS: FF_FIND_BACKWARDS;
-	type FF_FIND_CONSIDER_CASE = 0x01;
-	const FF_FIND_CONSIDER_CASE: FF_FIND_CONSIDER_CASE;
-	type FF_FIND_USE_REGEX = 0x10;
-	const FF_FIND_USE_REGEX: FF_FIND_USE_REGEX;
-	type FF_FIND_USE_WILDCARDS = 0x04;
-	const FF_FIND_USE_WILDCARDS: FF_FIND_USE_WILDCARDS;
-	type FF_FIND_WHOLE_WORD = 0x02;
-	const FF_FIND_WHOLE_WORD: FF_FIND_WHOLE_WORD;
-	type FF_FOUND_IN_REFERENCED_FILE = 0x02;
-	const FF_FOUND_IN_REFERENCED_FILE: FF_FOUND_IN_REFERENCED_FILE;
-	type FF_HYPERTEXT = 41;
-	const FF_HYPERTEXT: FF_HYPERTEXT;
-	type FF_IED_DELETE_EMPTY_PAGES = 0x0010;
-	const FF_IED_DELETE_EMPTY_PAGES: FF_IED_DELETE_EMPTY_PAGES;
-	type FF_IED_DO_NOT_IMPORT_EDD = 0x0004;
-	const FF_IED_DO_NOT_IMPORT_EDD: FF_IED_DO_NOT_IMPORT_EDD;
-	type FF_IED_DO_NOT_IMPORT_STRUCTAPP = 0x0040;
-	const FF_IED_DO_NOT_IMPORT_STRUCTAPP: FF_IED_DO_NOT_IMPORT_STRUCTAPP;
-	type FF_IED_NO_NOTIFY = 0x0008;
-	const FF_IED_NO_NOTIFY: FF_IED_NO_NOTIFY;
-	type FF_IED_REMOVE_BOOK_INFO = 0x0002;
-	const FF_IED_REMOVE_BOOK_INFO: FF_IED_REMOVE_BOOK_INFO;
-	type FF_IED_REMOVE_OVERRIDES = 0x0001;
-	const FF_IED_REMOVE_OVERRIDES: FF_IED_REMOVE_OVERRIDES;
-	type FF_IMAGE_BACKGROUND = 0x0001;
-	const FF_IMAGE_BACKGROUND: FF_IMAGE_BACKGROUND;
-	type FF_IMAGE_CLIP = 0x0004;
-	const FF_IMAGE_CLIP: FF_IMAGE_CLIP;
-	type FF_IMAGE_MASTER = 0x0002;
-	const FF_IMAGE_MASTER: FF_IMAGE_MASTER;
-	type FF_IMAGE_NOTRIM = 0x0008;
-	const FF_IMAGE_NOTRIM: FF_IMAGE_NOTRIM;
-	type FF_IMAGE_PAGEFRAME = 0x000F;
-	const FF_IMAGE_PAGEFRAME: FF_IMAGE_PAGEFRAME;
-	type FF_INSERT_BELOW_RIGHT = 0x0008;
-	const FF_INSERT_BELOW_RIGHT: FF_INSERT_BELOW_RIGHT;
-	type FF_INTERACTIVE = 0x0001;
-	const FF_INTERACTIVE: FF_INTERACTIVE;
-	type FF_INVALID_KEY = 0x04;
-	const FF_INVALID_KEY: FF_INVALID_KEY;
-	type FF_OBJ_CROTATE = 67;
-	const FF_OBJ_CROTATE: FF_OBJ_CROTATE;
-	type FF_OBJ_EXT = 63;
-	const FF_OBJ_EXT: FF_OBJ_EXT;
-	type FF_OBJ_EXT_BOR = 64;
-	const FF_OBJ_EXT_BOR: FF_OBJ_EXT_BOR;
-	type FF_OBJ_Q_COPY = 65;
-	const FF_OBJ_Q_COPY: FF_OBJ_Q_COPY;
-	type FF_OBJ_ROTATE = 66;
-	const FF_OBJ_ROTATE: FF_OBJ_ROTATE;
-	type FF_OBJ_SEL = 62;
-	const FF_OBJ_SEL: FF_OBJ_SEL;
-	type FF_OPEN_BOOK_COMP = 58;
-	const FF_OPEN_BOOK_COMP: FF_OPEN_BOOK_COMP;
-	type FF_PASTE_CLIP_OBJ = 61;
-	const FF_PASTE_CLIP_OBJ: FF_PASTE_CLIP_OBJ;
-	type FF_PASTE_CLIP_TEXT = 12;
-	const FF_PASTE_CLIP_TEXT: FF_PASTE_CLIP_TEXT;
-	type FF_PASTE_SEL_TEXT = 11;
-	const FF_PASTE_SEL_TEXT: FF_PASTE_SEL_TEXT;
-	type FF_REPLACE_CELLS = 0x0020;
-	const FF_REPLACE_CELLS: FF_REPLACE_CELLS;
-	type FF_RES_ADD = 84;
-	const FF_RES_ADD: FF_RES_ADD;
-	type FF_RES_DEL = 85;
-	const FF_RES_DEL: FF_RES_DEL;
-	type FF_RES_MOVE = 81;
-	const FF_RES_MOVE: FF_RES_MOVE;
-	type FF_RES_MOVE1 = 82;
-	const FF_RES_MOVE1: FF_RES_MOVE1;
-	type FF_RES_VERTEX = 83;
-	const FF_RES_VERTEX: FF_RES_VERTEX;
-	type FF_SELECT_WHOLE_TABLE = 0x80000000;
-	const FF_SELECT_WHOLE_TABLE: FF_SELECT_WHOLE_TABLE;
-	type FF_SHIFT_KEY = 0x0001;
-	const FF_SHIFT_KEY: FF_SHIFT_KEY;
-	type FF_STRIP_HYPERTEXT = 0x0080;
-	const FF_STRIP_HYPERTEXT: FF_STRIP_HYPERTEXT;
-	type FF_STRUCTURE_MENU = 34;
-	const FF_STRUCTURE_MENU: FF_STRUCTURE_MENU;
-	type FF_TABLE_SELALL = 23;
-	const FF_TABLE_SELALL: FF_TABLE_SELALL;
-	type FF_TEXT_EXT = 2;
-	const FF_TEXT_EXT: FF_TEXT_EXT;
-	type FF_TEXT_Q_COPY = 3;
-	const FF_TEXT_Q_COPY: FF_TEXT_Q_COPY;
-	type FF_TEXT_SEL = 1;
-	const FF_TEXT_SEL: FF_TEXT_SEL;
-	type FF_UFF_ALL = 0xFFFF;
-	const FF_UFF_ALL: FF_UFF_ALL;
-	type FF_UFF_COLOR = 0x0100;
-	const FF_UFF_COLOR: FF_UFF_COLOR;
-	type FF_UFF_COMBINED_FONTS = 0x0800;
-	const FF_UFF_COMBINED_FONTS: FF_UFF_COMBINED_FONTS;
-	type FF_UFF_COND = 0x0010;
-	const FF_UFF_COND: FF_UFF_COND;
-	type FF_UFF_DOCUMENT_PROPS = 0x0400;
-	const FF_UFF_DOCUMENT_PROPS: FF_UFF_DOCUMENT_PROPS;
-	type FF_UFF_FBA = 0x1000;
-	const FF_UFF_FBA: FF_UFF_FBA;
-	type FF_UFF_FONT = 0x0002;
-	const FF_UFF_FONT: FF_UFF_FONT;
-	type FF_UFF_MATH = 0x0200;
-	const FF_UFF_MATH: FF_UFF_MATH;
-	type FF_UFF_PAGE = 0x0004;
-	const FF_UFF_PAGE: FF_UFF_PAGE;
-	type FF_UFF_PGF = 0x0001;
-	const FF_UFF_PGF: FF_UFF_PGF;
-	type FF_UFF_REFPAGE = 0x0020;
-	const FF_UFF_REFPAGE: FF_UFF_REFPAGE;
-	type FF_UFF_REMOVE_EXCEPTIONS = 0x8000;
-	const FF_UFF_REMOVE_EXCEPTIONS: FF_UFF_REMOVE_EXCEPTIONS;
-	type FF_UFF_REMOVE_PAGE_BREAKS = 0x4000;
-	const FF_UFF_REMOVE_PAGE_BREAKS: FF_UFF_REMOVE_PAGE_BREAKS;
-	type FF_UFF_STYLE = 0x2000;
-	const FF_UFF_STYLE: FF_UFF_STYLE;
-	type FF_UFF_TABLE = 0x0008;
-	const FF_UFF_TABLE: FF_UFF_TABLE;
-	type FF_UFF_VAR = 0x0040;
-	const FF_UFF_VAR: FF_UFF_VAR;
-	type FF_UFF_XREF = 0x0080;
-	const FF_UFF_XREF: FF_UFF_XREF;
-	type FF_UNTAGGED_ASK = 0;
-	const FF_UNTAGGED_ASK: FF_UNTAGGED_ASK;
-	type FF_UNTAGGED_DELETE = 2;
-	const FF_UNTAGGED_DELETE: FF_UNTAGGED_DELETE;
-	type FF_UNTAGGED_UNCOND = 1;
-	const FF_UNTAGGED_UNCOND: FF_UNTAGGED_UNCOND;
-	type FF_VIEWER_MENU = 32;
-	const FF_VIEWER_MENU: FF_VIEWER_MENU;
-	type FF_VISIBLE_ONLY = 0x0010;
-	const FF_VISIBLE_ONLY: FF_VISIBLE_ONLY;
-	type FF_XRUI_CLOSED_DOCS = 0x04;
-	const FF_XRUI_CLOSED_DOCS: FF_XRUI_CLOSED_DOCS;
-	type FF_XRUI_EVERYTHING = 7; // (0x01 | 0x02 | 0x04)
-	const FF_XRUI_EVERYTHING: FF_XRUI_EVERYTHING;
-	type FF_XRUI_FORCE_UPDATE = 0x08;
-	const FF_XRUI_FORCE_UPDATE: FF_XRUI_FORCE_UPDATE;
-	type FF_XRUI_INTERNAL = 0x01;
-	const FF_XRUI_INTERNAL: FF_XRUI_INTERNAL;
-	type FF_XRUI_OPEN_DOCS = 0x02;
-	const FF_XRUI_OPEN_DOCS: FF_XRUI_OPEN_DOCS;
+	FF_ALERT_CANCEL_DEFAULT = 1,
+	FF_ALERT_CONTINUE_NOTE = 2,
+	FF_ALERT_CONTINUE_WARN = 3,
+	FF_ALERT_DNS_OK = 7,
+	FF_ALERT_NO_DEFAULT = 5,
+	FF_ALERT_OK_DEFAULT = 0,
+	FF_ALERT_YES_DEFAULT = 4,
+	FF_ALERT_YES_NO_CANCEL = 6,
+	FF_ALT_KEY = 0x0004,
+	FF_ATTACH_ALL = 31, // 0x0001 | 0x0002 | 0x0004 | 0x0008 | 0x0010
+	FF_ATTACH_BORDER_PAGENUM = 0x0002,
+	FF_ATTACH_BORDER_PAGEUPDOWN = 0x0008,
+	FF_ATTACH_BORDER_RIGHTICONS = 0x0010,
+	FF_ATTACH_BORDER_STATUS = 0x0001,
+	FF_ATTACH_BORDER_ZOOM = 0x0004,
+	FF_ATTRDISP = 86,
+	FF_ATTRDISP_ALL = 87,
+	FF_ATTR_SEL = 89,
+	FF_BOR_EXT = 72,
+	FF_BOR_SEL = 71,
+	FF_BUBBLE_CONTEXT = 49,
+	FF_BUBBLE_COPY = 55,
+	FF_BUBBLE_EXT = 54,
+	FF_BUBBLE_EXT_CONTEXT = 50,
+	FF_BUBBLE_SEL = 53,
+	FF_CELLS_RES = 25,
+	FF_CELL_EXT = 22,
+	FF_CELL_RES = 24,
+	FF_CELL_SEL = 21,
+	FF_CLEAR_SEL = 0,
+	FF_CLOSE_MODIFIED = 1,
+	FF_CMD_KEY = 0x0010,
+	FF_CMP_ATTRIBUTES = 0x20,
+	FF_CMP_CHANGE_BARS = 0x02,
+	FF_CMP_COMPKIT = 0x10,
+	FF_CMP_HYPERLINKS = 0x04,
+	FF_CMP_SUMKIT = 0x08,
+	FF_CMP_SUMMARY_ONLY = 0x01,
+	FF_COLLAPSE_ALL = 57,
+	FF_COLLAPSE_ELEM = 56,
+	FF_CONTEXT_DRAG = 73,
+	FF_CONTEXT_DRAGTXT = 4,
+	FF_CONTEXT_DRAG_EXT = 74,
+	FF_CONTEXT_MENU = 33,
+	FF_CONTROL_KEY = 0x0002,
+	FF_COPY_TO_CLIP = 13,
+	FF_CUT_TBL_CELLS = 0x0002,
+	FF_Custom_FirstPageLeft = 2,
+	FF_Custom_FirstPageRight = 1,
+	FF_Custom_SingleSided = 0,
+	FF_DIALOG_ALL = 0xFFFF,
+	FF_DIALOG_INSET_POD = 0x01,
+	FF_DITAUpdateAllConrefs = 0x01,
+	FF_DITAUpdateAllLinks = 0x04,
+	FF_DITAUpdateAllReferences = 31, // 0x01 | 0x02 | 0x04 | 0x08 | 0x10
+	FF_DITAUpdateAllTopicrefs = 0x08,
+	FF_DITAUpdateAllTopicsetrefs = 0x10,
+	FF_DITAUpdateAllXrefs = 0x02,
+	FF_DONT_APPLY_ALL_ROWS = 0x0040,
+	FF_DONT_DELETE_HIDDEN_TEXT = 0x0004,
+	FF_DUPLICATE_KEY_DEFINITION = 0x01,
+	FF_EDIT_ATTRIBUTE = 88,
+	FF_ELEMENT_CONTEXT = 47,
+	FF_ELEMENT_EXT = 52,
+	FF_ELEMENT_EXT_CONTEXT = 48,
+	FF_ELEMENT_SEL = 51,
+	FF_FIND_BACKWARDS = 0x08,
+	FF_FIND_CONSIDER_CASE = 0x01,
+	FF_FIND_USE_REGEX = 0x10,
+	FF_FIND_USE_WILDCARDS = 0x04,
+	FF_FIND_WHOLE_WORD = 0x02,
+	FF_FOUND_IN_REFERENCED_FILE = 0x02,
+	FF_HYPERTEXT = 41,
+	FF_IED_DELETE_EMPTY_PAGES = 0x0010,
+	FF_IED_DO_NOT_IMPORT_EDD = 0x0004,
+	FF_IED_DO_NOT_IMPORT_STRUCTAPP = 0x0040,
+	FF_IED_NO_NOTIFY = 0x0008,
+	FF_IED_REMOVE_BOOK_INFO = 0x0002,
+	FF_IED_REMOVE_OVERRIDES = 0x0001,
+	FF_IMAGE_BACKGROUND = 0x0001,
+	FF_IMAGE_CLIP = 0x0004,
+	FF_IMAGE_MASTER = 0x0002,
+	FF_IMAGE_NOTRIM = 0x0008,
+	FF_IMAGE_PAGEFRAME = 0x000F,
+	FF_INSERT_BELOW_RIGHT = 0x0008,
+	FF_INTERACTIVE = 0x0001,
+	FF_INVALID_KEY = 0x04,
+	FF_OBJ_CROTATE = 67,
+	FF_OBJ_EXT = 63,
+	FF_OBJ_EXT_BOR = 64,
+	FF_OBJ_Q_COPY = 65,
+	FF_OBJ_ROTATE = 66,
+	FF_OBJ_SEL = 62,
+	FF_OPEN_BOOK_COMP = 58,
+	FF_PASTE_CLIP_OBJ = 61,
+	FF_PASTE_CLIP_TEXT = 12,
+	FF_PASTE_SEL_TEXT = 11,
+	FF_REPLACE_CELLS = 0x0020,
+	FF_RES_ADD = 84,
+	FF_RES_DEL = 85,
+	FF_RES_MOVE = 81,
+	FF_RES_MOVE1 = 82,
+	FF_RES_VERTEX = 83,
+	FF_SELECT_WHOLE_TABLE = 0x80000000,
+	FF_SHIFT_KEY = 0x0001,
+	FF_STRIP_HYPERTEXT = 0x0080,
+	FF_STRUCTURE_MENU = 34,
+	FF_TABLE_SELALL = 23,
+	FF_TEXT_EXT = 2,
+	FF_TEXT_Q_COPY = 3,
+	FF_TEXT_SEL = 1,
+	FF_UFF_ALL = 0xFFFF,
+	FF_UFF_COLOR = 0x0100,
+	FF_UFF_COMBINED_FONTS = 0x0800,
+	FF_UFF_COND = 0x0010,
+	FF_UFF_DOCUMENT_PROPS = 0x0400,
+	FF_UFF_FBA = 0x1000,
+	FF_UFF_FONT = 0x0002,
+	FF_UFF_MATH = 0x0200,
+	FF_UFF_PAGE = 0x0004,
+	FF_UFF_PGF = 0x0001,
+	FF_UFF_REFPAGE = 0x0020,
+	FF_UFF_REMOVE_EXCEPTIONS = 0x8000,
+	FF_UFF_REMOVE_PAGE_BREAKS = 0x4000,
+	FF_UFF_STYLE = 0x2000,
+	FF_UFF_TABLE = 0x0008,
+	FF_UFF_VAR = 0x0040,
+	FF_UFF_XREF = 0x0080,
+	FF_UNTAGGED_ASK = 0,
+	FF_UNTAGGED_DELETE = 2,
+	FF_UNTAGGED_UNCOND = 1,
+	FF_VIEWER_MENU = 32,
+	FF_VISIBLE_ONLY = 0x0010,
+	FF_XRUI_CLOSED_DOCS = 0x04,
+	FF_XRUI_EVERYTHING = 7, // 0x01 | 0x02 | 0x04
+	FF_XRUI_FORCE_UPDATE = 0x08,
+	FF_XRUI_INTERNAL = 0x01,
+	FF_XRUI_OPEN_DOCS = 0x02,
 
 	// --------------------------------------------------
 	// Frame Info on plugins
 	// --------------------------------------------------
-	type FI_PLUGIN_DESCRIPTION = 4;
-	const FI_PLUGIN_DESCRIPTION: FI_PLUGIN_DESCRIPTION;
-	type FI_PLUGIN_FACET = 6;
-	const FI_PLUGIN_FACET: FI_PLUGIN_FACET;
-	type FI_PLUGIN_FORMATID = 7;
-	const FI_PLUGIN_FORMATID: FI_PLUGIN_FORMATID;
-	type FI_PLUGIN_INFORMAT = 10;
-	const FI_PLUGIN_INFORMAT: FI_PLUGIN_INFORMAT;
-	type FI_PLUGIN_NAME = 2;
-	const FI_PLUGIN_NAME: FI_PLUGIN_NAME;
-	type FI_PLUGIN_OUTFORMAT = 11;
-	const FI_PLUGIN_OUTFORMAT: FI_PLUGIN_OUTFORMAT;
-	type FI_PLUGIN_PRODUCTNAME = 1;
-	const FI_PLUGIN_PRODUCTNAME: FI_PLUGIN_PRODUCTNAME;
-	type FI_PLUGIN_PRODUCTS = 5;
-	const FI_PLUGIN_PRODUCTS: FI_PLUGIN_PRODUCTS;
-	type FI_PLUGIN_SUFFIX = 9;
-	const FI_PLUGIN_SUFFIX: FI_PLUGIN_SUFFIX;
-	type FI_PLUGIN_TYPE = 3;
-	const FI_PLUGIN_TYPE: FI_PLUGIN_TYPE;
-	type FI_PLUGIN_VENDOR = 8;
-	const FI_PLUGIN_VENDOR: FI_PLUGIN_VENDOR;
+	FI_PLUGIN_DESCRIPTION = 4,
+	FI_PLUGIN_FACET = 6,
+	FI_PLUGIN_FORMATID = 7,
+	FI_PLUGIN_INFORMAT = 10,
+	FI_PLUGIN_NAME = 2,
+	FI_PLUGIN_OUTFORMAT = 11,
+	FI_PLUGIN_PRODUCTNAME = 1,
+	FI_PLUGIN_PRODUCTS = 5,
+	FI_PLUGIN_SUFFIX = 9,
+	FI_PLUGIN_TYPE = 3,
+	FI_PLUGIN_VENDOR = 8,
 
 	// --------------------------------------------------
 	// Frame Object codes
 	// --------------------------------------------------
-	type FO_AFrame = 23;
-	const FO_AFrame: FO_AFrame;
-	type FO_Alert = 69;
-	const FO_Alert: FO_Alert;
-	type FO_AnchoredFrame = 23;
-	const FO_AnchoredFrame: FO_AnchoredFrame;
-	type FO_Arc = 11;
-	const FO_Arc: FO_Arc;
-	type FO_AttrCondExpr = 71;
-	const FO_AttrCondExpr: FO_AttrCondExpr;
-	type FO_Bad = 255;
-	const FO_Bad: FO_Bad;
-	type FO_BodyPage = 5;
-	const FO_BodyPage: FO_BodyPage;
-	type FO_Book = 2;
-	const FO_Book: FO_Book;
-	type FO_BookComponent = 3;
-	const FO_BookComponent: FO_BookComponent;
-	type FO_CMSConnection = 98;
-	const FO_CMSConnection: FO_CMSConnection;
-	type FO_CMSObject = 76;
-	const FO_CMSObject: FO_CMSObject;
-	type FO_CMSObject2 = 99;
-	const FO_CMSObject2: FO_CMSObject2;
-	type FO_CMSRegistration = 74;
-	const FO_CMSRegistration: FO_CMSRegistration;
-	type FO_CMSSession = 75;
-	const FO_CMSSession: FO_CMSSession;
-	type FO_Cblock = 86;
-	const FO_Cblock: FO_Cblock;
-	type FO_Cell = 39;
-	const FO_Cell: FO_Cell;
-	type FO_CharFmt = 33;
-	const FO_CharFmt: FO_CharFmt;
-	type FO_Color = 35;
-	const FO_Color: FO_Color;
-	type FO_Column = 82;
-	const FO_Column: FO_Column;
-	type FO_CombinedFontDefn = 67;
-	const FO_CombinedFontDefn: FO_CombinedFontDefn;
-	type FO_Command = 56;
-	const FO_Command: FO_Command;
-	type FO_CondFmt = 34;
-	const FO_CondFmt: FO_CondFmt;
-	type FO_CursorResource = 70;
-	const FO_CursorResource: FO_CursorResource;
-	type FO_DBGroup = 22;
-	const FO_DBGroup: FO_DBGroup;
-	type FO_DialogResource = 43;
-	const FO_DialogResource: FO_DialogResource;
-	type FO_DitaMap = 96;
-	const FO_DitaMap: FO_DitaMap;
-	type FO_DlgBox = 44;
-	const FO_DlgBox: FO_DlgBox;
-	type FO_DlgButton = 45;
-	const FO_DlgButton: FO_DlgButton;
-	type FO_DlgCheckBox = 47;
-	const FO_DlgCheckBox: FO_DlgCheckBox;
-	type FO_DlgDate = 80;
-	const FO_DlgDate: FO_DlgDate;
-	type FO_DlgEditBox = 50;
-	const FO_DlgEditBox: FO_DlgEditBox;
-	type FO_DlgImage = 53;
-	const FO_DlgImage: FO_DlgImage;
-	type FO_DlgLabel = 52;
-	const FO_DlgLabel: FO_DlgLabel;
-	type FO_DlgListView = 72;
-	const FO_DlgListView: FO_DlgListView;
-	type FO_DlgPopUp = 48;
-	const FO_DlgPopUp: FO_DlgPopUp;
-	type FO_DlgRadioButton = 51;
-	const FO_DlgRadioButton: FO_DlgRadioButton;
-	type FO_DlgScrollBar = 54;
-	const FO_DlgScrollBar: FO_DlgScrollBar;
-	type FO_DlgScrollBox = 49;
-	const FO_DlgScrollBox: FO_DlgScrollBox;
-	type FO_DlgTriBox = 46;
-	const FO_DlgTriBox: FO_DlgTriBox;
-	type FO_Doc = 4;
-	const FO_Doc: FO_Doc;
-	type FO_Element = 42;
-	const FO_Element: FO_Element;
-	type FO_ElementDef = 41;
-	const FO_ElementDef: FO_ElementDef;
-	type FO_Ellipse = 13;
-	const FO_Ellipse: FO_Ellipse;
-	type FO_First_Internal = 83;
-	const FO_First_Internal: FO_First_Internal;
-	type FO_Flow = 30;
-	const FO_Flow: FO_Flow;
-	type FO_FmtChangeList = 58;
-	const FO_FmtChangeList: FO_FmtChangeList;
-	type FO_FmtRule = 59;
-	const FO_FmtRule: FO_FmtRule;
-	type FO_FmtRuleClause = 60;
-	const FO_FmtRuleClause: FO_FmtRuleClause;
-	type FO_Fn = 25;
-	const FO_Fn: FO_Fn;
-	type FO_Frame = 85;
-	const FO_Frame: FO_Frame;
-	type FO_Graphic = 84;
-	const FO_Graphic: FO_Graphic;
-	type FO_GraphicsFmt = 73;
-	const FO_GraphicsFmt: FO_GraphicsFmt;
-	type FO_Group = 10;
-	const FO_Group: FO_Group;
-	type FO_HiddenPage = 8;
-	const FO_HiddenPage: FO_HiddenPage;
-	type FO_InlineComponent = 81;
-	const FO_InlineComponent: FO_InlineComponent;
-	type FO_Inset = 20;
-	const FO_Inset: FO_Inset;
-	type FO_Iterator = 78;
-	const FO_Iterator: FO_Iterator;
-	type FO_KeyCatalog = 77;
-	const FO_KeyCatalog: FO_KeyCatalog;
-	type FO_Last_Graphic = 22;
-	const FO_Last_Graphic: FO_Last_Graphic;
-	type FO_Last_Internal = 97;
-	const FO_Last_Internal: FO_Last_Internal;
-	type FO_Last_Page = 8;
-	const FO_Last_Page: FO_Last_Page;
-	type FO_Line = 17;
-	const FO_Line: FO_Line;
-	type FO_Marker = 24;
-	const FO_Marker: FO_Marker;
-	type FO_MarkerType = 66;
-	const FO_MarkerType: FO_MarkerType;
-	type FO_MasterPage = 6;
-	const FO_MasterPage: FO_MasterPage;
-	type FO_Math = 21;
-	const FO_Math: FO_Math;
-	type FO_MathML = 79;
-	const FO_MathML: FO_MathML;
-	type FO_Menu = 55;
-	const FO_Menu: FO_Menu;
-	type FO_MenuCell = 94;
-	const FO_MenuCell: FO_MenuCell;
-	type FO_MenuItemSeparator = 57;
-	const FO_MenuItemSeparator: FO_MenuItemSeparator;
-	type FO_Num = 83;
-	const FO_Num: FO_Num;
-	type FO_Page = 83;
-	const FO_Page: FO_Page;
-	type FO_Pgf = 31;
-	const FO_Pgf: FO_Pgf;
-	type FO_PgfFmt = 32;
-	const FO_PgfFmt: FO_PgfFmt;
-	type FO_Polygon = 16;
-	const FO_Polygon: FO_Polygon;
-	type FO_Polyline = 15;
-	const FO_Polyline: FO_Polyline;
-	type FO_Rectangle = 12;
-	const FO_Rectangle: FO_Rectangle;
-	type FO_RefPage = 7;
-	const FO_RefPage: FO_RefPage;
-	type FO_RoundRect = 14;
-	const FO_RoundRect: FO_RoundRect;
-	type FO_Row = 38;
-	const FO_Row: FO_Row;
-	type FO_Rubi = 68;
-	const FO_Rubi: FO_Rubi;
-	type FO_RulingFmt = 40;
-	const FO_RulingFmt: FO_RulingFmt;
-	type FO_Session = 0;
-	const FO_Session: FO_Session;
-	type FO_StringResource = 1;
-	const FO_StringResource: FO_StringResource;
-	type FO_SubCell = 90;
-	const FO_SubCell: FO_SubCell;
-	type FO_SubCol = 65;
-	const FO_SubCol: FO_SubCol;
-	type FO_SubCond = 87;
-	const FO_SubCond: FO_SubCond;
-	type FO_SubDash = 89;
-	const FO_SubDash: FO_SubDash;
-	type FO_SubPblock = 92;
-	const FO_SubPblock: FO_SubPblock;
-	type FO_SubStyle = 88;
-	const FO_SubStyle: FO_SubStyle;
-	type FO_SubTbl = 91;
-	const FO_SubTbl: FO_SubTbl;
-	type FO_SubTextDef = 93;
-	const FO_SubTextDef: FO_SubTextDef;
-	type FO_Tbl = 36;
-	const FO_Tbl: FO_Tbl;
-	type FO_TblFmt = 37;
-	const FO_TblFmt: FO_TblFmt;
-	type FO_TextFrame = 19;
-	const FO_TextFrame: FO_TextFrame;
-	type FO_TextInset = 95;
-	const FO_TextInset: FO_TextInset;
-	type FO_TextLine = 18;
-	const FO_TextLine: FO_TextLine;
-	type FO_TiApiClient = 64;
-	const FO_TiApiClient: FO_TiApiClient;
-	type FO_TiFlow = 61;
-	const FO_TiFlow: FO_TiFlow;
-	type FO_TiText = 62;
-	const FO_TiText: FO_TiText;
-	type FO_TiTextTable = 63;
-	const FO_TiTextTable: FO_TiTextTable;
-	type FO_UFrame = 9;
-	const FO_UFrame: FO_UFrame;
-	type FO_UnanchoredFrame = 9;
-	const FO_UnanchoredFrame: FO_UnanchoredFrame;
-	type FO_Var = 28;
-	const FO_Var: FO_Var;
-	type FO_VarFmt = 29;
-	const FO_VarFmt: FO_VarFmt;
-	type FO_XLast_Graphic = 23;
-	const FO_XLast_Graphic: FO_XLast_Graphic;
-	type FO_XRef = 26;
-	const FO_XRef: FO_XRef;
-	type FO_XRefFmt = 27;
-	const FO_XRefFmt: FO_XRefFmt;
+	FO_AFrame = 23,
+	FO_Alert = 69,
+	FO_AnchoredFrame = 23,
+	FO_Arc = 11,
+	FO_AttrCondExpr = 71,
+	FO_Bad = 255,
+	FO_BodyPage = 5,
+	FO_Book = 2,
+	FO_BookComponent = 3,
+	FO_CMSConnection = 98,
+	FO_CMSObject = 76,
+	FO_CMSObject2 = 99,
+	FO_CMSRegistration = 74,
+	FO_CMSSession = 75,
+	FO_Cblock = 86,
+	FO_Cell = 39,
+	FO_CharFmt = 33,
+	FO_Color = 35,
+	FO_Column = 82,
+	FO_CombinedFontDefn = 67,
+	FO_Command = 56,
+	FO_CondFmt = 34,
+	FO_CursorResource = 70,
+	FO_DBGroup = 22,
+	FO_DialogResource = 43,
+	FO_DitaMap = 96,
+	FO_DlgBox = 44,
+	FO_DlgButton = 45,
+	FO_DlgCheckBox = 47,
+	FO_DlgDate = 80,
+	FO_DlgEditBox = 50,
+	FO_DlgImage = 53,
+	FO_DlgLabel = 52,
+	FO_DlgListView = 72,
+	FO_DlgPopUp = 48,
+	FO_DlgRadioButton = 51,
+	FO_DlgScrollBar = 54,
+	FO_DlgScrollBox = 49,
+	FO_DlgTriBox = 46,
+	FO_Doc = 4,
+	FO_Element = 42,
+	FO_ElementDef = 41,
+	FO_Ellipse = 13,
+	FO_First_Internal = 83,
+	FO_Flow = 30,
+	FO_FmtChangeList = 58,
+	FO_FmtRule = 59,
+	FO_FmtRuleClause = 60,
+	FO_Fn = 25,
+	FO_Frame = 85,
+	FO_Graphic = 84,
+	FO_GraphicsFmt = 73,
+	FO_Group = 10,
+	FO_HiddenPage = 8,
+	FO_InlineComponent = 81,
+	FO_Inset = 20,
+	FO_Iterator = 78,
+	FO_KeyCatalog = 77,
+	FO_Last_Graphic = 22,
+	FO_Last_Internal = 97,
+	FO_Last_Page = 8,
+	FO_Line = 17,
+	FO_Marker = 24,
+	FO_MarkerType = 66,
+	FO_MasterPage = 6,
+	FO_Math = 21,
+	FO_MathML = 79,
+	FO_Menu = 55,
+	FO_MenuCell = 94,
+	FO_MenuItemSeparator = 57,
+	FO_Num = 83,
+	FO_Page = 83,
+	FO_Pgf = 31,
+	FO_PgfFmt = 32,
+	FO_Polygon = 16,
+	FO_Polyline = 15,
+	FO_Rectangle = 12,
+	FO_RefPage = 7,
+	FO_RoundRect = 14,
+	FO_Row = 38,
+	FO_Rubi = 68,
+	FO_RulingFmt = 40,
+	FO_Session = 0,
+	FO_StringResource = 1,
+	FO_SubCell = 90,
+	FO_SubCol = 65,
+	FO_SubCond = 87,
+	FO_SubDash = 89,
+	FO_SubPblock = 92,
+	FO_SubStyle = 88,
+	FO_SubTbl = 91,
+	FO_SubTextDef = 93,
+	FO_Tbl = 36,
+	FO_TblFmt = 37,
+	FO_TextFrame = 19,
+	FO_TextInset = 95,
+	FO_TextLine = 18,
+	FO_TiApiClient = 64,
+	FO_TiFlow = 61,
+	FO_TiText = 62,
+	FO_TiTextTable = 63,
+	FO_UFrame = 9,
+	FO_UnanchoredFrame = 9,
+	FO_Var = 28,
+	FO_VarFmt = 29,
+	FO_XLast_Graphic = 23,
+	FO_XRef = 26,
+	FO_XRefFmt = 27,
 
 	// --------------------------------------------------
 	// Frame Property names
 	// --------------------------------------------------
-	type FP_AFrameIsCropped = 878;
-	const FP_AFrameIsCropped: FP_AFrameIsCropped;
-	type FP_AFrameIsFloating = 876;
-	const FP_AFrameIsFloating: FP_AFrameIsFloating;
-	type FP_AcrobatBookmarkDisplayTags = 2251;
-	const FP_AcrobatBookmarkDisplayTags: FP_AcrobatBookmarkDisplayTags;
-	type FP_AcrobatLevel = 589;
-	const FP_AcrobatLevel: FP_AcrobatLevel;
-	type FP_ActiveAlert = 105;
-	const FP_ActiveAlert: FP_ActiveAlert;
-	type FP_ActiveBook = 52;
-	const FP_ActiveBook: FP_ActiveBook;
-	type FP_ActiveCMSSession = 2438;
-	const FP_ActiveCMSSession: FP_ActiveCMSSession;
-	type FP_ActiveDoc = 51;
-	const FP_ActiveDoc: FP_ActiveDoc;
-	type FP_ActiveView = 2422;
-	const FP_ActiveView: FP_ActiveView;
-	type FP_AddMarkerTypeToStandardMarkers = 150;
-	const FP_AddMarkerTypeToStandardMarkers: FP_AddMarkerTypeToStandardMarkers;
-	type FP_AdjHyphens = 559;
-	const FP_AdjHyphens: FP_AdjHyphens;
-	type FP_AlertClientName = 2291;
-	const FP_AlertClientName: FP_AlertClientName;
-	type FP_AlertClientUnique = 2290;
-	const FP_AlertClientUnique: FP_AlertClientUnique;
-	type FP_AlertString = 2292;
-	const FP_AlertString: FP_AlertString;
-	type FP_AlertType = 2293;
-	const FP_AlertType: FP_AlertType;
-	type FP_Alignment = 886;
-	const FP_Alignment: FP_Alignment;
-	type FP_AllowAsSpecialCase = 1649;
-	const FP_AllowAsSpecialCase: FP_AllowAsSpecialCase;
-	type FP_AllowBaseFamilyBoldedAndObliqued = 2283;
-	const FP_AllowBaseFamilyBoldedAndObliqued: FP_AllowBaseFamilyBoldedAndObliqued;
-	type FP_AllowNewFileURL = 2416;
-	const FP_AllowNewFileURL: FP_AllowNewFileURL;
-	type FP_AllowedDataRange = 1594;
-	const FP_AllowedDataRange: FP_AllowedDataRange;
-	type FP_AlsoInsert = 1591;
-	const FP_AlsoInsert: FP_AlsoInsert;
-	type FP_AlsoInserts = 1595;
-	const FP_AlsoInserts: FP_AlsoInserts;
-	type FP_AnchorType = 875;
-	const FP_AnchorType: FP_AnchorType;
-	type FP_Angle = 780;
-	const FP_Angle: FP_Angle;
-	type FP_ApplyEOPRules = 2030;
-	const FP_ApplyEOPRules: FP_ApplyEOPRules;
-	type FP_ApplyFormatRules = 93;
-	const FP_ApplyFormatRules: FP_ApplyFormatRules;
-	type FP_ArrowBaseAngle = 746;
-	const FP_ArrowBaseAngle: FP_ArrowBaseAngle;
-	type FP_ArrowLength = 748;
-	const FP_ArrowLength: FP_ArrowLength;
-	type FP_ArrowScaleFactor = 747;
-	const FP_ArrowScaleFactor: FP_ArrowScaleFactor;
-	type FP_ArrowScaleHead = 750;
-	const FP_ArrowScaleHead: FP_ArrowScaleHead;
-	type FP_ArrowTipAngle = 745;
-	const FP_ArrowTipAngle: FP_ArrowTipAngle;
-	type FP_ArrowType = 749;
-	const FP_ArrowType: FP_ArrowType;
-	type FP_AsianComposer = 3039;
-	const FP_AsianComposer: FP_AsianComposer;
-	type FP_AttrCondExprIsActive = 2818;
-	const FP_AttrCondExprIsActive: FP_AttrCondExprIsActive;
-	type FP_AttrCondExprStr = 2817;
-	const FP_AttrCondExprStr: FP_AttrCondExprStr;
-	type FP_AttrDisplay = 1635;
-	const FP_AttrDisplay: FP_AttrDisplay;
-	type FP_AttributeDefs = 1584;
-	const FP_AttributeDefs: FP_AttributeDefs;
-	type FP_AttributeValueInvalid = 1667;
-	const FP_AttributeValueInvalid: FP_AttributeValueInvalid;
-	type FP_AttributeValueRequired = 1666;
-	const FP_AttributeValueRequired: FP_AttributeValueRequired;
-	type FP_Attributes = 1634;
-	const FP_Attributes: FP_Attributes;
-	type FP_AttributesEx = 1670;
-	const FP_AttributesEx: FP_AttributesEx;
-	type FP_AutoBackup = 50;
-	const FP_AutoBackup: FP_AutoBackup;
-	type FP_AutoChangeBars = 238;
-	const FP_AutoChangeBars: FP_AutoChangeBars;
-	type FP_AutoNumChar = 549;
-	const FP_AutoNumChar: FP_AutoNumChar;
-	type FP_AutoNumString = 548;
-	const FP_AutoNumString: FP_AutoNumString;
-	type FP_AutoSave = 48;
-	const FP_AutoSave: FP_AutoSave;
-	type FP_AutoSaveSeconds = 49;
-	const FP_AutoSaveSeconds: FP_AutoSaveSeconds;
-	type FP_BIBGetAddressProc = 2299;
-	const FP_BIBGetAddressProc: FP_BIBGetAddressProc;
-	type FP_BannerText = 1599;
-	const FP_BannerText: FP_BannerText;
-	type FP_BannerTextDisplay = 1600;
-	const FP_BannerTextDisplay: FP_BannerTextDisplay;
-	type FP_BaseFamily = 2282;
-	const FP_BaseFamily: FP_BaseFamily;
-	type FP_BasePointX = 1116;
-	const FP_BasePointX: FP_BasePointX;
-	type FP_BasePointY = 1117;
-	const FP_BasePointY: FP_BasePointY;
-	type FP_BaselineOffset = 881;
-	const FP_BaselineOffset: FP_BaselineOffset;
-	type FP_BkColor = 992;
-	const FP_BkColor: FP_BkColor;
-	type FP_BkGndColor = 1502;
-	const FP_BkGndColor: FP_BkGndColor;
-	type FP_Black = 1460;
-	const FP_Black: FP_Black;
-	type FP_BlockLines = 561;
-	const FP_BlockLines: FP_BlockLines;
-	type FP_BookComponent = 1628;
-	const FP_BookComponent: FP_BookComponent;
-	type FP_BookComponentFileType = 2339;
-	const FP_BookComponentFileType: FP_BookComponentFileType;
-	type FP_BookComponentIsFolderWithTemplate = 2341;
-	const FP_BookComponentIsFolderWithTemplate: FP_BookComponentIsFolderWithTemplate;
-	type FP_BookComponentIsFolderWithoutTemplate = 2342;
-	const FP_BookComponentIsFolderWithoutTemplate: FP_BookComponentIsFolderWithoutTemplate;
-	type FP_BookComponentIsGeneratable = 520;
-	const FP_BookComponentIsGeneratable: FP_BookComponentIsGeneratable;
-	type FP_BookComponentMissing = 1662;
-	const FP_BookComponentMissing: FP_BookComponentMissing;
-	type FP_BookComponentParent = 2325;
-	const FP_BookComponentParent: FP_BookComponentParent;
-	type FP_BookComponentSequenceLevel = 2353;
-	const FP_BookComponentSequenceLevel: FP_BookComponentSequenceLevel;
-	type FP_BookComponentTemplatePath = 2327;
-	const FP_BookComponentTemplatePath: FP_BookComponentTemplatePath;
-	type FP_BookComponentTitle = 2328;
-	const FP_BookComponentTitle: FP_BookComponentTitle;
-	type FP_BookComponentType = 531;
-	const FP_BookComponentType: FP_BookComponentType;
-	type FP_BookDontUpdateReferences = 494;
-	const FP_BookDontUpdateReferences: FP_BookDontUpdateReferences;
-	type FP_BookIsModified = 492;
-	const FP_BookIsModified: FP_BookIsModified;
-	type FP_BookIsSelected = 499;
-	const FP_BookIsSelected: FP_BookIsSelected;
-	type FP_BookIsViewOnly = 497;
-	const FP_BookIsViewOnly: FP_BookIsViewOnly;
-	type FP_BookParent = 515;
-	const FP_BookParent: FP_BookParent;
-	type FP_BooleanConditionExpression = 2321;
-	const FP_BooleanConditionExpression: FP_BooleanConditionExpression;
-	type FP_BooleanConditionExpressionTag = 995;
-	const FP_BooleanConditionExpressionTag: FP_BooleanConditionExpressionTag;
-	type FP_BooleanConditionState = 2322;
-	const FP_BooleanConditionState: FP_BooleanConditionState;
-	type FP_BorderWidth = 740;
-	const FP_BorderWidth: FP_BorderWidth;
-	type FP_BottomMargin = 231;
-	const FP_BottomMargin: FP_BottomMargin;
-	type FP_BottomRowSelection = 1342;
-	const FP_BottomRowSelection: FP_BottomRowSelection;
-	type FP_BottomSepAtIndent = 2010;
-	const FP_BottomSepAtIndent: FP_BottomSepAtIndent;
-	type FP_BottomSeparator = 569;
-	const FP_BottomSeparator: FP_BottomSeparator;
-	type FP_Box_BG_Color = 1722;
-	const FP_Box_BG_Color: FP_Box_BG_Color;
-	type FP_CMSItemProperty_ItemCheckedOutByCurrentUser = 33;
-	const FP_CMSItemProperty_ItemCheckedOutByCurrentUser: FP_CMSItemProperty_ItemCheckedOutByCurrentUser;
-	type FP_CMSItemProperty_ItemFileType = 34;
-	const FP_CMSItemProperty_ItemFileType: FP_CMSItemProperty_ItemFileType;
-	type FP_CMSItemProperty_ItemIsCheckedOut = 35;
-	const FP_CMSItemProperty_ItemIsCheckedOut: FP_CMSItemProperty_ItemIsCheckedOut;
-	type FP_CMSItemProperty_ItemIsContainer = 36;
-	const FP_CMSItemProperty_ItemIsContainer: FP_CMSItemProperty_ItemIsContainer;
-	type FP_CMSItemProperty_ItemLocalPath = 37;
-	const FP_CMSItemProperty_ItemLocalPath: FP_CMSItemProperty_ItemLocalPath;
-	type FP_CMSItemProperty_ItemName = 38;
-	const FP_CMSItemProperty_ItemName: FP_CMSItemProperty_ItemName;
-	type FP_CMSItemProperty_ItemServerPath = 39;
-	const FP_CMSItemProperty_ItemServerPath: FP_CMSItemProperty_ItemServerPath;
-	type FP_CMSItemProperty_ItemType = 40;
-	const FP_CMSItemProperty_ItemType: FP_CMSItemProperty_ItemType;
-	type FP_CMSItemProperty_ItemVersion = 41;
-	const FP_CMSItemProperty_ItemVersion: FP_CMSItemProperty_ItemVersion;
-	type FP_CMSItemProperty_Max = 42;
-	const FP_CMSItemProperty_Max: FP_CMSItemProperty_Max;
-	type FP_CMSItemProperty_Min = 43;
-	const FP_CMSItemProperty_Min: FP_CMSItemProperty_Min;
-	type FP_CMSObjectLocalPath = 2392;
-	const FP_CMSObjectLocalPath: FP_CMSObjectLocalPath;
-	type FP_CMSObjectServerURL = 2391;
-	const FP_CMSObjectServerURL: FP_CMSObjectServerURL;
-	type FP_CTFontContext = 72;
-	const FP_CTFontContext: FP_CTFontContext;
-	type FP_CanHaveCheckMark = 1931;
-	const FP_CanHaveCheckMark: FP_CanHaveCheckMark;
-	type FP_Capitalization = 619;
-	const FP_Capitalization: FP_Capitalization;
-	type FP_CellAboveInCol = 1203;
-	const FP_CellAboveInCol: FP_CellAboveInCol;
-	type FP_CellAngle = 1209;
-	const FP_CellAngle: FP_CellAngle;
-	type FP_CellBelowInCol = 1204;
-	const FP_CellBelowInCol: FP_CellBelowInCol;
-	type FP_CellBelowInTbl = 1200;
-	const FP_CellBelowInTbl: FP_CellBelowInTbl;
-	type FP_CellBottomMargin = 582;
-	const FP_CellBottomMargin: FP_CellBottomMargin;
-	type FP_CellBottomMarginChange = 2023;
-	const FP_CellBottomMarginChange: FP_CellBottomMarginChange;
-	type FP_CellBottomMarginFixed = 2016;
-	const FP_CellBottomMarginFixed: FP_CellBottomMarginFixed;
-	type FP_CellColNum = 1205;
-	const FP_CellColNum: FP_CellColNum;
-	type FP_CellColumn = 2435;
-	const FP_CellColumn: FP_CellColumn;
-	type FP_CellDefaultBottomRuling = 1215;
-	const FP_CellDefaultBottomRuling: FP_CellDefaultBottomRuling;
-	type FP_CellDefaultLeftRuling = 1216;
-	const FP_CellDefaultLeftRuling: FP_CellDefaultLeftRuling;
-	type FP_CellDefaultRightRuling = 1217;
-	const FP_CellDefaultRightRuling: FP_CellDefaultRightRuling;
-	type FP_CellDefaultTopRuling = 1214;
-	const FP_CellDefaultTopRuling: FP_CellDefaultTopRuling;
-	type FP_CellIsShown = 1218;
-	const FP_CellIsShown: FP_CellIsShown;
-	type FP_CellIsStraddled = 1206;
-	const FP_CellIsStraddled: FP_CellIsStraddled;
-	type FP_CellLeftMargin = 583;
-	const FP_CellLeftMargin: FP_CellLeftMargin;
-	type FP_CellLeftMarginChange = 2024;
-	const FP_CellLeftMarginChange: FP_CellLeftMarginChange;
-	type FP_CellLeftMarginFixed = 2017;
-	const FP_CellLeftMarginFixed: FP_CellLeftMarginFixed;
-	type FP_CellMarginSpacingDelta = 990;
-	const FP_CellMarginSpacingDelta: FP_CellMarginSpacingDelta;
-	type FP_CellMarginsFixed = 586;
-	const FP_CellMarginsFixed: FP_CellMarginsFixed;
-	type FP_CellNumColsStraddled = 1208;
-	const FP_CellNumColsStraddled: FP_CellNumColsStraddled;
-	type FP_CellNumRowsStraddled = 1207;
-	const FP_CellNumRowsStraddled: FP_CellNumRowsStraddled;
-	type FP_CellOverrideBottomRuling = 1211;
-	const FP_CellOverrideBottomRuling: FP_CellOverrideBottomRuling;
-	type FP_CellOverrideFill = 1195;
-	const FP_CellOverrideFill: FP_CellOverrideFill;
-	type FP_CellOverrideLeftRuling = 1212;
-	const FP_CellOverrideLeftRuling: FP_CellOverrideLeftRuling;
-	type FP_CellOverrideRightRuling = 1213;
-	const FP_CellOverrideRightRuling: FP_CellOverrideRightRuling;
-	type FP_CellOverrideShading = 1194;
-	const FP_CellOverrideShading: FP_CellOverrideShading;
-	type FP_CellOverrideTopRuling = 1210;
-	const FP_CellOverrideTopRuling: FP_CellOverrideTopRuling;
-	type FP_CellRightMargin = 584;
-	const FP_CellRightMargin: FP_CellRightMargin;
-	type FP_CellRightMarginChange = 2025;
-	const FP_CellRightMarginChange: FP_CellRightMarginChange;
-	type FP_CellRightMarginFixed = 2018;
-	const FP_CellRightMarginFixed: FP_CellRightMarginFixed;
-	type FP_CellRow = 1198;
-	const FP_CellRow: FP_CellRow;
-	type FP_CellTopMargin = 581;
-	const FP_CellTopMargin: FP_CellTopMargin;
-	type FP_CellTopMarginChange = 2022;
-	const FP_CellTopMarginChange: FP_CellTopMarginChange;
-	type FP_CellTopMarginFixed = 2015;
-	const FP_CellTopMarginFixed: FP_CellTopMarginFixed;
-	type FP_CellUseOverrideBRuling = 1193;
-	const FP_CellUseOverrideBRuling: FP_CellUseOverrideBRuling;
-	type FP_CellUseOverrideFill = 1196;
-	const FP_CellUseOverrideFill: FP_CellUseOverrideFill;
-	type FP_CellUseOverrideLRuling = 1190;
-	const FP_CellUseOverrideLRuling: FP_CellUseOverrideLRuling;
-	type FP_CellUseOverrideRRuling = 1191;
-	const FP_CellUseOverrideRRuling: FP_CellUseOverrideRRuling;
-	type FP_CellUseOverrideShading = 1197;
-	const FP_CellUseOverrideShading: FP_CellUseOverrideShading;
-	type FP_CellUseOverrideTRuling = 1192;
-	const FP_CellUseOverrideTRuling: FP_CellUseOverrideTRuling;
-	type FP_CellVAlignment = 585;
-	const FP_CellVAlignment: FP_CellVAlignment;
-	type FP_ChangeBar = 611;
-	const FP_ChangeBar: FP_ChangeBar;
-	type FP_ChangeBarColor = 262;
-	const FP_ChangeBarColor: FP_ChangeBarColor;
-	type FP_ChangeBarDistance = 259;
-	const FP_ChangeBarDistance: FP_ChangeBarDistance;
-	type FP_ChangeBarPosition = 260;
-	const FP_ChangeBarPosition: FP_ChangeBarPosition;
-	type FP_ChangeBarThickness = 261;
-	const FP_ChangeBarThickness: FP_ChangeBarThickness;
-	type FP_ChapNumComputeMethod = 215;
-	const FP_ChapNumComputeMethod: FP_ChapNumComputeMethod;
-	type FP_ChapterNumStyle = 217;
-	const FP_ChapterNumStyle: FP_ChapterNumStyle;
-	type FP_ChapterNumText = 218;
-	const FP_ChapterNumText: FP_ChapterNumText;
-	type FP_ChapterNumber = 216;
-	const FP_ChapterNumber: FP_ChapterNumber;
-	type FP_CharTag = 602;
-	const FP_CharTag: FP_CharTag;
-	type FP_CharacterReferencesOnXMLExport = 2887;
-	const FP_CharacterReferencesOnXMLExport: FP_CharacterReferencesOnXMLExport;
-	type FP_CheckMarkIsOn = 1932;
-	const FP_CheckMarkIsOn: FP_CheckMarkIsOn;
-	type FP_ColGap = 234;
-	const FP_ColGap: FP_ColGap;
-	type FP_ColGapWidth = 985;
-	const FP_ColGapWidth: FP_ColGapWidth;
-	type FP_Color = 751;
-	const FP_Color: FP_Color;
-	type FP_ColorOverprint = 1468;
-	const FP_ColorOverprint: FP_ColorOverprint;
-	type FP_ColorPrintCtl = 1462;
-	const FP_ColorPrintCtl: FP_ColorPrintCtl;
-	type FP_ColorTintPercent = 1466;
-	const FP_ColorTintPercent: FP_ColorTintPercent;
-	type FP_ColorViewCtl = 1461;
-	const FP_ColorViewCtl: FP_ColorViewCtl;
-	type FP_ColumnIsShown = 2434;
-	const FP_ColumnIsShown: FP_ColumnIsShown;
-	type FP_ColumnNum = 2436;
-	const FP_ColumnNum: FP_ColumnNum;
-	type FP_ColumnTbl = 2433;
-	const FP_ColumnTbl: FP_ColumnTbl;
-	type FP_ColumnsAreBalanced = 1175;
-	const FP_ColumnsAreBalanced: FP_ColumnsAreBalanced;
-	type FP_CombinedFontFamily = 2287;
-	const FP_CombinedFontFamily: FP_CombinedFontFamily;
-	type FP_CommandNum = 1928;
-	const FP_CommandNum: FP_CommandNum;
-	type FP_Comment = 1581;
-	const FP_Comment: FP_Comment;
-	type FP_ComponentDisplayText = 532;
-	const FP_ComponentDisplayText: FP_ComponentDisplayText;
-	type FP_ComponentElement = 1551;
-	const FP_ComponentElement: FP_ComponentElement;
-	type FP_ComponentIsDitaMap = 2331;
-	const FP_ComponentIsDitaMap: FP_ComponentIsDitaMap;
-	type FP_ComponentIsSelected = 529;
-	const FP_ComponentIsSelected: FP_ComponentIsSelected;
-	type FP_ComponentType = 2329;
-	const FP_ComponentType: FP_ComponentType;
-	type FP_CondFmtIsShown = 1139;
-	const FP_CondFmtIsShown: FP_CondFmtIsShown;
-	type FP_ContentHeight = 2219;
-	const FP_ContentHeight: FP_ContentHeight;
-	type FP_ContentIsLooselyValid = 1652;
-	const FP_ContentIsLooselyValid: FP_ContentIsLooselyValid;
-	type FP_ContentIsStrictlyValid = 1651;
-	const FP_ContentIsStrictlyValid: FP_ContentIsStrictlyValid;
-	type FP_ContentMustBeEmpty = 1665;
-	const FP_ContentMustBeEmpty: FP_ContentMustBeEmpty;
-	type FP_ContentNeededAtBegin = 1653;
-	const FP_ContentNeededAtBegin: FP_ContentNeededAtBegin;
-	type FP_ContentNeededAtEnd = 1654;
-	const FP_ContentNeededAtEnd: FP_ContentNeededAtEnd;
-	type FP_ContextForCSS = 2162;
-	const FP_ContextForCSS: FP_ContextForCSS;
-	type FP_ContextLabel = 2157;
-	const FP_ContextLabel: FP_ContextLabel;
-	type FP_CorrespondingXmlPath = 1158;
-	const FP_CorrespondingXmlPath: FP_CorrespondingXmlPath;
-	type FP_CountElements = 2101;
-	const FP_CountElements: FP_CountElements;
-	type FP_CurrentDoc = 2401;
-	const FP_CurrentDoc: FP_CurrentDoc;
-	type FP_CurrentInset = 240;
-	const FP_CurrentInset: FP_CurrentInset;
-	type FP_CurrentMenuSet = 99;
-	const FP_CurrentMenuSet: FP_CurrentMenuSet;
-	type FP_CurrentPage = 236;
-	const FP_CurrentPage: FP_CurrentPage;
-	type FP_CursorData = 2294;
-	const FP_CursorData: FP_CursorData;
-	type FP_CursorTypes = 2295;
-	const FP_CursorTypes: FP_CursorTypes;
-	type FP_CustomDelimiter = 2420;
-	const FP_CustomDelimiter: FP_CustomDelimiter;
-	type FP_CustomDocPath = 2885;
-	const FP_CustomDocPath: FP_CustomDocPath;
-	type FP_CustomElementList = 1496;
-	const FP_CustomElementList: FP_CustomElementList;
-	type FP_Cyan = 1457;
-	const FP_Cyan: FP_Cyan;
-	type FP_DTheta = 830;
-	const FP_DTheta: FP_DTheta;
-	type FP_Dash = 752;
-	const FP_Dash: FP_Dash;
-	type FP_Day = 1724;
-	const FP_Day: FP_Day;
-	type FP_DbAttributes = 1817;
-	const FP_DbAttributes: FP_DbAttributes;
-	type FP_DbCancelButton = 1811;
-	const FP_DbCancelButton: FP_DbCancelButton;
-	type FP_DbCheckBoxState = 1807;
-	const FP_DbCheckBoxState: FP_DbCheckBoxState;
-	type FP_DbDefaultButton = 1809;
-	const FP_DbDefaultButton: FP_DbDefaultButton;
-	type FP_DbEditable = 1818;
-	const FP_DbEditable: FP_DbEditable;
-	type FP_DbFbCurrentDir = 1814;
-	const FP_DbFbCurrentDir: FP_DbFbCurrentDir;
-	type FP_DbFbScrollBox = 1813;
-	const FP_DbFbScrollBox: FP_DbFbScrollBox;
-	type FP_DbFbStatus = 1815;
-	const FP_DbFbStatus: FP_DbFbStatus;
-	type FP_DbFbTextBox = 1812;
-	const FP_DbFbTextBox: FP_DbFbTextBox;
-	type FP_DbFirstFocus = 1808;
-	const FP_DbFirstFocus: FP_DbFirstFocus;
-	type FP_DbIdentifier = 1802;
-	const FP_DbIdentifier: FP_DbIdentifier;
-	type FP_DbItemNum = 1800;
-	const FP_DbItemNum: FP_DbItemNum;
-	type FP_DbNoHelp = 1819;
-	const FP_DbNoHelp: FP_DbNoHelp;
-	type FP_DbOKButton = 1810;
-	const FP_DbOKButton: FP_DbOKButton;
-	type FP_DbRadioButtonGroup = 1806;
-	const FP_DbRadioButtonGroup: FP_DbRadioButtonGroup;
-	type FP_DbSbxNumLines = 1805;
-	const FP_DbSbxNumLines: FP_DbSbxNumLines;
-	type FP_DbStuffItem = 1804;
-	const FP_DbStuffItem: FP_DbStuffItem;
-	type FP_DbTitleLabel = 1816;
-	const FP_DbTitleLabel: FP_DbTitleLabel;
-	type FP_DbType = 1801;
-	const FP_DbType: FP_DbType;
-	type FP_DbVarLabelWidth = 1803;
-	const FP_DbVarLabelWidth: FP_DbVarLabelWidth;
-	type FP_DefaultExclusions = 1487;
-	const FP_DefaultExclusions: FP_DefaultExclusions;
-	type FP_DefaultFontAngle = 71;
-	const FP_DefaultFontAngle: FP_DefaultFontAngle;
-	type FP_DefaultFontFamily = 68;
-	const FP_DefaultFontFamily: FP_DefaultFontFamily;
-	type FP_DefaultFontVariation = 69;
-	const FP_DefaultFontVariation: FP_DefaultFontVariation;
-	type FP_DefaultFontWeight = 70;
-	const FP_DefaultFontWeight: FP_DefaultFontWeight;
-	type FP_DefaultInclusions = 1486;
-	const FP_DefaultInclusions: FP_DefaultInclusions;
-	type FP_DefaultKeyCatalog = 2871;
-	const FP_DefaultKeyCatalog: FP_DefaultKeyCatalog;
-	type FP_DefaultVectorFormatForXMLExport = 2874;
-	const FP_DefaultVectorFormatForXMLExport: FP_DefaultVectorFormatForXMLExport;
-	type FP_Description = 1947;
-	const FP_Description: FP_Description;
-	type FP_DescriptiveTag = 1596;
-	const FP_DescriptiveTag: FP_DescriptiveTag;
-	type FP_DesktopHeight = 791;
-	const FP_DesktopHeight: FP_DesktopHeight;
-	type FP_DesktopWidth = 790;
-	const FP_DesktopWidth: FP_DesktopWidth;
-	type FP_DesktopX = 788;
-	const FP_DesktopX: FP_DesktopX;
-	type FP_DesktopY = 789;
-	const FP_DesktopY: FP_DesktopY;
-	type FP_DialogEncodingName = 598;
-	const FP_DialogEncodingName: FP_DialogEncodingName;
-	type FP_Dictionary = 203;
-	const FP_Dictionary: FP_Dictionary;
-	type FP_DirectOLESupportInXml = 2881;
-	const FP_DirectOLESupportInXml: FP_DirectOLESupportInXml;
-	type FP_Direction = 3036;
-	const FP_Direction: FP_Direction;
-	type FP_DisableAutofitAfterZoom = 67;
-	const FP_DisableAutofitAfterZoom: FP_DisableAutofitAfterZoom;
-	type FP_DisplayName = 78;
-	const FP_DisplayName: FP_DisplayName;
-	type FP_Displaying = 92;
-	const FP_Displaying: FP_Displaying;
-	type FP_DitaMaxRefLevels = 2396;
-	const FP_DitaMaxRefLevels: FP_DitaMaxRefLevels;
-	type FP_DitaMode = 1504;
-	const FP_DitaMode: FP_DitaMode;
-	type FP_DoNotExportInvalidXML = 2418;
-	const FP_DoNotExportInvalidXML: FP_DoNotExportInvalidXML;
-	type FP_DoNotGenerateErrorLog = 819;
-	const FP_DoNotGenerateErrorLog: FP_DoNotGenerateErrorLog;
-	type FP_DoPostXSLTValidationOnExport = 2417;
-	const FP_DoPostXSLTValidationOnExport: FP_DoPostXSLTValidationOnExport;
-	type FP_DocAcrobatColumnArticleThreads = 2256;
-	const FP_DocAcrobatColumnArticleThreads: FP_DocAcrobatColumnArticleThreads;
-	type FP_DocAcrobatDefaultsChanged = 2252;
-	const FP_DocAcrobatDefaultsChanged: FP_DocAcrobatDefaultsChanged;
-	type FP_DocAcrobatElementList = 2254;
-	const FP_DocAcrobatElementList: FP_DocAcrobatElementList;
-	type FP_DocAcrobatElements = 2253;
-	const FP_DocAcrobatElements: FP_DocAcrobatElements;
-	type FP_DocAcrobatNoArticleThreads = 2255;
-	const FP_DocAcrobatNoArticleThreads: FP_DocAcrobatNoArticleThreads;
-	type FP_DocCMSType = 2393;
-	const FP_DocCMSType: FP_DocCMSType;
-	type FP_DocFluidFlow = 147;
-	const FP_DocFluidFlow: FP_DocFluidFlow;
-	type FP_DocFonts = 2380;
-	const FP_DocFonts: FP_DocFonts;
-	type FP_DocInTempState = 2900;
-	const FP_DocInTempState: FP_DocInTempState;
-	type FP_DocIsDoubleSided = 226;
-	const FP_DocIsDoubleSided: FP_DocIsDoubleSided;
-	type FP_DocIsHelp = 132;
-	const FP_DocIsHelp: FP_DocIsHelp;
-	type FP_DocIsInternal = 2372;
-	const FP_DocIsInternal: FP_DocIsInternal;
-	type FP_DocIsModified = 131;
-	const FP_DocIsModified: FP_DocIsModified;
-	type FP_DocIsSave = 833;
-	const FP_DocIsSave: FP_DocIsSave;
-	type FP_DocIsStructuredDummy = 2882;
-	const FP_DocIsStructuredDummy: FP_DocIsStructuredDummy;
-	type FP_DocIsUIOpen = 832;
-	const FP_DocIsUIOpen: FP_DocIsUIOpen;
-	type FP_DocIsViewOnly = 133;
-	const FP_DocIsViewOnly: FP_DocIsViewOnly;
-	type FP_DocIsViewOnlyWinPalette = 134;
-	const FP_DocIsViewOnlyWinPalette: FP_DocIsViewOnlyWinPalette;
-	type FP_DocOpenClientEncounteredErrors = 820;
-	const FP_DocOpenClientEncounteredErrors: FP_DocOpenClientEncounteredErrors;
-	type FP_DocOpenType = 130;
-	const FP_DocOpenType: FP_DocOpenType;
-	type FP_DocSaveFormat = 2415;
-	const FP_DocSaveFormat: FP_DocSaveFormat;
-	type FP_DocSaveType = 145;
-	const FP_DocSaveType: FP_DocSaveType;
-	type FP_DocSequenceLevel = 2356;
-	const FP_DocSequenceLevel: FP_DocSequenceLevel;
-	type FP_DockDialog = 2344;
-	const FP_DockDialog: FP_DockDialog;
-	type FP_DontLoadStartupClients = 2894;
-	const FP_DontLoadStartupClients: FP_DontLoadStartupClients;
-	type FP_DontShowWelcomeScreen = 2408;
-	const FP_DontShowWelcomeScreen: FP_DontShowWelcomeScreen;
-	type FP_DontUpdateTextInsets = 160;
-	const FP_DontUpdateTextInsets: FP_DontUpdateTextInsets;
-	type FP_DontUpdateXRefs = 159;
-	const FP_DontUpdateXRefs: FP_DontUpdateXRefs;
-	type FP_DoubleClick = 1706;
-	const FP_DoubleClick: FP_DoubleClick;
-	type FP_DownloadFonts = 496;
-	const FP_DownloadFonts: FP_DownloadFonts;
-	type FP_EddUpdateOn = 829;
-	const FP_EddUpdateOn: FP_EddUpdateOn;
-	type FP_ElemPrefixSuffix = 2158;
-	const FP_ElemPrefixSuffix: FP_ElemPrefixSuffix;
-	type FP_Element = 2170;
-	const FP_Element: FP_Element;
-	type FP_ElementBoundaryDisplay = 1484;
-	const FP_ElementBoundaryDisplay: FP_ElementBoundaryDisplay;
-	type FP_ElementCatalog = 1488;
-	const FP_ElementCatalog: FP_ElementCatalog;
-	type FP_ElementCatalogDisplay = 1485;
-	const FP_ElementCatalogDisplay: FP_ElementCatalogDisplay;
-	type FP_ElementDataType = 1593;
-	const FP_ElementDataType: FP_ElementDataType;
-	type FP_ElementDef = 1621;
-	const FP_ElementDef: FP_ElementDef;
-	type FP_ElementDefType = 1579;
-	const FP_ElementDefType: FP_ElementDefType;
-	type FP_ElementDescription = 1597;
-	const FP_ElementDescription: FP_ElementDescription;
-	type FP_ElementInCatalog = 1573;
-	const FP_ElementInCatalog: FP_ElementInCatalog;
-	type FP_ElementIsCollapsed = 1627;
-	const FP_ElementIsCollapsed: FP_ElementIsCollapsed;
-	type FP_ElementIsExcludedInContext = 1655;
-	const FP_ElementIsExcludedInContext: FP_ElementIsExcludedInContext;
-	type FP_ElementIsInvalidInParent = 1656;
-	const FP_ElementIsInvalidInParent: FP_ElementIsInvalidInParent;
-	type FP_ElementIsInvalidInPosition = 1657;
-	const FP_ElementIsInvalidInPosition: FP_ElementIsInvalidInPosition;
-	type FP_ElementIsTopicGroup = 2338;
-	const FP_ElementIsTopicGroup: FP_ElementIsTopicGroup;
-	type FP_ElementIsTopicHead = 2337;
-	const FP_ElementIsTopicHead: FP_ElementIsTopicHead;
-	type FP_ElementIsTopicRef = 2336;
-	const FP_ElementIsTopicRef: FP_ElementIsTopicRef;
-	type FP_ElementIsUndefined = 1650;
-	const FP_ElementIsUndefined: FP_ElementIsUndefined;
-	type FP_ElementMarkedForNamedDestination = 1669;
-	const FP_ElementMarkedForNamedDestination: FP_ElementMarkedForNamedDestination;
-	type FP_ElementPgfFormat = 1586;
-	const FP_ElementPgfFormat: FP_ElementPgfFormat;
-	type FP_ElementSelection = 1494;
-	const FP_ElementSelection: FP_ElementSelection;
-	type FP_ElementType = 1636;
-	const FP_ElementType: FP_ElementType;
-	type FP_ElementTypeMismatch = 1658;
-	const FP_ElementTypeMismatch: FP_ElementTypeMismatch;
-	type FP_EnableAutoSpellCheck = 2413;
-	const FP_EnableAutoSpellCheck: FP_EnableAutoSpellCheck;
-	type FP_EnabledWhen = 1935;
-	const FP_EnabledWhen: FP_EnabledWhen;
-	type FP_EqnIntegralSizeLarge = 348;
-	const FP_EqnIntegralSizeLarge: FP_EqnIntegralSizeLarge;
-	type FP_EqnIntegralSizeMed = 347;
-	const FP_EqnIntegralSizeMed: FP_EqnIntegralSizeMed;
-	type FP_EqnIntegralSizeSmall = 346;
-	const FP_EqnIntegralSizeSmall: FP_EqnIntegralSizeSmall;
-	type FP_EqnLevel1SizeLarge = 354;
-	const FP_EqnLevel1SizeLarge: FP_EqnLevel1SizeLarge;
-	type FP_EqnLevel1SizeMed = 353;
-	const FP_EqnLevel1SizeMed: FP_EqnLevel1SizeMed;
-	type FP_EqnLevel1SizeSmall = 352;
-	const FP_EqnLevel1SizeSmall: FP_EqnLevel1SizeSmall;
-	type FP_EqnLevel2SizeLarge = 357;
-	const FP_EqnLevel2SizeLarge: FP_EqnLevel2SizeLarge;
-	type FP_EqnLevel2SizeMed = 356;
-	const FP_EqnLevel2SizeMed: FP_EqnLevel2SizeMed;
-	type FP_EqnLevel2SizeSmall = 355;
-	const FP_EqnLevel2SizeSmall: FP_EqnLevel2SizeSmall;
-	type FP_EqnLevel3SizeLarge = 360;
-	const FP_EqnLevel3SizeLarge: FP_EqnLevel3SizeLarge;
-	type FP_EqnLevel3SizeMed = 359;
-	const FP_EqnLevel3SizeMed: FP_EqnLevel3SizeMed;
-	type FP_EqnLevel3SizeSmall = 358;
-	const FP_EqnLevel3SizeSmall: FP_EqnLevel3SizeSmall;
-	type FP_EqnSigmaSizeLarge = 351;
-	const FP_EqnSigmaSizeLarge: FP_EqnSigmaSizeLarge;
-	type FP_EqnSigmaSizeMed = 350;
-	const FP_EqnSigmaSizeMed: FP_EqnSigmaSizeMed;
-	type FP_EqnSigmaSizeSmall = 349;
-	const FP_EqnSigmaSizeSmall: FP_EqnSigmaSizeSmall;
-	type FP_ErrorInBookComponent = 1663;
-	const FP_ErrorInBookComponent: FP_ErrorInBookComponent;
-	type FP_ExcludeBookComponent = 2326;
-	const FP_ExcludeBookComponent: FP_ExcludeBookComponent;
-	type FP_Exclusions = 1576;
-	const FP_Exclusions: FP_Exclusions;
-	type FP_ExpandOMaticParent = 1934;
-	const FP_ExpandOMaticParent: FP_ExpandOMaticParent;
-	type FP_ExportFilters = 2289;
-	const FP_ExportFilters: FP_ExportFilters;
-	type FP_ExtractElementTags = 1552;
-	const FP_ExtractElementTags: FP_ExtractElementTags;
-	type FP_ExtractTags = 516;
-	const FP_ExtractTags: FP_ExtractTags;
-	type FP_FMConsoleString = 826;
-	const FP_FMConsoleString: FP_FMConsoleString;
-	type FP_FMInterfaceEncodingName = 599;
-	const FP_FMInterfaceEncodingName: FP_FMInterfaceEncodingName;
-	type FP_FM_BinDir = 88;
-	const FP_FM_BinDir: FP_FM_BinDir;
-	type FP_FM_CurrentDir = 90;
-	const FP_FM_CurrentDir: FP_FM_CurrentDir;
-	type FP_FM_HelpDir = 103;
-	const FP_FM_HelpDir: FP_FM_HelpDir;
-	type FP_FM_HomeDir = 87;
-	const FP_FM_HomeDir: FP_FM_HomeDir;
-	type FP_FM_InitDir = 89;
-	const FP_FM_InitDir: FP_FM_InitDir;
-	type FP_FM_SgmlDir = 100;
-	const FP_FM_SgmlDir: FP_FM_SgmlDir;
-	type FP_FM_StructureDir = 2031;
-	const FP_FM_StructureDir: FP_FM_StructureDir;
-	type FP_FM_XmlDir = 2032;
-	const FP_FM_XmlDir: FP_FM_XmlDir;
-	type FP_FamilyName = 1464;
-	const FP_FamilyName: FP_FamilyName;
-	type FP_Fcode = 1936;
-	const FP_Fcode: FP_Fcode;
-	type FP_Fcodes = 1937;
-	const FP_Fcodes: FP_Fcodes;
-	type FP_FileExtensionOverride = 2813;
-	const FP_FileExtensionOverride: FP_FileExtensionOverride;
-	type FP_FileInfoPacket = 2262;
-	const FP_FileInfoPacket: FP_FileInfoPacket;
-	type FP_FileOpenInProgress = 828;
-	const FP_FileOpenInProgress: FP_FileOpenInProgress;
-	type FP_Fill = 741;
-	const FP_Fill: FP_Fill;
-	type FP_FirstAFrame = 974;
-	const FP_FirstAFrame: FP_FirstAFrame;
-	type FP_FirstAttrCondExprInDoc = 2815;
-	const FP_FirstAttrCondExprInDoc: FP_FirstAttrCondExprInDoc;
-	type FP_FirstBodyPageInDoc = 415;
-	const FP_FirstBodyPageInDoc: FP_FirstBodyPageInDoc;
-	type FP_FirstCell = 978;
-	const FP_FirstCell: FP_FirstCell;
-	type FP_FirstCellInRow = 1247;
-	const FP_FirstCellInRow: FP_FirstCellInRow;
-	type FP_FirstCharFmtInDoc = 123;
-	const FP_FirstCharFmtInDoc: FP_FirstCharFmtInDoc;
-	type FP_FirstChildElement = 1623;
-	const FP_FirstChildElement: FP_FirstChildElement;
-	type FP_FirstColorInDoc = 127;
-	const FP_FirstColorInDoc: FP_FirstColorInDoc;
-	type FP_FirstColumnInSelection = 2427;
-	const FP_FirstColumnInSelection: FP_FirstColumnInSelection;
-	type FP_FirstColumnInTbl = 2423;
-	const FP_FirstColumnInTbl: FP_FirstColumnInTbl;
-	type FP_FirstCombinedFontDefnInDoc = 2280;
-	const FP_FirstCombinedFontDefnInDoc: FP_FirstCombinedFontDefnInDoc;
-	type FP_FirstCommandInSession = 98;
-	const FP_FirstCommandInSession: FP_FirstCommandInSession;
-	type FP_FirstComponentInBook = 491;
-	const FP_FirstComponentInBook: FP_FirstComponentInBook;
-	type FP_FirstComponentInBookComponent = 2324;
-	const FP_FirstComponentInBookComponent: FP_FirstComponentInBookComponent;
-	type FP_FirstCondFmtInDoc = 124;
-	const FP_FirstCondFmtInDoc: FP_FirstCondFmtInDoc;
-	type FP_FirstDITAConrefElementInDoc = 2861;
-	const FP_FirstDITAConrefElementInDoc: FP_FirstDITAConrefElementInDoc;
-	type FP_FirstDITALinkElementInDoc = 2863;
-	const FP_FirstDITALinkElementInDoc: FP_FirstDITALinkElementInDoc;
-	type FP_FirstDITATopicrefElementInDoc = 2864;
-	const FP_FirstDITATopicrefElementInDoc: FP_FirstDITATopicrefElementInDoc;
-	type FP_FirstDITATopicsetrefElementInDoc = 2865;
-	const FP_FirstDITATopicsetrefElementInDoc: FP_FirstDITATopicsetrefElementInDoc;
-	type FP_FirstDITAXrefElementInDoc = 2862;
-	const FP_FirstDITAXrefElementInDoc: FP_FirstDITAXrefElementInDoc;
-	type FP_FirstElementDefInDoc = 1483;
-	const FP_FirstElementDefInDoc: FP_FirstElementDefInDoc;
-	type FP_FirstFlowInDoc = 121;
-	const FP_FirstFlowInDoc: FP_FirstFlowInDoc;
-	type FP_FirstFmtChangeListInDoc = 1489;
-	const FP_FirstFmtChangeListInDoc: FP_FirstFmtChangeListInDoc;
-	type FP_FirstFn = 976;
-	const FP_FirstFn: FP_FirstFn;
-	type FP_FirstFnInDoc = 119;
-	const FP_FirstFnInDoc: FP_FirstFnInDoc;
-	type FP_FirstGraphicInDoc = 112;
-	const FP_FirstGraphicInDoc: FP_FirstGraphicInDoc;
-	type FP_FirstGraphicInFrame = 882;
-	const FP_FirstGraphicInFrame: FP_FirstGraphicInFrame;
-	type FP_FirstGraphicInGroup = 807;
-	const FP_FirstGraphicInGroup: FP_FirstGraphicInGroup;
-	type FP_FirstGraphicsFmtInDoc = 3101;
-	const FP_FirstGraphicsFmtInDoc: FP_FirstGraphicsFmtInDoc;
-	type FP_FirstIndent = 556;
-	const FP_FirstIndent: FP_FirstIndent;
-	type FP_FirstIndentChange = 2005;
-	const FP_FirstIndentChange: FP_FirstIndentChange;
-	type FP_FirstIndentIsRelative = 2019;
-	const FP_FirstIndentIsRelative: FP_FirstIndentIsRelative;
-	type FP_FirstIndentRelPos = 2020;
-	const FP_FirstIndentRelPos: FP_FirstIndentRelPos;
-	type FP_FirstInlineComponentInDoc = 2897;
-	const FP_FirstInlineComponentInDoc: FP_FirstInlineComponentInDoc;
-	type FP_FirstKeyCatalogInSession = 2872;
-	const FP_FirstKeyCatalogInSession: FP_FirstKeyCatalogInSession;
-	type FP_FirstMarkerInDoc = 114;
-	const FP_FirstMarkerInDoc: FP_FirstMarkerInDoc;
-	type FP_FirstMarkerTypeInDoc = 148;
-	const FP_FirstMarkerTypeInDoc: FP_FirstMarkerTypeInDoc;
-	type FP_FirstMasterPageInDoc = 417;
-	const FP_FirstMasterPageInDoc: FP_FirstMasterPageInDoc;
-	type FP_FirstMenuItemInMenu = 1927;
-	const FP_FirstMenuItemInMenu: FP_FirstMenuItemInMenu;
-	type FP_FirstMenuItemInSession = 97;
-	const FP_FirstMenuItemInSession: FP_FirstMenuItemInSession;
-	type FP_FirstOpenBook = 54;
-	const FP_FirstOpenBook: FP_FirstOpenBook;
-	type FP_FirstOpenDoc = 53;
-	const FP_FirstOpenDoc: FP_FirstOpenDoc;
-	type FP_FirstPageNum = 224;
-	const FP_FirstPageNum: FP_FirstPageNum;
-	type FP_FirstPageVerso = 227;
-	const FP_FirstPageVerso: FP_FirstPageVerso;
-	type FP_FirstPgf = 972;
-	const FP_FirstPgf: FP_FirstPgf;
-	type FP_FirstPgfFmtInDoc = 122;
-	const FP_FirstPgfFmtInDoc: FP_FirstPgfFmtInDoc;
-	type FP_FirstPgfInDoc = 113;
-	const FP_FirstPgfInDoc: FP_FirstPgfInDoc;
-	type FP_FirstPgfRules = 1589;
-	const FP_FirstPgfRules: FP_FirstPgfRules;
-	type FP_FirstRefPageInDoc = 419;
-	const FP_FirstRefPageInDoc: FP_FirstRefPageInDoc;
-	type FP_FirstRowInTbl = 1338;
-	const FP_FirstRowInTbl: FP_FirstRowInTbl;
-	type FP_FirstRubiInDoc = 194;
-	const FP_FirstRubiInDoc: FP_FirstRubiInDoc;
-	type FP_FirstRulingFmtInDoc = 126;
-	const FP_FirstRulingFmtInDoc: FP_FirstRulingFmtInDoc;
-	type FP_FirstSelectedComponentInBook = 493;
-	const FP_FirstSelectedComponentInBook: FP_FirstSelectedComponentInBook;
-	type FP_FirstSelectedGraphicInDoc = 128;
-	const FP_FirstSelectedGraphicInDoc: FP_FirstSelectedGraphicInDoc;
-	type FP_FirstSelectedTiInDoc = 142;
-	const FP_FirstSelectedTiInDoc: FP_FirstSelectedTiInDoc;
-	type FP_FirstSubCol = 986;
-	const FP_FirstSubCol: FP_FirstSubCol;
-	type FP_FirstTblFmtInDoc = 125;
-	const FP_FirstTblFmtInDoc: FP_FirstTblFmtInDoc;
-	type FP_FirstTblInDoc = 120;
-	const FP_FirstTblInDoc: FP_FirstTblInDoc;
-	type FP_FirstTextFrameInFlow = 1169;
-	const FP_FirstTextFrameInFlow: FP_FirstTextFrameInFlow;
-	type FP_FirstTiInDoc = 141;
-	const FP_FirstTiInDoc: FP_FirstTiInDoc;
-	type FP_FirstVarFmtInDoc = 116;
-	const FP_FirstVarFmtInDoc: FP_FirstVarFmtInDoc;
-	type FP_FirstVarInDoc = 115;
-	const FP_FirstVarInDoc: FP_FirstVarInDoc;
-	type FP_FirstVis = 1705;
-	const FP_FirstVis: FP_FirstVis;
-	type FP_FirstVisibleColumnInTbl = 2425;
-	const FP_FirstVisibleColumnInTbl: FP_FirstVisibleColumnInTbl;
-	type FP_FirstXRefFmtInDoc = 118;
-	const FP_FirstXRefFmtInDoc: FP_FirstXRefFmtInDoc;
-	type FP_FirstXRefInDoc = 117;
-	const FP_FirstXRefInDoc: FP_FirstXRefInDoc;
-	type FP_Flow = 982;
-	const FP_Flow: FP_Flow;
-	type FP_FlowIsAutoConnect = 1165;
-	const FP_FlowIsAutoConnect: FP_FlowIsAutoConnect;
-	type FP_FlowIsFeathered = 1166;
-	const FP_FlowIsFeathered: FP_FlowIsFeathered;
-	type FP_FlowIsPostScript = 1168;
-	const FP_FlowIsPostScript: FP_FlowIsPostScript;
-	type FP_FlowIsSynchronized = 1163;
-	const FP_FlowIsSynchronized: FP_FlowIsSynchronized;
-	type FP_Fmt = 1050;
-	const FP_Fmt: FP_Fmt;
-	type FP_FmtChangeList = 2155;
-	const FP_FmtChangeList: FP_FmtChangeList;
-	type FP_FmtChangeListInCatalog = 2021;
-	const FP_FmtChangeListInCatalog: FP_FmtChangeListInCatalog;
-	type FP_FmtChangeListTag = 2154;
-	const FP_FmtChangeListTag: FP_FmtChangeListTag;
-	type FP_FmtRule = 2159;
-	const FP_FmtRule: FP_FmtRule;
-	type FP_FmtRuleClause = 2104;
-	const FP_FmtRuleClause: FP_FmtRuleClause;
-	type FP_FmtRuleClauses = 2103;
-	const FP_FmtRuleClauses: FP_FmtRuleClauses;
-	type FP_FmtRuleType = 2100;
-	const FP_FmtRuleType: FP_FmtRuleType;
-	type FP_FnAnchorString = 1006;
-	const FP_FnAnchorString: FP_FnAnchorString;
-	type FP_FnCustNumString = 285;
-	const FP_FnCustNumString: FP_FnCustNumString;
-	type FP_FnFirstNum = 284;
-	const FP_FnFirstNum: FP_FnFirstNum;
-	type FP_FnFmt = 283;
-	const FP_FnFmt: FP_FnFmt;
-	type FP_FnHeightPerCol = 289;
-	const FP_FnHeightPerCol: FP_FnHeightPerCol;
-	type FP_FnInstancePosition = 287;
-	const FP_FnInstancePosition: FP_FnInstancePosition;
-	type FP_FnInstancePrefix = 294;
-	const FP_FnInstancePrefix: FP_FnInstancePrefix;
-	type FP_FnInstanceSuffix = 288;
-	const FP_FnInstanceSuffix: FP_FnInstanceSuffix;
-	type FP_FnNum = 1002;
-	const FP_FnNum: FP_FnNum;
-	type FP_FnNumComputeMethod = 295;
-	const FP_FnNumComputeMethod: FP_FnNumComputeMethod;
-	type FP_FnNumStyle = 290;
-	const FP_FnNumStyle: FP_FnNumStyle;
-	type FP_FnNumberingPerPage = 291;
-	const FP_FnNumberingPerPage: FP_FnNumberingPerPage;
-	type FP_FnRefPosition = 292;
-	const FP_FnRefPosition: FP_FnRefPosition;
-	type FP_FnRefPrefix = 286;
-	const FP_FnRefPrefix: FP_FnRefPrefix;
-	type FP_FnRefSuffix = 293;
-	const FP_FnRefSuffix: FP_FnRefSuffix;
-	type FP_Focus = 2358;
-	const FP_Focus: FP_Focus;
-	type FP_FontAngle = 607;
-	const FP_FontAngle: FP_FontAngle;
-	type FP_FontAngleNames = 58;
-	const FP_FontAngleNames: FP_FontAngleNames;
-	type FP_FontEncodingName = 642;
-	const FP_FontEncodingName: FP_FontEncodingName;
-	type FP_FontFamily = 604;
-	const FP_FontFamily: FP_FontFamily;
-	type FP_FontFamilyAttributes = 60;
-	const FP_FontFamilyAttributes: FP_FontFamilyAttributes;
-	type FP_FontFamilyFullNames = 73;
-	const FP_FontFamilyFullNames: FP_FontFamilyFullNames;
-	type FP_FontFamilyNames = 55;
-	const FP_FontFamilyNames: FP_FontFamilyNames;
-	type FP_FontPanoseName = 641;
-	const FP_FontPanoseName: FP_FontPanoseName;
-	type FP_FontPlatformName = 639;
-	const FP_FontPlatformName: FP_FontPlatformName;
-	type FP_FontPostScriptName = 640;
-	const FP_FontPostScriptName: FP_FontPostScriptName;
-	type FP_FontSize = 615;
-	const FP_FontSize: FP_FontSize;
-	type FP_FontSizeChange = 2012;
-	const FP_FontSizeChange: FP_FontSizeChange;
-	type FP_FontVariation = 605;
-	const FP_FontVariation: FP_FontVariation;
-	type FP_FontVariationNames = 56;
-	const FP_FontVariationNames: FP_FontVariationNames;
-	type FP_FontWeight = 606;
-	const FP_FontWeight: FP_FontWeight;
-	type FP_FontWeightNames = 57;
-	const FP_FontWeightNames: FP_FontWeightNames;
-	type FP_FormViewConfigFile = 1510;
-	const FP_FormViewConfigFile: FP_FormViewConfigFile;
-	type FP_FormatOverride = 590;
-	const FP_FormatOverride: FP_FormatOverride;
-	type FP_FormatTag = 2153;
-	const FP_FormatTag: FP_FormatTag;
-	type FP_FormattingLocked = 2891;
-	const FP_FormattingLocked: FP_FormattingLocked;
-	type FP_FrameParent = 774;
-	const FP_FrameParent: FP_FrameParent;
-	type FP_Functions = 339;
-	const FP_Functions: FP_Functions;
-	type FP_GeneralRule = 1575;
-	const FP_GeneralRule: FP_GeneralRule;
-	type FP_GeneralRuleErrorOffsets = 1578;
-	const FP_GeneralRuleErrorOffsets: FP_GeneralRuleErrorOffsets;
-	type FP_GenerateAcrobatInfo = 2250;
-	const FP_GenerateAcrobatInfo: FP_GenerateAcrobatInfo;
-	type FP_GenerateInclude = 517;
-	const FP_GenerateInclude: FP_GenerateInclude;
-	type FP_GraphicCantBeSelected = 772;
-	const FP_GraphicCantBeSelected: FP_GraphicCantBeSelected;
-	type FP_GraphicIsButton = 773;
-	const FP_GraphicIsButton: FP_GraphicIsButton;
-	type FP_GraphicIsSelected = 771;
-	const FP_GraphicIsSelected: FP_GraphicIsSelected;
-	type FP_Gravity = 107;
-	const FP_Gravity: FP_Gravity;
-	type FP_GreekSize = 63;
-	const FP_GreekSize: FP_GreekSize;
-	type FP_GroupDialog = 2349;
-	const FP_GroupDialog: FP_GroupDialog;
-	type FP_GroupParent = 777;
-	const FP_GroupParent: FP_GroupParent;
-	type FP_HasShiftOrUnshiftCommand = 1939;
-	const FP_HasShiftOrUnshiftCommand: FP_HasShiftOrUnshiftCommand;
-	type FP_HeadArrow = 743;
-	const FP_HeadArrow: FP_HeadArrow;
-	type FP_Height = 784;
-	const FP_Height: FP_Height;
-	type FP_HelpLink = 1938;
-	const FP_HelpLink: FP_HelpLink;
-	type FP_HelpPending = 102;
-	const FP_HelpPending: FP_HelpPending;
-	type FP_HiddenPage = 421;
-	const FP_HiddenPage: FP_HiddenPage;
-	type FP_HighestLevelElement = 1509;
-	const FP_HighestLevelElement: FP_HighestLevelElement;
-	type FP_HoleAtEnd = 1654;
-	const FP_HoleAtEnd: FP_HoleAtEnd;
-	type FP_HoleBeforeElement = 1659;
-	const FP_HoleBeforeElement: FP_HoleBeforeElement;
-	type FP_HorizontalSpreadLarge = 342;
-	const FP_HorizontalSpreadLarge: FP_HorizontalSpreadLarge;
-	type FP_HorizontalSpreadMed = 341;
-	const FP_HorizontalSpreadMed: FP_HorizontalSpreadMed;
-	type FP_HorizontalSpreadSmall = 340;
-	const FP_HorizontalSpreadSmall: FP_HorizontalSpreadSmall;
-	type FP_HostName = 81;
-	const FP_HostName: FP_HostName;
-	type FP_HotspotCmdStr = 2876;
-	const FP_HotspotCmdStr: FP_HotspotCmdStr;
-	type FP_HotspotTitle = 2877;
-	const FP_HotspotTitle: FP_HotspotTitle;
-	type FP_Hypertext = 1943;
-	const FP_Hypertext: FP_Hypertext;
-	type FP_HypertextCommandText = 2301;
-	const FP_HypertextCommandText: FP_HypertextCommandText;
-	type FP_HypertextDoValidate = 2300;
-	const FP_HypertextDoValidate: FP_HypertextDoValidate;
-	type FP_HypertextParseBadParam = 2305;
-	const FP_HypertextParseBadParam: FP_HypertextParseBadParam;
-	type FP_HypertextParseErr = 2303;
-	const FP_HypertextParseErr: FP_HypertextParseErr;
-	type FP_HypertextParseErrMsg = 2306;
-	const FP_HypertextParseErrMsg: FP_HypertextParseErrMsg;
-	type FP_HypertextParsedArgs = 2302;
-	const FP_HypertextParsedArgs: FP_HypertextParsedArgs;
-	type FP_HypertextParsedClientName = 2317;
-	const FP_HypertextParsedClientName: FP_HypertextParsedClientName;
-	type FP_HypertextParsedCmdCode = 2307;
-	const FP_HypertextParsedCmdCode: FP_HypertextParsedCmdCode;
-	type FP_HypertextParsedCmdDest = 2308;
-	const FP_HypertextParsedCmdDest: FP_HypertextParsedCmdDest;
-	type FP_HypertextParsedCmdDestObjID = 2310;
-	const FP_HypertextParsedCmdDestObjID: FP_HypertextParsedCmdDestObjID;
-	type FP_HypertextParsedCmdDestObjType = 2309;
-	const FP_HypertextParsedCmdDestObjType: FP_HypertextParsedCmdDestObjType;
-	type FP_HypertextParsedCmdMatrixColumns = 2312;
-	const FP_HypertextParsedCmdMatrixColumns: FP_HypertextParsedCmdMatrixColumns;
-	type FP_HypertextParsedCmdMatrixRows = 2311;
-	const FP_HypertextParsedCmdMatrixRows: FP_HypertextParsedCmdMatrixRows;
-	type FP_HypertextParsedDIFileName = 2320;
-	const FP_HypertextParsedDIFileName: FP_HypertextParsedDIFileName;
-	type FP_HypertextParsedFlowName = 2315;
-	const FP_HypertextParsedFlowName: FP_HypertextParsedFlowName;
-	type FP_HypertextParsedLinkName = 2313;
-	const FP_HypertextParsedLinkName: FP_HypertextParsedLinkName;
-	type FP_HypertextParsedMessage = 2319;
-	const FP_HypertextParsedMessage: FP_HypertextParsedMessage;
-	type FP_HypertextParsedPageName = 2314;
-	const FP_HypertextParsedPageName: FP_HypertextParsedPageName;
-	type FP_HypertextParsedRangeName = 2316;
-	const FP_HypertextParsedRangeName: FP_HypertextParsedRangeName;
-	type FP_HypertextParsedTitle = 2318;
-	const FP_HypertextParsedTitle: FP_HypertextParsedTitle;
-	type FP_HypertextValidateErr = 2304;
-	const FP_HypertextValidateErr: FP_HypertextValidateErr;
-	type FP_HyphMinPrefix = 575;
-	const FP_HyphMinPrefix: FP_HyphMinPrefix;
-	type FP_HyphMinSuffix = 560;
-	const FP_HyphMinSuffix: FP_HyphMinSuffix;
-	type FP_HyphMinWord = 576;
-	const FP_HyphMinWord: FP_HyphMinWord;
-	type FP_Hyphenate = 564;
-	const FP_Hyphenate: FP_Hyphenate;
-	type FP_IDAttrValue = 1637;
-	const FP_IDAttrValue: FP_IDAttrValue;
-	type FP_INSETinfo = 858;
-	const FP_INSETinfo: FP_INSETinfo;
-	type FP_Icon = 1716;
-	const FP_Icon: FP_Icon;
-	type FP_IconBarOn = 101;
-	const FP_IconBarOn: FP_IconBarOn;
-	type FP_IconColorPref = 1508;
-	const FP_IconColorPref: FP_IconColorPref;
-	type FP_IconSizePref = 1507;
-	const FP_IconSizePref: FP_IconSizePref;
-	type FP_ImportFilters = 2288;
-	const FP_ImportFilters: FP_ImportFilters;
-	type FP_ImportFmtInclude = 518;
-	const FP_ImportFmtInclude: FP_ImportFmtInclude;
-	type FP_ImportHint = 2055;
-	const FP_ImportHint: FP_ImportHint;
-	type FP_InCond = 1150;
-	const FP_InCond: FP_InCond;
-	type FP_InTableSortOperation = 2833;
-	const FP_InTableSortOperation: FP_InTableSortOperation;
-	type FP_InTextFrame = 1001;
-	const FP_InTextFrame: FP_InTextFrame;
-	type FP_InTextObj = 1000;
-	const FP_InTextObj: FP_InTextObj;
-	type FP_Inclusions = 1577;
-	const FP_Inclusions: FP_Inclusions;
-	type FP_IncrVal = 1711;
-	const FP_IncrVal: FP_IncrVal;
-	type FP_InitStructurePattern = 1585;
-	const FP_InitStructurePattern: FP_InitStructurePattern;
-	type FP_InkName = 1465;
-	const FP_InkName: FP_InkName;
-	type FP_InlineComponentType = 2896;
-	const FP_InlineComponentType: FP_InlineComponentType;
-	type FP_InsertLinks = 528;
-	const FP_InsertLinks: FP_InsertLinks;
-	type FP_InsetCuePointList = 2354;
-	const FP_InsetCuePointList: FP_InsetCuePointList;
-	type FP_InsetDpi = 853;
-	const FP_InsetDpi: FP_InsetDpi;
-	type FP_InsetEditor = 850;
-	const FP_InsetEditor: FP_InsetEditor;
-	type FP_InsetFile = 852;
-	const FP_InsetFile: FP_InsetFile;
-	type FP_InsetFileOrigName = 2814;
-	const FP_InsetFileOrigName: FP_InsetFileOrigName;
-	type FP_InsetGenericData = 2832;
-	const FP_InsetGenericData: FP_InsetGenericData;
-	type FP_InsetGfxActiveInPdf = 2836;
-	const FP_InsetGfxActiveInPdf: FP_InsetGfxActiveInPdf;
-	type FP_InsetGfxName = 2834;
-	const FP_InsetGfxName: FP_InsetGfxName;
-	type FP_InsetGfxPlayWindowInPdf = 2835;
-	const FP_InsetGfxPlayWindowInPdf: FP_InsetGfxPlayWindowInPdf;
-	type FP_InsetIsFixedSize = 854;
-	const FP_InsetIsFixedSize: FP_InsetIsFixedSize;
-	type FP_InsetIsFlippedSideways = 855;
-	const FP_InsetIsFlippedSideways: FP_InsetIsFlippedSideways;
-	type FP_InsetIsInverted = 856;
-	const FP_InsetIsInverted: FP_InsetIsInverted;
-	type FP_InsetJavaScriptAttached = 2837;
-	const FP_InsetJavaScriptAttached: FP_InsetJavaScriptAttached;
-	type FP_InsetJavaScriptFile = 2838;
-	const FP_InsetJavaScriptFile: FP_InsetJavaScriptFile;
-	type FP_InsetLinkToText = 2355;
-	const FP_InsetLinkToText: FP_InsetLinkToText;
-	type FP_InsetMonikerFilePath = 2849;
-	const FP_InsetMonikerFilePath: FP_InsetMonikerFilePath;
-	type FP_InsetMonikerPath = 2848;
-	const FP_InsetMonikerPath: FP_InsetMonikerPath;
-	type FP_InsetPosterFile = 2822;
-	const FP_InsetPosterFile: FP_InsetPosterFile;
-	type FP_InsetPosterFileOrigName = 2824;
-	const FP_InsetPosterFileOrigName: FP_InsetPosterFileOrigName;
-	type FP_InsetPosterIsExternal = 2821;
-	const FP_InsetPosterIsExternal: FP_InsetPosterIsExternal;
-	type FP_InsetRasterDpi = 857;
-	const FP_InsetRasterDpi: FP_InsetRasterDpi;
-	type FP_InsetSaveDIBFacetToFile = 2823;
-	const FP_InsetSaveDIBFacetToFile: FP_InsetSaveDIBFacetToFile;
-	type FP_InsetSaveFacetToFile = 2839;
-	const FP_InsetSaveFacetToFile: FP_InsetSaveFacetToFile;
-	type FP_InsetU3dAnimationList = 2844;
-	const FP_InsetU3dAnimationList: FP_InsetU3dAnimationList;
-	type FP_InsetU3dPartList = 2845;
-	const FP_InsetU3dPartList: FP_InsetU3dPartList;
-	type FP_InsetU3dViewList = 2846;
-	const FP_InsetU3dViewList: FP_InsetU3dViewList;
-	type FP_InsetURL = 2407;
-	const FP_InsetURL: FP_InsetURL;
-	type FP_InsetUpdater = 851;
-	const FP_InsetUpdater: FP_InsetUpdater;
-	type FP_InternalAlignment = 2390;
-	const FP_InternalAlignment: FP_InternalAlignment;
-	type FP_InternalAnchorType = 2383;
-	const FP_InternalAnchorType: FP_InternalAnchorType;
-	type FP_InternalBaselineOffset = 2384;
-	const FP_InternalBaselineOffset: FP_InternalBaselineOffset;
-	type FP_InternalHeight = 2374;
-	const FP_InternalHeight: FP_InternalHeight;
-	type FP_InternalMathMLApplyPgfStyle = 2389;
-	const FP_InternalMathMLApplyPgfStyle: FP_InternalMathMLApplyPgfStyle;
-	type FP_InternalMathMLComposeDpi = 2375;
-	const FP_InternalMathMLComposeDpi: FP_InternalMathMLComposeDpi;
-	type FP_InternalMathMLDpi = 2385;
-	const FP_InternalMathMLDpi: FP_InternalMathMLDpi;
-	type FP_InternalMathMLFontSize = 2376;
-	const FP_InternalMathMLFontSize: FP_InternalMathMLFontSize;
-	type FP_InternalMathMLInline = 2387;
-	const FP_InternalMathMLInline: FP_InternalMathMLInline;
-	type FP_InternalMathMLXmlData = 2377;
-	const FP_InternalMathMLXmlData: FP_InternalMathMLXmlData;
-	type FP_InternalWidth = 2373;
-	const FP_InternalWidth: FP_InternalWidth;
-	type FP_InvalidHighestLevel = 1661;
-	const FP_InvalidHighestLevel: FP_InvalidHighestLevel;
-	type FP_InvariantName = 1029;
-	const FP_InvariantName: FP_InvariantName;
-	type FP_IsDefault = 2850;
-	const FP_IsDefault: FP_IsDefault;
-	type FP_IsDialogDocked = 2345;
-	const FP_IsDialogDocked: FP_IsDialogDocked;
-	type FP_IsDialogVisible = 2346;
-	const FP_IsDialogVisible: FP_IsDialogVisible;
-	type FP_IsDitamapInResourceManager = 2332;
-	const FP_IsDitamapInResourceManager: FP_IsDitamapInResourceManager;
-	type FP_IsDocDita = 2880;
-	const FP_IsDocDita: FP_IsDocDita;
-	type FP_IsDocDitamap = 2879;
-	const FP_IsDocDitamap: FP_IsDocDitamap;
-	type FP_IsFMRunningAsServer = 2348;
-	const FP_IsFMRunningAsServer: FP_IsFMRunningAsServer;
-	type FP_IsFMRunningInTrialPeriod = 2412;
-	const FP_IsFMRunningInTrialPeriod: FP_IsFMRunningInTrialPeriod;
-	type FP_IsFateRun = 2847;
-	const FP_IsFateRun: FP_IsFateRun;
-	type FP_IsFormViewEnabled = 2437;
-	const FP_IsFormViewEnabled: FP_IsFormViewEnabled;
-	type FP_IsHotspot = 2875;
-	const FP_IsHotspot: FP_IsHotspot;
-	type FP_IsIconified = 31;
-	const FP_IsIconified: FP_IsIconified;
-	type FP_IsInFront = 32;
-	const FP_IsInFront: FP_IsInFront;
-	type FP_IsOnScreen = 110;
-	const FP_IsOnScreen: FP_IsOnScreen;
-	type FP_IsRestoring = 2892;
-	const FP_IsRestoring: FP_IsRestoring;
-	type FP_IsStale = 2851;
-	const FP_IsStale: FP_IsStale;
-	type FP_IsTechnicalSuiteLicensed = 2410;
-	const FP_IsTechnicalSuiteLicensed: FP_IsTechnicalSuiteLicensed;
-	type FP_IsTempOpenSave = 827;
-	const FP_IsTempOpenSave: FP_IsTempOpenSave;
-	type FP_IsTextRange = 2151;
-	const FP_IsTextRange: FP_IsTextRange;
-	type FP_KByteAllocationSize = 106;
-	const FP_KByteAllocationSize: FP_KByteAllocationSize;
-	type FP_KeepWithNext = 565;
-	const FP_KeepWithNext: FP_KeepWithNext;
-	type FP_KeepWithPrev = 551;
-	const FP_KeepWithPrev: FP_KeepWithPrev;
-	type FP_KernX = 616;
-	const FP_KernX: FP_KernX;
-	type FP_KernY = 617;
-	const FP_KernY: FP_KernY;
-	type FP_KeyCatalog = 2856;
-	const FP_KeyCatalog: FP_KeyCatalog;
-	type FP_KeyCatalogClientName = 2873;
-	const FP_KeyCatalogClientName: FP_KeyCatalogClientName;
-	type FP_KeyCatalogType = 2857;
-	const FP_KeyCatalogType: FP_KeyCatalogType;
-	type FP_KeyCatalogWorkflow = 2859;
-	const FP_KeyCatalogWorkflow: FP_KeyCatalogWorkflow;
-	type FP_KeyCount = 2860;
-	const FP_KeyCount: FP_KeyCount;
-	type FP_KeyboardShortcutLabel = 1929;
-	const FP_KeyboardShortcutLabel: FP_KeyboardShortcutLabel;
-	type FP_KeyboardShortcuts = 1930;
-	const FP_KeyboardShortcuts: FP_KeyboardShortcuts;
-	type FP_Label = 30;
-	const FP_Label: FP_Label;
-	type FP_LabelBold = 1721;
-	const FP_LabelBold: FP_LabelBold;
-	type FP_LabelColor = 1720;
-	const FP_LabelColor: FP_LabelColor;
-	type FP_Labels = 1703;
-	const FP_Labels: FP_Labels;
-	type FP_Language = 577;
-	const FP_Language: FP_Language;
-	type FP_LastAFrame = 975;
-	const FP_LastAFrame: FP_LastAFrame;
-	type FP_LastBodyPageInDoc = 416;
-	const FP_LastBodyPageInDoc: FP_LastBodyPageInDoc;
-	type FP_LastCell = 979;
-	const FP_LastCell: FP_LastCell;
-	type FP_LastChildElement = 1624;
-	const FP_LastChildElement: FP_LastChildElement;
-	type FP_LastColumnInSelection = 2428;
-	const FP_LastColumnInSelection: FP_LastColumnInSelection;
-	type FP_LastColumnInTbl = 2424;
-	const FP_LastColumnInTbl: FP_LastColumnInTbl;
-	type FP_LastFn = 977;
-	const FP_LastFn: FP_LastFn;
-	type FP_LastGraphicInFrame = 883;
-	const FP_LastGraphicInFrame: FP_LastGraphicInFrame;
-	type FP_LastGraphicInGroup = 808;
-	const FP_LastGraphicInGroup: FP_LastGraphicInGroup;
-	type FP_LastMasterPageInDoc = 418;
-	const FP_LastMasterPageInDoc: FP_LastMasterPageInDoc;
-	type FP_LastPgf = 973;
-	const FP_LastPgf: FP_LastPgf;
-	type FP_LastPgfRules = 1590;
-	const FP_LastPgfRules: FP_LastPgfRules;
-	type FP_LastRefPageInDoc = 420;
-	const FP_LastRefPageInDoc: FP_LastRefPageInDoc;
-	type FP_LastRowInTbl = 1339;
-	const FP_LastRowInTbl: FP_LastRowInTbl;
-	type FP_LastSubCol = 987;
-	const FP_LastSubCol: FP_LastSubCol;
-	type FP_LastTextFrameInFlow = 1170;
-	const FP_LastTextFrameInFlow: FP_LastTextFrameInFlow;
-	type FP_LastUpdate = 2052;
-	const FP_LastUpdate: FP_LastUpdate;
-	type FP_LastVisibleColumnInTbl = 2426;
-	const FP_LastVisibleColumnInTbl: FP_LastVisibleColumnInTbl;
-	type FP_Leading = 558;
-	const FP_Leading: FP_Leading;
-	type FP_LeadingChange = 2007;
-	const FP_LeadingChange: FP_LeadingChange;
-	type FP_LeftColNum = 1343;
-	const FP_LeftColNum: FP_LeftColNum;
-	type FP_LeftIndent = 555;
-	const FP_LeftIndent: FP_LeftIndent;
-	type FP_LeftIndentChange = 2004;
-	const FP_LeftIndentChange: FP_LeftIndentChange;
-	type FP_LeftMargin = 232;
-	const FP_LeftMargin: FP_LeftMargin;
-	type FP_LeftMasterPage = 413;
-	const FP_LeftMasterPage: FP_LeftMasterPage;
-	type FP_LetterSpace = 550;
-	const FP_LetterSpace: FP_LetterSpace;
-	type FP_LineAscent = 1900;
-	const FP_LineAscent: FP_LineAscent;
-	type FP_LineBaseline = 1902;
-	const FP_LineBaseline: FP_LineBaseline;
-	type FP_LineBreakAfter = 177;
-	const FP_LineBreakAfter: FP_LineBreakAfter;
-	type FP_LineCap = 753;
-	const FP_LineCap: FP_LineCap;
-	type FP_LineDescent = 1901;
-	const FP_LineDescent: FP_LineDescent;
-	type FP_LineNumColor = 4006;
-	const FP_LineNumColor: FP_LineNumColor;
-	type FP_LineNumDistance = 4001;
-	const FP_LineNumDistance: FP_LineNumDistance;
-	type FP_LineNumFont = 4004;
-	const FP_LineNumFont: FP_LineNumFont;
-	type FP_LineNumRestart = 4002;
-	const FP_LineNumRestart: FP_LineNumRestart;
-	type FP_LineNumShow = 4003;
-	const FP_LineNumShow: FP_LineNumShow;
-	type FP_LineNumSize = 4005;
-	const FP_LineNumSize: FP_LineNumSize;
-	type FP_LineSpacing = 587;
-	const FP_LineSpacing: FP_LineSpacing;
-	type FP_LineSpacingFactor = 988;
-	const FP_LineSpacingFactor: FP_LineSpacingFactor;
-	type FP_LineSpacingFixed = 2008;
-	const FP_LineSpacingFixed: FP_LineSpacingFixed;
-	type FP_LoadStartupScripts = 2886;
-	const FP_LoadStartupScripts: FP_LoadStartupScripts;
-	type FP_LocX = 781;
-	const FP_LocX: FP_LocX;
-	type FP_LocY = 782;
-	const FP_LocY: FP_LocY;
-	type FP_Locked = 588;
-	const FP_Locked: FP_Locked;
-	type FP_LogMissingFontsWarning = 2901;
-	const FP_LogMissingFontsWarning: FP_LogMissingFontsWarning;
-	type FP_Magenta = 1458;
-	const FP_Magenta: FP_Magenta;
-	type FP_MagicMarker = 488;
-	const FP_MagicMarker: FP_MagicMarker;
-	type FP_MainFlowInDoc = 422;
-	const FP_MainFlowInDoc: FP_MainFlowInDoc;
-	type FP_MarkerNames = 59;
-	const FP_MarkerNames: FP_MarkerNames;
-	type FP_MarkerText = 1025;
-	const FP_MarkerText: FP_MarkerText;
-	type FP_MarkerTypeId = 1027;
-	const FP_MarkerTypeId: FP_MarkerTypeId;
-	type FP_MarkerTypeNames = 149;
-	const FP_MarkerTypeNames: FP_MarkerTypeNames;
-	type FP_MasterPage = 690;
-	const FP_MasterPage: FP_MasterPage;
-	type FP_MatchesContextInUserString = 1642;
-	const FP_MatchesContextInUserString: FP_MatchesContextInUserString;
-	type FP_MatchingFirstPgfClauses = 1638;
-	const FP_MatchingFirstPgfClauses: FP_MatchingFirstPgfClauses;
-	type FP_MatchingLastPgfClauses = 1639;
-	const FP_MatchingLastPgfClauses: FP_MatchingLastPgfClauses;
-	type FP_MatchingObjectClauses = 1632;
-	const FP_MatchingObjectClauses: FP_MatchingObjectClauses;
-	type FP_MatchingPrefixClauses = 1640;
-	const FP_MatchingPrefixClauses: FP_MatchingPrefixClauses;
-	type FP_MatchingSuffixClauses = 1641;
-	const FP_MatchingSuffixClauses: FP_MatchingSuffixClauses;
-	type FP_MatchingTextClauses = 1631;
-	const FP_MatchingTextClauses: FP_MatchingTextClauses;
-	type FP_MathFullForm = 865;
-	const FP_MathFullForm: FP_MathFullForm;
-	type FP_MathMLApplyPgfStyle = 2388;
-	const FP_MathMLApplyPgfStyle: FP_MathMLApplyPgfStyle;
-	type FP_MathMLComposeDpi = 2367;
-	const FP_MathMLComposeDpi: FP_MathMLComposeDpi;
-	type FP_MathMLData = 2365;
-	const FP_MathMLData: FP_MathMLData;
-	type FP_MathMLDpi = 2360;
-	const FP_MathMLDpi: FP_MathMLDpi;
-	type FP_MathMLExportEntitiesAsValues = 2394;
-	const FP_MathMLExportEntitiesAsValues: FP_MathMLExportEntitiesAsValues;
-	type FP_MathMLFile = 2363;
-	const FP_MathMLFile: FP_MathMLFile;
-	type FP_MathMLFontSize = 2371;
-	const FP_MathMLFontSize: FP_MathMLFontSize;
-	type FP_MathMLImportGraphicsDpi = 2369;
-	const FP_MathMLImportGraphicsDpi: FP_MathMLImportGraphicsDpi;
-	type FP_MathMLInline = 2386;
-	const FP_MathMLInline: FP_MathMLInline;
-	type FP_MathMLIsFixedSize = 2361;
-	const FP_MathMLIsFixedSize: FP_MathMLIsFixedSize;
-	type FP_MathMLIsFlippedSideways = 2366;
-	const FP_MathMLIsFlippedSideways: FP_MathMLIsFlippedSideways;
-	type FP_MathMLIsInverted = 2362;
-	const FP_MathMLIsInverted: FP_MathMLIsInverted;
-	type FP_MathMLNamespacePrefix = 2378;
-	const FP_MathMLNamespacePrefix: FP_MathMLNamespacePrefix;
-	type FP_MathMLXmlData = 2359;
-	const FP_MathMLXmlData: FP_MathMLXmlData;
-	type FP_MathSize = 866;
-	const FP_MathSize: FP_MathSize;
-	type FP_MaxBottomMargin = 709;
-	const FP_MaxBottomMargin: FP_MaxBottomMargin;
-	type FP_MaxFirstIndent = 472;
-	const FP_MaxFirstIndent: FP_MaxFirstIndent;
-	type FP_MaxFontSize = 484;
-	const FP_MaxFontSize: FP_MaxFontSize;
-	type FP_MaxInterPgfPadding = 471;
-	const FP_MaxInterPgfPadding: FP_MaxInterPgfPadding;
-	type FP_MaxInterlinePadding = 470;
-	const FP_MaxInterlinePadding: FP_MaxInterlinePadding;
-	type FP_MaxJLetSpace = 596;
-	const FP_MaxJLetSpace: FP_MaxJLetSpace;
-	type FP_MaxJRomSpace = 593;
-	const FP_MaxJRomSpace: FP_MaxJRomSpace;
-	type FP_MaxLeading = 482;
-	const FP_MaxLeading: FP_MaxLeading;
-	type FP_MaxLeftIndent = 474;
-	const FP_MaxLeftIndent: FP_MaxLeftIndent;
-	type FP_MaxLeftMargin = 703;
-	const FP_MaxLeftMargin: FP_MaxLeftMargin;
-	type FP_MaxRightIndent = 476;
-	const FP_MaxRightIndent: FP_MaxRightIndent;
-	type FP_MaxRightMargin = 705;
-	const FP_MaxRightMargin: FP_MaxRightMargin;
-	type FP_MaxSize = 2352;
-	const FP_MaxSize: FP_MaxSize;
-	type FP_MaxSpace = 572;
-	const FP_MaxSpace: FP_MaxSpace;
-	type FP_MaxSpaceAbove = 478;
-	const FP_MaxSpaceAbove: FP_MaxSpaceAbove;
-	type FP_MaxSpaceBelow = 480;
-	const FP_MaxSpaceBelow: FP_MaxSpaceBelow;
-	type FP_MaxSpread = 486;
-	const FP_MaxSpread: FP_MaxSpread;
-	type FP_MaxStretch = 711;
-	const FP_MaxStretch: FP_MaxStretch;
-	type FP_MaxTabPosition = 701;
-	const FP_MaxTabPosition: FP_MaxTabPosition;
-	type FP_MaxTopMargin = 707;
-	const FP_MaxTopMargin: FP_MaxTopMargin;
-	type FP_MaxVal = 1710;
-	const FP_MaxVal: FP_MaxVal;
-	type FP_MenuBar = 143;
-	const FP_MenuBar: FP_MenuBar;
-	type FP_MenuItemIsEnabled = 1922;
-	const FP_MenuItemIsEnabled: FP_MenuItemIsEnabled;
-	type FP_MenuItemType = 1933;
-	const FP_MenuItemType: FP_MenuItemType;
-	type FP_MenuType = 1926;
-	const FP_MenuType: FP_MenuType;
-	type FP_Mif8bitOutput = 62;
-	const FP_Mif8bitOutput: FP_Mif8bitOutput;
-	type FP_MifFileEntity = 2828;
-	const FP_MifFileEntity: FP_MifFileEntity;
-	type FP_MifFileName = 2829;
-	const FP_MifFileName: FP_MifFileName;
-	type FP_MifFileOrigFormat = 2878;
-	const FP_MifFileOrigFormat: FP_MifFileOrigFormat;
-	type FP_MinBottomMargin = 710;
-	const FP_MinBottomMargin: FP_MinBottomMargin;
-	type FP_MinFirstIndent = 473;
-	const FP_MinFirstIndent: FP_MinFirstIndent;
-	type FP_MinFontSize = 485;
-	const FP_MinFontSize: FP_MinFontSize;
-	type FP_MinHang = 1164;
-	const FP_MinHang: FP_MinHang;
-	type FP_MinJLetSpace = 594;
-	const FP_MinJLetSpace: FP_MinJLetSpace;
-	type FP_MinJRomSpace = 591;
-	const FP_MinJRomSpace: FP_MinJRomSpace;
-	type FP_MinLeading = 483;
-	const FP_MinLeading: FP_MinLeading;
-	type FP_MinLeftIndent = 475;
-	const FP_MinLeftIndent: FP_MinLeftIndent;
-	type FP_MinLeftMargin = 704;
-	const FP_MinLeftMargin: FP_MinLeftMargin;
-	type FP_MinRightIndent = 477;
-	const FP_MinRightIndent: FP_MinRightIndent;
-	type FP_MinRightMargin = 706;
-	const FP_MinRightMargin: FP_MinRightMargin;
-	type FP_MinSize = 2351;
-	const FP_MinSize: FP_MinSize;
-	type FP_MinSpace = 571;
-	const FP_MinSpace: FP_MinSpace;
-	type FP_MinSpaceAbove = 479;
-	const FP_MinSpaceAbove: FP_MinSpaceAbove;
-	type FP_MinSpaceBelow = 481;
-	const FP_MinSpaceBelow: FP_MinSpaceBelow;
-	type FP_MinSpread = 487;
-	const FP_MinSpread: FP_MinSpread;
-	type FP_MinStretch = 712;
-	const FP_MinStretch: FP_MinStretch;
-	type FP_MinTabPosition = 702;
-	const FP_MinTabPosition: FP_MinTabPosition;
-	type FP_MinTopMargin = 708;
-	const FP_MinTopMargin: FP_MinTopMargin;
-	type FP_MinVal = 1709;
-	const FP_MinVal: FP_MinVal;
-	type FP_Mode = 1941;
-	const FP_Mode: FP_Mode;
-	type FP_ModelessDialogUpdate = 2895;
-	const FP_ModelessDialogUpdate: FP_ModelessDialogUpdate;
-	type FP_ModelessDlgIconN = 1728;
-	const FP_ModelessDlgIconN: FP_ModelessDlgIconN;
-	type FP_ModelessDlgIconR = 1729;
-	const FP_ModelessDlgIconR: FP_ModelessDlgIconR;
-	type FP_Month = 1725;
-	const FP_Month: FP_Month;
-	type FP_MoveTabs = 2014;
-	const FP_MoveTabs: FP_MoveTabs;
-	type FP_Name = 20;
-	const FP_Name: FP_Name;
-	type FP_Namespace = 1643;
-	const FP_Namespace: FP_Namespace;
-	type FP_NamespaceScope = 1644;
-	const FP_NamespaceScope: FP_NamespaceScope;
-	type FP_NarrowRubiSpaceForJapanese = 188;
-	const FP_NarrowRubiSpaceForJapanese: FP_NarrowRubiSpaceForJapanese;
-	type FP_NarrowRubiSpaceForOther = 190;
-	const FP_NarrowRubiSpaceForOther: FP_NarrowRubiSpaceForOther;
-	type FP_NewElemAttrDisplay = 1490;
-	const FP_NewElemAttrDisplay: FP_NewElemAttrDisplay;
-	type FP_NewElemAttrEditing = 1491;
-	const FP_NewElemAttrEditing: FP_NewElemAttrEditing;
-	type FP_NextAFrame = 885;
-	const FP_NextAFrame: FP_NextAFrame;
-	type FP_NextAttrCondExprInDoc = 2816;
-	const FP_NextAttrCondExprInDoc: FP_NextAttrCondExprInDoc;
-	type FP_NextBookComponentInDFSOrder = 2333;
-	const FP_NextBookComponentInDFSOrder: FP_NextBookComponentInDFSOrder;
-	type FP_NextCell = 1220;
-	const FP_NextCell: FP_NextCell;
-	type FP_NextCellInRow = 1202;
-	const FP_NextCellInRow: FP_NextCellInRow;
-	type FP_NextCellInTbl = 1199;
-	const FP_NextCellInTbl: FP_NextCellInTbl;
-	type FP_NextCharFmtInDoc = 603;
-	const FP_NextCharFmtInDoc: FP_NextCharFmtInDoc;
-	type FP_NextColorInDoc = 1455;
-	const FP_NextColorInDoc: FP_NextColorInDoc;
-	type FP_NextColumnInTbl = 2430;
-	const FP_NextColumnInTbl: FP_NextColumnInTbl;
-	type FP_NextCombinedFontDefnInDoc = 2281;
-	const FP_NextCombinedFontDefnInDoc: FP_NextCombinedFontDefnInDoc;
-	type FP_NextCommandInSession = 1942;
-	const FP_NextCommandInSession: FP_NextCommandInSession;
-	type FP_NextComponentInBook = 527;
-	const FP_NextComponentInBook: FP_NextComponentInBook;
-	type FP_NextCondFmtInDoc = 1138;
-	const FP_NextCondFmtInDoc: FP_NextCondFmtInDoc;
-	type FP_NextDITAConrefElementInDoc = 2866;
-	const FP_NextDITAConrefElementInDoc: FP_NextDITAConrefElementInDoc;
-	type FP_NextDITALinkElementInDoc = 2868;
-	const FP_NextDITALinkElementInDoc: FP_NextDITALinkElementInDoc;
-	type FP_NextDITATopicrefElementInDoc = 2869;
-	const FP_NextDITATopicrefElementInDoc: FP_NextDITATopicrefElementInDoc;
-	type FP_NextDITATopicsetrefElementInDoc = 2870;
-	const FP_NextDITATopicsetrefElementInDoc: FP_NextDITATopicsetrefElementInDoc;
-	type FP_NextDITAXrefElementInDoc = 2867;
-	const FP_NextDITAXrefElementInDoc: FP_NextDITAXrefElementInDoc;
-	type FP_NextElementDFS = 2334;
-	const FP_NextElementDFS: FP_NextElementDFS;
-	type FP_NextElementDefInDoc = 1572;
-	const FP_NextElementDefInDoc: FP_NextElementDefInDoc;
-	type FP_NextFlowInDoc = 1162;
-	const FP_NextFlowInDoc: FP_NextFlowInDoc;
-	type FP_NextFmtChangeListInDoc = 2000;
-	const FP_NextFmtChangeListInDoc: FP_NextFmtChangeListInDoc;
-	type FP_NextFn = 1005;
-	const FP_NextFn: FP_NextFn;
-	type FP_NextFnInDoc = 1003;
-	const FP_NextFnInDoc: FP_NextFnInDoc;
-	type FP_NextGraphicInDoc = 786;
-	const FP_NextGraphicInDoc: FP_NextGraphicInDoc;
-	type FP_NextGraphicInFrame = 776;
-	const FP_NextGraphicInFrame: FP_NextGraphicInFrame;
-	type FP_NextGraphicInGroup = 779;
-	const FP_NextGraphicInGroup: FP_NextGraphicInGroup;
-	type FP_NextGraphicsFmtInDoc = 3102;
-	const FP_NextGraphicsFmtInDoc: FP_NextGraphicsFmtInDoc;
-	type FP_NextInlineComponentInDoc = 2898;
-	const FP_NextInlineComponentInDoc: FP_NextInlineComponentInDoc;
-	type FP_NextInvalidElement = 1664;
-	const FP_NextInvalidElement: FP_NextInvalidElement;
-	type FP_NextKeyCatalogInSession = 2852;
-	const FP_NextKeyCatalogInSession: FP_NextKeyCatalogInSession;
-	type FP_NextMarkerInDoc = 1026;
-	const FP_NextMarkerInDoc: FP_NextMarkerInDoc;
-	type FP_NextMarkerTypeInDoc = 1028;
-	const FP_NextMarkerTypeInDoc: FP_NextMarkerTypeInDoc;
-	type FP_NextMenuItemInMenu = 1923;
-	const FP_NextMenuItemInMenu: FP_NextMenuItemInMenu;
-	type FP_NextMenuItemInSession = 1925;
-	const FP_NextMenuItemInSession: FP_NextMenuItemInSession;
-	type FP_NextOpenBookInSession = 490;
-	const FP_NextOpenBookInSession: FP_NextOpenBookInSession;
-	type FP_NextOpenDocInSession = 111;
-	const FP_NextOpenDocInSession: FP_NextOpenDocInSession;
-	type FP_NextPgfFmtInDoc = 580;
-	const FP_NextPgfFmtInDoc: FP_NextPgfFmtInDoc;
-	type FP_NextPgfInDoc = 716;
-	const FP_NextPgfInDoc: FP_NextPgfInDoc;
-	type FP_NextPgfInFlow = 717;
-	const FP_NextPgfInFlow: FP_NextPgfInFlow;
-	type FP_NextRowInTbl = 1245;
-	const FP_NextRowInTbl: FP_NextRowInTbl;
-	type FP_NextRubiInDoc = 1469;
-	const FP_NextRubiInDoc: FP_NextRubiInDoc;
-	type FP_NextRulingFmtInDoc = 1430;
-	const FP_NextRulingFmtInDoc: FP_NextRulingFmtInDoc;
-	type FP_NextSelectedComponentInBook = 530;
-	const FP_NextSelectedComponentInBook: FP_NextSelectedComponentInBook;
-	type FP_NextSelectedGraphicInDoc = 785;
-	const FP_NextSelectedGraphicInDoc: FP_NextSelectedGraphicInDoc;
-	type FP_NextSiblingElement = 1626;
-	const FP_NextSiblingElement: FP_NextSiblingElement;
-	type FP_NextSubCol = 2202;
-	const FP_NextSubCol: FP_NextSubCol;
-	type FP_NextTag = 552;
-	const FP_NextTag: FP_NextTag;
-	type FP_NextTblFmtInDoc = 1276;
-	const FP_NextTblFmtInDoc: FP_NextTblFmtInDoc;
-	type FP_NextTblInDoc = 1337;
-	const FP_NextTblInDoc: FP_NextTblInDoc;
-	type FP_NextTextFrameInFlow = 981;
-	const FP_NextTextFrameInFlow: FP_NextTextFrameInFlow;
-	type FP_NextTiInDoc = 2050;
-	const FP_NextTiInDoc: FP_NextTiInDoc;
-	type FP_NextVarFmtInDoc = 1051;
-	const FP_NextVarFmtInDoc: FP_NextVarFmtInDoc;
-	type FP_NextVarInDoc = 1046;
-	const FP_NextVarInDoc: FP_NextVarInDoc;
-	type FP_NextVisibleColumnInTbl = 2432;
-	const FP_NextVisibleColumnInTbl: FP_NextVisibleColumnInTbl;
-	type FP_NextXRefFmtInDoc = 1074;
-	const FP_NextXRefFmtInDoc: FP_NextXRefFmtInDoc;
-	type FP_NextXRefInDoc = 1072;
-	const FP_NextXRefInDoc: FP_NextXRefInDoc;
-	type FP_No3DInPDF = 2406;
-	const FP_No3DInPDF: FP_No3DInPDF;
-	type FP_NoAppOutputPIFiltered = 2884;
-	const FP_NoAppOutputPIFiltered: FP_NoAppOutputPIFiltered;
-	type FP_NoFlashInPDF = 2405;
-	const FP_NoFlashInPDF: FP_NoFlashInPDF;
-	type FP_NoMultiMediaInPDF = 2831;
-	const FP_NoMultiMediaInPDF: FP_NoMultiMediaInPDF;
-	type FP_NotLoaded = 2853;
-	const FP_NotLoaded: FP_NotLoaded;
-	type FP_NumAtEnd = 563;
-	const FP_NumAtEnd: FP_NumAtEnd;
-	type FP_NumCols = 235;
-	const FP_NumCols: FP_NumCols;
-	type FP_NumColumns = 984;
-	const FP_NumColumns: FP_NumColumns;
-	type FP_NumItems = 1707;
-	const FP_NumItems: FP_NumItems;
-	type FP_NumLines = 1704;
-	const FP_NumLines: FP_NumLines;
-	type FP_NumNamespaces = 1645;
-	const FP_NumNamespaces: FP_NumNamespaces;
-	type FP_NumPoints = 907;
-	const FP_NumPoints: FP_NumPoints;
-	type FP_NumTabs = 573;
-	const FP_NumTabs: FP_NumTabs;
-	type FP_Numbers = 338;
-	const FP_Numbers: FP_Numbers;
-	type FP_Object = 1630;
-	const FP_Object: FP_Object;
-	type FP_ObjectAttributes = 23;
-	const FP_ObjectAttributes: FP_ObjectAttributes;
-	type FP_ObjectFmtRules = 1583;
-	const FP_ObjectFmtRules: FP_ObjectFmtRules;
-	type FP_OldTypeNum = 1024;
-	const FP_OldTypeNum: FP_OldTypeNum;
-	type FP_OpenAndSaveXmlBookComponentDoc = 822;
-	const FP_OpenAndSaveXmlBookComponentDoc: FP_OpenAndSaveXmlBookComponentDoc;
-	type FP_OpenDir = 80;
-	const FP_OpenDir: FP_OpenDir;
-	type FP_OperatingSystem = 46;
-	const FP_OperatingSystem: FP_OperatingSystem;
-	type FP_OptJLetSpace = 595;
-	const FP_OptJLetSpace: FP_OptJLetSpace;
-	type FP_OptJRomSpace = 592;
-	const FP_OptJRomSpace: FP_OptJRomSpace;
-	type FP_OptSpace = 557;
-	const FP_OptSpace: FP_OptSpace;
-	type FP_OriginalDpi = 2397;
-	const FP_OriginalDpi: FP_OriginalDpi;
-	type FP_OriginalHeight = 2381;
-	const FP_OriginalHeight: FP_OriginalHeight;
-	type FP_OriginalWidth = 2382;
-	const FP_OriginalWidth: FP_OriginalWidth;
-	type FP_OrphanRows = 1291;
-	const FP_OrphanRows: FP_OrphanRows;
-	type FP_Outline = 612;
-	const FP_Outline: FP_Outline;
-	type FP_Overflowed = 983;
-	const FP_Overflowed: FP_Overflowed;
-	type FP_Overline = 610;
-	const FP_Overline: FP_Overline;
-	type FP_Overprint = 756;
-	const FP_Overprint: FP_Overprint;
-	type FP_OyamojiTextRange = 1470;
-	const FP_OyamojiTextRange: FP_OyamojiTextRange;
-	type FP_PDFAllNamedDestinations = 2257;
-	const FP_PDFAllNamedDestinations: FP_PDFAllNamedDestinations;
-	type FP_PDFBookmark = 2261;
-	const FP_PDFBookmark: FP_PDFBookmark;
-	type FP_PDFBookmarksOpenLevel = 2275;
-	const FP_PDFBookmarksOpenLevel: FP_PDFBookmarksOpenLevel;
-	type FP_PDFConvertCMYKtoRGB = 2274;
-	const FP_PDFConvertCMYKtoRGB: FP_PDFConvertCMYKtoRGB;
-	type FP_PDFDestsMarked = 2258;
-	const FP_PDFDestsMarked: FP_PDFDestsMarked;
-	type FP_PDFDistillerAbsent = 2276;
-	const FP_PDFDistillerAbsent: FP_PDFDistillerAbsent;
-	type FP_PDFDocInfo = 2260;
-	const FP_PDFDocInfo: FP_PDFDocInfo;
-	type FP_PDFEndPage = 2273;
-	const FP_PDFEndPage: FP_PDFEndPage;
-	type FP_PDFGenerateForReview = 2279;
-	const FP_PDFGenerateForReview: FP_PDFGenerateForReview;
-	type FP_PDFJobOption = 2263;
-	const FP_PDFJobOption: FP_PDFJobOption;
-	type FP_PDFJobOptions = 2899;
-	const FP_PDFJobOptions: FP_PDFJobOptions;
-	type FP_PDFJobOptionsAbsent = 2277;
-	const FP_PDFJobOptionsAbsent: FP_PDFJobOptionsAbsent;
-	type FP_PDFOpenPage = 2264;
-	const FP_PDFOpenPage: FP_PDFOpenPage;
-	type FP_PDFPageHeight = 2270;
-	const FP_PDFPageHeight: FP_PDFPageHeight;
-	type FP_PDFPageNum = 2402;
-	const FP_PDFPageNum: FP_PDFPageNum;
-	type FP_PDFPageWidth = 2269;
-	const FP_PDFPageWidth: FP_PDFPageWidth;
-	type FP_PDFPrintPageRange = 2271;
-	const FP_PDFPrintPageRange: FP_PDFPrintPageRange;
-	type FP_PDFRegistrationMarks = 2268;
-	const FP_PDFRegistrationMarks: FP_PDFRegistrationMarks;
-	type FP_PDFSeparateFiles = 2267;
-	const FP_PDFSeparateFiles: FP_PDFSeparateFiles;
-	type FP_PDFStartPage = 2272;
-	const FP_PDFStartPage: FP_PDFStartPage;
-	type FP_PDFStructure = 2259;
-	const FP_PDFStructure: FP_PDFStructure;
-	type FP_PDFStructureLevel = 600;
-	const FP_PDFStructureLevel: FP_PDFStructureLevel;
-	type FP_PDFViewPDF = 2278;
-	const FP_PDFViewPDF: FP_PDFViewPDF;
-	type FP_PDFZoomFactor = 2266;
-	const FP_PDFZoomFactor: FP_PDFZoomFactor;
-	type FP_PDFZoomType = 2265;
-	const FP_PDFZoomType: FP_PDFZoomType;
-	type FP_PageBackground = 689;
-	const FP_PageBackground: FP_PageBackground;
-	type FP_PageFrame = 695;
-	const FP_PageFrame: FP_PageFrame;
-	type FP_PageFramePage = 880;
-	const FP_PageFramePage: FP_PageFramePage;
-	type FP_PageHeight = 692;
-	const FP_PageHeight: FP_PageHeight;
-	type FP_PageIsRecto = 697;
-	const FP_PageIsRecto: FP_PageIsRecto;
-	type FP_PageNext = 694;
-	const FP_PageNext: FP_PageNext;
-	type FP_PageNum = 687;
-	const FP_PageNum: FP_PageNum;
-	type FP_PageNumComputeMethod = 524;
-	const FP_PageNumComputeMethod: FP_PageNumComputeMethod;
-	type FP_PageNumString = 696;
-	const FP_PageNumString: FP_PageNumString;
-	type FP_PageNumStyle = 225;
-	const FP_PageNumStyle: FP_PageNumStyle;
-	type FP_PagePrefix = 521;
-	const FP_PagePrefix: FP_PagePrefix;
-	type FP_PagePrev = 693;
-	const FP_PagePrev: FP_PagePrev;
-	type FP_PageRounding = 229;
-	const FP_PageRounding: FP_PageRounding;
-	type FP_PageSide = 523;
-	const FP_PageSide: FP_PageSide;
-	type FP_PageSuffix = 522;
-	const FP_PageSuffix: FP_PageSuffix;
-	type FP_PageWidth = 691;
-	const FP_PageWidth: FP_PageWidth;
-	type FP_PairKern = 614;
-	const FP_PairKern: FP_PairKern;
-	type FP_Pantone = 1456;
-	const FP_Pantone: FP_Pantone;
-	type FP_ParentElement = 1622;
-	const FP_ParentElement: FP_ParentElement;
-	type FP_ParentTextFrame = 2200;
-	const FP_ParentTextFrame: FP_ParentTextFrame;
-	type FP_ParseFullSpecification = 2163;
-	const FP_ParseFullSpecification: FP_ParseFullSpecification;
-	type FP_ParsedGeneralRule = 1592;
-	const FP_ParsedGeneralRule: FP_ParsedGeneralRule;
-	type FP_ParsedSpecification = 2160;
-	const FP_ParsedSpecification: FP_ParsedSpecification;
-	type FP_PasswordStyle = 1714;
-	const FP_PasswordStyle: FP_PasswordStyle;
-	type FP_Path = 85;
-	const FP_Path: FP_Path;
-	type FP_Pen = 742;
-	const FP_Pen: FP_Pen;
-	type FP_PercentDone = 104;
-	const FP_PercentDone: FP_PercentDone;
-	type FP_PgfAlignment = 547;
-	const FP_PgfAlignment: FP_PgfAlignment;
-	type FP_PgfBoxColor = 2364;
-	const FP_PgfBoxColor: FP_PgfBoxColor;
-	type FP_PgfCatalogReference = 2001;
-	const FP_PgfCatalogReference: FP_PgfCatalogReference;
-	type FP_PgfIsAutoNum = 562;
-	const FP_PgfIsAutoNum: FP_PgfIsAutoNum;
-	type FP_PgfMarkedForNamedDestination = 722;
-	const FP_PgfMarkedForNamedDestination: FP_PgfMarkedForNamedDestination;
-	type FP_PgfNumComputeMethod = 525;
-	const FP_PgfNumComputeMethod: FP_PgfNumComputeMethod;
-	type FP_PgfNumber = 719;
-	const FP_PgfNumber: FP_PgfNumber;
-	type FP_PgfSpacingFactor = 989;
-	const FP_PgfSpacingFactor: FP_PgfSpacingFactor;
-	type FP_PgfSpellChecked = 720;
-	const FP_PgfSpellChecked: FP_PgfSpellChecked;
-	type FP_PgfSplit = 721;
-	const FP_PgfSplit: FP_PgfSplit;
-	type FP_Placement = 579;
-	const FP_Placement: FP_Placement;
-	type FP_Platform = 45;
-	const FP_Platform: FP_Platform;
-	type FP_PointPageNum = 688;
-	const FP_PointPageNum: FP_PointPageNum;
-	type FP_PointPageNumStyle = 228;
-	const FP_PointPageNumStyle: FP_PointPageNumStyle;
-	type FP_Points = 908;
-	const FP_Points: FP_Points;
-	type FP_PolyIsBezier = 906;
-	const FP_PolyIsBezier: FP_PolyIsBezier;
-	type FP_Position = 620;
-	const FP_Position: FP_Position;
-	type FP_PrefixRules = 1587;
-	const FP_PrefixRules: FP_PrefixRules;
-	type FP_PreserveFormattingInXml = 2368;
-	const FP_PreserveFormattingInXml: FP_PreserveFormattingInXml;
-	type FP_PrevAFrame = 884;
-	const FP_PrevAFrame: FP_PrevAFrame;
-	type FP_PrevBookComponentInDFSOrder = 2340;
-	const FP_PrevBookComponentInDFSOrder: FP_PrevBookComponentInDFSOrder;
-	type FP_PrevCell = 1219;
-	const FP_PrevCell: FP_PrevCell;
-	type FP_PrevCellInRow = 1201;
-	const FP_PrevCellInRow: FP_PrevCellInRow;
-	type FP_PrevColumnInTbl = 2429;
-	const FP_PrevColumnInTbl: FP_PrevColumnInTbl;
-	type FP_PrevComponentInBook = 526;
-	const FP_PrevComponentInBook: FP_PrevComponentInBook;
-	type FP_PrevElementDFS = 2335;
-	const FP_PrevElementDFS: FP_PrevElementDFS;
-	type FP_PrevFn = 1004;
-	const FP_PrevFn: FP_PrevFn;
-	type FP_PrevGraphicInFrame = 775;
-	const FP_PrevGraphicInFrame: FP_PrevGraphicInFrame;
-	type FP_PrevGraphicInGroup = 778;
-	const FP_PrevGraphicInGroup: FP_PrevGraphicInGroup;
-	type FP_PrevMenuItemInMenu = 1924;
-	const FP_PrevMenuItemInMenu: FP_PrevMenuItemInMenu;
-	type FP_PrevPgfInFlow = 718;
-	const FP_PrevPgfInFlow: FP_PrevPgfInFlow;
-	type FP_PrevRowInTbl = 1244;
-	const FP_PrevRowInTbl: FP_PrevRowInTbl;
-	type FP_PrevSiblingElement = 1625;
-	const FP_PrevSiblingElement: FP_PrevSiblingElement;
-	type FP_PrevSubCol = 2201;
-	const FP_PrevSubCol: FP_PrevSubCol;
-	type FP_PrevTextFrameInFlow = 980;
-	const FP_PrevTextFrameInFlow: FP_PrevTextFrameInFlow;
-	type FP_PrevVisibleColumnInTbl = 2431;
-	const FP_PrevVisibleColumnInTbl: FP_PrevVisibleColumnInTbl;
-	type FP_PreviewState = 2820;
-	const FP_PreviewState: FP_PreviewState;
-	type FP_PrintBlankPages = 467;
-	const FP_PrintBlankPages: FP_PrintBlankPages;
-	type FP_PrintCollated = 446;
-	const FP_PrintCollated: FP_PrintCollated;
-	type FP_PrintCols = 441;
-	const FP_PrintCols: FP_PrintCols;
-	type FP_PrintDitavalFileName = 2343;
-	const FP_PrintDitavalFileName: FP_PrintDitavalFileName;
-	type FP_PrintDownloadAsianFonts = 501;
-	const FP_PrintDownloadAsianFonts: FP_PrintDownloadAsianFonts;
-	type FP_PrintDownloadTrueTypeAsType1 = 502;
-	const FP_PrintDownloadTrueTypeAsType1: FP_PrintDownloadTrueTypeAsType1;
-	type FP_PrintEmulsion = 466;
-	const FP_PrintEmulsion: FP_PrintEmulsion;
-	type FP_PrintEndPage = 453;
-	const FP_PrintEndPage: FP_PrintEndPage;
-	type FP_PrintEndPageName = 440;
-	const FP_PrintEndPageName: FP_PrintEndPageName;
-	type FP_PrintEndPoint = 454;
-	const FP_PrintEndPoint: FP_PrintEndPoint;
-	type FP_PrintEvenPages = 455;
-	const FP_PrintEvenPages: FP_PrintEvenPages;
-	type FP_PrintFileName = 451;
-	const FP_PrintFileName: FP_PrintFileName;
-	type FP_PrintImaging = 465;
-	const FP_PrintImaging: FP_PrintImaging;
-	type FP_PrintInclude = 519;
-	const FP_PrintInclude: FP_PrintInclude;
-	type FP_PrintLastSheetFirst = 456;
-	const FP_PrintLastSheetFirst: FP_PrintLastSheetFirst;
-	type FP_PrintLowRes = 447;
-	const FP_PrintLowRes: FP_PrintLowRes;
-	type FP_PrintManualFeed = 458;
-	const FP_PrintManualFeed: FP_PrintManualFeed;
-	type FP_PrintNumCopies = 459;
-	const FP_PrintNumCopies: FP_PrintNumCopies;
-	type FP_PrintOddPages = 445;
-	const FP_PrintOddPages: FP_PrintOddPages;
-	type FP_PrintPaperHeight = 462;
-	const FP_PrintPaperHeight: FP_PrintPaperHeight;
-	type FP_PrintPaperWidth = 461;
-	const FP_PrintPaperWidth: FP_PrintPaperWidth;
-	type FP_PrintRegMarkDate = 469;
-	const FP_PrintRegMarkDate: FP_PrintRegMarkDate;
-	type FP_PrintRegistrationMarks = 457;
-	const FP_PrintRegistrationMarks: FP_PrintRegistrationMarks;
-	type FP_PrintRows = 442;
-	const FP_PrintRows: FP_PrintRows;
-	type FP_PrintScale = 450;
-	const FP_PrintScale: FP_PrintScale;
-	type FP_PrintScope = 452;
-	const FP_PrintScope: FP_PrintScope;
-	type FP_PrintSeps = 463;
-	const FP_PrintSeps: FP_PrintSeps;
-	type FP_PrintSpotBW = 498;
-	const FP_PrintSpotBW: FP_PrintSpotBW;
-	type FP_PrintStartPage = 443;
-	const FP_PrintStartPage: FP_PrintStartPage;
-	type FP_PrintStartPageName = 439;
-	const FP_PrintStartPageName: FP_PrintStartPageName;
-	type FP_PrintStartPoint = 444;
-	const FP_PrintStartPoint: FP_PrintStartPoint;
-	type FP_PrintThumbnails = 448;
-	const FP_PrintThumbnails: FP_PrintThumbnails;
-	type FP_PrintToFile = 460;
-	const FP_PrintToFile: FP_PrintToFile;
-	type FP_PrintTomboMarks = 468;
-	const FP_PrintTomboMarks: FP_PrintTomboMarks;
-	type FP_PrinterName = 449;
-	const FP_PrinterName: FP_PrinterName;
-	type FP_ProcessNumber = 79;
-	const FP_ProcessNumber: FP_ProcessNumber;
-	type FP_Product = 1944;
-	const FP_Product: FP_Product;
-	type FP_ProductFamily = 2893;
-	const FP_ProductFamily: FP_ProductFamily;
-	type FP_ProductIsDemo = 66;
-	const FP_ProductIsDemo: FP_ProductIsDemo;
-	type FP_ProductIsStructured = 65;
-	const FP_ProductIsStructured: FP_ProductIsStructured;
-	type FP_ProductName = 42;
-	const FP_ProductName: FP_ProductName;
-	type FP_ProgId = 2421;
-	const FP_ProgId: FP_ProgId;
-	type FP_Public = 1030;
-	const FP_Public: FP_Public;
-	type FP_Radius = 950;
-	const FP_Radius: FP_Radius;
-	type FP_RasterFilterDpi = 2400;
-	const FP_RasterFilterDpi: FP_RasterFilterDpi;
-	type FP_ReadOnly = 1723;
-	const FP_ReadOnly: FP_ReadOnly;
-	type FP_RectangleIsSmoothed = 929;
-	const FP_RectangleIsSmoothed: FP_RectangleIsSmoothed;
-	type FP_Reformatting = 91;
-	const FP_Reformatting: FP_Reformatting;
-	type FP_RememberMissingFontNames = 61;
-	const FP_RememberMissingFontNames: FP_RememberMissingFontNames;
-	type FP_RemoveExtraWhiteSpacesOnXMLImport = 2830;
-	const FP_RemoveExtraWhiteSpacesOnXMLImport: FP_RemoveExtraWhiteSpacesOnXMLImport;
-	type FP_Required = 1032;
-	const FP_Required: FP_Required;
-	type FP_ReservedColor = 1463;
-	const FP_ReservedColor: FP_ReservedColor;
-	type FP_ResizeGripperBarVisibility = 2395;
-	const FP_ResizeGripperBarVisibility: FP_ResizeGripperBarVisibility;
-	type FP_ResizeGripperPos = 2350;
-	const FP_ResizeGripperPos: FP_ResizeGripperPos;
-	type FP_ResolvedDirection = 3038;
-	const FP_ResolvedDirection: FP_ResolvedDirection;
-	type FP_RestartFrameAlertRequired = 2370;
-	const FP_RestartFrameAlertRequired: FP_RestartFrameAlertRequired;
-	type FP_RetainUndoState = 64;
-	const FP_RetainUndoState: FP_RetainUndoState;
-	type FP_ReviewTime = 994;
-	const FP_ReviewTime: FP_ReviewTime;
-	type FP_ReviewerName = 993;
-	const FP_ReviewerName: FP_ReviewerName;
-	type FP_ReviewerNameList = 2825;
-	const FP_ReviewerNameList: FP_ReviewerNameList;
-	type FP_RightColNum = 1344;
-	const FP_RightColNum: FP_RightColNum;
-	type FP_RightIndent = 570;
-	const FP_RightIndent: FP_RightIndent;
-	type FP_RightIndentChange = 2006;
-	const FP_RightIndentChange: FP_RightIndentChange;
-	type FP_RightMargin = 233;
-	const FP_RightMargin: FP_RightMargin;
-	type FP_RightMasterPage = 414;
-	const FP_RightMasterPage: FP_RightMasterPage;
-	type FP_RowIsShown = 1254;
-	const FP_RowIsShown: FP_RowIsShown;
-	type FP_RowKeepWithNext = 1248;
-	const FP_RowKeepWithNext: FP_RowKeepWithNext;
-	type FP_RowKeepWithPrev = 1249;
-	const FP_RowKeepWithPrev: FP_RowKeepWithPrev;
-	type FP_RowMaxHeight = 1250;
-	const FP_RowMaxHeight: FP_RowMaxHeight;
-	type FP_RowMinHeight = 1251;
-	const FP_RowMinHeight: FP_RowMinHeight;
-	type FP_RowStart = 1252;
-	const FP_RowStart: FP_RowStart;
-	type FP_RowTbl = 1246;
-	const FP_RowTbl: FP_RowTbl;
-	type FP_RowType = 1253;
-	const FP_RowType: FP_RowType;
-	type FP_RpcProgramNumber = 77;
-	const FP_RpcProgramNumber: FP_RpcProgramNumber;
-	type FP_RpcPropertyName = 76;
-	const FP_RpcPropertyName: FP_RpcPropertyName;
-	type FP_RubiAlignAtLineBounds = 193;
-	const FP_RubiAlignAtLineBounds: FP_RubiAlignAtLineBounds;
-	type FP_RubiElement = 2176;
-	const FP_RubiElement: FP_RubiElement;
-	type FP_RubiFixedSize = 187;
-	const FP_RubiFixedSize: FP_RubiFixedSize;
-	type FP_RubiOverhang = 192;
-	const FP_RubiOverhang: FP_RubiOverhang;
-	type FP_RubiSize = 186;
-	const FP_RubiSize: FP_RubiSize;
-	type FP_RubiTextRange = 1471;
-	const FP_RubiTextRange: FP_RubiTextRange;
-	type FP_RuleClauseType = 2152;
-	const FP_RuleClauseType: FP_RuleClauseType;
-	type FP_RulingGap = 1433;
-	const FP_RulingGap: FP_RulingGap;
-	type FP_RulingLines = 1435;
-	const FP_RulingLines: FP_RulingLines;
-	type FP_RulingPenWidth = 1432;
-	const FP_RulingPenWidth: FP_RulingPenWidth;
-	type FP_RulingSep = 1434;
-	const FP_RulingSep: FP_RulingSep;
-	type FP_RunInSeparator = 578;
-	const FP_RunInSeparator: FP_RunInSeparator;
-	type FP_Runaround = 787;
-	const FP_Runaround: FP_Runaround;
-	type FP_RunaroundGap = 754;
-	const FP_RunaroundGap: FP_RunaroundGap;
-	type FP_ScreenCaptureDocToFile = 195;
-	const FP_ScreenCaptureDocToFile: FP_ScreenCaptureDocToFile;
-	type FP_ScreenHeight = 36;
-	const FP_ScreenHeight: FP_ScreenHeight;
-	type FP_ScreenWidth = 35;
-	const FP_ScreenWidth: FP_ScreenWidth;
-	type FP_ScreenX = 33;
-	const FP_ScreenX: FP_ScreenX;
-	type FP_ScreenY = 34;
-	const FP_ScreenY: FP_ScreenY;
-	type FP_SecNumComputeMethod = 915;
-	const FP_SecNumComputeMethod: FP_SecNumComputeMethod;
-	type FP_SectionNumStyle = 916;
-	const FP_SectionNumStyle: FP_SectionNumStyle;
-	type FP_SectionNumText = 918;
-	const FP_SectionNumText: FP_SectionNumText;
-	type FP_SectionNumber = 917;
-	const FP_SectionNumber: FP_SectionNumber;
-	type FP_SelectedRow = 1730;
-	const FP_SelectedRow: FP_SelectedRow;
-	type FP_SelectedRowId = 1731;
-	const FP_SelectedRowId: FP_SelectedRowId;
-	type FP_SelectedRowItems = 1719;
-	const FP_SelectedRowItems: FP_SelectedRowItems;
-	type FP_SelectedTbl = 129;
-	const FP_SelectedTbl: FP_SelectedTbl;
-	type FP_Sensitivity = 1708;
-	const FP_Sensitivity: FP_Sensitivity;
-	type FP_SepOverride = 1140;
-	const FP_SepOverride: FP_SepOverride;
-	type FP_SeparateInclusions = 1493;
-	const FP_SeparateInclusions: FP_SeparateInclusions;
-	type FP_ServerState = 2808;
-	const FP_ServerState: FP_ServerState;
-	type FP_ServerUrl = 2807;
-	const FP_ServerUrl: FP_ServerUrl;
-	type FP_Shadow = 613;
-	const FP_Shadow: FP_Shadow;
-	type FP_ShiftOrUnshiftCommand = 1940;
-	const FP_ShiftOrUnshiftCommand: FP_ShiftOrUnshiftCommand;
-	type FP_ShowAll = 155;
-	const FP_ShowAll: FP_ShowAll;
-	type FP_ShowCondIndicators = 156;
-	const FP_ShowCondIndicators: FP_ShowCondIndicators;
-	type FP_ShowElementDescriptiveNames = 1501;
-	const FP_ShowElementDescriptiveNames: FP_ShowElementDescriptiveNames;
-	type FP_SideHeadGap = 1173;
-	const FP_SideHeadGap: FP_SideHeadGap;
-	type FP_SideHeadPlacement = 1171;
-	const FP_SideHeadPlacement: FP_SideHeadPlacement;
-	type FP_SideHeadRoomInFlow = 1174;
-	const FP_SideHeadRoomInFlow: FP_SideHeadRoomInFlow;
-	type FP_SideHeadWidth = 1172;
-	const FP_SideHeadWidth: FP_SideHeadWidth;
-	type FP_SideOffset = 877;
-	const FP_SideOffset: FP_SideOffset;
-	type FP_Size = 1712;
-	const FP_Size: FP_Size;
-	type FP_SkipBlankSeps = 464;
-	const FP_SkipBlankSeps: FP_SkipBlankSeps;
-	type FP_SmallCapsSize = 182;
-	const FP_SmallCapsSize: FP_SmallCapsSize;
-	type FP_SmallCapsStretch = 185;
-	const FP_SmallCapsStretch: FP_SmallCapsStretch;
-	type FP_SmartQuotes = 237;
-	const FP_SmartQuotes: FP_SmartQuotes;
-	type FP_SmartSpaces = 239;
-	const FP_SmartSpaces: FP_SmartSpaces;
-	type FP_Snap = 151;
-	const FP_Snap: FP_Snap;
-	type FP_SnapAngle = 394;
-	const FP_SnapAngle: FP_SnapAngle;
-	type FP_SnapGridUnits = 393;
-	const FP_SnapGridUnits: FP_SnapGridUnits;
-	type FP_SortingEnabled = 1718;
-	const FP_SortingEnabled: FP_SortingEnabled;
-	type FP_Source = 2854;
-	const FP_Source: FP_Source;
-	type FP_SourceType = 2855;
-	const FP_SourceType: FP_SourceType;
-	type FP_SpaceAbove = 553;
-	const FP_SpaceAbove: FP_SpaceAbove;
-	type FP_SpaceAboveChange = 2002;
-	const FP_SpaceAboveChange: FP_SpaceAboveChange;
-	type FP_SpaceBelow = 568;
-	const FP_SpaceBelow: FP_SpaceBelow;
-	type FP_SpaceBelowChange = 2003;
-	const FP_SpaceBelowChange: FP_SpaceBelowChange;
-	type FP_Spacing = 1167;
-	const FP_Spacing: FP_Spacing;
-	type FP_Specification = 2150;
-	const FP_Specification: FP_Specification;
-	type FP_SpecificationForCSS = 2161;
-	const FP_SpecificationForCSS: FP_SpecificationForCSS;
-	type FP_SpecifiedKeyCatalog = 2858;
-	const FP_SpecifiedKeyCatalog: FP_SpecifiedKeyCatalog;
-	type FP_SpotColorView = 392;
-	const FP_SpotColorView: FP_SpotColorView;
-	type FP_Spread = 618;
-	const FP_Spread: FP_Spread;
-	type FP_SpreadChange = 2013;
-	const FP_SpreadChange: FP_SpreadChange;
-	type FP_StackWarningLevel = 2404;
-	const FP_StackWarningLevel: FP_StackWarningLevel;
-	type FP_Start = 567;
-	const FP_Start: FP_Start;
-	type FP_State = 1702;
-	const FP_State: FP_State;
-	type FP_StatusLine = 108;
-	const FP_StatusLine: FP_StatusLine;
-	type FP_StopCountingAt = 2102;
-	const FP_StopCountingAt: FP_StopCountingAt;
-	type FP_Stretch = 643;
-	const FP_Stretch: FP_Stretch;
-	type FP_StretchChange = 2026;
-	const FP_StretchChange: FP_StretchChange;
-	type FP_Strikethrough = 609;
-	const FP_Strikethrough: FP_Strikethrough;
-	type FP_Strings = 337;
-	const FP_Strings: FP_Strings;
-	type FP_StructAppAttrConfigFile = 1500;
-	const FP_StructAppAttrConfigFile: FP_StructAppAttrConfigFile;
-	type FP_StructAppsFile = 2889;
-	const FP_StructAppsFile: FP_StructAppsFile;
-	type FP_StructAppsFileId = 2890;
-	const FP_StructAppsFileId: FP_StructAppsFileId;
-	type FP_StructureCursorTypes = 2296;
-	const FP_StructureCursorTypes: FP_StructureCursorTypes;
-	type FP_StructuredApplication = 1495;
-	const FP_StructuredApplication: FP_StructuredApplication;
-	type FP_StructuredApplicationForOpen = 1498;
-	const FP_StructuredApplicationForOpen: FP_StructuredApplicationForOpen;
-	type FP_StructuredApplicationList = 1497;
-	const FP_StructuredApplicationList: FP_StructuredApplicationList;
-	type FP_StructuredDummyDocText = 2883;
-	const FP_StructuredDummyDocText: FP_StructuredDummyDocText;
-	type FP_StyleOverride = 1142;
-	const FP_StyleOverride: FP_StyleOverride;
-	type FP_StyleOverrides = 1151;
-	const FP_StyleOverrides: FP_StyleOverrides;
-	type FP_StyleTag = 770;
-	const FP_StyleTag: FP_StyleTag;
-	type FP_SubFmtRule = 2156;
-	const FP_SubFmtRule: FP_SubFmtRule;
-	type FP_SubScriptShift = 181;
-	const FP_SubScriptShift: FP_SubScriptShift;
-	type FP_SubScriptSize = 180;
-	const FP_SubScriptSize: FP_SubScriptSize;
-	type FP_SubScriptStretch = 184;
-	const FP_SubScriptStretch: FP_SubScriptStretch;
-	type FP_SubsecNumComputeMethod = 815;
-	const FP_SubsecNumComputeMethod: FP_SubsecNumComputeMethod;
-	type FP_SubsectionNumStyle = 816;
-	const FP_SubsectionNumStyle: FP_SubsectionNumStyle;
-	type FP_SubsectionNumText = 818;
-	const FP_SubsectionNumText: FP_SubsectionNumText;
-	type FP_SubsectionNumber = 817;
-	const FP_SubsectionNumber: FP_SubsectionNumber;
-	type FP_SuffixRules = 1588;
-	const FP_SuffixRules: FP_SuffixRules;
-	type FP_SuperScriptShift = 179;
-	const FP_SuperScriptShift: FP_SuperScriptShift;
-	type FP_SuperScriptSize = 178;
-	const FP_SuperScriptSize: FP_SuperScriptSize;
-	type FP_SuperScriptStretch = 183;
-	const FP_SuperScriptStretch: FP_SuperScriptStretch;
-	type FP_SuppressXMLParserWarnings = 2419;
-	const FP_SuppressXMLParserWarnings: FP_SuppressXMLParserWarnings;
-	type FP_Symbols = 334;
-	const FP_Symbols: FP_Symbols;
-	type FP_SymbolsList = 335;
-	const FP_SymbolsList: FP_SymbolsList;
-	type FP_SystemVar = 1049;
-	const FP_SystemVar: FP_SystemVar;
-	type FP_TabStops = 1715;
-	const FP_TabStops: FP_TabStops;
-	type FP_TableTagging = 1585;
-	const FP_TableTagging: FP_TableTagging;
-	type FP_Tabs = 574;
-	const FP_Tabs: FP_Tabs;
-	type FP_TailArrow = 744;
-	const FP_TailArrow: FP_TailArrow;
-	type FP_TblAlignment = 1282;
-	const FP_TblAlignment: FP_TblAlignment;
-	type FP_TblBodyElement = 2174;
-	const FP_TblBodyElement: FP_TblBodyElement;
-	type FP_TblBodyFirstColor = 1299;
-	const FP_TblBodyFirstColor: FP_TblBodyFirstColor;
-	type FP_TblBodyFirstFill = 1298;
-	const FP_TblBodyFirstFill: FP_TblBodyFirstFill;
-	type FP_TblBodyFirstPeriod = 1301;
-	const FP_TblBodyFirstPeriod: FP_TblBodyFirstPeriod;
-	type FP_TblBodyNextColor = 1304;
-	const FP_TblBodyNextColor: FP_TblBodyNextColor;
-	type FP_TblBodyNextFill = 1302;
-	const FP_TblBodyNextFill: FP_TblBodyNextFill;
-	type FP_TblBodyNextPeriod = 1303;
-	const FP_TblBodyNextPeriod: FP_TblBodyNextPeriod;
-	type FP_TblBodyRowRuling = 1310;
-	const FP_TblBodyRowRuling: FP_TblBodyRowRuling;
-	type FP_TblBodyRowRulingPeriod = 1294;
-	const FP_TblBodyRowRulingPeriod: FP_TblBodyRowRulingPeriod;
-	type FP_TblBodyShadeBy = 1300;
-	const FP_TblBodyShadeBy: FP_TblBodyShadeBy;
-	type FP_TblBottomRuling = 1306;
-	const FP_TblBottomRuling: FP_TblBottomRuling;
-	type FP_TblCatalogEntry = 1292;
-	const FP_TblCatalogEntry: FP_TblCatalogEntry;
-	type FP_TblCellBottomMargin = 1316;
-	const FP_TblCellBottomMargin: FP_TblCellBottomMargin;
-	type FP_TblCellLeftMargin = 1317;
-	const FP_TblCellLeftMargin: FP_TblCellLeftMargin;
-	type FP_TblCellRightMargin = 1318;
-	const FP_TblCellRightMargin: FP_TblCellRightMargin;
-	type FP_TblCellTopMargin = 1315;
-	const FP_TblCellTopMargin: FP_TblCellTopMargin;
-	type FP_TblColRuling = 1309;
-	const FP_TblColRuling: FP_TblColRuling;
-	type FP_TblColRulingPeriod = 1293;
-	const FP_TblColRulingPeriod: FP_TblColRulingPeriod;
-	type FP_TblColWidths = 1345;
-	const FP_TblColWidths: FP_TblColWidths;
-	type FP_TblElement = 2171;
-	const FP_TblElement: FP_TblElement;
-	type FP_TblFnCellPosition = 318;
-	const FP_TblFnCellPosition: FP_TblFnCellPosition;
-	type FP_TblFnCellPrefix = 320;
-	const FP_TblFnCellPrefix: FP_TblFnCellPrefix;
-	type FP_TblFnCellSuffix = 319;
-	const FP_TblFnCellSuffix: FP_TblFnCellSuffix;
-	type FP_TblFnCustNumString = 317;
-	const FP_TblFnCustNumString: FP_TblFnCustNumString;
-	type FP_TblFnFmt = 315;
-	const FP_TblFnFmt: FP_TblFnFmt;
-	type FP_TblFnNumComputeMethod = 324;
-	const FP_TblFnNumComputeMethod: FP_TblFnNumComputeMethod;
-	type FP_TblFnNumStyle = 316;
-	const FP_TblFnNumStyle: FP_TblFnNumStyle;
-	type FP_TblFnPosition = 321;
-	const FP_TblFnPosition: FP_TblFnPosition;
-	type FP_TblFnPrefix = 322;
-	const FP_TblFnPrefix: FP_TblFnPrefix;
-	type FP_TblFnSuffix = 323;
-	const FP_TblFnSuffix: FP_TblFnSuffix;
-	type FP_TblFooterElement = 2175;
-	const FP_TblFooterElement: FP_TblFooterElement;
-	type FP_TblHFColor = 1297;
-	const FP_TblHFColor: FP_TblHFColor;
-	type FP_TblHFFill = 1296;
-	const FP_TblHFFill: FP_TblHFFill;
-	type FP_TblHFRowRuling = 1312;
-	const FP_TblHFRowRuling: FP_TblHFRowRuling;
-	type FP_TblHFSeparatorRuling = 1311;
-	const FP_TblHFSeparatorRuling: FP_TblHFSeparatorRuling;
-	type FP_TblHeaderElement = 2173;
-	const FP_TblHeaderElement: FP_TblHeaderElement;
-	type FP_TblInLockedTi = 1319;
-	const FP_TblInLockedTi: FP_TblInLockedTi;
-	type FP_TblInitNumBodyRows = 1286;
-	const FP_TblInitNumBodyRows: FP_TblInitNumBodyRows;
-	type FP_TblInitNumCols = 1284;
-	const FP_TblInitNumCols: FP_TblInitNumCols;
-	type FP_TblInitNumFRows = 1287;
-	const FP_TblInitNumFRows: FP_TblInitNumFRows;
-	type FP_TblInitNumHRows = 1285;
-	const FP_TblInitNumHRows: FP_TblInitNumHRows;
-	type FP_TblLastBodyRuling = 1295;
-	const FP_TblLastBodyRuling: FP_TblLastBodyRuling;
-	type FP_TblLeftIndent = 1278;
-	const FP_TblLeftIndent: FP_TblLeftIndent;
-	type FP_TblLeftRuling = 1307;
-	const FP_TblLeftRuling: FP_TblLeftRuling;
-	type FP_TblNumCols = 1335;
-	const FP_TblNumCols: FP_TblNumCols;
-	type FP_TblNumRows = 1336;
-	const FP_TblNumRows: FP_TblNumRows;
-	type FP_TblNumbering = 1288;
-	const FP_TblNumbering: FP_TblNumbering;
-	type FP_TblOtherBodyRowRuling = 1313;
-	const FP_TblOtherBodyRowRuling: FP_TblOtherBodyRowRuling;
-	type FP_TblOtherColRuling = 1314;
-	const FP_TblOtherColRuling: FP_TblOtherColRuling;
-	type FP_TblPlacement = 1283;
-	const FP_TblPlacement: FP_TblPlacement;
-	type FP_TblRightIndent = 1279;
-	const FP_TblRightIndent: FP_TblRightIndent;
-	type FP_TblRightRuling = 1308;
-	const FP_TblRightRuling: FP_TblRightRuling;
-	type FP_TblSpaceAbove = 1280;
-	const FP_TblSpaceAbove: FP_TblSpaceAbove;
-	type FP_TblSpaceBelow = 1281;
-	const FP_TblSpaceBelow: FP_TblSpaceBelow;
-	type FP_TblTag = 1275;
-	const FP_TblTag: FP_TblTag;
-	type FP_TblTitleElement = 2172;
-	const FP_TblTitleElement: FP_TblTitleElement;
-	type FP_TblTitleGap = 1290;
-	const FP_TblTitleGap: FP_TblTitleGap;
-	type FP_TblTitlePosition = 1289;
-	const FP_TblTitlePosition: FP_TblTitlePosition;
-	type FP_TblTitleSelected = 1346;
-	const FP_TblTitleSelected: FP_TblTitleSelected;
-	type FP_TblTopRuling = 1305;
-	const FP_TblTopRuling: FP_TblTopRuling;
-	type FP_TblWidth = 1340;
-	const FP_TblWidth: FP_TblWidth;
-	type FP_TechSuiteInternal = 2409;
-	const FP_TechSuiteInternal: FP_TechSuiteInternal;
-	type FP_TechSuiteInternal2 = 2411;
-	const FP_TechSuiteInternal2: FP_TechSuiteInternal2;
-	type FP_TemplateDatas = 4007;
-	const FP_TemplateDatas: FP_TemplateDatas;
-	type FP_Text = 1701;
-	const FP_Text: FP_Text;
-	type FP_TextColor = 1503;
-	const FP_TextColor: FP_TextColor;
-	type FP_TextFmtRules = 1582;
-	const FP_TextFmtRules: FP_TextFmtRules;
-	type FP_TextIsInvalidInElement = 1660;
-	const FP_TextIsInvalidInElement: FP_TextIsInvalidInElement;
-	type FP_TextLineType = 1095;
-	const FP_TextLineType: FP_TextLineType;
-	type FP_TextLoc = 879;
-	const FP_TextLoc: FP_TextLoc;
-	type FP_TextRange = 1071;
-	const FP_TextRange: FP_TextRange;
-	type FP_TextSelection = 109;
-	const FP_TextSelection: FP_TextSelection;
-	type FP_Theta = 831;
-	const FP_Theta: FP_Theta;
-	type FP_TiAutomaticUpdate = 2051;
-	const FP_TiAutomaticUpdate: FP_TiAutomaticUpdate;
-	type FP_TiByRows = 2069;
-	const FP_TiByRows: FP_TiByRows;
-	type FP_TiClientData = 2079;
-	const FP_TiClientData: FP_TiClientData;
-	type FP_TiClientName = 2076;
-	const FP_TiClientName: FP_TiClientName;
-	type FP_TiClientSource = 2077;
-	const FP_TiClientSource: FP_TiClientSource;
-	type FP_TiClientType = 2078;
-	const FP_TiClientType: FP_TiClientType;
-	type FP_TiClientUpdateSilent = 2080;
-	const FP_TiClientUpdateSilent: FP_TiClientUpdateSilent;
-	type FP_TiEOLisEOP = 2065;
-	const FP_TiEOLisEOP: FP_TiEOLisEOP;
-	type FP_TiFile = 2053;
-	const FP_TiFile: FP_TiFile;
-	type FP_TiFileModDate = 2057;
-	const FP_TiFileModDate: FP_TiFileModDate;
-	type FP_TiFlowName = 2060;
-	const FP_TiFlowName: FP_TiFlowName;
-	type FP_TiFlowPageSpace = 2061;
-	const FP_TiFlowPageSpace: FP_TiFlowPageSpace;
-	type FP_TiFormat = 2062;
-	const FP_TiFormat: FP_TiFormat;
-	type FP_TiHeadersEmpty = 2068;
-	const FP_TiHeadersEmpty: FP_TiHeadersEmpty;
-	type FP_TiIsNested = 2058;
-	const FP_TiIsNested: FP_TiIsNested;
-	type FP_TiIsUnresolved = 2075;
-	const FP_TiIsUnresolved: FP_TiIsUnresolved;
-	type FP_TiLocked = 2056;
-	const FP_TiLocked: FP_TiLocked;
-	type FP_TiMacEdition = 2054;
-	const FP_TiMacEdition: FP_TiMacEdition;
-	type FP_TiMainFlow = 2059;
-	const FP_TiMainFlow: FP_TiMainFlow;
-	type FP_TiNumCols = 2072;
-	const FP_TiNumCols: FP_TiNumCols;
-	type FP_TiNumHeaderRows = 2067;
-	const FP_TiNumHeaderRows: FP_TiNumHeaderRows;
-	type FP_TiNumSeparators = 2071;
-	const FP_TiNumSeparators: FP_TiNumSeparators;
-	type FP_TiRemoveOverrides = 2064;
-	const FP_TiRemoveOverrides: FP_TiRemoveOverrides;
-	type FP_TiRemovePageBreaks = 2063;
-	const FP_TiRemovePageBreaks: FP_TiRemovePageBreaks;
-	type FP_TiSeparator = 2070;
-	const FP_TiSeparator: FP_TiSeparator;
-	type FP_TiTblTag = 2066;
-	const FP_TiTblTag: FP_TiTblTag;
-	type FP_TiTextEncoding = 2073;
-	const FP_TiTextEncoding: FP_TiTextEncoding;
-	type FP_TintBaseColor = 1467;
-	const FP_TintBaseColor: FP_TintBaseColor;
-	type FP_TintPercent = 755;
-	const FP_TintPercent: FP_TintPercent;
-	type FP_TmpDir = 86;
-	const FP_TmpDir: FP_TmpDir;
-	type FP_ToolBar = 95;
-	const FP_ToolBar: FP_ToolBar;
-	type FP_ToolTipText = 1727;
-	const FP_ToolTipText: FP_ToolTipText;
-	type FP_TopMargin = 230;
-	const FP_TopMargin: FP_TopMargin;
-	type FP_TopRowSelection = 1341;
-	const FP_TopRowSelection: FP_TopRowSelection;
-	type FP_TopSepAtIndent = 2009;
-	const FP_TopSepAtIndent: FP_TopSepAtIndent;
-	type FP_TopSeparator = 554;
-	const FP_TopSeparator: FP_TopSeparator;
-	type FP_TopicRefAbsoluteFilePath = 2347;
-	const FP_TopicRefAbsoluteFilePath: FP_TopicRefAbsoluteFilePath;
-	type FP_TrackChangesAddedColor = 2826;
-	const FP_TrackChangesAddedColor: FP_TrackChangesAddedColor;
-	type FP_TrackChangesDeletedColor = 2827;
-	const FP_TrackChangesDeletedColor: FP_TrackChangesDeletedColor;
-	type FP_TrackChangesOn = 2819;
-	const FP_TrackChangesOn: FP_TrackChangesOn;
-	type FP_Transient = 1031;
-	const FP_Transient: FP_Transient;
-	type FP_TrapwiseCompatibility = 495;
-	const FP_TrapwiseCompatibility: FP_TrapwiseCompatibility;
-	type FP_Tsume = 649;
-	const FP_Tsume: FP_Tsume;
-	type FP_TypeOfDisplayText = 500;
-	const FP_TypeOfDisplayText: FP_TypeOfDisplayText;
-	type FP_UIColorBackground = 2297;
-	const FP_UIColorBackground: FP_UIColorBackground;
-	type FP_UIColorRuler = 2298;
-	const FP_UIColorRuler: FP_UIColorRuler;
-	type FP_Underlining = 608;
-	const FP_Underlining: FP_Underlining;
-	type FP_UndoFDKRecording = 2403;
-	const FP_UndoFDKRecording: FP_UndoFDKRecording;
-	type FP_Unique = 21;
-	const FP_Unique: FP_Unique;
-	type FP_Untouchable = 146;
-	const FP_Untouchable: FP_Untouchable;
-	type FP_UpdatingStructure = 2888;
-	const FP_UpdatingStructure: FP_UpdatingStructure;
-	type FP_UseAFrameIsCropped = 3015;
-	const FP_UseAFrameIsCropped: FP_UseAFrameIsCropped;
-	type FP_UseAFrameIsFloating = 3014;
-	const FP_UseAFrameIsFloating: FP_UseAFrameIsFloating;
-	type FP_UseAlignment = 3018;
-	const FP_UseAlignment: FP_UseAlignment;
-	type FP_UseAnchorType = 3013;
-	const FP_UseAnchorType: FP_UseAnchorType;
-	type FP_UseAngle = 3007;
-	const FP_UseAngle: FP_UseAngle;
-	type FP_UseBaselineOffset = 3017;
-	const FP_UseBaselineOffset: FP_UseBaselineOffset;
-	type FP_UseBkColor = 991;
-	const FP_UseBkColor: FP_UseBkColor;
-	type FP_UseBorderWidth = 3001;
-	const FP_UseBorderWidth: FP_UseBorderWidth;
-	type FP_UseCapitalization = 636;
-	const FP_UseCapitalization: FP_UseCapitalization;
-	type FP_UseChangeBar = 628;
-	const FP_UseChangeBar: FP_UseChangeBar;
-	type FP_UseColGapWidth = 3020;
-	const FP_UseColGapWidth: FP_UseColGapWidth;
-	type FP_UseColor = 638;
-	const FP_UseColor: FP_UseColor;
-	type FP_UseColumnsAreBalanced = 3028;
-	const FP_UseColumnsAreBalanced: FP_UseColumnsAreBalanced;
-	type FP_UseDTheta = 3024;
-	const FP_UseDTheta: FP_UseDTheta;
-	type FP_UseFMConsoleForErrorLog = 825;
-	const FP_UseFMConsoleForErrorLog: FP_UseFMConsoleForErrorLog;
-	type FP_UseFill = 3002;
-	const FP_UseFill: FP_UseFill;
-	type FP_UseFlowIsAutoConnect = 3031;
-	const FP_UseFlowIsAutoConnect: FP_UseFlowIsAutoConnect;
-	type FP_UseFlowIsPostScript = 3032;
-	const FP_UseFlowIsPostScript: FP_UseFlowIsPostScript;
-	type FP_UseFontAngle = 624;
-	const FP_UseFontAngle: FP_UseFontAngle;
-	type FP_UseFontFamily = 621;
-	const FP_UseFontFamily: FP_UseFontFamily;
-	type FP_UseFontSize = 632;
-	const FP_UseFontSize: FP_UseFontSize;
-	type FP_UseFontVariation = 622;
-	const FP_UseFontVariation: FP_UseFontVariation;
-	type FP_UseFontWeight = 623;
-	const FP_UseFontWeight: FP_UseFontWeight;
-	type FP_UseHeight = 3011;
-	const FP_UseHeight: FP_UseHeight;
-	type FP_UseInitialStructure = 1492;
-	const FP_UseInitialStructure: FP_UseInitialStructure;
-	type FP_UseInitialStructureOfAutoInsertedElements = 1499;
-	const FP_UseInitialStructureOfAutoInsertedElements: FP_UseInitialStructureOfAutoInsertedElements;
-	type FP_UseInsetDpi = 3027;
-	const FP_UseInsetDpi: FP_UseInsetDpi;
-	type FP_UseKernX = 633;
-	const FP_UseKernX: FP_UseKernX;
-	type FP_UseKernY = 634;
-	const FP_UseKernY: FP_UseKernY;
-	type FP_UseLanguage = 645;
-	const FP_UseLanguage: FP_UseLanguage;
-	type FP_UseLocX = 3008;
-	const FP_UseLocX: FP_UseLocX;
-	type FP_UseLocY = 3009;
-	const FP_UseLocY: FP_UseLocY;
-	type FP_UseMathMLApplyPgfStyle = 3104;
-	const FP_UseMathMLApplyPgfStyle: FP_UseMathMLApplyPgfStyle;
-	type FP_UseMathMLComposeDpi = 3033;
-	const FP_UseMathMLComposeDpi: FP_UseMathMLComposeDpi;
-	type FP_UseMathMLDpi = 3035;
-	const FP_UseMathMLDpi: FP_UseMathMLDpi;
-	type FP_UseMathMLFontSize = 3034;
-	const FP_UseMathMLFontSize: FP_UseMathMLFontSize;
-	type FP_UseMathMLInline = 3103;
-	const FP_UseMathMLInline: FP_UseMathMLInline;
-	type FP_UseMathSize = 3026;
-	const FP_UseMathSize: FP_UseMathSize;
-	type FP_UseNextTag = 566;
-	const FP_UseNextTag: FP_UseNextTag;
-	type FP_UseNumColumns = 3019;
-	const FP_UseNumColumns: FP_UseNumColumns;
-	type FP_UseOutline = 629;
-	const FP_UseOutline: FP_UseOutline;
-	type FP_UseOverline = 627;
-	const FP_UseOverline: FP_UseOverline;
-	type FP_UseOverprint = 3006;
-	const FP_UseOverprint: FP_UseOverprint;
-	type FP_UsePairKern = 631;
-	const FP_UsePairKern: FP_UsePairKern;
-	type FP_UsePen = 3003;
-	const FP_UsePen: FP_UsePen;
-	type FP_UsePosition = 637;
-	const FP_UsePosition: FP_UsePosition;
-	type FP_UseRadius = 3030;
-	const FP_UseRadius: FP_UseRadius;
-	type FP_UseRunaround = 3012;
-	const FP_UseRunaround: FP_UseRunaround;
-	type FP_UseRunaroundGap = 3004;
-	const FP_UseRunaroundGap: FP_UseRunaroundGap;
-	type FP_UseSepOverride = 1141;
-	const FP_UseSepOverride: FP_UseSepOverride;
-	type FP_UseShadow = 630;
-	const FP_UseShadow: FP_UseShadow;
-	type FP_UseSideHeadGap = 3022;
-	const FP_UseSideHeadGap: FP_UseSideHeadGap;
-	type FP_UseSideHeadPlacement = 3029;
-	const FP_UseSideHeadPlacement: FP_UseSideHeadPlacement;
-	type FP_UseSideHeadWidth = 3021;
-	const FP_UseSideHeadWidth: FP_UseSideHeadWidth;
-	type FP_UseSideOffset = 3016;
-	const FP_UseSideOffset: FP_UseSideOffset;
-	type FP_UseSpread = 635;
-	const FP_UseSpread: FP_UseSpread;
-	type FP_UseStretch = 644;
-	const FP_UseStretch: FP_UseStretch;
-	type FP_UseStrikethrough = 626;
-	const FP_UseStrikethrough: FP_UseStrikethrough;
-	type FP_UseTextLineType = 3025;
-	const FP_UseTextLineType: FP_UseTextLineType;
-	type FP_UseTheta = 3023;
-	const FP_UseTheta: FP_UseTheta;
-	type FP_UseTintPercent = 3005;
-	const FP_UseTintPercent: FP_UseTintPercent;
-	type FP_UseTsume = 650;
-	const FP_UseTsume: FP_UseTsume;
-	type FP_UseUnderlining = 625;
-	const FP_UseUnderlining: FP_UseUnderlining;
-	type FP_UseWidth = 3010;
-	const FP_UseWidth: FP_UseWidth;
-	type FP_UserHomeDir = 84;
-	const FP_UserHomeDir: FP_UserHomeDir;
-	type FP_UserLogin = 83;
-	const FP_UserLogin: FP_UserLogin;
-	type FP_UserName = 82;
-	const FP_UserName: FP_UserName;
-	type FP_UserSettingsDir = 152;
-	const FP_UserSettingsDir: FP_UserSettingsDir;
-	type FP_UserString = 22;
-	const FP_UserString: FP_UserString;
-	type FP_ValidHighestLevel = 1574;
-	const FP_ValidHighestLevel: FP_ValidHighestLevel;
-	type FP_Validating = 94;
-	const FP_Validating: FP_Validating;
-	type FP_ValidationFlags = 1668;
-	const FP_ValidationFlags: FP_ValidationFlags;
-	type FP_VarFmt = 1047;
-	const FP_VarFmt: FP_VarFmt;
-	type FP_Variables = 336;
-	const FP_Variables: FP_Variables;
-	type FP_VersionDescription = 1512;
-	const FP_VersionDescription: FP_VersionDescription;
-	type FP_VersionMajor = 43;
-	const FP_VersionMajor: FP_VersionMajor;
-	type FP_VersionMinor = 44;
-	const FP_VersionMinor: FP_VersionMinor;
-	type FP_VersionRevision = 41;
-	const FP_VersionRevision: FP_VersionRevision;
-	type FP_VerticalSpreadLarge = 345;
-	const FP_VerticalSpreadLarge: FP_VerticalSpreadLarge;
-	type FP_VerticalSpreadMed = 344;
-	const FP_VerticalSpreadMed: FP_VerticalSpreadMed;
-	type FP_VerticalSpreadSmall = 343;
-	const FP_VerticalSpreadSmall: FP_VerticalSpreadSmall;
-	type FP_View = 1945;
-	const FP_View: FP_View;
-	type FP_ViewBorders = 382;
-	const FP_ViewBorders: FP_ViewBorders;
-	type FP_ViewBreadCrumbs = 2902;
-	const FP_ViewBreadCrumbs: FP_ViewBreadCrumbs;
-	type FP_ViewDisplayUnits = 390;
-	const FP_ViewDisplayUnits: FP_ViewDisplayUnits;
-	type FP_ViewFontSizeUnits = 396;
-	const FP_ViewFontSizeUnits: FP_ViewFontSizeUnits;
-	type FP_ViewGrid = 389;
-	const FP_ViewGrid: FP_ViewGrid;
-	type FP_ViewGridUnits = 386;
-	const FP_ViewGridUnits: FP_ViewGridUnits;
-	type FP_ViewHotspotIndicators = 2357;
-	const FP_ViewHotspotIndicators: FP_ViewHotspotIndicators;
-	type FP_ViewLinkBoundaries = 395;
-	const FP_ViewLinkBoundaries: FP_ViewLinkBoundaries;
-	type FP_ViewNoGraphics = 384;
-	const FP_ViewNoGraphics: FP_ViewNoGraphics;
-	type FP_ViewOnlyDeadCodes = 140;
-	const FP_ViewOnlyDeadCodes: FP_ViewOnlyDeadCodes;
-	type FP_ViewOnlyMenuBar = 144;
-	const FP_ViewOnlyMenuBar: FP_ViewOnlyMenuBar;
-	type FP_ViewOnlySelect = 139;
-	const FP_ViewOnlySelect: FP_ViewOnlySelect;
-	type FP_ViewOnlyWinBorders = 136;
-	const FP_ViewOnlyWinBorders: FP_ViewOnlyWinBorders;
-	type FP_ViewOnlyWinMenubar = 135;
-	const FP_ViewOnlyWinMenubar: FP_ViewOnlyWinMenubar;
-	type FP_ViewOnlyWinPalette = 134;
-	const FP_ViewOnlyWinPalette: FP_ViewOnlyWinPalette;
-	type FP_ViewOnlyWinPopup = 137;
-	const FP_ViewOnlyWinPopup: FP_ViewOnlyWinPopup;
-	type FP_ViewOnlyXRef = 138;
-	const FP_ViewOnlyXRef: FP_ViewOnlyXRef;
-	type FP_ViewPageScrolling = 385;
-	const FP_ViewPageScrolling: FP_ViewPageScrolling;
-	type FP_ViewRulerUnits = 391;
-	const FP_ViewRulerUnits: FP_ViewRulerUnits;
-	type FP_ViewRulers = 383;
-	const FP_ViewRulers: FP_ViewRulers;
-	type FP_ViewTextSymbols = 388;
-	const FP_ViewTextSymbols: FP_ViewTextSymbols;
-	type FP_Visibility = 1713;
-	const FP_Visibility: FP_Visibility;
-	type FP_VisualCaretMovement = 1511;
-	const FP_VisualCaretMovement: FP_VisualCaretMovement;
-	type FP_VolNumComputeMethod = 211;
-	const FP_VolNumComputeMethod: FP_VolNumComputeMethod;
-	type FP_VolumeNumStyle = 213;
-	const FP_VolumeNumStyle: FP_VolumeNumStyle;
-	type FP_VolumeNumText = 214;
-	const FP_VolumeNumText: FP_VolumeNumText;
-	type FP_VolumeNumber = 212;
-	const FP_VolumeNumber: FP_VolumeNumber;
-	type FP_WesternFamily = 2284;
-	const FP_WesternFamily: FP_WesternFamily;
-	type FP_WesternFontPanoseName = 648;
-	const FP_WesternFontPanoseName: FP_WesternFontPanoseName;
-	type FP_WesternFontPlatformName = 646;
-	const FP_WesternFontPlatformName: FP_WesternFontPlatformName;
-	type FP_WesternFontPostScriptName = 647;
-	const FP_WesternFontPostScriptName: FP_WesternFontPostScriptName;
-	type FP_WesternShift = 2286;
-	const FP_WesternShift: FP_WesternShift;
-	type FP_WesternSize = 2285;
-	const FP_WesternSize: FP_WesternSize;
-	type FP_WideRubiSpaceForJapanese = 189;
-	const FP_WideRubiSpaceForJapanese: FP_WideRubiSpaceForJapanese;
-	type FP_WideRubiSpaceForOther = 191;
-	const FP_WideRubiSpaceForOther: FP_WideRubiSpaceForOther;
-	type FP_Width = 783;
-	const FP_Width: FP_Width;
-	type FP_Window = 1946;
-	const FP_Window: FP_Window;
-	type FP_WindowHandle = 1717;
-	const FP_WindowHandle: FP_WindowHandle;
-	type FP_WindowSystem = 47;
-	const FP_WindowSystem: FP_WindowSystem;
-	type FP_XMLStructuredApplicationList = 1598;
-	const FP_XMLStructuredApplicationList: FP_XMLStructuredApplicationList;
-	type FP_XRefAltText = 1153;
-	const FP_XRefAltText: FP_XRefAltText;
-	type FP_XRefClientName = 1154;
-	const FP_XRefClientName: FP_XRefClientName;
-	type FP_XRefClientType = 1155;
-	const FP_XRefClientType: FP_XRefClientType;
-	type FP_XRefFile = 1070;
-	const FP_XRefFile: FP_XRefFile;
-	type FP_XRefFmt = 1073;
-	const FP_XRefFmt: FP_XRefFmt;
-	type FP_XRefIsUnresolved = 1077;
-	const FP_XRefIsUnresolved: FP_XRefIsUnresolved;
-	type FP_XRefResolvedWithKeyref = 1156;
-	const FP_XRefResolvedWithKeyref: FP_XRefResolvedWithKeyref;
-	type FP_XRefRetainKeydefText = 1157;
-	const FP_XRefRetainKeydefText: FP_XRefRetainKeydefText;
-	type FP_XRefSrcElemNonUniqueId = 1152;
-	const FP_XRefSrcElemNonUniqueId: FP_XRefSrcElemNonUniqueId;
-	type FP_XRefSrcIsElem = 1076;
-	const FP_XRefSrcIsElem: FP_XRefSrcIsElem;
-	type FP_XRefSrcText = 1075;
-	const FP_XRefSrcText: FP_XRefSrcText;
-	type FP_XSLTProcessors = 1506;
-	const FP_XSLTProcessors: FP_XSLTProcessors;
-	type FP_XSLTTransformationScenarioFile = 1505;
-	const FP_XSLTTransformationScenarioFile: FP_XSLTTransformationScenarioFile;
-	type FP_XmlApplicationForBookComponent = 2330;
-	const FP_XmlApplicationForBookComponent: FP_XmlApplicationForBookComponent;
-	type FP_XmlDocType = 2810;
-	const FP_XmlDocType: FP_XmlDocType;
-	type FP_XmlEncoding = 2801;
-	const FP_XmlEncoding: FP_XmlEncoding;
-	type FP_XmlFileEncoding = 2809;
-	const FP_XmlFileEncoding: FP_XmlFileEncoding;
-	type FP_XmlIsBook = 823;
-	const FP_XmlIsBook: FP_XmlIsBook;
-	type FP_XmlLock = 2841;
-	const FP_XmlLock: FP_XmlLock;
-	type FP_XmlPublicId = 2811;
-	const FP_XmlPublicId: FP_XmlPublicId;
-	type FP_XmlStandAlone = 2802;
-	const FP_XmlStandAlone: FP_XmlStandAlone;
-	type FP_XmlStyleSheet = 2803;
-	const FP_XmlStyleSheet: FP_XmlStyleSheet;
-	type FP_XmlStyleSheetList = 2804;
-	const FP_XmlStyleSheetList: FP_XmlStyleSheetList;
-	type FP_XmlSystemId = 2812;
-	const FP_XmlSystemId: FP_XmlSystemId;
-	type FP_XmlUseBOM = 2805;
-	const FP_XmlUseBOM: FP_XmlUseBOM;
-	type FP_XmlVersion = 2800;
-	const FP_XmlVersion: FP_XmlVersion;
-	type FP_XmlWellFormed = 2806;
-	const FP_XmlWellFormed: FP_XmlWellFormed;
-	type FP_YakumonoType = 597;
-	const FP_YakumonoType: FP_YakumonoType;
-	type FP_Year = 1726;
-	const FP_Year: FP_Year;
-	type FP_Yellow = 1459;
-	const FP_Yellow: FP_Yellow;
-	type FP_Zoom = 387;
-	const FP_Zoom: FP_Zoom;
+	FP_AFrameIsCropped = 878,
+	FP_AFrameIsFloating = 876,
+	FP_AcrobatBookmarkDisplayTags = 2251,
+	FP_AcrobatLevel = 589,
+	FP_ActiveAlert = 105,
+	FP_ActiveBook = 52,
+	FP_ActiveCMSSession = 2438,
+	FP_ActiveDoc = 51,
+	FP_ActiveView = 2422,
+	FP_AddMarkerTypeToStandardMarkers = 150,
+	FP_AdjHyphens = 559,
+	FP_AlertClientName = 2291,
+	FP_AlertClientUnique = 2290,
+	FP_AlertString = 2292,
+	FP_AlertType = 2293,
+	FP_Alignment = 886,
+	FP_AllowAsSpecialCase = 1649,
+	FP_AllowBaseFamilyBoldedAndObliqued = 2283,
+	FP_AllowNewFileURL = 2416,
+	FP_AllowedDataRange = 1594,
+	FP_AlsoInsert = 1591,
+	FP_AlsoInserts = 1595,
+	FP_AnchorType = 875,
+	FP_Angle = 780,
+	FP_ApplyEOPRules = 2030,
+	FP_ApplyFormatRules = 93,
+	FP_ArrowBaseAngle = 746,
+	FP_ArrowLength = 748,
+	FP_ArrowScaleFactor = 747,
+	FP_ArrowScaleHead = 750,
+	FP_ArrowTipAngle = 745,
+	FP_ArrowType = 749,
+	FP_AsianComposer = 3039,
+	FP_AttrCondExprIsActive = 2818,
+	FP_AttrCondExprStr = 2817,
+	FP_AttrDisplay = 1635,
+	FP_AttributeDefs = 1584,
+	FP_AttributeValueInvalid = 1667,
+	FP_AttributeValueRequired = 1666,
+	FP_Attributes = 1634,
+	FP_AttributesEx = 1670,
+	FP_AutoBackup = 50,
+	FP_AutoChangeBars = 238,
+	FP_AutoNumChar = 549,
+	FP_AutoNumString = 548,
+	FP_AutoSave = 48,
+	FP_AutoSaveSeconds = 49,
+	FP_BIBGetAddressProc = 2299,
+	FP_BannerText = 1599,
+	FP_BannerTextDisplay = 1600,
+	FP_BaseFamily = 2282,
+	FP_BasePointX = 1116,
+	FP_BasePointY = 1117,
+	FP_BaselineOffset = 881,
+	FP_BkColor = 992,
+	FP_BkGndColor = 1502,
+	FP_Black = 1460,
+	FP_BlockLines = 561,
+	FP_BookComponent = 1628,
+	FP_BookComponentFileType = 2339,
+	FP_BookComponentIsFolderWithTemplate = 2341,
+	FP_BookComponentIsFolderWithoutTemplate = 2342,
+	FP_BookComponentIsGeneratable = 520,
+	FP_BookComponentMissing = 1662,
+	FP_BookComponentParent = 2325,
+	FP_BookComponentSequenceLevel = 2353,
+	FP_BookComponentTemplatePath = 2327,
+	FP_BookComponentTitle = 2328,
+	FP_BookComponentType = 531,
+	FP_BookDontUpdateReferences = 494,
+	FP_BookIsModified = 492,
+	FP_BookIsSelected = 499,
+	FP_BookIsViewOnly = 497,
+	FP_BookParent = 515,
+	FP_BooleanConditionExpression = 2321,
+	FP_BooleanConditionExpressionTag = 995,
+	FP_BooleanConditionState = 2322,
+	FP_BorderWidth = 740,
+	FP_BottomMargin = 231,
+	FP_BottomRowSelection = 1342,
+	FP_BottomSepAtIndent = 2010,
+	FP_BottomSeparator = 569,
+	FP_Box_BG_Color = 1722,
+	FP_CMSItemProperty_ItemCheckedOutByCurrentUser = 33,
+	FP_CMSItemProperty_ItemFileType = 34,
+	FP_CMSItemProperty_ItemIsCheckedOut = 35,
+	FP_CMSItemProperty_ItemIsContainer = 36,
+	FP_CMSItemProperty_ItemLocalPath = 37,
+	FP_CMSItemProperty_ItemName = 38,
+	FP_CMSItemProperty_ItemServerPath = 39,
+	FP_CMSItemProperty_ItemType = 40,
+	FP_CMSItemProperty_ItemVersion = 41,
+	FP_CMSItemProperty_Max = 42,
+	FP_CMSItemProperty_Min = 43,
+	FP_CMSObjectLocalPath = 2392,
+	FP_CMSObjectServerURL = 2391,
+	FP_CTFontContext = 72,
+	FP_CanHaveCheckMark = 1931,
+	FP_Capitalization = 619,
+	FP_CellAboveInCol = 1203,
+	FP_CellAngle = 1209,
+	FP_CellBelowInCol = 1204,
+	FP_CellBelowInTbl = 1200,
+	FP_CellBottomMargin = 582,
+	FP_CellBottomMarginChange = 2023,
+	FP_CellBottomMarginFixed = 2016,
+	FP_CellColNum = 1205,
+	FP_CellColumn = 2435,
+	FP_CellDefaultBottomRuling = 1215,
+	FP_CellDefaultLeftRuling = 1216,
+	FP_CellDefaultRightRuling = 1217,
+	FP_CellDefaultTopRuling = 1214,
+	FP_CellIsShown = 1218,
+	FP_CellIsStraddled = 1206,
+	FP_CellLeftMargin = 583,
+	FP_CellLeftMarginChange = 2024,
+	FP_CellLeftMarginFixed = 2017,
+	FP_CellMarginSpacingDelta = 990,
+	FP_CellMarginsFixed = 586,
+	FP_CellNumColsStraddled = 1208,
+	FP_CellNumRowsStraddled = 1207,
+	FP_CellOverrideBottomRuling = 1211,
+	FP_CellOverrideFill = 1195,
+	FP_CellOverrideLeftRuling = 1212,
+	FP_CellOverrideRightRuling = 1213,
+	FP_CellOverrideShading = 1194,
+	FP_CellOverrideTopRuling = 1210,
+	FP_CellRightMargin = 584,
+	FP_CellRightMarginChange = 2025,
+	FP_CellRightMarginFixed = 2018,
+	FP_CellRow = 1198,
+	FP_CellTopMargin = 581,
+	FP_CellTopMarginChange = 2022,
+	FP_CellTopMarginFixed = 2015,
+	FP_CellUseOverrideBRuling = 1193,
+	FP_CellUseOverrideFill = 1196,
+	FP_CellUseOverrideLRuling = 1190,
+	FP_CellUseOverrideRRuling = 1191,
+	FP_CellUseOverrideShading = 1197,
+	FP_CellUseOverrideTRuling = 1192,
+	FP_CellVAlignment = 585,
+	FP_ChangeBar = 611,
+	FP_ChangeBarColor = 262,
+	FP_ChangeBarDistance = 259,
+	FP_ChangeBarPosition = 260,
+	FP_ChangeBarThickness = 261,
+	FP_ChapNumComputeMethod = 215,
+	FP_ChapterNumStyle = 217,
+	FP_ChapterNumText = 218,
+	FP_ChapterNumber = 216,
+	FP_CharTag = 602,
+	FP_CharacterReferencesOnXMLExport = 2887,
+	FP_CheckMarkIsOn = 1932,
+	FP_ColGap = 234,
+	FP_ColGapWidth = 985,
+	FP_Color = 751,
+	FP_ColorOverprint = 1468,
+	FP_ColorPrintCtl = 1462,
+	FP_ColorTintPercent = 1466,
+	FP_ColorViewCtl = 1461,
+	FP_ColumnIsShown = 2434,
+	FP_ColumnNum = 2436,
+	FP_ColumnTbl = 2433,
+	FP_ColumnsAreBalanced = 1175,
+	FP_CombinedFontFamily = 2287,
+	FP_CommandNum = 1928,
+	FP_Comment = 1581,
+	FP_ComponentDisplayText = 532,
+	FP_ComponentElement = 1551,
+	FP_ComponentIsDitaMap = 2331,
+	FP_ComponentIsSelected = 529,
+	FP_ComponentType = 2329,
+	FP_CondFmtIsShown = 1139,
+	FP_ContentHeight = 2219,
+	FP_ContentIsLooselyValid = 1652,
+	FP_ContentIsStrictlyValid = 1651,
+	FP_ContentMustBeEmpty = 1665,
+	FP_ContentNeededAtBegin = 1653,
+	FP_ContentNeededAtEnd = 1654,
+	FP_ContextForCSS = 2162,
+	FP_ContextLabel = 2157,
+	FP_CorrespondingXmlPath = 1158,
+	FP_CountElements = 2101,
+	FP_CurrentDoc = 2401,
+	FP_CurrentInset = 240,
+	FP_CurrentMenuSet = 99,
+	FP_CurrentPage = 236,
+	FP_CursorData = 2294,
+	FP_CursorTypes = 2295,
+	FP_CustomDelimiter = 2420,
+	FP_CustomDocPath = 2885,
+	FP_CustomElementList = 1496,
+	FP_Cyan = 1457,
+	FP_DTheta = 830,
+	FP_Dash = 752,
+	FP_Day = 1724,
+	FP_DbAttributes = 1817,
+	FP_DbCancelButton = 1811,
+	FP_DbCheckBoxState = 1807,
+	FP_DbDefaultButton = 1809,
+	FP_DbEditable = 1818,
+	FP_DbFbCurrentDir = 1814,
+	FP_DbFbScrollBox = 1813,
+	FP_DbFbStatus = 1815,
+	FP_DbFbTextBox = 1812,
+	FP_DbFirstFocus = 1808,
+	FP_DbIdentifier = 1802,
+	FP_DbItemNum = 1800,
+	FP_DbNoHelp = 1819,
+	FP_DbOKButton = 1810,
+	FP_DbRadioButtonGroup = 1806,
+	FP_DbSbxNumLines = 1805,
+	FP_DbStuffItem = 1804,
+	FP_DbTitleLabel = 1816,
+	FP_DbType = 1801,
+	FP_DbVarLabelWidth = 1803,
+	FP_DefaultExclusions = 1487,
+	FP_DefaultFontAngle = 71,
+	FP_DefaultFontFamily = 68,
+	FP_DefaultFontVariation = 69,
+	FP_DefaultFontWeight = 70,
+	FP_DefaultInclusions = 1486,
+	FP_DefaultKeyCatalog = 2871,
+	FP_DefaultVectorFormatForXMLExport = 2874,
+	FP_Description = 1947,
+	FP_DescriptiveTag = 1596,
+	FP_DesktopHeight = 791,
+	FP_DesktopWidth = 790,
+	FP_DesktopX = 788,
+	FP_DesktopY = 789,
+	FP_DialogEncodingName = 598,
+	FP_Dictionary = 203,
+	FP_DirectOLESupportInXml = 2881,
+	FP_Direction = 3036,
+	FP_DisableAutofitAfterZoom = 67,
+	FP_DisplayName = 78,
+	FP_Displaying = 92,
+	FP_DitaMaxRefLevels = 2396,
+	FP_DitaMode = 1504,
+	FP_DoNotExportInvalidXML = 2418,
+	FP_DoNotGenerateErrorLog = 819,
+	FP_DoPostXSLTValidationOnExport = 2417,
+	FP_DocAcrobatColumnArticleThreads = 2256,
+	FP_DocAcrobatDefaultsChanged = 2252,
+	FP_DocAcrobatElementList = 2254,
+	FP_DocAcrobatElements = 2253,
+	FP_DocAcrobatNoArticleThreads = 2255,
+	FP_DocCMSType = 2393,
+	FP_DocFluidFlow = 147,
+	FP_DocFonts = 2380,
+	FP_DocInTempState = 2900,
+	FP_DocIsDoubleSided = 226,
+	FP_DocIsHelp = 132,
+	FP_DocIsInternal = 2372,
+	FP_DocIsModified = 131,
+	FP_DocIsSave = 833,
+	FP_DocIsStructuredDummy = 2882,
+	FP_DocIsUIOpen = 832,
+	FP_DocIsViewOnly = 133,
+	FP_DocIsViewOnlyWinPalette = 134,
+	FP_DocOpenClientEncounteredErrors = 820,
+	FP_DocOpenType = 130,
+	FP_DocSaveFormat = 2415,
+	FP_DocSaveType = 145,
+	FP_DocSequenceLevel = 2356,
+	FP_DockDialog = 2344,
+	FP_DontLoadStartupClients = 2894,
+	FP_DontShowWelcomeScreen = 2408,
+	FP_DontUpdateTextInsets = 160,
+	FP_DontUpdateXRefs = 159,
+	FP_DoubleClick = 1706,
+	FP_DownloadFonts = 496,
+	FP_EddUpdateOn = 829,
+	FP_ElemPrefixSuffix = 2158,
+	FP_Element = 2170,
+	FP_ElementBoundaryDisplay = 1484,
+	FP_ElementCatalog = 1488,
+	FP_ElementCatalogDisplay = 1485,
+	FP_ElementDataType = 1593,
+	FP_ElementDef = 1621,
+	FP_ElementDefType = 1579,
+	FP_ElementDescription = 1597,
+	FP_ElementInCatalog = 1573,
+	FP_ElementIsCollapsed = 1627,
+	FP_ElementIsExcludedInContext = 1655,
+	FP_ElementIsInvalidInParent = 1656,
+	FP_ElementIsInvalidInPosition = 1657,
+	FP_ElementIsTopicGroup = 2338,
+	FP_ElementIsTopicHead = 2337,
+	FP_ElementIsTopicRef = 2336,
+	FP_ElementIsUndefined = 1650,
+	FP_ElementMarkedForNamedDestination = 1669,
+	FP_ElementPgfFormat = 1586,
+	FP_ElementSelection = 1494,
+	FP_ElementType = 1636,
+	FP_ElementTypeMismatch = 1658,
+	FP_EnableAutoSpellCheck = 2413,
+	FP_EnabledWhen = 1935,
+	FP_EqnIntegralSizeLarge = 348,
+	FP_EqnIntegralSizeMed = 347,
+	FP_EqnIntegralSizeSmall = 346,
+	FP_EqnLevel1SizeLarge = 354,
+	FP_EqnLevel1SizeMed = 353,
+	FP_EqnLevel1SizeSmall = 352,
+	FP_EqnLevel2SizeLarge = 357,
+	FP_EqnLevel2SizeMed = 356,
+	FP_EqnLevel2SizeSmall = 355,
+	FP_EqnLevel3SizeLarge = 360,
+	FP_EqnLevel3SizeMed = 359,
+	FP_EqnLevel3SizeSmall = 358,
+	FP_EqnSigmaSizeLarge = 351,
+	FP_EqnSigmaSizeMed = 350,
+	FP_EqnSigmaSizeSmall = 349,
+	FP_ErrorInBookComponent = 1663,
+	FP_ExcludeBookComponent = 2326,
+	FP_Exclusions = 1576,
+	FP_ExpandOMaticParent = 1934,
+	FP_ExportFilters = 2289,
+	FP_ExtractElementTags = 1552,
+	FP_ExtractTags = 516,
+	FP_FMConsoleString = 826,
+	FP_FMInterfaceEncodingName = 599,
+	FP_FM_BinDir = 88,
+	FP_FM_CurrentDir = 90,
+	FP_FM_HelpDir = 103,
+	FP_FM_HomeDir = 87,
+	FP_FM_InitDir = 89,
+	FP_FM_SgmlDir = 100,
+	FP_FM_StructureDir = 2031,
+	FP_FM_XmlDir = 2032,
+	FP_FamilyName = 1464,
+	FP_Fcode = 1936,
+	FP_Fcodes = 1937,
+	FP_FileExtensionOverride = 2813,
+	FP_FileInfoPacket = 2262,
+	FP_FileOpenInProgress = 828,
+	FP_Fill = 741,
+	FP_FirstAFrame = 974,
+	FP_FirstAttrCondExprInDoc = 2815,
+	FP_FirstBodyPageInDoc = 415,
+	FP_FirstCell = 978,
+	FP_FirstCellInRow = 1247,
+	FP_FirstCharFmtInDoc = 123,
+	FP_FirstChildElement = 1623,
+	FP_FirstColorInDoc = 127,
+	FP_FirstColumnInSelection = 2427,
+	FP_FirstColumnInTbl = 2423,
+	FP_FirstCombinedFontDefnInDoc = 2280,
+	FP_FirstCommandInSession = 98,
+	FP_FirstComponentInBook = 491,
+	FP_FirstComponentInBookComponent = 2324,
+	FP_FirstCondFmtInDoc = 124,
+	FP_FirstDITAConrefElementInDoc = 2861,
+	FP_FirstDITALinkElementInDoc = 2863,
+	FP_FirstDITATopicrefElementInDoc = 2864,
+	FP_FirstDITATopicsetrefElementInDoc = 2865,
+	FP_FirstDITAXrefElementInDoc = 2862,
+	FP_FirstElementDefInDoc = 1483,
+	FP_FirstFlowInDoc = 121,
+	FP_FirstFmtChangeListInDoc = 1489,
+	FP_FirstFn = 976,
+	FP_FirstFnInDoc = 119,
+	FP_FirstGraphicInDoc = 112,
+	FP_FirstGraphicInFrame = 882,
+	FP_FirstGraphicInGroup = 807,
+	FP_FirstGraphicsFmtInDoc = 3101,
+	FP_FirstIndent = 556,
+	FP_FirstIndentChange = 2005,
+	FP_FirstIndentIsRelative = 2019,
+	FP_FirstIndentRelPos = 2020,
+	FP_FirstInlineComponentInDoc = 2897,
+	FP_FirstKeyCatalogInSession = 2872,
+	FP_FirstMarkerInDoc = 114,
+	FP_FirstMarkerTypeInDoc = 148,
+	FP_FirstMasterPageInDoc = 417,
+	FP_FirstMenuItemInMenu = 1927,
+	FP_FirstMenuItemInSession = 97,
+	FP_FirstOpenBook = 54,
+	FP_FirstOpenDoc = 53,
+	FP_FirstPageNum = 224,
+	FP_FirstPageVerso = 227,
+	FP_FirstPgf = 972,
+	FP_FirstPgfFmtInDoc = 122,
+	FP_FirstPgfInDoc = 113,
+	FP_FirstPgfRules = 1589,
+	FP_FirstRefPageInDoc = 419,
+	FP_FirstRowInTbl = 1338,
+	FP_FirstRubiInDoc = 194,
+	FP_FirstRulingFmtInDoc = 126,
+	FP_FirstSelectedComponentInBook = 493,
+	FP_FirstSelectedGraphicInDoc = 128,
+	FP_FirstSelectedTiInDoc = 142,
+	FP_FirstSubCol = 986,
+	FP_FirstTblFmtInDoc = 125,
+	FP_FirstTblInDoc = 120,
+	FP_FirstTextFrameInFlow = 1169,
+	FP_FirstTiInDoc = 141,
+	FP_FirstVarFmtInDoc = 116,
+	FP_FirstVarInDoc = 115,
+	FP_FirstVis = 1705,
+	FP_FirstVisibleColumnInTbl = 2425,
+	FP_FirstXRefFmtInDoc = 118,
+	FP_FirstXRefInDoc = 117,
+	FP_Flow = 982,
+	FP_FlowIsAutoConnect = 1165,
+	FP_FlowIsFeathered = 1166,
+	FP_FlowIsPostScript = 1168,
+	FP_FlowIsSynchronized = 1163,
+	FP_Fmt = 1050,
+	FP_FmtChangeList = 2155,
+	FP_FmtChangeListInCatalog = 2021,
+	FP_FmtChangeListTag = 2154,
+	FP_FmtRule = 2159,
+	FP_FmtRuleClause = 2104,
+	FP_FmtRuleClauses = 2103,
+	FP_FmtRuleType = 2100,
+	FP_FnAnchorString = 1006,
+	FP_FnCustNumString = 285,
+	FP_FnFirstNum = 284,
+	FP_FnFmt = 283,
+	FP_FnHeightPerCol = 289,
+	FP_FnInstancePosition = 287,
+	FP_FnInstancePrefix = 294,
+	FP_FnInstanceSuffix = 288,
+	FP_FnNum = 1002,
+	FP_FnNumComputeMethod = 295,
+	FP_FnNumStyle = 290,
+	FP_FnNumberingPerPage = 291,
+	FP_FnRefPosition = 292,
+	FP_FnRefPrefix = 286,
+	FP_FnRefSuffix = 293,
+	FP_Focus = 2358,
+	FP_FontAngle = 607,
+	FP_FontAngleNames = 58,
+	FP_FontEncodingName = 642,
+	FP_FontFamily = 604,
+	FP_FontFamilyAttributes = 60,
+	FP_FontFamilyFullNames = 73,
+	FP_FontFamilyNames = 55,
+	FP_FontPanoseName = 641,
+	FP_FontPlatformName = 639,
+	FP_FontPostScriptName = 640,
+	FP_FontSize = 615,
+	FP_FontSizeChange = 2012,
+	FP_FontVariation = 605,
+	FP_FontVariationNames = 56,
+	FP_FontWeight = 606,
+	FP_FontWeightNames = 57,
+	FP_FormViewConfigFile = 1510,
+	FP_FormatOverride = 590,
+	FP_FormatTag = 2153,
+	FP_FormattingLocked = 2891,
+	FP_FrameParent = 774,
+	FP_Functions = 339,
+	FP_GeneralRule = 1575,
+	FP_GeneralRuleErrorOffsets = 1578,
+	FP_GenerateAcrobatInfo = 2250,
+	FP_GenerateInclude = 517,
+	FP_GraphicCantBeSelected = 772,
+	FP_GraphicIsButton = 773,
+	FP_GraphicIsSelected = 771,
+	FP_Gravity = 107,
+	FP_GreekSize = 63,
+	FP_GroupDialog = 2349,
+	FP_GroupParent = 777,
+	FP_HasShiftOrUnshiftCommand = 1939,
+	FP_HeadArrow = 743,
+	FP_Height = 784,
+	FP_HelpLink = 1938,
+	FP_HelpPending = 102,
+	FP_HiddenPage = 421,
+	FP_HighestLevelElement = 1509,
+	FP_HoleAtEnd = 1654,
+	FP_HoleBeforeElement = 1659,
+	FP_HorizontalSpreadLarge = 342,
+	FP_HorizontalSpreadMed = 341,
+	FP_HorizontalSpreadSmall = 340,
+	FP_HostName = 81,
+	FP_HotspotCmdStr = 2876,
+	FP_HotspotTitle = 2877,
+	FP_Hypertext = 1943,
+	FP_HypertextCommandText = 2301,
+	FP_HypertextDoValidate = 2300,
+	FP_HypertextParseBadParam = 2305,
+	FP_HypertextParseErr = 2303,
+	FP_HypertextParseErrMsg = 2306,
+	FP_HypertextParsedArgs = 2302,
+	FP_HypertextParsedClientName = 2317,
+	FP_HypertextParsedCmdCode = 2307,
+	FP_HypertextParsedCmdDest = 2308,
+	FP_HypertextParsedCmdDestObjID = 2310,
+	FP_HypertextParsedCmdDestObjType = 2309,
+	FP_HypertextParsedCmdMatrixColumns = 2312,
+	FP_HypertextParsedCmdMatrixRows = 2311,
+	FP_HypertextParsedDIFileName = 2320,
+	FP_HypertextParsedFlowName = 2315,
+	FP_HypertextParsedLinkName = 2313,
+	FP_HypertextParsedMessage = 2319,
+	FP_HypertextParsedPageName = 2314,
+	FP_HypertextParsedRangeName = 2316,
+	FP_HypertextParsedTitle = 2318,
+	FP_HypertextValidateErr = 2304,
+	FP_HyphMinPrefix = 575,
+	FP_HyphMinSuffix = 560,
+	FP_HyphMinWord = 576,
+	FP_Hyphenate = 564,
+	FP_IDAttrValue = 1637,
+	FP_INSETinfo = 858,
+	FP_Icon = 1716,
+	FP_IconBarOn = 101,
+	FP_IconColorPref = 1508,
+	FP_IconSizePref = 1507,
+	FP_ImportFilters = 2288,
+	FP_ImportFmtInclude = 518,
+	FP_ImportHint = 2055,
+	FP_InCond = 1150,
+	FP_InTableSortOperation = 2833,
+	FP_InTextFrame = 1001,
+	FP_InTextObj = 1000,
+	FP_Inclusions = 1577,
+	FP_IncrVal = 1711,
+	FP_InitStructurePattern = 1585,
+	FP_InkName = 1465,
+	FP_InlineComponentType = 2896,
+	FP_InsertLinks = 528,
+	FP_InsetCuePointList = 2354,
+	FP_InsetDpi = 853,
+	FP_InsetEditor = 850,
+	FP_InsetFile = 852,
+	FP_InsetFileOrigName = 2814,
+	FP_InsetGenericData = 2832,
+	FP_InsetGfxActiveInPdf = 2836,
+	FP_InsetGfxName = 2834,
+	FP_InsetGfxPlayWindowInPdf = 2835,
+	FP_InsetIsFixedSize = 854,
+	FP_InsetIsFlippedSideways = 855,
+	FP_InsetIsInverted = 856,
+	FP_InsetJavaScriptAttached = 2837,
+	FP_InsetJavaScriptFile = 2838,
+	FP_InsetLinkToText = 2355,
+	FP_InsetMonikerFilePath = 2849,
+	FP_InsetMonikerPath = 2848,
+	FP_InsetPosterFile = 2822,
+	FP_InsetPosterFileOrigName = 2824,
+	FP_InsetPosterIsExternal = 2821,
+	FP_InsetRasterDpi = 857,
+	FP_InsetSaveDIBFacetToFile = 2823,
+	FP_InsetSaveFacetToFile = 2839,
+	FP_InsetU3dAnimationList = 2844,
+	FP_InsetU3dPartList = 2845,
+	FP_InsetU3dViewList = 2846,
+	FP_InsetURL = 2407,
+	FP_InsetUpdater = 851,
+	FP_InternalAlignment = 2390,
+	FP_InternalAnchorType = 2383,
+	FP_InternalBaselineOffset = 2384,
+	FP_InternalHeight = 2374,
+	FP_InternalMathMLApplyPgfStyle = 2389,
+	FP_InternalMathMLComposeDpi = 2375,
+	FP_InternalMathMLDpi = 2385,
+	FP_InternalMathMLFontSize = 2376,
+	FP_InternalMathMLInline = 2387,
+	FP_InternalMathMLXmlData = 2377,
+	FP_InternalWidth = 2373,
+	FP_InvalidHighestLevel = 1661,
+	FP_InvariantName = 1029,
+	FP_IsDefault = 2850,
+	FP_IsDialogDocked = 2345,
+	FP_IsDialogVisible = 2346,
+	FP_IsDitamapInResourceManager = 2332,
+	FP_IsDocDita = 2880,
+	FP_IsDocDitamap = 2879,
+	FP_IsFMRunningAsServer = 2348,
+	FP_IsFMRunningInTrialPeriod = 2412,
+	FP_IsFateRun = 2847,
+	FP_IsFormViewEnabled = 2437,
+	FP_IsHotspot = 2875,
+	FP_IsIconified = 31,
+	FP_IsInFront = 32,
+	FP_IsOnScreen = 110,
+	FP_IsRestoring = 2892,
+	FP_IsStale = 2851,
+	FP_IsTechnicalSuiteLicensed = 2410,
+	FP_IsTempOpenSave = 827,
+	FP_IsTextRange = 2151,
+	FP_KByteAllocationSize = 106,
+	FP_KeepWithNext = 565,
+	FP_KeepWithPrev = 551,
+	FP_KernX = 616,
+	FP_KernY = 617,
+	FP_KeyCatalog = 2856,
+	FP_KeyCatalogClientName = 2873,
+	FP_KeyCatalogType = 2857,
+	FP_KeyCatalogWorkflow = 2859,
+	FP_KeyCount = 2860,
+	FP_KeyboardShortcutLabel = 1929,
+	FP_KeyboardShortcuts = 1930,
+	FP_Label = 30,
+	FP_LabelBold = 1721,
+	FP_LabelColor = 1720,
+	FP_Labels = 1703,
+	FP_Language = 577,
+	FP_LastAFrame = 975,
+	FP_LastBodyPageInDoc = 416,
+	FP_LastCell = 979,
+	FP_LastChildElement = 1624,
+	FP_LastColumnInSelection = 2428,
+	FP_LastColumnInTbl = 2424,
+	FP_LastFn = 977,
+	FP_LastGraphicInFrame = 883,
+	FP_LastGraphicInGroup = 808,
+	FP_LastMasterPageInDoc = 418,
+	FP_LastPgf = 973,
+	FP_LastPgfRules = 1590,
+	FP_LastRefPageInDoc = 420,
+	FP_LastRowInTbl = 1339,
+	FP_LastSubCol = 987,
+	FP_LastTextFrameInFlow = 1170,
+	FP_LastUpdate = 2052,
+	FP_LastVisibleColumnInTbl = 2426,
+	FP_Leading = 558,
+	FP_LeadingChange = 2007,
+	FP_LeftColNum = 1343,
+	FP_LeftIndent = 555,
+	FP_LeftIndentChange = 2004,
+	FP_LeftMargin = 232,
+	FP_LeftMasterPage = 413,
+	FP_LetterSpace = 550,
+	FP_LineAscent = 1900,
+	FP_LineBaseline = 1902,
+	FP_LineBreakAfter = 177,
+	FP_LineCap = 753,
+	FP_LineDescent = 1901,
+	FP_LineNumColor = 4006,
+	FP_LineNumDistance = 4001,
+	FP_LineNumFont = 4004,
+	FP_LineNumRestart = 4002,
+	FP_LineNumShow = 4003,
+	FP_LineNumSize = 4005,
+	FP_LineSpacing = 587,
+	FP_LineSpacingFactor = 988,
+	FP_LineSpacingFixed = 2008,
+	FP_LoadStartupScripts = 2886,
+	FP_LocX = 781,
+	FP_LocY = 782,
+	FP_Locked = 588,
+	FP_LogMissingFontsWarning = 2901,
+	FP_Magenta = 1458,
+	FP_MagicMarker = 488,
+	FP_MainFlowInDoc = 422,
+	FP_MarkerNames = 59,
+	FP_MarkerText = 1025,
+	FP_MarkerTypeId = 1027,
+	FP_MarkerTypeNames = 149,
+	FP_MasterPage = 690,
+	FP_MatchesContextInUserString = 1642,
+	FP_MatchingFirstPgfClauses = 1638,
+	FP_MatchingLastPgfClauses = 1639,
+	FP_MatchingObjectClauses = 1632,
+	FP_MatchingPrefixClauses = 1640,
+	FP_MatchingSuffixClauses = 1641,
+	FP_MatchingTextClauses = 1631,
+	FP_MathFullForm = 865,
+	FP_MathMLApplyPgfStyle = 2388,
+	FP_MathMLComposeDpi = 2367,
+	FP_MathMLData = 2365,
+	FP_MathMLDpi = 2360,
+	FP_MathMLExportEntitiesAsValues = 2394,
+	FP_MathMLFile = 2363,
+	FP_MathMLFontSize = 2371,
+	FP_MathMLImportGraphicsDpi = 2369,
+	FP_MathMLInline = 2386,
+	FP_MathMLIsFixedSize = 2361,
+	FP_MathMLIsFlippedSideways = 2366,
+	FP_MathMLIsInverted = 2362,
+	FP_MathMLNamespacePrefix = 2378,
+	FP_MathMLXmlData = 2359,
+	FP_MathSize = 866,
+	FP_MaxBottomMargin = 709,
+	FP_MaxFirstIndent = 472,
+	FP_MaxFontSize = 484,
+	FP_MaxInterPgfPadding = 471,
+	FP_MaxInterlinePadding = 470,
+	FP_MaxJLetSpace = 596,
+	FP_MaxJRomSpace = 593,
+	FP_MaxLeading = 482,
+	FP_MaxLeftIndent = 474,
+	FP_MaxLeftMargin = 703,
+	FP_MaxRightIndent = 476,
+	FP_MaxRightMargin = 705,
+	FP_MaxSize = 2352,
+	FP_MaxSpace = 572,
+	FP_MaxSpaceAbove = 478,
+	FP_MaxSpaceBelow = 480,
+	FP_MaxSpread = 486,
+	FP_MaxStretch = 711,
+	FP_MaxTabPosition = 701,
+	FP_MaxTopMargin = 707,
+	FP_MaxVal = 1710,
+	FP_MenuBar = 143,
+	FP_MenuItemIsEnabled = 1922,
+	FP_MenuItemType = 1933,
+	FP_MenuType = 1926,
+	FP_Mif8bitOutput = 62,
+	FP_MifFileEntity = 2828,
+	FP_MifFileName = 2829,
+	FP_MifFileOrigFormat = 2878,
+	FP_MinBottomMargin = 710,
+	FP_MinFirstIndent = 473,
+	FP_MinFontSize = 485,
+	FP_MinHang = 1164,
+	FP_MinJLetSpace = 594,
+	FP_MinJRomSpace = 591,
+	FP_MinLeading = 483,
+	FP_MinLeftIndent = 475,
+	FP_MinLeftMargin = 704,
+	FP_MinRightIndent = 477,
+	FP_MinRightMargin = 706,
+	FP_MinSize = 2351,
+	FP_MinSpace = 571,
+	FP_MinSpaceAbove = 479,
+	FP_MinSpaceBelow = 481,
+	FP_MinSpread = 487,
+	FP_MinStretch = 712,
+	FP_MinTabPosition = 702,
+	FP_MinTopMargin = 708,
+	FP_MinVal = 1709,
+	FP_Mode = 1941,
+	FP_ModelessDialogUpdate = 2895,
+	FP_ModelessDlgIconN = 1728,
+	FP_ModelessDlgIconR = 1729,
+	FP_Month = 1725,
+	FP_MoveTabs = 2014,
+	FP_Name = 20,
+	FP_Namespace = 1643,
+	FP_NamespaceScope = 1644,
+	FP_NarrowRubiSpaceForJapanese = 188,
+	FP_NarrowRubiSpaceForOther = 190,
+	FP_NewElemAttrDisplay = 1490,
+	FP_NewElemAttrEditing = 1491,
+	FP_NextAFrame = 885,
+	FP_NextAttrCondExprInDoc = 2816,
+	FP_NextBookComponentInDFSOrder = 2333,
+	FP_NextCell = 1220,
+	FP_NextCellInRow = 1202,
+	FP_NextCellInTbl = 1199,
+	FP_NextCharFmtInDoc = 603,
+	FP_NextColorInDoc = 1455,
+	FP_NextColumnInTbl = 2430,
+	FP_NextCombinedFontDefnInDoc = 2281,
+	FP_NextCommandInSession = 1942,
+	FP_NextComponentInBook = 527,
+	FP_NextCondFmtInDoc = 1138,
+	FP_NextDITAConrefElementInDoc = 2866,
+	FP_NextDITALinkElementInDoc = 2868,
+	FP_NextDITATopicrefElementInDoc = 2869,
+	FP_NextDITATopicsetrefElementInDoc = 2870,
+	FP_NextDITAXrefElementInDoc = 2867,
+	FP_NextElementDFS = 2334,
+	FP_NextElementDefInDoc = 1572,
+	FP_NextFlowInDoc = 1162,
+	FP_NextFmtChangeListInDoc = 2000,
+	FP_NextFn = 1005,
+	FP_NextFnInDoc = 1003,
+	FP_NextGraphicInDoc = 786,
+	FP_NextGraphicInFrame = 776,
+	FP_NextGraphicInGroup = 779,
+	FP_NextGraphicsFmtInDoc = 3102,
+	FP_NextInlineComponentInDoc = 2898,
+	FP_NextInvalidElement = 1664,
+	FP_NextKeyCatalogInSession = 2852,
+	FP_NextMarkerInDoc = 1026,
+	FP_NextMarkerTypeInDoc = 1028,
+	FP_NextMenuItemInMenu = 1923,
+	FP_NextMenuItemInSession = 1925,
+	FP_NextOpenBookInSession = 490,
+	FP_NextOpenDocInSession = 111,
+	FP_NextPgfFmtInDoc = 580,
+	FP_NextPgfInDoc = 716,
+	FP_NextPgfInFlow = 717,
+	FP_NextRowInTbl = 1245,
+	FP_NextRubiInDoc = 1469,
+	FP_NextRulingFmtInDoc = 1430,
+	FP_NextSelectedComponentInBook = 530,
+	FP_NextSelectedGraphicInDoc = 785,
+	FP_NextSiblingElement = 1626,
+	FP_NextSubCol = 2202,
+	FP_NextTag = 552,
+	FP_NextTblFmtInDoc = 1276,
+	FP_NextTblInDoc = 1337,
+	FP_NextTextFrameInFlow = 981,
+	FP_NextTiInDoc = 2050,
+	FP_NextVarFmtInDoc = 1051,
+	FP_NextVarInDoc = 1046,
+	FP_NextVisibleColumnInTbl = 2432,
+	FP_NextXRefFmtInDoc = 1074,
+	FP_NextXRefInDoc = 1072,
+	FP_No3DInPDF = 2406,
+	FP_NoAppOutputPIFiltered = 2884,
+	FP_NoFlashInPDF = 2405,
+	FP_NoMultiMediaInPDF = 2831,
+	FP_NotLoaded = 2853,
+	FP_NumAtEnd = 563,
+	FP_NumCols = 235,
+	FP_NumColumns = 984,
+	FP_NumItems = 1707,
+	FP_NumLines = 1704,
+	FP_NumNamespaces = 1645,
+	FP_NumPoints = 907,
+	FP_NumTabs = 573,
+	FP_Numbers = 338,
+	FP_Object = 1630,
+	FP_ObjectAttributes = 23,
+	FP_ObjectFmtRules = 1583,
+	FP_OldTypeNum = 1024,
+	FP_OpenAndSaveXmlBookComponentDoc = 822,
+	FP_OpenDir = 80,
+	FP_OperatingSystem = 46,
+	FP_OptJLetSpace = 595,
+	FP_OptJRomSpace = 592,
+	FP_OptSpace = 557,
+	FP_OriginalDpi = 2397,
+	FP_OriginalHeight = 2381,
+	FP_OriginalWidth = 2382,
+	FP_OrphanRows = 1291,
+	FP_Outline = 612,
+	FP_Overflowed = 983,
+	FP_Overline = 610,
+	FP_Overprint = 756,
+	FP_OyamojiTextRange = 1470,
+	FP_PDFAllNamedDestinations = 2257,
+	FP_PDFBookmark = 2261,
+	FP_PDFBookmarksOpenLevel = 2275,
+	FP_PDFConvertCMYKtoRGB = 2274,
+	FP_PDFDestsMarked = 2258,
+	FP_PDFDistillerAbsent = 2276,
+	FP_PDFDocInfo = 2260,
+	FP_PDFEndPage = 2273,
+	FP_PDFGenerateForReview = 2279,
+	FP_PDFJobOption = 2263,
+	FP_PDFJobOptions = 2899,
+	FP_PDFJobOptionsAbsent = 2277,
+	FP_PDFOpenPage = 2264,
+	FP_PDFPageHeight = 2270,
+	FP_PDFPageNum = 2402,
+	FP_PDFPageWidth = 2269,
+	FP_PDFPrintPageRange = 2271,
+	FP_PDFRegistrationMarks = 2268,
+	FP_PDFSeparateFiles = 2267,
+	FP_PDFStartPage = 2272,
+	FP_PDFStructure = 2259,
+	FP_PDFStructureLevel = 600,
+	FP_PDFViewPDF = 2278,
+	FP_PDFZoomFactor = 2266,
+	FP_PDFZoomType = 2265,
+	FP_PageBackground = 689,
+	FP_PageFrame = 695,
+	FP_PageFramePage = 880,
+	FP_PageHeight = 692,
+	FP_PageIsRecto = 697,
+	FP_PageNext = 694,
+	FP_PageNum = 687,
+	FP_PageNumComputeMethod = 524,
+	FP_PageNumString = 696,
+	FP_PageNumStyle = 225,
+	FP_PagePrefix = 521,
+	FP_PagePrev = 693,
+	FP_PageRounding = 229,
+	FP_PageSide = 523,
+	FP_PageSuffix = 522,
+	FP_PageWidth = 691,
+	FP_PairKern = 614,
+	FP_Pantone = 1456,
+	FP_ParentElement = 1622,
+	FP_ParentTextFrame = 2200,
+	FP_ParseFullSpecification = 2163,
+	FP_ParsedGeneralRule = 1592,
+	FP_ParsedSpecification = 2160,
+	FP_PasswordStyle = 1714,
+	FP_Path = 85,
+	FP_Pen = 742,
+	FP_PercentDone = 104,
+	FP_PgfAlignment = 547,
+	FP_PgfBoxColor = 2364,
+	FP_PgfCatalogReference = 2001,
+	FP_PgfIsAutoNum = 562,
+	FP_PgfMarkedForNamedDestination = 722,
+	FP_PgfNumComputeMethod = 525,
+	FP_PgfNumber = 719,
+	FP_PgfSpacingFactor = 989,
+	FP_PgfSpellChecked = 720,
+	FP_PgfSplit = 721,
+	FP_Placement = 579,
+	FP_Platform = 45,
+	FP_PointPageNum = 688,
+	FP_PointPageNumStyle = 228,
+	FP_Points = 908,
+	FP_PolyIsBezier = 906,
+	FP_Position = 620,
+	FP_PrefixRules = 1587,
+	FP_PreserveFormattingInXml = 2368,
+	FP_PrevAFrame = 884,
+	FP_PrevBookComponentInDFSOrder = 2340,
+	FP_PrevCell = 1219,
+	FP_PrevCellInRow = 1201,
+	FP_PrevColumnInTbl = 2429,
+	FP_PrevComponentInBook = 526,
+	FP_PrevElementDFS = 2335,
+	FP_PrevFn = 1004,
+	FP_PrevGraphicInFrame = 775,
+	FP_PrevGraphicInGroup = 778,
+	FP_PrevMenuItemInMenu = 1924,
+	FP_PrevPgfInFlow = 718,
+	FP_PrevRowInTbl = 1244,
+	FP_PrevSiblingElement = 1625,
+	FP_PrevSubCol = 2201,
+	FP_PrevTextFrameInFlow = 980,
+	FP_PrevVisibleColumnInTbl = 2431,
+	FP_PreviewState = 2820,
+	FP_PrintBlankPages = 467,
+	FP_PrintCollated = 446,
+	FP_PrintCols = 441,
+	FP_PrintDitavalFileName = 2343,
+	FP_PrintDownloadAsianFonts = 501,
+	FP_PrintDownloadTrueTypeAsType1 = 502,
+	FP_PrintEmulsion = 466,
+	FP_PrintEndPage = 453,
+	FP_PrintEndPageName = 440,
+	FP_PrintEndPoint = 454,
+	FP_PrintEvenPages = 455,
+	FP_PrintFileName = 451,
+	FP_PrintImaging = 465,
+	FP_PrintInclude = 519,
+	FP_PrintLastSheetFirst = 456,
+	FP_PrintLowRes = 447,
+	FP_PrintManualFeed = 458,
+	FP_PrintNumCopies = 459,
+	FP_PrintOddPages = 445,
+	FP_PrintPaperHeight = 462,
+	FP_PrintPaperWidth = 461,
+	FP_PrintRegMarkDate = 469,
+	FP_PrintRegistrationMarks = 457,
+	FP_PrintRows = 442,
+	FP_PrintScale = 450,
+	FP_PrintScope = 452,
+	FP_PrintSeps = 463,
+	FP_PrintSpotBW = 498,
+	FP_PrintStartPage = 443,
+	FP_PrintStartPageName = 439,
+	FP_PrintStartPoint = 444,
+	FP_PrintThumbnails = 448,
+	FP_PrintToFile = 460,
+	FP_PrintTomboMarks = 468,
+	FP_PrinterName = 449,
+	FP_ProcessNumber = 79,
+	FP_Product = 1944,
+	FP_ProductFamily = 2893,
+	FP_ProductIsDemo = 66,
+	FP_ProductIsStructured = 65,
+	FP_ProductName = 42,
+	FP_ProgId = 2421,
+	FP_Public = 1030,
+	FP_Radius = 950,
+	FP_RasterFilterDpi = 2400,
+	FP_ReadOnly = 1723,
+	FP_RectangleIsSmoothed = 929,
+	FP_Reformatting = 91,
+	FP_RememberMissingFontNames = 61,
+	FP_RemoveExtraWhiteSpacesOnXMLImport = 2830,
+	FP_Required = 1032,
+	FP_ReservedColor = 1463,
+	FP_ResizeGripperBarVisibility = 2395,
+	FP_ResizeGripperPos = 2350,
+	FP_ResolvedDirection = 3038,
+	FP_RestartFrameAlertRequired = 2370,
+	FP_RetainUndoState = 64,
+	FP_ReviewTime = 994,
+	FP_ReviewerName = 993,
+	FP_ReviewerNameList = 2825,
+	FP_RightColNum = 1344,
+	FP_RightIndent = 570,
+	FP_RightIndentChange = 2006,
+	FP_RightMargin = 233,
+	FP_RightMasterPage = 414,
+	FP_RowIsShown = 1254,
+	FP_RowKeepWithNext = 1248,
+	FP_RowKeepWithPrev = 1249,
+	FP_RowMaxHeight = 1250,
+	FP_RowMinHeight = 1251,
+	FP_RowStart = 1252,
+	FP_RowTbl = 1246,
+	FP_RowType = 1253,
+	FP_RpcProgramNumber = 77,
+	FP_RpcPropertyName = 76,
+	FP_RubiAlignAtLineBounds = 193,
+	FP_RubiElement = 2176,
+	FP_RubiFixedSize = 187,
+	FP_RubiOverhang = 192,
+	FP_RubiSize = 186,
+	FP_RubiTextRange = 1471,
+	FP_RuleClauseType = 2152,
+	FP_RulingGap = 1433,
+	FP_RulingLines = 1435,
+	FP_RulingPenWidth = 1432,
+	FP_RulingSep = 1434,
+	FP_RunInSeparator = 578,
+	FP_Runaround = 787,
+	FP_RunaroundGap = 754,
+	FP_ScreenCaptureDocToFile = 195,
+	FP_ScreenHeight = 36,
+	FP_ScreenWidth = 35,
+	FP_ScreenX = 33,
+	FP_ScreenY = 34,
+	FP_SecNumComputeMethod = 915,
+	FP_SectionNumStyle = 916,
+	FP_SectionNumText = 918,
+	FP_SectionNumber = 917,
+	FP_SelectedRow = 1730,
+	FP_SelectedRowId = 1731,
+	FP_SelectedRowItems = 1719,
+	FP_SelectedTbl = 129,
+	FP_Sensitivity = 1708,
+	FP_SepOverride = 1140,
+	FP_SeparateInclusions = 1493,
+	FP_ServerState = 2808,
+	FP_ServerUrl = 2807,
+	FP_Shadow = 613,
+	FP_ShiftOrUnshiftCommand = 1940,
+	FP_ShowAll = 155,
+	FP_ShowCondIndicators = 156,
+	FP_ShowElementDescriptiveNames = 1501,
+	FP_SideHeadGap = 1173,
+	FP_SideHeadPlacement = 1171,
+	FP_SideHeadRoomInFlow = 1174,
+	FP_SideHeadWidth = 1172,
+	FP_SideOffset = 877,
+	FP_Size = 1712,
+	FP_SkipBlankSeps = 464,
+	FP_SmallCapsSize = 182,
+	FP_SmallCapsStretch = 185,
+	FP_SmartQuotes = 237,
+	FP_SmartSpaces = 239,
+	FP_Snap = 151,
+	FP_SnapAngle = 394,
+	FP_SnapGridUnits = 393,
+	FP_SortingEnabled = 1718,
+	FP_Source = 2854,
+	FP_SourceType = 2855,
+	FP_SpaceAbove = 553,
+	FP_SpaceAboveChange = 2002,
+	FP_SpaceBelow = 568,
+	FP_SpaceBelowChange = 2003,
+	FP_Spacing = 1167,
+	FP_Specification = 2150,
+	FP_SpecificationForCSS = 2161,
+	FP_SpecifiedKeyCatalog = 2858,
+	FP_SpotColorView = 392,
+	FP_Spread = 618,
+	FP_SpreadChange = 2013,
+	FP_StackWarningLevel = 2404,
+	FP_Start = 567,
+	FP_State = 1702,
+	FP_StatusLine = 108,
+	FP_StopCountingAt = 2102,
+	FP_Stretch = 643,
+	FP_StretchChange = 2026,
+	FP_Strikethrough = 609,
+	FP_Strings = 337,
+	FP_StructAppAttrConfigFile = 1500,
+	FP_StructAppsFile = 2889,
+	FP_StructAppsFileId = 2890,
+	FP_StructureCursorTypes = 2296,
+	FP_StructuredApplication = 1495,
+	FP_StructuredApplicationForOpen = 1498,
+	FP_StructuredApplicationList = 1497,
+	FP_StructuredDummyDocText = 2883,
+	FP_StyleOverride = 1142,
+	FP_StyleOverrides = 1151,
+	FP_StyleTag = 770,
+	FP_SubFmtRule = 2156,
+	FP_SubScriptShift = 181,
+	FP_SubScriptSize = 180,
+	FP_SubScriptStretch = 184,
+	FP_SubsecNumComputeMethod = 815,
+	FP_SubsectionNumStyle = 816,
+	FP_SubsectionNumText = 818,
+	FP_SubsectionNumber = 817,
+	FP_SuffixRules = 1588,
+	FP_SuperScriptShift = 179,
+	FP_SuperScriptSize = 178,
+	FP_SuperScriptStretch = 183,
+	FP_SuppressXMLParserWarnings = 2419,
+	FP_Symbols = 334,
+	FP_SymbolsList = 335,
+	FP_SystemVar = 1049,
+	FP_TabStops = 1715,
+	FP_TableTagging = 1585,
+	FP_Tabs = 574,
+	FP_TailArrow = 744,
+	FP_TblAlignment = 1282,
+	FP_TblBodyElement = 2174,
+	FP_TblBodyFirstColor = 1299,
+	FP_TblBodyFirstFill = 1298,
+	FP_TblBodyFirstPeriod = 1301,
+	FP_TblBodyNextColor = 1304,
+	FP_TblBodyNextFill = 1302,
+	FP_TblBodyNextPeriod = 1303,
+	FP_TblBodyRowRuling = 1310,
+	FP_TblBodyRowRulingPeriod = 1294,
+	FP_TblBodyShadeBy = 1300,
+	FP_TblBottomRuling = 1306,
+	FP_TblCatalogEntry = 1292,
+	FP_TblCellBottomMargin = 1316,
+	FP_TblCellLeftMargin = 1317,
+	FP_TblCellRightMargin = 1318,
+	FP_TblCellTopMargin = 1315,
+	FP_TblColRuling = 1309,
+	FP_TblColRulingPeriod = 1293,
+	FP_TblColWidths = 1345,
+	FP_TblElement = 2171,
+	FP_TblFnCellPosition = 318,
+	FP_TblFnCellPrefix = 320,
+	FP_TblFnCellSuffix = 319,
+	FP_TblFnCustNumString = 317,
+	FP_TblFnFmt = 315,
+	FP_TblFnNumComputeMethod = 324,
+	FP_TblFnNumStyle = 316,
+	FP_TblFnPosition = 321,
+	FP_TblFnPrefix = 322,
+	FP_TblFnSuffix = 323,
+	FP_TblFooterElement = 2175,
+	FP_TblHFColor = 1297,
+	FP_TblHFFill = 1296,
+	FP_TblHFRowRuling = 1312,
+	FP_TblHFSeparatorRuling = 1311,
+	FP_TblHeaderElement = 2173,
+	FP_TblInLockedTi = 1319,
+	FP_TblInitNumBodyRows = 1286,
+	FP_TblInitNumCols = 1284,
+	FP_TblInitNumFRows = 1287,
+	FP_TblInitNumHRows = 1285,
+	FP_TblLastBodyRuling = 1295,
+	FP_TblLeftIndent = 1278,
+	FP_TblLeftRuling = 1307,
+	FP_TblNumCols = 1335,
+	FP_TblNumRows = 1336,
+	FP_TblNumbering = 1288,
+	FP_TblOtherBodyRowRuling = 1313,
+	FP_TblOtherColRuling = 1314,
+	FP_TblPlacement = 1283,
+	FP_TblRightIndent = 1279,
+	FP_TblRightRuling = 1308,
+	FP_TblSpaceAbove = 1280,
+	FP_TblSpaceBelow = 1281,
+	FP_TblTag = 1275,
+	FP_TblTitleElement = 2172,
+	FP_TblTitleGap = 1290,
+	FP_TblTitlePosition = 1289,
+	FP_TblTitleSelected = 1346,
+	FP_TblTopRuling = 1305,
+	FP_TblWidth = 1340,
+	FP_TechSuiteInternal = 2409,
+	FP_TechSuiteInternal2 = 2411,
+	FP_TemplateDatas = 4007,
+	FP_Text = 1701,
+	FP_TextColor = 1503,
+	FP_TextFmtRules = 1582,
+	FP_TextIsInvalidInElement = 1660,
+	FP_TextLineType = 1095,
+	FP_TextLoc = 879,
+	FP_TextRange = 1071,
+	FP_TextSelection = 109,
+	FP_Theta = 831,
+	FP_TiAutomaticUpdate = 2051,
+	FP_TiByRows = 2069,
+	FP_TiClientData = 2079,
+	FP_TiClientName = 2076,
+	FP_TiClientSource = 2077,
+	FP_TiClientType = 2078,
+	FP_TiClientUpdateSilent = 2080,
+	FP_TiEOLisEOP = 2065,
+	FP_TiFile = 2053,
+	FP_TiFileModDate = 2057,
+	FP_TiFlowName = 2060,
+	FP_TiFlowPageSpace = 2061,
+	FP_TiFormat = 2062,
+	FP_TiHeadersEmpty = 2068,
+	FP_TiIsNested = 2058,
+	FP_TiIsUnresolved = 2075,
+	FP_TiLocked = 2056,
+	FP_TiMacEdition = 2054,
+	FP_TiMainFlow = 2059,
+	FP_TiNumCols = 2072,
+	FP_TiNumHeaderRows = 2067,
+	FP_TiNumSeparators = 2071,
+	FP_TiRemoveOverrides = 2064,
+	FP_TiRemovePageBreaks = 2063,
+	FP_TiSeparator = 2070,
+	FP_TiTblTag = 2066,
+	FP_TiTextEncoding = 2073,
+	FP_TintBaseColor = 1467,
+	FP_TintPercent = 755,
+	FP_TmpDir = 86,
+	FP_ToolBar = 95,
+	FP_ToolTipText = 1727,
+	FP_TopMargin = 230,
+	FP_TopRowSelection = 1341,
+	FP_TopSepAtIndent = 2009,
+	FP_TopSeparator = 554,
+	FP_TopicRefAbsoluteFilePath = 2347,
+	FP_TrackChangesAddedColor = 2826,
+	FP_TrackChangesDeletedColor = 2827,
+	FP_TrackChangesOn = 2819,
+	FP_Transient = 1031,
+	FP_TrapwiseCompatibility = 495,
+	FP_Tsume = 649,
+	FP_TypeOfDisplayText = 500,
+	FP_UIColorBackground = 2297,
+	FP_UIColorRuler = 2298,
+	FP_Underlining = 608,
+	FP_UndoFDKRecording = 2403,
+	FP_Unique = 21,
+	FP_Untouchable = 146,
+	FP_UpdatingStructure = 2888,
+	FP_UseAFrameIsCropped = 3015,
+	FP_UseAFrameIsFloating = 3014,
+	FP_UseAlignment = 3018,
+	FP_UseAnchorType = 3013,
+	FP_UseAngle = 3007,
+	FP_UseBaselineOffset = 3017,
+	FP_UseBkColor = 991,
+	FP_UseBorderWidth = 3001,
+	FP_UseCapitalization = 636,
+	FP_UseChangeBar = 628,
+	FP_UseColGapWidth = 3020,
+	FP_UseColor = 638,
+	FP_UseColumnsAreBalanced = 3028,
+	FP_UseDTheta = 3024,
+	FP_UseFMConsoleForErrorLog = 825,
+	FP_UseFill = 3002,
+	FP_UseFlowIsAutoConnect = 3031,
+	FP_UseFlowIsPostScript = 3032,
+	FP_UseFontAngle = 624,
+	FP_UseFontFamily = 621,
+	FP_UseFontSize = 632,
+	FP_UseFontVariation = 622,
+	FP_UseFontWeight = 623,
+	FP_UseHeight = 3011,
+	FP_UseInitialStructure = 1492,
+	FP_UseInitialStructureOfAutoInsertedElements = 1499,
+	FP_UseInsetDpi = 3027,
+	FP_UseKernX = 633,
+	FP_UseKernY = 634,
+	FP_UseLanguage = 645,
+	FP_UseLocX = 3008,
+	FP_UseLocY = 3009,
+	FP_UseMathMLApplyPgfStyle = 3104,
+	FP_UseMathMLComposeDpi = 3033,
+	FP_UseMathMLDpi = 3035,
+	FP_UseMathMLFontSize = 3034,
+	FP_UseMathMLInline = 3103,
+	FP_UseMathSize = 3026,
+	FP_UseNextTag = 566,
+	FP_UseNumColumns = 3019,
+	FP_UseOutline = 629,
+	FP_UseOverline = 627,
+	FP_UseOverprint = 3006,
+	FP_UsePairKern = 631,
+	FP_UsePen = 3003,
+	FP_UsePosition = 637,
+	FP_UseRadius = 3030,
+	FP_UseRunaround = 3012,
+	FP_UseRunaroundGap = 3004,
+	FP_UseSepOverride = 1141,
+	FP_UseShadow = 630,
+	FP_UseSideHeadGap = 3022,
+	FP_UseSideHeadPlacement = 3029,
+	FP_UseSideHeadWidth = 3021,
+	FP_UseSideOffset = 3016,
+	FP_UseSpread = 635,
+	FP_UseStretch = 644,
+	FP_UseStrikethrough = 626,
+	FP_UseTextLineType = 3025,
+	FP_UseTheta = 3023,
+	FP_UseTintPercent = 3005,
+	FP_UseTsume = 650,
+	FP_UseUnderlining = 625,
+	FP_UseWidth = 3010,
+	FP_UserHomeDir = 84,
+	FP_UserLogin = 83,
+	FP_UserName = 82,
+	FP_UserSettingsDir = 152,
+	FP_UserString = 22,
+	FP_ValidHighestLevel = 1574,
+	FP_Validating = 94,
+	FP_ValidationFlags = 1668,
+	FP_VarFmt = 1047,
+	FP_Variables = 336,
+	FP_VersionDescription = 1512,
+	FP_VersionMajor = 43,
+	FP_VersionMinor = 44,
+	FP_VersionRevision = 41,
+	FP_VerticalSpreadLarge = 345,
+	FP_VerticalSpreadMed = 344,
+	FP_VerticalSpreadSmall = 343,
+	FP_View = 1945,
+	FP_ViewBorders = 382,
+	FP_ViewBreadCrumbs = 2902,
+	FP_ViewDisplayUnits = 390,
+	FP_ViewFontSizeUnits = 396,
+	FP_ViewGrid = 389,
+	FP_ViewGridUnits = 386,
+	FP_ViewHotspotIndicators = 2357,
+	FP_ViewLinkBoundaries = 395,
+	FP_ViewNoGraphics = 384,
+	FP_ViewOnlyDeadCodes = 140,
+	FP_ViewOnlyMenuBar = 144,
+	FP_ViewOnlySelect = 139,
+	FP_ViewOnlyWinBorders = 136,
+	FP_ViewOnlyWinMenubar = 135,
+	FP_ViewOnlyWinPalette = 134,
+	FP_ViewOnlyWinPopup = 137,
+	FP_ViewOnlyXRef = 138,
+	FP_ViewPageScrolling = 385,
+	FP_ViewRulerUnits = 391,
+	FP_ViewRulers = 383,
+	FP_ViewTextSymbols = 388,
+	FP_Visibility = 1713,
+	FP_VisualCaretMovement = 1511,
+	FP_VolNumComputeMethod = 211,
+	FP_VolumeNumStyle = 213,
+	FP_VolumeNumText = 214,
+	FP_VolumeNumber = 212,
+	FP_WesternFamily = 2284,
+	FP_WesternFontPanoseName = 648,
+	FP_WesternFontPlatformName = 646,
+	FP_WesternFontPostScriptName = 647,
+	FP_WesternShift = 2286,
+	FP_WesternSize = 2285,
+	FP_WideRubiSpaceForJapanese = 189,
+	FP_WideRubiSpaceForOther = 191,
+	FP_Width = 783,
+	FP_Window = 1946,
+	FP_WindowHandle = 1717,
+	FP_WindowSystem = 47,
+	FP_XMLStructuredApplicationList = 1598,
+	FP_XRefAltText = 1153,
+	FP_XRefClientName = 1154,
+	FP_XRefClientType = 1155,
+	FP_XRefFile = 1070,
+	FP_XRefFmt = 1073,
+	FP_XRefIsUnresolved = 1077,
+	FP_XRefResolvedWithKeyref = 1156,
+	FP_XRefRetainKeydefText = 1157,
+	FP_XRefSrcElemNonUniqueId = 1152,
+	FP_XRefSrcIsElem = 1076,
+	FP_XRefSrcText = 1075,
+	FP_XSLTProcessors = 1506,
+	FP_XSLTTransformationScenarioFile = 1505,
+	FP_XmlApplicationForBookComponent = 2330,
+	FP_XmlDocType = 2810,
+	FP_XmlEncoding = 2801,
+	FP_XmlFileEncoding = 2809,
+	FP_XmlIsBook = 823,
+	FP_XmlLock = 2841,
+	FP_XmlPublicId = 2811,
+	FP_XmlStandAlone = 2802,
+	FP_XmlStyleSheet = 2803,
+	FP_XmlStyleSheetList = 2804,
+	FP_XmlSystemId = 2812,
+	FP_XmlUseBOM = 2805,
+	FP_XmlVersion = 2800,
+	FP_XmlWellFormed = 2806,
+	FP_YakumonoType = 597,
+	FP_Year = 1726,
+	FP_Yellow = 1459,
+	FP_Zoom = 387,
 
 	// --------------------------------------------------
 	// Frame Return values
 	// --------------------------------------------------
-	type FR_CancelInsertElementOperation = -10010;
-	const FR_CancelInsertElementOperation: FR_CancelInsertElementOperation;
-	type FR_CancelOperation = -10001;
-	const FR_CancelOperation: FR_CancelOperation;
-	type FR_ClosedXRefDialog = -10008;
-	const FR_ClosedXRefDialog: FR_ClosedXRefDialog;
-	type FR_CommandDisabled = -10022;
-	const FR_CommandDisabled: FR_CommandDisabled;
-	type FR_CommandEnabled = -10021;
-	const FR_CommandEnabled: FR_CommandEnabled;
-	type FR_DialogStayUp = -10000;
-	const FR_DialogStayUp: FR_DialogStayUp;
-	type FR_DisplayedModalDialogForNonContainerElem = -10012;
-	const FR_DisplayedModalDialogForNonContainerElem: FR_DisplayedModalDialogForNonContainerElem;
-	type FR_DisplayedModelessDialogForNonContainerElem = -10009;
-	const FR_DisplayedModelessDialogForNonContainerElem: FR_DisplayedModelessDialogForNonContainerElem;
-	type FR_DisplayedTiDialog = -10002;
-	const FR_DisplayedTiDialog: FR_DisplayedTiDialog;
-	type FR_DisplayedXRefDialog = -10007;
-	const FR_DisplayedXRefDialog: FR_DisplayedXRefDialog;
-	type FR_ECMImportSuccess = -10003;
-	const FR_ECMImportSuccess: FR_ECMImportSuccess;
-	type FR_HideDialogOnClose = -10011;
-	const FR_HideDialogOnClose: FR_HideDialogOnClose;
-	type FR_KeyCatalogLoaded = -10020;
-	const FR_KeyCatalogLoaded: FR_KeyCatalogLoaded;
-	type FR_ModalCloseAlways = -10024;
-	const FR_ModalCloseAlways: FR_ModalCloseAlways;
-	type FR_ModalStayUp = -10000;
-	const FR_ModalStayUp: FR_ModalStayUp;
-	type FR_NoOperation = -10006;
-	const FR_NoOperation: FR_NoOperation;
-	type FR_SkipStep = -10004;
-	const FR_SkipStep: FR_SkipStep;
-	type FR_USE_EGREP = 3;
-	const FR_USE_EGREP: FR_USE_EGREP;
-	type FR_USE_GREP = 2;
-	const FR_USE_GREP: FR_USE_GREP;
-	type FR_USE_PERL = 1;
-	const FR_USE_PERL: FR_USE_PERL;
-	type FR_UpdateDITAReferenceFailed = -10014;
-	const FR_UpdateDITAReferenceFailed: FR_UpdateDITAReferenceFailed;
-	type FR_UpdateDITAReferenceFailedCannotConvertToFMObject = -10019;
-	const FR_UpdateDITAReferenceFailedCannotConvertToFMObject: FR_UpdateDITAReferenceFailedCannotConvertToFMObject;
-	type FR_UpdateDITAReferenceFailedCannotFindReferencedFile = -10017;
-	const FR_UpdateDITAReferenceFailedCannotFindReferencedFile: FR_UpdateDITAReferenceFailedCannotFindReferencedFile;
-	type FR_UpdateDITAReferenceFailedCannotOpenReferencedFile = -10018;
-	const FR_UpdateDITAReferenceFailedCannotOpenReferencedFile: FR_UpdateDITAReferenceFailedCannotOpenReferencedFile;
-	type FR_UpdateDITAReferenceFailedCannotResolveReference = -10016;
-	const FR_UpdateDITAReferenceFailedCannotResolveReference: FR_UpdateDITAReferenceFailedCannotResolveReference;
-	type FR_UpdateDITAReferenceFailedErrorImportingReferencedFile = -10023;
-	const FR_UpdateDITAReferenceFailedErrorImportingReferencedFile: FR_UpdateDITAReferenceFailedErrorImportingReferencedFile;
-	type FR_UpdateDITAReferenceFailedInvalidElementType = -10015;
-	const FR_UpdateDITAReferenceFailedInvalidElementType: FR_UpdateDITAReferenceFailedInvalidElementType;
-	type FR_UpdateDITAReferenceSuccess = -10013;
-	const FR_UpdateDITAReferenceSuccess: FR_UpdateDITAReferenceSuccess;
-	type FR_YesOperation = -10005;
-	const FR_YesOperation: FR_YesOperation;
+	FR_CancelInsertElementOperation = -10010,
+	FR_CancelOperation = -10001,
+	FR_ClosedXRefDialog = -10008,
+	FR_CommandDisabled = -10022,
+	FR_CommandEnabled = -10021,
+	FR_DialogStayUp = -10000,
+	FR_DisplayedModalDialogForNonContainerElem = -10012,
+	FR_DisplayedModelessDialogForNonContainerElem = -10009,
+	FR_DisplayedTiDialog = -10002,
+	FR_DisplayedXRefDialog = -10007,
+	FR_ECMImportSuccess = -10003,
+	FR_HideDialogOnClose = -10011,
+	FR_KeyCatalogLoaded = -10020,
+	FR_ModalCloseAlways = -10024,
+	FR_ModalStayUp = -10000,
+	FR_NoOperation = -10006,
+	FR_SkipStep = -10004,
+	FR_USE_EGREP = 3,
+	FR_USE_GREP = 2,
+	FR_USE_PERL = 1,
+	FR_UpdateDITAReferenceFailed = -10014,
+	FR_UpdateDITAReferenceFailedCannotConvertToFMObject = -10019,
+	FR_UpdateDITAReferenceFailedCannotFindReferencedFile = -10017,
+	FR_UpdateDITAReferenceFailedCannotOpenReferencedFile = -10018,
+	FR_UpdateDITAReferenceFailedCannotResolveReference = -10016,
+	FR_UpdateDITAReferenceFailedErrorImportingReferencedFile = -10023,
+	FR_UpdateDITAReferenceFailedInvalidElementType = -10015,
+	FR_UpdateDITAReferenceSuccess = -10013,
+	FR_YesOperation = -10005,
 
 	// --------------------------------------------------
 	// Frame Scriptable function properties
 	// --------------------------------------------------
-	type FS_ActiveConditionalExpression = 6;
-	const FS_ActiveConditionalExpression: FS_ActiveConditionalExpression;
-	type FS_AddEditExpressions = 1;
-	const FS_AddEditExpressions: FS_AddEditExpressions;
-	type FS_AlertUserAboutFailure = 2;
-	const FS_AlertUserAboutFailure: FS_AlertUserAboutFailure;
-	type FS_AllowInconsistentNumProps = 6;
-	const FS_AllowInconsistentNumProps: FS_AllowInconsistentNumProps;
-	type FS_AllowNonFMFiles = 1;
-	const FS_AllowNonFMFiles: FS_AllowNonFMFiles;
-	type FS_AllowViewOnlyFiles = 3;
-	const FS_AllowViewOnlyFiles: FS_AllowViewOnlyFiles;
-	type FS_ApplyConditionalSettingsShowBookErrorLog = 10;
-	const FS_ApplyConditionalSettingsShowBookErrorLog: FS_ApplyConditionalSettingsShowBookErrorLog;
-	type FS_ApplyConditionalSettingsToNestedBooks = 9;
-	const FS_ApplyConditionalSettingsToNestedBooks: FS_ApplyConditionalSettingsToNestedBooks;
-	type FS_ApplyConditionalSettingsToViewOnlyDoc = 8;
-	const FS_ApplyConditionalSettingsToViewOnlyDoc: FS_ApplyConditionalSettingsToViewOnlyDoc;
-	type FS_AutoBackupOnSave = 6;
-	const FS_AutoBackupOnSave: FS_AutoBackupOnSave;
-	type FS_BeefyDoc = 32;
-	const FS_BeefyDoc: FS_BeefyDoc;
-	type FS_BleedBottom = 41;
-	const FS_BleedBottom: FS_BleedBottom;
-	type FS_BleedInside = 42;
-	const FS_BleedInside: FS_BleedInside;
-	type FS_BleedMarks = 35;
-	const FS_BleedMarks: FS_BleedMarks;
-	type FS_BleedOutside = 43;
-	const FS_BleedOutside: FS_BleedOutside;
-	type FS_BleedTop = 40;
-	const FS_BleedTop: FS_BleedTop;
-	type FS_BookIsInUse = 18;
-	const FS_BookIsInUse: FS_BookIsInUse;
-	type FS_CMSId = 48;
-	const FS_CMSId: FS_CMSId;
-	type FS_CMSSessionId = 49;
-	const FS_CMSSessionId: FS_CMSSessionId;
-	type FS_CellSeparator = 29;
-	const FS_CellSeparator: FS_CellSeparator;
-	type FS_ClickButton = 14;
-	const FS_ClickButton: FS_ClickButton;
-	type FS_ClientUpdateSilent = 47;
-	const FS_ClientUpdateSilent: FS_ClientUpdateSilent;
-	type FS_ColorBars = 36;
-	const FS_ColorBars: FS_ColorBars;
-	type FS_ConditionalExpressions = 5;
-	const FS_ConditionalExpressions: FS_ConditionalExpressions;
-	type FS_CropMarks = 34;
-	const FS_CropMarks: FS_CropMarks;
-	type FS_DeleteExpressions = 2;
-	const FS_DeleteExpressions: FS_DeleteExpressions;
-	type FS_DisallowBookDoc = 10;
-	const FS_DisallowBookDoc: FS_DisallowBookDoc;
-	type FS_DisallowBookMIF = 9;
-	const FS_DisallowBookMIF: FS_DisallowBookMIF;
-	type FS_DisallowDoc = 8;
-	const FS_DisallowDoc: FS_DisallowDoc;
-	type FS_DisallowFilterTypes = 11;
-	const FS_DisallowFilterTypes: FS_DisallowFilterTypes;
-	type FS_DisallowGraphicTypes = 9;
-	const FS_DisallowGraphicTypes: FS_DisallowGraphicTypes;
-	type FS_DisallowMIF = 7;
-	const FS_DisallowMIF: FS_DisallowMIF;
-	type FS_DisallowMacEditions = 10;
-	const FS_DisallowMacEditions: FS_DisallowMacEditions;
-	type FS_DisallowPlainText = 12;
-	const FS_DisallowPlainText: FS_DisallowPlainText;
-	type FS_DisallowSgml = 33;
-	const FS_DisallowSgml: FS_DisallowSgml;
-	type FS_DisallowXml = 43;
-	const FS_DisallowXml: FS_DisallowXml;
-	type FS_DitaApplyOutputTemaples = 82;
-	const FS_DitaApplyOutputTemaples: FS_DitaApplyOutputTemaples;
-	type FS_DitaBookChapterTemplate = 66;
-	const FS_DitaBookChapterTemplate: FS_DitaBookChapterTemplate;
-	type FS_DitaBookChapterTitleTemplate = 67;
-	const FS_DitaBookChapterTitleTemplate: FS_DitaBookChapterTitleTemplate;
-	type FS_DitaBookIndexTemplate = 68;
-	const FS_DitaBookIndexTemplate: FS_DitaBookIndexTemplate;
-	type FS_DitaBookLOFTemplate = 70;
-	const FS_DitaBookLOFTemplate: FS_DitaBookLOFTemplate;
-	type FS_DitaBookLOTTemplate = 69;
-	const FS_DitaBookLOTTemplate: FS_DitaBookLOTTemplate;
-	type FS_DitaBookSectionTemplate = 72;
-	const FS_DitaBookSectionTemplate: FS_DitaBookSectionTemplate;
-	type FS_DitaBookSectionTitleTemplate = 73;
-	const FS_DitaBookSectionTitleTemplate: FS_DitaBookSectionTitleTemplate;
-	type FS_DitaBookSubsectionTemplate = 74;
-	const FS_DitaBookSubsectionTemplate: FS_DitaBookSubsectionTemplate;
-	type FS_DitaBookSubsectionTitleTemplate = 75;
-	const FS_DitaBookSubsectionTitleTemplate: FS_DitaBookSubsectionTitleTemplate;
-	type FS_DitaBookTOCTemplate = 71;
-	const FS_DitaBookTOCTemplate: FS_DitaBookTOCTemplate;
-	type FS_DitaBookTitleTemplate = 65;
-	const FS_DitaBookTitleTemplate: FS_DitaBookTitleTemplate;
-	type FS_DitaCompositeDocTemplate = 30;
-	const FS_DitaCompositeDocTemplate: FS_DitaCompositeDocTemplate;
-	type FS_DitaGenerateBookTitlePage = 80;
-	const FS_DitaGenerateBookTitlePage: FS_DitaGenerateBookTitlePage;
-	type FS_DitaGenerateComponentsAtOneLoc = 26;
-	const FS_DitaGenerateComponentsAtOneLoc: FS_DitaGenerateComponentsAtOneLoc;
-	type FS_DitaGenerateFlatBook = 25;
-	const FS_DitaGenerateFlatBook: FS_DitaGenerateFlatBook;
-	type FS_DitaGenerateFolderTitlePage = 81;
-	const FS_DitaGenerateFolderTitlePage: FS_DitaGenerateFolderTitlePage;
-	type FS_DitaGenerateIndex = 77;
-	const FS_DitaGenerateIndex: FS_DitaGenerateIndex;
-	type FS_DitaGenerateLOF = 79;
-	const FS_DitaGenerateLOF: FS_DitaGenerateLOF;
-	type FS_DitaGenerateLOT = 78;
-	const FS_DitaGenerateLOT: FS_DitaGenerateLOT;
-	type FS_DitaGenerateTOC = 76;
-	const FS_DitaGenerateTOC: FS_DitaGenerateTOC;
-	type FS_DitaMaxRefLevels = 53;
-	const FS_DitaMaxRefLevels: FS_DitaMaxRefLevels;
-	type FS_DitaOptimizePostProcess = 83;
-	const FS_DitaOptimizePostProcess: FS_DitaOptimizePostProcess;
-	type FS_DitaPostProcessingOnBook = 27;
-	const FS_DitaPostProcessingOnBook: FS_DitaPostProcessingOnBook;
-	type FS_DitaSavePdfViaBook = 28;
-	const FS_DitaSavePdfViaBook: FS_DitaSavePdfViaBook;
-	type FS_DitavalCondTag = 23;
-	const FS_DitavalCondTag: FS_DitavalCondTag;
-	type FS_DitavalFile = 22;
-	const FS_DitavalFile: FS_DitavalFile;
-	type FS_DoNotLockFile = 54;
-	const FS_DoNotLockFile: FS_DoNotLockFile;
-	type FS_Doctype = 2;
-	const FS_Doctype: FS_Doctype;
-	type FS_DontNotifyAPIClients = 3;
-	const FS_DontNotifyAPIClients: FS_DontNotifyAPIClients;
-	type FS_Export = 4;
-	const FS_Export: FS_Export;
-	type FS_ExportFileName = 1;
-	const FS_ExportFileName: FS_ExportFileName;
-	type FS_ExportFileTypeHint = 14;
-	const FS_ExportFileTypeHint: FS_ExportFileTypeHint;
-	type FS_ExportNativeError = 2;
-	const FS_ExportNativeError: FS_ExportNativeError;
-	type FS_ExportObjectId = 7;
-	const FS_ExportObjectId: FS_ExportObjectId;
-	type FS_ExportObjectNeedsDpi = 12;
-	const FS_ExportObjectNeedsDpi: FS_ExportObjectNeedsDpi;
-	type FS_ExportStatus = 3;
-	const FS_ExportStatus: FS_ExportStatus;
-	type FS_ExportTextRange = 6;
-	const FS_ExportTextRange: FS_ExportTextRange;
-	type FS_ExportType = 5;
-	const FS_ExportType: FS_ExportType;
-	type FS_Extension = 5;
-	const FS_Extension: FS_Extension;
-	type FS_FileIsGraphic = 13;
-	const FS_FileIsGraphic: FS_FileIsGraphic;
-	type FS_FileIsInUse = 17;
-	const FS_FileIsInUse: FS_FileIsInUse;
-	type FS_FileIsMakerDoc = 18;
-	const FS_FileIsMakerDoc: FS_FileIsMakerDoc;
-	type FS_FileIsOldVersion = 20;
-	const FS_FileIsOldVersion: FS_FileIsOldVersion;
-	type FS_FileIsSgmlDoc = 32;
-	const FS_FileIsSgmlDoc: FS_FileIsSgmlDoc;
-	type FS_FileIsStructured = 21;
-	const FS_FileIsStructured: FS_FileIsStructured;
-	type FS_FileIsText = 16;
-	const FS_FileIsText: FS_FileIsText;
-	type FS_FileIsXmlDoc = 37;
-	const FS_FileIsXmlDoc: FS_FileIsXmlDoc;
-	type FS_FileName = 1;
-	const FS_FileName: FS_FileName;
-	type FS_FileQverwrite = 6;
-	const FS_FileQverwrite: FS_FileQverwrite;
-	type FS_FileType = 1;
-	const FS_FileType: FS_FileType;
-	type FS_FileTypeHint = 34;
-	const FS_FileTypeHint: FS_FileTypeHint;
-	type FS_FindCharFmt = 3;
-	const FS_FindCharFmt: FS_FindCharFmt;
-	type FS_FindCharTag = 5;
-	const FS_FindCharTag: FS_FindCharTag;
-	type FS_FindCondTextInCondTags = 13;
-	const FS_FindCondTextInCondTags: FS_FindCondTextInCondTags;
-	type FS_FindCondTextNotInCondTags = 14;
-	const FS_FindCondTextNotInCondTags: FS_FindCondTextNotInCondTags;
-	type FS_FindCustomizationFlags = 15;
-	const FS_FindCustomizationFlags: FS_FindCustomizationFlags;
-	type FS_FindElementTag = 2;
-	const FS_FindElementTag: FS_FindElementTag;
-	type FS_FindMarkerOfType = 9;
-	const FS_FindMarkerOfType: FS_FindMarkerOfType;
-	type FS_FindMarkerText = 10;
-	const FS_FindMarkerText: FS_FindMarkerText;
-	type FS_FindNamedVariable = 12;
-	const FS_FindNamedVariable: FS_FindNamedVariable;
-	type FS_FindObject = 8;
-	const FS_FindObject: FS_FindObject;
-	type FS_FindPgfTag = 4;
-	const FS_FindPgfTag: FS_FindPgfTag;
-	type FS_FindSelection = 19;
-	const FS_FindSelection: FS_FindSelection;
-	type FS_FindStyleTag = 18;
-	const FS_FindStyleTag: FS_FindStyleTag;
-	type FS_FindTableTag = 6;
-	const FS_FindTableTag: FS_FindTableTag;
-	type FS_FindText = 1;
-	const FS_FindText: FS_FindText;
-	type FS_FindWrap = 16;
-	const FS_FindWrap: FS_FindWrap;
-	type FS_FindXRefWithFormat = 11;
-	const FS_FindXRefWithFormat: FS_FindXRefWithFormat;
-	type FS_FitGraphicInSelectedRect = 14;
-	const FS_FitGraphicInSelectedRect: FS_FitGraphicInSelectedRect;
-	type FS_FontChangedMetric = 23;
-	const FS_FontChangedMetric: FS_FontChangedMetric;
-	type FS_FontNotFoundInCatalog = 28;
-	const FS_FontNotFoundInCatalog: FS_FontNotFoundInCatalog;
-	type FS_FontNotFoundInDoc = 22;
-	const FS_FontNotFoundInDoc: FS_FontNotFoundInDoc;
-	type FS_ForceImportAsText = 17;
-	const FS_ForceImportAsText: FS_ForceImportAsText;
-	type FS_ForceOpenAsText = 13;
-	const FS_ForceOpenAsText: FS_ForceOpenAsText;
-	type FS_FormatImportedText = 22;
-	const FS_FormatImportedText: FS_FormatImportedText;
-	type FS_GetCheckBoxState = 3;
-	const FS_GetCheckBoxState: FS_GetCheckBoxState;
-	type FS_GetDropDownActive = 12;
-	const FS_GetDropDownActive: FS_GetDropDownActive;
-	type FS_GetDropDownLabels = 11;
-	const FS_GetDropDownLabels: FS_GetDropDownLabels;
-	type FS_GetEditBoxText = 1;
-	const FS_GetEditBoxText: FS_GetEditBoxText;
-	type FS_GetListBoxActive = 9;
-	const FS_GetListBoxActive: FS_GetListBoxActive;
-	type FS_GetListBoxLabels = 7;
-	const FS_GetListBoxLabels: FS_GetListBoxLabels;
-	type FS_GetListViewRowCheckState = 17;
-	const FS_GetListViewRowCheckState: FS_GetListViewRowCheckState;
-	type FS_GetListViewRowData = 16;
-	const FS_GetListViewRowData: FS_GetListViewRowData;
-	type FS_GetListViewRows = 15;
-	const FS_GetListViewRows: FS_GetListViewRows;
-	type FS_GetRadioState = 5;
-	const FS_GetRadioState: FS_GetRadioState;
-	type FS_GraphicDpi = 15;
-	const FS_GraphicDpi: FS_GraphicDpi;
-	type FS_HasUnsupportedHotspotShapes = 29;
-	const FS_HasUnsupportedHotspotShapes: FS_HasUnsupportedHotspotShapes;
-	type FS_HideConditions = 3;
-	const FS_HideConditions: FS_HideConditions;
-	type FS_HowToImport = 4;
-	const FS_HowToImport: FS_HowToImport;
-	type FS_ImportAsType = 36;
-	const FS_ImportAsType: FS_ImportAsType;
-	type FS_ImportExportVersion = 17;
-	const FS_ImportExportVersion: FS_ImportExportVersion;
-	type FS_ImportFlowPageSpace = 21;
-	const FS_ImportFlowPageSpace: FS_ImportFlowPageSpace;
-	type FS_ImportFlowTag = 20;
-	const FS_ImportFlowTag: FS_ImportFlowTag;
-	type FS_ImportNativeError = 2;
-	const FS_ImportNativeError: FS_ImportNativeError;
-	type FS_ImportStatus = 3;
-	const FS_ImportStatus: FS_ImportStatus;
-	type FS_ImportTblTag = 25;
-	const FS_ImportTblTag: FS_ImportTblTag;
-	type FS_ImportedFileName = 1;
-	const FS_ImportedFileName: FS_ImportedFileName;
-	type FS_InsetData = 50;
-	const FS_InsetData: FS_InsetData;
-	type FS_InsetElementDef = 52;
-	const FS_InsetElementDef: FS_InsetElementDef;
-	type FS_IsErrorDoc = 46;
-	const FS_IsErrorDoc: FS_IsErrorDoc;
-	type FS_IterParamGetBookComponentFolder = 4;
-	const FS_IterParamGetBookComponentFolder: FS_IterParamGetBookComponentFolder;
-	type FS_IterParamGetBookComponentGroup = 5;
-	const FS_IterParamGetBookComponentGroup: FS_IterParamGetBookComponentGroup;
-	type FS_IterParamGetBookComponentRefBook = 6;
-	const FS_IterParamGetBookComponentRefBook: FS_IterParamGetBookComponentRefBook;
-	type FS_IterParamGetBookComponentRefMap = 7;
-	const FS_IterParamGetBookComponentRefMap: FS_IterParamGetBookComponentRefMap;
-	type FS_IterParamGetMapRef = 12;
-	const FS_IterParamGetMapRef: FS_IterParamGetMapRef;
-	type FS_IterParamParseBookInBook = 1;
-	const FS_IterParamParseBookInBook: FS_IterParamParseBookInBook;
-	type FS_IterParamParseMapInBook = 2;
-	const FS_IterParamParseMapInBook: FS_IterParamParseMapInBook;
-	type FS_IterParamParseMapInMap = 8;
-	const FS_IterParamParseMapInMap: FS_IterParamParseMapInMap;
-	type FS_IterParamSkipExcludedBookComponents = 3;
-	const FS_IterParamSkipExcludedBookComponents: FS_IterParamSkipExcludedBookComponents;
-	type FS_IterParamSkipNonPrintTopicrefs = 10;
-	const FS_IterParamSkipNonPrintTopicrefs: FS_IterParamSkipNonPrintTopicrefs;
-	type FS_IterParamSkipResourceOnlyTopicrefs = 9;
-	const FS_IterParamSkipResourceOnlyTopicrefs: FS_IterParamSkipResourceOnlyTopicrefs;
-	type FS_IterParamSkipTopicsetrefs = 11;
-	const FS_IterParamSkipTopicsetrefs: FS_IterParamSkipTopicsetrefs;
-	type FS_IteratorItemFieldBookId = 1;
-	const FS_IteratorItemFieldBookId: FS_IteratorItemFieldBookId;
-	type FS_IteratorItemFieldDocId = 2;
-	const FS_IteratorItemFieldDocId: FS_IteratorItemFieldDocId;
-	type FS_IteratorItemFieldObjId = 3;
-	const FS_IteratorItemFieldObjId: FS_IteratorItemFieldObjId;
-	type FS_IteratorItemMaxFields = 3;
-	const FS_IteratorItemMaxFields: FS_IteratorItemMaxFields;
-	type FS_LanguageNotAvailable = 25;
-	const FS_LanguageNotAvailable: FS_LanguageNotAvailable;
-	type FS_LeaveHeadingRowsEmpty = 27;
-	const FS_LeaveHeadingRowsEmpty: FS_LeaveHeadingRowsEmpty;
-	type FS_LockCantBeReset = 19;
-	const FS_LockCantBeReset: FS_LockCantBeReset;
-	type FS_MakeIconic = 6;
-	const FS_MakeIconic: FS_MakeIconic;
-	type FS_MakePageCount = 7;
-	const FS_MakePageCount: FS_MakePageCount;
-	type FS_MakeVisible = 5;
-	const FS_MakeVisible: FS_MakeVisible;
-	type FS_ManualUpdate = 5;
-	const FS_ManualUpdate: FS_ManualUpdate;
-	type FS_MappingFile = 53;
-	const FS_MappingFile: FS_MappingFile;
-	type FS_MarksOffset = 39;
-	const FS_MarksOffset: FS_MarksOffset;
-	type FS_MarksWeight = 38;
-	const FS_MarksWeight: FS_MarksWeight;
-	type FS_MathMLExportEntityAsValue = 2;
-	const FS_MathMLExportEntityAsValue: FS_MathMLExportEntityAsValue;
-	type FS_MathMLNamespacePrefix = 1;
-	const FS_MathMLNamespacePrefix: FS_MathMLNamespacePrefix;
-	type FS_ModDateChanged = 21;
-	const FS_ModDateChanged: FS_ModDateChanged;
-	type FS_NameStripe = 31;
-	const FS_NameStripe: FS_NameStripe;
-	type FS_NewDoc = 29;
-	const FS_NewDoc: FS_NewDoc;
-	type FS_NoStructuredErrorLog = 44;
-	const FS_NoStructuredErrorLog: FS_NoStructuredErrorLog;
-	type FS_NumCellSeparators = 30;
-	const FS_NumCellSeparators: FS_NumCellSeparators;
-	type FS_NumColumns = 31;
-	const FS_NumColumns: FS_NumColumns;
-	type FS_NumConditionalSettingsParams = 10;
-	const FS_NumConditionalSettingsParams: FS_NumConditionalSettingsParams;
-	type FS_NumExportParams = 17;
-	const FS_NumExportParams: FS_NumExportParams;
-	type FS_NumExportReturnParams = 3;
-	const FS_NumExportReturnParams: FS_NumExportReturnParams;
-	type FS_NumImportParams = 48;
-	const FS_NumImportParams: FS_NumImportParams;
-	type FS_NumImportReturnParams = 3;
-	const FS_NumImportReturnParams: FS_NumImportReturnParams;
-	type FS_NumIteratorParams = 12;
-	const FS_NumIteratorParams: FS_NumIteratorParams;
-	type FS_NumManageConditionalExpressionsParams = 2;
-	const FS_NumManageConditionalExpressionsParams: FS_NumManageConditionalExpressionsParams;
-	type FS_NumNewXMLParams = 6;
-	const FS_NumNewXMLParams: FS_NumNewXMLParams;
-	type FS_NumOpenParams = 54;
-	const FS_NumOpenParams: FS_NumOpenParams;
-	type FS_NumOpenReturnParams = 3;
-	const FS_NumOpenReturnParams: FS_NumOpenReturnParams;
-	type FS_NumSaveParams = 83;
-	const FS_NumSaveParams: FS_NumSaveParams;
-	type FS_NumSaveReturnParams = 3;
-	const FS_NumSaveReturnParams: FS_NumSaveReturnParams;
-	type FS_NumSpellParams = 8;
-	const FS_NumSpellParams: FS_NumSpellParams;
-	type FS_NumUpdateBookParams = 14;
-	const FS_NumUpdateBookParams: FS_NumUpdateBookParams;
-	type FS_NumUpdateBookReturnParams = 1;
-	const FS_NumUpdateBookReturnParams: FS_NumUpdateBookReturnParams;
-	type FS_OpenAsType = 41;
-	const FS_OpenAsType: FS_OpenAsType;
-	type FS_OpenBookViewOnly = 42;
-	const FS_OpenBookViewOnly: FS_OpenBookViewOnly;
-	type FS_OpenDocFluid = 37;
-	const FS_OpenDocFluid: FS_OpenDocFluid;
-	type FS_OpenDocViewOnly = 30;
-	const FS_OpenDocViewOnly: FS_OpenDocViewOnly;
-	type FS_OpenFileNotWritable = 40;
-	const FS_OpenFileNotWritable: FS_OpenFileNotWritable;
-	type FS_OpenId = 27;
-	const FS_OpenId: FS_OpenId;
-	type FS_OpenInNewWindow = 26;
-	const FS_OpenInNewWindow: FS_OpenInNewWindow;
-	type FS_OpenNativeError = 2;
-	const FS_OpenNativeError: FS_OpenNativeError;
-	type FS_OpenOldVersionFiles = 13;
-	const FS_OpenOldVersionFiles: FS_OpenOldVersionFiles;
-	type FS_OpenStatus = 3;
-	const FS_OpenStatus: FS_OpenStatus;
-	type FS_OpenedFileName = 1;
-	const FS_OpenedFileName: FS_OpenedFileName;
-	type FS_OutputFilePathName = 1006;
-	const FS_OutputFilePathName: FS_OutputFilePathName;
-	type FS_PDFColorSpace = 55;
-	const FS_PDFColorSpace: FS_PDFColorSpace;
-	type FS_PDFCompatibility = 47;
-	const FS_PDFCompatibility: FS_PDFCompatibility;
-	type FS_PDFEmbedPageThumbnails = 57;
-	const FS_PDFEmbedPageThumbnails: FS_PDFEmbedPageThumbnails;
-	type FS_PDFLayout = 50;
-	const FS_PDFLayout: FS_PDFLayout;
-	type FS_PDFOpenPage = 48;
-	const FS_PDFOpenPage: FS_PDFOpenPage;
-	type FS_PDFOptimizedWebView = 58;
-	const FS_PDFOptimizedWebView: FS_PDFOptimizedWebView;
-	type FS_PDFPageNum = 45;
-	const FS_PDFPageNum: FS_PDFPageNum;
-	type FS_PDFPageRangeEnd = 54;
-	const FS_PDFPageRangeEnd: FS_PDFPageRangeEnd;
-	type FS_PDFPageRangeStart = 53;
-	const FS_PDFPageRangeStart: FS_PDFPageRangeStart;
-	type FS_PDFPages = 52;
-	const FS_PDFPages: FS_PDFPages;
-	type FS_PDFPassword = 33;
-	const FS_PDFPassword: FS_PDFPassword;
-	type FS_PDFPreset = 45;
-	const FS_PDFPreset: FS_PDFPreset;
-	type FS_PDFPrimaryOutput = 51;
-	const FS_PDFPrimaryOutput: FS_PDFPrimaryOutput;
-	type FS_PDFStandard = 46;
-	const FS_PDFStandard: FS_PDFStandard;
-	type FS_PDFTag = 56;
-	const FS_PDFTag: FS_PDFTag;
-	type FS_PDFUseDistiller = 60;
-	const FS_PDFUseDistiller: FS_PDFUseDistiller;
-	type FS_PDFView = 59;
-	const FS_PDFView: FS_PDFView;
-	type FS_PDFZoom = 49;
-	const FS_PDFZoom: FS_PDFZoom;
-	type FS_PageHeight = 63;
-	const FS_PageHeight: FS_PageHeight;
-	type FS_PageInfo = 37;
-	const FS_PageInfo: FS_PageInfo;
-	type FS_PageWidth = 64;
-	const FS_PageWidth: FS_PageWidth;
-	type FS_PublicId = 3;
-	const FS_PublicId: FS_PublicId;
-	type FS_PublishLogFilePath = 84;
-	const FS_PublishLogFilePath: FS_PublishLogFilePath;
-	type FS_QrCodeType = 2;
-	const FS_QrCodeType: FS_QrCodeType;
-	type FS_QrCodeTypeParams = 3;
-	const FS_QrCodeTypeParams: FS_QrCodeTypeParams;
-	type FS_QrDocGraphicsDpi = 5;
-	const FS_QrDocGraphicsDpi: FS_QrDocGraphicsDpi;
-	type FS_QrImageDimensions = 4;
-	const FS_QrImageDimensions: FS_QrImageDimensions;
-	type FS_RasterDpi = 38;
-	const FS_RasterDpi: FS_RasterDpi;
-	type FS_RasterImageHeight = 40;
-	const FS_RasterImageHeight: FS_RasterImageHeight;
-	type FS_RasterImageWidth = 39;
-	const FS_RasterImageWidth: FS_RasterImageWidth;
-	type FS_RefFileNotFound = 24;
-	const FS_RefFileNotFound: FS_RefFileNotFound;
-	type FS_RegMarks = 62;
-	const FS_RegMarks: FS_RegMarks;
-	type FS_RegexFlavour = 17;
-	const FS_RegexFlavour: FS_RegexFlavour;
-	type FS_RemoveManualPageBreaks = 23;
-	const FS_RemoveManualPageBreaks: FS_RemoveManualPageBreaks;
-	type FS_RemoveOverrides = 24;
-	const FS_RemoveOverrides: FS_RemoveOverrides;
-	type FS_RetainNameStripe = 12;
-	const FS_RetainNameStripe: FS_RetainNameStripe;
-	type FS_SaveAsModeName = 5;
-	const FS_SaveAsModeName: FS_SaveAsModeName;
-	type FS_SaveFileNotWritable = 20;
-	const FS_SaveFileNotWritable: FS_SaveFileNotWritable;
-	type FS_SaveFileTypeHint = 16;
-	const FS_SaveFileTypeHint: FS_SaveFileTypeHint;
-	type FS_SaveMode = 4;
-	const FS_SaveMode: FS_SaveMode;
-	type FS_SaveNativeError = 2;
-	const FS_SaveNativeError: FS_SaveNativeError;
-	type FS_SaveStatus = 3;
-	const FS_SaveStatus: FS_SaveStatus;
-	type FS_SaveTextExtraBlankLineAtEOP = 10;
-	const FS_SaveTextExtraBlankLineAtEOP: FS_SaveTextExtraBlankLineAtEOP;
-	type FS_SaveTextTblSetting = 9;
-	const FS_SaveTextTblSetting: FS_SaveTextTblSetting;
-	type FS_SavedFileName = 1;
-	const FS_SavedFileName: FS_SavedFileName;
-	type FS_SelectListViewRows = 19;
-	const FS_SelectListViewRows: FS_SelectListViewRows;
-	type FS_SetCheckBoxState = 4;
-	const FS_SetCheckBoxState: FS_SetCheckBoxState;
-	type FS_SetDropDownActive = 13;
-	const FS_SetDropDownActive: FS_SetDropDownActive;
-	type FS_SetEditBoxText = 2;
-	const FS_SetEditBoxText: FS_SetEditBoxText;
-	type FS_SetListBoxActive = 10;
-	const FS_SetListBoxActive: FS_SetListBoxActive;
-	type FS_SetListBoxLabels = 8;
-	const FS_SetListBoxLabels: FS_SetListBoxLabels;
-	type FS_SetListViewRowCheckState = 18;
-	const FS_SetListViewRowCheckState: FS_SetListViewRowCheckState;
-	type FS_SetRadioState = 6;
-	const FS_SetRadioState: FS_SetRadioState;
-	type FS_SgmlBookFileName = 39;
-	const FS_SgmlBookFileName: FS_SgmlBookFileName;
-	type FS_ShowBookErrorLog = 4;
-	const FS_ShowBookErrorLog: FS_ShowBookErrorLog;
-	type FS_ShowBookErrorLogPublishing = 32;
-	const FS_ShowBookErrorLogPublishing: FS_ShowBookErrorLogPublishing;
-	type FS_ShowBrowser = 1;
-	const FS_ShowBrowser: FS_ShowBrowser;
-	type FS_ShowConditionIndicators = 7;
-	const FS_ShowConditionIndicators: FS_ShowConditionIndicators;
-	type FS_ShowConditions = 2;
-	const FS_ShowConditions: FS_ShowConditions;
-	type FS_ShowIfAllCond = 4;
-	const FS_ShowIfAllCond: FS_ShowIfAllCond;
-	type FS_ShowProgressBar = 31;
-	const FS_ShowProgressBar: FS_ShowProgressBar;
-	type FS_ShowRasterDpiDialog = 41;
-	const FS_ShowRasterDpiDialog: FS_ShowRasterDpiDialog;
-	type FS_ShowSaveTextDialog = 8;
-	const FS_ShowSaveTextDialog: FS_ShowSaveTextDialog;
-	type FS_ShowState = 1;
-	const FS_ShowState: FS_ShowState;
-	type FS_SilentlyDisallowXML = 51;
-	const FS_SilentlyDisallowXML: FS_SilentlyDisallowXML;
-	type FS_SlugArea = 61;
-	const FS_SlugArea: FS_SlugArea;
-	type FS_SpellAction = 1005;
-	const FS_SpellAction: FS_SpellAction;
-	type FS_SpellOptions = 1000;
-	const FS_SpellOptions: FS_SpellOptions;
-	type FS_SpellWrap = 1007;
-	const FS_SpellWrap: FS_SpellWrap;
-	type FS_StructuredApplication = 1;
-	const FS_StructuredApplication: FS_StructuredApplication;
-	type FS_StructuredExportApplication = 16;
-	const FS_StructuredExportApplication: FS_StructuredExportApplication;
-	type FS_StructuredImportApplication = 35;
-	const FS_StructuredImportApplication: FS_StructuredImportApplication;
-	type FS_StructuredOpenApplication = 38;
-	const FS_StructuredOpenApplication: FS_StructuredOpenApplication;
-	type FS_StructuredSaveApplication = 18;
-	const FS_StructuredSaveApplication: FS_StructuredSaveApplication;
-	type FS_SystemId = 4;
-	const FS_SystemId: FS_SystemId;
-	type FS_TblNumHeadingRows = 26;
-	const FS_TblNumHeadingRows: FS_TblNumHeadingRows;
-	type FS_TemplateShouldInsertRoot = 47;
-	const FS_TemplateShouldInsertRoot: FS_TemplateShouldInsertRoot;
-	type FS_TextAfterString = 1003;
-	const FS_TextAfterString: FS_TextAfterString;
-	type FS_TextBeforeString = 1002;
-	const FS_TextBeforeString: FS_TextBeforeString;
-	type FS_TextInsetName = 6;
-	const FS_TextInsetName: FS_TextInsetName;
-	type FS_TreatParaAsRow = 28;
-	const FS_TreatParaAsRow: FS_TreatParaAsRow;
-	type FS_TwoInARowString = 1001;
-	const FS_TwoInARowString: FS_TwoInARowString;
-	type FS_UNIXpermissions = 13;
-	const FS_UNIXpermissions: FS_UNIXpermissions;
-	type FS_UpdateBookGeneratedFiles = 7;
-	const FS_UpdateBookGeneratedFiles: FS_UpdateBookGeneratedFiles;
-	type FS_UpdateBookInlineComponents = 14;
-	const FS_UpdateBookInlineComponents: FS_UpdateBookInlineComponents;
-	type FS_UpdateBookMasterPages = 12;
-	const FS_UpdateBookMasterPages: FS_UpdateBookMasterPages;
-	type FS_UpdateBookNumbering = 8;
-	const FS_UpdateBookNumbering: FS_UpdateBookNumbering;
-	type FS_UpdateBookOleLinks = 9;
-	const FS_UpdateBookOleLinks: FS_UpdateBookOleLinks;
-	type FS_UpdateBookStatus = 1;
-	const FS_UpdateBookStatus: FS_UpdateBookStatus;
-	type FS_UpdateBookTextReferences = 10;
-	const FS_UpdateBookTextReferences: FS_UpdateBookTextReferences;
-	type FS_UpdateBookXRefs = 11;
-	const FS_UpdateBookXRefs: FS_UpdateBookXRefs;
-	type FS_UpdateBrowserDirectory = 4;
-	const FS_UpdateBrowserDirectory: FS_UpdateBrowserDirectory;
-	type FS_UpdateFRVList = 14;
-	const FS_UpdateFRVList: FS_UpdateFRVList;
-	type FS_UpdateMTOC = 52;
-	const FS_UpdateMTOC: FS_UpdateMTOC;
-	type FS_UpdateTemplateData = 50;
-	const FS_UpdateTemplateData: FS_UpdateTemplateData;
-	type FS_UpdateTextReferences = 35;
-	const FS_UpdateTextReferences: FS_UpdateTextReferences;
-	type FS_UpdateXRefs = 36;
-	const FS_UpdateXRefs: FS_UpdateXRefs;
-	type FS_UseAutoSaveFile = 15;
-	const FS_UseAutoSaveFile: FS_UseAutoSaveFile;
-	type FS_UseDefaultUNIXpermissions = 11;
-	const FS_UseDefaultUNIXpermissions: FS_UseDefaultUNIXpermissions;
-	type FS_UseHTTP = 51;
-	const FS_UseHTTP: FS_UseHTTP;
-	type FS_UseMainFlow = 19;
-	const FS_UseMainFlow: FS_UseMainFlow;
-	type FS_UseRecoverFile = 14;
-	const FS_UseRecoverFile: FS_UseRecoverFile;
-	type FS_VerifyInsets = 45;
-	const FS_VerifyInsets: FS_VerifyInsets;
-	type FS_Visible = 6;
-	const FS_Visible: FS_Visible;
-	type FS_WordContainString = 1004;
-	const FS_WordContainString: FS_WordContainString;
+	FS_ActiveConditionalExpression = 6,
+	FS_AddEditExpressions = 1,
+	FS_AlertUserAboutFailure = 2,
+	FS_AllowInconsistentNumProps = 6,
+	FS_AllowNonFMFiles = 1,
+	FS_AllowViewOnlyFiles = 3,
+	FS_ApplyConditionalSettingsShowBookErrorLog = 10,
+	FS_ApplyConditionalSettingsToNestedBooks = 9,
+	FS_ApplyConditionalSettingsToViewOnlyDoc = 8,
+	FS_AutoBackupOnSave = 6,
+	FS_BeefyDoc = 32,
+	FS_BleedBottom = 41,
+	FS_BleedInside = 42,
+	FS_BleedMarks = 35,
+	FS_BleedOutside = 43,
+	FS_BleedTop = 40,
+	FS_BookIsInUse = 18,
+	FS_CMSId = 48,
+	FS_CMSSessionId = 49,
+	FS_CellSeparator = 29,
+	FS_ClickButton = 14,
+	FS_ClientUpdateSilent = 47,
+	FS_ColorBars = 36,
+	FS_ConditionalExpressions = 5,
+	FS_CropMarks = 34,
+	FS_DeleteExpressions = 2,
+	FS_DisallowBookDoc = 10,
+	FS_DisallowBookMIF = 9,
+	FS_DisallowDoc = 8,
+	FS_DisallowFilterTypes = 11,
+	FS_DisallowGraphicTypes = 9,
+	FS_DisallowMIF = 7,
+	FS_DisallowMacEditions = 10,
+	FS_DisallowPlainText = 12,
+	FS_DisallowSgml = 33,
+	FS_DisallowXml = 43,
+	FS_DitaApplyOutputTemaples = 82,
+	FS_DitaBookChapterTemplate = 66,
+	FS_DitaBookChapterTitleTemplate = 67,
+	FS_DitaBookIndexTemplate = 68,
+	FS_DitaBookLOFTemplate = 70,
+	FS_DitaBookLOTTemplate = 69,
+	FS_DitaBookSectionTemplate = 72,
+	FS_DitaBookSectionTitleTemplate = 73,
+	FS_DitaBookSubsectionTemplate = 74,
+	FS_DitaBookSubsectionTitleTemplate = 75,
+	FS_DitaBookTOCTemplate = 71,
+	FS_DitaBookTitleTemplate = 65,
+	FS_DitaCompositeDocTemplate = 30,
+	FS_DitaGenerateBookTitlePage = 80,
+	FS_DitaGenerateComponentsAtOneLoc = 26,
+	FS_DitaGenerateFlatBook = 25,
+	FS_DitaGenerateFolderTitlePage = 81,
+	FS_DitaGenerateIndex = 77,
+	FS_DitaGenerateLOF = 79,
+	FS_DitaGenerateLOT = 78,
+	FS_DitaGenerateTOC = 76,
+	FS_DitaMaxRefLevels = 53,
+	FS_DitaOptimizePostProcess = 83,
+	FS_DitaPostProcessingOnBook = 27,
+	FS_DitaSavePdfViaBook = 28,
+	FS_DitavalCondTag = 23,
+	FS_DitavalFile = 22,
+	FS_DoNotLockFile = 54,
+	FS_Doctype = 2,
+	FS_DontNotifyAPIClients = 3,
+	FS_Export = 4,
+	FS_ExportFileName = 1,
+	FS_ExportFileTypeHint = 14,
+	FS_ExportNativeError = 2,
+	FS_ExportObjectId = 7,
+	FS_ExportObjectNeedsDpi = 12,
+	FS_ExportStatus = 3,
+	FS_ExportTextRange = 6,
+	FS_ExportType = 5,
+	FS_Extension = 5,
+	FS_FileIsGraphic = 13,
+	FS_FileIsInUse = 17,
+	FS_FileIsMakerDoc = 18,
+	FS_FileIsOldVersion = 20,
+	FS_FileIsSgmlDoc = 32,
+	FS_FileIsStructured = 21,
+	FS_FileIsText = 16,
+	FS_FileIsXmlDoc = 37,
+	FS_FileName = 1,
+	FS_FileQverwrite = 6,
+	FS_FileType = 1,
+	FS_FileTypeHint = 34,
+	FS_FindCharFmt = 3,
+	FS_FindCharTag = 5,
+	FS_FindCondTextInCondTags = 13,
+	FS_FindCondTextNotInCondTags = 14,
+	FS_FindCustomizationFlags = 15,
+	FS_FindElementTag = 2,
+	FS_FindMarkerOfType = 9,
+	FS_FindMarkerText = 10,
+	FS_FindNamedVariable = 12,
+	FS_FindObject = 8,
+	FS_FindPgfTag = 4,
+	FS_FindSelection = 19,
+	FS_FindStyleTag = 18,
+	FS_FindTableTag = 6,
+	FS_FindText = 1,
+	FS_FindWrap = 16,
+	FS_FindXRefWithFormat = 11,
+	FS_FitGraphicInSelectedRect = 14,
+	FS_FontChangedMetric = 23,
+	FS_FontNotFoundInCatalog = 28,
+	FS_FontNotFoundInDoc = 22,
+	FS_ForceImportAsText = 17,
+	FS_ForceOpenAsText = 13,
+	FS_FormatImportedText = 22,
+	FS_GetCheckBoxState = 3,
+	FS_GetDropDownActive = 12,
+	FS_GetDropDownLabels = 11,
+	FS_GetEditBoxText = 1,
+	FS_GetListBoxActive = 9,
+	FS_GetListBoxLabels = 7,
+	FS_GetListViewRowCheckState = 17,
+	FS_GetListViewRowData = 16,
+	FS_GetListViewRows = 15,
+	FS_GetRadioState = 5,
+	FS_GraphicDpi = 15,
+	FS_HasUnsupportedHotspotShapes = 29,
+	FS_HideConditions = 3,
+	FS_HowToImport = 4,
+	FS_ImportAsType = 36,
+	FS_ImportExportVersion = 17,
+	FS_ImportFlowPageSpace = 21,
+	FS_ImportFlowTag = 20,
+	FS_ImportNativeError = 2,
+	FS_ImportStatus = 3,
+	FS_ImportTblTag = 25,
+	FS_ImportedFileName = 1,
+	FS_InsetData = 50,
+	FS_InsetElementDef = 52,
+	FS_IsErrorDoc = 46,
+	FS_IterParamGetBookComponentFolder = 4,
+	FS_IterParamGetBookComponentGroup = 5,
+	FS_IterParamGetBookComponentRefBook = 6,
+	FS_IterParamGetBookComponentRefMap = 7,
+	FS_IterParamGetMapRef = 12,
+	FS_IterParamParseBookInBook = 1,
+	FS_IterParamParseMapInBook = 2,
+	FS_IterParamParseMapInMap = 8,
+	FS_IterParamSkipExcludedBookComponents = 3,
+	FS_IterParamSkipNonPrintTopicrefs = 10,
+	FS_IterParamSkipResourceOnlyTopicrefs = 9,
+	FS_IterParamSkipTopicsetrefs = 11,
+	FS_IteratorItemFieldBookId = 1,
+	FS_IteratorItemFieldDocId = 2,
+	FS_IteratorItemFieldObjId = 3,
+	FS_IteratorItemMaxFields = 3,
+	FS_LanguageNotAvailable = 25,
+	FS_LeaveHeadingRowsEmpty = 27,
+	FS_LockCantBeReset = 19,
+	FS_MakeIconic = 6,
+	FS_MakePageCount = 7,
+	FS_MakeVisible = 5,
+	FS_ManualUpdate = 5,
+	FS_MappingFile = 53,
+	FS_MarksOffset = 39,
+	FS_MarksWeight = 38,
+	FS_MathMLExportEntityAsValue = 2,
+	FS_MathMLNamespacePrefix = 1,
+	FS_ModDateChanged = 21,
+	FS_NameStripe = 31,
+	FS_NewDoc = 29,
+	FS_NoStructuredErrorLog = 44,
+	FS_NumCellSeparators = 30,
+	FS_NumColumns = 31,
+	FS_NumConditionalSettingsParams = 10,
+	FS_NumExportParams = 17,
+	FS_NumExportReturnParams = 3,
+	FS_NumImportParams = 48,
+	FS_NumImportReturnParams = 3,
+	FS_NumIteratorParams = 12,
+	FS_NumManageConditionalExpressionsParams = 2,
+	FS_NumNewXMLParams = 6,
+	FS_NumOpenParams = 54,
+	FS_NumOpenReturnParams = 3,
+	FS_NumSaveParams = 83,
+	FS_NumSaveReturnParams = 3,
+	FS_NumSpellParams = 8,
+	FS_NumUpdateBookParams = 14,
+	FS_NumUpdateBookReturnParams = 1,
+	FS_OpenAsType = 41,
+	FS_OpenBookViewOnly = 42,
+	FS_OpenDocFluid = 37,
+	FS_OpenDocViewOnly = 30,
+	FS_OpenFileNotWritable = 40,
+	FS_OpenId = 27,
+	FS_OpenInNewWindow = 26,
+	FS_OpenNativeError = 2,
+	FS_OpenOldVersionFiles = 13,
+	FS_OpenStatus = 3,
+	FS_OpenedFileName = 1,
+	FS_OutputFilePathName = 1006,
+	FS_PDFColorSpace = 55,
+	FS_PDFCompatibility = 47,
+	FS_PDFEmbedPageThumbnails = 57,
+	FS_PDFLayout = 50,
+	FS_PDFOpenPage = 48,
+	FS_PDFOptimizedWebView = 58,
+	FS_PDFPageNum = 45,
+	FS_PDFPageRangeEnd = 54,
+	FS_PDFPageRangeStart = 53,
+	FS_PDFPages = 52,
+	FS_PDFPassword = 33,
+	FS_PDFPreset = 45,
+	FS_PDFPrimaryOutput = 51,
+	FS_PDFStandard = 46,
+	FS_PDFTag = 56,
+	FS_PDFUseDistiller = 60,
+	FS_PDFView = 59,
+	FS_PDFZoom = 49,
+	FS_PageHeight = 63,
+	FS_PageInfo = 37,
+	FS_PageWidth = 64,
+	FS_PublicId = 3,
+	FS_PublishLogFilePath = 84,
+	FS_QrCodeType = 2,
+	FS_QrCodeTypeParams = 3,
+	FS_QrDocGraphicsDpi = 5,
+	FS_QrImageDimensions = 4,
+	FS_RasterDpi = 38,
+	FS_RasterImageHeight = 40,
+	FS_RasterImageWidth = 39,
+	FS_RefFileNotFound = 24,
+	FS_RegMarks = 62,
+	FS_RegexFlavour = 17,
+	FS_RemoveManualPageBreaks = 23,
+	FS_RemoveOverrides = 24,
+	FS_RetainNameStripe = 12,
+	FS_SaveAsModeName = 5,
+	FS_SaveFileNotWritable = 20,
+	FS_SaveFileTypeHint = 16,
+	FS_SaveMode = 4,
+	FS_SaveNativeError = 2,
+	FS_SaveStatus = 3,
+	FS_SaveTextExtraBlankLineAtEOP = 10,
+	FS_SaveTextTblSetting = 9,
+	FS_SavedFileName = 1,
+	FS_SelectListViewRows = 19,
+	FS_SetCheckBoxState = 4,
+	FS_SetDropDownActive = 13,
+	FS_SetEditBoxText = 2,
+	FS_SetListBoxActive = 10,
+	FS_SetListBoxLabels = 8,
+	FS_SetListViewRowCheckState = 18,
+	FS_SetRadioState = 6,
+	FS_SgmlBookFileName = 39,
+	FS_ShowBookErrorLog = 4,
+	FS_ShowBookErrorLogPublishing = 32,
+	FS_ShowBrowser = 1,
+	FS_ShowConditionIndicators = 7,
+	FS_ShowConditions = 2,
+	FS_ShowIfAllCond = 4,
+	FS_ShowProgressBar = 31,
+	FS_ShowRasterDpiDialog = 41,
+	FS_ShowSaveTextDialog = 8,
+	FS_ShowState = 1,
+	FS_SilentlyDisallowXML = 51,
+	FS_SlugArea = 61,
+	FS_SpellAction = 1005,
+	FS_SpellOptions = 1000,
+	FS_SpellWrap = 1007,
+	FS_StructuredApplication = 1,
+	FS_StructuredExportApplication = 16,
+	FS_StructuredImportApplication = 35,
+	FS_StructuredOpenApplication = 38,
+	FS_StructuredSaveApplication = 18,
+	FS_SystemId = 4,
+	FS_TblNumHeadingRows = 26,
+	FS_TemplateShouldInsertRoot = 47,
+	FS_TextAfterString = 1003,
+	FS_TextBeforeString = 1002,
+	FS_TextInsetName = 6,
+	FS_TreatParaAsRow = 28,
+	FS_TwoInARowString = 1001,
+	FS_UNIXpermissions = 13,
+	FS_UpdateBookGeneratedFiles = 7,
+	FS_UpdateBookInlineComponents = 14,
+	FS_UpdateBookMasterPages = 12,
+	FS_UpdateBookNumbering = 8,
+	FS_UpdateBookOleLinks = 9,
+	FS_UpdateBookStatus = 1,
+	FS_UpdateBookTextReferences = 10,
+	FS_UpdateBookXRefs = 11,
+	FS_UpdateBrowserDirectory = 4,
+	FS_UpdateFRVList = 14,
+	FS_UpdateMTOC = 52,
+	FS_UpdateTemplateData = 50,
+	FS_UpdateTextReferences = 35,
+	FS_UpdateXRefs = 36,
+	FS_UseAutoSaveFile = 15,
+	FS_UseDefaultUNIXpermissions = 11,
+	FS_UseHTTP = 51,
+	FS_UseMainFlow = 19,
+	FS_UseRecoverFile = 14,
+	FS_VerifyInsets = 45,
+	FS_Visible = 6,
+	FS_WordContainString = 1004,
 
 	// --------------------------------------------------
 	// Frame Types
 	// --------------------------------------------------
-	type FT_AttributeDefs = 17;
-	const FT_AttributeDefs: FT_AttributeDefs;
-	type FT_Attributes = 18;
-	const FT_Attributes: FT_Attributes;
-	type FT_AttributesEx = 21;
-	const FT_AttributesEx: FT_AttributesEx;
-	type FT_Bad = 0;
-	const FT_Bad: FT_Bad;
-	type FT_ElementCatalog = 12;
-	const FT_ElementCatalog: FT_ElementCatalog;
-	type FT_ElementRange = 19;
-	const FT_ElementRange: FT_ElementRange;
-	type FT_FormatBranches = 16;
-	const FT_FormatBranches: FT_FormatBranches;
-	type FT_Id = 4;
-	const FT_Id: FT_Id;
-	type FT_Integer = 1;
-	const FT_Integer: FT_Integer;
-	type FT_Ints = 13;
-	const FT_Ints: FT_Ints;
-	type FT_Metric = 2;
-	const FT_Metric: FT_Metric;
-	type FT_Metrics = 5;
-	const FT_Metrics: FT_Metrics;
-	type FT_Num = 23;
-	const FT_Num: FT_Num;
-	type FT_Points = 7;
-	const FT_Points: FT_Points;
-	type FT_String = 3;
-	const FT_String: FT_String;
-	type FT_Strings = 6;
-	const FT_Strings: FT_Strings;
-	type FT_Tabs = 8;
-	const FT_Tabs: FT_Tabs;
-	type FT_TemplateDatas = 22;
-	const FT_TemplateDatas: FT_TemplateDatas;
-	type FT_TextLoc = 9;
-	const FT_TextLoc: FT_TextLoc;
-	type FT_TextRange = 10;
-	const FT_TextRange: FT_TextRange;
-	type FT_UBytes = 14;
-	const FT_UBytes: FT_UBytes;
-	type FT_UInts = 15;
-	const FT_UInts: FT_UInts;
-	type FT_Vals = 20;
-	const FT_Vals: FT_Vals;
+	FT_AttributeDefs = 17,
+	FT_Attributes = 18,
+	FT_AttributesEx = 21,
+	FT_Bad = 0,
+	FT_ElementCatalog = 12,
+	FT_ElementRange = 19,
+	FT_FormatBranches = 16,
+	FT_Id = 4,
+	FT_Integer = 1,
+	FT_Ints = 13,
+	FT_Metric = 2,
+	FT_Metrics = 5,
+	FT_Num = 23,
+	FT_Points = 7,
+	FT_String = 3,
+	FT_Strings = 6,
+	FT_Tabs = 8,
+	FT_TemplateDatas = 22,
+	FT_TextLoc = 9,
+	FT_TextRange = 10,
+	FT_UBytes = 14,
+	FT_UInts = 15,
+	FT_Vals = 20,
 
 	// --------------------------------------------------
 	// Frame Text Flags
 	// --------------------------------------------------
-	type FTF_ALL = 0xFFFFFE03;
-	const FTF_ALL: FTF_ALL;
-	type FTF_ANGLE = 0x10000000;
-	const FTF_ANGLE: FTF_ANGLE;
-	type FTF_CAPITALIZATION = 0x00004000;
-	const FTF_CAPITALIZATION: FTF_CAPITALIZATION;
-	type FTF_CHANGEBAR = 0x01000000;
-	const FTF_CHANGEBAR: FTF_CHANGEBAR;
-	type FTF_CHARTAG = 0x00008000;
-	const FTF_CHARTAG: FTF_CHARTAG;
-	type FTF_COLOR = 0x00010000;
-	const FTF_COLOR: FTF_COLOR;
-	type FTF_CONDITIONTAG = 0x00000001;
-	const FTF_CONDITIONTAG: FTF_CONDITIONTAG;
-	type FTF_ENCODING = 0x00000200;
-	const FTF_ENCODING: FTF_ENCODING;
-	type FTF_FAMILY = 0x80000000;
-	const FTF_FAMILY: FTF_FAMILY;
-	type FTF_IIF = 0x00000002;
-	const FTF_IIF: FTF_IIF;
-	type FTF_KERNX = 0x00080000;
-	const FTF_KERNX: FTF_KERNX;
-	type FTF_KERNY = 0x00040000;
-	const FTF_KERNY: FTF_KERNY;
-	type FTF_LANGUAGE = 0x00000800;
-	const FTF_LANGUAGE: FTF_LANGUAGE;
-	type FTF_OUTLINE = 0x00800000;
-	const FTF_OUTLINE: FTF_OUTLINE;
-	type FTF_OVERLINE = 0x02000000;
-	const FTF_OVERLINE: FTF_OVERLINE;
-	type FTF_PAIRKERN = 0x00200000;
-	const FTF_PAIRKERN: FTF_PAIRKERN;
-	type FTF_POSITION = 0x00002000;
-	const FTF_POSITION: FTF_POSITION;
-	type FTF_SHADOW = 0x00400000;
-	const FTF_SHADOW: FTF_SHADOW;
-	type FTF_SIZE = 0x00100000;
-	const FTF_SIZE: FTF_SIZE;
-	type FTF_SPREAD = 0x00020000;
-	const FTF_SPREAD: FTF_SPREAD;
-	type FTF_STRETCH = 0x00001000;
-	const FTF_STRETCH: FTF_STRETCH;
-	type FTF_STRIKETHROUGH = 0x04000000;
-	const FTF_STRIKETHROUGH: FTF_STRIKETHROUGH;
-	type FTF_TSUME = 0x00000400;
-	const FTF_TSUME: FTF_TSUME;
-	type FTF_UNDERLINING = 0x08000000;
-	const FTF_UNDERLINING: FTF_UNDERLINING;
-	type FTF_VARIATION = 0x40000000;
-	const FTF_VARIATION: FTF_VARIATION;
-	type FTF_WEIGHT = 0x20000000;
-	const FTF_WEIGHT: FTF_WEIGHT;
+	FTF_ALL = 0xFFFFFE03,
+	FTF_ANGLE = 0x10000000,
+	FTF_CAPITALIZATION = 0x00004000,
+	FTF_CHANGEBAR = 0x01000000,
+	FTF_CHARTAG = 0x00008000,
+	FTF_COLOR = 0x00010000,
+	FTF_CONDITIONTAG = 0x00000001,
+	FTF_ENCODING = 0x00000200,
+	FTF_FAMILY = 0x80000000,
+	FTF_IIF = 0x00000002,
+	FTF_KERNX = 0x00080000,
+	FTF_KERNY = 0x00040000,
+	FTF_LANGUAGE = 0x00000800,
+	FTF_OUTLINE = 0x00800000,
+	FTF_OVERLINE = 0x02000000,
+	FTF_PAIRKERN = 0x00200000,
+	FTF_POSITION = 0x00002000,
+	FTF_SHADOW = 0x00400000,
+	FTF_SIZE = 0x00100000,
+	FTF_SPREAD = 0x00020000,
+	FTF_STRETCH = 0x00001000,
+	FTF_STRIKETHROUGH = 0x04000000,
+	FTF_TSUME = 0x00000400,
+	FTF_UNDERLINING = 0x08000000,
+	FTF_VARIATION = 0x40000000,
+	FTF_WEIGHT = 0x20000000,
 
 	// --------------------------------------------------
 	// Frame Text Item codes
 	// --------------------------------------------------
-	type FTI_CharPropsChange = 0x00200000;
-	const FTI_CharPropsChange: FTI_CharPropsChange;
-	type FTI_ElemPrefixBegin = 0x08000000;
-	const FTI_ElemPrefixBegin: FTI_ElemPrefixBegin;
-	type FTI_ElemPrefixEnd = 0x10000000;
-	const FTI_ElemPrefixEnd: FTI_ElemPrefixEnd;
-	type FTI_ElemSuffixBegin = 0x20000000;
-	const FTI_ElemSuffixBegin: FTI_ElemSuffixBegin;
-	type FTI_ElemSuffixEnd = 0x40000000;
-	const FTI_ElemSuffixEnd: FTI_ElemSuffixEnd;
-	type FTI_ElementBegin = 0x00080000;
-	const FTI_ElementBegin: FTI_ElementBegin;
-	type FTI_ElementEnd = 0x00100000;
-	const FTI_ElementEnd: FTI_ElementEnd;
-	type FTI_FlowBegin = 0x00000020;
-	const FTI_FlowBegin: FTI_FlowBegin;
-	type FTI_FlowEnd = 0x00000040;
-	const FTI_FlowEnd: FTI_FlowEnd;
-	type FTI_FnAnchor = 0x00001000;
-	const FTI_FnAnchor: FTI_FnAnchor;
-	type FTI_FrameAnchor = 0x00000800;
-	const FTI_FrameAnchor: FTI_FrameAnchor;
-	type FTI_HardLineEnd = 1;
-	const FTI_HardLineEnd: FTI_HardLineEnd;
-	type FTI_HyphenLineEnd = 2;
-	const FTI_HyphenLineEnd: FTI_HyphenLineEnd;
-	type FTI_LineBegin = 0x00000002;
-	const FTI_LineBegin: FTI_LineBegin;
-	type FTI_LineEnd = 0x00000004;
-	const FTI_LineEnd: FTI_LineEnd;
-	type FTI_MarkerAnchor = 0x00004000;
-	const FTI_MarkerAnchor: FTI_MarkerAnchor;
-	type FTI_PageBegin = 0x00000080;
-	const FTI_PageBegin: FTI_PageBegin;
-	type FTI_PageEnd = 0x00000100;
-	const FTI_PageEnd: FTI_PageEnd;
-	type FTI_PgfBegin = 0x00000008;
-	const FTI_PgfBegin: FTI_PgfBegin;
-	type FTI_PgfEnd = 0x00000010;
-	const FTI_PgfEnd: FTI_PgfEnd;
-	type FTI_String = 0x00000001;
-	const FTI_String: FTI_String;
-	type FTI_SubColBegin = 0x00000200;
-	const FTI_SubColBegin: FTI_SubColBegin;
-	type FTI_SubColEnd = 0x00000400;
-	const FTI_SubColEnd: FTI_SubColEnd;
-	type FTI_TblAnchor = 0x00002000;
-	const FTI_TblAnchor: FTI_TblAnchor;
-	type FTI_TextFrameBegin = 0x00400000;
-	const FTI_TextFrameBegin: FTI_TextFrameBegin;
-	type FTI_TextFrameEnd = 0x00800000;
-	const FTI_TextFrameEnd: FTI_TextFrameEnd;
-	type FTI_TextInsetBegin = 0x02000000;
-	const FTI_TextInsetBegin: FTI_TextInsetBegin;
-	type FTI_TextInsetEnd = 0x04000000;
-	const FTI_TextInsetEnd: FTI_TextInsetEnd;
-	type FTI_TextObjId = 0x01000000;
-	const FTI_TextObjId: FTI_TextObjId;
-	type FTI_VarBegin = 0x00020000;
-	const FTI_VarBegin: FTI_VarBegin;
-	type FTI_VarEnd = 0x00040000;
-	const FTI_VarEnd: FTI_VarEnd;
-	type FTI_XRefBegin = 0x00008000;
-	const FTI_XRefBegin: FTI_XRefBegin;
-	type FTI_XRefEnd = 0x00010000;
-	const FTI_XRefEnd: FTI_XRefEnd;
-	type FTI2_InlineComponentBegin = 0x80000010;
-	const FTI2_InlineComponentBegin: FTI2_InlineComponentBegin;
-	type FTI2_InlineComponentEnd = 0x80000020;
-	const FTI2_InlineComponentEnd: FTI2_InlineComponentEnd;
-	type FTI2_RubiCompositeBegin = 0x80000004;
-	const FTI2_RubiCompositeBegin: FTI2_RubiCompositeBegin;
-	type FTI2_RubiCompositeEnd = 0x80000008;
-	const FTI2_RubiCompositeEnd: FTI2_RubiCompositeEnd;
-	type FTI2_RubiTextBegin = 0x80000001;
-	const FTI2_RubiTextBegin: FTI2_RubiTextBegin;
-	type FTI2_RubiTextEnd = 0x80000002;
-	const FTI2_RubiTextEnd: FTI2_RubiTextEnd;
+	FTI_CharPropsChange = 0x00200000,
+	FTI_ElemPrefixBegin = 0x08000000,
+	FTI_ElemPrefixEnd = 0x10000000,
+	FTI_ElemSuffixBegin = 0x20000000,
+	FTI_ElemSuffixEnd = 0x40000000,
+	FTI_ElementBegin = 0x00080000,
+	FTI_ElementEnd = 0x00100000,
+	FTI_FlowBegin = 0x00000020,
+	FTI_FlowEnd = 0x00000040,
+	FTI_FnAnchor = 0x00001000,
+	FTI_FrameAnchor = 0x00000800,
+	FTI_HardLineEnd = 1,
+	FTI_HyphenLineEnd = 2,
+	FTI_LineBegin = 0x00000002,
+	FTI_LineEnd = 0x00000004,
+	FTI_MarkerAnchor = 0x00004000,
+	FTI_PageBegin = 0x00000080,
+	FTI_PageEnd = 0x00000100,
+	FTI_PgfBegin = 0x00000008,
+	FTI_PgfEnd = 0x00000010,
+	FTI_String = 0x00000001,
+	FTI_SubColBegin = 0x00000200,
+	FTI_SubColEnd = 0x00000400,
+	FTI_TblAnchor = 0x00002000,
+	FTI_TextFrameBegin = 0x00400000,
+	FTI_TextFrameEnd = 0x00800000,
+	FTI_TextInsetBegin = 0x02000000,
+	FTI_TextInsetEnd = 0x04000000,
+	FTI_TextObjId = 0x01000000,
+	FTI_VarBegin = 0x00020000,
+	FTI_VarEnd = 0x00040000,
+	FTI_XRefBegin = 0x00008000,
+	FTI_XRefEnd = 0x00010000,
+
+	FTI2_InlineComponentBegin = 0x80000010,
+	FTI2_InlineComponentEnd = 0x80000020,
+	FTI2_RubiCompositeBegin = 0x80000004,
+	FTI2_RubiCompositeEnd = 0x80000008,
+	FTI2_RubiTextBegin = 0x80000001,
+	FTI2_RubiTextEnd = 0x80000002,
 
 	// --------------------------------------------------
 	// Frame Values
 	// --------------------------------------------------
-	type FV_ACCESSBAR_CLOSE = 2;
-	const FV_ACCESSBAR_CLOSE: FV_ACCESSBAR_CLOSE;
-	type FV_ACCESSBAR_OPEN = 1;
-	const FV_ACCESSBAR_OPEN: FV_ACCESSBAR_OPEN;
-	type FV_AF_FIXED = 0x0004;
-	const FV_AF_FIXED: FV_AF_FIXED;
-	type FV_AF_HIDDEN = 0x0002;
-	const FV_AF_HIDDEN: FV_AF_HIDDEN;
-	type FV_AF_READ_ONLY = 0x0001;
-	const FV_AF_READ_ONLY: FV_AF_READ_ONLY;
-	type FV_ALIGN_CENTER = 1;
-	const FV_ALIGN_CENTER: FV_ALIGN_CENTER;
-	type FV_ALIGN_INSIDE = 3;
-	const FV_ALIGN_INSIDE: FV_ALIGN_INSIDE;
-	type FV_ALIGN_LEFT = 0;
-	const FV_ALIGN_LEFT: FV_ALIGN_LEFT;
-	type FV_ALIGN_OUTSIDE = 4;
-	const FV_ALIGN_OUTSIDE: FV_ALIGN_OUTSIDE;
-	type FV_ALIGN_RIGHT = 2;
-	const FV_ALIGN_RIGHT: FV_ALIGN_RIGHT;
-	type FV_ALIGN_TBL_CENTER = 1;
-	const FV_ALIGN_TBL_CENTER: FV_ALIGN_TBL_CENTER;
-	type FV_ALIGN_TBL_LEFT = 0;
-	const FV_ALIGN_TBL_LEFT: FV_ALIGN_TBL_LEFT;
-	type FV_ALIGN_TBL_RIGHT = 2;
-	const FV_ALIGN_TBL_RIGHT: FV_ALIGN_TBL_RIGHT;
-	type FV_ALTERNATIVE = 0x04;
-	const FV_ALTERNATIVE: FV_ALTERNATIVE;
-	type FV_ANCHOR_BELOW = 3;
-	const FV_ANCHOR_BELOW: FV_ANCHOR_BELOW;
-	type FV_ANCHOR_BOTTOM = 4;
-	const FV_ANCHOR_BOTTOM: FV_ANCHOR_BOTTOM;
-	type FV_ANCHOR_INLINE = 1;
-	const FV_ANCHOR_INLINE: FV_ANCHOR_INLINE;
-	type FV_ANCHOR_RUN_INTO_PARAGRAPH = 17;
-	const FV_ANCHOR_RUN_INTO_PARAGRAPH: FV_ANCHOR_RUN_INTO_PARAGRAPH;
-	type FV_ANCHOR_SUBCOL_FARTHEST = 8;
-	const FV_ANCHOR_SUBCOL_FARTHEST: FV_ANCHOR_SUBCOL_FARTHEST;
-	type FV_ANCHOR_SUBCOL_INSIDE = 9;
-	const FV_ANCHOR_SUBCOL_INSIDE: FV_ANCHOR_SUBCOL_INSIDE;
-	type FV_ANCHOR_SUBCOL_LEFT = 5;
-	const FV_ANCHOR_SUBCOL_LEFT: FV_ANCHOR_SUBCOL_LEFT;
-	type FV_ANCHOR_SUBCOL_NEAREST = 7;
-	const FV_ANCHOR_SUBCOL_NEAREST: FV_ANCHOR_SUBCOL_NEAREST;
-	type FV_ANCHOR_SUBCOL_OUTSIDE = 10;
-	const FV_ANCHOR_SUBCOL_OUTSIDE: FV_ANCHOR_SUBCOL_OUTSIDE;
-	type FV_ANCHOR_SUBCOL_RIGHT = 6;
-	const FV_ANCHOR_SUBCOL_RIGHT: FV_ANCHOR_SUBCOL_RIGHT;
-	type FV_ANCHOR_TEXTFRAME_FARTHEST = 14;
-	const FV_ANCHOR_TEXTFRAME_FARTHEST: FV_ANCHOR_TEXTFRAME_FARTHEST;
-	type FV_ANCHOR_TEXTFRAME_INSIDE = 15;
-	const FV_ANCHOR_TEXTFRAME_INSIDE: FV_ANCHOR_TEXTFRAME_INSIDE;
-	type FV_ANCHOR_TEXTFRAME_LEFT = 11;
-	const FV_ANCHOR_TEXTFRAME_LEFT: FV_ANCHOR_TEXTFRAME_LEFT;
-	type FV_ANCHOR_TEXTFRAME_NEAREST = 13;
-	const FV_ANCHOR_TEXTFRAME_NEAREST: FV_ANCHOR_TEXTFRAME_NEAREST;
-	type FV_ANCHOR_TEXTFRAME_OUTSIDE = 16;
-	const FV_ANCHOR_TEXTFRAME_OUTSIDE: FV_ANCHOR_TEXTFRAME_OUTSIDE;
-	type FV_ANCHOR_TEXTFRAME_RIGHT = 12;
-	const FV_ANCHOR_TEXTFRAME_RIGHT: FV_ANCHOR_TEXTFRAME_RIGHT;
-	type FV_ANCHOR_TOP = 2;
-	const FV_ANCHOR_TOP: FV_ANCHOR_TOP;
-	type FV_ANSI = 3;
-	const FV_ANSI: FV_ANSI;
-	type FV_ARROW_FILLED = 0x3;
-	const FV_ARROW_FILLED: FV_ARROW_FILLED;
-	type FV_ARROW_HOLLOW = 0x2;
-	const FV_ARROW_HOLLOW: FV_ARROW_HOLLOW;
-	type FV_ARROW_STICK = 0x1;
-	const FV_ARROW_STICK: FV_ARROW_STICK;
-	type FV_ASCII = 2;
-	const FV_ASCII: FV_ASCII;
-	type FV_ATTR_DISP_ALL = 3;
-	const FV_ATTR_DISP_ALL: FV_ATTR_DISP_ALL;
-	type FV_ATTR_DISP_NONE = 1;
-	const FV_ATTR_DISP_NONE: FV_ATTR_DISP_NONE;
-	type FV_ATTR_DISP_REQSPEC = 2;
-	const FV_ATTR_DISP_REQSPEC: FV_ATTR_DISP_REQSPEC;
-	type FV_ATTR_EDIT_ALWAYS = 2;
-	const FV_ATTR_EDIT_ALWAYS: FV_ATTR_EDIT_ALWAYS;
-	type FV_ATTR_EDIT_NONE = 0;
-	const FV_ATTR_EDIT_NONE: FV_ATTR_EDIT_NONE;
-	type FV_ATTR_EDIT_REQUIRED = 1;
-	const FV_ATTR_EDIT_REQUIRED: FV_ATTR_EDIT_REQUIRED;
-	type FV_AT_CHOICES = 2;
-	const FV_AT_CHOICES: FV_AT_CHOICES;
-	type FV_AT_INTEGER = 3;
-	const FV_AT_INTEGER: FV_AT_INTEGER;
-	type FV_AT_INTEGERS = 4;
-	const FV_AT_INTEGERS: FV_AT_INTEGERS;
-	type FV_AT_NUMTYPES = 10;
-	const FV_AT_NUMTYPES: FV_AT_NUMTYPES;
-	type FV_AT_REAL = 5;
-	const FV_AT_REAL: FV_AT_REAL;
-	type FV_AT_REALS = 6;
-	const FV_AT_REALS: FV_AT_REALS;
-	type FV_AT_STRING = 0;
-	const FV_AT_STRING: FV_AT_STRING;
-	type FV_AT_STRINGS = 1;
-	const FV_AT_STRINGS: FV_AT_STRINGS;
-	type FV_AT_UNIQUE_ID = 7;
-	const FV_AT_UNIQUE_ID: FV_AT_UNIQUE_ID;
-	type FV_AT_UNIQUE_IDREF = 8;
-	const FV_AT_UNIQUE_IDREF: FV_AT_UNIQUE_IDREF;
-	type FV_AT_UNIQUE_IDREFS = 9;
-	const FV_AT_UNIQUE_IDREFS: FV_AT_UNIQUE_IDREFS;
-	type FV_AUTORECOGNIZE = 0x00;
-	const FV_AUTORECOGNIZE: FV_AUTORECOGNIZE;
-	type FV_AV_IDREF_UNRESOLVED = 4;
-	const FV_AV_IDREF_UNRESOLVED: FV_AV_IDREF_UNRESOLVED;
-	type FV_AV_ID_DUPLICATE_IN_BOOK = 6;
-	const FV_AV_ID_DUPLICATE_IN_BOOK: FV_AV_ID_DUPLICATE_IN_BOOK;
-	type FV_AV_ID_DUPLICATE_IN_DOC = 5;
-	const FV_AV_ID_DUPLICATE_IN_DOC: FV_AV_ID_DUPLICATE_IN_DOC;
-	type FV_AV_INVALID_CHOICE = 2;
-	const FV_AV_INVALID_CHOICE: FV_AV_INVALID_CHOICE;
-	type FV_AV_INVALID_FORMAT = 3;
-	const FV_AV_INVALID_FORMAT: FV_AV_INVALID_FORMAT;
-	type FV_AV_OUT_OF_RANGE = 9;
-	const FV_AV_OUT_OF_RANGE: FV_AV_OUT_OF_RANGE;
-	type FV_AV_REQUIRED = 1;
-	const FV_AV_REQUIRED: FV_AV_REQUIRED;
-	type FV_AV_TOO_MANY_TOKENS = 7;
-	const FV_AV_TOO_MANY_TOKENS: FV_AV_TOO_MANY_TOKENS;
-	type FV_AV_UNDEFINED = 8;
-	const FV_AV_UNDEFINED: FV_AV_UNDEFINED;
-	type FV_Above = 1240;
-	const FV_Above: FV_Above;
-	type FV_AlertOneButton = 1;
-	const FV_AlertOneButton: FV_AlertOneButton;
-	type FV_AlertThreeButton = 3;
-	const FV_AlertThreeButton: FV_AlertThreeButton;
-	type FV_AlertTwoButton = 2;
-	const FV_AlertTwoButton: FV_AlertTwoButton;
-	type FV_AllElements = 2;
-	const FV_AllElements: FV_AllElements;
-	type FV_AllowAllRefFilesUnFindable = 11;
-	const FV_AllowAllRefFilesUnFindable: FV_AllowAllRefFilesUnFindable;
-	type FV_ApiClientCanceledExport = 34;
-	const FV_ApiClientCanceledExport: FV_ApiClientCanceledExport;
-	type FV_AutoSaveFileUsed = 34;
-	const FV_AutoSaveFileUsed: FV_AutoSaveFileUsed;
-	type FV_BGD_DEFAULT = 0x00;
-	const FV_BGD_DEFAULT: FV_BGD_DEFAULT;
-	type FV_BGD_NONE = 0x01;
-	const FV_BGD_NONE: FV_BGD_NONE;
-	type FV_BGD_OTHER = 0x02;
-	const FV_BGD_OTHER: FV_BGD_OTHER;
-	type FV_BIG5 = 8;
-	const FV_BIG5: FV_BIG5;
-	type FV_BK_BOOK = 0x4;
-	const FV_BK_BOOK: FV_BK_BOOK;
-	type FV_BK_BOOKMAP = 0x100;
-	const FV_BK_BOOKMAP: FV_BK_BOOKMAP;
-	type FV_BK_DITAMAP = 0x80;
-	const FV_BK_DITAMAP: FV_BK_DITAMAP;
-	type FV_BK_FILE = 0x200;
-	const FV_BK_FILE: FV_BK_FILE;
-	type FV_BK_FILENAME = 1;
-	const FV_BK_FILENAME: FV_BK_FILENAME;
-	type FV_BK_FM = 0x8;
-	const FV_BK_FM: FV_BK_FM;
-	type FV_BK_FOLDER = 0x2;
-	const FV_BK_FOLDER: FV_BK_FOLDER;
-	type FV_BK_GENERAL = 0x1;
-	const FV_BK_GENERAL: FV_BK_GENERAL;
-	type FV_BK_GROUP = 0x40;
-	const FV_BK_GROUP: FV_BK_GROUP;
-	type FV_BK_INDEX_AUTHOR = 8;
-	const FV_BK_INDEX_AUTHOR: FV_BK_INDEX_AUTHOR;
-	type FV_BK_INDEX_FORMATS = 13;
-	const FV_BK_INDEX_FORMATS: FV_BK_INDEX_FORMATS;
-	type FV_BK_INDEX_MARKER = 10;
-	const FV_BK_INDEX_MARKER: FV_BK_INDEX_MARKER;
-	type FV_BK_INDEX_REFERENCES = 14;
-	const FV_BK_INDEX_REFERENCES: FV_BK_INDEX_REFERENCES;
-	type FV_BK_INDEX_STAN = 7;
-	const FV_BK_INDEX_STAN: FV_BK_INDEX_STAN;
-	type FV_BK_INDEX_SUBJECT = 9;
-	const FV_BK_INDEX_SUBJECT: FV_BK_INDEX_SUBJECT;
-	type FV_BK_LIST_FIGURE = 1;
-	const FV_BK_LIST_FIGURE: FV_BK_LIST_FIGURE;
-	type FV_BK_LIST_FORMATS = 11;
-	const FV_BK_LIST_FORMATS: FV_BK_LIST_FORMATS;
-	type FV_BK_LIST_MARKER = 4;
-	const FV_BK_LIST_MARKER: FV_BK_LIST_MARKER;
-	type FV_BK_LIST_MARKER_ALPHA = 5;
-	const FV_BK_LIST_MARKER_ALPHA: FV_BK_LIST_MARKER_ALPHA;
-	type FV_BK_LIST_PGF = 3;
-	const FV_BK_LIST_PGF: FV_BK_LIST_PGF;
-	type FV_BK_LIST_PGF_ALPHA = 6;
-	const FV_BK_LIST_PGF_ALPHA: FV_BK_LIST_PGF_ALPHA;
-	type FV_BK_LIST_REFERENCES = 12;
-	const FV_BK_LIST_REFERENCES: FV_BK_LIST_REFERENCES;
-	type FV_BK_LIST_TABLE = 2;
-	const FV_BK_LIST_TABLE: FV_BK_LIST_TABLE;
-	type FV_BK_MIF = 0x10;
-	const FV_BK_MIF: FV_BK_MIF;
-	type FV_BK_NOT_GENERATABLE = 16;
-	const FV_BK_NOT_GENERATABLE: FV_BK_NOT_GENERATABLE;
-	type FV_BK_NUM_BOOK_LIST = 15;
-	const FV_BK_NUM_BOOK_LIST: FV_BK_NUM_BOOK_LIST;
-	type FV_BK_START_FROM_FILE = 0x01;
-	const FV_BK_START_FROM_FILE: FV_BK_START_FROM_FILE;
-	type FV_BK_START_LEFT = 0x03;
-	const FV_BK_START_LEFT: FV_BK_START_LEFT;
-	type FV_BK_START_NEXT_AVAILABLE = 0x02;
-	const FV_BK_START_NEXT_AVAILABLE: FV_BK_START_NEXT_AVAILABLE;
-	type FV_BK_START_RIGHT = 0x04;
-	const FV_BK_START_RIGHT: FV_BK_START_RIGHT;
-	type FV_BK_TEXT = 2;
-	const FV_BK_TEXT: FV_BK_TEXT;
-	type FV_BK_TOC = 0;
-	const FV_BK_TOC: FV_BK_TOC;
-	type FV_BK_XML = 0x20;
-	const FV_BK_XML: FV_BK_XML;
-	type FV_BODY_PAGE = 0x00;
-	const FV_BODY_PAGE: FV_BODY_PAGE;
-	type FV_BadEnclosingDocId = 28;
-	const FV_BadEnclosingDocId: FV_BadEnclosingDocId;
-	type FV_BadExportDocId = 20;
-	const FV_BadExportDocId: FV_BadExportDocId;
-	type FV_BadExportFileName = 16;
-	const FV_BadExportFileName: FV_BadExportFileName;
-	type FV_BadExportObjectId = 18;
-	const FV_BadExportObjectId: FV_BadExportObjectId;
-	type FV_BadExportScriptValue = 21;
-	const FV_BadExportScriptValue: FV_BadExportScriptValue;
-	type FV_BadFileId = 35;
-	const FV_BadFileId: FV_BadFileId;
-	type FV_BadFileName = 67;
-	const FV_BadFileName: FV_BadFileName;
-	type FV_BadFileRefsWereMapped = 46;
-	const FV_BadFileRefsWereMapped: FV_BadFileRefsWereMapped;
-	type FV_BadFileType = 66;
-	const FV_BadFileType: FV_BadFileType;
-	type FV_BadImportFileName = 16;
-	const FV_BadImportFileName: FV_BadImportFileName;
-	type FV_BadImportFileType = 17;
-	const FV_BadImportFileType: FV_BadImportFileType;
-	type FV_BadImportScriptValue = 18;
-	const FV_BadImportScriptValue: FV_BadImportScriptValue;
-	type FV_BadSaveFileName = 34;
-	const FV_BadSaveFileName: FV_BadSaveFileName;
-	type FV_BadSaveObjectId = 40;
-	const FV_BadSaveObjectId: FV_BadSaveObjectId;
-	type FV_BadSaveScriptValue = 36;
-	const FV_BadSaveScriptValue: FV_BadSaveScriptValue;
-	type FV_BadScriptValue = 70;
-	const FV_BadScriptValue: FV_BadScriptValue;
-	type FV_BadTemplate = 129;
-	const FV_BadTemplate: FV_BadTemplate;
-	type FV_BadTextFileTypeHint = 29;
-	const FV_BadTextFileTypeHint: FV_BadTextFileTypeHint;
-	type FV_BadUpdateBookFileId = 64;
-	const FV_BadUpdateBookFileId: FV_BadUpdateBookFileId;
-	type FV_BadUpdateBookScriptValue = 65;
-	const FV_BadUpdateBookScriptValue: FV_BadUpdateBookScriptValue;
-	type FV_BeefyDoc = 40;
-	const FV_BeefyDoc: FV_BeefyDoc;
-	type FV_Below = 1241;
-	const FV_Below: FV_Below;
-	type FV_Body = 1237;
-	const FV_Body: FV_Body;
-	type FV_BodyPage = 10;
-	const FV_BodyPage: FV_BodyPage;
-	type FV_BookNotSelfConsistent = 0;
-	const FV_BookNotSelfConsistent: FV_BookNotSelfConsistent;
-	type FV_BrowseCmsOnly = 0x00020000;
-	const FV_BrowseCmsOnly: FV_BrowseCmsOnly;
-	type FV_BrowseLocalOnly = 0x00010000;
-	const FV_BrowseLocalOnly: FV_BrowseLocalOnly;
-	type FV_BrowseLocalWithWebdavOnly = 0x00040000;
-	const FV_BrowseLocalWithWebdavOnly: FV_BrowseLocalWithWebdavOnly;
-	type FV_CAPITAL_CASE_LOWER = 2;
-	const FV_CAPITAL_CASE_LOWER: FV_CAPITAL_CASE_LOWER;
-	type FV_CAPITAL_CASE_NORM = 0;
-	const FV_CAPITAL_CASE_NORM: FV_CAPITAL_CASE_NORM;
-	type FV_CAPITAL_CASE_SMALL = 1;
-	const FV_CAPITAL_CASE_SMALL: FV_CAPITAL_CASE_SMALL;
-	type FV_CAPITAL_CASE_UPPER = 3;
-	const FV_CAPITAL_CASE_UPPER: FV_CAPITAL_CASE_UPPER;
-	type FV_CAP_BUTT = 0x00;
-	const FV_CAP_BUTT: FV_CAP_BUTT;
-	type FV_CAP_ROUND = 0x01;
-	const FV_CAP_ROUND: FV_CAP_ROUND;
-	type FV_CAP_SQUARE = 0x02;
-	const FV_CAP_SQUARE: FV_CAP_SQUARE;
-	type FV_CB_COL_FURTHEST = 0x03;
-	const FV_CB_COL_FURTHEST: FV_CB_COL_FURTHEST;
-	type FV_CB_COL_LEFT = 0x00;
-	const FV_CB_COL_LEFT: FV_CB_COL_LEFT;
-	type FV_CB_COL_NEAREST = 0x02;
-	const FV_CB_COL_NEAREST: FV_CB_COL_NEAREST;
-	type FV_CB_COL_RIGHT = 0x01;
-	const FV_CB_COL_RIGHT: FV_CB_COL_RIGHT;
-	type FV_CB_DOUBLE_UNDERLINE = 2;
-	const FV_CB_DOUBLE_UNDERLINE: FV_CB_DOUBLE_UNDERLINE;
-	type FV_CB_NO_UNDERLINE = 0;
-	const FV_CB_NO_UNDERLINE: FV_CB_NO_UNDERLINE;
-	type FV_CB_NUMERIC_UNDERLINE = 3;
-	const FV_CB_NUMERIC_UNDERLINE: FV_CB_NUMERIC_UNDERLINE;
-	type FV_CB_SINGLE_UNDERLINE = 1;
-	const FV_CB_SINGLE_UNDERLINE: FV_CB_SINGLE_UNDERLINE;
-	type FV_CHAR_CATALOG = 6;
-	const FV_CHAR_CATALOG: FV_CHAR_CATALOG;
-	type FV_CMSCheckinUI_Id_CheckinComment = 44;
-	const FV_CMSCheckinUI_Id_CheckinComment: FV_CMSCheckinUI_Id_CheckinComment;
-	type FV_CMSCheckinUI_Id_Description = 45;
-	const FV_CMSCheckinUI_Id_Description: FV_CMSCheckinUI_Id_Description;
-	type FV_CMSCheckinUI_Id_MajorVersion = 46;
-	const FV_CMSCheckinUI_Id_MajorVersion: FV_CMSCheckinUI_Id_MajorVersion;
-	type FV_CMSCheckinUI_Id_MakeThisCurrentVersion = 47;
-	const FV_CMSCheckinUI_Id_MakeThisCurrentVersion: FV_CMSCheckinUI_Id_MakeThisCurrentVersion;
-	type FV_CMSCheckinUI_Id_MinorVersion = 48;
-	const FV_CMSCheckinUI_Id_MinorVersion: FV_CMSCheckinUI_Id_MinorVersion;
-	type FV_CMSCheckinUI_Id_SameVersion = 49;
-	const FV_CMSCheckinUI_Id_SameVersion: FV_CMSCheckinUI_Id_SameVersion;
-	type FV_CMSCheckinUI_Id_VersionLabel = 50;
-	const FV_CMSCheckinUI_Id_VersionLabel: FV_CMSCheckinUI_Id_VersionLabel;
-	type FV_CMSCheckoutUI_Id_ShowDependents = 51;
-	const FV_CMSCheckoutUI_Id_ShowDependents: FV_CMSCheckoutUI_Id_ShowDependents;
-	type FV_CMSCommandAdvancedSearchStringId = 52;
-	const FV_CMSCommandAdvancedSearchStringId: FV_CMSCommandAdvancedSearchStringId;
-	type FV_CMSCommandCheckinCommentId = 53;
-	const FV_CMSCommandCheckinCommentId: FV_CMSCommandCheckinCommentId;
-	type FV_CMSCommandCheckinDescriptionId = 54;
-	const FV_CMSCommandCheckinDescriptionId: FV_CMSCommandCheckinDescriptionId;
-	type FV_CMSCommandCheckinKeepLocalCopyId = 55;
-	const FV_CMSCommandCheckinKeepLocalCopyId: FV_CMSCommandCheckinKeepLocalCopyId;
-	type FV_CMSCommandCheckinMakeCurrentVersionId = 56;
-	const FV_CMSCommandCheckinMakeCurrentVersionId: FV_CMSCommandCheckinMakeCurrentVersionId;
-	type FV_CMSCommandCheckinMinorVersionId = 57;
-	const FV_CMSCommandCheckinMinorVersionId: FV_CMSCommandCheckinMinorVersionId;
-	type FV_CMSCommandCheckinVersionLabelId = 58;
-	const FV_CMSCommandCheckinVersionLabelId: FV_CMSCommandCheckinVersionLabelId;
-	type FV_CMSCommandCheckoutWithDescendentId = 59;
-	const FV_CMSCommandCheckoutWithDescendentId: FV_CMSCommandCheckoutWithDescendentId;
-	type FV_CMSCommandConnTypeId = 60;
-	const FV_CMSCommandConnTypeId: FV_CMSCommandConnTypeId;
-	type FV_CMSCommandDeleteAllDependentsId = 61;
-	const FV_CMSCommandDeleteAllDependentsId: FV_CMSCommandDeleteAllDependentsId;
-	type FV_CMSCommandDeleteAllVersionId = 62;
-	const FV_CMSCommandDeleteAllVersionId: FV_CMSCommandDeleteAllVersionId;
-	type FV_CMSCommandFilePathId = 63;
-	const FV_CMSCommandFilePathId: FV_CMSCommandFilePathId;
-	type FV_CMSCommandId = 64;
-	const FV_CMSCommandId: FV_CMSCommandId;
-	type FV_CMSCommandId_Max = 65;
-	const FV_CMSCommandId_Max: FV_CMSCommandId_Max;
-	type FV_CMSCommandId_Min = 66;
-	const FV_CMSCommandId_Min: FV_CMSCommandId_Min;
-	type FV_CMSCommandNameId = 67;
-	const FV_CMSCommandNameId: FV_CMSCommandNameId;
-	type FV_CMSCommandOpenReadOnlyId = 68;
-	const FV_CMSCommandOpenReadOnlyId: FV_CMSCommandOpenReadOnlyId;
-	type FV_CMSCommandPasswordId = 69;
-	const FV_CMSCommandPasswordId: FV_CMSCommandPasswordId;
-	type FV_CMSCommandRefreshDependentsId = 70;
-	const FV_CMSCommandRefreshDependentsId: FV_CMSCommandRefreshDependentsId;
-	type FV_CMSCommandRepositoryId = 71;
-	const FV_CMSCommandRepositoryId: FV_CMSCommandRepositoryId;
-	type FV_CMSCommandSearchStringId = 72;
-	const FV_CMSCommandSearchStringId: FV_CMSCommandSearchStringId;
-	type FV_CMSCommandServerId = 73;
-	const FV_CMSCommandServerId: FV_CMSCommandServerId;
-	type FV_CMSCommandSilentOpenId = 74;
-	const FV_CMSCommandSilentOpenId: FV_CMSCommandSilentOpenId;
-	type FV_CMSCommandUserField1 = 75;
-	const FV_CMSCommandUserField1: FV_CMSCommandUserField1;
-	type FV_CMSCommandUserField2 = 76;
-	const FV_CMSCommandUserField2: FV_CMSCommandUserField2;
-	type FV_CMSCommandUserNameId = 77;
-	const FV_CMSCommandUserNameId: FV_CMSCommandUserNameId;
-	type FV_CMSContextMenuId = 78;
-	const FV_CMSContextMenuId: FV_CMSContextMenuId;
-	type FV_CMSContextMenuString = 79;
-	const FV_CMSContextMenuString: FV_CMSContextMenuString;
-	type FV_CMSDeleteUI_DeleteAllDependents = 80;
-	const FV_CMSDeleteUI_DeleteAllDependents: FV_CMSDeleteUI_DeleteAllDependents;
-	type FV_CMSDeleteUI_DeleteAllVersion = 81;
-	const FV_CMSDeleteUI_DeleteAllVersion: FV_CMSDeleteUI_DeleteAllVersion;
-	type FV_CMSItemFileTypeValue_DitaMap = 82;
-	const FV_CMSItemFileTypeValue_DitaMap: FV_CMSItemFileTypeValue_DitaMap;
-	type FV_CMSItemFileTypeValue_DitaTopic = 83;
-	const FV_CMSItemFileTypeValue_DitaTopic: FV_CMSItemFileTypeValue_DitaTopic;
-	type FV_CMSItemFileTypeValue_FmBook = 84;
-	const FV_CMSItemFileTypeValue_FmBook: FV_CMSItemFileTypeValue_FmBook;
-	type FV_CMSItemFileTypeValue_FmDoc = 85;
-	const FV_CMSItemFileTypeValue_FmDoc: FV_CMSItemFileTypeValue_FmDoc;
-	type FV_CMSItemFileTypeValue_General = 86;
-	const FV_CMSItemFileTypeValue_General: FV_CMSItemFileTypeValue_General;
-	type FV_CMSItemFileTypeValue_Img = 87;
-	const FV_CMSItemFileTypeValue_Img: FV_CMSItemFileTypeValue_Img;
-	type FV_CMSItemFileTypeValue_Max = 88;
-	const FV_CMSItemFileTypeValue_Max: FV_CMSItemFileTypeValue_Max;
-	type FV_CMSItemFileTypeValue_Mif = 89;
-	const FV_CMSItemFileTypeValue_Mif: FV_CMSItemFileTypeValue_Mif;
-	type FV_CMSItemFileTypeValue_Min = 90;
-	const FV_CMSItemFileTypeValue_Min: FV_CMSItemFileTypeValue_Min;
-	type FV_CMSItemFileTypeValue_Text = 91;
-	const FV_CMSItemFileTypeValue_Text: FV_CMSItemFileTypeValue_Text;
-	type FV_CMSItemFileTypeValue_Xml = 92;
-	const FV_CMSItemFileTypeValue_Xml: FV_CMSItemFileTypeValue_Xml;
-	type FV_CMSItemTypeValue_File = 93;
-	const FV_CMSItemTypeValue_File: FV_CMSItemTypeValue_File;
-	type FV_CMSItemTypeValue_Folder = 94;
-	const FV_CMSItemTypeValue_Folder: FV_CMSItemTypeValue_Folder;
-	type FV_CMSItemTypeValue_General = 95;
-	const FV_CMSItemTypeValue_General: FV_CMSItemTypeValue_General;
-	type FV_CMSItemTypeValue_Max = 96;
-	const FV_CMSItemTypeValue_Max: FV_CMSItemTypeValue_Max;
-	type FV_CMSItemTypeValue_Min = 97;
-	const FV_CMSItemTypeValue_Min: FV_CMSItemTypeValue_Min;
-	type FV_CMSItemTypeValue_Root = 98;
-	const FV_CMSItemTypeValue_Root: FV_CMSItemTypeValue_Root;
-	type FV_CMSMajorVersion = 99;
-	const FV_CMSMajorVersion: FV_CMSMajorVersion;
-	type FV_CMSMenu_Is_Disabled = 100;
-	const FV_CMSMenu_Is_Disabled: FV_CMSMenu_Is_Disabled;
-	type FV_CMSMenu_Is_Item = 101;
-	const FV_CMSMenu_Is_Item: FV_CMSMenu_Is_Item;
-	type FV_CMSMenu_Is_Separator = 102;
-	const FV_CMSMenu_Is_Separator: FV_CMSMenu_Is_Separator;
-	type FV_CMSMenu_Is_SubMenu = 103;
-	const FV_CMSMenu_Is_SubMenu: FV_CMSMenu_Is_SubMenu;
-	type FV_CMSMenu_Max = 104;
-	const FV_CMSMenu_Max: FV_CMSMenu_Max;
-	type FV_CMSMenu_Min = 105;
-	const FV_CMSMenu_Min: FV_CMSMenu_Min;
-	type FV_CMSMinorVersion = 106;
-	const FV_CMSMinorVersion: FV_CMSMinorVersion;
-	type FV_CMSOpChildAdded = 107;
-	const FV_CMSOpChildAdded: FV_CMSOpChildAdded;
-	type FV_CMSOpDependentsDeleted = 108;
-	const FV_CMSOpDependentsDeleted: FV_CMSOpDependentsDeleted;
-	type FV_CMSOpDependentsUpdated = 109;
-	const FV_CMSOpDependentsUpdated: FV_CMSOpDependentsUpdated;
-	type FV_CMSOpDocumentOpened = 110;
-	const FV_CMSOpDocumentOpened: FV_CMSOpDocumentOpened;
-	type FV_CMSOpItemDeleted = 111;
-	const FV_CMSOpItemDeleted: FV_CMSOpItemDeleted;
-	type FV_CMSOpItemUpdated = 112;
-	const FV_CMSOpItemUpdated: FV_CMSOpItemUpdated;
-	type FV_CMSOpNone = 113;
-	const FV_CMSOpNone: FV_CMSOpNone;
-	type FV_CMSOpRootUpdated = 114;
-	const FV_CMSOpRootUpdated: FV_CMSOpRootUpdated;
-	type FV_CMSSameVersion = 115;
-	const FV_CMSSameVersion: FV_CMSSameVersion;
-	type FV_CMSSilentOperation = 116;
-	const FV_CMSSilentOperation: FV_CMSSilentOperation;
-	type FV_CMSUserFieldType_Edit = 117;
-	const FV_CMSUserFieldType_Edit: FV_CMSUserFieldType_Edit;
-	type FV_CMSUserFieldType_FileBrowse = 118;
-	const FV_CMSUserFieldType_FileBrowse: FV_CMSUserFieldType_FileBrowse;
-	type FV_CMSUserFieldType_FolderBrowse = 119;
-	const FV_CMSUserFieldType_FolderBrowse: FV_CMSUserFieldType_FolderBrowse;
-	type FV_CMSVersion_Max = 120;
-	const FV_CMSVersion_Max: FV_CMSVersion_Max;
-	type FV_CMSVersion_Min = 121;
-	const FV_CMSVersion_Min: FV_CMSVersion_Min;
-	type FV_CMS_TYPE_DITAEXCHANGE = 0x03;
-	const FV_CMS_TYPE_DITAEXCHANGE: FV_CMS_TYPE_DITAEXCHANGE;
-	type FV_CMS_TYPE_DOCUMENTUM = 0x01;
-	const FV_CMS_TYPE_DOCUMENTUM: FV_CMS_TYPE_DOCUMENTUM;
-	type FV_CMS_TYPE_NONE = 0x00;
-	const FV_CMS_TYPE_NONE: FV_CMS_TYPE_NONE;
-	type FV_CMS_TYPE_SHAREPOINT = 0x02;
-	const FV_CMS_TYPE_SHAREPOINT: FV_CMS_TYPE_SHAREPOINT;
-	type FV_CN_CHANGEBAR = 5;
-	const FV_CN_CHANGEBAR: FV_CN_CHANGEBAR;
-	type FV_CN_DOUBLE_UNDERLINE = 4;
-	const FV_CN_DOUBLE_UNDERLINE: FV_CN_DOUBLE_UNDERLINE;
-	type FV_CN_NMRIC_AND_CHNGBAR = 7;
-	const FV_CN_NMRIC_AND_CHNGBAR: FV_CN_NMRIC_AND_CHNGBAR;
-	type FV_CN_NO_OVERRIDE = 0;
-	const FV_CN_NO_OVERRIDE: FV_CN_NO_OVERRIDE;
-	type FV_CN_NUMERIC_UNDERLINE = 6;
-	const FV_CN_NUMERIC_UNDERLINE: FV_CN_NUMERIC_UNDERLINE;
-	type FV_CN_OVERLINE = 1;
-	const FV_CN_OVERLINE: FV_CN_OVERLINE;
-	type FV_CN_SINGLE_UNDERLINE = 3;
-	const FV_CN_SINGLE_UNDERLINE: FV_CN_SINGLE_UNDERLINE;
-	type FV_CN_STRIKETHROUGH = 2;
-	const FV_CN_STRIKETHROUGH: FV_CN_STRIKETHROUGH;
-	type FV_COLOR_BLACK = 4;
-	const FV_COLOR_BLACK: FV_COLOR_BLACK;
-	type FV_COLOR_BLUE = 8;
-	const FV_COLOR_BLUE: FV_COLOR_BLUE;
-	type FV_COLOR_CYAN = 1;
-	const FV_COLOR_CYAN: FV_COLOR_CYAN;
-	type FV_COLOR_DARKGREY = 9;
-	const FV_COLOR_DARKGREY: FV_COLOR_DARKGREY;
-	type FV_COLOR_DARKYELLOW = 15;
-	const FV_COLOR_DARKYELLOW: FV_COLOR_DARKYELLOW;
-	type FV_COLOR_FORESTGREEN = 11;
-	const FV_COLOR_FORESTGREEN: FV_COLOR_FORESTGREEN;
-	type FV_COLOR_GREEN = 7;
-	const FV_COLOR_GREEN: FV_COLOR_GREEN;
-	type FV_COLOR_KNOCKOUT = 0x00;
-	const FV_COLOR_KNOCKOUT: FV_COLOR_KNOCKOUT;
-	type FV_COLOR_LIGHTSALMON = 14;
-	const FV_COLOR_LIGHTSALMON: FV_COLOR_LIGHTSALMON;
-	type FV_COLOR_MAGENTA = 2;
-	const FV_COLOR_MAGENTA: FV_COLOR_MAGENTA;
-	type FV_COLOR_MAUVE = 13;
-	const FV_COLOR_MAUVE: FV_COLOR_MAUVE;
-	type FV_COLOR_NOT_RESERVED = 0;
-	const FV_COLOR_NOT_RESERVED: FV_COLOR_NOT_RESERVED;
-	type FV_COLOR_OVERPRINT = 0x01;
-	const FV_COLOR_OVERPRINT: FV_COLOR_OVERPRINT;
-	type FV_COLOR_PALEGREEN = 10;
-	const FV_COLOR_PALEGREEN: FV_COLOR_PALEGREEN;
-	type FV_COLOR_RED = 6;
-	const FV_COLOR_RED: FV_COLOR_RED;
-	type FV_COLOR_ROYALBLUE = 12;
-	const FV_COLOR_ROYALBLUE: FV_COLOR_ROYALBLUE;
-	type FV_COLOR_SALMON = 16;
-	const FV_COLOR_SALMON: FV_COLOR_SALMON;
-	type FV_COLOR_WHITE = 5;
-	const FV_COLOR_WHITE: FV_COLOR_WHITE;
-	type FV_COLOR_YELLOW = 3;
-	const FV_COLOR_YELLOW: FV_COLOR_YELLOW;
-	type FV_CONTEXT_RULE = 0;
-	const FV_CONTEXT_RULE: FV_CONTEXT_RULE;
-	type FV_CS_CHANGEBAR = 0x10;
-	const FV_CS_CHANGEBAR: FV_CS_CHANGEBAR;
-	type FV_CS_DOUBLE_UNDERLINE = 0x08;
-	const FV_CS_DOUBLE_UNDERLINE: FV_CS_DOUBLE_UNDERLINE;
-	type FV_CS_NO_OVERRIDE = 0x00;
-	const FV_CS_NO_OVERRIDE: FV_CS_NO_OVERRIDE;
-	type FV_CS_NUMERIC_UNDERLINE = 0x20;
-	const FV_CS_NUMERIC_UNDERLINE: FV_CS_NUMERIC_UNDERLINE;
-	type FV_CS_OVERLINE = 0x01;
-	const FV_CS_OVERLINE: FV_CS_OVERLINE;
-	type FV_CS_SINGLE_UNDERLINE = 0x04;
-	const FV_CS_SINGLE_UNDERLINE: FV_CS_SINGLE_UNDERLINE;
-	type FV_CS_STRIKETHROUGH = 0x02;
-	const FV_CS_STRIKETHROUGH: FV_CS_STRIKETHROUGH;
-	type FV_CancelBeefyDoc = 114;
-	const FV_CancelBeefyDoc: FV_CancelBeefyDoc;
-	type FV_CancelBook = 108;
-	const FV_CancelBook: FV_CancelBook;
-	type FV_CancelBookMIF = 109;
-	const FV_CancelBookMIF: FV_CancelBookMIF;
-	type FV_CancelFileBrowser = 113;
-	const FV_CancelFileBrowser: FV_CancelFileBrowser;
-	type FV_CancelFileDoc = 33;
-	const FV_CancelFileDoc: FV_CancelFileDoc;
-	type FV_CancelFileFilterable = 35;
-	const FV_CancelFileFilterable: FV_CancelFileFilterable;
-	type FV_CancelFileGraphic = 36;
-	const FV_CancelFileGraphic: FV_CancelFileGraphic;
-	type FV_CancelFileHasStructure = 100;
-	const FV_CancelFileHasStructure: FV_CancelFileHasStructure;
-	type FV_CancelFileIsDoc = 106;
-	const FV_CancelFileIsDoc: FV_CancelFileIsDoc;
-	type FV_CancelFileIsFilterable = 110;
-	const FV_CancelFileIsFilterable: FV_CancelFileIsFilterable;
-	type FV_CancelFileIsInUse = 99;
-	const FV_CancelFileIsInUse: FV_CancelFileIsInUse;
-	type FV_CancelFileIsMIF = 107;
-	const FV_CancelFileIsMIF: FV_CancelFileIsMIF;
-	type FV_CancelFileIsMacEdition = 39;
-	const FV_CancelFileIsMacEdition: FV_CancelFileIsMacEdition;
-	type FV_CancelFileIsOldVersion = 111;
-	const FV_CancelFileIsOldVersion: FV_CancelFileIsOldVersion;
-	type FV_CancelFileIsSgml = 115;
-	const FV_CancelFileIsSgml: FV_CancelFileIsSgml;
-	type FV_CancelFileIsText = 98;
-	const FV_CancelFileIsText: FV_CancelFileIsText;
-	type FV_CancelFileIsXml = 119;
-	const FV_CancelFileIsXml: FV_CancelFileIsXml;
-	type FV_CancelFileMIF = 34;
-	const FV_CancelFileMIF: FV_CancelFileMIF;
-	type FV_CancelFileSgml = 40;
-	const FV_CancelFileSgml: FV_CancelFileSgml;
-	type FV_CancelFileText = 32;
-	const FV_CancelFileText: FV_CancelFileText;
-	type FV_CancelFileXml = 41;
-	const FV_CancelFileXml: FV_CancelFileXml;
-	type FV_CancelFontMetricsChanged = 104;
-	const FV_CancelFontMetricsChanged: FV_CancelFontMetricsChanged;
-	type FV_CancelFontsMapped = 103;
-	const FV_CancelFontsMapped: FV_CancelFontsMapped;
-	type FV_CancelFontsMappedInCatalog = 105;
-	const FV_CancelFontsMappedInCatalog: FV_CancelFontsMappedInCatalog;
-	type FV_CancelFontsWithUnavailableEncodings = 116;
-	const FV_CancelFontsWithUnavailableEncodings: FV_CancelFontsWithUnavailableEncodings;
-	type FV_CancelImportBrowser = 38;
-	const FV_CancelImportBrowser: FV_CancelImportBrowser;
-	type FV_CancelInconsistentNumPropsInFileInBook = 34;
-	const FV_CancelInconsistentNumPropsInFileInBook: FV_CancelInconsistentNumPropsInFileInBook;
-	type FV_CancelLanguagesNotFound = 102;
-	const FV_CancelLanguagesNotFound: FV_CancelLanguagesNotFound;
-	type FV_CancelNonFMFileInBook = 32;
-	const FV_CancelNonFMFileInBook: FV_CancelNonFMFileInBook;
-	type FV_CancelOpenFileNotWritable = 117;
-	const FV_CancelOpenFileNotWritable: FV_CancelOpenFileNotWritable;
-	type FV_CancelReferencedFilesNotFound = 101;
-	const FV_CancelReferencedFilesNotFound: FV_CancelReferencedFilesNotFound;
-	type FV_CancelSaveExportedFileInvalid = 53;
-	const FV_CancelSaveExportedFileInvalid: FV_CancelSaveExportedFileInvalid;
-	type FV_CancelSaveFileIsInUse = 50;
-	const FV_CancelSaveFileIsInUse: FV_CancelSaveFileIsInUse;
-	type FV_CancelSaveFileNotWritable = 51;
-	const FV_CancelSaveFileNotWritable: FV_CancelSaveFileNotWritable;
-	type FV_CancelSaveModDateChanged = 52;
-	const FV_CancelSaveModDateChanged: FV_CancelSaveModDateChanged;
-	type FV_CancelTempDiskFull = 118;
-	const FV_CancelTempDiskFull: FV_CancelTempDiskFull;
-	type FV_CancelUseAutoSaveFile = 97;
-	const FV_CancelUseAutoSaveFile: FV_CancelUseAutoSaveFile;
-	type FV_CancelUseRecoverFile = 96;
-	const FV_CancelUseRecoverFile: FV_CancelUseRecoverFile;
-	type FV_CancelViewOnlyFileInBook = 33;
-	const FV_CancelViewOnlyFileInBook: FV_CancelViewOnlyFileInBook;
-	type FV_CancelWrongProduct = 121;
-	const FV_CancelWrongProduct: FV_CancelWrongProduct;
-	type FV_CancelWrongView = 120;
-	const FV_CancelWrongView: FV_CancelWrongView;
-	type FV_CanceledExportObjectNeedsDpi = 33;
-	const FV_CanceledExportObjectNeedsDpi: FV_CanceledExportObjectNeedsDpi;
-	type FV_CantForceImportAsText = 20;
-	const FV_CantForceImportAsText: FV_CantForceImportAsText;
-	type FV_CantForceOpenAsText = 72;
-	const FV_CantForceOpenAsText: FV_CantForceOpenAsText;
-	type FV_CantNewBooks = 68;
-	const FV_CantNewBooks: FV_CantNewBooks;
-	type FV_CantOpenBooksFluid = 78;
-	const FV_CantOpenBooksFluid: FV_CantOpenBooksFluid;
-	type FV_CantOpenBooksViewOnly = 69;
-	const FV_CantOpenBooksViewOnly: FV_CantOpenBooksViewOnly;
-	type FV_ChangePersonalDictionary = 8;
-	const FV_ChangePersonalDictionary: FV_ChangePersonalDictionary;
-	type FV_CheckCurrentPage = 2;
-	const FV_CheckCurrentPage: FV_CheckCurrentPage;
-	type FV_CheckDocument = 1;
-	const FV_CheckDocument: FV_CheckDocument;
-	type FV_ChecksumDamage = 77;
-	const FV_ChecksumDamage: FV_ChecksumDamage;
-	type FV_ChooseMultiOpen = 0x00000010;
-	const FV_ChooseMultiOpen: FV_ChooseMultiOpen;
-	type FV_ChooseMultiSelect = 0x00000008;
-	const FV_ChooseMultiSelect: FV_ChooseMultiSelect;
-	type FV_ChooseOpen = 0x00000001;
-	const FV_ChooseOpen: FV_ChooseOpen;
-	type FV_ChooseOpenDir = 0x00000004;
-	const FV_ChooseOpenDir: FV_ChooseOpenDir;
-	type FV_ChooseSave = 0x00000002;
-	const FV_ChooseSave: FV_ChooseSave;
-	type FV_ChooseSelect = 0x00000000;
-	const FV_ChooseSelect: FV_ChooseSelect;
-	type FV_ClearDocDictionary = 7;
-	const FV_ClearDocDictionary: FV_ClearDocDictionary;
-	type FV_CmdAlert = 8;
-	const FV_CmdAlert: FV_CmdAlert;
-	type FV_CmdAlertTitle = 9;
-	const FV_CmdAlertTitle: FV_CmdAlertTitle;
-	type FV_CmdApplyMathRules = 259;
-	const FV_CmdApplyMathRules: FV_CmdApplyMathRules;
-	type FV_CmdBeginRange = 263;
-	const FV_CmdBeginRange: FV_CmdBeginRange;
-	type FV_CmdEndRange = 264;
-	const FV_CmdEndRange: FV_CmdEndRange;
-	type FV_CmdError = 1;
-	const FV_CmdError: FV_CmdError;
-	type FV_CmdExit = 10;
-	const FV_CmdExit: FV_CmdExit;
-	type FV_CmdFCodes = 256;
-	const FV_CmdFCodes: FV_CmdFCodes;
-	type FV_CmdGoToLink = 11;
-	const FV_CmdGoToLink: FV_CmdGoToLink;
-	type FV_CmdGoToLinkFitWin = 12;
-	const FV_CmdGoToLinkFitWin: FV_CmdGoToLinkFitWin;
-	type FV_CmdGoToNew = 13;
-	const FV_CmdGoToNew: FV_CmdGoToNew;
-	type FV_CmdGoToObjectId = 15;
-	const FV_CmdGoToObjectId: FV_CmdGoToObjectId;
-	type FV_CmdGoToObjectIdFitWin = 16;
-	const FV_CmdGoToObjectIdFitWin: FV_CmdGoToObjectIdFitWin;
-	type FV_CmdGoToPage = 14;
-	const FV_CmdGoToPage: FV_CmdGoToPage;
-	type FV_CmdHelpLink = 262;
-	const FV_CmdHelpLink: FV_CmdHelpLink;
-	type FV_CmdInCodes = 258;
-	const FV_CmdInCodes: FV_CmdInCodes;
-	type FV_CmdMatrix = 17;
-	const FV_CmdMatrix: FV_CmdMatrix;
-	type FV_CmdMessage = 18;
-	const FV_CmdMessage: FV_CmdMessage;
-	type FV_CmdMultiMedia = 33;
-	const FV_CmdMultiMedia: FV_CmdMultiMedia;
-	type FV_CmdNative = 261;
-	const FV_CmdNative: FV_CmdNative;
-	type FV_CmdNewLink = 19;
-	const FV_CmdNewLink: FV_CmdNewLink;
-	type FV_CmdNextPage = 20;
-	const FV_CmdNextPage: FV_CmdNextPage;
-	type FV_CmdNoop = 3;
-	const FV_CmdNoop: FV_CmdNoop;
-	type FV_CmdNotTyped = 0;
-	const FV_CmdNotTyped: FV_CmdNotTyped;
-	type FV_CmdOpenLink = 22;
-	const FV_CmdOpenLink: FV_CmdOpenLink;
-	type FV_CmdOpenLinkFitWin = 23;
-	const FV_CmdOpenLinkFitWin: FV_CmdOpenLinkFitWin;
-	type FV_CmdOpenNew = 24;
-	const FV_CmdOpenNew: FV_CmdOpenNew;
-	type FV_CmdOpenObjectId = 25;
-	const FV_CmdOpenObjectId: FV_CmdOpenObjectId;
-	type FV_CmdOpenObjectIdFitWin = 26;
-	const FV_CmdOpenObjectIdFitWin: FV_CmdOpenObjectIdFitWin;
-	type FV_CmdOpenPage = 27;
-	const FV_CmdOpenPage: FV_CmdOpenPage;
-	type FV_CmdOpenXmlElementId = 821;
-	const FV_CmdOpenXmlElementId: FV_CmdOpenXmlElementId;
-	type FV_CmdOutCodes = 257;
-	const FV_CmdOutCodes: FV_CmdOutCodes;
-	type FV_CmdPopup = 28;
-	const FV_CmdPopup: FV_CmdPopup;
-	type FV_CmdPreviousLink = 29;
-	const FV_CmdPreviousLink: FV_CmdPreviousLink;
-	type FV_CmdPreviousLinkFitWin = 30;
-	const FV_CmdPreviousLinkFitWin: FV_CmdPreviousLinkFitWin;
-	type FV_CmdPreviousPage = 21;
-	const FV_CmdPreviousPage: FV_CmdPreviousPage;
-	type FV_CmdQuit = 31;
-	const FV_CmdQuit: FV_CmdQuit;
-	type FV_CmdQuitAll = 32;
-	const FV_CmdQuitAll: FV_CmdQuitAll;
-	type FV_CmdThesaurusLookup = 260;
-	const FV_CmdThesaurusLookup: FV_CmdThesaurusLookup;
-	type FV_CmdUnknown = 2;
-	const FV_CmdUnknown: FV_CmdUnknown;
-	type FV_DEPENDENCIES_SHOW_PROGRESSBAR = 0x01;
-	const FV_DEPENDENCIES_SHOW_PROGRESSBAR: FV_DEPENDENCIES_SHOW_PROGRESSBAR;
-	type FV_DIALOG_DOCK_ALL = 0xFF;
-	const FV_DIALOG_DOCK_ALL: FV_DIALOG_DOCK_ALL;
-	type FV_DIALOG_DOCK_BOTTOM = 8; // 0x1 << 3
-	const FV_DIALOG_DOCK_BOTTOM: FV_DIALOG_DOCK_BOTTOM;
-	type FV_DIALOG_DOCK_LEFT = 0x1;
-	const FV_DIALOG_DOCK_LEFT: FV_DIALOG_DOCK_LEFT;
-	type FV_DIALOG_DOCK_NONE = 0x00;
-	const FV_DIALOG_DOCK_NONE: FV_DIALOG_DOCK_NONE;
-	type FV_DIALOG_DOCK_RIGHT = 2; // 0x1 << 1
-	const FV_DIALOG_DOCK_RIGHT: FV_DIALOG_DOCK_RIGHT;
-	type FV_DIALOG_DOCK_TOP = 4; // 0x1 << 2
-	const FV_DIALOG_DOCK_TOP: FV_DIALOG_DOCK_TOP;
-	type FV_DIALOG_GRIPPERBAR_FALSE = 1;
-	const FV_DIALOG_GRIPPERBAR_FALSE: FV_DIALOG_GRIPPERBAR_FALSE;
-	type FV_DIALOG_GRIPPERBAR_TRUE = 0;
-	const FV_DIALOG_GRIPPERBAR_TRUE: FV_DIALOG_GRIPPERBAR_TRUE;
-	type FV_DIALOG_GROUP_ALL = 0xFF;
-	const FV_DIALOG_GROUP_ALL: FV_DIALOG_GROUP_ALL;
-	type FV_DIALOG_GROUP_ALLPANELS = 128; // 0x1 << 7
-	const FV_DIALOG_GROUP_ALLPANELS: FV_DIALOG_GROUP_ALLPANELS;
-	type FV_DIALOG_GROUP_ATTRIBUTES = 8; // 0x1 << 3
-	const FV_DIALOG_GROUP_ATTRIBUTES: FV_DIALOG_GROUP_ATTRIBUTES;
-	type FV_DIALOG_GROUP_CATALOGS = 2; // 0x1 << 1
-	const FV_DIALOG_GROUP_CATALOGS: FV_DIALOG_GROUP_CATALOGS;
-	type FV_DIALOG_GROUP_DESIGNERS = 4; // 0x1 << 2
-	const FV_DIALOG_GROUP_DESIGNERS: FV_DIALOG_GROUP_DESIGNERS;
-	type FV_DIALOG_GROUP_EDIT = 64; // 0x1 << 6
-	const FV_DIALOG_GROUP_EDIT: FV_DIALOG_GROUP_EDIT;
-	type FV_DIALOG_GROUP_NONE = 0x0;
-	const FV_DIALOG_GROUP_NONE: FV_DIALOG_GROUP_NONE;
-	type FV_DIALOG_GROUP_PODS = 16; // 0x1 << 4
-	const FV_DIALOG_GROUP_PODS: FV_DIALOG_GROUP_PODS;
-	type FV_DIALOG_GROUP_PODSRIGHT = 32; // 0x1 << 5
-	const FV_DIALOG_GROUP_PODSRIGHT: FV_DIALOG_GROUP_PODSRIGHT;
-	type FV_DIALOG_GROUP_RIGHT_BOTTOM = 1024; // 0x1 << 10
-	const FV_DIALOG_GROUP_RIGHT_BOTTOM: FV_DIALOG_GROUP_RIGHT_BOTTOM;
-	type FV_DIALOG_GROUP_RIGHT_TOP = 512; // 0x1 << 9
-	const FV_DIALOG_GROUP_RIGHT_TOP: FV_DIALOG_GROUP_RIGHT_TOP;
-	type FV_DIALOG_GROUP_RMKITS = 256; // 0x1 << 8
-	const FV_DIALOG_GROUP_RMKITS: FV_DIALOG_GROUP_RMKITS;
-	type FV_DIALOG_GROUP_SPECIAL = 0x1;
-	const FV_DIALOG_GROUP_SPECIAL: FV_DIALOG_GROUP_SPECIAL;
-	type FV_DIALOG_RESIZEGRIPPERPOS_BELOW = 2;
-	const FV_DIALOG_RESIZEGRIPPERPOS_BELOW: FV_DIALOG_RESIZEGRIPPERPOS_BELOW;
-	type FV_DIALOG_RESIZEGRIPPERPOS_FRONT = 1;
-	const FV_DIALOG_RESIZEGRIPPERPOS_FRONT: FV_DIALOG_RESIZEGRIPPERPOS_FRONT;
-	type FV_DIALOG_RESIZEGRIPPERPOS_NONE = 0;
-	const FV_DIALOG_RESIZEGRIPPERPOS_NONE: FV_DIALOG_RESIZEGRIPPERPOS_NONE;
-	type FV_DIR_Inherit = 0;
-	const FV_DIR_Inherit: FV_DIR_Inherit;
-	type FV_DIR_LTR = 1;
-	const FV_DIR_LTR: FV_DIR_LTR;
-	type FV_DIR_RTL = 2;
-	const FV_DIR_RTL: FV_DIR_RTL;
-	type FV_DITAObjTypeAuto = 0;
-	const FV_DITAObjTypeAuto: FV_DITAObjTypeAuto;
-	type FV_DITAObjTypeConref = 1;
-	const FV_DITAObjTypeConref: FV_DITAObjTypeConref;
-	type FV_DITAObjTypeLink = 3;
-	const FV_DITAObjTypeLink: FV_DITAObjTypeLink;
-	type FV_DITAObjTypeMax = 6;
-	const FV_DITAObjTypeMax: FV_DITAObjTypeMax;
-	type FV_DITAObjTypeTopicref = 4;
-	const FV_DITAObjTypeTopicref: FV_DITAObjTypeTopicref;
-	type FV_DITAObjTypeTopicsetref = 5;
-	const FV_DITAObjTypeTopicsetref: FV_DITAObjTypeTopicsetref;
-	type FV_DITAObjTypeXref = 2;
-	const FV_DITAObjTypeXref: FV_DITAObjTypeXref;
-	type FV_DITA_TYPE_ANCHOR = 12;
-	const FV_DITA_TYPE_ANCHOR: FV_DITA_TYPE_ANCHOR;
-	type FV_DITA_TYPE_GENERAL = 1;
-	const FV_DITA_TYPE_GENERAL: FV_DITA_TYPE_GENERAL;
-	type FV_DITA_TYPE_KEYDEF = 3;
-	const FV_DITA_TYPE_KEYDEF: FV_DITA_TYPE_KEYDEF;
-	type FV_DITA_TYPE_MAPREF = 8;
-	const FV_DITA_TYPE_MAPREF: FV_DITA_TYPE_MAPREF;
-	type FV_DITA_TYPE_NAVREF = 9;
-	const FV_DITA_TYPE_NAVREF: FV_DITA_TYPE_NAVREF;
-	type FV_DITA_TYPE_RELTABLE = 2;
-	const FV_DITA_TYPE_RELTABLE: FV_DITA_TYPE_RELTABLE;
-	type FV_DITA_TYPE_TITLE = 10;
-	const FV_DITA_TYPE_TITLE: FV_DITA_TYPE_TITLE;
-	type FV_DITA_TYPE_TOPICGROUP = 4;
-	const FV_DITA_TYPE_TOPICGROUP: FV_DITA_TYPE_TOPICGROUP;
-	type FV_DITA_TYPE_TOPICHEAD = 5;
-	const FV_DITA_TYPE_TOPICHEAD: FV_DITA_TYPE_TOPICHEAD;
-	type FV_DITA_TYPE_TOPICREF = 11;
-	const FV_DITA_TYPE_TOPICREF: FV_DITA_TYPE_TOPICREF;
-	type FV_DITA_TYPE_TOPICSET = 7;
-	const FV_DITA_TYPE_TOPICSET: FV_DITA_TYPE_TOPICSET;
-	type FV_DITA_TYPE_TOPICSETREF = 6;
-	const FV_DITA_TYPE_TOPICSETREF: FV_DITA_TYPE_TOPICSETREF;
-	type FV_DOC_ISNOT_DITAMAP = 31;
-	const FV_DOC_ISNOT_DITAMAP: FV_DOC_ISNOT_DITAMAP;
-	type FV_DOC_TYPE_BINARY = 0x01;
-	const FV_DOC_TYPE_BINARY: FV_DOC_TYPE_BINARY;
-	type FV_DOC_TYPE_FILTER = 0x04;
-	const FV_DOC_TYPE_FILTER: FV_DOC_TYPE_FILTER;
-	type FV_DOC_TYPE_MIF = 0x03;
-	const FV_DOC_TYPE_MIF: FV_DOC_TYPE_MIF;
-	type FV_DOC_TYPE_TEXT = 0x02;
-	const FV_DOC_TYPE_TEXT: FV_DOC_TYPE_TEXT;
-	type FV_DT_FLOAT = 2;
-	const FV_DT_FLOAT: FV_DT_FLOAT;
-	type FV_DT_INTEGER = 1;
-	const FV_DT_INTEGER: FV_DT_INTEGER;
-	type FV_DT_NUMTYPES = 3;
-	const FV_DT_NUMTYPES: FV_DT_NUMTYPES;
-	type FV_DT_UNSPECIFIED = 0;
-	const FV_DT_UNSPECIFIED: FV_DT_UNSPECIFIED;
-	type FV_DeleteEmptyPages = 4;
-	const FV_DeleteEmptyPages: FV_DeleteEmptyPages;
-	type FV_DestFirstPage = 2;
-	const FV_DestFirstPage: FV_DestFirstPage;
-	type FV_DestFluidFlow = 5;
-	const FV_DestFluidFlow: FV_DestFluidFlow;
-	type FV_DestLastPage = 3;
-	const FV_DestLastPage: FV_DestLastPage;
-	type FV_DestMarker = 6;
-	const FV_DestMarker: FV_DestMarker;
-	type FV_DestMarkerNewLink = 1;
-	const FV_DestMarkerNewLink: FV_DestMarkerNewLink;
-	type FV_DestNowhere = 0;
-	const FV_DestNowhere: FV_DestNowhere;
-	type FV_DestObjectId = 7;
-	const FV_DestObjectId: FV_DestObjectId;
-	type FV_DestPageNum = 4;
-	const FV_DestPageNum: FV_DestPageNum;
-	type FV_DestXRef = 8;
-	const FV_DestXRef: FV_DestXRef;
-	type FV_DisallowedImportType = 21;
-	const FV_DisallowedImportType: FV_DisallowedImportType;
-	type FV_DisallowedType = 73;
-	const FV_DisallowedType: FV_DisallowedType;
-	type FV_DlgClose = -1;
-	const FV_DlgClose: FV_DlgClose;
-	type FV_DlgEnter = -4;
-	const FV_DlgEnter: FV_DlgEnter;
-	type FV_DlgHide = -10;
-	const FV_DlgHide: FV_DlgHide;
-	type FV_DlgInit = -9;
-	const FV_DlgInit: FV_DlgInit;
-	type FV_DlgNeedsUpdate = -8;
-	const FV_DlgNeedsUpdate: FV_DlgNeedsUpdate;
-	type FV_DlgNextPage = -7;
-	const FV_DlgNextPage: FV_DlgNextPage;
-	type FV_DlgNoChange = -3;
-	const FV_DlgNoChange: FV_DlgNoChange;
-	type FV_DlgOptActive = 1;
-	const FV_DlgOptActive: FV_DlgOptActive;
-	type FV_DlgOptDontCare = 2;
-	const FV_DlgOptDontCare: FV_DlgOptDontCare;
-	type FV_DlgOptNotActive = 0;
-	const FV_DlgOptNotActive: FV_DlgOptNotActive;
-	type FV_DlgPrefCommit = -102;
-	const FV_DlgPrefCommit: FV_DlgPrefCommit;
-	type FV_DlgPrefSetInitialState = -100;
-	const FV_DlgPrefSetInitialState: FV_DlgPrefSetInitialState;
-	type FV_DlgPrefVerify = -101;
-	const FV_DlgPrefVerify: FV_DlgPrefVerify;
-	type FV_DlgPrevPage = -6;
-	const FV_DlgPrevPage: FV_DlgPrevPage;
-	type FV_DlgReset = -2;
-	const FV_DlgReset: FV_DlgReset;
-	type FV_DlgResize = -12;
-	const FV_DlgResize: FV_DlgResize;
-	type FV_DlgShow = -11;
-	const FV_DlgShow: FV_DlgShow;
-	type FV_DlgTypeModal = 1;
-	const FV_DlgTypeModal: FV_DlgTypeModal;
-	type FV_DlgTypeModeless = 2;
-	const FV_DlgTypeModeless: FV_DlgTypeModeless;
-	type FV_DlgUndo = -5;
-	const FV_DlgUndo: FV_DlgUndo;
-	type FV_DoByCopy = 6;
-	const FV_DoByCopy: FV_DoByCopy;
-	type FV_DoByRef = 5;
-	const FV_DoByRef: FV_DoByRef;
-	type FV_DoCancel = 0;
-	const FV_DoCancel: FV_DoCancel;
-	type FV_DoImportAsTable = 8;
-	const FV_DoImportAsTable: FV_DoImportAsTable;
-	type FV_DoNo = 3;
-	const FV_DoNo: FV_DoNo;
-	type FV_DoOK = 1;
-	const FV_DoOK: FV_DoOK;
-	type FV_DoOnline = 0;
-	const FV_DoOnline: FV_DoOnline;
-	type FV_DoPrint = 1;
-	const FV_DoPrint: FV_DoPrint;
-	type FV_DoShowDialog = 4;
-	const FV_DoShowDialog: FV_DoShowDialog;
-	type FV_DoUserChoice = 7;
-	const FV_DoUserChoice: FV_DoUserChoice;
-	type FV_DoUserPreference = 12;
-	const FV_DoUserPreference: FV_DoUserPreference;
-	type FV_DoYes = 2;
-	const FV_DoYes: FV_DoYes;
-	type FV_DocDamagedByTextFilter = 74;
-	const FV_DocDamagedByTextFilter: FV_DocDamagedByTextFilter;
-	type FV_DocHeadersDamaged = 75;
-	const FV_DocHeadersDamaged: FV_DocHeadersDamaged;
-	type FV_DocKeyCatalogTypeDefault = 0;
-	const FV_DocKeyCatalogTypeDefault: FV_DocKeyCatalogTypeDefault;
-	type FV_DocKeyCatalogTypeMax = 3;
-	const FV_DocKeyCatalogTypeMax: FV_DocKeyCatalogTypeMax;
-	type FV_DocKeyCatalogTypeNone = 2;
-	const FV_DocKeyCatalogTypeNone: FV_DocKeyCatalogTypeNone;
-	type FV_DocKeyCatalogTypeSpecified = 1;
-	const FV_DocKeyCatalogTypeSpecified: FV_DocKeyCatalogTypeSpecified;
-	type FV_DocWrongSize = 76;
-	const FV_DocWrongSize: FV_DocWrongSize;
-	type FV_DocumentDictionary = 2;
-	const FV_DocumentDictionary: FV_DocumentDictionary;
-	type FV_DontChangePageCount = 1;
-	const FV_DontChangePageCount: FV_DontChangePageCount;
-	type FV_DuplicateFileInBook = 1;
-	const FV_DuplicateFileInBook: FV_DuplicateFileInBook;
-	type FV_EDT_AFTER = 49;
-	const FV_EDT_AFTER: FV_EDT_AFTER;
-	type FV_EDT_ALL = 43;
-	const FV_EDT_ALL: FV_EDT_ALL;
-	type FV_EDT_ANY = 42;
-	const FV_EDT_ANY: FV_EDT_ANY;
-	type FV_EDT_ATTRGRPO = 30;
-	const FV_EDT_ATTRGRPO: FV_EDT_ATTRGRPO;
-	type FV_EDT_BEFORE = 50;
-	const FV_EDT_BEFORE: FV_EDT_BEFORE;
-	type FV_EDT_BETWEEN = 53;
-	const FV_EDT_BETWEEN: FV_EDT_BETWEEN;
-	type FV_EDT_ELEMENT = 25;
-	const FV_EDT_ELEMENT: FV_EDT_ELEMENT;
-	type FV_EDT_FIRST = 44;
-	const FV_EDT_FIRST: FV_EDT_FIRST;
-	type FV_EDT_INSERTPAR = 23;
-	const FV_EDT_INSERTPAR: FV_EDT_INSERTPAR;
-	type FV_EDT_LAST = 46;
-	const FV_EDT_LAST: FV_EDT_LAST;
-	type FV_EDT_MIDDLE = 45;
-	const FV_EDT_MIDDLE: FV_EDT_MIDDLE;
-	type FV_EDT_NOTFIRST = 47;
-	const FV_EDT_NOTFIRST: FV_EDT_NOTFIRST;
-	type FV_EDT_NOTLAST = 48;
-	const FV_EDT_NOTLAST: FV_EDT_NOTLAST;
-	type FV_EDT_ONLY = 62;
-	const FV_EDT_ONLY: FV_EDT_ONLY;
-	type FV_EDT_TEXT = 40;
-	const FV_EDT_TEXT: FV_EDT_TEXT;
-	type FV_EDT_TEXTONLY = 41;
-	const FV_EDT_TEXTONLY: FV_EDT_TEXTONLY;
-	type FV_ELCAT_ALL = 0x03;
-	const FV_ELCAT_ALL: FV_ELCAT_ALL;
-	type FV_ELCAT_CHILDREN = 0x02;
-	const FV_ELCAT_CHILDREN: FV_ELCAT_CHILDREN;
-	type FV_ELCAT_CUSTOM = 0x04;
-	const FV_ELCAT_CUSTOM: FV_ELCAT_CUSTOM;
-	type FV_ELCAT_LOOSE = 0x01;
-	const FV_ELCAT_LOOSE: FV_ELCAT_LOOSE;
-	type FV_ELCAT_STRICT = 0x00;
-	const FV_ELCAT_STRICT: FV_ELCAT_STRICT;
-	type FV_ELEMENT_CATALOG = 8;
-	const FV_ELEMENT_CATALOG: FV_ELEMENT_CATALOG;
-	type FV_ELEM_ATTRVAL_INVALID = 0x4000;
-	const FV_ELEM_ATTRVAL_INVALID: FV_ELEM_ATTRVAL_INVALID;
-	type FV_ELEM_ATTRVAL_REQUIRED = 0x2000;
-	const FV_ELEM_ATTRVAL_REQUIRED: FV_ELEM_ATTRVAL_REQUIRED;
-	type FV_ELEM_BOOK_COMP_INVALID = 0x1000;
-	const FV_ELEM_BOOK_COMP_INVALID: FV_ELEM_BOOK_COMP_INVALID;
-	type FV_ELEM_BOOK_COMP_MISSING = 0x0800;
-	const FV_ELEM_BOOK_COMP_MISSING: FV_ELEM_BOOK_COMP_MISSING;
-	type FV_ELEM_CONTENT_LOOSELY_VALID = 0x20000;
-	const FV_ELEM_CONTENT_LOOSELY_VALID: FV_ELEM_CONTENT_LOOSELY_VALID;
-	type FV_ELEM_CONTENT_MUST_BE_EMPTY = 0x0040;
-	const FV_ELEM_CONTENT_MUST_BE_EMPTY: FV_ELEM_CONTENT_MUST_BE_EMPTY;
-	type FV_ELEM_CONTENT_STRICTLY_VALID = 0x10000;
-	const FV_ELEM_CONTENT_STRICTLY_VALID: FV_ELEM_CONTENT_STRICTLY_VALID;
-	type FV_ELEM_DISP_BRACKETS = 1;
-	const FV_ELEM_DISP_BRACKETS: FV_ELEM_DISP_BRACKETS;
-	type FV_ELEM_DISP_NONE = 0;
-	const FV_ELEM_DISP_NONE: FV_ELEM_DISP_NONE;
-	type FV_ELEM_DISP_TAGS = 2;
-	const FV_ELEM_DISP_TAGS: FV_ELEM_DISP_TAGS;
-	type FV_ELEM_EXCLUDED = 0x0004;
-	const FV_ELEM_EXCLUDED: FV_ELEM_EXCLUDED;
-	type FV_ELEM_HAS_TEXT_INVALID = 0x0020;
-	const FV_ELEM_HAS_TEXT_INVALID: FV_ELEM_HAS_TEXT_INVALID;
-	type FV_ELEM_INVALID_AT_POSITION = 0x0010;
-	const FV_ELEM_INVALID_AT_POSITION: FV_ELEM_INVALID_AT_POSITION;
-	type FV_ELEM_INVALID_IN_PARENT = 0x0008;
-	const FV_ELEM_INVALID_IN_PARENT: FV_ELEM_INVALID_IN_PARENT;
-	type FV_ELEM_INVISIBLE_ATTRVAL_INVALID = 0x80000;
-	const FV_ELEM_INVISIBLE_ATTRVAL_INVALID: FV_ELEM_INVISIBLE_ATTRVAL_INVALID;
-	type FV_ELEM_INVISIBLE_ATTRVAL_REQUIRED = 0x40000;
-	const FV_ELEM_INVISIBLE_ATTRVAL_REQUIRED: FV_ELEM_INVISIBLE_ATTRVAL_REQUIRED;
-	type FV_ELEM_MISSING_CONTENT_AT_BEG = 0x0100;
-	const FV_ELEM_MISSING_CONTENT_AT_BEG: FV_ELEM_MISSING_CONTENT_AT_BEG;
-	type FV_ELEM_MISSING_CONTENT_AT_END = 0x0200;
-	const FV_ELEM_MISSING_CONTENT_AT_END: FV_ELEM_MISSING_CONTENT_AT_END;
-	type FV_ELEM_MISSING_CONTENT_BEFORE = 0x0080;
-	const FV_ELEM_MISSING_CONTENT_BEFORE: FV_ELEM_MISSING_CONTENT_BEFORE;
-	type FV_ELEM_NOT_VALID_AS_ROOT = 0x0400;
-	const FV_ELEM_NOT_VALID_AS_ROOT: FV_ELEM_NOT_VALID_AS_ROOT;
-	type FV_ELEM_TYPE_MISMATCH = 0x0002;
-	const FV_ELEM_TYPE_MISMATCH: FV_ELEM_TYPE_MISMATCH;
-	type FV_ELEM_UNDEFINED = 0x0001;
-	const FV_ELEM_UNDEFINED: FV_ELEM_UNDEFINED;
-	type FV_EMUL_DOWN = 1;
-	const FV_EMUL_DOWN: FV_EMUL_DOWN;
-	type FV_EMUL_UP = 0;
-	const FV_EMUL_UP: FV_EMUL_UP;
-	type FV_ENABLE_ALWAYS_DISABLE = 2;
-	const FV_ENABLE_ALWAYS_DISABLE: FV_ENABLE_ALWAYS_DISABLE;
-	type FV_ENABLE_ALWAYS_ENABLE = 1;
-	const FV_ENABLE_ALWAYS_ENABLE: FV_ENABLE_ALWAYS_ENABLE;
-	type FV_ENABLE_BOOK_HAS_SELECTION = 29;
-	const FV_ENABLE_BOOK_HAS_SELECTION: FV_ENABLE_BOOK_HAS_SELECTION;
-	type FV_ENABLE_CAN_PASTE = 24;
-	const FV_ENABLE_CAN_PASTE: FV_ENABLE_CAN_PASTE;
-	type FV_ENABLE_COPY = 22;
-	const FV_ENABLE_COPY: FV_ENABLE_COPY;
-	type FV_ENABLE_COPY_FONT = 23;
-	const FV_ENABLE_COPY_FONT: FV_ENABLE_COPY_FONT;
-	type FV_ENABLE_DOC_OR_BOOK_HAS_SELECTION = 30;
-	const FV_ENABLE_DOC_OR_BOOK_HAS_SELECTION: FV_ENABLE_DOC_OR_BOOK_HAS_SELECTION;
-	type FV_ENABLE_IN_CELL_TEXT = 11;
-	const FV_ENABLE_IN_CELL_TEXT: FV_ENABLE_IN_CELL_TEXT;
-	type FV_ENABLE_IN_FLOW = 21;
-	const FV_ENABLE_IN_FLOW: FV_ENABLE_IN_FLOW;
-	type FV_ENABLE_IN_MATH = 6;
-	const FV_ENABLE_IN_MATH: FV_ENABLE_IN_MATH;
-	type FV_ENABLE_IN_PARA_TEXT = 3;
-	const FV_ENABLE_IN_PARA_TEXT: FV_ENABLE_IN_PARA_TEXT;
-	type FV_ENABLE_IN_TABLE = 9;
-	const FV_ENABLE_IN_TABLE: FV_ENABLE_IN_TABLE;
-	type FV_ENABLE_IN_TABLE_TITLE = 10;
-	const FV_ENABLE_IN_TABLE_TITLE: FV_ENABLE_IN_TABLE_TITLE;
-	type FV_ENABLE_IN_TEXT = 7;
-	const FV_ENABLE_IN_TEXT: FV_ENABLE_IN_TEXT;
-	type FV_ENABLE_IN_TEXT_LINE = 4;
-	const FV_ENABLE_IN_TEXT_LINE: FV_ENABLE_IN_TEXT_LINE;
-	type FV_ENABLE_IS_AFRAME = 18;
-	const FV_ENABLE_IS_AFRAME: FV_ENABLE_IS_AFRAME;
-	type FV_ENABLE_IS_CELL = 12;
-	const FV_ENABLE_IS_CELL: FV_ENABLE_IS_CELL;
-	type FV_ENABLE_IS_CELLS = 13;
-	const FV_ENABLE_IS_CELLS: FV_ENABLE_IS_CELLS;
-	type FV_ENABLE_IS_GRAPHIC_INSET = 20;
-	const FV_ENABLE_IS_GRAPHIC_INSET: FV_ENABLE_IS_GRAPHIC_INSET;
-	type FV_ENABLE_IS_OBJ = 15;
-	const FV_ENABLE_IS_OBJ: FV_ENABLE_IS_OBJ;
-	type FV_ENABLE_IS_OR_IN_FRAME = 17;
-	const FV_ENABLE_IS_OR_IN_FRAME: FV_ENABLE_IS_OR_IN_FRAME;
-	type FV_ENABLE_IS_TABLE = 14;
-	const FV_ENABLE_IS_TABLE: FV_ENABLE_IS_TABLE;
-	type FV_ENABLE_IS_TEXT_FRAME = 16;
-	const FV_ENABLE_IS_TEXT_FRAME: FV_ENABLE_IS_TEXT_FRAME;
-	type FV_ENABLE_IS_TEXT_INSET = 19;
-	const FV_ENABLE_IS_TEXT_INSET: FV_ENABLE_IS_TEXT_INSET;
-	type FV_ENABLE_IS_TEXT_SEL = 5;
-	const FV_ENABLE_IS_TEXT_SEL: FV_ENABLE_IS_TEXT_SEL;
-	type FV_ENABLE_IS_VIEW_ONLY = 25;
-	const FV_ENABLE_IS_VIEW_ONLY: FV_ENABLE_IS_VIEW_ONLY;
-	type FV_ENABLE_NEEDS_BOOKP_ONLY = 27;
-	const FV_ENABLE_NEEDS_BOOKP_ONLY: FV_ENABLE_NEEDS_BOOKP_ONLY;
-	type FV_ENABLE_NEEDS_DOCP_ONLY = 26;
-	const FV_ENABLE_NEEDS_DOCP_ONLY: FV_ENABLE_NEEDS_DOCP_ONLY;
-	type FV_ENABLE_NEEDS_DOCP_OR_BOOKP = 28;
-	const FV_ENABLE_NEEDS_DOCP_OR_BOOKP: FV_ENABLE_NEEDS_DOCP_OR_BOOKP;
-	type FV_ENABLE_OBJ_PROPS = 8;
-	const FV_ENABLE_OBJ_PROPS: FV_ENABLE_OBJ_PROPS;
-	type FV_ENUMERATE_BOOKCOMP_FOLDER = 256; // 1 << 8
-	const FV_ENUMERATE_BOOKCOMP_FOLDER: FV_ENUMERATE_BOOKCOMP_FOLDER;
-	type FV_ENUMERATE_BOOKCOMP_GROUP = 512; // 1 << 9
-	const FV_ENUMERATE_BOOKCOMP_GROUP: FV_ENUMERATE_BOOKCOMP_GROUP;
-	type FV_ENUMERATE_COMPFILE_BOOKBINARY = 16384; // 1 << 14
-	const FV_ENUMERATE_COMPFILE_BOOKBINARY: FV_ENUMERATE_COMPFILE_BOOKBINARY;
-	type FV_ENUMERATE_COMPFILE_BOOKMIF = 32768; // 1 << 15
-	const FV_ENUMERATE_COMPFILE_BOOKMIF: FV_ENUMERATE_COMPFILE_BOOKMIF;
-	type FV_ENUMERATE_COMPFILE_FMBINARY = 4096; // 1 << 12
-	const FV_ENUMERATE_COMPFILE_FMBINARY: FV_ENUMERATE_COMPFILE_FMBINARY;
-	type FV_ENUMERATE_COMPFILE_FMMIF = 8192; // 1 << 13
-	const FV_ENUMERATE_COMPFILE_FMMIF: FV_ENUMERATE_COMPFILE_FMMIF;
-	type FV_ENUMERATE_COMPFILE_XML = 65536; // 1 << 16
-	const FV_ENUMERATE_COMPFILE_XML: FV_ENUMERATE_COMPFILE_XML;
-	type FV_ENUMERATE_COMP_CHILDBOOK_COMPONENTS = 128; // 1 << 7
-	const FV_ENUMERATE_COMP_CHILDBOOK_COMPONENTS: FV_ENUMERATE_COMP_CHILDBOOK_COMPONENTS;
-	type FV_ENUMERATE_COMP_CHILDMAP_COMPONENTS = 64; // 1 << 6
-	const FV_ENUMERATE_COMP_CHILDMAP_COMPONENTS: FV_ENUMERATE_COMP_CHILDMAP_COMPONENTS;
-	type FV_ENUMERATE_COMP_FOLDER_COMPONENTS = 1024; // 1 << 10
-	const FV_ENUMERATE_COMP_FOLDER_COMPONENTS: FV_ENUMERATE_COMP_FOLDER_COMPONENTS;
-	type FV_ENUMERATE_COMP_GROUP_COMPONENTS = 2048; // 1 << 11
-	const FV_ENUMERATE_COMP_GROUP_COMPONENTS: FV_ENUMERATE_COMP_GROUP_COMPONENTS;
-	type FV_ENUMERATE_DITACOMP_KEYDEF = 32; // 1 << 5
-	const FV_ENUMERATE_DITACOMP_KEYDEF: FV_ENUMERATE_DITACOMP_KEYDEF;
-	type FV_ENUMERATE_DITACOMP_MAPREF = 4; // 1 << 2
-	const FV_ENUMERATE_DITACOMP_MAPREF: FV_ENUMERATE_DITACOMP_MAPREF;
-	type FV_ENUMERATE_DITACOMP_TOPICREF = 2; // 1 << 1
-	const FV_ENUMERATE_DITACOMP_TOPICREF: FV_ENUMERATE_DITACOMP_TOPICREF;
-	type FV_ENUMERATE_DITACOMP_TOPICSET = 8; // 1 << 3
-	const FV_ENUMERATE_DITACOMP_TOPICSET: FV_ENUMERATE_DITACOMP_TOPICSET;
-	type FV_ENUMERATE_DITACOMP_TOPICSETREF = 16; // 1 << 4
-	const FV_ENUMERATE_DITACOMP_TOPICSETREF: FV_ENUMERATE_DITACOMP_TOPICSETREF;
-	type FV_EUC = 7;
-	const FV_EUC: FV_EUC;
-	type FV_EUC_CNS = 9;
-	const FV_EUC_CNS: FV_EUC_CNS;
-	type FV_EXCLUDE_CONREF_DEPENDENCIES = 0x20;
-	const FV_EXCLUDE_CONREF_DEPENDENCIES: FV_EXCLUDE_CONREF_DEPENDENCIES;
-	type FV_EXCLUDE_GRAPHICS_DEPENDENCIES = 0x01;
-	const FV_EXCLUDE_GRAPHICS_DEPENDENCIES: FV_EXCLUDE_GRAPHICS_DEPENDENCIES;
-	type FV_EXCLUDE_NONE = 0x10;
-	const FV_EXCLUDE_NONE: FV_EXCLUDE_NONE;
-	type FV_EXCLUDE_OLE_DEPENDENCIES = 0x04;
-	const FV_EXCLUDE_OLE_DEPENDENCIES: FV_EXCLUDE_OLE_DEPENDENCIES;
-	type FV_EXCLUDE_TEXT_INSET_DEPENDENCIES = 0x02;
-	const FV_EXCLUDE_TEXT_INSET_DEPENDENCIES: FV_EXCLUDE_TEXT_INSET_DEPENDENCIES;
-	type FV_EXCLUDE_XREF_DEPENDENCIES = 0x08;
-	const FV_EXCLUDE_XREF_DEPENDENCIES: FV_EXCLUDE_XREF_DEPENDENCIES;
-	type FV_EditableCopyOpened = 45;
-	const FV_EditableCopyOpened: FV_EditableCopyOpened;
-	type FV_Element = 0;
-	const FV_Element: FV_Element;
-	type FV_ElementsOfType = 1;
-	const FV_ElementsOfType: FV_ElementsOfType;
-	type FV_EnclosingDoc = 1;
-	const FV_EnclosingDoc: FV_EnclosingDoc;
-	type FV_EvCaps = 0x0008;
-	const FV_EvCaps: FV_EvCaps;
-	type FV_EvCommand = 0x0010;
-	const FV_EvCommand: FV_EvCommand;
-	type FV_EvControl = 0x0002;
-	const FV_EvControl: FV_EvControl;
-	type FV_EvMax = 0x0010;
-	const FV_EvMax: FV_EvMax;
-	type FV_EvMeta = 0x0004;
-	const FV_EvMeta: FV_EvMeta;
-	type FV_EvOption = 0x0004;
-	const FV_EvOption: FV_EvOption;
-	type FV_EvShift = 0x0001;
-	const FV_EvShift: FV_EvShift;
-	type FV_ExportDocument = 0;
-	const FV_ExportDocument: FV_ExportDocument;
-	type FV_ExportFileHasNewName = 0;
-	const FV_ExportFileHasNewName: FV_ExportFileHasNewName;
-	type FV_ExportFileNotWritable = 2;
-	const FV_ExportFileNotWritable: FV_ExportFileNotWritable;
-	type FV_ExportObject = 1;
-	const FV_ExportObject: FV_ExportObject;
-	type FV_ExportProductIsViewer = 1;
-	const FV_ExportProductIsViewer: FV_ExportProductIsViewer;
-	type FV_FAMILY_MAPPED = 0x00000004;
-	const FV_FAMILY_MAPPED: FV_FAMILY_MAPPED;
-	type FV_FAMILY_SELECTABLE = 0x00000002;
-	const FV_FAMILY_SELECTABLE: FV_FAMILY_SELECTABLE;
-	type FV_FAMILY_SURROGATE = 0xFFFF0000;
-	const FV_FAMILY_SURROGATE: FV_FAMILY_SURROGATE;
-	type FV_FAMILY_VISIBLE = 0x00000001;
-	const FV_FAMILY_VISIBLE: FV_FAMILY_VISIBLE;
-	type FV_FILL_BLACK = 0;
-	const FV_FILL_BLACK: FV_FILL_BLACK;
-	type FV_FILL_CLEAR = 15;
-	const FV_FILL_CLEAR: FV_FILL_CLEAR;
-	type FV_FILL_WHITE = 7;
-	const FV_FILL_WHITE: FV_FILL_WHITE;
-	type FV_FIT_FRAME_TO_IMAGE = 0;
-	const FV_FIT_FRAME_TO_IMAGE: FV_FIT_FRAME_TO_IMAGE;
-	type FV_FIT_FRAME_TO_IMAGE_PROPORTIONAL = 2;
-	const FV_FIT_FRAME_TO_IMAGE_PROPORTIONAL: FV_FIT_FRAME_TO_IMAGE_PROPORTIONAL;
-	type FV_FIT_IMAGE_TO_FRAME = 1;
-	const FV_FIT_IMAGE_TO_FRAME: FV_FIT_IMAGE_TO_FRAME;
-	type FV_FIT_WINDOW_TO_PAGE = -3;
-	const FV_FIT_WINDOW_TO_PAGE: FV_FIT_WINDOW_TO_PAGE;
-	type FV_FIXED_YAKUMONO = 0x02;
-	const FV_FIXED_YAKUMONO: FV_FIXED_YAKUMONO;
-	type FV_FLOATING_YAKUMONO = 0x00;
-	const FV_FLOATING_YAKUMONO: FV_FLOATING_YAKUMONO;
-	type FV_FN_NUM_ABJAD_NUMERIC = 0x14;
-	const FV_FN_NUM_ABJAD_NUMERIC: FV_FN_NUM_ABJAD_NUMERIC;
-	type FV_FN_NUM_ALIFBATA_NUMERIC = 0x15;
-	const FV_FN_NUM_ALIFBATA_NUMERIC: FV_FN_NUM_ALIFBATA_NUMERIC;
-	type FV_FN_NUM_ALPHA_LC = 0x04;
-	const FV_FN_NUM_ALPHA_LC: FV_FN_NUM_ALPHA_LC;
-	type FV_FN_NUM_ALPHA_UC = 0x03;
-	const FV_FN_NUM_ALPHA_UC: FV_FN_NUM_ALPHA_UC;
-	type FV_FN_NUM_CHINESE_NUMERIC = 0x10;
-	const FV_FN_NUM_CHINESE_NUMERIC: FV_FN_NUM_CHINESE_NUMERIC;
-	type FV_FN_NUM_CUSTOM = 0x05;
-	const FV_FN_NUM_CUSTOM: FV_FN_NUM_CUSTOM;
-	type FV_FN_NUM_DAIJI = 0x0B;
-	const FV_FN_NUM_DAIJI: FV_FN_NUM_DAIJI;
-	type FV_FN_NUM_FARSI_ALPHA = 0x18;
-	const FV_FN_NUM_FARSI_ALPHA: FV_FN_NUM_FARSI_ALPHA;
-	type FV_FN_NUM_FARSI_NUMERIC = 0x12;
-	const FV_FN_NUM_FARSI_NUMERIC: FV_FN_NUM_FARSI_NUMERIC;
-	type FV_FN_NUM_FULL_WIDTH = 0x0C;
-	const FV_FN_NUM_FULL_WIDTH: FV_FN_NUM_FULL_WIDTH;
-	type FV_FN_NUM_FULL_WIDTH_LC = 0x0E;
-	const FV_FN_NUM_FULL_WIDTH_LC: FV_FN_NUM_FULL_WIDTH_LC;
-	type FV_FN_NUM_FULL_WIDTH_UC = 0x0D;
-	const FV_FN_NUM_FULL_WIDTH_UC: FV_FN_NUM_FULL_WIDTH_UC;
-	type FV_FN_NUM_HEBREW_ALPHA = 0x19;
-	const FV_FN_NUM_HEBREW_ALPHA: FV_FN_NUM_HEBREW_ALPHA;
-	type FV_FN_NUM_HEBREW_NUMERIC = 0x13;
-	const FV_FN_NUM_HEBREW_NUMERIC: FV_FN_NUM_HEBREW_NUMERIC;
-	type FV_FN_NUM_INDIC_NUMERIC = 0x11;
-	const FV_FN_NUM_INDIC_NUMERIC: FV_FN_NUM_INDIC_NUMERIC;
-	type FV_FN_NUM_KANJI = 0x06;
-	const FV_FN_NUM_KANJI: FV_FN_NUM_KANJI;
-	type FV_FN_NUM_KANJI_KAZU = 0x0A;
-	const FV_FN_NUM_KANJI_KAZU: FV_FN_NUM_KANJI_KAZU;
-	type FV_FN_NUM_NUMERIC = 0x00;
-	const FV_FN_NUM_NUMERIC: FV_FN_NUM_NUMERIC;
-	type FV_FN_NUM_ROMAN_LC = 0x02;
-	const FV_FN_NUM_ROMAN_LC: FV_FN_NUM_ROMAN_LC;
-	type FV_FN_NUM_ROMAN_UC = 0x01;
-	const FV_FN_NUM_ROMAN_UC: FV_FN_NUM_ROMAN_UC;
-	type FV_FN_NUM_THAI_ALPHA = 0x17;
-	const FV_FN_NUM_THAI_ALPHA: FV_FN_NUM_THAI_ALPHA;
-	type FV_FN_NUM_THAI_NUMERIC = 0x16;
-	const FV_FN_NUM_THAI_NUMERIC: FV_FN_NUM_THAI_NUMERIC;
-	type FV_FN_NUM_ZENKAKU = 0x07;
-	const FV_FN_NUM_ZENKAKU: FV_FN_NUM_ZENKAKU;
-	type FV_FN_NUM_ZENKAKU_LC = 0x09;
-	const FV_FN_NUM_ZENKAKU_LC: FV_FN_NUM_ZENKAKU_LC;
-	type FV_FN_NUM_ZENKAKU_UC = 0x08;
-	const FV_FN_NUM_ZENKAKU_UC: FV_FN_NUM_ZENKAKU_UC;
-	type FV_FN_POS_BASELINE = 0x01;
-	const FV_FN_POS_BASELINE: FV_FN_POS_BASELINE;
-	type FV_FN_POS_SUB = 0x02;
-	const FV_FN_POS_SUB: FV_FN_POS_SUB;
-	type FV_FN_POS_SUPER = 0x00;
-	const FV_FN_POS_SUPER: FV_FN_POS_SUPER;
-	type FV_FORMATBAR_CLOSE = 5;
-	const FV_FORMATBAR_CLOSE: FV_FORMATBAR_CLOSE;
-	type FV_FORMATBAR_OPEN = 4;
-	const FV_FORMATBAR_OPEN: FV_FORMATBAR_OPEN;
-	type FV_FO_CONTAINER = 1;
-	const FV_FO_CONTAINER: FV_FO_CONTAINER;
-	type FV_FO_EQN = 7;
-	const FV_FO_EQN: FV_FO_EQN;
-	type FV_FO_FOOTNOTE = 5;
-	const FV_FO_FOOTNOTE: FV_FO_FOOTNOTE;
-	type FV_FO_GRAPHIC = 6;
-	const FV_FO_GRAPHIC: FV_FO_GRAPHIC;
-	type FV_FO_MARKER = 4;
-	const FV_FO_MARKER: FV_FO_MARKER;
-	type FV_FO_MMLEQN = 17;
-	const FV_FO_MMLEQN: FV_FO_MMLEQN;
-	type FV_FO_NUMTYPES = 18;
-	const FV_FO_NUMTYPES: FV_FO_NUMTYPES;
-	type FV_FO_RUBI = 16;
-	const FV_FO_RUBI: FV_FO_RUBI;
-	type FV_FO_RUBI_GROUP = 15;
-	const FV_FO_RUBI_GROUP: FV_FO_RUBI_GROUP;
-	type FV_FO_SYS_VAR = 2;
-	const FV_FO_SYS_VAR: FV_FO_SYS_VAR;
-	type FV_FO_TBL = 8;
-	const FV_FO_TBL: FV_FO_TBL;
-	type FV_FO_TBL_BODY = 11;
-	const FV_FO_TBL_BODY: FV_FO_TBL_BODY;
-	type FV_FO_TBL_CELL = 14;
-	const FV_FO_TBL_CELL: FV_FO_TBL_CELL;
-	type FV_FO_TBL_FOOTING = 12;
-	const FV_FO_TBL_FOOTING: FV_FO_TBL_FOOTING;
-	type FV_FO_TBL_HEADING = 10;
-	const FV_FO_TBL_HEADING: FV_FO_TBL_HEADING;
-	type FV_FO_TBL_ROW = 13;
-	const FV_FO_TBL_ROW: FV_FO_TBL_ROW;
-	type FV_FO_TBL_TITLE = 9;
-	const FV_FO_TBL_TITLE: FV_FO_TBL_TITLE;
-	type FV_FO_TEXTNODE = 0;
-	const FV_FO_TEXTNODE: FV_FO_TEXTNODE;
-	type FV_FO_UNSPECIFIED = 0;
-	const FV_FO_UNSPECIFIED: FV_FO_UNSPECIFIED;
-	type FV_FO_XREF = 3;
-	const FV_FO_XREF: FV_FO_XREF;
-	type FV_FROMCOLOR = 0x02;
-	const FV_FROMCOLOR: FV_FROMCOLOR;
-	type FV_FTON = 2;
-	const FV_FTON: FV_FTON;
-	type FV_FileAlreadyOpen = 48;
-	const FV_FileAlreadyOpen: FV_FileAlreadyOpen;
-	type FV_FileAlreadyOpenThisSession = 65;
-	const FV_FileAlreadyOpenThisSession: FV_FileAlreadyOpenThisSession;
-	type FV_FileHadStructure = 64;
-	const FV_FileHadStructure: FV_FileHadStructure;
-	type FV_FileHasNewName = 32;
-	const FV_FileHasNewName: FV_FileHasNewName;
-	type FV_FileInBookNotOpened = 96;
-	const FV_FileInBookNotOpened: FV_FileInBookNotOpened;
-	type FV_FileInBookNotSaved = 97;
-	const FV_FileInBookNotSaved: FV_FileInBookNotSaved;
-	type FV_FileIsNotWritable = 6;
-	const FV_FileIsNotWritable: FV_FileIsNotWritable;
-	type FV_FileIsOldVersion = 41;
-	const FV_FileIsOldVersion: FV_FileIsOldVersion;
-	type FV_FileIsText = 43;
-	const FV_FileIsText: FV_FileIsText;
-	type FV_FileIsViewOnly = 4;
-	const FV_FileIsViewOnly: FV_FileIsViewOnly;
-	type FV_FileModDateChanged = 7;
-	const FV_FileModDateChanged: FV_FileModDateChanged;
-	type FV_FileNotReadable = 130;
-	const FV_FileNotReadable: FV_FileNotReadable;
-	type FV_FileNotSupported = 0;
-	const FV_FileNotSupported: FV_FileNotSupported;
-	type FV_FileNotSupportedFormViewXml = -1;
-	const FV_FileNotSupportedFormViewXml: FV_FileNotSupportedFormViewXml;
-	type FV_FileNotSupportedValidXml = -2;
-	const FV_FileNotSupportedValidXml: FV_FileNotSupportedValidXml;
-	type FV_FileNotWritable = 33;
-	const FV_FileNotWritable: FV_FileNotWritable;
-	type FV_FileOpenAlertUserAboutFailure = 0x00000002;
-	const FV_FileOpenAlertUserAboutFailure: FV_FileOpenAlertUserAboutFailure;
-	type FV_FileOpenMakeVisible = 0x00000001;
-	const FV_FileOpenMakeVisible: FV_FileOpenMakeVisible;
-	type FV_FileOpenUpdateTextReferences = 0x00000008;
-	const FV_FileOpenUpdateTextReferences: FV_FileOpenUpdateTextReferences;
-	type FV_FileOpenUpdateXRefs = 0x00000004;
-	const FV_FileOpenUpdateXRefs: FV_FileOpenUpdateXRefs;
-	type FV_FileStructureStripped = 42;
-	const FV_FileStructureStripped: FV_FileStructureStripped;
-	type FV_FileSupported = 1;
-	const FV_FileSupported: FV_FileSupported;
-	type FV_FileTypeBinaryBook = 2;
-	const FV_FileTypeBinaryBook: FV_FileTypeBinaryBook;
-	type FV_FileTypeBinaryDoc = 1;
-	const FV_FileTypeBinaryDoc: FV_FileTypeBinaryDoc;
-	type FV_FileTypeCompositeDoc = 13;
-	const FV_FileTypeCompositeDoc: FV_FileTypeCompositeDoc;
-	type FV_FileTypeEquation = 11;
-	const FV_FileTypeEquation: FV_FileTypeEquation;
-	type FV_FileTypeErrorDoc = 10;
-	const FV_FileTypeErrorDoc: FV_FileTypeErrorDoc;
-	type FV_FileTypeFilter = 7;
-	const FV_FileTypeFilter: FV_FileTypeFilter;
-	type FV_FileTypeFolder = 8;
-	const FV_FileTypeFolder: FV_FileTypeFolder;
-	type FV_FileTypeGeneral = 9;
-	const FV_FileTypeGeneral: FV_FileTypeGeneral;
-	type FV_FileTypeMif = 3;
-	const FV_FileTypeMif: FV_FileTypeMif;
-	type FV_FileTypeSgml = 5;
-	const FV_FileTypeSgml: FV_FileTypeSgml;
-	type FV_FileTypeSummaryDoc = 14;
-	const FV_FileTypeSummaryDoc: FV_FileTypeSummaryDoc;
-	type FV_FileTypeText = 6;
-	const FV_FileTypeText: FV_FileTypeText;
-	type FV_FileTypeThesaurus = 12;
-	const FV_FileTypeThesaurus: FV_FileTypeThesaurus;
-	type FV_FileTypeXml = 4;
-	const FV_FileTypeXml: FV_FileTypeXml;
-	type FV_FileWasExported = 49;
-	const FV_FileWasExported: FV_FileWasExported;
-	type FV_FileWasFiltered = 35;
-	const FV_FileWasFiltered: FV_FileWasFiltered;
-	type FV_FileWasInUse = 3;
-	const FV_FileWasInUse: FV_FileWasInUse;
-	type FV_FilterFailed = 22;
-	const FV_FilterFailed: FV_FilterFailed;
-	type FV_FindAnchoredFrame = 7;
-	const FV_FindAnchoredFrame: FV_FindAnchoredFrame;
-	type FV_FindAnyMarker = 0;
-	const FV_FindAnyMarker: FV_FindAnyMarker;
-	type FV_FindAnyPub = 5;
-	const FV_FindAnyPub: FV_FindAnyPub;
-	type FV_FindAnyRubi = 11;
-	const FV_FindAnyRubi: FV_FindAnyRubi;
-	type FV_FindAnyTable = 9;
-	const FV_FindAnyTable: FV_FindAnyTable;
-	type FV_FindAnyTextInset = 3;
-	const FV_FindAnyTextInset: FV_FindAnyTextInset;
-	type FV_FindAnyVariable = 6;
-	const FV_FindAnyVariable: FV_FindAnyVariable;
-	type FV_FindAnyXRef = 1;
-	const FV_FindAnyXRef: FV_FindAnyXRef;
-	type FV_FindAttrName = 1;
-	const FV_FindAttrName: FV_FindAttrName;
-	type FV_FindAttrValue = 2;
-	const FV_FindAttrValue: FV_FindAttrValue;
-	type FV_FindAutomaticHyphen = 10;
-	const FV_FindAutomaticHyphen: FV_FindAutomaticHyphen;
-	type FV_FindCharacterFormatOverride = 13;
-	const FV_FindCharacterFormatOverride: FV_FindCharacterFormatOverride;
-	type FV_FindElemTag = 0;
-	const FV_FindElemTag: FV_FindElemTag;
-	type FV_FindFootnote = 8;
-	const FV_FindFootnote: FV_FindFootnote;
-	type FV_FindPgfFormatOverride = 12;
-	const FV_FindPgfFormatOverride: FV_FindPgfFormatOverride;
-	type FV_FindStyleFormatOverride = 15;
-	const FV_FindStyleFormatOverride: FV_FindStyleFormatOverride;
-	type FV_FindTableFormatOverride = 14;
-	const FV_FindTableFormatOverride: FV_FindTableFormatOverride;
-	type FV_FindUnresolvedTextInset = 4;
-	const FV_FindUnresolvedTextInset: FV_FindUnresolvedTextInset;
-	type FV_FindUnresolvedXRef = 2;
-	const FV_FindUnresolvedXRef: FV_FindUnresolvedXRef;
-	type FV_FlowUnstructured = 30;
-	const FV_FlowUnstructured: FV_FlowUnstructured;
-	type FV_FontMetricsChanged = 37;
-	const FV_FontMetricsChanged: FV_FontMetricsChanged;
-	type FV_FontsMappedInCatalog = 38;
-	const FV_FontsMappedInCatalog: FV_FontsMappedInCatalog;
-	type FV_FontsWereMapped = 36;
-	const FV_FontsWereMapped: FV_FontsWereMapped;
-	type FV_FontsWithUnavailableEncodingsUsed = 53;
-	const FV_FontsWithUnavailableEncodingsUsed: FV_FontsWithUnavailableEncodingsUsed;
-	type FV_Footing = 1239;
-	const FV_Footing: FV_Footing;
-	type FV_GB = 10;
-	const FV_GB: FV_GB;
-	type FV_GRAPHIC = 9;
-	const FV_GRAPHIC: FV_GRAPHIC;
-	type FV_GRAPHICS_CATALOG = 14;
-	const FV_GRAPHICS_CATALOG: FV_GRAPHICS_CATALOG;
-	type FV_GetDictionaryStrings = 9;
-	const FV_GetDictionaryStrings: FV_GetDictionaryStrings;
-	type FV_HELP_CONTEXT = 5;
-	const FV_HELP_CONTEXT: FV_HELP_CONTEXT;
-	type FV_HELP_HYPERTEXT = 7;
-	const FV_HELP_HYPERTEXT: FV_HELP_HYPERTEXT;
-	type FV_HELP_INDEX = 0;
-	const FV_HELP_INDEX: FV_HELP_INDEX;
-	type FV_HELP_INIT_CONTEXT = 6;
-	const FV_HELP_INIT_CONTEXT: FV_HELP_INIT_CONTEXT;
-	type FV_HELP_KEYS = 1;
-	const FV_HELP_KEYS: FV_HELP_KEYS;
-	type FV_HELP_ONLINE_MANUALS = 4;
-	const FV_HELP_ONLINE_MANUALS: FV_HELP_ONLINE_MANUALS;
-	type FV_HELP_OVERVIEW = 3;
-	const FV_HELP_OVERVIEW: FV_HELP_OVERVIEW;
-	type FV_HELP_SAMPLES = 2;
-	const FV_HELP_SAMPLES: FV_HELP_SAMPLES;
-	type FV_HELP_WEBWORKS = 8;
-	const FV_HELP_WEBWORKS: FV_HELP_WEBWORKS;
-	type FV_HIST = 12;
-	const FV_HIST: FV_HIST;
-	type FV_HZ = 11;
-	const FV_HZ: FV_HZ;
-	type FV_Heading = 1238;
-	const FV_Heading: FV_Heading;
-	type FV_Hint_FilterName = 5;
-	const FV_Hint_FilterName: FV_Hint_FilterName;
-	type FV_Hint_FilterVersion = 4;
-	const FV_Hint_FilterVersion: FV_Hint_FilterVersion;
-	type FV_Hint_FormatId = 2;
-	const FV_Hint_FormatId: FV_Hint_FormatId;
-	type FV_Hint_HintVersion = 0;
-	const FV_Hint_HintVersion: FV_Hint_HintVersion;
-	type FV_Hint_Platform = 3;
-	const FV_Hint_Platform: FV_Hint_Platform;
-	type FV_Hint_VendorId = 1;
-	const FV_Hint_VendorId: FV_Hint_VendorId;
-	type FV_HypertextBadMatrixSize = 250;
-	const FV_HypertextBadMatrixSize: FV_HypertextBadMatrixSize;
-	type FV_HypertextBadSyntaxPathSpec = 10;
-	const FV_HypertextBadSyntaxPathSpec: FV_HypertextBadSyntaxPathSpec;
-	type FV_HypertextCantOpenDestFile = 212;
-	const FV_HypertextCantOpenDestFile: FV_HypertextCantOpenDestFile;
-	type FV_HypertextCommandIllegalWithinPopup = 273;
-	const FV_HypertextCommandIllegalWithinPopup: FV_HypertextCommandIllegalWithinPopup;
-	type FV_HypertextDestinationLinkNotFound = 220;
-	const FV_HypertextDestinationLinkNotFound: FV_HypertextDestinationLinkNotFound;
-	type FV_HypertextDuplicateLinkName = 221;
-	const FV_HypertextDuplicateLinkName: FV_HypertextDuplicateLinkName;
-	type FV_HypertextEmptyCommand = 1;
-	const FV_HypertextEmptyCommand: FV_HypertextEmptyCommand;
-	type FV_HypertextEmptyLineInMiddleOfPopup = 272;
-	const FV_HypertextEmptyLineInMiddleOfPopup: FV_HypertextEmptyLineInMiddleOfPopup;
-	type FV_HypertextExpectedANumberParam = 30;
-	const FV_HypertextExpectedANumberParam: FV_HypertextExpectedANumberParam;
-	type FV_HypertextExtraArguments = 4;
-	const FV_HypertextExtraArguments: FV_HypertextExtraArguments;
-	type FV_HypertextFcodeInvalid = 280;
-	const FV_HypertextFcodeInvalid: FV_HypertextFcodeInvalid;
-	type FV_HypertextFileNotMakerDoc = 211;
-	const FV_HypertextFileNotMakerDoc: FV_HypertextFileNotMakerDoc;
-	type FV_HypertextFileNotRegular = 210;
-	const FV_HypertextFileNotRegular: FV_HypertextFileNotRegular;
-	type FV_HypertextFlowMissingLines = 252;
-	const FV_HypertextFlowMissingLines: FV_HypertextFlowMissingLines;
-	type FV_HypertextHelpDirNotFound = 20;
-	const FV_HypertextHelpDirNotFound: FV_HypertextHelpDirNotFound;
-	type FV_HypertextMatrixCommandInvalid = 251;
-	const FV_HypertextMatrixCommandInvalid: FV_HypertextMatrixCommandInvalid;
-	type FV_HypertextMissingArguments = 3;
-	const FV_HypertextMissingArguments: FV_HypertextMissingArguments;
-	type FV_HypertextMissingPopupLabelItem = 271;
-	const FV_HypertextMissingPopupLabelItem: FV_HypertextMissingPopupLabelItem;
-	type FV_HypertextMissingPopupMarker = 270;
-	const FV_HypertextMissingPopupMarker: FV_HypertextMissingPopupMarker;
-	type FV_HypertextNoNamedFlow = 260;
-	const FV_HypertextNoNamedFlow: FV_HypertextNoNamedFlow;
-	type FV_HypertextObjectIDNotFound = 241;
-	const FV_HypertextObjectIDNotFound: FV_HypertextObjectIDNotFound;
-	type FV_HypertextPageNameNotFound = 230;
-	const FV_HypertextPageNameNotFound: FV_HypertextPageNameNotFound;
-	type FV_HypertextRecursiveFlow = 261;
-	const FV_HypertextRecursiveFlow: FV_HypertextRecursiveFlow;
-	type FV_HypertextSyntaxOK = 0;
-	const FV_HypertextSyntaxOK: FV_HypertextSyntaxOK;
-	type FV_HypertextUnanchoredPartialPath = 11;
-	const FV_HypertextUnanchoredPartialPath: FV_HypertextUnanchoredPartialPath;
-	type FV_HypertextUnrecognizedCommand = 2;
-	const FV_HypertextUnrecognizedCommand: FV_HypertextUnrecognizedCommand;
-	type FV_HypertextUnrecognizedObjectType = 240;
-	const FV_HypertextUnrecognizedObjectType: FV_HypertextUnrecognizedObjectType;
-	type FV_HypertextUsesDefaultText = 200;
-	const FV_HypertextUsesDefaultText: FV_HypertextUsesDefaultText;
-	type FV_HypertextValid = 0;
-	const FV_HypertextValid: FV_HypertextValid;
-	type FV_IMG_NEGATIVE = 1;
-	const FV_IMG_NEGATIVE: FV_IMG_NEGATIVE;
-	type FV_IMG_POSITIVE = 0;
-	const FV_IMG_POSITIVE: FV_IMG_POSITIVE;
-	type FV_INCLUSION = 0x08;
-	const FV_INCLUSION: FV_INCLUSION;
-	type FV_INCREMENT_MAIN_PROGRESS_STEP_SAVE_AS_PDF = 1;
-	const FV_INCREMENT_MAIN_PROGRESS_STEP_SAVE_AS_PDF: FV_INCREMENT_MAIN_PROGRESS_STEP_SAVE_AS_PDF;
-	type FV_INCREMENT_PROGRESS_STEP_SAVE_AS_PDF = 5;
-	const FV_INCREMENT_PROGRESS_STEP_SAVE_AS_PDF: FV_INCREMENT_PROGRESS_STEP_SAVE_AS_PDF;
-	type FV_INTERACT_ROTATE = 1;
-	const FV_INTERACT_ROTATE: FV_INTERACT_ROTATE;
-	type FV_INTERACT_ROTATE_CONSTRAIN = 2;
-	const FV_INTERACT_ROTATE_CONSTRAIN: FV_INTERACT_ROTATE_CONSTRAIN;
-	type FV_ITEM_HAS_NO_SHIFT_OR_UNSHIFT_COMMAND = 3;
-	const FV_ITEM_HAS_NO_SHIFT_OR_UNSHIFT_COMMAND: FV_ITEM_HAS_NO_SHIFT_OR_UNSHIFT_COMMAND;
-	type FV_ITEM_HAS_SHIFT_COMMAND = 1;
-	const FV_ITEM_HAS_SHIFT_COMMAND: FV_ITEM_HAS_SHIFT_COMMAND;
-	type FV_ITEM_HAS_UNSHIFT_COMMAND = 2;
-	const FV_ITEM_HAS_UNSHIFT_COMMAND: FV_ITEM_HAS_UNSHIFT_COMMAND;
-	type FV_ITON = 0;
-	const FV_ITON: FV_ITON;
-	type FV_ImportFileNotReadable = 48;
-	const FV_ImportFileNotReadable: FV_ImportFileNotReadable;
-	type FV_ImportedByCopy = 0;
-	const FV_ImportedByCopy: FV_ImportedByCopy;
-	type FV_ImportedFilteredFile = 5;
-	const FV_ImportedFilteredFile: FV_ImportedFilteredFile;
-	type FV_ImportedGraphicFile = 6;
-	const FV_ImportedGraphicFile: FV_ImportedGraphicFile;
-	type FV_ImportedMIF = 3;
-	const FV_ImportedMIF: FV_ImportedMIF;
-	type FV_ImportedMacEdition = 7;
-	const FV_ImportedMacEdition: FV_ImportedMacEdition;
-	type FV_ImportedMakerDoc = 4;
-	const FV_ImportedMakerDoc: FV_ImportedMakerDoc;
-	type FV_ImportedSgmlDoc = 8;
-	const FV_ImportedSgmlDoc: FV_ImportedSgmlDoc;
-	type FV_ImportedText = 1;
-	const FV_ImportedText: FV_ImportedText;
-	type FV_ImportedTextTable = 2;
-	const FV_ImportedTextTable: FV_ImportedTextTable;
-	type FV_ImportedXmlDoc = 9;
-	const FV_ImportedXmlDoc: FV_ImportedXmlDoc;
-	type FV_InsertionPointInFootnote = 26;
-	const FV_InsertionPointInFootnote: FV_InsertionPointInFootnote;
-	type FV_InsertionPointInTableCell = 25;
-	const FV_InsertionPointInTableCell: FV_InsertionPointInTableCell;
-	type FV_InsertionPointNotInText = 24;
-	const FV_InsertionPointNotInText: FV_InsertionPointNotInText;
-	type FV_InsufficientMem = 3;
-	const FV_InsufficientMem: FV_InsufficientMem;
-	type FV_InsufficientMemory = 27;
-	const FV_InsufficientMemory: FV_InsufficientMemory;
-	type FV_InternalMathMLMinDpi = 6;
-	const FV_InternalMathMLMinDpi: FV_InternalMathMLMinDpi;
-	type FV_InternalMathMLTypeUnknown = 2;
-	const FV_InternalMathMLTypeUnknown: FV_InternalMathMLTypeUnknown;
-	type FV_InvalidExportFilter = 23;
-	const FV_InvalidExportFilter: FV_InvalidExportFilter;
-	type FV_InvalidSaveFilter = 42;
-	const FV_InvalidSaveFilter: FV_InvalidSaveFilter;
-	type FV_InvalidTextRange = 19;
-	const FV_InvalidTextRange: FV_InvalidTextRange;
-	type FV_IsoLatin = 1;
-	const FV_IsoLatin: FV_IsoLatin;
-	type FV_JIS = 5;
-	const FV_JIS: FV_JIS;
-	type FV_KNOCKOUT = 0x00;
-	const FV_KNOCKOUT: FV_KNOCKOUT;
-	type FV_KeyCatalogWorkflowAuthoring = 0;
-	const FV_KeyCatalogWorkflowAuthoring: FV_KeyCatalogWorkflowAuthoring;
-	type FV_KeyCatalogWorkflowMax = 3;
-	const FV_KeyCatalogWorkflowMax: FV_KeyCatalogWorkflowMax;
-	type FV_KeyCatalogWorkflowPublishing = 1;
-	const FV_KeyCatalogWorkflowPublishing: FV_KeyCatalogWorkflowPublishing;
-	type FV_KeyCatalogWorkflowSearching = 2;
-	const FV_KeyCatalogWorkflowSearching: FV_KeyCatalogWorkflowSearching;
-	type FV_KeyDefFieldSize = 2;
-	const FV_KeyDefFieldSize: FV_KeyDefFieldSize;
-	type FV_KeyDefFieldsTypeAll = 1;
-	const FV_KeyDefFieldsTypeAll: FV_KeyDefFieldsTypeAll;
-	type FV_KeyDefFieldsTypeMax = 2;
-	const FV_KeyDefFieldsTypeMax: FV_KeyDefFieldsTypeMax;
-	type FV_KeyDefFieldsTypePrimary = 0;
-	const FV_KeyDefFieldsTypePrimary: FV_KeyDefFieldsTypePrimary;
-	type FV_KeyDefMaxFields = 11;
-	const FV_KeyDefMaxFields: FV_KeyDefMaxFields;
-	type FV_KeyDefMaxPrimaryFields = 5;
-	const FV_KeyDefMaxPrimaryFields: FV_KeyDefMaxPrimaryFields;
-	type FV_KeySrcTypeDitamap = 1;
-	const FV_KeySrcTypeDitamap: FV_KeySrcTypeDitamap;
-	type FV_KeySrcTypeNone = 0;
-	const FV_KeySrcTypeNone: FV_KeySrcTypeNone;
-	type FV_KeydefKeyAttrs = 10;
-	const FV_KeydefKeyAttrs: FV_KeydefKeyAttrs;
-	type FV_KeydefKeyAttrsType = 21;
-	const FV_KeydefKeyAttrsType: FV_KeydefKeyAttrsType;
-	type FV_KeydefKeyDefaultText = 7;
-	const FV_KeydefKeyDefaultText: FV_KeydefKeyDefaultText;
-	type FV_KeydefKeyDefaultTextType = 3;
-	const FV_KeydefKeyDefaultTextType: FV_KeydefKeyDefaultTextType;
-	type FV_KeydefKeyDuplicate = 4;
-	const FV_KeydefKeyDuplicate: FV_KeydefKeyDuplicate;
-	type FV_KeydefKeyDuplicateType = 1;
-	const FV_KeydefKeyDuplicateType: FV_KeydefKeyDuplicateType;
-	type FV_KeydefKeyFoundInRefFile = 8;
-	const FV_KeydefKeyFoundInRefFile: FV_KeydefKeyFoundInRefFile;
-	type FV_KeydefKeyFoundInRefFileType = 1;
-	const FV_KeydefKeyFoundInRefFileType: FV_KeydefKeyFoundInRefFileType;
-	type FV_KeydefKeyInValid = 9;
-	const FV_KeydefKeyInValid: FV_KeydefKeyInValid;
-	type FV_KeydefKeyInValidType = 1;
-	const FV_KeydefKeyInValidType: FV_KeydefKeyInValidType;
-	type FV_KeydefKeySrcFile = 3;
-	const FV_KeydefKeySrcFile: FV_KeydefKeySrcFile;
-	type FV_KeydefKeySrcFileType = 3;
-	const FV_KeydefKeySrcFileType: FV_KeydefKeySrcFileType;
-	type FV_KeydefKeySrcType = 5;
-	const FV_KeydefKeySrcType: FV_KeydefKeySrcType;
-	type FV_KeydefKeySrcTypeType = 1;
-	const FV_KeydefKeySrcTypeType: FV_KeydefKeySrcTypeType;
-	type FV_KeydefKeyTag = 1;
-	const FV_KeydefKeyTag: FV_KeydefKeyTag;
-	type FV_KeydefKeyTagType = 3;
-	const FV_KeydefKeyTagType: FV_KeydefKeyTagType;
-	type FV_KeydefKeyTarget = 2;
-	const FV_KeydefKeyTarget: FV_KeydefKeyTarget;
-	type FV_KeydefKeyTargetType = 3;
-	const FV_KeydefKeyTargetType: FV_KeydefKeyTargetType;
-	type FV_KeydefKeyVarList = 6;
-	const FV_KeydefKeyVarList: FV_KeydefKeyVarList;
-	type FV_KeydefKeyVarListType = 20;
-	const FV_KeydefKeyVarListType: FV_KeydefKeyVarListType;
-	type FV_KeydefVariableInfoLen = 3;
-	const FV_KeydefVariableInfoLen: FV_KeydefVariableInfoLen;
-	type FV_KeydefVariableInfoTagPrimary = 0;
-	const FV_KeydefVariableInfoTagPrimary: FV_KeydefVariableInfoTagPrimary;
-	type FV_KeydefVariableInfoTagSecondary = 1;
-	const FV_KeydefVariableInfoTagSecondary: FV_KeydefVariableInfoTagSecondary;
-	type FV_KeydefVariableInfoText = 2;
-	const FV_KeydefVariableInfoText: FV_KeydefVariableInfoText;
-	type FV_Korean = 12;
-	const FV_Korean: FV_Korean;
-	type FV_LANG_ARABIC = 0x27;
-	const FV_LANG_ARABIC: FV_LANG_ARABIC;
-	type FV_LANG_BRAZILIAN = 0x0B;
-	const FV_LANG_BRAZILIAN: FV_LANG_BRAZILIAN;
-	type FV_LANG_BRITISH = 0x02;
-	const FV_LANG_BRITISH: FV_LANG_BRITISH;
-	type FV_LANG_BULGARIAN = 0x21;
-	const FV_LANG_BULGARIAN: FV_LANG_BULGARIAN;
-	type FV_LANG_CANADIAN_FRENCH = 0x06;
-	const FV_LANG_CANADIAN_FRENCH: FV_LANG_CANADIAN_FRENCH;
-	type FV_LANG_CATALAN = 0x08;
-	const FV_LANG_CATALAN: FV_LANG_CATALAN;
-	type FV_LANG_CROATIAN = 0x22;
-	const FV_LANG_CROATIAN: FV_LANG_CROATIAN;
-	type FV_LANG_CZECH = 0x1B;
-	const FV_LANG_CZECH: FV_LANG_CZECH;
-	type FV_LANG_DANISH = 0x0C;
-	const FV_LANG_DANISH: FV_LANG_DANISH;
-	type FV_LANG_DUTCH = 0x0D;
-	const FV_LANG_DUTCH: FV_LANG_DUTCH;
-	type FV_LANG_ENGLISH = 0x01;
-	const FV_LANG_ENGLISH: FV_LANG_ENGLISH;
-	type FV_LANG_ESTONIAN = 0x23;
-	const FV_LANG_ESTONIAN: FV_LANG_ESTONIAN;
-	type FV_LANG_FARSI = 0x2A;
-	const FV_LANG_FARSI: FV_LANG_FARSI;
-	type FV_LANG_FINNISH = 0x10;
-	const FV_LANG_FINNISH: FV_LANG_FINNISH;
-	type FV_LANG_FRENCH = 0x05;
-	const FV_LANG_FRENCH: FV_LANG_FRENCH;
-	type FV_LANG_GERMAN = 0x03;
-	const FV_LANG_GERMAN: FV_LANG_GERMAN;
-	type FV_LANG_GREEK = 0x19;
-	const FV_LANG_GREEK: FV_LANG_GREEK;
-	type FV_LANG_HEBREW = 0x28;
-	const FV_LANG_HEBREW: FV_LANG_HEBREW;
-	type FV_LANG_HUNGARIAN = 0x1D;
-	const FV_LANG_HUNGARIAN: FV_LANG_HUNGARIAN;
-	type FV_LANG_ITALIAN = 0x09;
-	const FV_LANG_ITALIAN: FV_LANG_ITALIAN;
-	type FV_LANG_JAPANESE = 0x12;
-	const FV_LANG_JAPANESE: FV_LANG_JAPANESE;
-	type FV_LANG_KOREAN = 0x15;
-	const FV_LANG_KOREAN: FV_LANG_KOREAN;
-	type FV_LANG_LATVIAN = 0x24;
-	const FV_LANG_LATVIAN: FV_LANG_LATVIAN;
-	type FV_LANG_LITHUANIAN = 0x25;
-	const FV_LANG_LITHUANIAN: FV_LANG_LITHUANIAN;
-	type FV_LANG_NEW_DUTCH = 0x18;
-	const FV_LANG_NEW_DUTCH: FV_LANG_NEW_DUTCH;
-	type FV_LANG_NEW_GERMAN = 0x16;
-	const FV_LANG_NEW_GERMAN: FV_LANG_NEW_GERMAN;
-	type FV_LANG_NEW_SWISS_GERMAN = 0x17;
-	const FV_LANG_NEW_SWISS_GERMAN: FV_LANG_NEW_SWISS_GERMAN;
-	type FV_LANG_NOLANGUAGE = 0x00;
-	const FV_LANG_NOLANGUAGE: FV_LANG_NOLANGUAGE;
-	type FV_LANG_NORWEGIAN = 0x0E;
-	const FV_LANG_NORWEGIAN: FV_LANG_NORWEGIAN;
-	type FV_LANG_NUM = 0x2B;
-	const FV_LANG_NUM: FV_LANG_NUM;
-	type FV_LANG_NYNORSK = 0x0F;
-	const FV_LANG_NYNORSK: FV_LANG_NYNORSK;
-	type FV_LANG_POLISH = 0x1C;
-	const FV_LANG_POLISH: FV_LANG_POLISH;
-	type FV_LANG_PORTUGUESE = 0x0A;
-	const FV_LANG_PORTUGUESE: FV_LANG_PORTUGUESE;
-	type FV_LANG_ROMANIAN = 0x26;
-	const FV_LANG_ROMANIAN: FV_LANG_ROMANIAN;
-	type FV_LANG_RUSSIAN = 0x1A;
-	const FV_LANG_RUSSIAN: FV_LANG_RUSSIAN;
-	type FV_LANG_SIMPLIFIED_CHINESE = 0x14;
-	const FV_LANG_SIMPLIFIED_CHINESE: FV_LANG_SIMPLIFIED_CHINESE;
-	type FV_LANG_SLOVAK = 0x1F;
-	const FV_LANG_SLOVAK: FV_LANG_SLOVAK;
-	type FV_LANG_SLOVENIAN = 0x20;
-	const FV_LANG_SLOVENIAN: FV_LANG_SLOVENIAN;
-	type FV_LANG_SPANISH = 0x07;
-	const FV_LANG_SPANISH: FV_LANG_SPANISH;
-	type FV_LANG_SWEDISH = 0x11;
-	const FV_LANG_SWEDISH: FV_LANG_SWEDISH;
-	type FV_LANG_SWISS_GERMAN = 0x04;
-	const FV_LANG_SWISS_GERMAN: FV_LANG_SWISS_GERMAN;
-	type FV_LANG_THAI = 0x29;
-	const FV_LANG_THAI: FV_LANG_THAI;
-	type FV_LANG_TRADITIONAL_CHINESE = 0x13;
-	const FV_LANG_TRADITIONAL_CHINESE: FV_LANG_TRADITIONAL_CHINESE;
-	type FV_LANG_TURKISH = 0x1E;
-	const FV_LANG_TURKISH: FV_LANG_TURKISH;
-	type FV_LEVELS_ALL = -1;
-	const FV_LEVELS_ALL: FV_LEVELS_ALL;
-	type FV_LEVELS_DEFAULT = -2;
-	const FV_LEVELS_DEFAULT: FV_LEVELS_DEFAULT;
-	type FV_LEVEL_RULE = 1;
-	const FV_LEVEL_RULE: FV_LEVEL_RULE;
-	type FV_LOOSELY_VALID = 0x02;
-	const FV_LOOSELY_VALID: FV_LOOSELY_VALID;
-	type FV_LanguagesWerentFound = 39;
-	const FV_LanguagesWerentFound: FV_LanguagesWerentFound;
-	type FV_Left = 1242;
-	const FV_Left: FV_Left;
-	type FV_ListViewActionMax = 10;
-	const FV_ListViewActionMax: FV_ListViewActionMax;
-	type FV_ListViewAddColumn = 2;
-	const FV_ListViewAddColumn: FV_ListViewAddColumn;
-	type FV_ListViewAddColumnNumParams = 4;
-	const FV_ListViewAddColumnNumParams: FV_ListViewAddColumnNumParams;
-	type FV_ListViewAddColumnParam1 = 3;
-	const FV_ListViewAddColumnParam1: FV_ListViewAddColumnParam1;
-	type FV_ListViewAddColumnParam2 = 1;
-	const FV_ListViewAddColumnParam2: FV_ListViewAddColumnParam2;
-	type FV_ListViewAddColumnParam3 = 1;
-	const FV_ListViewAddColumnParam3: FV_ListViewAddColumnParam3;
-	type FV_ListViewAddColumnParam4 = 1;
-	const FV_ListViewAddColumnParam4: FV_ListViewAddColumnParam4;
-	type FV_ListViewAddRow = 3;
-	const FV_ListViewAddRow: FV_ListViewAddRow;
-	type FV_ListViewAddRowNumParams = 1;
-	const FV_ListViewAddRowNumParams: FV_ListViewAddRowNumParams;
-	type FV_ListViewAddRowParam1 = 6;
-	const FV_ListViewAddRowParam1: FV_ListViewAddRowParam1;
-	type FV_ListViewDeleteAllRows = 4;
-	const FV_ListViewDeleteAllRows: FV_ListViewDeleteAllRows;
-	type FV_ListViewDeleteAllRowsNumParams = 0;
-	const FV_ListViewDeleteAllRowsNumParams: FV_ListViewDeleteAllRowsNumParams;
-	type FV_ListViewInit = 1;
-	const FV_ListViewInit: FV_ListViewInit;
-	type FV_ListViewInitNumParams = 0;
-	const FV_ListViewInitNumParams: FV_ListViewInitNumParams;
-	type FV_ListViewReSortAllRows = 5;
-	const FV_ListViewReSortAllRows: FV_ListViewReSortAllRows;
-	type FV_ListViewReSortAllRowsNumParams = 0;
-	const FV_ListViewReSortAllRowsNumParams: FV_ListViewReSortAllRowsNumParams;
-	type FV_ListViewSelectFirstRow = 7;
-	const FV_ListViewSelectFirstRow: FV_ListViewSelectFirstRow;
-	type FV_ListViewSelectRowFromColData = 8;
-	const FV_ListViewSelectRowFromColData: FV_ListViewSelectRowFromColData;
-	type FV_ListViewSelectRowFromRowId = 9;
-	const FV_ListViewSelectRowFromRowId: FV_ListViewSelectRowFromRowId;
-	type FV_ListViewSetSortEnabled = 6;
-	const FV_ListViewSetSortEnabled: FV_ListViewSetSortEnabled;
-	type FV_LockCouldntBeReset = 2;
-	const FV_LockCouldntBeReset: FV_LockCouldntBeReset;
-	type FV_LockNotReset = 1;
-	const FV_LockNotReset: FV_LockNotReset;
-	type FV_LockWasInvalid = 5;
-	const FV_LockWasInvalid: FV_LockWasInvalid;
-	type FV_LockWasReset = 0;
-	const FV_LockWasReset: FV_LockWasReset;
-	type FV_MATH = 3;
-	const FV_MATH: FV_MATH;
-	type FV_MATH_LARGE = 2;
-	const FV_MATH_LARGE: FV_MATH_LARGE;
-	type FV_MATH_MEDIUM = 0;
-	const FV_MATH_MEDIUM: FV_MATH_MEDIUM;
-	type FV_MATH_SMALL = 1;
-	const FV_MATH_SMALL: FV_MATH_SMALL;
-	type FV_MENUITEM_API = 2;
-	const FV_MENUITEM_API: FV_MENUITEM_API;
-	type FV_MENUITEM_EXPANDOMATIC = 4;
-	const FV_MENUITEM_EXPANDOMATIC: FV_MENUITEM_EXPANDOMATIC;
-	type FV_MENUITEM_FRAME = 1;
-	const FV_MENUITEM_FRAME: FV_MENUITEM_FRAME;
-	type FV_MENUITEM_MACRO = 3;
-	const FV_MENUITEM_MACRO: FV_MENUITEM_MACRO;
-	type FV_MENU_ADHOCRULER = 3;
-	const FV_MENU_ADHOCRULER: FV_MENU_ADHOCRULER;
-	type FV_MENU_COMPLETE = 2;
-	const FV_MENU_COMPLETE: FV_MENU_COMPLETE;
-	type FV_MENU_CUSTOM = 3;
-	const FV_MENU_CUSTOM: FV_MENU_CUSTOM;
-	type FV_MENU_DEFAULT = 4;
-	const FV_MENU_DEFAULT: FV_MENU_DEFAULT;
-	type FV_MENU_MENUBAR = 1;
-	const FV_MENU_MENUBAR: FV_MENU_MENUBAR;
-	type FV_MENU_POPUP = 2;
-	const FV_MENU_POPUP: FV_MENU_POPUP;
-	type FV_MENU_QUICK = 1;
-	const FV_MENU_QUICK: FV_MENU_QUICK;
-	type FV_MODE_ALL = 3;
-	const FV_MODE_ALL: FV_MODE_ALL;
-	type FV_MODE_MATH = 1;
-	const FV_MODE_MATH: FV_MODE_MATH;
-	type FV_MODE_NONMATH = 2;
-	const FV_MODE_NONMATH: FV_MODE_NONMATH;
-	type FV_MONOSPACE_YAKUMONO = 0x01;
-	const FV_MONOSPACE_YAKUMONO: FV_MONOSPACE_YAKUMONO;
-	type FV_MacANSI = 4;
-	const FV_MacANSI: FV_MacANSI;
-	type FV_MakePageCountEven = 2;
-	const FV_MakePageCountEven: FV_MakePageCountEven;
-	type FV_MakePageCountOdd = 3;
-	const FV_MakePageCountOdd: FV_MakePageCountOdd;
-	type FV_MergeDictionaryContents = 5;
-	const FV_MergeDictionaryContents: FV_MergeDictionaryContents;
-	type FV_MiniTOC = 0;
-	const FV_MiniTOC: FV_MiniTOC;
-	type FV_MissingExportScript = 17;
-	const FV_MissingExportScript: FV_MissingExportScript;
-	type FV_MissingImportScript = 19;
-	const FV_MissingImportScript: FV_MissingImportScript;
-	type FV_MissingScript = 71;
-	const FV_MissingScript: FV_MissingScript;
-	type FV_ModeSave = 0;
-	const FV_ModeSave: FV_ModeSave;
-	type FV_ModeSaveAs = 1;
-	const FV_ModeSaveAs: FV_ModeSaveAs;
-	type FV_NARROW = 1;
-	const FV_NARROW: FV_NARROW;
-	type FV_NO_BASE_COLOR = 0x00;
-	const FV_NO_BASE_COLOR: FV_NO_BASE_COLOR;
-	type FV_NO_ZOOM_MANGLING = -1;
-	const FV_NO_ZOOM_MANGLING: FV_NO_ZOOM_MANGLING;
-	type FV_NTOF = 3;
-	const FV_NTOF: FV_NTOF;
-	type FV_NTOI = 1;
-	const FV_NTOI: FV_NTOI;
-	type FV_NUMSTYLE_ABJAD_NUMERIC = 0x14;
-	const FV_NUMSTYLE_ABJAD_NUMERIC: FV_NUMSTYLE_ABJAD_NUMERIC;
-	type FV_NUMSTYLE_ALIFBATA_NUMERIC = 0x15;
-	const FV_NUMSTYLE_ALIFBATA_NUMERIC: FV_NUMSTYLE_ALIFBATA_NUMERIC;
-	type FV_NUMSTYLE_ALPHA_LC = 0x04;
-	const FV_NUMSTYLE_ALPHA_LC: FV_NUMSTYLE_ALPHA_LC;
-	type FV_NUMSTYLE_ALPHA_UC = 0x03;
-	const FV_NUMSTYLE_ALPHA_UC: FV_NUMSTYLE_ALPHA_UC;
-	type FV_NUMSTYLE_CHINESE_NUMERIC = 0x10;
-	const FV_NUMSTYLE_CHINESE_NUMERIC: FV_NUMSTYLE_CHINESE_NUMERIC;
-	type FV_NUMSTYLE_DAIJI = 0x0a;
-	const FV_NUMSTYLE_DAIJI: FV_NUMSTYLE_DAIJI;
-	type FV_NUMSTYLE_FARSI_ALPHA = 0x18;
-	const FV_NUMSTYLE_FARSI_ALPHA: FV_NUMSTYLE_FARSI_ALPHA;
-	type FV_NUMSTYLE_FARSI_NUMERIC = 0x12;
-	const FV_NUMSTYLE_FARSI_NUMERIC: FV_NUMSTYLE_FARSI_NUMERIC;
-	type FV_NUMSTYLE_FULLWIDTH = 0x0c;
-	const FV_NUMSTYLE_FULLWIDTH: FV_NUMSTYLE_FULLWIDTH;
-	type FV_NUMSTYLE_FULLWIDTH_LC = 0x0e;
-	const FV_NUMSTYLE_FULLWIDTH_LC: FV_NUMSTYLE_FULLWIDTH_LC;
-	type FV_NUMSTYLE_FULLWIDTH_UC = 0x0d;
-	const FV_NUMSTYLE_FULLWIDTH_UC: FV_NUMSTYLE_FULLWIDTH_UC;
-	type FV_NUMSTYLE_HEBREW_ALPHA = 0x19;
-	const FV_NUMSTYLE_HEBREW_ALPHA: FV_NUMSTYLE_HEBREW_ALPHA;
-	type FV_NUMSTYLE_HEBREW_NUMERIC = 0x13;
-	const FV_NUMSTYLE_HEBREW_NUMERIC: FV_NUMSTYLE_HEBREW_NUMERIC;
-	type FV_NUMSTYLE_INDIC_NUMERIC = 0x11;
-	const FV_NUMSTYLE_INDIC_NUMERIC: FV_NUMSTYLE_INDIC_NUMERIC;
-	type FV_NUMSTYLE_KANJI = 0x05;
-	const FV_NUMSTYLE_KANJI: FV_NUMSTYLE_KANJI;
-	type FV_NUMSTYLE_KANJI_KAZU = 0x09;
-	const FV_NUMSTYLE_KANJI_KAZU: FV_NUMSTYLE_KANJI_KAZU;
-	type FV_NUMSTYLE_MAXIMUM_NUMERIC = 0x19;
-	const FV_NUMSTYLE_MAXIMUM_NUMERIC: FV_NUMSTYLE_MAXIMUM_NUMERIC;
-	type FV_NUMSTYLE_NUMERIC = 0x00;
-	const FV_NUMSTYLE_NUMERIC: FV_NUMSTYLE_NUMERIC;
-	type FV_NUMSTYLE_ROMAN_LC = 0x02;
-	const FV_NUMSTYLE_ROMAN_LC: FV_NUMSTYLE_ROMAN_LC;
-	type FV_NUMSTYLE_ROMAN_UC = 0x01;
-	const FV_NUMSTYLE_ROMAN_UC: FV_NUMSTYLE_ROMAN_UC;
-	type FV_NUMSTYLE_TEXT = 0x0b;
-	const FV_NUMSTYLE_TEXT: FV_NUMSTYLE_TEXT;
-	type FV_NUMSTYLE_THAI_ALPHA = 0x17;
-	const FV_NUMSTYLE_THAI_ALPHA: FV_NUMSTYLE_THAI_ALPHA;
-	type FV_NUMSTYLE_THAI_NUMERIC = 0x16;
-	const FV_NUMSTYLE_THAI_NUMERIC: FV_NUMSTYLE_THAI_NUMERIC;
-	type FV_NUMSTYLE_ZENKAKU = 0x06;
-	const FV_NUMSTYLE_ZENKAKU: FV_NUMSTYLE_ZENKAKU;
-	type FV_NUMSTYLE_ZENKAKU_LC = 0x08;
-	const FV_NUMSTYLE_ZENKAKU_LC: FV_NUMSTYLE_ZENKAKU_LC;
-	type FV_NUMSTYLE_ZENKAKU_UC = 0x07;
-	const FV_NUMSTYLE_ZENKAKU_UC: FV_NUMSTYLE_ZENKAKU_UC;
-	type FV_NUM_CONTINUE = 0x01;
-	const FV_NUM_CONTINUE: FV_NUM_CONTINUE;
-	type FV_NUM_PERPAGE = 0x03;
-	const FV_NUM_PERPAGE: FV_NUM_PERPAGE;
-	type FV_NUM_READ_FROM_FILE = 0x00;
-	const FV_NUM_READ_FROM_FILE: FV_NUM_READ_FROM_FILE;
-	type FV_NUM_RESTART = 0x02;
-	const FV_NUM_RESTART: FV_NUM_RESTART;
-	type FV_NUM_SAME = 0x03;
-	const FV_NUM_SAME: FV_NUM_SAME;
-	type FV_NoFlowWithSpecifiedName = 23;
-	const FV_NoFlowWithSpecifiedName: FV_NoFlowWithSpecifiedName;
-	type FV_NoMainFlow = 22;
-	const FV_NoMainFlow: FV_NoMainFlow;
-	type FV_NoNonGeneratedFilesInBook = 2;
-	const FV_NoNonGeneratedFilesInBook: FV_NoNonGeneratedFilesInBook;
-	type FV_NonPortableFileRefs = 38;
-	const FV_NonPortableFileRefs: FV_NonPortableFileRefs;
-	type FV_NonPortableSaveName = 37;
-	const FV_NonPortableSaveName: FV_NonPortableSaveName;
-	type FV_NumExportStatusFields = 2;
-	const FV_NumExportStatusFields: FV_NumExportStatusFields;
-	type FV_NumFindElementItems = 3;
-	const FV_NumFindElementItems: FV_NumFindElementItems;
-	type FV_NumImportStatusFields = 2;
-	const FV_NumImportStatusFields: FV_NumImportStatusFields;
-	type FV_NumOpenStatusFields = 5;
-	const FV_NumOpenStatusFields: FV_NumOpenStatusFields;
-	type FV_NumSaveStatusFields = 2;
-	const FV_NumSaveStatusFields: FV_NumSaveStatusFields;
-	type FV_NumUpdateBookStatusFields = 4;
-	const FV_NumUpdateBookStatusFields: FV_NumUpdateBookStatusFields;
-	type FV_OBJ_END_OFFSET = 0x50000000;
-	const FV_OBJ_END_OFFSET: FV_OBJ_END_OFFSET;
-	type FV_OVERPRINT = 0x01;
-	const FV_OVERPRINT: FV_OVERPRINT;
-	type FV_OVERRIDDEN_CONREF_DUCT = 0x02;
-	const FV_OVERRIDDEN_CONREF_DUCT: FV_OVERRIDDEN_CONREF_DUCT;
-	type FV_OVERRIDDEN_DEFAULT = 0x00;
-	const FV_OVERRIDDEN_DEFAULT: FV_OVERRIDDEN_DEFAULT;
-	type FV_OVERRIDDEN_KEYDEF_TO_KEYREF = 0x03;
-	const FV_OVERRIDDEN_KEYDEF_TO_KEYREF: FV_OVERRIDDEN_KEYDEF_TO_KEYREF;
-	type FV_OVERRIDDEN_NOVALUE = 0x01;
-	const FV_OVERRIDDEN_NOVALUE: FV_OVERRIDDEN_NOVALUE;
-	type FV_ObjectDataLink = 7;
-	const FV_ObjectDataLink: FV_ObjectDataLink;
-	type FV_ObjectElement = 5;
-	const FV_ObjectElement: FV_ObjectElement;
-	type FV_ObjectGraphic = 4;
-	const FV_ObjectGraphic: FV_ObjectGraphic;
-	type FV_ObjectMarker = 1;
-	const FV_ObjectMarker: FV_ObjectMarker;
-	type FV_ObjectPgf = 2;
-	const FV_ObjectPgf: FV_ObjectPgf;
-	type FV_ObjectTextInset = 6;
-	const FV_ObjectTextInset: FV_ObjectTextInset;
-	type FV_ObjectUnknown = 0;
-	const FV_ObjectUnknown: FV_ObjectUnknown;
-	type FV_ObjectXref = 3;
-	const FV_ObjectXref: FV_ObjectXref;
-	type FV_OpenEditableCopy = 8;
-	const FV_OpenEditableCopy: FV_OpenEditableCopy;
-	type FV_OpenViewOnly = 5;
-	const FV_OpenViewOnly: FV_OpenViewOnly;
-	type FV_OpenedFluid = 51;
-	const FV_OpenedFluid: FV_OpenedFluid;
-	type FV_OpenedViewOnly = 44;
-	const FV_OpenedViewOnly: FV_OpenedViewOnly;
-	type FV_PAGE_NUM_ABJAD = 0x14;
-	const FV_PAGE_NUM_ABJAD: FV_PAGE_NUM_ABJAD;
-	type FV_PAGE_NUM_ALIFBATA = 0x15;
-	const FV_PAGE_NUM_ALIFBATA: FV_PAGE_NUM_ALIFBATA;
-	type FV_PAGE_NUM_ALPHA_LC = 0x04;
-	const FV_PAGE_NUM_ALPHA_LC: FV_PAGE_NUM_ALPHA_LC;
-	type FV_PAGE_NUM_ALPHA_UC = 0x03;
-	const FV_PAGE_NUM_ALPHA_UC: FV_PAGE_NUM_ALPHA_UC;
-	type FV_PAGE_NUM_CHINESE_NUMERIC = 0x10;
-	const FV_PAGE_NUM_CHINESE_NUMERIC: FV_PAGE_NUM_CHINESE_NUMERIC;
-	type FV_PAGE_NUM_DAIJI = 0x0a;
-	const FV_PAGE_NUM_DAIJI: FV_PAGE_NUM_DAIJI;
-	type FV_PAGE_NUM_FARSI = 0x12;
-	const FV_PAGE_NUM_FARSI: FV_PAGE_NUM_FARSI;
-	type FV_PAGE_NUM_FARSI_ALPHA = 0x18;
-	const FV_PAGE_NUM_FARSI_ALPHA: FV_PAGE_NUM_FARSI_ALPHA;
-	type FV_PAGE_NUM_FULLWIDTH = 0x0c;
-	const FV_PAGE_NUM_FULLWIDTH: FV_PAGE_NUM_FULLWIDTH;
-	type FV_PAGE_NUM_FULLWIDTH_LC = 0x0e;
-	const FV_PAGE_NUM_FULLWIDTH_LC: FV_PAGE_NUM_FULLWIDTH_LC;
-	type FV_PAGE_NUM_FULLWIDTH_UC = 0x0d;
-	const FV_PAGE_NUM_FULLWIDTH_UC: FV_PAGE_NUM_FULLWIDTH_UC;
-	type FV_PAGE_NUM_HEBREW = 0x13;
-	const FV_PAGE_NUM_HEBREW: FV_PAGE_NUM_HEBREW;
-	type FV_PAGE_NUM_HEBREW_ALPHA = 0x19;
-	const FV_PAGE_NUM_HEBREW_ALPHA: FV_PAGE_NUM_HEBREW_ALPHA;
-	type FV_PAGE_NUM_INDIC = 0x11;
-	const FV_PAGE_NUM_INDIC: FV_PAGE_NUM_INDIC;
-	type FV_PAGE_NUM_KANJI = 0x05;
-	const FV_PAGE_NUM_KANJI: FV_PAGE_NUM_KANJI;
-	type FV_PAGE_NUM_KANJI_KAZU = 0x09;
-	const FV_PAGE_NUM_KANJI_KAZU: FV_PAGE_NUM_KANJI_KAZU;
-	type FV_PAGE_NUM_NUMERIC = 0x00;
-	const FV_PAGE_NUM_NUMERIC: FV_PAGE_NUM_NUMERIC;
-	type FV_PAGE_NUM_ROMAN_LC = 0x02;
-	const FV_PAGE_NUM_ROMAN_LC: FV_PAGE_NUM_ROMAN_LC;
-	type FV_PAGE_NUM_ROMAN_UC = 0x01;
-	const FV_PAGE_NUM_ROMAN_UC: FV_PAGE_NUM_ROMAN_UC;
-	type FV_PAGE_NUM_THAI = 0x16;
-	const FV_PAGE_NUM_THAI: FV_PAGE_NUM_THAI;
-	type FV_PAGE_NUM_THAI_ALPHA = 0x17;
-	const FV_PAGE_NUM_THAI_ALPHA: FV_PAGE_NUM_THAI_ALPHA;
-	type FV_PAGE_NUM_ZENKAKU = 0x06;
-	const FV_PAGE_NUM_ZENKAKU: FV_PAGE_NUM_ZENKAKU;
-	type FV_PAGE_NUM_ZENKAKU_LC = 0x08;
-	const FV_PAGE_NUM_ZENKAKU_LC: FV_PAGE_NUM_ZENKAKU_LC;
-	type FV_PAGE_NUM_ZENKAKU_UC = 0x07;
-	const FV_PAGE_NUM_ZENKAKU_UC: FV_PAGE_NUM_ZENKAKU_UC;
-	type FV_PDFBookmarksOpenAllLevels = -2;
-	const FV_PDFBookmarksOpenAllLevels: FV_PDFBookmarksOpenAllLevels;
-	type FV_PDFBookmarksOpenDefaultLevel = -1;
-	const FV_PDFBookmarksOpenDefaultLevel: FV_PDFBookmarksOpenDefaultLevel;
-	type FV_PDFBookmarksOpenNoneLevel = -3;
-	const FV_PDFBookmarksOpenNoneLevel: FV_PDFBookmarksOpenNoneLevel;
-	type FV_PDFRegistrationMarksMax = 2;
-	const FV_PDFRegistrationMarksMax: FV_PDFRegistrationMarksMax;
-	type FV_PDFRegistrationMarksNone = 0;
-	const FV_PDFRegistrationMarksNone: FV_PDFRegistrationMarksNone;
-	type FV_PDFRegistrationMarksTombo = 2;
-	const FV_PDFRegistrationMarksTombo: FV_PDFRegistrationMarksTombo;
-	type FV_PDFRegistrationMarksWestern = 1;
-	const FV_PDFRegistrationMarksWestern: FV_PDFRegistrationMarksWestern;
-	type FV_PDFZoomDefault = 1;
-	const FV_PDFZoomDefault: FV_PDFZoomDefault;
-	type FV_PDFZoomHeight = 4;
-	const FV_PDFZoomHeight: FV_PDFZoomHeight;
-	type FV_PDFZoomMaxValue = 4;
-	const FV_PDFZoomMaxValue: FV_PDFZoomMaxValue;
-	type FV_PDFZoomNone = 0;
-	const FV_PDFZoomNone: FV_PDFZoomNone;
-	type FV_PDFZoomPage = 2;
-	const FV_PDFZoomPage: FV_PDFZoomPage;
-	type FV_PDFZoomWidth = 3;
-	const FV_PDFZoomWidth: FV_PDFZoomWidth;
-	type FV_PGF_ANYWHERE = 0x00;
-	const FV_PGF_ANYWHERE: FV_PGF_ANYWHERE;
-	type FV_PGF_CATALOG = 7;
-	const FV_PGF_CATALOG: FV_PGF_CATALOG;
-	type FV_PGF_CENTER = 0x03;
-	const FV_PGF_CENTER: FV_PGF_CENTER;
-	type FV_PGF_FIXED = 0x00;
-	const FV_PGF_FIXED: FV_PGF_FIXED;
-	type FV_PGF_FIXED_B_MARGIN = 0x02;
-	const FV_PGF_FIXED_B_MARGIN: FV_PGF_FIXED_B_MARGIN;
-	type FV_PGF_FIXED_L_MARGIN = 0x01;
-	const FV_PGF_FIXED_L_MARGIN: FV_PGF_FIXED_L_MARGIN;
-	type FV_PGF_FIXED_R_MARGIN = 0x04;
-	const FV_PGF_FIXED_R_MARGIN: FV_PGF_FIXED_R_MARGIN;
-	type FV_PGF_FIXED_T_MARGIN = 0x08;
-	const FV_PGF_FIXED_T_MARGIN: FV_PGF_FIXED_T_MARGIN;
-	type FV_PGF_FLOATING = 0x02;
-	const FV_PGF_FLOATING: FV_PGF_FLOATING;
-	type FV_PGF_JUSTIFIED = 0x04;
-	const FV_PGF_JUSTIFIED: FV_PGF_JUSTIFIED;
-	type FV_PGF_LEFT = 0x01;
-	const FV_PGF_LEFT: FV_PGF_LEFT;
-	type FV_PGF_PROPORTIONAL = 0x01;
-	const FV_PGF_PROPORTIONAL: FV_PGF_PROPORTIONAL;
-	type FV_PGF_RIGHT = 0x02;
-	const FV_PGF_RIGHT: FV_PGF_RIGHT;
-	type FV_PGF_RUN_IN = 4;
-	const FV_PGF_RUN_IN: FV_PGF_RUN_IN;
-	type FV_PGF_SIDEBODY = 0;
-	const FV_PGF_SIDEBODY: FV_PGF_SIDEBODY;
-	type FV_PGF_SIDEHEAD_FIRST_BASELINE = 2;
-	const FV_PGF_SIDEHEAD_FIRST_BASELINE: FV_PGF_SIDEHEAD_FIRST_BASELINE;
-	type FV_PGF_SIDEHEAD_LAST_BASELINE = 3;
-	const FV_PGF_SIDEHEAD_LAST_BASELINE: FV_PGF_SIDEHEAD_LAST_BASELINE;
-	type FV_PGF_SIDEHEAD_TOP = 1;
-	const FV_PGF_SIDEHEAD_TOP: FV_PGF_SIDEHEAD_TOP;
-	type FV_PGF_STRADDLE = 5;
-	const FV_PGF_STRADDLE: FV_PGF_STRADDLE;
-	type FV_PGF_STRADDLE_NORMAL_ONLY = 6;
-	const FV_PGF_STRADDLE_NORMAL_ONLY: FV_PGF_STRADDLE_NORMAL_ONLY;
-	type FV_PGF_TOP_OF_COL = 0x01;
-	const FV_PGF_TOP_OF_COL: FV_PGF_TOP_OF_COL;
-	type FV_PGF_TOP_OF_LEFT_PAGE = 0x03;
-	const FV_PGF_TOP_OF_LEFT_PAGE: FV_PGF_TOP_OF_LEFT_PAGE;
-	type FV_PGF_TOP_OF_PAGE = 0x02;
-	const FV_PGF_TOP_OF_PAGE: FV_PGF_TOP_OF_PAGE;
-	type FV_PGF_TOP_OF_RIGHT_PAGE = 0x04;
-	const FV_PGF_TOP_OF_RIGHT_PAGE: FV_PGF_TOP_OF_RIGHT_PAGE;
-	type FV_PGF_V_ALIGN_BOTTOM = 2;
-	const FV_PGF_V_ALIGN_BOTTOM: FV_PGF_V_ALIGN_BOTTOM;
-	type FV_PGF_V_ALIGN_MIDDLE = 1;
-	const FV_PGF_V_ALIGN_MIDDLE: FV_PGF_V_ALIGN_MIDDLE;
-	type FV_PGF_V_ALIGN_TOP = 0;
-	const FV_PGF_V_ALIGN_TOP: FV_PGF_V_ALIGN_TOP;
-	type FV_POINT_PAGE_CHINESE_NUMERIC = 0x10;
-	const FV_POINT_PAGE_CHINESE_NUMERIC: FV_POINT_PAGE_CHINESE_NUMERIC;
-	type FV_POINT_PAGE_FULLWIDTH = 0x0c;
-	const FV_POINT_PAGE_FULLWIDTH: FV_POINT_PAGE_FULLWIDTH;
-	type FV_POINT_PAGE_FULLWIDTH_LC = 0x0e;
-	const FV_POINT_PAGE_FULLWIDTH_LC: FV_POINT_PAGE_FULLWIDTH_LC;
-	type FV_POINT_PAGE_FULLWIDTH_UC = 0x0d;
-	const FV_POINT_PAGE_FULLWIDTH_UC: FV_POINT_PAGE_FULLWIDTH_UC;
-	type FV_POINT_PAGE_NUM_ABJAD = 0x14;
-	const FV_POINT_PAGE_NUM_ABJAD: FV_POINT_PAGE_NUM_ABJAD;
-	type FV_POINT_PAGE_NUM_ALIFBATA = 0x15;
-	const FV_POINT_PAGE_NUM_ALIFBATA: FV_POINT_PAGE_NUM_ALIFBATA;
-	type FV_POINT_PAGE_NUM_ALPHA_LC = 0x04;
-	const FV_POINT_PAGE_NUM_ALPHA_LC: FV_POINT_PAGE_NUM_ALPHA_LC;
-	type FV_POINT_PAGE_NUM_ALPHA_UC = 0x03;
-	const FV_POINT_PAGE_NUM_ALPHA_UC: FV_POINT_PAGE_NUM_ALPHA_UC;
-	type FV_POINT_PAGE_NUM_DAIJI = 0x0a;
-	const FV_POINT_PAGE_NUM_DAIJI: FV_POINT_PAGE_NUM_DAIJI;
-	type FV_POINT_PAGE_NUM_FARSI = 0x12;
-	const FV_POINT_PAGE_NUM_FARSI: FV_POINT_PAGE_NUM_FARSI;
-	type FV_POINT_PAGE_NUM_FARSI_ALPHA = 0x18;
-	const FV_POINT_PAGE_NUM_FARSI_ALPHA: FV_POINT_PAGE_NUM_FARSI_ALPHA;
-	type FV_POINT_PAGE_NUM_HEBREW = 0x13;
-	const FV_POINT_PAGE_NUM_HEBREW: FV_POINT_PAGE_NUM_HEBREW;
-	type FV_POINT_PAGE_NUM_HEBREW_ALPHA = 0x19;
-	const FV_POINT_PAGE_NUM_HEBREW_ALPHA: FV_POINT_PAGE_NUM_HEBREW_ALPHA;
-	type FV_POINT_PAGE_NUM_INDIC = 0x11;
-	const FV_POINT_PAGE_NUM_INDIC: FV_POINT_PAGE_NUM_INDIC;
-	type FV_POINT_PAGE_NUM_KANJI = 0x05;
-	const FV_POINT_PAGE_NUM_KANJI: FV_POINT_PAGE_NUM_KANJI;
-	type FV_POINT_PAGE_NUM_KANJI_KAZU = 0x09;
-	const FV_POINT_PAGE_NUM_KANJI_KAZU: FV_POINT_PAGE_NUM_KANJI_KAZU;
-	type FV_POINT_PAGE_NUM_NUMERIC = 0x00;
-	const FV_POINT_PAGE_NUM_NUMERIC: FV_POINT_PAGE_NUM_NUMERIC;
-	type FV_POINT_PAGE_NUM_ROMAN_LC = 0x02;
-	const FV_POINT_PAGE_NUM_ROMAN_LC: FV_POINT_PAGE_NUM_ROMAN_LC;
-	type FV_POINT_PAGE_NUM_ROMAN_UC = 0x01;
-	const FV_POINT_PAGE_NUM_ROMAN_UC: FV_POINT_PAGE_NUM_ROMAN_UC;
-	type FV_POINT_PAGE_NUM_THAI = 0x16;
-	const FV_POINT_PAGE_NUM_THAI: FV_POINT_PAGE_NUM_THAI;
-	type FV_POINT_PAGE_NUM_THAI_ALPHA = 0x17;
-	const FV_POINT_PAGE_NUM_THAI_ALPHA: FV_POINT_PAGE_NUM_THAI_ALPHA;
-	type FV_POINT_PAGE_NUM_ZENKAKU = 0x06;
-	const FV_POINT_PAGE_NUM_ZENKAKU: FV_POINT_PAGE_NUM_ZENKAKU;
-	type FV_POINT_PAGE_NUM_ZENKAKU_LC = 0x08;
-	const FV_POINT_PAGE_NUM_ZENKAKU_LC: FV_POINT_PAGE_NUM_ZENKAKU_LC;
-	type FV_POINT_PAGE_NUM_ZENKAKU_UC = 0x07;
-	const FV_POINT_PAGE_NUM_ZENKAKU_UC: FV_POINT_PAGE_NUM_ZENKAKU_UC;
-	type FV_POS_NORM = 0;
-	const FV_POS_NORM: FV_POS_NORM;
-	type FV_POS_SUB = 2;
-	const FV_POS_SUB: FV_POS_SUB;
-	type FV_POS_SUPER = 1;
-	const FV_POS_SUPER: FV_POS_SUPER;
-	type FV_PREVIEW_OFF_TRACK_CHANGE = 0;
-	const FV_PREVIEW_OFF_TRACK_CHANGE: FV_PREVIEW_OFF_TRACK_CHANGE;
-	type FV_PREVIEW_ON_FINAL = 2;
-	const FV_PREVIEW_ON_FINAL: FV_PREVIEW_ON_FINAL;
-	type FV_PREVIEW_ON_ORIGINAL = 1;
-	const FV_PREVIEW_ON_ORIGINAL: FV_PREVIEW_ON_ORIGINAL;
-	type FV_PRINT_NO = 0x2;
-	const FV_PRINT_NO: FV_PRINT_NO;
-	type FV_PRINT_PROCESS = 0x1;
-	const FV_PRINT_PROCESS: FV_PRINT_PROCESS;
-	type FV_PRINT_SPOT = 0x0;
-	const FV_PRINT_SPOT: FV_PRINT_SPOT;
-	type FV_PRODUCT_ALL = 7; // (0x01 | 0x02 | 0x04)
-	const FV_PRODUCT_ALL: FV_PRODUCT_ALL;
-	type FV_PRODUCT_STRUCTURED = 0x02;
-	const FV_PRODUCT_STRUCTURED: FV_PRODUCT_STRUCTURED;
-	type FV_PRODUCT_UNSTRUCTURED = 0x01;
-	const FV_PRODUCT_UNSTRUCTURED: FV_PRODUCT_UNSTRUCTURED;
-	type FV_PRODUCT_XMLAUTHOR = 0x04;
-	const FV_PRODUCT_XMLAUTHOR: FV_PRODUCT_XMLAUTHOR;
-	type FV_PROPORTIONAL = 2;
-	const FV_PROPORTIONAL: FV_PROPORTIONAL;
-	type FV_PR_ALL = 1;
-	const FV_PR_ALL: FV_PR_ALL;
-	type FV_PR_DEL_EMPTY = 0x01;
-	const FV_PR_DEL_EMPTY: FV_PR_DEL_EMPTY;
-	type FV_PR_DONT_CHANGE = 0x04;
-	const FV_PR_DONT_CHANGE: FV_PR_DONT_CHANGE;
-	type FV_PR_DOWNLOAD_ALL = 2;
-	const FV_PR_DOWNLOAD_ALL: FV_PR_DOWNLOAD_ALL;
-	type FV_PR_DOWNLOAD_ALL_BUT_STANDARD_13 = 3;
-	const FV_PR_DOWNLOAD_ALL_BUT_STANDARD_13: FV_PR_DOWNLOAD_ALL_BUT_STANDARD_13;
-	type FV_PR_DOWNLOAD_ALL_BUT_STANDARD_35 = 4;
-	const FV_PR_DOWNLOAD_ALL_BUT_STANDARD_35: FV_PR_DOWNLOAD_ALL_BUT_STANDARD_35;
-	type FV_PR_DOWNLOAD_NONE = 1;
-	const FV_PR_DOWNLOAD_NONE: FV_PR_DOWNLOAD_NONE;
-	type FV_PR_KEEP_NUM_EVEN = 0x02;
-	const FV_PR_KEEP_NUM_EVEN: FV_PR_KEEP_NUM_EVEN;
-	type FV_PR_KEEP_NUM_ODD = 0x03;
-	const FV_PR_KEEP_NUM_ODD: FV_PR_KEEP_NUM_ODD;
-	type FV_PR_RANGE = 2;
-	const FV_PR_RANGE: FV_PR_RANGE;
-	type FV_PlainText = 2;
-	const FV_PlainText: FV_PlainText;
-	type FV_ProductIsMaker = 39;
-	const FV_ProductIsMaker: FV_ProductIsMaker;
-	type FV_ProductIsViewer = 32;
-	const FV_ProductIsViewer: FV_ProductIsViewer;
-	type FV_RC_CHANGELIST = 2;
-	const FV_RC_CHANGELIST: FV_RC_CHANGELIST;
-	type FV_RC_CHANGELIST_TAG = 3;
-	const FV_RC_CHANGELIST_TAG: FV_RC_CHANGELIST_TAG;
-	type FV_RC_SUB_FMTRULE = 1;
-	const FV_RC_SUB_FMTRULE: FV_RC_SUB_FMTRULE;
-	type FV_RC_TAG = 0;
-	const FV_RC_TAG: FV_RC_TAG;
-	type FV_REFERENCE_PAGE = 0x02;
-	const FV_REFERENCE_PAGE: FV_REFERENCE_PAGE;
-	type FV_ROW_ANYWHERE = 0;
-	const FV_ROW_ANYWHERE: FV_ROW_ANYWHERE;
-	type FV_ROW_BODY = 1;
-	const FV_ROW_BODY: FV_ROW_BODY;
-	type FV_ROW_FOOTING = 2;
-	const FV_ROW_FOOTING: FV_ROW_FOOTING;
-	type FV_ROW_HEADING = 0;
-	const FV_ROW_HEADING: FV_ROW_HEADING;
-	type FV_ROW_TOP_OF_COL = 1;
-	const FV_ROW_TOP_OF_COL: FV_ROW_TOP_OF_COL;
-	type FV_ROW_TOP_OF_LEFT_PAGE = 3;
-	const FV_ROW_TOP_OF_LEFT_PAGE: FV_ROW_TOP_OF_LEFT_PAGE;
-	type FV_ROW_TOP_OF_PAGE = 2;
-	const FV_ROW_TOP_OF_PAGE: FV_ROW_TOP_OF_PAGE;
-	type FV_ROW_TOP_OF_RIGHT_PAGE = 4;
-	const FV_ROW_TOP_OF_RIGHT_PAGE: FV_ROW_TOP_OF_RIGHT_PAGE;
-	type FV_RecoverFileUsed = 33;
-	const FV_RecoverFileUsed: FV_RecoverFileUsed;
-	type FV_RedoAll = 4;
-	const FV_RedoAll: FV_RedoAll;
-	type FV_ReferencePage = 9;
-	const FV_ReferencePage: FV_ReferencePage;
-	type FV_ReferencedFilesWerentFound = 47;
-	const FV_ReferencedFilesWerentFound: FV_ReferencedFilesWerentFound;
-	type FV_ResetLockAndContinue = 7;
-	const FV_ResetLockAndContinue: FV_ResetLockAndContinue;
-	type FV_Right = 1243;
-	const FV_Right: FV_Right;
-	type FV_SCROLL_FACING = 3;
-	const FV_SCROLL_FACING: FV_SCROLL_FACING;
-	type FV_SCROLL_HORIZONTAL = 1;
-	const FV_SCROLL_HORIZONTAL: FV_SCROLL_HORIZONTAL;
-	type FV_SCROLL_VARIABLE = 0;
-	const FV_SCROLL_VARIABLE: FV_SCROLL_VARIABLE;
-	type FV_SCROLL_VERTICAL = 2;
-	const FV_SCROLL_VERTICAL: FV_SCROLL_VERTICAL;
-	type FV_SEP_NONE = 0x1;
-	const FV_SEP_NONE: FV_SEP_NONE;
-	type FV_SEP_NORMAL = 0x0;
-	const FV_SEP_NORMAL: FV_SEP_NORMAL;
-	type FV_SEP_WHITE = 0x2;
-	const FV_SEP_WHITE: FV_SEP_WHITE;
-	type FV_SET_MAIN_PROGRESS_RANGE_SAVE_AS_PDF = 2;
-	const FV_SET_MAIN_PROGRESS_RANGE_SAVE_AS_PDF: FV_SET_MAIN_PROGRESS_RANGE_SAVE_AS_PDF;
-	type FV_SET_PROGRESS_RANGE_SAVE_AS_PDF = 6;
-	const FV_SET_PROGRESS_RANGE_SAVE_AS_PDF: FV_SET_PROGRESS_RANGE_SAVE_AS_PDF;
-	type FV_SH_INSIDE = 0x02;
-	const FV_SH_INSIDE: FV_SH_INSIDE;
-	type FV_SH_LEFT = 0x00;
-	const FV_SH_LEFT: FV_SH_LEFT;
-	type FV_SH_OUTSIDE = 0x03;
-	const FV_SH_OUTSIDE: FV_SH_OUTSIDE;
-	type FV_SH_RIGHT = 0x01;
-	const FV_SH_RIGHT: FV_SH_RIGHT;
-	type FV_STRICTLY_VALID = 0x01;
-	const FV_STRICTLY_VALID: FV_STRICTLY_VALID;
-	type FV_SaveAsNameAskUser = 0;
-	const FV_SaveAsNameAskUser: FV_SaveAsNameAskUser;
-	type FV_SaveAsNameProvided = 2;
-	const FV_SaveAsNameProvided: FV_SaveAsNameProvided;
-	type FV_SaveAsUseFileName = 1;
-	const FV_SaveAsUseFileName: FV_SaveAsUseFileName;
-	type FV_SaveFmtBinary = 0;
-	const FV_SaveFmtBinary: FV_SaveFmtBinary;
-	type FV_SaveFmtBinary100 = 21;
-	const FV_SaveFmtBinary100: FV_SaveFmtBinary100;
-	type FV_SaveFmtBinary110 = 23;
-	const FV_SaveFmtBinary110: FV_SaveFmtBinary110;
-	type FV_SaveFmtBinary120 = 25;
-	const FV_SaveFmtBinary120: FV_SaveFmtBinary120;
-	type FV_SaveFmtBinary130 = 27;
-	const FV_SaveFmtBinary130: FV_SaveFmtBinary130;
-	type FV_SaveFmtBinary140 = 29;
-	const FV_SaveFmtBinary140: FV_SaveFmtBinary140;
-	type FV_SaveFmtBinary150 = 31;
-	const FV_SaveFmtBinary150: FV_SaveFmtBinary150;
-	type FV_SaveFmtBinary60 = 11;
-	const FV_SaveFmtBinary60: FV_SaveFmtBinary60;
-	type FV_SaveFmtBinary70 = 12;
-	const FV_SaveFmtBinary70: FV_SaveFmtBinary70;
-	type FV_SaveFmtBinary80 = 13;
-	const FV_SaveFmtBinary80: FV_SaveFmtBinary80;
-	type FV_SaveFmtBinary90 = 16;
-	const FV_SaveFmtBinary90: FV_SaveFmtBinary90;
-	type FV_SaveFmtBookWithFm = 20;
-	const FV_SaveFmtBookWithFm: FV_SaveFmtBookWithFm;
-	type FV_SaveFmtBookWithXml = 19;
-	const FV_SaveFmtBookWithXml: FV_SaveFmtBookWithXml;
-	type FV_SaveFmtCompositeDoc = 18;
-	const FV_SaveFmtCompositeDoc: FV_SaveFmtCompositeDoc;
-	type FV_SaveFmtFilter = 8;
-	const FV_SaveFmtFilter: FV_SaveFmtFilter;
-	type FV_SaveFmtInterchange = 1;
-	const FV_SaveFmtInterchange: FV_SaveFmtInterchange;
-	type FV_SaveFmtInterchange100 = 22;
-	const FV_SaveFmtInterchange100: FV_SaveFmtInterchange100;
-	type FV_SaveFmtInterchange110 = 24;
-	const FV_SaveFmtInterchange110: FV_SaveFmtInterchange110;
-	type FV_SaveFmtInterchange120 = 26;
-	const FV_SaveFmtInterchange120: FV_SaveFmtInterchange120;
-	type FV_SaveFmtInterchange130 = 28;
-	const FV_SaveFmtInterchange130: FV_SaveFmtInterchange130;
-	type FV_SaveFmtInterchange140 = 30;
-	const FV_SaveFmtInterchange140: FV_SaveFmtInterchange140;
-	type FV_SaveFmtInterchange150 = 32;
-	const FV_SaveFmtInterchange150: FV_SaveFmtInterchange150;
-	type FV_SaveFmtInterchange70 = 14;
-	const FV_SaveFmtInterchange70: FV_SaveFmtInterchange70;
-	type FV_SaveFmtInterchange80 = 15;
-	const FV_SaveFmtInterchange80: FV_SaveFmtInterchange80;
-	type FV_SaveFmtInterchange90 = 17;
-	const FV_SaveFmtInterchange90: FV_SaveFmtInterchange90;
-	type FV_SaveFmtPdf = 9;
-	const FV_SaveFmtPdf: FV_SaveFmtPdf;
-	type FV_SaveFmtSgml = 7;
-	const FV_SaveFmtSgml: FV_SaveFmtSgml;
-	type FV_SaveFmtStationery = 3;
-	const FV_SaveFmtStationery: FV_SaveFmtStationery;
-	type FV_SaveFmtText = 6;
-	const FV_SaveFmtText: FV_SaveFmtText;
-	type FV_SaveFmtViewOnly = 4;
-	const FV_SaveFmtViewOnly: FV_SaveFmtViewOnly;
-	type FV_SaveFmtXml = 10;
-	const FV_SaveFmtXml: FV_SaveFmtXml;
-	type FV_SaveNoAutoBackup = 1;
-	const FV_SaveNoAutoBackup: FV_SaveNoAutoBackup;
-	type FV_SaveSkipTbls = 3;
-	const FV_SaveSkipTbls: FV_SaveSkipTbls;
-	type FV_SaveTblColsAsPgfs = 2;
-	const FV_SaveTblColsAsPgfs: FV_SaveTblColsAsPgfs;
-	type FV_SaveTblRowsAsPgfs = 1;
-	const FV_SaveTblRowsAsPgfs: FV_SaveTblRowsAsPgfs;
-	type FV_SaveTblUserPref = 0;
-	const FV_SaveTblUserPref: FV_SaveTblUserPref;
-	type FV_SaveUserPrefAutoBackup = 2;
-	const FV_SaveUserPrefAutoBackup: FV_SaveUserPrefAutoBackup;
-	type FV_SaveYesAutoBackup = 0;
-	const FV_SaveYesAutoBackup: FV_SaveYesAutoBackup;
-	type FV_SessionId = 0;
-	const FV_SessionId: FV_SessionId;
-	type FV_SetDictionaryToNoneDictionary = 6;
-	const FV_SetDictionaryToNoneDictionary: FV_SetDictionaryToNoneDictionary;
-	type FV_Shitf_JIS = 6;
-	const FV_Shitf_JIS: FV_Shitf_JIS;
-	type FV_ShowAll = 1;
-	const FV_ShowAll: FV_ShowAll;
-	type FV_ShowAsPerConditions = 2;
-	const FV_ShowAsPerConditions: FV_ShowAsPerConditions;
-	type FV_ShowAsPerExpression = 3;
-	const FV_ShowAsPerExpression: FV_ShowAsPerExpression;
-	type FV_SourceDoc = 0;
-	const FV_SourceDoc: FV_SourceDoc;
-	type FV_SpellCapitalization = 2;
-	const FV_SpellCapitalization: FV_SpellCapitalization;
-	type FV_SpellExtraSpace = 6;
-	const FV_SpellExtraSpace: FV_SpellExtraSpace;
-	type FV_SpellHyphenation = 5;
-	const FV_SpellHyphenation: FV_SpellHyphenation;
-	type FV_SpellMisspelling = 1;
-	const FV_SpellMisspelling: FV_SpellMisspelling;
-	type FV_SpellRepeatedLetter = 4;
-	const FV_SpellRepeatedLetter: FV_SpellRepeatedLetter;
-	type FV_SpellRepeatedWord = 3;
-	const FV_SpellRepeatedWord: FV_SpellRepeatedWord;
-	type FV_SpellSpaceAfter = 7;
-	const FV_SpellSpaceAfter: FV_SpellSpaceAfter;
-	type FV_SpellSpaceBefore = 8;
-	const FV_SpellSpaceBefore: FV_SpellSpaceBefore;
-	type FV_SpellStraightQuotes = 9;
-	const FV_SpellStraightQuotes: FV_SpellStraightQuotes;
-	type FV_StripStructureAndOpen = 10;
-	const FV_StripStructureAndOpen: FV_StripStructureAndOpen;
-	type FV_TAB_CENTER = 0x2;
-	const FV_TAB_CENTER: FV_TAB_CENTER;
-	type FV_TAB_DECIMAL = 0x4;
-	const FV_TAB_DECIMAL: FV_TAB_DECIMAL;
-	type FV_TAB_LEFT = 0x1;
-	const FV_TAB_LEFT: FV_TAB_LEFT;
-	type FV_TAB_RELATIVE_CENTER = 0x6;
-	const FV_TAB_RELATIVE_CENTER: FV_TAB_RELATIVE_CENTER;
-	type FV_TAB_RELATIVE_DECIMAL = 0x8;
-	const FV_TAB_RELATIVE_DECIMAL: FV_TAB_RELATIVE_DECIMAL;
-	type FV_TAB_RELATIVE_LEFT = 0x5;
-	const FV_TAB_RELATIVE_LEFT: FV_TAB_RELATIVE_LEFT;
-	type FV_TAB_RELATIVE_RIGHT = 0x7;
-	const FV_TAB_RELATIVE_RIGHT: FV_TAB_RELATIVE_RIGHT;
-	type FV_TAB_RIGHT = 0x3;
-	const FV_TAB_RIGHT: FV_TAB_RIGHT;
-	type FV_TBL_ANYWHERE = 0;
-	const FV_TBL_ANYWHERE: FV_TBL_ANYWHERE;
-	type FV_TBL_CATALOG = 13;
-	const FV_TBL_CATALOG: FV_TBL_CATALOG;
-	type FV_TBL_FLOAT = 5;
-	const FV_TBL_FLOAT: FV_TBL_FLOAT;
-	type FV_TBL_NO_TITLE = 0;
-	const FV_TBL_NO_TITLE: FV_TBL_NO_TITLE;
-	type FV_TBL_NUM_BY_COL = 1;
-	const FV_TBL_NUM_BY_COL: FV_TBL_NUM_BY_COL;
-	type FV_TBL_NUM_BY_ROW = 0;
-	const FV_TBL_NUM_BY_ROW: FV_TBL_NUM_BY_ROW;
-	type FV_TBL_TITLE_ABOVE = 1;
-	const FV_TBL_TITLE_ABOVE: FV_TBL_TITLE_ABOVE;
-	type FV_TBL_TITLE_BELOW = 2;
-	const FV_TBL_TITLE_BELOW: FV_TBL_TITLE_BELOW;
-	type FV_TBL_TOP_OF_COL = 1;
-	const FV_TBL_TOP_OF_COL: FV_TBL_TOP_OF_COL;
-	type FV_TBL_TOP_OF_LEFT_PAGE = 3;
-	const FV_TBL_TOP_OF_LEFT_PAGE: FV_TBL_TOP_OF_LEFT_PAGE;
-	type FV_TBL_TOP_OF_PAGE = 2;
-	const FV_TBL_TOP_OF_PAGE: FV_TBL_TOP_OF_PAGE;
-	type FV_TBL_TOP_OF_RIGHT_PAGE = 4;
-	const FV_TBL_TOP_OF_RIGHT_PAGE: FV_TBL_TOP_OF_RIGHT_PAGE;
-	type FV_TEMPLATE_BROWSER = 11;
-	const FV_TEMPLATE_BROWSER: FV_TEMPLATE_BROWSER;
-	type FV_TEXTLINE_CENTER = 2;
-	const FV_TEXTLINE_CENTER: FV_TEXTLINE_CENTER;
-	type FV_TEXTLINE_LEFT = 0;
-	const FV_TEXTLINE_LEFT: FV_TEXTLINE_LEFT;
-	type FV_TEXTLINE_MATH = 3;
-	const FV_TEXTLINE_MATH: FV_TEXTLINE_MATH;
-	type FV_TEXTLINE_RIGHT = 1;
-	const FV_TEXTLINE_RIGHT: FV_TEXTLINE_RIGHT;
-	type FV_THESAURUS = 10;
-	const FV_THESAURUS: FV_THESAURUS;
-	type FV_TR_BBOX = 0x03;
-	const FV_TR_BBOX: FV_TR_BBOX;
-	type FV_TR_CONTOUR = 0x02;
-	const FV_TR_CONTOUR: FV_TR_CONTOUR;
-	type FV_TR_NONE = 0x01;
-	const FV_TR_NONE: FV_TR_NONE;
-	type FV_TYPE_BINARY = 0x01;
-	const FV_TYPE_BINARY: FV_TYPE_BINARY;
-	type FV_TYPE_FILTER = 0xFF;
-	const FV_TYPE_FILTER: FV_TYPE_FILTER;
-	type FV_TYPE_MIF = 0x02;
-	const FV_TYPE_MIF: FV_TYPE_MIF;
-	type FV_TYPE_SGML = 0x04;
-	const FV_TYPE_SGML: FV_TYPE_SGML;
-	type FV_TYPE_TEXT = 0x03;
-	const FV_TYPE_TEXT: FV_TYPE_TEXT;
-	type FV_TYPE_XML = 0x05;
-	const FV_TYPE_XML: FV_TYPE_XML;
-	type FV_TextFile_EOLisEOP = 12;
-	const FV_TextFile_EOLisEOP: FV_TextFile_EOLisEOP;
-	type FV_TextFile_EOLisNotEOP = 13;
-	const FV_TextFile_EOLisNotEOP: FV_TextFile_EOLisNotEOP;
-	type FV_TooManyWindows = 128;
-	const FV_TooManyWindows: FV_TooManyWindows;
-	type FV_TooManyWindowsUpdateBook = 98;
-	const FV_TooManyWindowsUpdateBook: FV_TooManyWindowsUpdateBook;
-	type FV_UPDATE_MAIN_PROGRESS_MESSAGE_SAVE_AS_PDF = 0;
-	const FV_UPDATE_MAIN_PROGRESS_MESSAGE_SAVE_AS_PDF: FV_UPDATE_MAIN_PROGRESS_MESSAGE_SAVE_AS_PDF;
-	type FV_UPDATE_PROGRESS_MESSAGE_SAVE_AS_PDF = 3;
-	const FV_UPDATE_PROGRESS_MESSAGE_SAVE_AS_PDF: FV_UPDATE_PROGRESS_MESSAGE_SAVE_AS_PDF;
-	type FV_UPDATE_PROGRESS_MESSAGE_WITH_FILENAME_SAVE_AS_PDF = 4;
-	const FV_UPDATE_PROGRESS_MESSAGE_WITH_FILENAME_SAVE_AS_PDF: FV_UPDATE_PROGRESS_MESSAGE_WITH_FILENAME_SAVE_AS_PDF;
-	type FV_URL_CHECKED_IN = 1;
-	const FV_URL_CHECKED_IN: FV_URL_CHECKED_IN;
-	type FV_URL_CHECKED_OUT = 2;
-	const FV_URL_CHECKED_OUT: FV_URL_CHECKED_OUT;
-	type FV_UndoAll = 3;
-	const FV_UndoAll: FV_UndoAll;
-	type FV_UnresolvedTextInsets = 50;
-	const FV_UnresolvedTextInsets: FV_UnresolvedTextInsets;
-	type FV_UnresolvedXRefs = 49;
-	const FV_UnresolvedXRefs: FV_UnresolvedXRefs;
-	type FV_Unstructured = 41;
-	const FV_Unstructured: FV_Unstructured;
-	type FV_UpdateAllAutomaticClientTi = 2;
-	const FV_UpdateAllAutomaticClientTi: FV_UpdateAllAutomaticClientTi;
-	type FV_UpdateAllClientTi = 1;
-	const FV_UpdateAllClientTi: FV_UpdateAllClientTi;
-	type FV_UpdateAllManualClientTi = 3;
-	const FV_UpdateAllManualClientTi: FV_UpdateAllManualClientTi;
-	type FV_UseCurrentSetting = 0;
-	const FV_UseCurrentSetting: FV_UseCurrentSetting;
-	type FV_UserCanceled = 112;
-	const FV_UserCanceled: FV_UserCanceled;
-	type FV_UserCanceledExport = 32;
-	const FV_UserCanceledExport: FV_UserCanceledExport;
-	type FV_UserCanceledImport = 37;
-	const FV_UserCanceledImport: FV_UserCanceledImport;
-	type FV_UserCanceledSave = 48;
-	const FV_UserCanceledSave: FV_UserCanceledSave;
-	type FV_UserCanceledUpdateBook = 35;
-	const FV_UserCanceledUpdateBook: FV_UserCanceledUpdateBook;
-	type FV_UserDictionary = 1;
-	const FV_UserDictionary: FV_UserDictionary;
-	type FV_VAR_CREATION_DATE_LONG = 7;
-	const FV_VAR_CREATION_DATE_LONG: FV_VAR_CREATION_DATE_LONG;
-	type FV_VAR_CREATION_DATE_SHORT = 8;
-	const FV_VAR_CREATION_DATE_SHORT: FV_VAR_CREATION_DATE_SHORT;
-	type FV_VAR_CURRENT_DATE_LONG = 3;
-	const FV_VAR_CURRENT_DATE_LONG: FV_VAR_CURRENT_DATE_LONG;
-	type FV_VAR_CURRENT_DATE_SHORT = 4;
-	const FV_VAR_CURRENT_DATE_SHORT: FV_VAR_CURRENT_DATE_SHORT;
-	type FV_VAR_CURRENT_PAGE_NUM = 1;
-	const FV_VAR_CURRENT_PAGE_NUM: FV_VAR_CURRENT_PAGE_NUM;
-	type FV_VAR_FILE_NAME_LONG = 9;
-	const FV_VAR_FILE_NAME_LONG: FV_VAR_FILE_NAME_LONG;
-	type FV_VAR_FILE_NAME_SHORT = 10;
-	const FV_VAR_FILE_NAME_SHORT: FV_VAR_FILE_NAME_SHORT;
-	type FV_VAR_HEADER_FOOTER_1 = 11;
-	const FV_VAR_HEADER_FOOTER_1: FV_VAR_HEADER_FOOTER_1;
-	type FV_VAR_HEADER_FOOTER_10 = 24;
-	const FV_VAR_HEADER_FOOTER_10: FV_VAR_HEADER_FOOTER_10;
-	type FV_VAR_HEADER_FOOTER_11 = 25;
-	const FV_VAR_HEADER_FOOTER_11: FV_VAR_HEADER_FOOTER_11;
-	type FV_VAR_HEADER_FOOTER_12 = 26;
-	const FV_VAR_HEADER_FOOTER_12: FV_VAR_HEADER_FOOTER_12;
-	type FV_VAR_HEADER_FOOTER_13 = 27;
-	const FV_VAR_HEADER_FOOTER_13: FV_VAR_HEADER_FOOTER_13;
-	type FV_VAR_HEADER_FOOTER_14 = 28;
-	const FV_VAR_HEADER_FOOTER_14: FV_VAR_HEADER_FOOTER_14;
-	type FV_VAR_HEADER_FOOTER_15 = 29;
-	const FV_VAR_HEADER_FOOTER_15: FV_VAR_HEADER_FOOTER_15;
-	type FV_VAR_HEADER_FOOTER_16 = 30;
-	const FV_VAR_HEADER_FOOTER_16: FV_VAR_HEADER_FOOTER_16;
-	type FV_VAR_HEADER_FOOTER_17 = 31;
-	const FV_VAR_HEADER_FOOTER_17: FV_VAR_HEADER_FOOTER_17;
-	type FV_VAR_HEADER_FOOTER_18 = 32;
-	const FV_VAR_HEADER_FOOTER_18: FV_VAR_HEADER_FOOTER_18;
-	type FV_VAR_HEADER_FOOTER_2 = 12;
-	const FV_VAR_HEADER_FOOTER_2: FV_VAR_HEADER_FOOTER_2;
-	type FV_VAR_HEADER_FOOTER_3 = 13;
-	const FV_VAR_HEADER_FOOTER_3: FV_VAR_HEADER_FOOTER_3;
-	type FV_VAR_HEADER_FOOTER_4 = 14;
-	const FV_VAR_HEADER_FOOTER_4: FV_VAR_HEADER_FOOTER_4;
-	type FV_VAR_HEADER_FOOTER_5 = 19;
-	const FV_VAR_HEADER_FOOTER_5: FV_VAR_HEADER_FOOTER_5;
-	type FV_VAR_HEADER_FOOTER_6 = 20;
-	const FV_VAR_HEADER_FOOTER_6: FV_VAR_HEADER_FOOTER_6;
-	type FV_VAR_HEADER_FOOTER_7 = 21;
-	const FV_VAR_HEADER_FOOTER_7: FV_VAR_HEADER_FOOTER_7;
-	type FV_VAR_HEADER_FOOTER_8 = 22;
-	const FV_VAR_HEADER_FOOTER_8: FV_VAR_HEADER_FOOTER_8;
-	type FV_VAR_HEADER_FOOTER_9 = 23;
-	const FV_VAR_HEADER_FOOTER_9: FV_VAR_HEADER_FOOTER_9;
-	type FV_VAR_MODIFICATION_DATE_LONG = 5;
-	const FV_VAR_MODIFICATION_DATE_LONG: FV_VAR_MODIFICATION_DATE_LONG;
-	type FV_VAR_MODIFICATION_DATE_SHORT = 6;
-	const FV_VAR_MODIFICATION_DATE_SHORT: FV_VAR_MODIFICATION_DATE_SHORT;
-	type FV_VAR_PAGE_COUNT = 2;
-	const FV_VAR_PAGE_COUNT: FV_VAR_PAGE_COUNT;
-	type FV_VAR_TABLE_CONTINUATION = 15;
-	const FV_VAR_TABLE_CONTINUATION: FV_VAR_TABLE_CONTINUATION;
-	type FV_VAR_TABLE_SHEET = 16;
-	const FV_VAR_TABLE_SHEET: FV_VAR_TABLE_SHEET;
-	type FV_VAR_USER_VARIABLE = 0;
-	const FV_VAR_USER_VARIABLE: FV_VAR_USER_VARIABLE;
-	type FV_VIEW_ALL = 7; // (0x01 | 0x02 | 0x04)
-	const FV_VIEW_ALL: FV_VIEW_ALL;
-	type FV_VIEW_AUTHOR = 0x02;
-	const FV_VIEW_AUTHOR: FV_VIEW_AUTHOR;
-	type FV_VIEW_WYSIWYG = 0x01;
-	const FV_VIEW_WYSIWYG: FV_VIEW_WYSIWYG;
-	type FV_VIEW_XML = 0x04;
-	const FV_VIEW_XML: FV_VIEW_XML;
-	type FV_VOS_NONE = 2;
-	const FV_VOS_NONE: FV_VOS_NONE;
-	type FV_VOS_USER_ONLY = 1;
-	const FV_VOS_USER_ONLY: FV_VOS_USER_ONLY;
-	type FV_VOS_YES = 3;
-	const FV_VOS_YES: FV_VOS_YES;
-	type FV_VOX_ALERT = 3;
-	const FV_VOX_ALERT: FV_VOX_ALERT;
-	type FV_VOX_GOTO_BEHAVIOR = 1;
-	const FV_VOX_GOTO_BEHAVIOR: FV_VOX_GOTO_BEHAVIOR;
-	type FV_VOX_NOT_ACTIVE = 0;
-	const FV_VOX_NOT_ACTIVE: FV_VOX_NOT_ACTIVE;
-	type FV_VOX_OPEN_BEHAVIOR = 2;
-	const FV_VOX_OPEN_BEHAVIOR: FV_VOX_OPEN_BEHAVIOR;
-	type FV_WIDE = 0;
-	const FV_WIDE: FV_WIDE;
-	type FV_WINDOW_ALL = 7; // (0x01 | 0x02 | 0x04)
-	const FV_WINDOW_ALL: FV_WINDOW_ALL;
-	type FV_WINDOW_BOOK = 0x02;
-	const FV_WINDOW_BOOK: FV_WINDOW_BOOK;
-	type FV_WINDOW_DITAMAP = 0x04;
-	const FV_WINDOW_DITAMAP: FV_WINDOW_DITAMAP;
-	type FV_WINDOW_DOC = 0x01;
-	const FV_WINDOW_DOC: FV_WINDOW_DOC;
-	type FV_WarnAlways = 1;
-	const FV_WarnAlways: FV_WarnAlways;
-	type FV_WarnNever = 0;
-	const FV_WarnNever: FV_WarnNever;
-	type FV_WarnOnce = 2;
-	const FV_WarnOnce: FV_WarnOnce;
-	type FV_WriteDictionaryToFile = 4;
-	const FV_WriteDictionaryToFile: FV_WriteDictionaryToFile;
-	type FV_WriteUnknownWordsToFile = 3;
-	const FV_WriteUnknownWordsToFile: FV_WriteUnknownWordsToFile;
-	type FV_XML_STANDALONE_NO = 2;
-	const FV_XML_STANDALONE_NO: FV_XML_STANDALONE_NO;
-	type FV_XML_STANDALONE_NODEC = 4;
-	const FV_XML_STANDALONE_NODEC: FV_XML_STANDALONE_NODEC;
-	type FV_XML_STANDALONE_NONE = 3;
-	const FV_XML_STANDALONE_NONE: FV_XML_STANDALONE_NONE;
-	type FV_XML_STANDALONE_YES = 1;
-	const FV_XML_STANDALONE_YES: FV_XML_STANDALONE_YES;
-	type FV_XML_USEBOM_NO = 2;
-	const FV_XML_USEBOM_NO: FV_XML_USEBOM_NO;
-	type FV_XML_USEBOM_UTF16BE = 4;
-	const FV_XML_USEBOM_UTF16BE: FV_XML_USEBOM_UTF16BE;
-	type FV_XML_USEBOM_UTF16LE = 5;
-	const FV_XML_USEBOM_UTF16LE: FV_XML_USEBOM_UTF16LE;
-	type FV_XML_USEBOM_UTF32BE = 6;
-	const FV_XML_USEBOM_UTF32BE: FV_XML_USEBOM_UTF32BE;
-	type FV_XML_USEBOM_UTF32LE = 7;
-	const FV_XML_USEBOM_UTF32LE: FV_XML_USEBOM_UTF32LE;
-	type FV_XML_USEBOM_UTF8 = 3;
-	const FV_XML_USEBOM_UTF8: FV_XML_USEBOM_UTF8;
-	type FV_XML_USEBOM_YES = 1;
-	const FV_XML_USEBOM_YES: FV_XML_USEBOM_YES;
-	type FV_XML_WELLFORMED_NO = 2;
-	const FV_XML_WELLFORMED_NO: FV_XML_WELLFORMED_NO;
-	type FV_XML_WELLFORMED_YES = 1;
-	const FV_XML_WELLFORMED_YES: FV_XML_WELLFORMED_YES;
-	type FV_ZOOM_TO_FIT_TO_WINDOW = -2;
-	const FV_ZOOM_TO_FIT_TO_WINDOW: FV_ZOOM_TO_FIT_TO_WINDOW;
+	FV_ACCESSBAR_CLOSE = 2,
+	FV_ACCESSBAR_OPEN = 1,
+	FV_AF_FIXED = 0x0004,
+	FV_AF_HIDDEN = 0x0002,
+	FV_AF_READ_ONLY = 0x0001,
+	FV_ALIGN_CENTER = 1,
+	FV_ALIGN_INSIDE = 3,
+	FV_ALIGN_LEFT = 0,
+	FV_ALIGN_OUTSIDE = 4,
+	FV_ALIGN_RIGHT = 2,
+	FV_ALIGN_TBL_CENTER = 1,
+	FV_ALIGN_TBL_LEFT = 0,
+	FV_ALIGN_TBL_RIGHT = 2,
+	FV_ALTERNATIVE = 0x04,
+	FV_ANCHOR_BELOW = 3,
+	FV_ANCHOR_BOTTOM = 4,
+	FV_ANCHOR_INLINE = 1,
+	FV_ANCHOR_RUN_INTO_PARAGRAPH = 17,
+	FV_ANCHOR_SUBCOL_FARTHEST = 8,
+	FV_ANCHOR_SUBCOL_INSIDE = 9,
+	FV_ANCHOR_SUBCOL_LEFT = 5,
+	FV_ANCHOR_SUBCOL_NEAREST = 7,
+	FV_ANCHOR_SUBCOL_OUTSIDE = 10,
+	FV_ANCHOR_SUBCOL_RIGHT = 6,
+	FV_ANCHOR_TEXTFRAME_FARTHEST = 14,
+	FV_ANCHOR_TEXTFRAME_INSIDE = 15,
+	FV_ANCHOR_TEXTFRAME_LEFT = 11,
+	FV_ANCHOR_TEXTFRAME_NEAREST = 13,
+	FV_ANCHOR_TEXTFRAME_OUTSIDE = 16,
+	FV_ANCHOR_TEXTFRAME_RIGHT = 12,
+	FV_ANCHOR_TOP = 2,
+	FV_ANSI = 3,
+	FV_ARROW_FILLED = 0x3,
+	FV_ARROW_HOLLOW = 0x2,
+	FV_ARROW_STICK = 0x1,
+	FV_ASCII = 2,
+	FV_ATTR_DISP_ALL = 3,
+	FV_ATTR_DISP_NONE = 1,
+	FV_ATTR_DISP_REQSPEC = 2,
+	FV_ATTR_EDIT_ALWAYS = 2,
+	FV_ATTR_EDIT_NONE = 0,
+	FV_ATTR_EDIT_REQUIRED = 1,
+	FV_AT_CHOICES = 2,
+	FV_AT_INTEGER = 3,
+	FV_AT_INTEGERS = 4,
+	FV_AT_NUMTYPES = 10,
+	FV_AT_REAL = 5,
+	FV_AT_REALS = 6,
+	FV_AT_STRING = 0,
+	FV_AT_STRINGS = 1,
+	FV_AT_UNIQUE_ID = 7,
+	FV_AT_UNIQUE_IDREF = 8,
+	FV_AT_UNIQUE_IDREFS = 9,
+	FV_AUTORECOGNIZE = 0x00,
+	FV_AV_IDREF_UNRESOLVED = 4,
+	FV_AV_ID_DUPLICATE_IN_BOOK = 6,
+	FV_AV_ID_DUPLICATE_IN_DOC = 5,
+	FV_AV_INVALID_CHOICE = 2,
+	FV_AV_INVALID_FORMAT = 3,
+	FV_AV_OUT_OF_RANGE = 9,
+	FV_AV_REQUIRED = 1,
+	FV_AV_TOO_MANY_TOKENS = 7,
+	FV_AV_UNDEFINED = 8,
+	FV_Above = 1240,
+	FV_AlertOneButton = 1,
+	FV_AlertThreeButton = 3,
+	FV_AlertTwoButton = 2,
+	FV_AllElements = 2,
+	FV_AllowAllRefFilesUnFindable = 11,
+	FV_ApiClientCanceledExport = 34,
+	FV_AutoSaveFileUsed = 34,
+	FV_BGD_DEFAULT = 0x00,
+	FV_BGD_NONE = 0x01,
+	FV_BGD_OTHER = 0x02,
+	FV_BIG5 = 8,
+	FV_BK_BOOK = 0x4,
+	FV_BK_BOOKMAP = 0x100,
+	FV_BK_DITAMAP = 0x80,
+	FV_BK_FILE = 0x200,
+	FV_BK_FILENAME = 1,
+	FV_BK_FM = 0x8,
+	FV_BK_FOLDER = 0x2,
+	FV_BK_GENERAL = 0x1,
+	FV_BK_GROUP = 0x40,
+	FV_BK_INDEX_AUTHOR = 8,
+	FV_BK_INDEX_FORMATS = 13,
+	FV_BK_INDEX_MARKER = 10,
+	FV_BK_INDEX_REFERENCES = 14,
+	FV_BK_INDEX_STAN = 7,
+	FV_BK_INDEX_SUBJECT = 9,
+	FV_BK_LIST_FIGURE = 1,
+	FV_BK_LIST_FORMATS = 11,
+	FV_BK_LIST_MARKER = 4,
+	FV_BK_LIST_MARKER_ALPHA = 5,
+	FV_BK_LIST_PGF = 3,
+	FV_BK_LIST_PGF_ALPHA = 6,
+	FV_BK_LIST_REFERENCES = 12,
+	FV_BK_LIST_TABLE = 2,
+	FV_BK_MIF = 0x10,
+	FV_BK_NOT_GENERATABLE = 16,
+	FV_BK_NUM_BOOK_LIST = 15,
+	FV_BK_START_FROM_FILE = 0x01,
+	FV_BK_START_LEFT = 0x03,
+	FV_BK_START_NEXT_AVAILABLE = 0x02,
+	FV_BK_START_RIGHT = 0x04,
+	FV_BK_TEXT = 2,
+	FV_BK_TOC = 0,
+	FV_BK_XML = 0x20,
+	FV_BODY_PAGE = 0x00,
+	FV_BadEnclosingDocId = 28,
+	FV_BadExportDocId = 20,
+	FV_BadExportFileName = 16,
+	FV_BadExportObjectId = 18,
+	FV_BadExportScriptValue = 21,
+	FV_BadFileId = 35,
+	FV_BadFileName = 67,
+	FV_BadFileRefsWereMapped = 46,
+	FV_BadFileType = 66,
+	FV_BadImportFileName = 16,
+	FV_BadImportFileType = 17,
+	FV_BadImportScriptValue = 18,
+	FV_BadSaveFileName = 34,
+	FV_BadSaveObjectId = 40,
+	FV_BadSaveScriptValue = 36,
+	FV_BadScriptValue = 70,
+	FV_BadTemplate = 129,
+	FV_BadTextFileTypeHint = 29,
+	FV_BadUpdateBookFileId = 64,
+	FV_BadUpdateBookScriptValue = 65,
+	FV_BeefyDoc = 40,
+	FV_Below = 1241,
+	FV_Body = 1237,
+	FV_BodyPage = 10,
+	FV_BookNotSelfConsistent = 0,
+	FV_BrowseCmsOnly = 0x00020000,
+	FV_BrowseLocalOnly = 0x00010000,
+	FV_BrowseLocalWithWebdavOnly = 0x00040000,
+	FV_CAPITAL_CASE_LOWER = 2,
+	FV_CAPITAL_CASE_NORM = 0,
+	FV_CAPITAL_CASE_SMALL = 1,
+	FV_CAPITAL_CASE_UPPER = 3,
+	FV_CAP_BUTT = 0x00,
+	FV_CAP_ROUND = 0x01,
+	FV_CAP_SQUARE = 0x02,
+	FV_CB_COL_FURTHEST = 0x03,
+	FV_CB_COL_LEFT = 0x00,
+	FV_CB_COL_NEAREST = 0x02,
+	FV_CB_COL_RIGHT = 0x01,
+	FV_CB_DOUBLE_UNDERLINE = 2,
+	FV_CB_NO_UNDERLINE = 0,
+	FV_CB_NUMERIC_UNDERLINE = 3,
+	FV_CB_SINGLE_UNDERLINE = 1,
+	FV_CHAR_CATALOG = 6,
+	FV_CMSCheckinUI_Id_CheckinComment = 44,
+	FV_CMSCheckinUI_Id_Description = 45,
+	FV_CMSCheckinUI_Id_MajorVersion = 46,
+	FV_CMSCheckinUI_Id_MakeThisCurrentVersion = 47,
+	FV_CMSCheckinUI_Id_MinorVersion = 48,
+	FV_CMSCheckinUI_Id_SameVersion = 49,
+	FV_CMSCheckinUI_Id_VersionLabel = 50,
+	FV_CMSCheckoutUI_Id_ShowDependents = 51,
+	FV_CMSCommandAdvancedSearchStringId = 52,
+	FV_CMSCommandCheckinCommentId = 53,
+	FV_CMSCommandCheckinDescriptionId = 54,
+	FV_CMSCommandCheckinKeepLocalCopyId = 55,
+	FV_CMSCommandCheckinMakeCurrentVersionId = 56,
+	FV_CMSCommandCheckinMinorVersionId = 57,
+	FV_CMSCommandCheckinVersionLabelId = 58,
+	FV_CMSCommandCheckoutWithDescendentId = 59,
+	FV_CMSCommandConnTypeId = 60,
+	FV_CMSCommandDeleteAllDependentsId = 61,
+	FV_CMSCommandDeleteAllVersionId = 62,
+	FV_CMSCommandFilePathId = 63,
+	FV_CMSCommandId = 64,
+	FV_CMSCommandId_Max = 65,
+	FV_CMSCommandId_Min = 66,
+	FV_CMSCommandNameId = 67,
+	FV_CMSCommandOpenReadOnlyId = 68,
+	FV_CMSCommandPasswordId = 69,
+	FV_CMSCommandRefreshDependentsId = 70,
+	FV_CMSCommandRepositoryId = 71,
+	FV_CMSCommandSearchStringId = 72,
+	FV_CMSCommandServerId = 73,
+	FV_CMSCommandSilentOpenId = 74,
+	FV_CMSCommandUserField1 = 75,
+	FV_CMSCommandUserField2 = 76,
+	FV_CMSCommandUserNameId = 77,
+	FV_CMSContextMenuId = 78,
+	FV_CMSContextMenuString = 79,
+	FV_CMSDeleteUI_DeleteAllDependents = 80,
+	FV_CMSDeleteUI_DeleteAllVersion = 81,
+	FV_CMSItemFileTypeValue_DitaMap = 82,
+	FV_CMSItemFileTypeValue_DitaTopic = 83,
+	FV_CMSItemFileTypeValue_FmBook = 84,
+	FV_CMSItemFileTypeValue_FmDoc = 85,
+	FV_CMSItemFileTypeValue_General = 86,
+	FV_CMSItemFileTypeValue_Img = 87,
+	FV_CMSItemFileTypeValue_Max = 88,
+	FV_CMSItemFileTypeValue_Mif = 89,
+	FV_CMSItemFileTypeValue_Min = 90,
+	FV_CMSItemFileTypeValue_Text = 91,
+	FV_CMSItemFileTypeValue_Xml = 92,
+	FV_CMSItemTypeValue_File = 93,
+	FV_CMSItemTypeValue_Folder = 94,
+	FV_CMSItemTypeValue_General = 95,
+	FV_CMSItemTypeValue_Max = 96,
+	FV_CMSItemTypeValue_Min = 97,
+	FV_CMSItemTypeValue_Root = 98,
+	FV_CMSMajorVersion = 99,
+	FV_CMSMenu_Is_Disabled = 100,
+	FV_CMSMenu_Is_Item = 101,
+	FV_CMSMenu_Is_Separator = 102,
+	FV_CMSMenu_Is_SubMenu = 103,
+	FV_CMSMenu_Max = 104,
+	FV_CMSMenu_Min = 105,
+	FV_CMSMinorVersion = 106,
+	FV_CMSOpChildAdded = 107,
+	FV_CMSOpDependentsDeleted = 108,
+	FV_CMSOpDependentsUpdated = 109,
+	FV_CMSOpDocumentOpened = 110,
+	FV_CMSOpItemDeleted = 111,
+	FV_CMSOpItemUpdated = 112,
+	FV_CMSOpNone = 113,
+	FV_CMSOpRootUpdated = 114,
+	FV_CMSSameVersion = 115,
+	FV_CMSSilentOperation = 116,
+	FV_CMSUserFieldType_Edit = 117,
+	FV_CMSUserFieldType_FileBrowse = 118,
+	FV_CMSUserFieldType_FolderBrowse = 119,
+	FV_CMSVersion_Max = 120,
+	FV_CMSVersion_Min = 121,
+	FV_CMS_TYPE_DITAEXCHANGE = 0x03,
+	FV_CMS_TYPE_DOCUMENTUM = 0x01,
+	FV_CMS_TYPE_NONE = 0x00,
+	FV_CMS_TYPE_SHAREPOINT = 0x02,
+	FV_CN_CHANGEBAR = 5,
+	FV_CN_DOUBLE_UNDERLINE = 4,
+	FV_CN_NMRIC_AND_CHNGBAR = 7,
+	FV_CN_NO_OVERRIDE = 0,
+	FV_CN_NUMERIC_UNDERLINE = 6,
+	FV_CN_OVERLINE = 1,
+	FV_CN_SINGLE_UNDERLINE = 3,
+	FV_CN_STRIKETHROUGH = 2,
+	FV_COLOR_BLACK = 4,
+	FV_COLOR_BLUE = 8,
+	FV_COLOR_CYAN = 1,
+	FV_COLOR_DARKGREY = 9,
+	FV_COLOR_DARKYELLOW = 15,
+	FV_COLOR_FORESTGREEN = 11,
+	FV_COLOR_GREEN = 7,
+	FV_COLOR_KNOCKOUT = 0x00,
+	FV_COLOR_LIGHTSALMON = 14,
+	FV_COLOR_MAGENTA = 2,
+	FV_COLOR_MAUVE = 13,
+	FV_COLOR_NOT_RESERVED = 0,
+	FV_COLOR_OVERPRINT = 0x01,
+	FV_COLOR_PALEGREEN = 10,
+	FV_COLOR_RED = 6,
+	FV_COLOR_ROYALBLUE = 12,
+	FV_COLOR_SALMON = 16,
+	FV_COLOR_WHITE = 5,
+	FV_COLOR_YELLOW = 3,
+	FV_CONTEXT_RULE = 0,
+	FV_CS_CHANGEBAR = 0x10,
+	FV_CS_DOUBLE_UNDERLINE = 0x08,
+	FV_CS_NO_OVERRIDE = 0x00,
+	FV_CS_NUMERIC_UNDERLINE = 0x20,
+	FV_CS_OVERLINE = 0x01,
+	FV_CS_SINGLE_UNDERLINE = 0x04,
+	FV_CS_STRIKETHROUGH = 0x02,
+	FV_CancelBeefyDoc = 114,
+	FV_CancelBook = 108,
+	FV_CancelBookMIF = 109,
+	FV_CancelFileBrowser = 113,
+	FV_CancelFileDoc = 33,
+	FV_CancelFileFilterable = 35,
+	FV_CancelFileGraphic = 36,
+	FV_CancelFileHasStructure = 100,
+	FV_CancelFileIsDoc = 106,
+	FV_CancelFileIsFilterable = 110,
+	FV_CancelFileIsInUse = 99,
+	FV_CancelFileIsMIF = 107,
+	FV_CancelFileIsMacEdition = 39,
+	FV_CancelFileIsOldVersion = 111,
+	FV_CancelFileIsSgml = 115,
+	FV_CancelFileIsText = 98,
+	FV_CancelFileIsXml = 119,
+	FV_CancelFileMIF = 34,
+	FV_CancelFileSgml = 40,
+	FV_CancelFileText = 32,
+	FV_CancelFileXml = 41,
+	FV_CancelFontMetricsChanged = 104,
+	FV_CancelFontsMapped = 103,
+	FV_CancelFontsMappedInCatalog = 105,
+	FV_CancelFontsWithUnavailableEncodings = 116,
+	FV_CancelImportBrowser = 38,
+	FV_CancelInconsistentNumPropsInFileInBook = 34,
+	FV_CancelLanguagesNotFound = 102,
+	FV_CancelNonFMFileInBook = 32,
+	FV_CancelOpenFileNotWritable = 117,
+	FV_CancelReferencedFilesNotFound = 101,
+	FV_CancelSaveExportedFileInvalid = 53,
+	FV_CancelSaveFileIsInUse = 50,
+	FV_CancelSaveFileNotWritable = 51,
+	FV_CancelSaveModDateChanged = 52,
+	FV_CancelTempDiskFull = 118,
+	FV_CancelUseAutoSaveFile = 97,
+	FV_CancelUseRecoverFile = 96,
+	FV_CancelViewOnlyFileInBook = 33,
+	FV_CancelWrongProduct = 121,
+	FV_CancelWrongView = 120,
+	FV_CanceledExportObjectNeedsDpi = 33,
+	FV_CantForceImportAsText = 20,
+	FV_CantForceOpenAsText = 72,
+	FV_CantNewBooks = 68,
+	FV_CantOpenBooksFluid = 78,
+	FV_CantOpenBooksViewOnly = 69,
+	FV_ChangePersonalDictionary = 8,
+	FV_CheckCurrentPage = 2,
+	FV_CheckDocument = 1,
+	FV_ChecksumDamage = 77,
+	FV_ChooseMultiOpen = 0x00000010,
+	FV_ChooseMultiSelect = 0x00000008,
+	FV_ChooseOpen = 0x00000001,
+	FV_ChooseOpenDir = 0x00000004,
+	FV_ChooseSave = 0x00000002,
+	FV_ChooseSelect = 0x00000000,
+	FV_ClearDocDictionary = 7,
+	FV_CmdAlert = 8,
+	FV_CmdAlertTitle = 9,
+	FV_CmdApplyMathRules = 259,
+	FV_CmdBeginRange = 263,
+	FV_CmdEndRange = 264,
+	FV_CmdError = 1,
+	FV_CmdExit = 10,
+	FV_CmdFCodes = 256,
+	FV_CmdGoToLink = 11,
+	FV_CmdGoToLinkFitWin = 12,
+	FV_CmdGoToNew = 13,
+	FV_CmdGoToObjectId = 15,
+	FV_CmdGoToObjectIdFitWin = 16,
+	FV_CmdGoToPage = 14,
+	FV_CmdHelpLink = 262,
+	FV_CmdInCodes = 258,
+	FV_CmdMatrix = 17,
+	FV_CmdMessage = 18,
+	FV_CmdMultiMedia = 33,
+	FV_CmdNative = 261,
+	FV_CmdNewLink = 19,
+	FV_CmdNextPage = 20,
+	FV_CmdNoop = 3,
+	FV_CmdNotTyped = 0,
+	FV_CmdOpenLink = 22,
+	FV_CmdOpenLinkFitWin = 23,
+	FV_CmdOpenNew = 24,
+	FV_CmdOpenObjectId = 25,
+	FV_CmdOpenObjectIdFitWin = 26,
+	FV_CmdOpenPage = 27,
+	FV_CmdOpenXmlElementId = 821,
+	FV_CmdOutCodes = 257,
+	FV_CmdPopup = 28,
+	FV_CmdPreviousLink = 29,
+	FV_CmdPreviousLinkFitWin = 30,
+	FV_CmdPreviousPage = 21,
+	FV_CmdQuit = 31,
+	FV_CmdQuitAll = 32,
+	FV_CmdThesaurusLookup = 260,
+	FV_CmdUnknown = 2,
+	FV_DEPENDENCIES_SHOW_PROGRESSBAR = 0x01,
+	FV_DIALOG_DOCK_ALL = 0xFF,
+	FV_DIALOG_DOCK_BOTTOM = 8, // 0x1 << 3
+	FV_DIALOG_DOCK_LEFT = 0x1,
+	FV_DIALOG_DOCK_NONE = 0x00,
+	FV_DIALOG_DOCK_RIGHT = 2, // 0x1 << 1
+	FV_DIALOG_DOCK_TOP = 4, // 0x1 << 2
+	FV_DIALOG_GRIPPERBAR_FALSE = 1,
+	FV_DIALOG_GRIPPERBAR_TRUE = 0,
+	FV_DIALOG_GROUP_ALL = 0xFF,
+	FV_DIALOG_GROUP_ALLPANELS = 128, // 0x1 << 7
+	FV_DIALOG_GROUP_ATTRIBUTES = 8, // 0x1 << 3
+	FV_DIALOG_GROUP_CATALOGS = 2, // 0x1 << 1
+	FV_DIALOG_GROUP_DESIGNERS = 4, // 0x1 << 2
+	FV_DIALOG_GROUP_EDIT = 64, // 0x1 << 6
+	FV_DIALOG_GROUP_NONE = 0x0,
+	FV_DIALOG_GROUP_PODS = 16, // 0x1 << 4
+	FV_DIALOG_GROUP_PODSRIGHT = 32, // 0x1 << 5
+	FV_DIALOG_GROUP_RIGHT_BOTTOM = 1024, // 0x1 << 10
+	FV_DIALOG_GROUP_RIGHT_TOP = 512, // 0x1 << 9
+	FV_DIALOG_GROUP_RMKITS = 256, // 0x1 << 8
+	FV_DIALOG_GROUP_SPECIAL = 0x1,
+	FV_DIALOG_RESIZEGRIPPERPOS_BELOW = 2,
+	FV_DIALOG_RESIZEGRIPPERPOS_FRONT = 1,
+	FV_DIALOG_RESIZEGRIPPERPOS_NONE = 0,
+	FV_DIR_Inherit = 0,
+	FV_DIR_LTR = 1,
+	FV_DIR_RTL = 2,
+	FV_DITAObjTypeAuto = 0,
+	FV_DITAObjTypeConref = 1,
+	FV_DITAObjTypeLink = 3,
+	FV_DITAObjTypeMax = 6,
+	FV_DITAObjTypeTopicref = 4,
+	FV_DITAObjTypeTopicsetref = 5,
+	FV_DITAObjTypeXref = 2,
+	FV_DITA_TYPE_ANCHOR = 12,
+	FV_DITA_TYPE_GENERAL = 1,
+	FV_DITA_TYPE_KEYDEF = 3,
+	FV_DITA_TYPE_MAPREF = 8,
+	FV_DITA_TYPE_NAVREF = 9,
+	FV_DITA_TYPE_RELTABLE = 2,
+	FV_DITA_TYPE_TITLE = 10,
+	FV_DITA_TYPE_TOPICGROUP = 4,
+	FV_DITA_TYPE_TOPICHEAD = 5,
+	FV_DITA_TYPE_TOPICREF = 11,
+	FV_DITA_TYPE_TOPICSET = 7,
+	FV_DITA_TYPE_TOPICSETREF = 6,
+	FV_DOC_ISNOT_DITAMAP = 31,
+	FV_DOC_TYPE_BINARY = 0x01,
+	FV_DOC_TYPE_FILTER = 0x04,
+	FV_DOC_TYPE_MIF = 0x03,
+	FV_DOC_TYPE_TEXT = 0x02,
+	FV_DT_FLOAT = 2,
+	FV_DT_INTEGER = 1,
+	FV_DT_NUMTYPES = 3,
+	FV_DT_UNSPECIFIED = 0,
+	FV_DeleteEmptyPages = 4,
+	FV_DestFirstPage = 2,
+	FV_DestFluidFlow = 5,
+	FV_DestLastPage = 3,
+	FV_DestMarker = 6,
+	FV_DestMarkerNewLink = 1,
+	FV_DestNowhere = 0,
+	FV_DestObjectId = 7,
+	FV_DestPageNum = 4,
+	FV_DestXRef = 8,
+	FV_DisallowedImportType = 21,
+	FV_DisallowedType = 73,
+	FV_DlgClose = -1,
+	FV_DlgEnter = -4,
+	FV_DlgHide = -10,
+	FV_DlgInit = -9,
+	FV_DlgNeedsUpdate = -8,
+	FV_DlgNextPage = -7,
+	FV_DlgNoChange = -3,
+	FV_DlgOptActive = 1,
+	FV_DlgOptDontCare = 2,
+	FV_DlgOptNotActive = 0,
+	FV_DlgPrefCommit = -102,
+	FV_DlgPrefSetInitialState = -100,
+	FV_DlgPrefVerify = -101,
+	FV_DlgPrevPage = -6,
+	FV_DlgReset = -2,
+	FV_DlgResize = -12,
+	FV_DlgShow = -11,
+	FV_DlgTypeModal = 1,
+	FV_DlgTypeModeless = 2,
+	FV_DlgUndo = -5,
+	FV_DoByCopy = 6,
+	FV_DoByRef = 5,
+	FV_DoCancel = 0,
+	FV_DoImportAsTable = 8,
+	FV_DoNo = 3,
+	FV_DoOK = 1,
+	FV_DoOnline = 0,
+	FV_DoPrint = 1,
+	FV_DoShowDialog = 4,
+	FV_DoUserChoice = 7,
+	FV_DoUserPreference = 12,
+	FV_DoYes = 2,
+	FV_DocDamagedByTextFilter = 74,
+	FV_DocHeadersDamaged = 75,
+	FV_DocKeyCatalogTypeDefault = 0,
+	FV_DocKeyCatalogTypeMax = 3,
+	FV_DocKeyCatalogTypeNone = 2,
+	FV_DocKeyCatalogTypeSpecified = 1,
+	FV_DocWrongSize = 76,
+	FV_DocumentDictionary = 2,
+	FV_DontChangePageCount = 1,
+	FV_DuplicateFileInBook = 1,
+	FV_EDT_AFTER = 49,
+	FV_EDT_ALL = 43,
+	FV_EDT_ANY = 42,
+	FV_EDT_ATTRGRPO = 30,
+	FV_EDT_BEFORE = 50,
+	FV_EDT_BETWEEN = 53,
+	FV_EDT_ELEMENT = 25,
+	FV_EDT_FIRST = 44,
+	FV_EDT_INSERTPAR = 23,
+	FV_EDT_LAST = 46,
+	FV_EDT_MIDDLE = 45,
+	FV_EDT_NOTFIRST = 47,
+	FV_EDT_NOTLAST = 48,
+	FV_EDT_ONLY = 62,
+	FV_EDT_TEXT = 40,
+	FV_EDT_TEXTONLY = 41,
+	FV_ELCAT_ALL = 0x03,
+	FV_ELCAT_CHILDREN = 0x02,
+	FV_ELCAT_CUSTOM = 0x04,
+	FV_ELCAT_LOOSE = 0x01,
+	FV_ELCAT_STRICT = 0x00,
+	FV_ELEMENT_CATALOG = 8,
+	FV_ELEM_ATTRVAL_INVALID = 0x4000,
+	FV_ELEM_ATTRVAL_REQUIRED = 0x2000,
+	FV_ELEM_BOOK_COMP_INVALID = 0x1000,
+	FV_ELEM_BOOK_COMP_MISSING = 0x0800,
+	FV_ELEM_CONTENT_LOOSELY_VALID = 0x20000,
+	FV_ELEM_CONTENT_MUST_BE_EMPTY = 0x0040,
+	FV_ELEM_CONTENT_STRICTLY_VALID = 0x10000,
+	FV_ELEM_DISP_BRACKETS = 1,
+	FV_ELEM_DISP_NONE = 0,
+	FV_ELEM_DISP_TAGS = 2,
+	FV_ELEM_EXCLUDED = 0x0004,
+	FV_ELEM_HAS_TEXT_INVALID = 0x0020,
+	FV_ELEM_INVALID_AT_POSITION = 0x0010,
+	FV_ELEM_INVALID_IN_PARENT = 0x0008,
+	FV_ELEM_INVISIBLE_ATTRVAL_INVALID = 0x80000,
+	FV_ELEM_INVISIBLE_ATTRVAL_REQUIRED = 0x40000,
+	FV_ELEM_MISSING_CONTENT_AT_BEG = 0x0100,
+	FV_ELEM_MISSING_CONTENT_AT_END = 0x0200,
+	FV_ELEM_MISSING_CONTENT_BEFORE = 0x0080,
+	FV_ELEM_NOT_VALID_AS_ROOT = 0x0400,
+	FV_ELEM_TYPE_MISMATCH = 0x0002,
+	FV_ELEM_UNDEFINED = 0x0001,
+	FV_EMUL_DOWN = 1,
+	FV_EMUL_UP = 0,
+	FV_ENABLE_ALWAYS_DISABLE = 2,
+	FV_ENABLE_ALWAYS_ENABLE = 1,
+	FV_ENABLE_BOOK_HAS_SELECTION = 29,
+	FV_ENABLE_CAN_PASTE = 24,
+	FV_ENABLE_COPY = 22,
+	FV_ENABLE_COPY_FONT = 23,
+	FV_ENABLE_DOC_OR_BOOK_HAS_SELECTION = 30,
+	FV_ENABLE_IN_CELL_TEXT = 11,
+	FV_ENABLE_IN_FLOW = 21,
+	FV_ENABLE_IN_MATH = 6,
+	FV_ENABLE_IN_PARA_TEXT = 3,
+	FV_ENABLE_IN_TABLE = 9,
+	FV_ENABLE_IN_TABLE_TITLE = 10,
+	FV_ENABLE_IN_TEXT = 7,
+	FV_ENABLE_IN_TEXT_LINE = 4,
+	FV_ENABLE_IS_AFRAME = 18,
+	FV_ENABLE_IS_CELL = 12,
+	FV_ENABLE_IS_CELLS = 13,
+	FV_ENABLE_IS_GRAPHIC_INSET = 20,
+	FV_ENABLE_IS_OBJ = 15,
+	FV_ENABLE_IS_OR_IN_FRAME = 17,
+	FV_ENABLE_IS_TABLE = 14,
+	FV_ENABLE_IS_TEXT_FRAME = 16,
+	FV_ENABLE_IS_TEXT_INSET = 19,
+	FV_ENABLE_IS_TEXT_SEL = 5,
+	FV_ENABLE_IS_VIEW_ONLY = 25,
+	FV_ENABLE_NEEDS_BOOKP_ONLY = 27,
+	FV_ENABLE_NEEDS_DOCP_ONLY = 26,
+	FV_ENABLE_NEEDS_DOCP_OR_BOOKP = 28,
+	FV_ENABLE_OBJ_PROPS = 8,
+	FV_ENUMERATE_BOOKCOMP_FOLDER = 256, // 1 << 8
+	FV_ENUMERATE_BOOKCOMP_GROUP = 512, // 1 << 9
+	FV_ENUMERATE_COMPFILE_BOOKBINARY = 16384, // 1 << 14
+	FV_ENUMERATE_COMPFILE_BOOKMIF = 32768, // 1 << 15
+	FV_ENUMERATE_COMPFILE_FMBINARY = 4096, // 1 << 12
+	FV_ENUMERATE_COMPFILE_FMMIF = 8192, // 1 << 13
+	FV_ENUMERATE_COMPFILE_XML = 65536, // 1 << 16
+	FV_ENUMERATE_COMP_CHILDBOOK_COMPONENTS = 128, // 1 << 7
+	FV_ENUMERATE_COMP_CHILDMAP_COMPONENTS = 64, // 1 << 6
+	FV_ENUMERATE_COMP_FOLDER_COMPONENTS = 1024, // 1 << 10
+	FV_ENUMERATE_COMP_GROUP_COMPONENTS = 2048, // 1 << 11
+	FV_ENUMERATE_DITACOMP_KEYDEF = 32, // 1 << 5
+	FV_ENUMERATE_DITACOMP_MAPREF = 4, // 1 << 2
+	FV_ENUMERATE_DITACOMP_TOPICREF = 2, // 1 << 1
+	FV_ENUMERATE_DITACOMP_TOPICSET = 8, // 1 << 3
+	FV_ENUMERATE_DITACOMP_TOPICSETREF = 16, // 1 << 4
+	FV_EUC = 7,
+	FV_EUC_CNS = 9,
+	FV_EXCLUDE_CONREF_DEPENDENCIES = 0x20,
+	FV_EXCLUDE_GRAPHICS_DEPENDENCIES = 0x01,
+	FV_EXCLUDE_NONE = 0x10,
+	FV_EXCLUDE_OLE_DEPENDENCIES = 0x04,
+	FV_EXCLUDE_TEXT_INSET_DEPENDENCIES = 0x02,
+	FV_EXCLUDE_XREF_DEPENDENCIES = 0x08,
+	FV_EditableCopyOpened = 45,
+	FV_Element = 0,
+	FV_ElementsOfType = 1,
+	FV_EnclosingDoc = 1,
+	FV_EvCaps = 0x0008,
+	FV_EvCommand = 0x0010,
+	FV_EvControl = 0x0002,
+	FV_EvMax = 0x0010,
+	FV_EvMeta = 0x0004,
+	FV_EvOption = 0x0004,
+	FV_EvShift = 0x0001,
+	FV_ExportDocument = 0,
+	FV_ExportFileHasNewName = 0,
+	FV_ExportFileNotWritable = 2,
+	FV_ExportObject = 1,
+	FV_ExportProductIsViewer = 1,
+	FV_FAMILY_MAPPED = 0x00000004,
+	FV_FAMILY_SELECTABLE = 0x00000002,
+	FV_FAMILY_SURROGATE = 0xFFFF0000,
+	FV_FAMILY_VISIBLE = 0x00000001,
+	FV_FILL_BLACK = 0,
+	FV_FILL_CLEAR = 15,
+	FV_FILL_WHITE = 7,
+	FV_FIT_FRAME_TO_IMAGE = 0,
+	FV_FIT_FRAME_TO_IMAGE_PROPORTIONAL = 2,
+	FV_FIT_IMAGE_TO_FRAME = 1,
+	FV_FIT_WINDOW_TO_PAGE = -3,
+	FV_FIXED_YAKUMONO = 0x02,
+	FV_FLOATING_YAKUMONO = 0x00,
+	FV_FN_NUM_ABJAD_NUMERIC = 0x14,
+	FV_FN_NUM_ALIFBATA_NUMERIC = 0x15,
+	FV_FN_NUM_ALPHA_LC = 0x04,
+	FV_FN_NUM_ALPHA_UC = 0x03,
+	FV_FN_NUM_CHINESE_NUMERIC = 0x10,
+	FV_FN_NUM_CUSTOM = 0x05,
+	FV_FN_NUM_DAIJI = 0x0B,
+	FV_FN_NUM_FARSI_ALPHA = 0x18,
+	FV_FN_NUM_FARSI_NUMERIC = 0x12,
+	FV_FN_NUM_FULL_WIDTH = 0x0C,
+	FV_FN_NUM_FULL_WIDTH_LC = 0x0E,
+	FV_FN_NUM_FULL_WIDTH_UC = 0x0D,
+	FV_FN_NUM_HEBREW_ALPHA = 0x19,
+	FV_FN_NUM_HEBREW_NUMERIC = 0x13,
+	FV_FN_NUM_INDIC_NUMERIC = 0x11,
+	FV_FN_NUM_KANJI = 0x06,
+	FV_FN_NUM_KANJI_KAZU = 0x0A,
+	FV_FN_NUM_NUMERIC = 0x00,
+	FV_FN_NUM_ROMAN_LC = 0x02,
+	FV_FN_NUM_ROMAN_UC = 0x01,
+	FV_FN_NUM_THAI_ALPHA = 0x17,
+	FV_FN_NUM_THAI_NUMERIC = 0x16,
+	FV_FN_NUM_ZENKAKU = 0x07,
+	FV_FN_NUM_ZENKAKU_LC = 0x09,
+	FV_FN_NUM_ZENKAKU_UC = 0x08,
+	FV_FN_POS_BASELINE = 0x01,
+	FV_FN_POS_SUB = 0x02,
+	FV_FN_POS_SUPER = 0x00,
+	FV_FORMATBAR_CLOSE = 5,
+	FV_FORMATBAR_OPEN = 4,
+	FV_FO_CONTAINER = 1,
+	FV_FO_EQN = 7,
+	FV_FO_FOOTNOTE = 5,
+	FV_FO_GRAPHIC = 6,
+	FV_FO_MARKER = 4,
+	FV_FO_MMLEQN = 17,
+	FV_FO_NUMTYPES = 18,
+	FV_FO_RUBI = 16,
+	FV_FO_RUBI_GROUP = 15,
+	FV_FO_SYS_VAR = 2,
+	FV_FO_TBL = 8,
+	FV_FO_TBL_BODY = 11,
+	FV_FO_TBL_CELL = 14,
+	FV_FO_TBL_FOOTING = 12,
+	FV_FO_TBL_HEADING = 10,
+	FV_FO_TBL_ROW = 13,
+	FV_FO_TBL_TITLE = 9,
+	FV_FO_TEXTNODE = 0,
+	FV_FO_UNSPECIFIED = 0,
+	FV_FO_XREF = 3,
+	FV_FROMCOLOR = 0x02,
+	FV_FTON = 2,
+	FV_FileAlreadyOpen = 48,
+	FV_FileAlreadyOpenThisSession = 65,
+	FV_FileHadStructure = 64,
+	FV_FileHasNewName = 32,
+	FV_FileInBookNotOpened = 96,
+	FV_FileInBookNotSaved = 97,
+	FV_FileIsNotWritable = 6,
+	FV_FileIsOldVersion = 41,
+	FV_FileIsText = 43,
+	FV_FileIsViewOnly = 4,
+	FV_FileModDateChanged = 7,
+	FV_FileNotReadable = 130,
+	FV_FileNotSupported = 0,
+	FV_FileNotSupportedFormViewXml = -1,
+	FV_FileNotSupportedValidXml = -2,
+	FV_FileNotWritable = 33,
+	FV_FileOpenAlertUserAboutFailure = 0x00000002,
+	FV_FileOpenMakeVisible = 0x00000001,
+	FV_FileOpenUpdateTextReferences = 0x00000008,
+	FV_FileOpenUpdateXRefs = 0x00000004,
+	FV_FileStructureStripped = 42,
+	FV_FileSupported = 1,
+	FV_FileTypeBinaryBook = 2,
+	FV_FileTypeBinaryDoc = 1,
+	FV_FileTypeCompositeDoc = 13,
+	FV_FileTypeEquation = 11,
+	FV_FileTypeErrorDoc = 10,
+	FV_FileTypeFilter = 7,
+	FV_FileTypeFolder = 8,
+	FV_FileTypeGeneral = 9,
+	FV_FileTypeMif = 3,
+	FV_FileTypeSgml = 5,
+	FV_FileTypeSummaryDoc = 14,
+	FV_FileTypeText = 6,
+	FV_FileTypeThesaurus = 12,
+	FV_FileTypeXml = 4,
+	FV_FileWasExported = 49,
+	FV_FileWasFiltered = 35,
+	FV_FileWasInUse = 3,
+	FV_FilterFailed = 22,
+	FV_FindAnchoredFrame = 7,
+	FV_FindAnyMarker = 0,
+	FV_FindAnyPub = 5,
+	FV_FindAnyRubi = 11,
+	FV_FindAnyTable = 9,
+	FV_FindAnyTextInset = 3,
+	FV_FindAnyVariable = 6,
+	FV_FindAnyXRef = 1,
+	FV_FindAttrName = 1,
+	FV_FindAttrValue = 2,
+	FV_FindAutomaticHyphen = 10,
+	FV_FindCharacterFormatOverride = 13,
+	FV_FindElemTag = 0,
+	FV_FindFootnote = 8,
+	FV_FindPgfFormatOverride = 12,
+	FV_FindStyleFormatOverride = 15,
+	FV_FindTableFormatOverride = 14,
+	FV_FindUnresolvedTextInset = 4,
+	FV_FindUnresolvedXRef = 2,
+	FV_FlowUnstructured = 30,
+	FV_FontMetricsChanged = 37,
+	FV_FontsMappedInCatalog = 38,
+	FV_FontsWereMapped = 36,
+	FV_FontsWithUnavailableEncodingsUsed = 53,
+	FV_Footing = 1239,
+	FV_GB = 10,
+	FV_GRAPHIC = 9,
+	FV_GRAPHICS_CATALOG = 14,
+	FV_GetDictionaryStrings = 9,
+	FV_HELP_CONTEXT = 5,
+	FV_HELP_HYPERTEXT = 7,
+	FV_HELP_INDEX = 0,
+	FV_HELP_INIT_CONTEXT = 6,
+	FV_HELP_KEYS = 1,
+	FV_HELP_ONLINE_MANUALS = 4,
+	FV_HELP_OVERVIEW = 3,
+	FV_HELP_SAMPLES = 2,
+	FV_HELP_WEBWORKS = 8,
+	FV_HIST = 12,
+	FV_HZ = 11,
+	FV_Heading = 1238,
+	FV_Hint_FilterName = 5,
+	FV_Hint_FilterVersion = 4,
+	FV_Hint_FormatId = 2,
+	FV_Hint_HintVersion = 0,
+	FV_Hint_Platform = 3,
+	FV_Hint_VendorId = 1,
+	FV_HypertextBadMatrixSize = 250,
+	FV_HypertextBadSyntaxPathSpec = 10,
+	FV_HypertextCantOpenDestFile = 212,
+	FV_HypertextCommandIllegalWithinPopup = 273,
+	FV_HypertextDestinationLinkNotFound = 220,
+	FV_HypertextDuplicateLinkName = 221,
+	FV_HypertextEmptyCommand = 1,
+	FV_HypertextEmptyLineInMiddleOfPopup = 272,
+	FV_HypertextExpectedANumberParam = 30,
+	FV_HypertextExtraArguments = 4,
+	FV_HypertextFcodeInvalid = 280,
+	FV_HypertextFileNotMakerDoc = 211,
+	FV_HypertextFileNotRegular = 210,
+	FV_HypertextFlowMissingLines = 252,
+	FV_HypertextHelpDirNotFound = 20,
+	FV_HypertextMatrixCommandInvalid = 251,
+	FV_HypertextMissingArguments = 3,
+	FV_HypertextMissingPopupLabelItem = 271,
+	FV_HypertextMissingPopupMarker = 270,
+	FV_HypertextNoNamedFlow = 260,
+	FV_HypertextObjectIDNotFound = 241,
+	FV_HypertextPageNameNotFound = 230,
+	FV_HypertextRecursiveFlow = 261,
+	FV_HypertextSyntaxOK = 0,
+	FV_HypertextUnanchoredPartialPath = 11,
+	FV_HypertextUnrecognizedCommand = 2,
+	FV_HypertextUnrecognizedObjectType = 240,
+	FV_HypertextUsesDefaultText = 200,
+	FV_HypertextValid = 0,
+	FV_IMG_NEGATIVE = 1,
+	FV_IMG_POSITIVE = 0,
+	FV_INCLUSION = 0x08,
+	FV_INCREMENT_MAIN_PROGRESS_STEP_SAVE_AS_PDF = 1,
+	FV_INCREMENT_PROGRESS_STEP_SAVE_AS_PDF = 5,
+	FV_INTERACT_ROTATE = 1,
+	FV_INTERACT_ROTATE_CONSTRAIN = 2,
+	FV_ITEM_HAS_NO_SHIFT_OR_UNSHIFT_COMMAND = 3,
+	FV_ITEM_HAS_SHIFT_COMMAND = 1,
+	FV_ITEM_HAS_UNSHIFT_COMMAND = 2,
+	FV_ITON = 0,
+	FV_ImportFileNotReadable = 48,
+	FV_ImportedByCopy = 0,
+	FV_ImportedFilteredFile = 5,
+	FV_ImportedGraphicFile = 6,
+	FV_ImportedMIF = 3,
+	FV_ImportedMacEdition = 7,
+	FV_ImportedMakerDoc = 4,
+	FV_ImportedSgmlDoc = 8,
+	FV_ImportedText = 1,
+	FV_ImportedTextTable = 2,
+	FV_ImportedXmlDoc = 9,
+	FV_InsertionPointInFootnote = 26,
+	FV_InsertionPointInTableCell = 25,
+	FV_InsertionPointNotInText = 24,
+	FV_InsufficientMem = 3,
+	FV_InsufficientMemory = 27,
+	FV_InternalMathMLMinDpi = 6,
+	FV_InternalMathMLTypeUnknown = 2,
+	FV_InvalidExportFilter = 23,
+	FV_InvalidSaveFilter = 42,
+	FV_InvalidTextRange = 19,
+	FV_IsoLatin = 1,
+	FV_JIS = 5,
+	FV_KNOCKOUT = 0x00,
+	FV_KeyCatalogWorkflowAuthoring = 0,
+	FV_KeyCatalogWorkflowMax = 3,
+	FV_KeyCatalogWorkflowPublishing = 1,
+	FV_KeyCatalogWorkflowSearching = 2,
+	FV_KeyDefFieldSize = 2,
+	FV_KeyDefFieldsTypeAll = 1,
+	FV_KeyDefFieldsTypeMax = 2,
+	FV_KeyDefFieldsTypePrimary = 0,
+	FV_KeyDefMaxFields = 11,
+	FV_KeyDefMaxPrimaryFields = 5,
+	FV_KeySrcTypeDitamap = 1,
+	FV_KeySrcTypeNone = 0,
+	FV_KeydefKeyAttrs = 10,
+	FV_KeydefKeyAttrsType = 21,
+	FV_KeydefKeyDefaultText = 7,
+	FV_KeydefKeyDefaultTextType = 3,
+	FV_KeydefKeyDuplicate = 4,
+	FV_KeydefKeyDuplicateType = 1,
+	FV_KeydefKeyFoundInRefFile = 8,
+	FV_KeydefKeyFoundInRefFileType = 1,
+	FV_KeydefKeyInValid = 9,
+	FV_KeydefKeyInValidType = 1,
+	FV_KeydefKeySrcFile = 3,
+	FV_KeydefKeySrcFileType = 3,
+	FV_KeydefKeySrcType = 5,
+	FV_KeydefKeySrcTypeType = 1,
+	FV_KeydefKeyTag = 1,
+	FV_KeydefKeyTagType = 3,
+	FV_KeydefKeyTarget = 2,
+	FV_KeydefKeyTargetType = 3,
+	FV_KeydefKeyVarList = 6,
+	FV_KeydefKeyVarListType = 20,
+	FV_KeydefVariableInfoLen = 3,
+	FV_KeydefVariableInfoTagPrimary = 0,
+	FV_KeydefVariableInfoTagSecondary = 1,
+	FV_KeydefVariableInfoText = 2,
+	FV_Korean = 12,
+	FV_LANG_ARABIC = 0x27,
+	FV_LANG_BRAZILIAN = 0x0B,
+	FV_LANG_BRITISH = 0x02,
+	FV_LANG_BULGARIAN = 0x21,
+	FV_LANG_CANADIAN_FRENCH = 0x06,
+	FV_LANG_CATALAN = 0x08,
+	FV_LANG_CROATIAN = 0x22,
+	FV_LANG_CZECH = 0x1B,
+	FV_LANG_DANISH = 0x0C,
+	FV_LANG_DUTCH = 0x0D,
+	FV_LANG_ENGLISH = 0x01,
+	FV_LANG_ESTONIAN = 0x23,
+	FV_LANG_FARSI = 0x2A,
+	FV_LANG_FINNISH = 0x10,
+	FV_LANG_FRENCH = 0x05,
+	FV_LANG_GERMAN = 0x03,
+	FV_LANG_GREEK = 0x19,
+	FV_LANG_HEBREW = 0x28,
+	FV_LANG_HUNGARIAN = 0x1D,
+	FV_LANG_ITALIAN = 0x09,
+	FV_LANG_JAPANESE = 0x12,
+	FV_LANG_KOREAN = 0x15,
+	FV_LANG_LATVIAN = 0x24,
+	FV_LANG_LITHUANIAN = 0x25,
+	FV_LANG_NEW_DUTCH = 0x18,
+	FV_LANG_NEW_GERMAN = 0x16,
+	FV_LANG_NEW_SWISS_GERMAN = 0x17,
+	FV_LANG_NOLANGUAGE = 0x00,
+	FV_LANG_NORWEGIAN = 0x0E,
+	FV_LANG_NUM = 0x2B,
+	FV_LANG_NYNORSK = 0x0F,
+	FV_LANG_POLISH = 0x1C,
+	FV_LANG_PORTUGUESE = 0x0A,
+	FV_LANG_ROMANIAN = 0x26,
+	FV_LANG_RUSSIAN = 0x1A,
+	FV_LANG_SIMPLIFIED_CHINESE = 0x14,
+	FV_LANG_SLOVAK = 0x1F,
+	FV_LANG_SLOVENIAN = 0x20,
+	FV_LANG_SPANISH = 0x07,
+	FV_LANG_SWEDISH = 0x11,
+	FV_LANG_SWISS_GERMAN = 0x04,
+	FV_LANG_THAI = 0x29,
+	FV_LANG_TRADITIONAL_CHINESE = 0x13,
+	FV_LANG_TURKISH = 0x1E,
+	FV_LEVELS_ALL = -1,
+	FV_LEVELS_DEFAULT = -2,
+	FV_LEVEL_RULE = 1,
+	FV_LOOSELY_VALID = 0x02,
+	FV_LanguagesWerentFound = 39,
+	FV_Left = 1242,
+	FV_ListViewActionMax = 10,
+	FV_ListViewAddColumn = 2,
+	FV_ListViewAddColumnNumParams = 4,
+	FV_ListViewAddColumnParam1 = 3,
+	FV_ListViewAddColumnParam2 = 1,
+	FV_ListViewAddColumnParam3 = 1,
+	FV_ListViewAddColumnParam4 = 1,
+	FV_ListViewAddRow = 3,
+	FV_ListViewAddRowNumParams = 1,
+	FV_ListViewAddRowParam1 = 6,
+	FV_ListViewDeleteAllRows = 4,
+	FV_ListViewDeleteAllRowsNumParams = 0,
+	FV_ListViewInit = 1,
+	FV_ListViewInitNumParams = 0,
+	FV_ListViewReSortAllRows = 5,
+	FV_ListViewReSortAllRowsNumParams = 0,
+	FV_ListViewSelectFirstRow = 7,
+	FV_ListViewSelectRowFromColData = 8,
+	FV_ListViewSelectRowFromRowId = 9,
+	FV_ListViewSetSortEnabled = 6,
+	FV_LockCouldntBeReset = 2,
+	FV_LockNotReset = 1,
+	FV_LockWasInvalid = 5,
+	FV_LockWasReset = 0,
+	FV_MATH = 3,
+	FV_MATH_LARGE = 2,
+	FV_MATH_MEDIUM = 0,
+	FV_MATH_SMALL = 1,
+	FV_MENUITEM_API = 2,
+	FV_MENUITEM_EXPANDOMATIC = 4,
+	FV_MENUITEM_FRAME = 1,
+	FV_MENUITEM_MACRO = 3,
+	FV_MENU_ADHOCRULER = 3,
+	FV_MENU_COMPLETE = 2,
+	FV_MENU_CUSTOM = 3,
+	FV_MENU_DEFAULT = 4,
+	FV_MENU_MENUBAR = 1,
+	FV_MENU_POPUP = 2,
+	FV_MENU_QUICK = 1,
+	FV_MODE_ALL = 3,
+	FV_MODE_MATH = 1,
+	FV_MODE_NONMATH = 2,
+	FV_MONOSPACE_YAKUMONO = 0x01,
+	FV_MacANSI = 4,
+	FV_MakePageCountEven = 2,
+	FV_MakePageCountOdd = 3,
+	FV_MergeDictionaryContents = 5,
+	FV_MiniTOC = 0,
+	FV_MissingExportScript = 17,
+	FV_MissingImportScript = 19,
+	FV_MissingScript = 71,
+	FV_ModeSave = 0,
+	FV_ModeSaveAs = 1,
+	FV_NARROW = 1,
+	FV_NO_BASE_COLOR = 0x00,
+	FV_NO_ZOOM_MANGLING = -1,
+	FV_NTOF = 3,
+	FV_NTOI = 1,
+	FV_NUMSTYLE_ABJAD_NUMERIC = 0x14,
+	FV_NUMSTYLE_ALIFBATA_NUMERIC = 0x15,
+	FV_NUMSTYLE_ALPHA_LC = 0x04,
+	FV_NUMSTYLE_ALPHA_UC = 0x03,
+	FV_NUMSTYLE_CHINESE_NUMERIC = 0x10,
+	FV_NUMSTYLE_DAIJI = 0x0a,
+	FV_NUMSTYLE_FARSI_ALPHA = 0x18,
+	FV_NUMSTYLE_FARSI_NUMERIC = 0x12,
+	FV_NUMSTYLE_FULLWIDTH = 0x0c,
+	FV_NUMSTYLE_FULLWIDTH_LC = 0x0e,
+	FV_NUMSTYLE_FULLWIDTH_UC = 0x0d,
+	FV_NUMSTYLE_HEBREW_ALPHA = 0x19,
+	FV_NUMSTYLE_HEBREW_NUMERIC = 0x13,
+	FV_NUMSTYLE_INDIC_NUMERIC = 0x11,
+	FV_NUMSTYLE_KANJI = 0x05,
+	FV_NUMSTYLE_KANJI_KAZU = 0x09,
+	FV_NUMSTYLE_MAXIMUM_NUMERIC = 0x19,
+	FV_NUMSTYLE_NUMERIC = 0x00,
+	FV_NUMSTYLE_ROMAN_LC = 0x02,
+	FV_NUMSTYLE_ROMAN_UC = 0x01,
+	FV_NUMSTYLE_TEXT = 0x0b,
+	FV_NUMSTYLE_THAI_ALPHA = 0x17,
+	FV_NUMSTYLE_THAI_NUMERIC = 0x16,
+	FV_NUMSTYLE_ZENKAKU = 0x06,
+	FV_NUMSTYLE_ZENKAKU_LC = 0x08,
+	FV_NUMSTYLE_ZENKAKU_UC = 0x07,
+	FV_NUM_CONTINUE = 0x01,
+	FV_NUM_PERPAGE = 0x03,
+	FV_NUM_READ_FROM_FILE = 0x00,
+	FV_NUM_RESTART = 0x02,
+	FV_NUM_SAME = 0x03,
+	FV_NoFlowWithSpecifiedName = 23,
+	FV_NoMainFlow = 22,
+	FV_NoNonGeneratedFilesInBook = 2,
+	FV_NonPortableFileRefs = 38,
+	FV_NonPortableSaveName = 37,
+	FV_NumExportStatusFields = 2,
+	FV_NumFindElementItems = 3,
+	FV_NumImportStatusFields = 2,
+	FV_NumOpenStatusFields = 5,
+	FV_NumSaveStatusFields = 2,
+	FV_NumUpdateBookStatusFields = 4,
+	FV_OBJ_END_OFFSET = 0x50000000,
+	FV_OVERPRINT = 0x01,
+	FV_OVERRIDDEN_CONREF_DUCT = 0x02,
+	FV_OVERRIDDEN_DEFAULT = 0x00,
+	FV_OVERRIDDEN_KEYDEF_TO_KEYREF = 0x03,
+	FV_OVERRIDDEN_NOVALUE = 0x01,
+	FV_ObjectDataLink = 7,
+	FV_ObjectElement = 5,
+	FV_ObjectGraphic = 4,
+	FV_ObjectMarker = 1,
+	FV_ObjectPgf = 2,
+	FV_ObjectTextInset = 6,
+	FV_ObjectUnknown = 0,
+	FV_ObjectXref = 3,
+	FV_OpenEditableCopy = 8,
+	FV_OpenViewOnly = 5,
+	FV_OpenedFluid = 51,
+	FV_OpenedViewOnly = 44,
+	FV_PAGE_NUM_ABJAD = 0x14,
+	FV_PAGE_NUM_ALIFBATA = 0x15,
+	FV_PAGE_NUM_ALPHA_LC = 0x04,
+	FV_PAGE_NUM_ALPHA_UC = 0x03,
+	FV_PAGE_NUM_CHINESE_NUMERIC = 0x10,
+	FV_PAGE_NUM_DAIJI = 0x0a,
+	FV_PAGE_NUM_FARSI = 0x12,
+	FV_PAGE_NUM_FARSI_ALPHA = 0x18,
+	FV_PAGE_NUM_FULLWIDTH = 0x0c,
+	FV_PAGE_NUM_FULLWIDTH_LC = 0x0e,
+	FV_PAGE_NUM_FULLWIDTH_UC = 0x0d,
+	FV_PAGE_NUM_HEBREW = 0x13,
+	FV_PAGE_NUM_HEBREW_ALPHA = 0x19,
+	FV_PAGE_NUM_INDIC = 0x11,
+	FV_PAGE_NUM_KANJI = 0x05,
+	FV_PAGE_NUM_KANJI_KAZU = 0x09,
+	FV_PAGE_NUM_NUMERIC = 0x00,
+	FV_PAGE_NUM_ROMAN_LC = 0x02,
+	FV_PAGE_NUM_ROMAN_UC = 0x01,
+	FV_PAGE_NUM_THAI = 0x16,
+	FV_PAGE_NUM_THAI_ALPHA = 0x17,
+	FV_PAGE_NUM_ZENKAKU = 0x06,
+	FV_PAGE_NUM_ZENKAKU_LC = 0x08,
+	FV_PAGE_NUM_ZENKAKU_UC = 0x07,
+	FV_PDFBookmarksOpenAllLevels = -2,
+	FV_PDFBookmarksOpenDefaultLevel = -1,
+	FV_PDFBookmarksOpenNoneLevel = -3,
+	FV_PDFRegistrationMarksMax = 2,
+	FV_PDFRegistrationMarksNone = 0,
+	FV_PDFRegistrationMarksTombo = 2,
+	FV_PDFRegistrationMarksWestern = 1,
+	FV_PDFZoomDefault = 1,
+	FV_PDFZoomHeight = 4,
+	FV_PDFZoomMaxValue = 4,
+	FV_PDFZoomNone = 0,
+	FV_PDFZoomPage = 2,
+	FV_PDFZoomWidth = 3,
+	FV_PGF_ANYWHERE = 0x00,
+	FV_PGF_CATALOG = 7,
+	FV_PGF_CENTER = 0x03,
+	FV_PGF_FIXED = 0x00,
+	FV_PGF_FIXED_B_MARGIN = 0x02,
+	FV_PGF_FIXED_L_MARGIN = 0x01,
+	FV_PGF_FIXED_R_MARGIN = 0x04,
+	FV_PGF_FIXED_T_MARGIN = 0x08,
+	FV_PGF_FLOATING = 0x02,
+	FV_PGF_JUSTIFIED = 0x04,
+	FV_PGF_LEFT = 0x01,
+	FV_PGF_PROPORTIONAL = 0x01,
+	FV_PGF_RIGHT = 0x02,
+	FV_PGF_RUN_IN = 4,
+	FV_PGF_SIDEBODY = 0,
+	FV_PGF_SIDEHEAD_FIRST_BASELINE = 2,
+	FV_PGF_SIDEHEAD_LAST_BASELINE = 3,
+	FV_PGF_SIDEHEAD_TOP = 1,
+	FV_PGF_STRADDLE = 5,
+	FV_PGF_STRADDLE_NORMAL_ONLY = 6,
+	FV_PGF_TOP_OF_COL = 0x01,
+	FV_PGF_TOP_OF_LEFT_PAGE = 0x03,
+	FV_PGF_TOP_OF_PAGE = 0x02,
+	FV_PGF_TOP_OF_RIGHT_PAGE = 0x04,
+	FV_PGF_V_ALIGN_BOTTOM = 2,
+	FV_PGF_V_ALIGN_MIDDLE = 1,
+	FV_PGF_V_ALIGN_TOP = 0,
+	FV_POINT_PAGE_CHINESE_NUMERIC = 0x10,
+	FV_POINT_PAGE_FULLWIDTH = 0x0c,
+	FV_POINT_PAGE_FULLWIDTH_LC = 0x0e,
+	FV_POINT_PAGE_FULLWIDTH_UC = 0x0d,
+	FV_POINT_PAGE_NUM_ABJAD = 0x14,
+	FV_POINT_PAGE_NUM_ALIFBATA = 0x15,
+	FV_POINT_PAGE_NUM_ALPHA_LC = 0x04,
+	FV_POINT_PAGE_NUM_ALPHA_UC = 0x03,
+	FV_POINT_PAGE_NUM_DAIJI = 0x0a,
+	FV_POINT_PAGE_NUM_FARSI = 0x12,
+	FV_POINT_PAGE_NUM_FARSI_ALPHA = 0x18,
+	FV_POINT_PAGE_NUM_HEBREW = 0x13,
+	FV_POINT_PAGE_NUM_HEBREW_ALPHA = 0x19,
+	FV_POINT_PAGE_NUM_INDIC = 0x11,
+	FV_POINT_PAGE_NUM_KANJI = 0x05,
+	FV_POINT_PAGE_NUM_KANJI_KAZU = 0x09,
+	FV_POINT_PAGE_NUM_NUMERIC = 0x00,
+	FV_POINT_PAGE_NUM_ROMAN_LC = 0x02,
+	FV_POINT_PAGE_NUM_ROMAN_UC = 0x01,
+	FV_POINT_PAGE_NUM_THAI = 0x16,
+	FV_POINT_PAGE_NUM_THAI_ALPHA = 0x17,
+	FV_POINT_PAGE_NUM_ZENKAKU = 0x06,
+	FV_POINT_PAGE_NUM_ZENKAKU_LC = 0x08,
+	FV_POINT_PAGE_NUM_ZENKAKU_UC = 0x07,
+	FV_POS_NORM = 0,
+	FV_POS_SUB = 2,
+	FV_POS_SUPER = 1,
+	FV_PREVIEW_OFF_TRACK_CHANGE = 0,
+	FV_PREVIEW_ON_FINAL = 2,
+	FV_PREVIEW_ON_ORIGINAL = 1,
+	FV_PRINT_NO = 0x2,
+	FV_PRINT_PROCESS = 0x1,
+	FV_PRINT_SPOT = 0x0,
+	FV_PRODUCT_ALL = 7, // 0x01 | 0x02 | 0x04
+	FV_PRODUCT_STRUCTURED = 0x02,
+	FV_PRODUCT_UNSTRUCTURED = 0x01,
+	FV_PRODUCT_XMLAUTHOR = 0x04,
+	FV_PROPORTIONAL = 2,
+	FV_PR_ALL = 1,
+	FV_PR_DEL_EMPTY = 0x01,
+	FV_PR_DONT_CHANGE = 0x04,
+	FV_PR_DOWNLOAD_ALL = 2,
+	FV_PR_DOWNLOAD_ALL_BUT_STANDARD_13 = 3,
+	FV_PR_DOWNLOAD_ALL_BUT_STANDARD_35 = 4,
+	FV_PR_DOWNLOAD_NONE = 1,
+	FV_PR_KEEP_NUM_EVEN = 0x02,
+	FV_PR_KEEP_NUM_ODD = 0x03,
+	FV_PR_RANGE = 2,
+	FV_PlainText = 2,
+	FV_ProductIsMaker = 39,
+	FV_ProductIsViewer = 32,
+	FV_RC_CHANGELIST = 2,
+	FV_RC_CHANGELIST_TAG = 3,
+	FV_RC_SUB_FMTRULE = 1,
+	FV_RC_TAG = 0,
+	FV_REFERENCE_PAGE = 0x02,
+	FV_ROW_ANYWHERE = 0,
+	FV_ROW_BODY = 1,
+	FV_ROW_FOOTING = 2,
+	FV_ROW_HEADING = 0,
+	FV_ROW_TOP_OF_COL = 1,
+	FV_ROW_TOP_OF_LEFT_PAGE = 3,
+	FV_ROW_TOP_OF_PAGE = 2,
+	FV_ROW_TOP_OF_RIGHT_PAGE = 4,
+	FV_RecoverFileUsed = 33,
+	FV_RedoAll = 4,
+	FV_ReferencePage = 9,
+	FV_ReferencedFilesWerentFound = 47,
+	FV_ResetLockAndContinue = 7,
+	FV_Right = 1243,
+	FV_SCROLL_FACING = 3,
+	FV_SCROLL_HORIZONTAL = 1,
+	FV_SCROLL_VARIABLE = 0,
+	FV_SCROLL_VERTICAL = 2,
+	FV_SEP_NONE = 0x1,
+	FV_SEP_NORMAL = 0x0,
+	FV_SEP_WHITE = 0x2,
+	FV_SET_MAIN_PROGRESS_RANGE_SAVE_AS_PDF = 2,
+	FV_SET_PROGRESS_RANGE_SAVE_AS_PDF = 6,
+	FV_SH_INSIDE = 0x02,
+	FV_SH_LEFT = 0x00,
+	FV_SH_OUTSIDE = 0x03,
+	FV_SH_RIGHT = 0x01,
+	FV_STRICTLY_VALID = 0x01,
+	FV_SaveAsNameAskUser = 0,
+	FV_SaveAsNameProvided = 2,
+	FV_SaveAsUseFileName = 1,
+	FV_SaveFmtBinary = 0,
+	FV_SaveFmtBinary100 = 21,
+	FV_SaveFmtBinary110 = 23,
+	FV_SaveFmtBinary120 = 25,
+	FV_SaveFmtBinary130 = 27,
+	FV_SaveFmtBinary140 = 29,
+	FV_SaveFmtBinary150 = 31,
+	FV_SaveFmtBinary60 = 11,
+	FV_SaveFmtBinary70 = 12,
+	FV_SaveFmtBinary80 = 13,
+	FV_SaveFmtBinary90 = 16,
+	FV_SaveFmtBookWithFm = 20,
+	FV_SaveFmtBookWithXml = 19,
+	FV_SaveFmtCompositeDoc = 18,
+	FV_SaveFmtFilter = 8,
+	FV_SaveFmtInterchange = 1,
+	FV_SaveFmtInterchange100 = 22,
+	FV_SaveFmtInterchange110 = 24,
+	FV_SaveFmtInterchange120 = 26,
+	FV_SaveFmtInterchange130 = 28,
+	FV_SaveFmtInterchange140 = 30,
+	FV_SaveFmtInterchange150 = 32,
+	FV_SaveFmtInterchange70 = 14,
+	FV_SaveFmtInterchange80 = 15,
+	FV_SaveFmtInterchange90 = 17,
+	FV_SaveFmtPdf = 9,
+	FV_SaveFmtSgml = 7,
+	FV_SaveFmtStationery = 3,
+	FV_SaveFmtText = 6,
+	FV_SaveFmtViewOnly = 4,
+	FV_SaveFmtXml = 10,
+	FV_SaveNoAutoBackup = 1,
+	FV_SaveSkipTbls = 3,
+	FV_SaveTblColsAsPgfs = 2,
+	FV_SaveTblRowsAsPgfs = 1,
+	FV_SaveTblUserPref = 0,
+	FV_SaveUserPrefAutoBackup = 2,
+	FV_SaveYesAutoBackup = 0,
+	FV_SessionId = 0,
+	FV_SetDictionaryToNoneDictionary = 6,
+	FV_Shitf_JIS = 6,
+	FV_ShowAll = 1,
+	FV_ShowAsPerConditions = 2,
+	FV_ShowAsPerExpression = 3,
+	FV_SourceDoc = 0,
+	FV_SpellCapitalization = 2,
+	FV_SpellExtraSpace = 6,
+	FV_SpellHyphenation = 5,
+	FV_SpellMisspelling = 1,
+	FV_SpellRepeatedLetter = 4,
+	FV_SpellRepeatedWord = 3,
+	FV_SpellSpaceAfter = 7,
+	FV_SpellSpaceBefore = 8,
+	FV_SpellStraightQuotes = 9,
+	FV_StripStructureAndOpen = 10,
+	FV_TAB_CENTER = 0x2,
+	FV_TAB_DECIMAL = 0x4,
+	FV_TAB_LEFT = 0x1,
+	FV_TAB_RELATIVE_CENTER = 0x6,
+	FV_TAB_RELATIVE_DECIMAL = 0x8,
+	FV_TAB_RELATIVE_LEFT = 0x5,
+	FV_TAB_RELATIVE_RIGHT = 0x7,
+	FV_TAB_RIGHT = 0x3,
+	FV_TBL_ANYWHERE = 0,
+	FV_TBL_CATALOG = 13,
+	FV_TBL_FLOAT = 5,
+	FV_TBL_NO_TITLE = 0,
+	FV_TBL_NUM_BY_COL = 1,
+	FV_TBL_NUM_BY_ROW = 0,
+	FV_TBL_TITLE_ABOVE = 1,
+	FV_TBL_TITLE_BELOW = 2,
+	FV_TBL_TOP_OF_COL = 1,
+	FV_TBL_TOP_OF_LEFT_PAGE = 3,
+	FV_TBL_TOP_OF_PAGE = 2,
+	FV_TBL_TOP_OF_RIGHT_PAGE = 4,
+	FV_TEMPLATE_BROWSER = 11,
+	FV_TEXTLINE_CENTER = 2,
+	FV_TEXTLINE_LEFT = 0,
+	FV_TEXTLINE_MATH = 3,
+	FV_TEXTLINE_RIGHT = 1,
+	FV_THESAURUS = 10,
+	FV_TR_BBOX = 0x03,
+	FV_TR_CONTOUR = 0x02,
+	FV_TR_NONE = 0x01,
+	FV_TYPE_BINARY = 0x01,
+	FV_TYPE_FILTER = 0xFF,
+	FV_TYPE_MIF = 0x02,
+	FV_TYPE_SGML = 0x04,
+	FV_TYPE_TEXT = 0x03,
+	FV_TYPE_XML = 0x05,
+	FV_TextFile_EOLisEOP = 12,
+	FV_TextFile_EOLisNotEOP = 13,
+	FV_TooManyWindows = 128,
+	FV_TooManyWindowsUpdateBook = 98,
+	FV_UPDATE_MAIN_PROGRESS_MESSAGE_SAVE_AS_PDF = 0,
+	FV_UPDATE_PROGRESS_MESSAGE_SAVE_AS_PDF = 3,
+	FV_UPDATE_PROGRESS_MESSAGE_WITH_FILENAME_SAVE_AS_PDF = 4,
+	FV_URL_CHECKED_IN = 1,
+	FV_URL_CHECKED_OUT = 2,
+	FV_UndoAll = 3,
+	FV_UnresolvedTextInsets = 50,
+	FV_UnresolvedXRefs = 49,
+	FV_Unstructured = 41,
+	FV_UpdateAllAutomaticClientTi = 2,
+	FV_UpdateAllClientTi = 1,
+	FV_UpdateAllManualClientTi = 3,
+	FV_UseCurrentSetting = 0,
+	FV_UserCanceled = 112,
+	FV_UserCanceledExport = 32,
+	FV_UserCanceledImport = 37,
+	FV_UserCanceledSave = 48,
+	FV_UserCanceledUpdateBook = 35,
+	FV_UserDictionary = 1,
+	FV_VAR_CREATION_DATE_LONG = 7,
+	FV_VAR_CREATION_DATE_SHORT = 8,
+	FV_VAR_CURRENT_DATE_LONG = 3,
+	FV_VAR_CURRENT_DATE_SHORT = 4,
+	FV_VAR_CURRENT_PAGE_NUM = 1,
+	FV_VAR_FILE_NAME_LONG = 9,
+	FV_VAR_FILE_NAME_SHORT = 10,
+	FV_VAR_HEADER_FOOTER_1 = 11,
+	FV_VAR_HEADER_FOOTER_10 = 24,
+	FV_VAR_HEADER_FOOTER_11 = 25,
+	FV_VAR_HEADER_FOOTER_12 = 26,
+	FV_VAR_HEADER_FOOTER_13 = 27,
+	FV_VAR_HEADER_FOOTER_14 = 28,
+	FV_VAR_HEADER_FOOTER_15 = 29,
+	FV_VAR_HEADER_FOOTER_16 = 30,
+	FV_VAR_HEADER_FOOTER_17 = 31,
+	FV_VAR_HEADER_FOOTER_18 = 32,
+	FV_VAR_HEADER_FOOTER_2 = 12,
+	FV_VAR_HEADER_FOOTER_3 = 13,
+	FV_VAR_HEADER_FOOTER_4 = 14,
+	FV_VAR_HEADER_FOOTER_5 = 19,
+	FV_VAR_HEADER_FOOTER_6 = 20,
+	FV_VAR_HEADER_FOOTER_7 = 21,
+	FV_VAR_HEADER_FOOTER_8 = 22,
+	FV_VAR_HEADER_FOOTER_9 = 23,
+	FV_VAR_MODIFICATION_DATE_LONG = 5,
+	FV_VAR_MODIFICATION_DATE_SHORT = 6,
+	FV_VAR_PAGE_COUNT = 2,
+	FV_VAR_TABLE_CONTINUATION = 15,
+	FV_VAR_TABLE_SHEET = 16,
+	FV_VAR_USER_VARIABLE = 0,
+	FV_VIEW_ALL = 7, // (0x01 | 0x02 | 0x04)
+	FV_VIEW_AUTHOR = 0x02,
+	FV_VIEW_WYSIWYG = 0x01,
+	FV_VIEW_XML = 0x04,
+	FV_VOS_NONE = 2,
+	FV_VOS_USER_ONLY = 1,
+	FV_VOS_YES = 3,
+	FV_VOX_ALERT = 3,
+	FV_VOX_GOTO_BEHAVIOR = 1,
+	FV_VOX_NOT_ACTIVE = 0,
+	FV_VOX_OPEN_BEHAVIOR = 2,
+	FV_WIDE = 0,
+	FV_WINDOW_ALL = 7, // (0x01 | 0x02 | 0x04)
+	FV_WINDOW_BOOK = 0x02,
+	FV_WINDOW_DITAMAP = 0x04,
+	FV_WINDOW_DOC = 0x01,
+	FV_WarnAlways = 1,
+	FV_WarnNever = 0,
+	FV_WarnOnce = 2,
+	FV_WriteDictionaryToFile = 4,
+	FV_WriteUnknownWordsToFile = 3,
+	FV_XML_STANDALONE_NO = 2,
+	FV_XML_STANDALONE_NODEC = 4,
+	FV_XML_STANDALONE_NONE = 3,
+	FV_XML_STANDALONE_YES = 1,
+	FV_XML_USEBOM_NO = 2,
+	FV_XML_USEBOM_UTF16BE = 4,
+	FV_XML_USEBOM_UTF16LE = 5,
+	FV_XML_USEBOM_UTF32BE = 6,
+	FV_XML_USEBOM_UTF32LE = 7,
+	FV_XML_USEBOM_UTF8 = 3,
+	FV_XML_USEBOM_YES = 1,
+	FV_XML_WELLFORMED_NO = 2,
+	FV_XML_WELLFORMED_YES = 1,
+	FV_ZOOM_TO_FIT_TO_WINDOW = -2,
 }
