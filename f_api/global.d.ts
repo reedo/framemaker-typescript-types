@@ -14,10 +14,7 @@ declare function AddLocationToProject(): void;
  * @param menu The new menu which is being added to the existing menu.
  * @param label The name by which the newly added menu is visible.
  */
-declare function AddMenu(toMenu: string, menu: string, label: string): Constants.FE_Success | void;
-
-/** @todo Move to ExtendScript globals. */
-declare function alert(): void;
+declare function AddMenu(toMenu: string, menu: string, label: string): Constants['FE_Success'] | void;
 
 /**
  * Displays an alert box with a message. Depending on the constant you specify for the type parameter, the alert displays either the OK and Cancel buttons, Yes and No buttons or a Continue button.
@@ -47,9 +44,6 @@ declare function Alive(): number;
  */
 declare function AllocatePropVals(numProps?: number): PropVals;
 
-/** The global app object. */
-declare var app: Session;
-
 /** @todo UNDOCUMENTED */
 declare function AppendIntProp(): void;
 
@@ -78,7 +72,7 @@ declare function BridgeTalk(): void;
  * 
  * @returns FE_Success or the value specified by the target client’s last call to ReturnValue().
  */
-declare function CallClient(clname: string, arg: string): Constants.FE_Success | number;
+declare function CallClient(clname: string, arg: string): Constants['FE_Success'] | number;
 
 /**
  * Allows a client to call another client. The method is useful for calling FrameMaker clients, such as the structure generator and the element catalog manager.
@@ -90,7 +84,7 @@ declare function CallClient(clname: string, arg: string): Constants.FE_Success |
  * 
  * @returns FE_Success or the value specified by the target client’s last call to ReturnValue().
  */
-declare function CallClientEx(clname: string, arg: string): Constants.FE_Success | TypedVal;
+declare function CallClientEx(clname: string, arg: string): Constants['FE_Success'] | TypedVal;
 
 /**
  * Checks the scripts returned by Open(), Import(), Save(), and UpdateBook() to determine if a specified status bit is set.
@@ -112,7 +106,7 @@ declare function CheckStatus(p: PropVals, statusBit: number): 0 | 1;
  * 
  * @returns 0 if the user clicked Open, Select, Use, or Save; a nonzero value if the user clicked Cancel or an error occurred.
  */
-declare function ChooseFile(title: string, directory: string, stuffVal: string, mode: Constants.FV_ChooseSelect | Constants.FV_ChooseOpen | Constants.FV_ChooseSave | Constants.FV_ChooseOpenDir): number;
+declare function ChooseFile(title: string, directory: string, stuffVal: string, mode: Constants['FV_ChooseSelect'] | Constants['FV_ChooseOpen'] | Constants['FV_ChooseSave'] | Constants['FV_ChooseOpenDir']): number;
 
 /** @returns The name of the current ESTK client’s directory. */
 declare function ClientDir(): string;
@@ -163,18 +157,12 @@ declare function CMSRegister(cmsName: number): CMSObject;
 /** The global Command object. */
 declare var Command: Command;
 
-/** @todo Move to ExtendScript globals. */
-declare function confirm(): void;
-
 /**
  * Prints a message to the FrameMaker console.
  * 
  * @param message The message to print.
  */
 declare function Console(message: string): void;
-
-/** The global Constants object. */
-declare var CONST: Constants;
 
 /**
  * Creates a new custom document using the FrameMaker product’s default new document template.
@@ -192,7 +180,7 @@ declare var CONST: Constants;
  * 
  * @returns The new document.
  */
-declare function CustomDoc(width: number, height: number, numCols: number, columnGap: number, topMargin: number, botMargin: number, leftinsideMargin: number, rightoutsideMargin: number, sidedness: Constants.FF_Custom_SingleSided | Constants.FF_Custom_FirstPageRight | Constants.FF_Custom_FirstPageLeft, makeVisible: boolean): Doc;
+declare function CustomDoc(width: number, height: number, numCols: number, columnGap: number, topMargin: number, botMargin: number, leftinsideMargin: number, rightoutsideMargin: number, sidedness: Constants['FF_Custom_SingleSided'] | Constants['FF_Custom_FirstPageRight'] | Constants['FF_Custom_FirstPageLeft'], makeVisible: boolean): Doc;
 
 /** @todo UNDOCUMENTED */
 declare function DefineCommand(): void;
@@ -228,7 +216,7 @@ declare function DialogEvent(): void;
  * 
  * @returns FE_Success if it succeeds, or a system error code if an error occurs.
  */
-declare function DisconnectFromSession(): Constants.FE_Success | number;
+declare function DisconnectFromSession(): Constants['FE_Success'] | number;
 
 /** @todo UNDOCUMENTED */
 declare function EditComponentOfProject(): void;
@@ -375,7 +363,7 @@ declare function GetOpenDefaultParams(): PropVals;
  * @param propVals The property list.
  * @param propNum The property for which the index is to be retrieved.
  */
-declare function GetPropIndex(propVals: PropVals, propNum: FP_Constant): Constants.FE_BadPropNum | number;
+declare function GetPropIndex(propVals: PropVals, propNum: FP_Constant): Constants['FE_BadPropNum'] | number;
 
 /** Gets a default property list that you can use to call `Save()`. */
 declare function GetSaveDefaultParams(): PropVals;
@@ -450,7 +438,7 @@ declare var JSON: JSON;
  * @param pathname The pathname of the menu customization file to load. If you specify only a filename, the function looks in the client directory. If silent is set to False, the pathname specified by pathname is used as the default in the Menu Customization File dialog box.
  * @param silent Specifies whether to display the Menu Customization File dialog box and allow the user to choose the file. To display the dialog box and allow the user to choose the file, specify false. To use the file specified by pathname without asking the user, specify true.
  */
-declare function LoadMenuCustomizationFile(pathname: string, silent: boolean): Constants.FE_Success | void;
+declare function LoadMenuCustomizationFile(pathname: string, silent: boolean): Constants['FE_Success'] | void;
 
 /** An object of strings. */
 declare var locStrings: object;
@@ -499,7 +487,7 @@ declare function NewXML(opennewXMLParams: PropVals, newXMLReturnParams: PropVals
  * @param notification Constant that specifies the notification point.
  * @param state Specifies whether to turn notification on or off. 1 turns it on, and 0 turns it off.
  */
-declare function Notification(notification: FA_Note, state: 0 | 1): Constants.FE_Success | void;
+declare function Notification(notification: FA_Note, state: 0 | 1): Constants['FE_Success'] | void;
 
 /**
  * @todo Document this.
@@ -560,7 +548,7 @@ declare function OpenProject(): void;
 declare function OpenXML(): void;
 
 /** Pops the Clipboard stack, moving the entry on the top of the stack to the Clipboard. */
-declare function PopClipboard(): Constants.FE_Success | void;
+declare function PopClipboard(): Constants['FE_Success'] | void;
 
 /**
  * Prints the value of FA_errno to the console.
@@ -701,7 +689,7 @@ declare function PushClipboard(): void;
  * @param fromMenu The parent menu from which the menu is to be deleted.
  * @param label The menu to delete.
  */
-declare function RemoveMenu(fromMenu: string, label: string): Constants.FE_Success | void;
+declare function RemoveMenu(fromMenu: string, label: string): Constants['FE_Success'] | void;
 
 /** @todo UNDOCUMENTED */
 declare function RenameComponentofProject(): void;

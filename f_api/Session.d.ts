@@ -67,7 +67,7 @@ interface Session {
 	CurrentDir: string;
 
 	/** Type of menu set. */
-	CurrentMenuSet: Constants.FV_MENU_QUICK | Constants.FV_MENU_COMPLETE | Constants.FV_MENU_CUSTOM;
+	CurrentMenuSet: Constants['FV_MENU_QUICK'] | Constants['FV_MENU_COMPLETE'] | Constants['FV_MENU_CUSTOM'];
 
 	/**
 	 * Default Key Catalog for the current workflow.
@@ -285,7 +285,8 @@ interface Session {
 	Label: string;
 
 	/** Product language. */
-	Language: Constants.FV_LANG_NOLANGUAGE | Constants.FV_LANG_ENGLISH | Constants.FV_LANG_BRITISH | Constants.FV_LANG_GERMAN | Constants.FV_LANG_FRENCH | Constants.FV_LANG_SPANISH | Constants.FV_LANG_ITALIAN | Constants.FV_LANG_SWEDISH | Constants.FV_LANG_JAPANESE | Constants.FV_LANG_TRADITIONAL_CHINESE | Constants.FV_LANG_SIMPLIFIED_CHINESE | Constants.FV_LANG_KOREAN;
+	Language:
+	Constants['FV_LANG_NOLANGUAGE'] | Constants['FV_LANG_ENGLISH'] | Constants['FV_LANG_BRITISH'] | Constants['FV_LANG_GERMAN'] | Constants['FV_LANG_FRENCH'] | Constants['FV_LANG_SPANISH'] | Constants['FV_LANG_ITALIAN'] | Constants['FV_LANG_SWEDISH'] | Constants['FV_LANG_JAPANESE'] | Constants['FV_LANG_TRADITIONAL_CHINESE'] | Constants['FV_LANG_SIMPLIFIED_CHINESE'] | Constants['FV_LANG_KOREAN'];
 
 	/**
 	 * List of standard marker types for the current session.
@@ -396,7 +397,7 @@ interface Session {
 	ProcessNumber: number;
 
 	/** The FrameMaker product family name. */
-	ProductFamily: "FrameMaker" | "FrameMaker XML Author";
+	ProductFamily: 'FrameMaker' | 'FrameMaker XML Author';
 
 	/** True if the current session is for a demo version of FrameMaker. */
 	ProductIsDemo: boolean;
@@ -405,7 +406,7 @@ interface Session {
 	ProductIsStructured: boolean;
 
 	/** The FrameMaker product name. The names for FrameMaker+SGML indicate FrameMaker running under the structured product interface. FrameViewer is retained for backward compatibility. */
-	ProductName: "FrameMaker" | "FrameMaker+SGML" | "FrameViewer" | "DemoMaker" | "DemoMaker+SGML";
+	ProductName: 'FrameMaker' | 'FrameMaker+SGML' | 'FrameViewer' | 'DemoMaker' | 'DemoMaker+SGML';
 
 	/** 1 if reformatting is enabled. */
 	Reformatting: 0 | 1;
@@ -514,3 +515,6 @@ interface Session {
 	XmlIsBook: boolean;
 
 }
+
+/** The global app object. */
+declare var app: Session;

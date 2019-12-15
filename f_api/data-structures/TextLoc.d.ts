@@ -5,7 +5,7 @@
 interface TextLoc {
 
 	/** FO_Pgf (31) or FO_TextLine (18) object. */
-	obj: Constants.FO_TextLine | Constants.FO_Pgf;
+	obj: Constants['FO_TextLine'] | Constants['FO_Pgf'];
 
 	/** Characters from the beginning of the object. */
 	offset: number;
@@ -13,7 +13,7 @@ interface TextLoc {
 
 interface TextLocConstructor {
 	new(): TextLoc;
-	new(obj: Constants.FO_TextLine | Constants.FO_Pgf, offset: number): TextLoc;
+	new(obj: Constants['FO_TextLine'] | Constants['FO_Pgf'], offset: number): TextLoc;
 	readonly prototype: TextLoc;
 }
 

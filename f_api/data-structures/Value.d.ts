@@ -11,7 +11,7 @@ interface Value {
 	sval: string;
 
 	/** The type of the value. FT_Integer or FT_String. */
-	valType: Constants.FT_Integer | Constants.FT_String;
+	valType: Constants['FT_Integer'] | Constants['FT_String'];
 
 }
 
