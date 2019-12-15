@@ -10,6 +10,7 @@ Current progress:
 * ScriptUI - None (low priority).
 * FrameMaker
 	* global (all declarations listed. Many are undocumented and others may have incorrect types)
-	* app
+	* app (Session)
 	* Constants
 	* FCodes
+	* All FrameMaker data structures
