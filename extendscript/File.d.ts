@@ -243,7 +243,7 @@ interface File {
 	 * @param text A string to write.
 	 * @param rest Any number of additional strings.
 	 */
-	write(text: string, ...rest: string[]): boolean;
+	writeln(text: string, ...rest: string[]): boolean;
 
 }
 
