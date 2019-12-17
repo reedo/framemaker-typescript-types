@@ -1,0 +1,297 @@
+// Type definitions for FrameMaker graphic objects
+// Definitions by Dan Reed <https://danreed.dev>
+
+interface FMGraphic {
+
+	/**
+	 * Indicates whether the anchored frame is cropped or not.
+	 * 
+	 * Possible values are:
+	 * 
+	 * `false` (Default) Indicates the frame is not cropped.
+	 * 
+	 * `true` Indicates the frame is cropped.
+	 */
+	AFrameIsCropped: boolean;
+
+	/**
+	 * Indicates whether the anchored frame is set to be floatable or not.
+	 * 
+	 * Possible values are:
+	 * 
+	 * `false` (Default) Indicates the frame is not floatable.
+	 * 
+	 * `true` Indicates the frame is floatable.
+	 */
+	AFrameIsFloating: boolean;
+
+	/** Indicates how the anchored frame is aligned. */
+	Alignment: AlignmentType;
+
+	/** Indicates the location where the frame is anchored. */
+	AnchorType: AnchorType;
+
+	/** Indicates the angle of rotation of the graphic object. */
+	Angle: number;
+
+	/** @todo UNDOCUMENTED */
+	ApplyFitToFrame(): void;
+
+	/** Denotes the arrowhead base angle in degrees. */
+	ArrowBaseAngle: number;
+
+	/** Denotes the arrowhead length (always rounded down to the nearest 1/256 point). */
+	ArrowLength: number;
+
+	/**
+	 * Indicates the factor by which the arrowhead is scaled as line width changes (always rounded down to nearest 1/16 point).
+	 * 
+	 * It is not used if the ArrowScaleHead property is `false`.
+	 */
+	ArrowScaleFactor: number | false;
+
+	/** Set to 1 if arrowhead is scaled as the line width changes. Set to 0, otherwise. */
+	ArrowScaleHead: 0 | 1;
+
+	/** Denotes the arrowhead tip angle in degrees. */
+	ArrowTipAngle: number;
+
+	/** Denotes the style of the arrowhead. */
+	ArrowType: Constants['FV_ARROW_STICK'] | Constants['FV_ARROW_HOLLOW'] | Constants['FV_ARROW_FILLED'];
+
+	/** @todo UNDOCUMENTED */
+	BaselineOffset: number;
+
+	/**
+	 * Indicates the border width specified in points.
+	 * 
+	 * The permissible range is 0.015 pt to 360 points.
+	 */
+	BorderWidth: number;
+
+	/** Denotes the spot color. */
+	Color: Color;
+
+	/**
+	 * Specifies a dash pattern that is repeated for the length of an object's border.
+	 * 
+	 * The pattern is stored in a `MetricsT` structure.
+	 * 
+	 * The 0th element of the `MetricsT.MetricsT_val` array stores the length of the first dash;
+	 * the 1st element stores the following space;
+	 * the 2nd element stores the next dash;
+	 * and so on for an even number of elements.
+	 */
+	Dash: Metrics;
+
+	/**
+	 * Used to delete an object from a document.
+	 * 
+	 * When you delete an object that contains another object, all child objects are also deleted with the parent object.
+	 * 
+	 * For example, if you delete a frame, all objects within the frame are also deleted.
+	 */
+	Delete(): Constants['FE_Success'] | Constants['FE_BadDocId'] | Constants['FE_BadObjId'] | Constants['FE_BadDelete'] | Constants['FE_BadOperation'] | Constants['FE_BadParameter'] | Constants['FE_NotMenu'];
+
+	/** If the anchored frame is in a structured flow in a FrameMaker document, Element indicates the element containing the anchored frame. */
+	Element: Element;
+
+	/**
+	 * Denotes the fill pattern (numbers between 0 and 15).
+	 * 
+	 * Constants are provided for fill patterns 0, 7 and 15, as follows:
+	 * * `Constants.FV_FILL_BLACK` (0)
+	 * * `Constants.FV_FILL_WHITE` (7)
+	 * * `Constants.FV_FILL_CLEAR` (15)
+	 */
+	Fill: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15;
+
+	/** Contains the first object in the anchored frame. */
+	FirstGraphicInFrame: FMGraphic;
+
+	/** Denotes the frame containing the graphic object. */
+	FrameParent: FMGraphic;
+
+	/** Retrieves the complete property list for a specified object. */
+	GetProps(): PropVals;
+
+	/** Set to 1 if the graphic object cannot be selected. Set to 0, otherwise. */
+	GraphicCantBeSelected: 0 | 1;
+
+	/** Set to 1, if the graphic object is selected. Else, set to 0. */
+	GraphicIsSelected: 0 | 1;
+
+	/**
+	 * Specifies the group to which the object belongs.
+	 * 
+	 * __Note__: Anchored frames do NOT have this property.
+	 */
+	GroupParent: Group;
+
+	/** Set to 1 if the line has an arrow head. Set to 0, otherwise. */
+	HeadArrow: 0 | 1;
+
+	/**
+	 * Denotes the height of the object denoted in points.
+	 * 
+	 * The permissible range is from 0.125 points to 3600 points.
+	 */
+	Height: number;
+
+	/** The command string for a hotspot. This must be a valid hypertext command string. */
+	HotspotCmdStr: string;
+
+	/**
+	 * The tooltip text for the hotspot in the outputs that support it (for example HTML).
+	 * 
+	 * This property is optional.
+	 */
+	HotspotTitle: string;
+
+	/** Temporary ID. Lasts until the object leaves the FM session. */
+	id: number;
+
+	/** Indicates the text frame in which the anchored frame is placed. */
+	InTextFrame: TextFrame;
+
+	/** Indicates the column or text frame in which the anchored frame is placed. */
+	InTextObj: FMObject;
+
+	/**
+	 * Whether the object is a hotspot or not.
+	 * 
+	 * If this property is turned off, the object is no longer a hotspot even if command string is non-empty.
+	 */
+	IsHotspot: number;
+
+	/** Contains the last object in the anchored frame. */
+	LastGraphicInFrame: FMGraphic;
+
+	/** Specifies the type of the end of the line. */
+	LineCap: Constants['FV_CAP_BUTT'] | Constants['FV_CAP_ROUND'] | Constants['FV_CAP_SQUARE'];
+
+	/**
+	 * Specifies the distance of the object from the left side of the parent frame (in inches).
+	 * 
+	 * The permissible range is –216 inches to 216 inches.
+	 * 
+	 * If the graphic object is an anchored frame, the distance is automatically calculated from the left side of the page frame.
+	 * 
+	 * You cannot set this value manually for anchored frames.
+	 */
+	LocX: number;
+
+	/**
+	 * Distance of the object from the top of the parent frame (in inches).
+	 * 
+	 * The permissible range is –216 inches to 216 inches.
+	 * 
+	 * If the graphic object is an anchored frame, the distance is automatically calculated from the top of the page frame.
+	 * 
+	 * You cannot set this value manually for anchored frames.
+	 */
+	LocY: number;
+
+	/** @todo UNDOCUMENTED */
+	NewFmtRuleClauses(): void;
+
+	/** Contains the next anchored frame in the text frame. */
+	NextAFrame: AFrame;
+
+	/** Denotes the next graphic object in the document. */
+	NextGraphicInDoc: FMGraphic;
+
+	/** Denotes the next graphic object in the frame. */
+	NextGraphicInFrame: FMGraphic;
+
+	/** Denotes the next graphic object in the group. */
+	NextGraphicInGroup: FMGraphic;
+
+	/** Denotes the next selected graphic object in the document. */
+	NextSelectedGraphicInDoc: FMGraphic;
+
+	/**
+	 * A list of strings.
+	 * 
+	 * Each string expresses an attribute that is specified for an anchored frame in the Object Properties > Object Attributes dialog box.
+	 * 
+	 * Each string is in the form of string_text.
+	 * 
+	 * You can use the backslash to escape characters such as `\n`, `\r`, or `\t` for newline, carriage return, and tab, respectively.
+	 * 
+	 * For a backslash character in the string text, type `\\`.
+	 */
+	ObjectAttributes: Strings;
+
+	/** Indicates whether an object is valid or not. */
+	ObjectValid(): 0 | 1;
+
+	/** Specifies the overprint settings for the object. */
+	Overprint: Constants['FV_KNOCKOUT'] | Constants['FV_OVERPRINT'] | Constants['FV_FROMCOLOR'];
+
+	/**
+	 * Specifies the pen pattern (numbers between 0 and 7).
+	 * 
+	 * Constants are provided for pen patterns 0, 7 and 15, as follows:
+	 * * `Constants.FV_FILL_BLACK` (0)
+	 * * `Constants.FV_FILL_WHITE` (7)
+	 * * `Constants.FV_FILL_CLEAR` (15)
+	 */
+	Pen: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15;
+
+	/** Contains the previous anchored frame in the text frame. */
+	PrevAFrame: AFrame;
+
+	/** Denotes the previous graphic object in the frame. */
+	PrevGraphicInFrame: FMGraphic;
+
+	/** Denotes the previous graphic object in the group. */
+	PrevGraphicInGroup: FMGraphic;
+
+	/** Specifies whether text can flow around the object and, if so, whether the text follows the contour of the object or a box shape surrounding the object. */
+	Runaround: Constants['FV_TR_NONE'] | Constants['FV_TR_CONTOUR'] | Constants['FV_TR_BBOX'];
+
+	/** Denotes the width of the runaround gap, if the object is a runaround object. */
+	RunaroundGap: number;
+
+	/**
+	 * Sets the properties of a specified object.
+	 * 
+	 * @param setVal An array containing the values of the object to be set.
+	 */
+	SetProps(setVal: PropVals): void;
+
+	/** Denotes the near side offset. */
+	SideOffset: number;
+
+	/** @todo UNDOCUMENTED */
+	StyleTag: string;
+
+	/** Set to 1 if the arrowhead is enabled at the begining of the line; Set to 0 otherwise. */
+	TailArrow: 0 | 1;
+
+	/** Contains the location of the anchor symbol. */
+	TextLoc: TextLoc;
+
+	/** Specifies the tint percentage. */
+	TintPercent: number;
+
+	/** @todo UNDOCUMENTED */
+	type: number;
+
+	/** Indicates the graphic object's internal unique number. */
+	Unique: number;
+
+	/** A string to which clients can store private data. */
+	UserString: string;
+
+	/**
+	 * Denotes the width of the object.
+	 * 
+	 * The permissible range is from 0.125 points to 3600 points.
+	 */
+	Width: number;
+
+}
+
+declare const AFrame: FMGraphic;

@@ -4,9 +4,6 @@
 /** @todo Complete this list. Any FrameMaker object. */
 type FMObject = null;
 
-/** @todo Complete this list. Any FrameMaker graphic object. */
-type FMGraphic = null;
-
 /** @todo Complete this list. Any CMS object. */
 type CMSObject = null;
 
@@ -1728,3 +1725,29 @@ type TextItemType =
 	Constants['FTI_RubiCompositeEnd'] |
 	Constants['FTI_RubiTextBegin'] |
 	Constants['FTI_RubiTextEnd'];
+
+type AlignmentType =
+	Constants['FV_ALIGN_LEFT'] |
+	Constants['FV_ALIGN_CENTER'] |
+	Constants['FV_ALIGN_RIGHT'] |
+	Constants['FV_ALIGN_INSIDE'] |
+	Constants['FV_ALIGN_OUTSIDE'];
+
+type AnchorType =
+	Constants['FV_ANCHOR_INLINE'] |
+	Constants['FV_ANCHOR_TOP'] |
+	Constants['FV_ANCHOR_BELOW'] |
+	Constants['FV_ANCHOR_BOTTOM'] |
+	Constants['FV_ANCHOR_SUBCOL_LEFT'] |
+	Constants['FV_ANCHOR_SUBCOL_RIGHT'] |
+	Constants['FV_ANCHOR_SUBCOL_NEAREST'] |
+	Constants['FV_ANCHOR_SUBCOL_FARTHEST'] |
+	Constants['FV_ANCHOR_SUBCOL_INSIDE'] |
+	Constants['FV_ANCHOR_SUBCOL_OUTSIDE'] |
+	Constants['FV_ANCHOR_TEXTFRAME_LEFT'] |
+	Constants['FV_ANCHOR_TEXTFRAME_RIGHT'] |
+	Constants['FV_ANCHOR_TEXTFRAME_NEAREST'] |
+	Constants['FV_ANCHOR_TEXTFRAME_FARTHEST'] |
+	Constants['FV_ANCHOR_TEXTFRAME_INSIDE'] |
+	Constants['FV_ANCHOR_TEXTFRAME_OUTSIDE'] |
+	Constants['FV_ANCHOR_RUN_INTO_PARAGRAPH'];
