@@ -1,9 +1,6 @@
 // Type definitions for composite types and helper interfaces
 // Definitions by Dan Reed <https://danreed.dev>
 
-/** @todo Complete this list. Any FrameMaker object. */
-type FMObject = null;
-
 /** @todo Complete this list. Any CMS object. */
 type CMSObject = null;
 
@@ -180,6 +177,176 @@ type FA_Note =
 	Constants['FA_Note_UpdateRefs'] |
 	Constants['FA_Note_UpdateRefs_On_Save'] |
 	Constants['FA_Note_WelcomeScreen_Command'];
+
+/** Constants that represent FrameMaker error codes. */
+type FE_Constant =
+	Constants['FE_AcceptRejectCalledOnWrongPreviewState'] |
+	Constants['FE_AsianSystemRequired'] |
+	Constants['FE_BadBaseColor'] |
+	Constants['FE_BadBookId'] |
+	Constants['FE_BadCompPath'] |
+	Constants['FE_BadCompare'] |
+	Constants['FE_BadContainer'] |
+	Constants['FE_BadDelete'] |
+	Constants['FE_BadDocId'] |
+	Constants['FE_BadElementDefId'] |
+	Constants['FE_BadElementId'] |
+	Constants['FE_BadElementSelection'] |
+	Constants['FE_BadFamilyName'] |
+	Constants['FE_BadFileType'] |
+	Constants['FE_BadFilterType'] |
+	Constants['FE_BadInkName'] |
+	Constants['FE_BadInsertPos'] |
+	Constants['FE_BadKey'] |
+	Constants['FE_BadKeyField'] |
+	Constants['FE_BadMenuBar'] |
+	Constants['FE_BadName'] |
+	Constants['FE_BadNew'] |
+	Constants['FE_BadNewFrame'] |
+	Constants['FE_BadNewGroup'] |
+	Constants['FE_BadNewSibling'] |
+	Constants['FE_BadNotificationNum'] |
+	Constants['FE_BadObjId'] |
+	Constants['FE_BadOperation'] |
+	Constants['FE_BadPageDelete'] |
+	Constants['FE_BadParameter'] |
+	Constants['FE_BadPropNum'] |
+	Constants['FE_BadPropType'] |
+	Constants['FE_BadRange'] |
+	Constants['FE_BadRefElementId'] |
+	Constants['FE_BadRefFlowId'] |
+	Constants['FE_BadSaveFileName'] |
+	Constants['FE_BadSelectionForOperation'] |
+	Constants['FE_BadShortcut'] |
+	Constants['FE_BadTemplatePath'] |
+	Constants['FE_BadValue'] |
+	Constants['FE_BadXRefSrcDocId'] |
+	Constants['FE_BadXmlApplication'] |
+	Constants['FE_BookComponentAlreadyHasTrackedEdits'] |
+	Constants['FE_BookStructured'] |
+	Constants['FE_BookUnStructured'] |
+	Constants['FE_Busy'] |
+	Constants['FE_CMSBadCommandId'] |
+	Constants['FE_CMSBadItemContainerType'] |
+	Constants['FE_CMSBadItemFileType'] |
+	Constants['FE_CMSBadItemType'] |
+	Constants['FE_CMSBadObjectId'] |
+	Constants['FE_CMSBadSessionId'] |
+	Constants['FE_CMSFailedCancelCheckout'] |
+	Constants['FE_CMSFailedCheckin'] |
+	Constants['FE_CMSFailedCheckout'] |
+	Constants['FE_CMSFailedDelete'] |
+	Constants['FE_CMSFailedDownloadObject'] |
+	Constants['FE_CMSFailedGetItemFrompath'] |
+	Constants['FE_CMSFailedLogin'] |
+	Constants['FE_CMSFailedLogout'] |
+	Constants['FE_CMSFailedOpenFile'] |
+	Constants['FE_CMSFailedUploadObject'] |
+	Constants['FE_CMSIsValidCMSCommand'] |
+	Constants['FE_CMSNameAlreadyRegistered'] |
+	Constants['FE_CMSObjectCreationFailed'] |
+	Constants['FE_CMSRootObjectExists'] |
+	Constants['FE_CMSSessionCreationFailed'] |
+	Constants['FE_CMSSessionFailed'] |
+	Constants['FE_Canceled'] |
+	Constants['FE_CanceledByClient'] |
+	Constants['FE_CannotAddEditExpressionsInOneOrMoreComponents'] |
+	Constants['FE_CantSmooth'] |
+	Constants['FE_CantUpdateMacEdition'] |
+	Constants['FE_CircularReference'] |
+	Constants['FE_CompareTypes'] |
+	Constants['FE_Disabled'] |
+	Constants['FE_DocAlreadyHasTrackedEdits'] |
+	Constants['FE_DocModified'] |
+	Constants['FE_DupName'] |
+	Constants['FE_EmptyTextObject'] |
+	Constants['FE_ExpressionNotFound'] |
+	Constants['FE_FDKUndoNotAllowed'] |
+	Constants['FE_FailedExportedFileInvalid'] |
+	Constants['FE_FailedState'] |
+	Constants['FE_FailedToApplyOnOneOrMoreComponents'] |
+	Constants['FE_FileClosedByClient'] |
+	Constants['FE_FilterFailed'] |
+	Constants['FE_FlowStructured'] |
+	Constants['FE_GenRuleAmbiguous'] |
+	Constants['FE_GenRuleConnectorExpected'] |
+	Constants['FE_GenRuleItemExpected'] |
+	Constants['FE_GenRuleLeftBracketExpected'] |
+	Constants['FE_GenRuleMixedConnectors'] |
+	Constants['FE_GenRuleRightBracketExpected'] |
+	Constants['FE_GenRuleSyntaxError'] |
+	Constants['FE_GraphicInLockedTi'] |
+	Constants['FE_GroupSelect'] |
+	Constants['FE_HiddenPage'] |
+	Constants['FE_InternalErrorFailedToWriteInsets'] |
+	Constants['FE_InvAttribute'] |
+	Constants['FE_InvAttributeDef'] |
+	Constants['FE_InvContextSpec'] |
+	Constants['FE_InvalidAttrExpr'] |
+	Constants['FE_InvalidEmailId'] |
+	Constants['FE_InvalidFileName'] |
+	Constants['FE_InvalidFilePath'] |
+	Constants['FE_InvalidPhoneNumber'] |
+	Constants['FE_InvalidSize'] |
+	Constants['FE_InvalidString'] |
+	Constants['FE_KeyCatalogIsStale'] |
+	Constants['FE_KeyCatalogNotLoaded'] |
+	Constants['FE_KeyCatalogNotSpecified'] |
+	Constants['FE_KeyDefinitionAlreadyExists'] |
+	Constants['FE_KeyDefinitionDoesNotExist'] |
+	Constants['FE_LanguageNotAvailable'] |
+	Constants['FE_MissingFile'] |
+	Constants['FE_NameNotFound'] |
+	Constants['FE_NoColorFamily'] |
+	Constants['FE_NoSuchFlow'] |
+	Constants['FE_NonDITADocument'] |
+	Constants['FE_NotApiCommand'] |
+	Constants['FE_NotBodyPage'] |
+	Constants['FE_NotBookComponent'] |
+	Constants['FE_NotCommand'] |
+	Constants['FE_NotFound'] |
+	Constants['FE_NotFrame'] |
+	Constants['FE_NotGraphic'] |
+	Constants['FE_NotGroup'] |
+	Constants['FE_NotInMenu'] |
+	Constants['FE_NotMenu'] |
+	Constants['FE_NotPgf'] |
+	Constants['FE_NotPgfOrFlow'] |
+	Constants['FE_NotTextFrame'] |
+	Constants['FE_NotTextObject'] |
+	Constants['FE_OffsetNotFound'] |
+	Constants['FE_OutOfRange'] |
+	Constants['FE_OverWriteError'] |
+	Constants['FE_PageFrame'] |
+	Constants['FE_PropNotSet'] |
+	Constants['FE_ReadOnly'] |
+	Constants['FE_ReservedColor'] |
+	Constants['FE_SomeUnresolved'] |
+	Constants['FE_StringTooLong'] |
+	Constants['FE_Success'] |
+	Constants['FE_SystemError'] |
+	Constants['FE_TableInLockedTi'] |
+	Constants['FE_TintedColor'] |
+	Constants['FE_Transport'] |
+	Constants['FE_TypeUnNamed'] |
+	Constants['FE_UnLicensed'] |
+	Constants['FE_UpdateDITAReferenceFailed'] |
+	Constants['FE_UpdateDITAReferenceFailedCannotConvertToFMObject'] |
+	Constants['FE_UpdateDITAReferenceFailedCannotFindReferencedFile'] |
+	Constants['FE_UpdateDITAReferenceFailedCannotOpenReferencedFile'] |
+	Constants['FE_UpdateDITAReferenceFailedCannotResolveReference'] |
+	Constants['FE_UpdateDITAReferenceFailedErrorImportingReferencedFile'] |
+	Constants['FE_UpdateDITAReferenceFailedInvalidElementType'] |
+	Constants['FE_ViewOnly'] |
+	Constants['FE_WantsCustom'] |
+	Constants['FE_WantsLandscape'] |
+	Constants['FE_WantsPortrait'] |
+	Constants['FE_WithinFrame'] |
+	Constants['FE_WrongProduct'] |
+	Constants['FE_WrongView'] |
+	Constants['FE_WrongWindow'] |
+	Constants['FE_XRefUnresolved'] |
+	Constants['FE_XrefTitleNotFound'];
 
 // /** Constants that represent FMObject types. */
 type FO_Constant =
@@ -1687,7 +1854,7 @@ type TabType =
 	Constants['FV_TAB_RELATIVE_RIGHT'] |
 	Constants['FV_TAB_RELATIVE_DECIMAL'];
 
-/** Type property of `TypedVal` object. */
+/** @todo Type property of `TypedVal` object. */
 type TypedValConstant = number;
 
 /** Type property of `TextItem` object. */

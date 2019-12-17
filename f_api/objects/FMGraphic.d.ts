@@ -1,7 +1,7 @@
 // Type definitions for generic properties of FrameMaker graphic objects
 // Definitions by Dan Reed <https://danreed.dev>
 
-interface FMGraphic {
+interface FMGraphic extends FMObject {
 
 	/** Indicates the angle of rotation of the graphic object. */
 	Angle: number;
@@ -72,9 +72,6 @@ interface FMGraphic {
 	/** Denotes the frame containing the graphic object. */
 	FrameParent: FMGraphic;
 
-	/** Retrieves the complete property list for a specified object. */
-	GetProps(): PropVals;
-
 	/** Set to 1 if the graphic object cannot be selected. Set to 0, otherwise. */
 	GraphicCantBeSelected: 0 | 1;
 
@@ -107,9 +104,6 @@ interface FMGraphic {
 	 * This property is optional.
 	 */
 	HotspotTitle: string;
-
-	/** Temporary ID. Lasts until the object leaves the FM session. */
-	id: number;
 
 	/**
 	 * Whether the object is a hotspot or not.
@@ -168,9 +162,6 @@ interface FMGraphic {
 	 */
 	ObjectAttributes: Strings;
 
-	/** Indicates whether an object is valid or not. */
-	ObjectValid(): 0 | 1;
-
 	/** Specifies the overprint settings for the object. */
 	Overprint: Constants['FV_KNOCKOUT'] | Constants['FV_OVERPRINT'] | Constants['FV_FROMCOLOR'];
 
@@ -196,13 +187,6 @@ interface FMGraphic {
 	/** Denotes the width of the runaround gap, if the object is a runaround object. */
 	RunaroundGap: number;
 
-	/**
-	 * Sets the properties of a specified object.
-	 * 
-	 * @param setVal An array containing the values of the object to be set.
-	 */
-	SetProps(setVal: PropVals): void;
-
 	/** @todo UNDOCUMENTED */
 	StyleTag: string;
 
@@ -211,9 +195,6 @@ interface FMGraphic {
 
 	/** Specifies the tint percentage. */
 	TintPercent: number;
-
-	/** @todo UNDOCUMENTED */
-	type: number;
 
 	/** Indicates the graphic object's internal unique number. */
 	Unique: number;
