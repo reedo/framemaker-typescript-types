@@ -1,41 +1,10 @@
-// Type definitions for FrameMaker graphic objects
+// Type definitions for generic properties of FrameMaker graphic objects
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface FMGraphic {
 
-	/**
-	 * Indicates whether the anchored frame is cropped or not.
-	 * 
-	 * Possible values are:
-	 * 
-	 * `false` (Default) Indicates the frame is not cropped.
-	 * 
-	 * `true` Indicates the frame is cropped.
-	 */
-	AFrameIsCropped: boolean;
-
-	/**
-	 * Indicates whether the anchored frame is set to be floatable or not.
-	 * 
-	 * Possible values are:
-	 * 
-	 * `false` (Default) Indicates the frame is not floatable.
-	 * 
-	 * `true` Indicates the frame is floatable.
-	 */
-	AFrameIsFloating: boolean;
-
-	/** Indicates how the anchored frame is aligned. */
-	Alignment: AlignmentType;
-
-	/** Indicates the location where the frame is anchored. */
-	AnchorType: AnchorType;
-
 	/** Indicates the angle of rotation of the graphic object. */
 	Angle: number;
-
-	/** @todo UNDOCUMENTED */
-	ApplyFitToFrame(): void;
 
 	/** Denotes the arrowhead base angle in degrees. */
 	ArrowBaseAngle: number;
@@ -58,9 +27,6 @@ interface FMGraphic {
 
 	/** Denotes the style of the arrowhead. */
 	ArrowType: Constants['FV_ARROW_STICK'] | Constants['FV_ARROW_HOLLOW'] | Constants['FV_ARROW_FILLED'];
-
-	/** @todo UNDOCUMENTED */
-	BaselineOffset: number;
 
 	/**
 	 * Indicates the border width specified in points.
@@ -93,9 +59,6 @@ interface FMGraphic {
 	 */
 	Delete(): Constants['FE_Success'] | Constants['FE_BadDocId'] | Constants['FE_BadObjId'] | Constants['FE_BadDelete'] | Constants['FE_BadOperation'] | Constants['FE_BadParameter'] | Constants['FE_NotMenu'];
 
-	/** If the anchored frame is in a structured flow in a FrameMaker document, Element indicates the element containing the anchored frame. */
-	Element: Element;
-
 	/**
 	 * Denotes the fill pattern (numbers between 0 and 15).
 	 * 
@@ -105,9 +68,6 @@ interface FMGraphic {
 	 * * `Constants.FV_FILL_CLEAR` (15)
 	 */
 	Fill: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15;
-
-	/** Contains the first object in the anchored frame. */
-	FirstGraphicInFrame: FMGraphic;
 
 	/** Denotes the frame containing the graphic object. */
 	FrameParent: FMGraphic;
@@ -151,21 +111,12 @@ interface FMGraphic {
 	/** Temporary ID. Lasts until the object leaves the FM session. */
 	id: number;
 
-	/** Indicates the text frame in which the anchored frame is placed. */
-	InTextFrame: TextFrame;
-
-	/** Indicates the column or text frame in which the anchored frame is placed. */
-	InTextObj: FMObject;
-
 	/**
 	 * Whether the object is a hotspot or not.
 	 * 
 	 * If this property is turned off, the object is no longer a hotspot even if command string is non-empty.
 	 */
 	IsHotspot: number;
-
-	/** Contains the last object in the anchored frame. */
-	LastGraphicInFrame: FMGraphic;
 
 	/** Specifies the type of the end of the line. */
 	LineCap: Constants['FV_CAP_BUTT'] | Constants['FV_CAP_ROUND'] | Constants['FV_CAP_SQUARE'];
@@ -191,12 +142,6 @@ interface FMGraphic {
 	 * You cannot set this value manually for anchored frames.
 	 */
 	LocY: number;
-
-	/** @todo UNDOCUMENTED */
-	NewFmtRuleClauses(): void;
-
-	/** Contains the next anchored frame in the text frame. */
-	NextAFrame: AFrame;
 
 	/** Denotes the next graphic object in the document. */
 	NextGraphicInDoc: FMGraphic;
@@ -239,9 +184,6 @@ interface FMGraphic {
 	 */
 	Pen: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15;
 
-	/** Contains the previous anchored frame in the text frame. */
-	PrevAFrame: AFrame;
-
 	/** Denotes the previous graphic object in the frame. */
 	PrevGraphicInFrame: FMGraphic;
 
@@ -261,17 +203,11 @@ interface FMGraphic {
 	 */
 	SetProps(setVal: PropVals): void;
 
-	/** Denotes the near side offset. */
-	SideOffset: number;
-
 	/** @todo UNDOCUMENTED */
 	StyleTag: string;
 
 	/** Set to 1 if the arrowhead is enabled at the begining of the line; Set to 0 otherwise. */
 	TailArrow: 0 | 1;
-
-	/** Contains the location of the anchor symbol. */
-	TextLoc: TextLoc;
 
 	/** Specifies the tint percentage. */
 	TintPercent: number;
@@ -282,9 +218,6 @@ interface FMGraphic {
 	/** Indicates the graphic object's internal unique number. */
 	Unique: number;
 
-	/** A string to which clients can store private data. */
-	UserString: string;
-
 	/**
 	 * Denotes the width of the object.
 	 * 
@@ -293,5 +226,3 @@ interface FMGraphic {
 	Width: number;
 
 }
-
-declare const AFrame: FMGraphic;
