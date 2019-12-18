@@ -32,25 +32,16 @@ interface AFrame extends Frame {
 	AnchorType: AnchorType;
 
 	/** @todo UNDOCUMENTED */
-	ApplyFitToFrame(): void;
-
-	/** @todo UNDOCUMENTED */
 	BaselineOffset: number;
 
 	/** If the anchored frame is in a structured flow in a FrameMaker document, Element indicates the element containing the anchored frame. */
 	Element: Element;
-
-	/** Contains the first object in the anchored frame. */
-	FirstGraphicInFrame: FMGraphic;
 
 	/** Indicates the text frame in which the anchored frame is placed. */
 	InTextFrame: TextFrame;
 
 	/** Indicates the column or text frame in which the anchored frame is placed. */
 	InTextObj: FMObject;
-
-	/** Contains the last object in the anchored frame. */
-	LastGraphicInFrame: FMGraphic;
 
 	/** @todo UNDOCUMENTED */
 	NewFmtRuleClauses(): void;
