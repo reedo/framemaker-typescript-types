@@ -1,6 +1,7 @@
 // Type definitions for FrameMaker Attribute object
 // Definitions by Dan Reed <https://danreed.dev>
 
+/** Describes a single attribute. */
 interface Attribute {
 
 	/** Allow error as special case to suppress reporting by validation. */

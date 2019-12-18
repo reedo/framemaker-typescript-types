@@ -51,6 +51,9 @@ interface FMArrayLikeConstructor<T> {
 type Attributes = FMArrayLikeConstructor<Attribute>;
 declare const Attributes: Attributes;
 
+type AttributeDefs = FMArrayLikeConstructor<AttributeDef>;
+declare const AttributeDefs: AttributeDefs;
+
 type IdValuePairs = FMArrayLikeConstructor<IdValuePair>;
 declare const IdValuePairs: IdValuePairs;
 

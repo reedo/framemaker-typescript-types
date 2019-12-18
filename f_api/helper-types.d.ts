@@ -1843,7 +1843,46 @@ type FF_ALERT =
 	Constants['FF_ALERT_YES_NO_CANCEL'] |
 	Constants['FF_ALERT_DNS_OK'];
 
-// /** Type property of a `Tab` object. */
+type AlignmentType =
+	Constants['FV_ALIGN_LEFT'] |
+	Constants['FV_ALIGN_CENTER'] |
+	Constants['FV_ALIGN_RIGHT'] |
+	Constants['FV_ALIGN_INSIDE'] |
+	Constants['FV_ALIGN_OUTSIDE'];
+
+type AnchorType =
+	Constants['FV_ANCHOR_INLINE'] |
+	Constants['FV_ANCHOR_TOP'] |
+	Constants['FV_ANCHOR_BELOW'] |
+	Constants['FV_ANCHOR_BOTTOM'] |
+	Constants['FV_ANCHOR_SUBCOL_LEFT'] |
+	Constants['FV_ANCHOR_SUBCOL_RIGHT'] |
+	Constants['FV_ANCHOR_SUBCOL_NEAREST'] |
+	Constants['FV_ANCHOR_SUBCOL_FARTHEST'] |
+	Constants['FV_ANCHOR_SUBCOL_INSIDE'] |
+	Constants['FV_ANCHOR_SUBCOL_OUTSIDE'] |
+	Constants['FV_ANCHOR_TEXTFRAME_LEFT'] |
+	Constants['FV_ANCHOR_TEXTFRAME_RIGHT'] |
+	Constants['FV_ANCHOR_TEXTFRAME_NEAREST'] |
+	Constants['FV_ANCHOR_TEXTFRAME_FARTHEST'] |
+	Constants['FV_ANCHOR_TEXTFRAME_INSIDE'] |
+	Constants['FV_ANCHOR_TEXTFRAME_OUTSIDE'] |
+	Constants['FV_ANCHOR_RUN_INTO_PARAGRAPH'];
+
+/** Type property of an `AttributeDef` object. */
+type AttributeType =
+	Constants['FV_AT_STRING'] |
+	Constants['FV_AT_STRINGS'] |
+	Constants['FV_AT_CHOICES'] |
+	Constants['FV_AT_INTEGER'] |
+	Constants['FV_AT_INTEGERS'] |
+	Constants['FV_AT_REAL'] |
+	Constants['FV_AT_REALS'] |
+	Constants['FV_AT_UNIQUE_ID'] |
+	Constants['FV_AT_UNIQUE_IDREF'] |
+	Constants['FV_AT_UNIQUE_IDREFS'];
+
+/** Type property of a `Tab` object. */
 type TabType =
 	Constants['FV_TAB_LEFT'] |
 	Constants['FV_TAB_CENTER'] |
@@ -1853,9 +1892,6 @@ type TabType =
 	Constants['FV_TAB_RELATIVE_CENTER'] |
 	Constants['FV_TAB_RELATIVE_RIGHT'] |
 	Constants['FV_TAB_RELATIVE_DECIMAL'];
-
-/** @todo Type property of `TypedVal` object. */
-type TypedValConstant = number;
 
 /** Type property of `TextItem` object. */
 type TextItemType =
@@ -1893,28 +1929,5 @@ type TextItemType =
 	Constants['FTI_RubiTextBegin'] |
 	Constants['FTI_RubiTextEnd'];
 
-type AlignmentType =
-	Constants['FV_ALIGN_LEFT'] |
-	Constants['FV_ALIGN_CENTER'] |
-	Constants['FV_ALIGN_RIGHT'] |
-	Constants['FV_ALIGN_INSIDE'] |
-	Constants['FV_ALIGN_OUTSIDE'];
-
-type AnchorType =
-	Constants['FV_ANCHOR_INLINE'] |
-	Constants['FV_ANCHOR_TOP'] |
-	Constants['FV_ANCHOR_BELOW'] |
-	Constants['FV_ANCHOR_BOTTOM'] |
-	Constants['FV_ANCHOR_SUBCOL_LEFT'] |
-	Constants['FV_ANCHOR_SUBCOL_RIGHT'] |
-	Constants['FV_ANCHOR_SUBCOL_NEAREST'] |
-	Constants['FV_ANCHOR_SUBCOL_FARTHEST'] |
-	Constants['FV_ANCHOR_SUBCOL_INSIDE'] |
-	Constants['FV_ANCHOR_SUBCOL_OUTSIDE'] |
-	Constants['FV_ANCHOR_TEXTFRAME_LEFT'] |
-	Constants['FV_ANCHOR_TEXTFRAME_RIGHT'] |
-	Constants['FV_ANCHOR_TEXTFRAME_NEAREST'] |
-	Constants['FV_ANCHOR_TEXTFRAME_FARTHEST'] |
-	Constants['FV_ANCHOR_TEXTFRAME_INSIDE'] |
-	Constants['FV_ANCHOR_TEXTFRAME_OUTSIDE'] |
-	Constants['FV_ANCHOR_RUN_INTO_PARAGRAPH'];
+/** @todo Type property of `TypedVal` object. */
+type TypedValConstant = number;
