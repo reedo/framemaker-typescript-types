@@ -18,4 +18,4 @@ interface IdValuePairConstructor {
 	readonly prototype: IdValuePair;
 }
 
-declare var IdValuePair: IdValuePairConstructor;
+declare const IdValuePair: IdValuePairConstructor;

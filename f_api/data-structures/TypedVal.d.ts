@@ -5,7 +5,7 @@
 interface TypedVal {
 
 	/** Indicates the type of value the structure provides. */
-	valType: TypedValType;
+	valType: TypedValConstant;
 
 	/** An integer. */
 	ival: number;
@@ -23,7 +23,7 @@ interface TypedVal {
 	psval: Points;
 
 	/** Set of tabs. */
-	tsval: Tabs;
+	tsval: T;
 
 	/** Text location. */
 	tlval: TextLoc;
@@ -49,8 +49,8 @@ interface TypedVal {
 
 interface TypedValConstructor {
 	new(): TypedVal;
-	new(item: number | string | Metrics | Strings | Points | Tabs | TextLoc | TextRange | ElementCatalogEntries | Ints | UInts | AttributeDefs | Attributes): TypedVal;
+	new(item: number | string | Metrics | Strings | Points | Tab | TextLoc | TextRange | ElementCatalogEntries | Ints | UInts | AttributeDefs | Attributes): TypedVal;
 
 }
 
-declare var TypedVal: TypedValConstructor;
+declare const TypedVal: TypedValConstructor;

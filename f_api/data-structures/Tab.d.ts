@@ -27,4 +27,4 @@ interface TabConstructor {
 	readonly prototype: Tab;
 }
 
-declare var Tab: TabConstructor;
+declare const Tab: TabConstructor;

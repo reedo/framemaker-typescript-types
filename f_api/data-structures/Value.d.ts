@@ -21,4 +21,4 @@ interface ValueConstructor {
 	readonly prototype: Value;
 }
 
-declare var Value: ValueConstructor;
+declare const Value: ValueConstructor;

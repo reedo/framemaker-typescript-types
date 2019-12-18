@@ -20,4 +20,4 @@ interface ElementLocConstructor {
 	readonly prototype: ElementLoc;
 }
 
-declare var ElementLoc: ElementLocConstructor;
+declare const ElementLoc: ElementLocConstructor;

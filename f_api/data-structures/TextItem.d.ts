@@ -27,4 +27,4 @@ interface TextItemConstructor {
 	readonly prototype: TextItem;
 }
 
-declare var TextItem: TextItemConstructor;
+declare const TextItem: TextItemConstructor;

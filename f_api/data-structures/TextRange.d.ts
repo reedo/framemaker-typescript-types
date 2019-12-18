@@ -2,8 +2,6 @@
 // Definitions by: Dan Reed <http://danreed.dev>
 
 /**
- * TextRange specifies a text range.
- * 
  * A text range can span paragraphs. However, it cannot span graphic text lines or flows.
  * 
  * __NOTE__: beg.offset and end.offset fields of aTextRange object can specify offsets relative to the beginning and end of an object. In addition, they can use the special value `Constants.FV_OBJ_END_OFFSET` (0x50000000).
@@ -26,4 +24,4 @@ interface TextRangeConstructor {
 
 }
 
-declare var TextRange: TextRangeConstructor;
+declare const TextRange: TextRangeConstructor;

@@ -1,6 +1,7 @@
 // Type definitions for generic properties of FrameMaker graphic objects
 // Definitions by Dan Reed <https://danreed.dev>
 
+/** Any FrameMaker graphic object. */
 interface FMGraphic extends FMObject {
 
 	/** Indicates the angle of rotation of the graphic object. */

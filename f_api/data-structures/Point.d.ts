@@ -20,4 +20,4 @@ interface PointConstructor {
 	readonly prototype: Point;
 }
 
-declare var Point: PointConstructor;
+declare const Point: PointConstructor;

@@ -17,4 +17,4 @@ interface PropValConstructor {
 	readonly prototype: PropVal;
 }
 
-declare var PropVal: PropValConstructor;
+declare const PropVal: PropValConstructor;

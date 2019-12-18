@@ -1,6 +1,7 @@
 // Type definitions for generic properties of FrameMaker objects
 // Definitions by Dan Reed <https://danreed.dev>
 
+/** Any FrameMaker object. */
 interface FMObject {
 
 	/** Retrieves the complete property list for a specified object. */

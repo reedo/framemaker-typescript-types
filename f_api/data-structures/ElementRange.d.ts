@@ -24,4 +24,4 @@ interface ElementRangeConstructor {
 
 }
 
-declare var ElementRange: ElementRangeConstructor;
+declare const ElementRange: ElementRangeConstructor;

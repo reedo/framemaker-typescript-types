@@ -30,4 +30,4 @@ interface PropIdentConstructor {
 	readonly prototype: PropIdent;
 }
 
-declare var PropIdent: PropIdentConstructor;
+declare const PropIdent: PropIdentConstructor;
