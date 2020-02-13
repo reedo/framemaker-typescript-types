@@ -1,10 +1,7 @@
 // Type definitions for FrameMaker app object
 // Definitions by Dan Reed <https://danreed.dev>
 
-/**
- * @todo Check readonly status of all vars.
- */
-
+/** The global `app` object. */
 interface Session {
 
 	/** The book with input focus. */
@@ -23,7 +20,7 @@ interface Session {
 	 */
 	AddMarkerTypeToStandardMarkers: string;
 
-	/** When True, allows usage of file:/ and file: URLs for referring to a file. */
+	/** When True, allows usage of `file:/` and `file:` URLs for referring to a file. */
 	AllowNewFileURL: boolean;
 
 	/** 1 if element reformatting is enabled. */
@@ -38,15 +35,15 @@ interface Session {
 	/** Time between automatic saves in seconds (60 seconds to 10800 seconds). */
 	AutoSaveSeconds: number;
 
-	/** Directory path of $FMHOME/bin. */
+	/** Directory path of `$FMHOME/bin`. */
 	BinDir: string;
 
 	/**
-	 * When True, if there are leading/trailing whitespaces (spaces and tabs) in elements, save the whitespaces as character references to enable round-tripping.
+	 * When `true`, if there are leading/trailing whitespaces (spaces and tabs) in elements, save the whitespaces as character references to enable round-tripping.
 	 * 
-	 * Else set to False.
+	 * Else set to `false`.
 	 * 
-	 * Default: False.
+	 * Default: `false`.
 	 */
 	CharacterReferencesOnXMLExport: boolean;
 
@@ -91,16 +88,16 @@ interface Session {
 	/** @todo UNDOCUMENTED */
 	DocOpenClientEncounteredErrors: number;
 
-	/** When true, FrameMaker does not save the XML on disk if there are validation errors during XML export. */
+	/** When `true`, FrameMaker does not save the XML on disk if there are validation errors during XML export. */
 	DoNotExportInvalidXML: boolean;
 
 	/** When 1, the FrameMaker error log is not generated. */
 	DoNotGenerateErrorLog: 0 | 1;
 
-	/** True when FrameMaker is set not to show the Welcome screen. */
+	/** `true` when FrameMaker is set not to show the Welcome screen. */
 	DontShowWelcomeScreen: boolean;
 
-	/** If true, XML is validated after doing XSLT while exporting. */
+	/** If `true`, XML is validated after doing XSLT while exporting. */
 	DoPostXSLTValidationOnExport: boolean;
 
 	/** @todo UNDOCUMENTED */
@@ -109,7 +106,7 @@ interface Session {
 	/** List of export filters available in the current session. */
 	ExportFilters: string;
 
-	/** When true, Auto Spell Check is enabled. */
+	/** When `true`, Auto Spell Check is enabled. */
 	EnableAutoSpellCheck: boolean;
 
 	/** First command in the list of commands in the session. */
@@ -142,12 +139,12 @@ interface Session {
 	 * 
 	 * The flags, their mask values, and their meaning follow:
 	 * 
-	 * Constant | Hex Code | Description
-	 * ---|---|---
-	 * Constants.FV_FAMILY_VISIBLE | 0x00000001 | Family is visible in menu.
-	 * Constants.FV_FAMILY_SELECTABLE | 0x00000002 | Family can be selected in menu.
-	 * Constants.FV_FAMILY_MAPPED | 0x00000004 | Family is always mapped to another family.
-	 * Constants.FV_FAMILY_SURROGATE | 0xFFFF0000 | The family mapped to, if Constants.FV_FAMILY_MAPPED (0x00000004) is True.
+	 * | Constant                       | Hex Code   | Description                                                                 |
+	 * | ------------------------------ | ---------- | --------------------------------------------------------------------------- |
+	 * | Constants.FV_FAMILY_VISIBLE    | 0x00000001 | Family is visible in menu.                                                  |
+	 * | Constants.FV_FAMILY_SELECTABLE | 0x00000002 | Family can be selected in menu.                                             |
+	 * | Constants.FV_FAMILY_MAPPED     | 0x00000004 | Family is always mapped to another family.                                  |
+	 * | Constants.FV_FAMILY_SURROGATE  | 0xFFFF0000 | The family mapped to, if `Constants.FV_FAMILY_MAPPED` (0x00000004) is True. |
 	 */
 	FontFamilyAttributes: Ints;
 
@@ -197,10 +194,10 @@ interface Session {
 	GetNamedMenuItemSeparator(name: string): MenuItemSeparator;
 
 	/**
-	 * Gets the object with a specified name (Name property) and object type.
+	 * Gets the object with a specified name (`Name` property) and object type.
 	 * 
-	 * @param objType Type of the object to get (FO Constant).
-	 * @param name Name of the object to get.
+	 * @param objType Type of the object to get (`FO_Constant`).
+	 * @param name    Name of the object to get.
 	 * 
 	 * @returns The object, or 0.
 	 */
@@ -211,7 +208,7 @@ interface Session {
 	 * 
 	 * The `GetProps()` method takes no arguments.
 	 * 
-	 * The method returns a PropVals object that contains an array of property-value pairs, on success.
+	 * The method returns a `PropVals` object that contains an array of property-value pairs, on success.
 	 * 
 	 * If the `GetProps()` method fails, it sets the len field of the returned structure to 0 and assigns one of the following values to `FA_errno`.
 	 * 
@@ -228,7 +225,7 @@ interface Session {
 	/** Path of the FrameMaker product help directory. */
 	HelpDir: string;
 
-	/** Path of $FMHOME. */
+	/** Path of `$FMHOME`. */
 	HomeDir: string;
 
 	/** Name of the host computer. */
@@ -247,7 +244,7 @@ interface Session {
 	/** List of import filters available in the current session. */
 	ImportFilters: string;
 
-	/** Directory path of $FMHOME/fminit. */
+	/** Directory path of `$FMHOME/fminit`. */
 	InitDir: string;
 
 	/** [This property is a string on the Inset class. Boolean here. I don't see how a session can be an inset, but this property is here if you want it.] */
@@ -340,41 +337,41 @@ interface Session {
 	 * Creates a new object and returns it.
 	 * 
 	 * @param objType The type of the object you want to create (FO Constant).
-	 * @param name The name of the object you want to create.
+	 * @param name    The name of the object you want to create.
 	 * 
 	 * @returns The newly created object.
 	 */
 	NewNamedObject(objType: Constants, name: string): FMObject;
 
 	/**
-	 * When True, the 3D objects in the generated PDF become 2-dimensional.
+	 * When `true`, the 3D objects in the generated PDF become 2-dimensional.
 	 * 
-	 * When False, 3D objects get embedded in the PDF and do not become 2 dimensional.
+	 * When `false`, 3D objects get embedded in the PDF and do not become 2 dimensional.
 	 * 
-	 * Default is False.
+	 * Default is `false`.
 	 */
 	No3DInPDF: boolean;
 
 	/**
-	 * When True, the Flash content in the PDF becomes static.
+	 * When `true`, the Flash content in the PDF becomes static.
 	 * 
-	 * When False, Flash objects get embedded in the PDF and are playable.
+	 * When `false`, Flash objects get embedded in the PDF and are playable.
 	 * 
-	 * Default is False.
+	 * Default is `false`.
 	 */
 	NoFlashInPDF: boolean;
 
 	/**
-	 * When True, the Rich Media (audio and video) objects in the PDF become static.
+	 * When `true`, the Rich Media (audio and video) objects in the PDF become static.
 	 * 
-	 * When False, Rich Media objects get embedded in the PDF and are playable.
+	 * When `false`, Rich Media objects get embedded in the PDF and are playable.
 	 * 
-	 * Default is False.
+	 * Default is `false`.
 	 */
 	NoMultiMediaInPDF: boolean;
 
 	/**
-	 * @returns True if the object exists in the FrameMaker session.
+	 * @returns `true` if the object exists in the FrameMaker session.
 	 */
 	ObjectValid(): 0 | 1;
 
@@ -414,7 +411,7 @@ interface Session {
 	/** 1 if Remember Missing Font Names is activated. */
 	RememberMissingFontNames: 0 | 1;
 
-	/** When true, the extra while spaces are removed while importing XML. */
+	/** When `true`, the extra while spaces are removed while importing XML. */
 	RemoveExtraWhiteSpacesOnXMLImport: boolean;
 
 	/** @todo UNDOCUMENTED */
@@ -436,13 +433,13 @@ interface Session {
 	ScreenY: number;
 
 	/**
-	 * TheSetProps() method sets the properties of a specified object. The method takes one argument - An array containing the values of the object to be set. The method does not return anything on success.
+	 * Sets the properties of a specified object. The method does not return anything on success.
 	 * 
 	 * @param setVal The property list.
 	 */
 	SetProps(setVal: PropVals): void;
 
-	/** Directory path of $FMHOME/structure/sgml. */
+	/** Directory path of `$FMHOME/structure/sgml`. */
 	SgmlDir: string;
 
 	/** 1 if Snap is turned on for the session. */
@@ -451,16 +448,16 @@ interface Session {
 	/** @todo UNDOCUMENTED */
 	StackWarningLevel: number;
 
-	/** Directory path of $FMHOME/structure. */
+	/** Directory path of `$FMHOME/structure`. */
 	StructureDir: string;
 
-	/** When true, the warning messages about duplicate declarations in DTD/Schema do not appear in the FrameMaker log. */
+	/** When `true`, the warning messages about duplicate declarations in DTD/Schema do not appear in the FrameMaker log. */
 	SuppressXMLParserWarnings: boolean;
 
 	/** @todo UNDOCUMENTED */
 	TechSuiteInternal: number;
 
-	/** Path of the temporary directory for internal FrameMaker product processes; the directory specified by the DOS $TEMP environment variable. */
+	/** Path of the temporary directory for internal FrameMaker product processes; the directory specified by the DOS `$TEMP` environment variable. */
 	TmpDir: string;
 
 	/** @todo UNDOCUMENTED */
@@ -478,7 +475,7 @@ interface Session {
 	/** User name. */
 	UserName: string;
 
-	/** Name of the FrameMaker app directory. As defined by: %appdata%\Adobe\FrameMaker\<version number>. Returns the HomeDir if the app directory is not found. */
+	/** Name of the FrameMaker app directory. As defined by: `%appdata%\Adobe\FrameMaker\<version number>`. Returns the HomeDir if the app directory is not found. */
 	UserSettingsDir: string;
 
 	/** A string to which clients can store private data. */
@@ -508,7 +505,7 @@ interface Session {
 	/** Name of window system that the FrameMaker product is running under. */
 	WindowSystem: string;
 
-	/** Directory path of $FMHOME/structure/xml. */
+	/** Directory path of `$FMHOME/structure/xml`. */
 	XmlDir: string;
 
 	/** @todo UNDOCUMENTED */

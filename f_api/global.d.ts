@@ -11,8 +11,8 @@ declare function AddLocationToProject(): void;
  * Adds a menu to a specified menu.
  * 
  * @param toMenu The menu tag to which the menu is to be added.
- * @param menu The new menu which is being added to the existing menu.
- * @param label The name by which the newly added menu is visible.
+ * @param menu   The new menu which is being added to the existing menu.
+ * @param label  The name by which the newly added menu is visible.
  */
 declare function AddMenu(toMenu: string, menu: string, label: string): Constants['FE_Success'] | void;
 
@@ -20,14 +20,14 @@ declare function AddMenu(toMenu: string, menu: string, label: string): Constants
  * Displays an alert box with a message. Depending on the constant you specify for the type parameter, the alert displays either the OK and Cancel buttons, Yes and No buttons or a Continue button.
  * 
  * @param message The message that appears in the dialog box. Messages longer than 255 characters, are truncated.
- * @param type The dialog box type.
+ * @param type    The dialog box type.
  * 
  * @returns 0 if the user clicked OK, Continue, or Yes. -1 if the user clicked Cancel or No.
  */
 declare function Alert(message: string, type: FF_ALERT): 0 | -1;
 
 /**
- * Checks whether the current asynchronous client has a connection with a FrameMaker process. Call this method after registering the asynchronous client using WinConnectSession().
+ * Checks whether the current asynchronous client has a connection with a FrameMaker process. Call this method after registering the asynchronous client using `WinConnectSession()`.
  * 
  * @returns A positive integer if there is a current connection to a FrameMaker process. Otherwise it returns 0.
  */
@@ -36,9 +36,9 @@ declare function Alive(): number;
 /**
  * Allocates memory for a property list.
  * 
- * On success, the method returns a property list (a PropVals data structure). The returned PropVals structure references memory that is allocated by the method. If AllocatePropVals() fails, the method sets the len field of the returned structure to 0.
+ * On success, the method returns a property list (a PropVals data structure). The returned PropVals structure references memory that is allocated by the method. If `AllocatePropVals()` fails, the method sets the len field of the returned structure to 0.
  * 
- * Can also use new PropVals().
+ * Can also use `new PropVals()`.
  * 
  * @param numProps The number of properties in the property list.
  */
@@ -65,31 +65,31 @@ declare function BridgeTalk(): void;
 /**
  * Allows a client to call another client. The method is useful for calling FrameMaker clients, such as the structure generator and the element catalog manager.
  * 
- * __NOTE:__ Calls to the structure generator always return FE_Success no matter what string is passed to it as an argument.
+ * __NOTE:__ Calls to the structure generator always return `Constants.FE_Success` no matter what string is passed to it as an argument.
  * 
  * @param clname The registered name of the target client.
- * @param arg A string that is passed to the target client.
+ * @param arg    A string that is passed to the target client.
  * 
- * @returns FE_Success or the value specified by the target client’s last call to ReturnValue().
+ * @returns `Constants.FE_Success` or the value specified by the target client’s last call to `ReturnValue()`.
  */
 declare function CallClient(clname: string, arg: string): Constants['FE_Success'] | number;
 
 /**
  * Allows a client to call another client. The method is useful for calling FrameMaker clients, such as the structure generator and the element catalog manager.
  * 
- * __NOTE:__ Calls to the structure generator always return FE_Success no matter what string is passed to it as an argument.
+ * __NOTE:__ Calls to the structure generator always return `Constants.FE_Success` no matter what string is passed to it as an argument.
  * 
  * @param clname The registered name of the target client.
- * @param arg A string that is passed to the target client.
+ * @param arg    A string that is passed to the target client.
  * 
- * @returns FE_Success or the value specified by the target client’s last call to ReturnValue().
+ * @returns `Constants.FE_Success` or the value specified by the target client’s last call to `ReturnValue()`.
  */
 declare function CallClientEx(clname: string, arg: string): Constants['FE_Success'] | TypedVal;
 
 /**
- * Checks the scripts returned by Open(), Import(), Save(), and UpdateBook() to determine if a specified status bit is set.
+ * Checks the scripts returned by `Open()`, `Import()`, `Save()`, and `UpdateBook()` to determine if a specified status bit is set.
  * 
- * @param p The property list returned by Open(), Save(), Import(), or UpdateBook().
+ * @param p         The property list returned by `Open()`, `Save()`, `Import()`, or `UpdateBook()`.
  * @param statusBit The status bit to test.
  * 
  * @returns Returns 1 if the bit is set, else returns 0.
@@ -99,10 +99,10 @@ declare function CheckStatus(p: PropVals, statusBit: number): 0 | 1;
 /**
  * Displays dialog boxes similar to a FrameMaker’s Open and Save dialog boxes. The method displays directories and files in a scroll list and allows the user to choose a file or directory.
  * 
- * @param title The message that appears in the dialog box.
- * @param directory The default directory when the dialog box is first displayed. If you specify an empty string, the last directory used by an ESTK client is used. If no ESTK client has used a directory, the directory specified by the session property, OpenDir, is used.
- * @param stuffVal The default value that appears in the input field when the dialog box first appears. If the dialog box type specified by mode does not have an input field, this string is ignored.
- * @param mode A constant specifying the type of dialog box.
+ * @param title     The message that appears in the dialog box.
+ * @param directory The default directory when the dialog box is first displayed. If you specify an empty string, the last directory used by an ESTK client is used. If no ESTK client has used a directory, the directory specified by the session property, `OpenDir`, is used.
+ * @param stuffVal  The default value that appears in the input field when the dialog box first appears. If the dialog box type specified by mode does not have an input field, this string is ignored.
+ * @param mode      A constant specifying the type of dialog box.
  * 
  * @returns 0 if the user clicked Open, Select, Use, or Save; a nonzero value if the user clicked Cancel or an error occurred.
  */
@@ -120,7 +120,7 @@ declare function ClientNumber(): void;
 /** @todo UNDOCUMENTED */
 declare function CloseModalDialog(): void;
 
-/** The global Command object. */
+/** The global `Command` object. */
 declare var Cmd: Command;
 
 /**
@@ -128,8 +128,8 @@ declare var Cmd: Command;
  * 
  * @todo Check the types for this.
  * 
- * @param menuId The ID of the Parent menu.
- * @param menuEntry The CMSMenuItem structure describes a custom menu definition.
+ * @param menuId    The ID of the Parent menu.
+ * @param menuEntry The `CMSMenuItem` structure describes a custom menu definition.
  */
 declare function CMSAddMenuEntry(menuId: number, menuEntry: number): CMSObject;
 
@@ -167,16 +167,16 @@ declare function Console(message: string): void;
 /**
  * Creates a new custom document using the FrameMaker product’s default new document template.
  * 
- * @param width The document page width.
- * @param height The document page height.
- * @param numCols The default number of columns.
- * @param columnGap The default column spacing.
- * @param topMargin The document page top margin.
- * @param botMargin The document page bottom margin.
- * @param leftinsideMargin The left margin for single-sided documents, or the inside margin for double-sided documents.
+ * @param width              The document page width.
+ * @param height             The document page height.
+ * @param numCols            The default number of columns.
+ * @param columnGap          The default column spacing.
+ * @param topMargin          The document page top margin.
+ * @param botMargin          The document page bottom margin.
+ * @param leftinsideMargin   The left margin for single-sided documents, or the inside margin for double-sided documents.
  * @param rightoutsideMargin The right margin for single-sided documents, or the outside margin for double-sided documents.
- * @param sidedness A constant that specifies whether the document is single-sided or doublesided and on which side the document starts.
- * @param makeVisible Specifies whether the document is visible after it is created. Set to true to make the document visible.
+ * @param sidedness          A constant that specifies whether the document is single-sided or doublesided and on which side the document starts.
+ * @param makeVisible        Specifies whether the document is visible after it is created. Set to true to make the document visible.
  * 
  * @returns The new document.
  */
@@ -195,7 +195,7 @@ declare function DefineCommandEx(): void;
  * 
  * If the user has already defined a menu with the name specified by name, `DefineMenu()` ignores the label parameter and uses the label specified by the user.
  * 
- * @param name A unique name for the menu. If the user or an ESTK client has already defined a command or menu with this name, the new menu replaces it.
+ * @param name  A unique name for the menu. If the user or an ESTK client has already defined a command or menu with this name, the new menu replaces it.
  * @param label The title of the menu as it appears on the menu bar or menu.
  * 
  * @returns The new menu.
@@ -214,7 +214,7 @@ declare function DialogEvent(): void;
 /**
  * Ends communication with a FrameMaker product process.
  * 
- * @returns FE_Success if it succeeds, or a system error code if an error occurs.
+ * @returns `Constants.FE_Success` if it succeeds, or a system error code if an error occurs.
  */
 declare function DisconnectFromSession(): Constants['FE_Success'] | number;
 
@@ -279,7 +279,7 @@ declare function Fcodes(codes: FCodes[]): void;
 /**
  * Displays a file scrollbox using the given title and the given directory as the path.
  * 
- * @param title The title to display on the scroll box.
+ * @param title     The title to display on the scroll box.
  * @param directory The directory path to display.
  */
 declare function FileScrollBox(title: string, directory: string): string | null;
@@ -349,19 +349,19 @@ declare function GetLocalizationStrings(): void;
 declare function GetNewXMLDefaultParams(): PropVals;
 
 /**
- * Gets a default property list that you can use to call Open().
+ * Gets a default property list that you can use to call `Open()`.
  * 
- * @returns A PropVals structure containing the properties retreived.
+ * @returns A `PropVals` structure containing the properties retreived.
  */
 declare function GetOpenDefaultParams(): PropVals;
 
 /**
- * Gets the index of a property-value pair (PropVal structure) within a property list.
+ * Gets the index of a property-value pair (`PropVal` structure) within a property list.
  * 
  * `GetPropIndex()` is a convenience routine that makes it easier to manipulate the properties in a property list.
  * 
  * @param propVals The property list.
- * @param propNum The property for which the index is to be retrieved.
+ * @param propNum  The property for which the index is to be retrieved.
  */
 declare function GetPropIndex(propVals: PropVals, propNum: FP_Constant): Constants['FE_BadPropNum'] | number;
 
@@ -418,7 +418,7 @@ declare function IsDRL(): void;
  * 
  * @param encodingName The encoding that you want to test.
  * 
- * @returns true if the specified encoding is supported for the current session, else returns false.
+ * @returns `true` if the specified encoding is supported for the current session, else returns `false`.
  */
 declare function IsEncodingSupported(encodingName: string): boolean;
 
@@ -435,8 +435,8 @@ declare var JSON: JSON;
  * 
  * For example, a menu customization file can change the name of a command or move a command from one menu to another.
  * 
- * @param pathname The pathname of the menu customization file to load. If you specify only a filename, the function looks in the client directory. If silent is set to False, the pathname specified by pathname is used as the default in the Menu Customization File dialog box.
- * @param silent Specifies whether to display the Menu Customization File dialog box and allow the user to choose the file. To display the dialog box and allow the user to choose the file, specify false. To use the file specified by pathname without asking the user, specify true.
+ * @param pathname The pathname of the menu customization file to load. If you specify only a filename, the function looks in the client directory. If silent is set to `false`, the pathname specified by pathname is used as the default in the Menu Customization File dialog box.
+ * @param silent   Specifies whether to display the Menu Customization File dialog box and allow the user to choose the file. To display the dialog box and allow the user to choose the file, specify `false`. To use the file specified by pathname without asking the user, specify `true`.
  */
 declare function LoadMenuCustomizationFile(pathname: string, silent: boolean): Constants['FE_Success'] | void;
 
@@ -472,7 +472,7 @@ declare function NewProject(): void;
 /**
  * Creates a new, untitled XML.
  * 
- * @param opennewXMLParams A property list telling the FrameMaker product how to open the file and how to respond to errors and other conditions. To use the default list, specify null.
+ * @param opennewXMLParams   A property list telling the FrameMaker product how to open the file and how to respond to errors and other conditions. To use the default list, specify null.
  * @param newXMLReturnParams A property list that returns the filename and provides information about how the FrameMaker product opened the file. It must be initialized before you call `NewXML()`.
  */
 declare function NewXML(opennewXMLParams: PropVals, newXMLReturnParams: PropVals): Doc;
@@ -485,7 +485,7 @@ declare function NewXML(opennewXMLParams: PropVals, newXMLReturnParams: PropVals
  * For example, after an error, FrameMaker allows the user to save changes in open documents, but it does not notify any clients of the save operations.
  * 
  * @param notification Constant that specifies the notification point.
- * @param state Specifies whether to turn notification on or off. 1 turns it on, and 0 turns it off.
+ * @param state        Specifies whether to turn notification on or off. 1 turns it on, and 0 turns it off.
  */
 declare function Notification(notification: FA_Note, state: 0 | 1): Constants['FE_Success'] | void;
 
@@ -530,8 +530,8 @@ declare function NToIndicConverter(): void;
  * 
  * Instead, it returns 0 and sets FA_errno to either `Constants.FE_WantsPortrait` (-48), `Constants.FE_WantsCustom` (-46), or `Constants.FE_WantsLandscape` (-47), respectively. It is up to your client to create a portrait, custom, or landscape document.
  * 
- * @param fileName The full pathname of the file to open. If you are using `Open()` to create a document, specify the name of the template to use.
- * @param openParams A property list telling the FrameMaker product how to open the file and how to respond to errors and other conditions. To use the default list, specify null.
+ * @param fileName         The full pathname of the file to open. If you are using `Open()` to create a document, specify the name of the template to use.
+ * @param openParams       A property list telling the FrameMaker product how to open the file and how to respond to errors and other conditions. To use the default list, specify null.
  * @param openReturnParams A property list that returns the filename and provides information about how FrameMaker opened the file. It must be initialized before you call `Open()`.
  * 
  * @returns The document or book if it opens it successfully, or 0 if an error occurs.
@@ -551,7 +551,7 @@ declare function OpenXML(): void;
 declare function PopClipboard(): Constants['FE_Success'] | void;
 
 /**
- * Prints the value of FA_errno to the console.
+ * Prints the value of `FA_errno` to the console.
  * 
  * @param i An error number.
  */
@@ -610,9 +610,9 @@ declare function PrintPropVal(p: PropVal): void;
 declare function PrintPropVals(p: PropVals): void;
 
 /**
- * Prints errors returned by Save(). It is useful for debugging your clients.
+ * Prints errors returned by `Save()`. It is useful for debugging your clients.
  * 
- * @param p The property list that Save() returns in saveReturnParams.
+ * @param p The property list that `Save()` returns in saveReturnParams.
  */
 declare function PrintSaveStatus(p: PropVals): void;
 
@@ -631,9 +631,9 @@ declare function PrintTextItem(textItem: TextItem): void;
 declare function PrintTextItems(textItems: TextItems): void;
 
 /**
- * Prints errors returned by UpdateBook(). It is useful for debugging your clients.
+ * Prints errors returned by `UpdateBook()`. It is useful for debugging your clients.
  * 
- * @param p The property list that UpdateBook() returns in updateReturnParams.
+ * @param p The property list that `UpdateBook()` returns in updateReturnParams.
  */
 declare function PrintUpdateBookStatus(p: PropVals): void;
 
@@ -648,7 +648,7 @@ declare function prompt(): void;
  * 
  * `PromptInt()` does not assign a return value if the user clicks Cancel. If the user types alphabetic text after a number, the method ignores the text and just returns the value of the number.
  * 
- * @param message The message that appears in the dialog box. It must be 255 characters or less.
+ * @param message  The message that appears in the dialog box. It must be 255 characters or less.
  * @param stuffVal The default value that appears in the input field when the dialog box is first displayed.
  */
 declare function PromptInt(message?: string, stuffVal?: string): number | null;
@@ -660,8 +660,8 @@ declare function PromptInt(message?: string, stuffVal?: string): number | null;
  * 
  * `PromptMetric()` dialog boxes behave like metric dialog boxes in the user interface. If the user types a number followed by a string that represents a unit (for example 10pts or 5"), the method converts the number into the equivalent number of metric units. If the user does not specify a unit, the method uses points (metric 65536).
  * 
- * @param message The message that appears in the dialog box. It must be 255 characters or less.
- * @param stuffVal The default value that appears in the input field when the dialog box is first displayed.
+ * @param message     The message that appears in the dialog box. It must be 255 characters or less.
+ * @param stuffVal    The default value that appears in the input field when the dialog box is first displayed.
  * @param defaultunit The metric unit to use if the user does not specify one.
  */
 declare function PromptMetric(message: string, stuffVal: string, defaultunit: number): number | null;
@@ -671,7 +671,7 @@ declare function PromptMetric(message: string, stuffVal: string, defaultunit: nu
  * 
  * __NOTE:__ Do not call PromptString() to prompt the user for a pathname. If the user enters a pathname as a string, the backslash character (\\) is interpreted as a special escape character. For example, the character `\s` represents a space. If the user enters the pathname `c:\sample`, this string is interpreted as `c: ample`. To prompt the user for a pathname, use `ChooseFile()` to display a file selection dialog box.
  * 
- * @param message The message that appears in the dialog box. It must be 255 characters or less. Newline and linefeed characters are ignored.
+ * @param message  The message that appears in the dialog box. It must be 255 characters or less. Newline and linefeed characters are ignored.
  * @param stuffVal The default value that appears in the input field when the dialog box is first displayed.
  */
 declare function PromptString(message: string, stuffVal: string): string | null;
@@ -687,7 +687,7 @@ declare function PushClipboard(): void;
  * Deletes the specified menu.
  * 
  * @param fromMenu The parent menu from which the menu is to be deleted.
- * @param label The menu to delete.
+ * @param label    The menu to delete.
  */
 declare function RemoveMenu(fromMenu: string, label: string): Constants['FE_Success'] | void;
 
@@ -711,7 +711,7 @@ declare function RenameComponentofProject(): void;
  * 
  * @param retvalue The value to return.
  * 
- * @returns On success, ReturnValue() returns the value of the retvalue parameter that was set, the previous time `ReturnValue()` was called in the current callback function.
+ * @returns On success, `ReturnValue()` returns the value of the retvalue parameter that was set, the previous time `ReturnValue()` was called in the current callback function.
  */
 declare function ReturnValue(retvalue: number): number | void;
 
@@ -727,11 +727,11 @@ declare function SaveProject(): void;
 /**
  * Displays an array of items and allows the user to choose one.
  * 
- * __NOTE:__ If you set _default to -1, always check to make sure the value returned in selected_item is 0 or greater before you use it as an array index. If you set default to -1 and the user clicks OK without choosing an item, the value returned in selected_item will be -1.
+ * __NOTE:__ If you set `_default` to -1, always check to make sure the value returned in selected_item is 0 or greater before you use it as an array index. If you set default to -1 and the user clicks OK without choosing an item, the value returned in selected_item will be -1.
  * 
- * @param title The title that appears on the dialog box.
+ * @param title       The title that appears on the dialog box.
  * @param stringslist The list of items to appear in the scroll list.
- * @param _default The index of the item that is selected when the dialog box first appears. For no default, specify -1.
+ * @param _default    The index of the item that is selected when the dialog box first appears. For no default, specify -1.
  * 
  * @returns 0 if the user clicked OK, or a nonzero value if the user clicked Cancel or an error occurred.
  */
@@ -780,7 +780,7 @@ declare function SilentNewBook(): void;
  * __NOTE:__ If you call `SimpleNewDoc()` with interactive set to true and the user clicks etiher Portrait, Custom, or Landscape in the New dialog box, `SimpleNewDoc()` does not create a document. Intead, it returns 0 and sets `FA_errno` to either `Constants.FE_WantsPortrait` (-48), `Constants.FE_WantsCustom` (-46), or `Constants.FE_WantsLandscape` (-47), respectively. It is up to your client to create a portrait, custom, or landscape document.
  * 
  * @param templateName The absolute pathname of the template to use.
- * @param interactive Specifies whether FrameMaker displays messages and warnings to the user.
+ * @param interactive  Specifies whether FrameMaker displays messages and warnings to the user.
  */
 declare function SimpleNewDoc(templateName: string, interactive: boolean): Doc;
 
@@ -793,7 +793,7 @@ declare function SimpleNewDoc(templateName: string, interactive: boolean): Doc;
  * 
  * __NOTE:__ You cannot use `SimpleOpen()` to open filterable files. To open filterable files, use Open.
  * 
- * @param fileName The absolute pathname of the file to open.
+ * @param fileName    The absolute pathname of the file to open.
  * @param interactive Specifies whether the FrameMaker product displays messages and warnings to the user. true instructs the FrameMaker product to display messages and warnings.
  */
 declare function SimpleOpen(fileName: string, interactive: boolean): Book | Doc | 0;
@@ -830,7 +830,7 @@ declare function UpdateMenus(): void;
  * 
  * If `UserCancel()` returns true, your client can abort the processing.
  * 
- * @returns True if the user has executed the Cancel gesture, or false if the user has not executed the Cancel gesture.
+ * @returns `true` if the user has executed the Cancel gesture, or `false` if the user has not executed the Cancel gesture.
  */
 declare function UserCancel(): boolean;
 

@@ -14,16 +14,16 @@ interface BodyPage extends Page {
 	Delete(): Constants['FE_Success'] | Constants['FE_BadDocId'] | Constants['FE_BadObjId'] | Constants['FE_BadDelete'] | Constants['FE_BadOperation'] | Constants['FE_BadParameter'] | Constants['FE_NotMenu'];
 
 	/**
-	 * The name of the master page background for the body page if the PageBackground property is set to `Constants.FV_BGD_OTHER` (0x02).
+	 * The name of the master page background for the body page if the `PageBackground` property is set to `Constants.FV_BGD_OTHER` (0x02).
 	 * 
-	 * The value is `null` if the PageBackgroundproperty is set to either `Constants.FV_BGD_DEFAULT` (0x00) or `Constants.FV_BGD_NONE` (0x01).
+	 * The value is `null` if the `PageBackground` property is set to either `Constants.FV_BGD_DEFAULT` (0x00) or `Constants.FV_BGD_NONE` (0x01).
 	 */
 	MasterPage: string | null;
 
 	/**
-	 * Tthe type of master page background.
+	 * The type of master page background.
 	 * 
-	 * To determine whether a body page has a Left or a Right master page background, when its PageBackground property is set to `Constants.FV_BGD_DEFAULT` (0x00), query its `PageIsRecto` property.
+	 * To determine whether a body page has a Left or a Right master page background, when its `PageBackground` property is set to `Constants.FV_BGD_DEFAULT` (0x00), query its `PageIsRecto` property.
 	 */
 	PageBackground: Constants['FV_BGD_DEFAULT'] | Constants['FV_BGD_NONE'] | Constants['FV_BGD_OTHER'];
 

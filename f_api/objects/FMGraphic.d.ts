@@ -16,7 +16,7 @@ interface FMGraphic extends FMObject {
 	/**
 	 * Indicates the factor by which the arrowhead is scaled as line width changes (always rounded down to nearest 1/16 point).
 	 * 
-	 * It is not used if the ArrowScaleHead property is `false`.
+	 * It is not used if the `ArrowScaleHead` property is `false`.
 	 */
 	ArrowScaleFactor: number | false;
 
