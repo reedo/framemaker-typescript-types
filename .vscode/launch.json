@@ -8,7 +8,7 @@
 			"type": "extendscript-debug",
 			"request": "launch",
 			"name": "Current script",
-			"targetSpecifier": "framemaker-15.0",
+			"targetSpecifier": "framemaker-16.0",
 			"engineName": "main",
 			"program": "${file}",
 			"excludes": [
@@ -21,7 +21,7 @@
 			"type": "extendscript-debug",
 			"request": "launch",
 			"name": "View All Data",
-			"targetSpecifier": "framemaker-15.0",
+			"targetSpecifier": "framemaker-16.0",
 			"engineName": "main",
 			"program": "${file}",
 			"excludes": [],
@@ -31,7 +31,7 @@
 			"type": "extendscript-debug",
 			"request": "launch",
 			"name": "Exclude All Data",
-			"targetSpecifier": "framemaker-15.0",
+			"targetSpecifier": "framemaker-16.0",
 			"engineName": "main",
 			"program": "${file}",
 			"excludes": [
