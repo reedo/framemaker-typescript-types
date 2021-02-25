@@ -23,7 +23,7 @@ interface TypedVal {
 	psval: Points;
 
 	/** Set of tabs. */
-	tsval: T;
+	tsval: Tabs;
 
 	/** Text location. */
 	tlval: TextLoc;
@@ -49,7 +49,7 @@ interface TypedVal {
 
 interface TypedValConstructor {
 	new(): TypedVal;
-	new(item: number | string | Metrics | Strings | Points | Tab | TextLoc | TextRange | ElementCatalogEntries | Ints | UInts | AttributeDefs | Attributes): TypedVal;
+	new(item: number | string | Metrics | Strings | Points | Tabs | TextLoc | TextRange | ElementCatalogEntries | Ints | UInts | AttributeDefs | Attributes): TypedVal;
 
 }
 
