@@ -4,8 +4,6 @@
 		"checkJs": true,
 		"module": "none",
 		"strict": true,
-		"lib": [
-			"es5",
-		]
+		"noLib": true,
 	},
 }
