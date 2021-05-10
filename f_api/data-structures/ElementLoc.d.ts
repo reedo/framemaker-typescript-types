@@ -4,10 +4,12 @@
 /** ElementLoc specifies a location within the structure of a document or book. */
 interface ElementLoc {
 
-	/** @ts-expect-error The parent element. */
+	/** The parent element. */
+	// @ts-expect-error
 	parent: Element;
 
-	/** @ts-expect-error The child element. */
+	/** The child element. */
+	// @ts-expect-error
 	child: Element;
 
 	/** Offset within the parent or child element. */
