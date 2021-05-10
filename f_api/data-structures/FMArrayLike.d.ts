@@ -2,7 +2,7 @@
 // Definitions by: Dan Reed <http://danreed.dev>
 
 /** Array-like collection of FrameMaker objects or data structures. */
-interface FMArrayLike<T> {
+interface FMObjectArray<T> {
 
 	/**
 	 * The original array is unchanged. If an array is provided as a parameter to `concat()`, each of its elements are appended as separate array elements at the end of the new array.
@@ -11,7 +11,7 @@ interface FMArrayLike<T> {
 	 * 
 	 * @returns A new array, the result of concatenation the given values to the end of the original array.
 	 */
-	concat(value: T | T[] | FMArrayLike<T>): FMArrayLike<T>;
+	concat(value: T | T[] | FMObjectArray<T>): FMObjectArray<T>;
 
 	/** The length of the array. */
 	len: number;
@@ -41,65 +41,65 @@ interface FMArrayLike<T> {
 	[n: number]: T;
 }
 
-interface FMArrayLikeConstructor<T> {
-	new(): FMArrayLike<T>;
-	new(items: T[] | FMArrayLike<T>): FMArrayLike<T>;
-	new(...items: T[]): FMArrayLike<T>;
-	readonly prototype: FMArrayLike<T>;
+interface FMObjectArrayConstructor<T> {
+	new(): FMObjectArray<T>;
+	new(items: T[] | FMObjectArray<T>): FMObjectArray<T>;
+	new(...items: T[]): FMObjectArray<T>;
+	readonly prototype: FMObjectArray<T>;
 }
 
-type Attributes = FMArrayLike<Attribute>;
-type AttributesConstructor = FMArrayLikeConstructor<Attribute>;
+type Attributes = FMObjectArray<Attribute>;
+type AttributesConstructor = FMObjectArrayConstructor<Attribute>;
 declare const Attributes: AttributesConstructor;
 
-type AttributeDefs = FMArrayLike<AttributeDef>;
-type AttributeDefsConstructor = FMArrayLikeConstructor<AttributeDef>;
+type AttributeDefs = FMObjectArray<AttributeDef>;
+type AttributeDefsConstructor = FMObjectArrayConstructor<AttributeDef>;
 declare const AttributeDefs: AttributeDefsConstructor;
 
-type AttributesEx = FMArrayLike<AttributeEx>;
-type AttributesExConstructor = FMArrayLikeConstructor<AttributeEx>;
+type AttributesEx = FMObjectArray<AttributeEx>;
+type AttributesExConstructor = FMObjectArrayConstructor<AttributeEx>;
 declare const AttributesEx: AttributesExConstructor;
 
-type IdValuePairs = FMArrayLike<IdValuePair>;
-type IdValuePairsConstructor = FMArrayLikeConstructor<IdValuePair>;
+type IdValuePairs = FMObjectArray<IdValuePair>;
+type IdValuePairsConstructor = FMObjectArrayConstructor<IdValuePair>;
 declare const IdValuePairs: IdValuePairsConstructor;
 
-type Ints = FMArrayLike<number>;
-type IntsConstructor = FMArrayLikeConstructor<number>;
+type Ints = FMObjectArray<number>;
+type IntsConstructor = FMObjectArrayConstructor<number>;
 declare const Ints: IntsConstructor;
 
-type Metrics = FMArrayLike<number>;
-type MetricsConstructor = FMArrayLikeConstructor<number>;
+type Metrics = FMObjectArray<number>;
+type MetricsConstructor = FMObjectArrayConstructor<number>;
 declare const Metrics: MetricsConstructor;
 
-type Points = FMArrayLike<Point>;
-type PointsConstructor = FMArrayLikeConstructor<Point>;
+type Points = FMObjectArray<Point>;
+type PointsConstructor = FMObjectArrayConstructor<Point>;
 declare const Points: PointsConstructor;
 
-type PropVals = FMArrayLike<PropVal>;
-type PropValsConstructor = FMArrayLikeConstructor<PropVal>;
+type PropVals = FMObjectArray<PropVal>;
+type PropValsConstructor = FMObjectArrayConstructor<PropVal>;
 declare const PropVals: PropValsConstructor;
 
-type Strings = FMArrayLike<string>;
-type StringsConstructor = FMArrayLikeConstructor<string>;
+type Strings = FMObjectArray<string>;
+type StringsConstructor = FMObjectArrayConstructor<string>;
 declare const Strings: StringsConstructor;
 
-type Tabs = FMArrayLike<Tab>;
-type TabsConstructor = FMArrayLikeConstructor<Tab>;
+type Tabs = FMObjectArray<Tab>;
+type TabsConstructor = FMObjectArrayConstructor<Tab>;
 declare const Tabs: TabsConstructor;
 
-type TextItems = FMArrayLike<TextItem>;
-type TextItemsConstructor = FMArrayLikeConstructor<TextItem>;
+type TextItems = FMObjectArray<TextItem>;
+type TextItemsConstructor = FMObjectArrayConstructor<TextItem>;
 declare const TextItems: TextItemsConstructor;
 
-type TypedVals = FMArrayLike<TypedVal>;
-type TypedValsConstructor = FMArrayLikeConstructor<TypedVal>;
+type TypedVals = FMObjectArray<TypedVal>;
+type TypedValsConstructor = FMObjectArrayConstructor<TypedVal>;
 declare const TypedVals: TypedValsConstructor;
 
-type UBytes = FMArrayLike<number>;
-type UBytesConstructor = FMArrayLikeConstructor<number>;
+type UBytes = FMObjectArray<number>;
+type UBytesConstructor = FMObjectArrayConstructor<number>;
 declare const UBytes: UBytesConstructor;
 
-type UInts = FMArrayLike<number>;
-type UIntsConstructor = FMArrayLikeConstructor<number>;
+type UInts = FMObjectArray<number>;
+type UIntsConstructor = FMObjectArrayConstructor<number>;
 declare const UInts: UIntsConstructor;
