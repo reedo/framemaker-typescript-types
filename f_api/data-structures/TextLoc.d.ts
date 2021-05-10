@@ -5,7 +5,7 @@
 interface TextLoc {
 
 	/** `FO_Pgf` (31) or `FO_TextLine` (18) object. */
-	obj: Constants['FO_TextLine'] | Constants['FO_Pgf'];
+	obj: TextLocObjType;
 
 	/** Characters from the beginning of the object. */
 	offset: number;
@@ -13,8 +13,17 @@ interface TextLoc {
 
 interface TextLocConstructor {
 	new(): TextLoc;
-	new(obj: Constants['FO_TextLine'] | Constants['FO_Pgf'], offset: number): TextLoc;
+	new(obj: TextLocObjType, offset: number): TextLoc;
 	readonly prototype: TextLoc;
 }
 
 declare const TextLoc: TextLocConstructor;
+
+/**
+ * Can be one of:
+ * * Constants.FO_TextLine (18)
+ * * Constants.FO_Pgf (31)
+ */
+type TextLocObjType =
+	Constants['FO_TextLine'] |
+	Constants['FO_Pgf'];
