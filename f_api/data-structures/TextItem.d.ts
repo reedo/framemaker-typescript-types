@@ -8,7 +8,7 @@ interface TextItem {
 	offset: number;
 
 	/** Type of the text item. */
-	dataType: TextItemType;
+	dataType: FTI_Constant;
 
 	/** Denotes the text item if the text item is a string. */
 	sdata: string;
@@ -23,7 +23,7 @@ interface TextItem {
 
 interface TextItemConstructor {
 	new(): TextItem;
-	new(dataType: TextItemType, data: number | string | FMObject): TextItem;
+	new(dataType: FTI_Constant, data: number | string | FMObject): TextItem;
 	readonly prototype: TextItem;
 }
 
@@ -71,7 +71,7 @@ declare const TextItem: TextItemConstructor;
  * * Constants.FTI2_InlineComponentBegin (0x80000010)
  * * Constants.FTI2_InlineComponentEnd (0x80000020)
  */
-type TextItemType =
+type FTI_Constant =
 	Constants['FTI_HardLineEnd'] |
 	Constants['FTI_HyphenLineEnd'] |
 	Constants['FTI_String'] |

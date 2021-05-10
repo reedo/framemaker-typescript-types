@@ -5,7 +5,7 @@
 interface AttributeDef {
 
 	/** Denotes the attribute value’s type. */
-	attrType: AttributeType;
+	attrType: FV_AT_Constant;
 
 	/** The choices from which to select, if the `attrType` parameter is set to `Constants.FV_AT_CHOICES` (2). */
 	choices: Strings;
@@ -14,7 +14,7 @@ interface AttributeDef {
 	defValues: Strings;
 
 	/** The flag value determines whether an attribute is hidden, read-only or neither. */
-	flags: AttributeFlags;
+	flags: FV_AF_Constant;
 
 	/** Name of the attribute. */
 	name: string;
@@ -36,7 +36,7 @@ interface AttributeDef {
 
 interface AttributeDefConstructor {
 	new(): AttributeDef;
-	new(name: string, required: 0 | 1, flags: AttributeFlags, attrType: AttributeType, choices: Strings, defValues: Strings, rangeMin: string, rangeMax: string): AttributeDef;
+	new(name: string, required: 0 | 1, flags: FV_AF_Constant, attrType: FV_AT_Constant, choices: Strings, defValues: Strings, rangeMin: string, rangeMax: string): AttributeDef;
 	readonly prototype: AttributeDef;
 }
 
@@ -56,7 +56,7 @@ declare const AttributeDef: AttributeDefConstructor;
  * * Constants.FV_AT_UNIQUE_IDREFS (9)
  * * Constants.FV_AT_NUMTYPES (10)
  */
-type AttributeType =
+type FV_AT_Constant =
 	Constants['FV_AT_STRING'] |
 	Constants['FV_AT_STRINGS'] |
 	Constants['FV_AT_CHOICES'] |
@@ -76,7 +76,7 @@ type AttributeType =
  * * Constants.FV_AF_HIDDEN (2)
  * * Constants.FV_AF_FIXED (4)
  */
-type AttributeFlags =
+type FV_AF_Constant =
 	0 |
 	Constants['FV_AF_READ_ONLY'] |
 	Constants['FV_AF_HIDDEN'] |

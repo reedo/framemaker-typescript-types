@@ -12,7 +12,7 @@ interface Tab {
 	x: number;
 
 	/** Type of tab. */
-	type: TabType;
+	type: FV_TAB_Constant;
 
 	/** String that appears before the tab. */
 	leader: string;
@@ -23,7 +23,7 @@ interface Tab {
 
 interface TabConstructor {
 	new(): Tab;
-	new(x: number, type: TabType, leader: string, decimal: number): Tab;
+	new(x: number, type: FV_TAB_Constant, leader: string, decimal: number): Tab;
 	readonly prototype: Tab;
 }
 
@@ -40,7 +40,7 @@ declare const Tab: TabConstructor;
  * * Constants.FV_TAB_RELATIVE_RIGHT (7)
  * * Constants.FV_TAB_RELATIVE_DECIMAL (8)
  */
-type TabType =
+type FV_TAB_Constant =
 	Constants['FV_TAB_LEFT'] |
 	Constants['FV_TAB_CENTER'] |
 	Constants['FV_TAB_RIGHT'] |
