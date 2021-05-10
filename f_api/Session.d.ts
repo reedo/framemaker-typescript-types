@@ -5,9 +5,11 @@
 interface Session {
 
 	/** The book with input focus. */
+	// @ts-expect-error
 	ActiveBook: Book;
 
 	/** The document with input focus. */
+	// @ts-expect-error
 	ActiveDoc: Doc;
 
 	/** Sets the current view. */
@@ -47,24 +49,24 @@ interface Session {
 	 */
 	CharacterReferencesOnXMLExport: boolean;
 
-  /**
-   * Closes a Frame session.
+	/**
+	 * Closes a Frame session.
 	 * 
-   * The flags parameter specifies whether to abort or to close open documents or books if they have unsaved changes.
+	 * The flags parameter specifies whether to abort or to close open documents or books if they have unsaved changes.
 	 * 
 	 * Set the `Constants.FF_CLOSE_MODIFIED` flag to True (1) to close open documents and books regardless of their state.
-   * 
-   * @param flags `FF_CLOSE_MODIFIED` flag to True (1) to close open documents and books regardless of their state.
-   * 
-   * @returns FE_Success on success; `Constants.FE_DocModified` (-8): The document was modified and the flags parameter was set to 0.
-   */
+	 * 
+	 * @param flags `FF_CLOSE_MODIFIED` flag to True (1) to close open documents and books regardless of their state.
+	 * 
+	 * @returns FE_Success on success; `Constants.FE_DocModified` (-8): The document was modified and the flags parameter was set to 0.
+	 */
 	Close(flags?: number): number;
 
 	/** Name of the directory from which the FrameMaker product was started. */
 	CurrentDir: string;
 
 	/** Type of menu set. */
-	CurrentMenuSet: Constants['FV_MENU_QUICK'] | Constants['FV_MENU_COMPLETE'] | Constants['FV_MENU_CUSTOM'];
+	CurrentMenuSet: MenuSetType;
 
 	/**
 	 * Default Key Catalog for the current workflow.
@@ -74,6 +76,7 @@ interface Session {
 	 * * KeyCatalogWorkflowPublishing
 	 * * KeyCatalogWorkflowSearching
 	 */
+	// @ts-expect-error
 	DefaultKeyCatalog: KeyCatalog;
 
 	/** @todo UNDOCUMENTED */
@@ -110,18 +113,23 @@ interface Session {
 	EnableAutoSpellCheck: boolean;
 
 	/** First command in the list of commands in the session. */
+	// @ts-expect-error
 	FirstCommandInSession: Command;
 
 	/** First Key Catalog in the session. */
+	// @ts-expect-error
 	FirstKeyCatalogInSession: KeyCatalog;
 
 	/** First menu item or menu in the list of menus, menu items, and menu item separators in the session. */
+	// @ts-expect-error
 	FirstMenuItemInSession: Command | Menu | MenuItemSeparator;
 
 	/** First open book in session. */
+	// @ts-expect-error
 	FirstOpenBook: Book;
 
 	/** First open document in session. */
+	// @ts-expect-error
 	FirstOpenDoc: Doc;
 
 	/** The FrameMaker console string. */
@@ -164,6 +172,7 @@ interface Session {
 	 * 
 	 * @returns The named book.
 	 */
+	// @ts-expect-error
 	GetNamedBook(name: string): Book;
 
 	/**
@@ -173,6 +182,7 @@ interface Session {
 	 * 
 	 * @returns The named Command.
 	 */
+	// @ts-expect-error
 	GetNamedCommand(name: string): Command;
 
 	/**
@@ -182,6 +192,7 @@ interface Session {
 	 * 
 	 * @returns The named Menu.
 	 */
+	// @ts-expect-error
 	GetNamedMenu(name: string): Menu;
 
 	/**
@@ -191,6 +202,7 @@ interface Session {
 	 * 
 	 * @returns The named MenuItemSeparator.
 	 */
+	// @ts-expect-error
 	GetNamedMenuItemSeparator(name: string): MenuItemSeparator;
 
 	/**
@@ -201,6 +213,7 @@ interface Session {
 	 * 
 	 * @returns The object, or 0.
 	 */
+	// @ts-expect-error
 	GetNamedObject(objType: FO_Constant, name: string): FMObject | 0;
 
 	/**
@@ -282,8 +295,7 @@ interface Session {
 	Label: string;
 
 	/** Product language. */
-	Language:
-	Constants['FV_LANG_NOLANGUAGE'] | Constants['FV_LANG_ENGLISH'] | Constants['FV_LANG_BRITISH'] | Constants['FV_LANG_GERMAN'] | Constants['FV_LANG_FRENCH'] | Constants['FV_LANG_SPANISH'] | Constants['FV_LANG_ITALIAN'] | Constants['FV_LANG_SWEDISH'] | Constants['FV_LANG_JAPANESE'] | Constants['FV_LANG_TRADITIONAL_CHINESE'] | Constants['FV_LANG_SIMPLIFIED_CHINESE'] | Constants['FV_LANG_KOREAN'];
+	Language: SessionLanguage;
 
 	/**
 	 * List of standard marker types for the current session.
@@ -304,6 +316,7 @@ interface Session {
 	 * 
 	 * @returns The newly created Book.
 	 */
+	// @ts-expect-error
 	NewNamedBook(name: string): Book;
 
 	/**
@@ -313,6 +326,7 @@ interface Session {
 	 * 
 	 * @returns The newly created Command.
 	 */
+	// @ts-expect-error
 	NewNamedCommand(name: string): Command;
 
 	/**
@@ -322,6 +336,7 @@ interface Session {
 	 * 
 	 * @returns The newly created Menu.
 	 */
+	// @ts-expect-error
 	NewNamedMenu(name: string): Menu;
 
 	/**
@@ -331,6 +346,7 @@ interface Session {
 	 * 
 	 * @returns The newly created MenuItemSeparator.
 	 */
+	// @ts-expect-error
 	NewNamedMenuItemSeparator(name: string): MenuItemSeparator;
 
 	/**
@@ -515,3 +531,43 @@ interface Session {
 
 /** The global app object. */
 declare var app: Session;
+
+/**
+ * Can be one of:
+ * * Constants.FV_MENU_QUICK (1)
+ * * Constants.FV_MENU_COMPLETE (2)
+ * * Constants.FV_MENU_CUSTOM (3)
+ */
+type MenuSetType =
+	Constants['FV_MENU_QUICK'] |
+	Constants['FV_MENU_COMPLETE'] |
+	Constants['FV_MENU_CUSTOM'];
+
+/**
+ * Can be one of:
+ * * Constants.FV_LANG_NOLANGUAGE (0)
+ * * Constants.FV_LANG_ENGLISH (1)
+ * * Constants.FV_LANG_BRITISH (2)
+ * * Constants.FV_LANG_GERMAN (3)
+ * * Constants.FV_LANG_FRENCH (5)
+ * * Constants.FV_LANG_SPANISH (7)
+ * * Constants.FV_LANG_ITALIAN (9)
+ * * Constants.FV_LANG_SWEDISH (17)
+ * * Constants.FV_LANG_JAPANESE (18)
+ * * Constants.FV_LANG_TRADITIONAL_CHINESE (19)
+ * * Constants.FV_LANG_SIMPLIFIED_CHINESE (20)
+ * * Constants.FV_LANG_KOREAN (21)
+ */
+type SessionLanguage =
+	Constants['FV_LANG_NOLANGUAGE'] |
+	Constants['FV_LANG_ENGLISH'] |
+	Constants['FV_LANG_BRITISH'] |
+	Constants['FV_LANG_GERMAN'] |
+	Constants['FV_LANG_FRENCH'] |
+	Constants['FV_LANG_SPANISH'] |
+	Constants['FV_LANG_ITALIAN'] |
+	Constants['FV_LANG_SWEDISH'] |
+	Constants['FV_LANG_JAPANESE'] |
+	Constants['FV_LANG_TRADITIONAL_CHINESE'] |
+	Constants['FV_LANG_SIMPLIFIED_CHINESE'] |
+	Constants['FV_LANG_KOREAN'];
