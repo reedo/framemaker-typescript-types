@@ -35,9 +35,11 @@ interface AFrame extends Frame {
 	BaselineOffset: number;
 
 	/** If the anchored frame is in a structured flow in a FrameMaker document, Element indicates the element containing the anchored frame. */
+	// @ts-expect-error
 	Element: Element;
 
 	/** Indicates the text frame in which the anchored frame is placed. */
+	// @ts-expect-error
 	InTextFrame: TextFrame;
 
 	/** Indicates the column or text frame in which the anchored frame is placed. */
@@ -64,3 +66,7 @@ interface AFrame extends Frame {
 }
 
 declare const AFrame: AFrame;
+
+type AlignmentType = number;
+
+type AnchorType = number;

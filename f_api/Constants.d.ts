@@ -3847,3 +3847,373 @@ interface Constants {
 
 declare const Constants: Constants;
 declare const CONST: Constants;
+
+// --------------------------------------------------
+// Groups of Constants (helper types)
+// --------------------------------------------------
+
+/**
+ * Can be one of:
+ * * Constants.FO_Session (0)
+ * * Constants.FO_StringResource(1)
+ * * Constants.FO_Book(2)
+ * * Constants.FO_BookComponent (3)
+ * * Constants.FO_Doc (4)
+ * * Constants.FO_BodyPage(5)
+ * * Constants.FO_MasterPage(6)
+ * * Constants.FO_RefPage (7)
+ * * Constants.FO_HiddenPage(8)
+ * * Constants.FO_Last_Page (8)
+ * * Constants.FO_UFrame(9)
+ * * Constants.FO_UnanchoredFrame (9)
+ * * Constants.FO_Group (10)
+ * * Constants.FO_Arc (11)
+ * * Constants.FO_Rectangle (12)
+ * * Constants.FO_Ellipse (13)
+ * * Constants.FO_RoundRect (14)
+ * * Constants.FO_Polyline(15)
+ * * Constants.FO_Polygon (16)
+ * * Constants.FO_Line(17)
+ * * Constants.FO_TextLine(18)
+ * * Constants.FO_TextFrame (19)
+ * * Constants.FO_Inset (20)
+ * * Constants.FO_Math(21)
+ * * Constants.FO_DBGroup (22)
+ * * Constants.FO_Last_Graphic(22)
+ * * Constants.FO_AFrame(23)
+ * * Constants.FO_AnchoredFrame (23)
+ * * Constants.FO_XLast_Graphic (23)
+ * * Constants.FO_Marker(24)
+ * * Constants.FO_Fn(25)
+ * * Constants.FO_XRef(26)
+ * * Constants.FO_XRefFmt (27)
+ * * Constants.FO_Var (28)
+ * * Constants.FO_VarFmt(29)
+ * * Constants.FO_Flow(30)
+ * * Constants.FO_Pgf (31)
+ * * Constants.FO_PgfFmt(32)
+ * * Constants.FO_CharFmt (33)
+ * * Constants.FO_CondFmt (34)
+ * * Constants.FO_Color (35)
+ * * Constants.FO_Tbl (36)
+ * * Constants.FO_TblFmt(37)
+ * * Constants.FO_Row (38)
+ * * Constants.FO_Cell(39)
+ * * Constants.FO_RulingFmt (40)
+ * * Constants.FO_ElementDef(41)
+ * * Constants.FO_Element (42)
+ * * Constants.FO_DialogResource(43)
+ * * Constants.FO_DlgBox(44)
+ * * Constants.FO_DlgButton (45)
+ * * Constants.FO_DlgTriBox (46)
+ * * Constants.FO_DlgCheckBox (47)
+ * * Constants.FO_DlgPopUp(48)
+ * * Constants.FO_DlgScrollBox(49)
+ * * Constants.FO_DlgEditBox(50)
+ * * Constants.FO_DlgRadioButton(51)
+ * * Constants.FO_DlgLabel(52)
+ * * Constants.FO_DlgImage(53)
+ * * Constants.FO_DlgScrollBar(54)
+ * * Constants.FO_Menu(55)
+ * * Constants.FO_Command (56)
+ * * Constants.FO_MenuItemSeparator (57)
+ * * Constants.FO_FmtChangeList (58)
+ * * Constants.FO_FmtRule (59)
+ * * Constants.FO_FmtRuleClause (60)
+ * * Constants.FO_TiFlow(61)
+ * * Constants.FO_TiText(62)
+ * * Constants.FO_TiTextTable (63)
+ * * Constants.FO_TiApiClient (64)
+ * * Constants.FO_SubCol(65)
+ * * Constants.FO_MarkerType(66)
+ * * Constants.FO_CombinedFontDefn(67)
+ * * Constants.FO_Rubi(68)
+ * * Constants.FO_Alert (69)
+ * * Constants.FO_CursorResource(70)
+ * * Constants.FO_AttrCondExpr(71)
+ * * Constants.FO_DlgListView (72)
+ * * Constants.FO_GraphicsFmt (73)
+ * * Constants.FO_CMSRegistration (74)
+ * * Constants.FO_CMSSession(75)
+ * * Constants.FO_CMSObject (76)
+ * * Constants.FO_KeyCatalog(77)
+ * * Constants.FO_Iterator(78)
+ * * Constants.FO_MathML(79)
+ * * Constants.FO_DlgDate (80)
+ * * Constants.FO_InlineComponent (81)
+ * * Constants.FO_Column(82)
+ * * Constants.FO_First_Internal(83)
+ * * Constants.FO_Num (83)
+ * * Constants.FO_Page(83)
+ * * Constants.FO_Graphic (84)
+ * * Constants.FO_Frame (85)
+ * * Constants.FO_Cblock(86)
+ * * Constants.FO_SubCond (87)
+ * * Constants.FO_SubStyle(88)
+ * * Constants.FO_SubDash (89)
+ * * Constants.FO_SubCell (90)
+ * * Constants.FO_SubTbl(91)
+ * * Constants.FO_SubPblock (92)
+ * * Constants.FO_SubTextDef(93)
+ * * Constants.FO_MenuCell(94)
+ * * Constants.FO_TextInset (95)
+ * * Constants.FO_DitaMap (96)
+ * * Constants.FO_Last_Internal (97)
+ * * Constants.FO_CMSConnection (98)
+ * * Constants.FO_CMSObject2(99)
+ * * Constants.FO_Bad (255)
+ */
+type FO_Constant =
+	Constants['FO_Session'] |
+	Constants['FO_StringResource'] |
+	Constants['FO_Book'] |
+	Constants['FO_BookComponent'] |
+	Constants['FO_Doc'] |
+	Constants['FO_BodyPage'] |
+	Constants['FO_MasterPage'] |
+	Constants['FO_RefPage'] |
+	Constants['FO_HiddenPage'] |
+	Constants['FO_Last_Page'] |
+	Constants['FO_UFrame'] |
+	Constants['FO_UnanchoredFrame'] |
+	Constants['FO_Group'] |
+	Constants['FO_Arc'] |
+	Constants['FO_Rectangle'] |
+	Constants['FO_Ellipse'] |
+	Constants['FO_RoundRect'] |
+	Constants['FO_Polyline'] |
+	Constants['FO_Polygon'] |
+	Constants['FO_Line'] |
+	Constants['FO_TextLine'] |
+	Constants['FO_TextFrame'] |
+	Constants['FO_Inset'] |
+	Constants['FO_Math'] |
+	Constants['FO_DBGroup'] |
+	Constants['FO_Last_Graphic'] |
+	Constants['FO_AFrame'] |
+	Constants['FO_AnchoredFrame'] |
+	Constants['FO_XLast_Graphic'] |
+	Constants['FO_Marker'] |
+	Constants['FO_Fn'] |
+	Constants['FO_XRef'] |
+	Constants['FO_XRefFmt'] |
+	Constants['FO_Var'] |
+	Constants['FO_VarFmt'] |
+	Constants['FO_Flow'] |
+	Constants['FO_Pgf'] |
+	Constants['FO_PgfFmt'] |
+	Constants['FO_CharFmt'] |
+	Constants['FO_CondFmt'] |
+	Constants['FO_Color'] |
+	Constants['FO_Tbl'] |
+	Constants['FO_TblFmt'] |
+	Constants['FO_Row'] |
+	Constants['FO_Cell'] |
+	Constants['FO_RulingFmt'] |
+	Constants['FO_ElementDef'] |
+	Constants['FO_Element'] |
+	Constants['FO_DialogResource'] |
+	Constants['FO_DlgBox'] |
+	Constants['FO_DlgButton'] |
+	Constants['FO_DlgTriBox'] |
+	Constants['FO_DlgCheckBox'] |
+	Constants['FO_DlgPopUp'] |
+	Constants['FO_DlgScrollBox'] |
+	Constants['FO_DlgEditBox'] |
+	Constants['FO_DlgRadioButton'] |
+	Constants['FO_DlgLabel'] |
+	Constants['FO_DlgImage'] |
+	Constants['FO_DlgScrollBar'] |
+	Constants['FO_Menu'] |
+	Constants['FO_Command'] |
+	Constants['FO_MenuItemSeparator'] |
+	Constants['FO_FmtChangeList'] |
+	Constants['FO_FmtRule'] |
+	Constants['FO_FmtRuleClause'] |
+	Constants['FO_TiFlow'] |
+	Constants['FO_TiText'] |
+	Constants['FO_TiTextTable'] |
+	Constants['FO_TiApiClient'] |
+	Constants['FO_SubCol'] |
+	Constants['FO_MarkerType'] |
+	Constants['FO_CombinedFontDefn'] |
+	Constants['FO_Rubi'] |
+	Constants['FO_Alert'] |
+	Constants['FO_CursorResource'] |
+	Constants['FO_AttrCondExpr'] |
+	Constants['FO_DlgListView'] |
+	Constants['FO_GraphicsFmt'] |
+	Constants['FO_CMSRegistration'] |
+	Constants['FO_CMSSession'] |
+	Constants['FO_CMSObject'] |
+	Constants['FO_KeyCatalog'] |
+	Constants['FO_Iterator'] |
+	Constants['FO_MathML'] |
+	Constants['FO_DlgDate'] |
+	Constants['FO_InlineComponent'] |
+	Constants['FO_Column'] |
+	Constants['FO_First_Internal'] |
+	Constants['FO_Num'] |
+	Constants['FO_Page'] |
+	Constants['FO_Graphic'] |
+	Constants['FO_Frame'] |
+	Constants['FO_Cblock'] |
+	Constants['FO_SubCond'] |
+	Constants['FO_SubStyle'] |
+	Constants['FO_SubDash'] |
+	Constants['FO_SubCell'] |
+	Constants['FO_SubTbl'] |
+	Constants['FO_SubPblock'] |
+	Constants['FO_SubTextDef'] |
+	Constants['FO_MenuCell'] |
+	Constants['FO_TextInset'] |
+	Constants['FO_DitaMap'] |
+	Constants['FO_Last_Internal'] |
+	Constants['FO_CMSConnection'] |
+	Constants['FO_CMSObject2'] |
+	Constants['FO_Bad'];
+
+/**
+ * Can be one of:
+ * * Constants.FTI_HardLineEnd (1)
+ * * Constants.FTI_HyphenLineEnd (2)
+ * * Constants.FTI_String (0x00000001)
+ * * Constants.FTI_LineBegin (0x00000002)
+ * * Constants.FTI_LineEnd (0x00000004)
+ * * Constants.FTI_PgfBegin (0x00000008)
+ * * Constants.FTI_PgfEnd (0x00000010)
+ * * Constants.FTI_FlowBegin (0x00000020)
+ * * Constants.FTI_FlowEnd (0x00000040)
+ * * Constants.FTI_PageBegin (0x00000080)
+ * * Constants.FTI_PageEnd (0x00000100)
+ * * Constants.FTI_SubColBegin (0x00000200)
+ * * Constants.FTI_SubColEnd (0x00000400)
+ * * Constants.FTI_FrameAnchor (0x00000800)
+ * * Constants.FTI_FnAnchor (0x00001000)
+ * * Constants.FTI_TblAnchor (0x00002000)
+ * * Constants.FTI_MarkerAnchor (0x00004000)
+ * * Constants.FTI_XRefBegin (0x00008000)
+ * * Constants.FTI_XRefEnd (0x00010000)
+ * * Constants.FTI_VarBegin (0x00020000)
+ * * Constants.FTI_VarEnd (0x00040000)
+ * * Constants.FTI_ElementBegin (0x00080000)
+ * * Constants.FTI_ElementEnd (0x00100000)
+ * * Constants.FTI_CharPropsChange (0x00200000)
+ * * Constants.FTI_TextFrameBegin (0x00400000)
+ * * Constants.FTI_TextFrameEnd (0x00800000)
+ * * Constants.FTI_TextObjId (0x01000000)
+ * * Constants.FTI_TextInsetBegin (0x02000000)
+ * * Constants.FTI_TextInsetEnd (0x04000000)
+ * * Constants.FTI_ElemPrefixBegin (0x08000000)
+ * * Constants.FTI_ElemPrefixEnd (0x10000000)
+ * * Constants.FTI_ElemSuffixBegin (0x20000000)
+ * * Constants.FTI_ElemSuffixEnd (0x40000000)
+ * * Constants.FTI2_RubiTextBegin (0x80000001)
+ * * Constants.FTI2_RubiTextEnd (0x80000002)
+ * * Constants.FTI2_RubiCompositeBegin (0x80000004)
+ * * Constants.FTI2_RubiCompositeEnd (0x80000008)
+ * * Constants.FTI2_InlineComponentBegin (0x80000010)
+ * * Constants.FTI2_InlineComponentEnd (0x80000020)
+ */
+type FTI_Constant =
+	Constants['FTI_HardLineEnd'] |
+	Constants['FTI_HyphenLineEnd'] |
+	Constants['FTI_String'] |
+	Constants['FTI_LineBegin'] |
+	Constants['FTI_LineEnd'] |
+	Constants['FTI_PgfBegin'] |
+	Constants['FTI_PgfEnd'] |
+	Constants['FTI_FlowBegin'] |
+	Constants['FTI_FlowEnd'] |
+	Constants['FTI_PageBegin'] |
+	Constants['FTI_PageEnd'] |
+	Constants['FTI_SubColBegin'] |
+	Constants['FTI_SubColEnd'] |
+	Constants['FTI_FrameAnchor'] |
+	Constants['FTI_FnAnchor'] |
+	Constants['FTI_TblAnchor'] |
+	Constants['FTI_MarkerAnchor'] |
+	Constants['FTI_XRefBegin'] |
+	Constants['FTI_XRefEnd'] |
+	Constants['FTI_VarBegin'] |
+	Constants['FTI_VarEnd'] |
+	Constants['FTI_ElementBegin'] |
+	Constants['FTI_ElementEnd'] |
+	Constants['FTI_CharPropsChange'] |
+	Constants['FTI_TextFrameBegin'] |
+	Constants['FTI_TextFrameEnd'] |
+	Constants['FTI_TextObjId'] |
+	Constants['FTI_TextInsetBegin'] |
+	Constants['FTI_TextInsetEnd'] |
+	Constants['FTI_ElemPrefixBegin'] |
+	Constants['FTI_ElemPrefixEnd'] |
+	Constants['FTI_ElemSuffixBegin'] |
+	Constants['FTI_ElemSuffixEnd'] |
+	Constants['FTI2_RubiTextBegin'] |
+	Constants['FTI2_RubiTextEnd'] |
+	Constants['FTI2_RubiCompositeBegin'] |
+	Constants['FTI2_RubiCompositeEnd'] |
+	Constants['FTI2_InlineComponentBegin'] |
+	Constants['FTI2_InlineComponentEnd'];
+
+/**
+* Can be one of:
+* * null (0)
+* * Constants.FV_AF_READ_ONLY (1)
+* * Constants.FV_AF_HIDDEN (2)
+* * Constants.FV_AF_FIXED (4)
+*/
+type FV_AF_Constant =
+	0 |
+	Constants['FV_AF_READ_ONLY'] |
+	Constants['FV_AF_HIDDEN'] |
+	Constants['FV_AF_FIXED'] |
+	null;
+
+/**
+ * Can be one of:
+ * * Constants.FV_AT_STRING (0)
+ * * Constants.FV_AT_STRINGS (1)
+ * * Constants.FV_AT_CHOICES (2)
+ * * Constants.FV_AT_INTEGER (3)
+ * * Constants.FV_AT_INTEGERS (4)
+ * * Constants.FV_AT_REAL (5)
+ * * Constants.FV_AT_REALS (6)
+ * * Constants.FV_AT_UNIQUE_ID (7)
+ * * Constants.FV_AT_UNIQUE_IDREF (8)
+ * * Constants.FV_AT_UNIQUE_IDREFS (9)
+ * * Constants.FV_AT_NUMTYPES (10)
+ */
+type FV_AT_Constant =
+	Constants['FV_AT_STRING'] |
+	Constants['FV_AT_STRINGS'] |
+	Constants['FV_AT_CHOICES'] |
+	Constants['FV_AT_INTEGER'] |
+	Constants['FV_AT_INTEGERS'] |
+	Constants['FV_AT_REAL'] |
+	Constants['FV_AT_REALS'] |
+	Constants['FV_AT_UNIQUE_ID'] |
+	Constants['FV_AT_UNIQUE_IDREF'] |
+	Constants['FV_AT_UNIQUE_IDREFS'] |
+	Constants['FV_AT_NUMTYPES'];
+
+/**
+ * Can be one of:
+ * * Constants.FV_TAB_LEFT (1)
+ * * Constants.FV_TAB_CENTER (2)
+ * * Constants.FV_TAB_RIGHT (3)
+ * * Constants.FV_TAB_DECIMAL (4)
+ * * Constants.FV_TAB_RELATIVE_LEFT (5)
+ * * Constants.FV_TAB_RELATIVE_CENTER (6)
+ * * Constants.FV_TAB_RELATIVE_RIGHT (7)
+ * * Constants.FV_TAB_RELATIVE_DECIMAL (8)
+ */
+type FV_TAB_Constant =
+	Constants['FV_TAB_LEFT'] |
+	Constants['FV_TAB_CENTER'] |
+	Constants['FV_TAB_RIGHT'] |
+	Constants['FV_TAB_DECIMAL'] |
+	Constants['FV_TAB_RELATIVE_LEFT'] |
+	Constants['FV_TAB_RELATIVE_CENTER'] |
+	Constants['FV_TAB_RELATIVE_RIGHT'] |
+	Constants['FV_TAB_RELATIVE_DECIMAL'];
