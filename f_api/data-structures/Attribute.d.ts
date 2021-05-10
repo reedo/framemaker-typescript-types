@@ -5,7 +5,7 @@
 interface Attribute {
 
 	/** Allow error as special case to suppress reporting by validation. */
-	allow: 0 | 1;
+	allow: number;
 
 	/** The name of the attribute. */
 	name: string;
@@ -20,7 +20,7 @@ interface Attribute {
 
 interface AttributeConstructor {
 	new(): Attribute;
-	new(name: string, values: Strings, valflags: number, allow: 0 | 1): Attribute;
+	new(name: string, values: Strings, valflags: number, allow: number): Attribute;
 	readonly prototype: Attribute;
 }
 
