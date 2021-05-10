@@ -1,6 +1,9 @@
 // Type definitions for FrameMaker Constants object
 // Definitions by: Dan Reed <https://danreed.dev>
 
+/**
+ * Constants for FrameMaker.
+ */
 interface Constants {
 
 	readonly FDK_LIBRARY_VERSION: number,
