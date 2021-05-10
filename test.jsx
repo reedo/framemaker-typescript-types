@@ -1,9 +1,6 @@
 (function () {
 
-	var doc = app.ActiveDoc;
-	var graphicFrame = doc.FirstSelectedGraphicInDoc;
-
-	var arc = doc.NewArc(graphicFrame);
+	var attr = new Attribute('foo', new Strings('bar', 'baz'), 0, 0);
 
 	Console("Done");
 

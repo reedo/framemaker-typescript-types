@@ -48,44 +48,58 @@ interface FMArrayLikeConstructor<T> {
 	readonly prototype: FMArrayLike<T>;
 }
 
-type Attributes = FMArrayLikeConstructor<Attribute>;
-declare const Attributes: Attributes;
+type Attributes = FMArrayLike<Attribute>;
+type AttributesConstructor = FMArrayLikeConstructor<Attribute>;
+declare const Attributes: AttributesConstructor;
 
-type AttributeDefs = FMArrayLikeConstructor<AttributeDef>;
-declare const AttributeDefs: AttributeDefs;
+type AttributeDefs = FMArrayLike<AttributeDef>;
+type AttributeDefsConstructor = FMArrayLikeConstructor<AttributeDef>;
+declare const AttributeDefs: AttributeDefsConstructor;
 
-type AttributesEx = FMArrayLikeConstructor<AttributeEx>;
-declare const AttributesEx: AttributesEx;
+type AttributesEx = FMArrayLike<AttributeEx>;
+type AttributesExConstructor = FMArrayLikeConstructor<AttributeEx>;
+declare const AttributesEx: AttributesExConstructor;
 
-type IdValuePairs = FMArrayLikeConstructor<IdValuePair>;
-declare const IdValuePairs: IdValuePairs;
+type IdValuePairs = FMArrayLike<IdValuePair>;
+type IdValuePairsConstructor = FMArrayLikeConstructor<IdValuePair>;
+declare const IdValuePairs: IdValuePairsConstructor;
 
-type Ints = FMArrayLikeConstructor<number>;
-declare const Ints: Ints;
+type Ints = FMArrayLike<number>;
+type IntsConstructor = FMArrayLikeConstructor<number>;
+declare const Ints: IntsConstructor;
 
-type Metrics = FMArrayLikeConstructor<number>
-declare const Metrics: Metrics;
+type Metrics = FMArrayLike<number>;
+type MetricsConstructor = FMArrayLikeConstructor<number>;
+declare const Metrics: MetricsConstructor;
 
-type Points = FMArrayLikeConstructor<Point>;
-declare const Points: Points;
+type Points = FMArrayLike<Point>;
+type PointsConstructor = FMArrayLikeConstructor<Point>;
+declare const Points: PointsConstructor;
 
-type PropVals = FMArrayLikeConstructor<PropVal>;
-declare const PropVals: PropVals;
+type PropVals = FMArrayLike<PropVal>;
+type PropValsConstructor = FMArrayLikeConstructor<PropVal>;
+declare const PropVals: PropValsConstructor;
 
-type Strings = FMArrayLikeConstructor<string>;
-declare const Strings: Strings;
+type Strings = FMArrayLike<string>;
+type StringsConstructor = FMArrayLikeConstructor<string>;
+declare const Strings: StringsConstructor;
 
-type Tabs = FMArrayLikeConstructor<Tab>;
-declare const Tabs: Tabs;
+type Tabs = FMArrayLike<Tab>;
+type TabsConstructor = FMArrayLikeConstructor<Tab>;
+declare const Tabs: TabsConstructor;
 
-type TextItems = FMArrayLikeConstructor<TextItem>;
-declare const TextItems: TextItems;
+type TextItems = FMArrayLike<TextItem>;
+type TextItemsConstructor = FMArrayLikeConstructor<TextItem>;
+declare const TextItems: TextItemsConstructor;
 
-type TypedVals = FMArrayLikeConstructor<TypedVal>;
-declare const TypedVals: TypedVals;
+type TypedVals = FMArrayLike<TypedVal>;
+type TypedValsConstructor = FMArrayLikeConstructor<TypedVal>;
+declare const TypedVals: TypedValsConstructor;
 
-type UBytes = FMArrayLikeConstructor<number>;
-declare const UBytes: UBytes;
+type UBytes = FMArrayLike<number>;
+type UBytesConstructor = FMArrayLikeConstructor<number>;
+declare const UBytes: UBytesConstructor;
 
-type UInts = FMArrayLikeConstructor<number>;
-declare const UInts: UInts;
+type UInts = FMArrayLike<number>;
+type UIntsConstructor = FMArrayLikeConstructor<number>;
+declare const UInts: UIntsConstructor;
