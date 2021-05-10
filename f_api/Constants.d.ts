@@ -3,7 +3,7 @@
 
 interface Constants {
 
-	readonly FDK_LIBRARY_VERSION: 0x15000000,
+	readonly FDK_LIBRARY_VERSION: number,
 	readonly FMV_CMDSUPPORTED: -1,
 	readonly oldFT_ElementFmts: 11,
 
