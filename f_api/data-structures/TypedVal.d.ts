@@ -4,7 +4,7 @@
 /** Specifies an individual property value. */
 interface TypedVal {
 
-	/** Indicates the type of value the structure provides. */
+	/** @ts-expect-error Indicates the type of value the structure provides. */
 	valType: TypedValConstant;
 
 	/** An integer. */
@@ -31,7 +31,7 @@ interface TypedVal {
 	/** Text range. */
 	trval: TextRange;
 
-	/** Element Catalog values. */
+	/** @ts-expect-error Element Catalog values. */
 	csval: ElementCatalogEntries;
 
 	/** Set of integers. */
@@ -49,6 +49,7 @@ interface TypedVal {
 
 interface TypedValConstructor {
 	new(): TypedVal;
+	// @ts-expect-error
 	new(item: number | string | Metrics | Strings | Points | Tabs | TextLoc | TextRange | ElementCatalogEntries | Ints | UInts | AttributeDefs | Attributes): TypedVal;
 
 }
