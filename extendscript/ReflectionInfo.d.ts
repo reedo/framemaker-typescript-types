@@ -3,16 +3,16 @@
 
 /**
  * This object contains information about a property, a method, or a method argument.
- * 
+ *
  * You can access `ReflectionInfo` objects in a `Reflection` object’s properties and methods arrays, by name or index.
- * 
+ *
  * You can access the `ReflectionInfo` objects for the arguments of a method in the arguments array of the `ReflectionInfo` object for the method, by index.
- * 
+ *
  * @example
  * obj = new String ('hi');
  * obj.reflect.methods[0];
  * obj.reflect.methods['indexOf'];
- * 
+ *
  * @example
  * obj.reflect.methods['indexOf'].arguments[0];
  * obj.reflect.methods.indexOf.arguments[0];
@@ -24,7 +24,7 @@ interface ReflectionInfo {
 
 	/**
 	 * The data type of the reflected element. One of:
-	 * 
+	 *
 	 * * boolean
 	 * * number
 	 * * string
@@ -33,7 +33,7 @@ interface ReflectionInfo {
 	 * * null
 	 * * undefined - Return data type for a function that does not return any value.
 	 * * unknown
-	 * 
+	 *
 	 * __NOTE__: Class names start with a capital letter. Thus, the value string stands for a javascript `string`, while `String` is a javascript `String` wrapper object.
 	 */
 	dataType: string;
@@ -61,7 +61,7 @@ interface ReflectionInfo {
 
 	/**
 	 * The type of the reflected element. One of:
-	 * 
+	 *
 	 * * `readonly` - A Read only property.
 	 * * `readwrite` - A read-write property.
 	 * * `createonly` - A property that is valid only during creation of an object.

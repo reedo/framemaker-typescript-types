@@ -23,9 +23,9 @@ interface XMLSettings {
 
 /**
  * The XML object provides both static properties and functions, available through the XML class, and dynamic properties and functions available through each instance.
- * 
+ *
  * __WARNING:__ The methods cannot be documented since the object uses string indexing.
- * 
+ *
  * Refer to 'JavaScript Tools Guide CC' for this object's methods and usage.
  */
 interface XML {
@@ -63,7 +63,7 @@ interface XMLConstructor {
 
 	/**
 	 * Sets the global option settings that control how XML is parsed and generated. You can use this to restore settings retrieved with `settings()` or `defaultSettings()`.
-	 * 
+	 *
 	 * @param settings An XML settings object.
 	 */
 	setSettings(settings: XMLSettings): void;

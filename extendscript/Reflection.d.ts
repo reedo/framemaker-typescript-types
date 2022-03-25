@@ -3,9 +3,9 @@
 
 /**
  * Every object has a reflect property that returns a reflection object that reports the contents of the object.
- * 
+ *
  * You can, for example, show the values of all the properties of an object with code like this:
- * 
+ *
  * @example
  * var f = new File ("myfile");
  * var props = f.reflect.properties;
@@ -20,9 +20,9 @@ interface Reflection {
 
 	/**
 	 * Use this method to get information about dynamic properties that have not yet been accessed, but that are known to exist.
-	 * 
+	 *
 	 * @param name The property for which to retrieve information.
-	 * 
+	 *
 	 * @returns The `ReflectionInfo` object for the named property of the reflected object, or `null` if no such property exists.
 	 */
 	find(name: string): ReflectionInfo | null;
@@ -38,9 +38,9 @@ interface Reflection {
 
 	/**
 	 * An Array of ReflectionInfo objects containing all properties of the reflected object, defined in the class or in the specific instance.
-	 * 
+	 *
 	 * For objects with dynamic properties (defined at runtime) the list contains only those dynamic properties that have already been accessed by the script.
-	 * 
+	 *
 	 * For example, in an object wrapping an HTML tag, the names of the HTML attributes are determined at run time.
 	*/
 	properties: ReflectionInfo[];

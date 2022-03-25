@@ -3,13 +3,12 @@
 
 /**
  * An element selection range.
- * 
+ *
  * Consists of 2 `ElementLoc` objects.
- * 
+ *
  * Setting both `beg` and `end` to the same `ElementLoc` will act as an insertion point, rather than a selection range.
  */
 interface ElementRange {
-
 	/** The beginning of the element range. */
 	beg: ElementLoc;
 
@@ -18,10 +17,9 @@ interface ElementRange {
 }
 
 interface ElementRangeConstructor {
-	new(): ElementRange;
-	new(beg: ElementLoc, end: ElementLoc): ElementRange;
+	new (): ElementRange;
+	new (beg: ElementLoc, end: ElementLoc): ElementRange;
 	readonly prototype: ElementRange;
-
 }
 
 declare const ElementRange: ElementRangeConstructor;

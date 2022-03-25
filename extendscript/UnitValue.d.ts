@@ -31,23 +31,23 @@ interface UnitValue {
 
 	/**
 	 * Returns the numeric value of this object in the given unit. If the unit is unknown or cannot be computed, generates a run-time error.
-	 * 
+	 *
 	 * @param unit The unit type in abbreviated form; for example, “cm” or “in”.
 	 */
 	as(unit: UnitValueUnit): number;
 
 	/**
 	 * A UnitValue object that defines the size of one pixel, or a total size to use as a base for percentage values. This is used as the base conversion unit for pixels and percentages.
-	 * 
+	 *
 	 * Default is 0.013889 inches (1/72 in), which is the base conversion unit for pixels at 72 dpi. Set to null to restore the default.
 	 */
 	baseUnit: UnitValue | null;
 
 	/**
 	 * Converts this object to the given unit, resetting the type and value accordingly.
-	 * 
+	 *
 	 * @param unit The unit type in abbreviated form; for example, “cm” or “in”.
-	 * 
+	 *
 	 * @returns true if the conversion is successful. If the unit is unknown or the object cannot be converted, generates a run-time error and returns false.
 	 */
 	convert(unit: UnitValueUnit): boolean;

@@ -3,7 +3,6 @@
 
 /** A single integer or string value. */
 interface Value {
-
 	/** The integer value. */
 	ival: number;
 
@@ -12,12 +11,11 @@ interface Value {
 
 	/** The type of the value. `FT_Integer` or `FT_String`. */
 	valType: ValueValType;
-
 }
 
 interface ValueConstructor {
-	new(): Value;
-	new(value: number | string): Value;
+	new (): Value;
+	new (value: number | string): Value;
 	readonly prototype: Value;
 }
 
@@ -28,6 +26,4 @@ declare const Value: ValueConstructor;
  * * Constants.FT_Integer (1)
  * * Constants.FT_String (3)
  */
-type ValueValType =
-	Constants['FT_Integer'] |
-	Constants['FT_String'];
+type ValueValType = Constants['FT_Integer'] | Constants['FT_String'];

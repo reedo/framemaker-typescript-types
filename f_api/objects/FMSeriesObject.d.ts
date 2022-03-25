@@ -2,6 +2,4 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 /** Any FrameMaker object. */
-interface FMSeriesObject extends FMObject {
-
-}
+interface FMSeriesObject extends FMObject {}

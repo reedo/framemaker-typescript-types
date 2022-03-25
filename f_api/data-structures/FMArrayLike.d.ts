@@ -3,12 +3,11 @@
 
 /** Array-like collection of FrameMaker objects or data structures. */
 interface FMObjectArray<T> {
-
 	/**
 	 * The original array is unchanged. If an array is provided as a parameter to `concat()`, each of its elements are appended as separate array elements at the end of the new array.
-	 * 
+	 *
 	 * @param value Can also be arrays.
-	 * 
+	 *
 	 * @returns A new array, the result of concatenation the given values to the end of the original array.
 	 */
 	concat(value: T | T[] | FMObjectArray<T>): FMObjectArray<T>;
@@ -26,9 +25,9 @@ interface FMObjectArray<T> {
 
 	/**
 	 * Appends a new element to an array.
-	 * 
+	 *
 	 * @param value The value to push into the array.
-	 * 
+	 *
 	 * @returns The new length of the array.
 	 */
 	push(value: T): number;
@@ -42,9 +41,9 @@ interface FMObjectArray<T> {
 }
 
 interface FMObjectArrayConstructor<T> {
-	new(): FMObjectArray<T>;
-	new(items: T[] | FMObjectArray<T>): FMObjectArray<T>;
-	new(...items: T[]): FMObjectArray<T>;
+	new (): FMObjectArray<T>;
+	new (items: T[] | FMObjectArray<T>): FMObjectArray<T>;
+	new (...items: T[]): FMObjectArray<T>;
 	readonly prototype: FMObjectArray<T>;
 }
 

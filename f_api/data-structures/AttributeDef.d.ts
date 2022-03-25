@@ -3,7 +3,6 @@
 
 /** Describes a single attribute definition. */
 interface AttributeDef {
-
 	/** Denotes the attribute value’s type. */
 	attrType: FV_AT_Constant;
 
@@ -27,16 +26,24 @@ interface AttributeDef {
 
 	/**
 	 * Set to 1 if the attribute is required.
-	 * 
+	 *
 	 * Else, set to 0.
 	 */
 	required: 0 | 1;
-
 }
 
 interface AttributeDefConstructor {
-	new(): AttributeDef;
-	new(name: string, required: 0 | 1, flags: FV_AF_Constant, attrType: FV_AT_Constant, choices: Strings, defValues: Strings, rangeMin: string, rangeMax: string): AttributeDef;
+	new (): AttributeDef;
+	new (
+		name: string,
+		required: 0 | 1,
+		flags: FV_AF_Constant,
+		attrType: FV_AT_Constant,
+		choices: Strings,
+		defValues: Strings,
+		rangeMin: string,
+		rangeMax: string
+	): AttributeDef;
 	readonly prototype: AttributeDef;
 }
 

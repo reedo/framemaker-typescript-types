@@ -3,7 +3,6 @@
 
 /** Any FrameMaker graphic object. */
 interface FMGraphic extends FMObject {
-
 	/** Indicates the angle of rotation of the graphic object. */
 	Angle: number;
 
@@ -15,7 +14,7 @@ interface FMGraphic extends FMObject {
 
 	/**
 	 * Indicates the factor by which the arrowhead is scaled as line width changes (always rounded down to nearest 1/16 point).
-	 * 
+	 *
 	 * It is not used if the `ArrowScaleHead` property is `false`.
 	 */
 	ArrowScaleFactor: number | false;
@@ -27,11 +26,14 @@ interface FMGraphic extends FMObject {
 	ArrowTipAngle: number;
 
 	/** Denotes the style of the arrowhead. */
-	ArrowType: Constants['FV_ARROW_STICK'] | Constants['FV_ARROW_HOLLOW'] | Constants['FV_ARROW_FILLED'];
+	ArrowType:
+		| Constants['FV_ARROW_STICK']
+		| Constants['FV_ARROW_HOLLOW']
+		| Constants['FV_ARROW_FILLED'];
 
 	/**
 	 * Indicates the border width specified in points.
-	 * 
+	 *
 	 * The permissible range is 0.015 pt to 360 points.
 	 */
 	BorderWidth: number;
@@ -41,9 +43,9 @@ interface FMGraphic extends FMObject {
 
 	/**
 	 * Specifies a dash pattern that is repeated for the length of an object's border.
-	 * 
+	 *
 	 * The pattern is stored in a `MetricsT` structure.
-	 * 
+	 *
 	 * The 0th element of the `MetricsT.MetricsT_val` array stores the length of the first dash;
 	 * the 1st element stores the following space;
 	 * the 2nd element stores the next dash;
@@ -53,16 +55,23 @@ interface FMGraphic extends FMObject {
 
 	/**
 	 * Used to delete an object from a document.
-	 * 
+	 *
 	 * When you delete an object that contains another object, all child objects are also deleted with the parent object.
-	 * 
+	 *
 	 * For example, if you delete a frame, all objects within the frame are also deleted.
 	 */
-	Delete(): Constants['FE_Success'] | Constants['FE_BadDocId'] | Constants['FE_BadObjId'] | Constants['FE_BadDelete'] | Constants['FE_BadOperation'] | Constants['FE_BadParameter'] | Constants['FE_NotMenu'];
+	Delete():
+		| Constants['FE_Success']
+		| Constants['FE_BadDocId']
+		| Constants['FE_BadObjId']
+		| Constants['FE_BadDelete']
+		| Constants['FE_BadOperation']
+		| Constants['FE_BadParameter']
+		| Constants['FE_NotMenu'];
 
 	/**
 	 * Denotes the fill pattern (numbers between 0 and 15).
-	 * 
+	 *
 	 * Constants are provided for fill patterns 0, 7 and 15, as follows:
 	 * * `Constants.FV_FILL_BLACK` (0)
 	 * * `Constants.FV_FILL_WHITE` (7)
@@ -81,7 +90,7 @@ interface FMGraphic extends FMObject {
 
 	/**
 	 * Specifies the group to which the object belongs.
-	 * 
+	 *
 	 * __Note__: Anchored frames do NOT have this property.
 	 */
 	GroupParent: Group;
@@ -91,7 +100,7 @@ interface FMGraphic extends FMObject {
 
 	/**
 	 * Denotes the height of the object denoted in points.
-	 * 
+	 *
 	 * The permissible range is from 0.125 points to 3600 points.
 	 */
 	Height: number;
@@ -101,39 +110,42 @@ interface FMGraphic extends FMObject {
 
 	/**
 	 * The tooltip text for the hotspot in the outputs that support it (for example HTML).
-	 * 
+	 *
 	 * This property is optional.
 	 */
 	HotspotTitle: string;
 
 	/**
 	 * Whether the object is a hotspot or not.
-	 * 
+	 *
 	 * If this property is turned off, the object is no longer a hotspot even if command string is non-empty.
 	 */
 	IsHotspot: number;
 
 	/** Specifies the type of the end of the line. */
-	LineCap: Constants['FV_CAP_BUTT'] | Constants['FV_CAP_ROUND'] | Constants['FV_CAP_SQUARE'];
+	LineCap:
+		| Constants['FV_CAP_BUTT']
+		| Constants['FV_CAP_ROUND']
+		| Constants['FV_CAP_SQUARE'];
 
 	/**
 	 * Specifies the distance of the object from the left side of the parent frame (in inches).
-	 * 
+	 *
 	 * The permissible range is –216 inches to 216 inches.
-	 * 
+	 *
 	 * If the graphic object is an anchored frame, the distance is automatically calculated from the left side of the page frame.
-	 * 
+	 *
 	 * You cannot set this value manually for anchored frames.
 	 */
 	LocX: number;
 
 	/**
 	 * Distance of the object from the top of the parent frame (in inches).
-	 * 
+	 *
 	 * The permissible range is –216 inches to 216 inches.
-	 * 
+	 *
 	 * If the graphic object is an anchored frame, the distance is automatically calculated from the top of the page frame.
-	 * 
+	 *
 	 * You cannot set this value manually for anchored frames.
 	 */
 	LocY: number;
@@ -152,23 +164,26 @@ interface FMGraphic extends FMObject {
 
 	/**
 	 * A list of strings.
-	 * 
+	 *
 	 * Each string expresses an attribute that is specified for an anchored frame in the Object Properties > Object Attributes dialog box.
-	 * 
+	 *
 	 * Each string is in the form of string_text.
-	 * 
+	 *
 	 * You can use the backslash to escape characters such as `\n`, `\r`, or `\t` for newline, carriage return, and tab, respectively.
-	 * 
+	 *
 	 * For a backslash character in the string text, type `\\`.
 	 */
 	ObjectAttributes: Strings;
 
 	/** Specifies the overprint settings for the object. */
-	Overprint: Constants['FV_KNOCKOUT'] | Constants['FV_OVERPRINT'] | Constants['FV_FROMCOLOR'];
+	Overprint:
+		| Constants['FV_KNOCKOUT']
+		| Constants['FV_OVERPRINT']
+		| Constants['FV_FROMCOLOR'];
 
 	/**
 	 * Specifies the pen pattern (numbers between 0 and 7).
-	 * 
+	 *
 	 * Constants are provided for pen patterns 0, 7 and 15, as follows:
 	 * * `Constants.FV_FILL_BLACK` (0)
 	 * * `Constants.FV_FILL_WHITE` (7)
@@ -183,7 +198,10 @@ interface FMGraphic extends FMObject {
 	PrevGraphicInGroup: FMGraphic;
 
 	/** Specifies whether text can flow around the object and, if so, whether the text follows the contour of the object or a box shape surrounding the object. */
-	Runaround: Constants['FV_TR_NONE'] | Constants['FV_TR_CONTOUR'] | Constants['FV_TR_BBOX'];
+	Runaround:
+		| Constants['FV_TR_NONE']
+		| Constants['FV_TR_CONTOUR']
+		| Constants['FV_TR_BBOX'];
 
 	/** Denotes the width of the runaround gap, if the object is a runaround object. */
 	RunaroundGap: number;
@@ -202,9 +220,8 @@ interface FMGraphic extends FMObject {
 
 	/**
 	 * Denotes the width of the object.
-	 * 
+	 *
 	 * The permissible range is from 0.125 points to 3600 points.
 	 */
 	Width: number;
-
 }

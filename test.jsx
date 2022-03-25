@@ -1,5 +1,4 @@
 (function () {
-
 	var attrDef = new AttributeDef(
 		'foo',
 		1,
@@ -11,6 +10,5 @@
 		''
 	);
 
-	Console("Done");
-
+	Console('Done');
 })();

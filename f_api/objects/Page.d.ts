@@ -2,8 +2,4 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 /** Any FrameMaker page object. */
-interface Page extends FMObject {
-
-
-
-}
+interface Page extends FMObject {}

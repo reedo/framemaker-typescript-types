@@ -2,7 +2,6 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface AttrCondExpr extends FMObject {
-
 	/** Applies the attribute expression to the document. */
 	Apply(): Constants['FE_Success'] | FE_Constant;
 
@@ -11,9 +10,9 @@ interface AttrCondExpr extends FMObject {
 
 	/**
 	 * Set to `true` if this expression is applied to the document.
-	 * 
+	 *
 	 * (Application will mean filtering the document according the constraints in the expression.)
-	 * 
+	 *
 	 * Set to `false`, otherwise.
 	 */
 	AttrCondExprIsActive: boolean;
@@ -23,7 +22,6 @@ interface AttrCondExpr extends FMObject {
 
 	/** Indicates the next AttrCondExpr object in the document. */
 	NextAttrCondExprInDoc: AttrCondExpr;
-
 }
 
 declare const AttrCondExpr: AttrCondExpr;

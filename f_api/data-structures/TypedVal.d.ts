@@ -3,7 +3,6 @@
 
 /** Specifies an individual property value. */
 interface TypedVal {
-
 	/** Indicates the type of value the structure provides. */
 	// @ts-expect-error
 	valType: TypedValConstant;
@@ -50,10 +49,24 @@ interface TypedVal {
 }
 
 interface TypedValConstructor {
-	new(): TypedVal;
-	// @ts-expect-error
-	new(item: number | string | Metrics | Strings | Points | Tabs | TextLoc | TextRange | ElementCatalogEntries | Ints | UInts | AttributeDefs | Attributes): TypedVal;
-
+	new (): TypedVal;
+	new (
+		item:
+			| number
+			| string
+			| Metrics
+			| Strings
+			| Points
+			| Tabs
+			| TextLoc
+			| TextRange
+			// @ts-expect-error
+			| ElementCatalogEntries
+			| Ints
+			| UInts
+			| AttributeDefs
+			| Attributes
+	): TypedVal;
 }
 
 declare const TypedVal: TypedValConstructor;

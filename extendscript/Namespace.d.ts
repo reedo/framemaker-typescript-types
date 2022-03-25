@@ -3,20 +3,20 @@
 
 /**
  * This object encapsulates the definition of an XML namespace. A namespace associates an XML-name prefix with a complete URI. The prefix is a string that precedes the local name of an XML element or attribute and identifies the namespace, while the URI points to the actual location where the definition of the namespace is found.
- * 
+ *
  * For example, this XML definition contains a namespace declaration:
- * 
+ *
  * ```xml
  * <?xml xmlns:adobe=http://www.adobe.com/test?>
  * ```
- * 
+ *
  * In the corresponding namespace, the prefix is adobe, and the URI is http://www.adobe.com/test.
  */
 interface Namespace {
 
 	/**
 	 * The element-name prefix associated with the namespace URI.
-	 * 
+	 *
 	 * The prefix value can be undefined, as when a specified prefix is not a valid XML name. Namespaces with an undefined prefix are completely ignored; they are not added to an XML namespace declaration.
 	 */
 	prefix: string | undefined;
@@ -38,7 +38,7 @@ interface NamespaceConstructor {
 
 	/**
 	 * Creates a copy of the given Namespace object.
-	 * 
+	 *
 	 * If the `Namespace()` function is called without the new operator, and the only argument is a Namespace object, the function simply returns that object, rather than creating a copy.
 	*/
 	(ns: Namespace): Namespace;
@@ -57,7 +57,7 @@ interface NamespaceConstructor {
 
 	/**
 	 * Creates a copy of the given Namespace object.
-	 * 
+	 *
 	 * If the `Namespace()` function is called without the new operator, and the only argument is a Namespace object, the function simply returns that object, rather than creating a copy.
 	*/
 	new(ns: Namespace): Namespace;

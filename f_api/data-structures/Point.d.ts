@@ -3,11 +3,10 @@
 
 /**
  * Point describes an individual coordinate pair.
- * 
+ *
  * FrameMaker measures coordinates from the upper-left corner of the parent frame.
  */
 interface Point {
-
 	/** X coordinate. */
 	x: number;
 
@@ -16,8 +15,8 @@ interface Point {
 }
 
 interface PointConstructor {
-	new(): Point;
-	new(x: number, y: number): Point;
+	new (): Point;
+	new (x: number, y: number): Point;
 	readonly prototype: Point;
 }
 

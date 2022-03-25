@@ -30,7 +30,7 @@ interface QNameConstructor {
 
 	/**
 	 * Create a QName object with the given namespace URI and local name.
-	 * 
+	 *
 	 * If the local name is supplied as the wildcard character, “\*”, the uri argument is ignored, and the URI value is that of the default namespace.
 	 */
 	(uri: string, name: string): QName;
@@ -51,7 +51,7 @@ interface QNameConstructor {
 
 	/**
 	 * Create a QName object with the given namespace URI and local name.
-	 * 
+	 *
 	 * If the local name is supplied as the wildcard character, “\*”, the uri argument is ignored, and the URI value is that of the default namespace.
 	 */
 	new(uri: string, name: string): QName;

@@ -2,25 +2,24 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface AFrame extends Frame {
-
 	/**
 	 * Indicates whether the anchored frame is cropped or not.
-	 * 
+	 *
 	 * Possible values are:
-	 * 
+	 *
 	 * `false` (Default) Indicates the frame is not cropped.
-	 * 
+	 *
 	 * `true` Indicates the frame is cropped.
 	 */
 	AFrameIsCropped: boolean;
 
 	/**
 	 * Indicates whether the anchored frame is set to be floatable or not.
-	 * 
+	 *
 	 * Possible values are:
-	 * 
+	 *
 	 * `false` (Default) Indicates the frame is not floatable.
-	 * 
+	 *
 	 * `true` Indicates the frame is floatable.
 	 */
 	AFrameIsFloating: boolean;
@@ -62,7 +61,6 @@ interface AFrame extends Frame {
 
 	/** A string to which clients can store private data. */
 	UserString: string;
-
 }
 
 declare const AFrame: AFrame;

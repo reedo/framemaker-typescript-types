@@ -3,7 +3,6 @@
 
 /** Any FrameMaker object. */
 interface FMObject {
-
 	/** Retrieves the complete property list for a specified object. */
 	GetProps(): PropVals;
 
@@ -15,12 +14,11 @@ interface FMObject {
 
 	/**
 	 * Sets the properties of a specified object.
-	 * 
+	 *
 	 * @param setVal An array containing the values of the object to be set.
 	 */
 	SetProps(setVal: PropVals): void;
 
 	/** Constant representing the object type. */
 	type: FO_Constant;
-
 }

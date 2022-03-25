@@ -3,7 +3,6 @@
 
 /** ElementLoc specifies a location within the structure of a document or book. */
 interface ElementLoc {
-
 	/** The parent element. */
 	// @ts-expect-error
 	parent: Element;
@@ -17,9 +16,9 @@ interface ElementLoc {
 }
 
 interface ElementLocConstructor {
-	new(): ElementLoc;
+	new (): ElementLoc;
 	// @ts-expect-error
-	new(parent: Element, child: Element, offset: number): ElementLoc;
+	new (parent: Element, child: Element, offset: number): ElementLoc;
 	readonly prototype: ElementLoc;
 }
 

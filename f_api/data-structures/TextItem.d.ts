@@ -3,7 +3,6 @@
 
 /** A single unit of text in a document. */
 interface TextItem {
-
 	/** Offset from the beginning of the paragraph or the text line. */
 	offset: number;
 
@@ -18,12 +17,11 @@ interface TextItem {
 
 	/** Denotes the text item if the text item is an object. */
 	obj: FMObject;
-
 }
 
 interface TextItemConstructor {
-	new(): TextItem;
-	new(dataType: FTI_Constant, data: number | string | FMObject): TextItem;
+	new (): TextItem;
+	new (dataType: FTI_Constant, data: number | string | FMObject): TextItem;
 	readonly prototype: TextItem;
 }
 

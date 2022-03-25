@@ -3,7 +3,6 @@
 
 /** The global `app` object. */
 interface Session {
-
 	/** The book with input focus. */
 	// @ts-expect-error
 	ActiveBook: Book;
@@ -17,7 +16,7 @@ interface Session {
 
 	/**
 	 * The name of a marker type to add to the standard list of marker types.
-	 * 
+	 *
 	 * Use `SetString()` to set a marker type name to this property of the `Constants.FV_SessionId` (0).
 	 */
 	AddMarkerTypeToStandardMarkers: string;
@@ -42,22 +41,22 @@ interface Session {
 
 	/**
 	 * When `true`, if there are leading/trailing whitespaces (spaces and tabs) in elements, save the whitespaces as character references to enable round-tripping.
-	 * 
+	 *
 	 * Else set to `false`.
-	 * 
+	 *
 	 * Default: `false`.
 	 */
 	CharacterReferencesOnXMLExport: boolean;
 
 	/**
 	 * Closes a Frame session.
-	 * 
+	 *
 	 * The flags parameter specifies whether to abort or to close open documents or books if they have unsaved changes.
-	 * 
+	 *
 	 * Set the `Constants.FF_CLOSE_MODIFIED` flag to True (1) to close open documents and books regardless of their state.
-	 * 
+	 *
 	 * @param flags `FF_CLOSE_MODIFIED` flag to True (1) to close open documents and books regardless of their state.
-	 * 
+	 *
 	 * @returns FE_Success on success; `Constants.FE_DocModified` (-8): The document was modified and the flags parameter was set to 0.
 	 */
 	Close(flags?: number): number;
@@ -70,7 +69,7 @@ interface Session {
 
 	/**
 	 * Default Key Catalog for the current workflow.
-	 * 
+	 *
 	 * Workflow values:
 	 * * KeyCatalogWorkflowAuthoring
 	 * * KeyCatalogWorkflowPublishing
@@ -140,13 +139,13 @@ interface Session {
 
 	/**
 	 * An array of flags that indicate attributes for each font family listed by FontFamilyNames.
-	 * 
+	 *
 	 * This array of integers is indexed the same as the list of font family names, and corresponds directly to that list.
-	 * 
+	 *
 	 * Each Int is a packed field; the high order 16 bits indicate a surrogate font, and the low order bits indicate attributes for the font family.
-	 * 
+	 *
 	 * The flags, their mask values, and their meaning follow:
-	 * 
+	 *
 	 * | Constant                       | Hex Code   | Description                                                                 |
 	 * | ------------------------------ | ---------- | --------------------------------------------------------------------------- |
 	 * | Constants.FV_FAMILY_VISIBLE    | 0x00000001 | Family is visible in menu.                                                  |
@@ -167,9 +166,9 @@ interface Session {
 
 	/**
 	 * Gets the book object with a specified name.
-	 * 
+	 *
 	 * @param name The name of the book object you want to get.
-	 * 
+	 *
 	 * @returns The named book.
 	 */
 	// @ts-expect-error
@@ -177,9 +176,9 @@ interface Session {
 
 	/**
 	 * Gets a Command object with the specified command string.
-	 * 
+	 *
 	 * @param name The name of the command object you want to get.
-	 * 
+	 *
 	 * @returns The named Command.
 	 */
 	// @ts-expect-error
@@ -187,9 +186,9 @@ interface Session {
 
 	/**
 	 * Gets a menu object with the specified menu string.
-	 * 
+	 *
 	 * @param name The name of the menu object you want to get.
-	 * 
+	 *
 	 * @returns The named Menu.
 	 */
 	// @ts-expect-error
@@ -197,9 +196,9 @@ interface Session {
 
 	/**
 	 * Gets a menu item separator object with the specified menu item separator string.
-	 * 
+	 *
 	 * @param name The name of the menu item separator you want to get.
-	 * 
+	 *
 	 * @returns The named MenuItemSeparator.
 	 */
 	// @ts-expect-error
@@ -207,10 +206,10 @@ interface Session {
 
 	/**
 	 * Gets the object with a specified name (`Name` property) and object type.
-	 * 
+	 *
 	 * @param objType Type of the object to get (`FO_Constant`).
 	 * @param name    Name of the object to get.
-	 * 
+	 *
 	 * @returns The object, or 0.
 	 */
 	// @ts-expect-error
@@ -218,13 +217,13 @@ interface Session {
 
 	/**
 	 * The `GetProps()` method retrieves the complete property list for a specified object.
-	 * 
+	 *
 	 * The `GetProps()` method takes no arguments.
-	 * 
+	 *
 	 * The method returns a `PropVals` object that contains an array of property-value pairs, on success.
-	 * 
+	 *
 	 * If the `GetProps()` method fails, it sets the len field of the returned structure to 0 and assigns one of the following values to `FA_errno`.
-	 * 
+	 *
 	 * @returns The property values.
 	 */
 	GetProps(): PropVals;
@@ -246,7 +245,7 @@ interface Session {
 
 	/**
 	 * 1 if the four icons that appear on the upper-right side of the document window are on.
-	 * 
+	 *
 	 * Changing this property affects only the documents that are opened subsequently; it does not affect documents that are already open.
 	 */
 	IconBarOn: 0 | 1;
@@ -274,7 +273,7 @@ interface Session {
 
 	/**
 	 * 1 if the FrameMaker product window is in front of other application windows.
-	 * 
+	 *
 	 * You can use this property to bring the FrameMaker product to the front or back.
 	 */
 	IsInFront: 0 | 1;
@@ -299,9 +298,9 @@ interface Session {
 
 	/**
 	 * List of standard marker types for the current session.
-	 * 
+	 *
 	 * For versions prior to 5.5, this property returned the list of all marker types for the current session.
-	 * 
+	 *
 	 * In version 5.5, marker types are assigned to the document; use the MarkerTypeNames property of `Constants.FO_Doc` (4) to get the full list of marker types.
 	 */
 	MarkerNames: Strings;
@@ -311,9 +310,9 @@ interface Session {
 
 	/**
 	 * Creates a new book objects and returns it.
-	 * 
+	 *
 	 * @param name The name of the book object to create.
-	 * 
+	 *
 	 * @returns The newly created Book.
 	 */
 	// @ts-expect-error
@@ -321,9 +320,9 @@ interface Session {
 
 	/**
 	 * Creates a new command object and returns it.
-	 * 
+	 *
 	 * @param name Name of the new command object to create.
-	 * 
+	 *
 	 * @returns The newly created Command.
 	 */
 	// @ts-expect-error
@@ -331,9 +330,9 @@ interface Session {
 
 	/**
 	 * Creates a menu object with the specified name and returns it.
-	 * 
+	 *
 	 * @param name Name of the menu object to create.
-	 * 
+	 *
 	 * @returns The newly created Menu.
 	 */
 	// @ts-expect-error
@@ -341,9 +340,9 @@ interface Session {
 
 	/**
 	 * Creates a new menu item separator with the specified name and returns it.
-	 * 
+	 *
 	 * @param name Name of the new menu item separator object.
-	 * 
+	 *
 	 * @returns The newly created MenuItemSeparator.
 	 */
 	// @ts-expect-error
@@ -351,37 +350,37 @@ interface Session {
 
 	/**
 	 * Creates a new object and returns it.
-	 * 
+	 *
 	 * @param objType The type of the object you want to create (FO Constant).
 	 * @param name    The name of the object you want to create.
-	 * 
+	 *
 	 * @returns The newly created object.
 	 */
 	NewNamedObject(objType: Constants, name: string): FMObject;
 
 	/**
 	 * When `true`, the 3D objects in the generated PDF become 2-dimensional.
-	 * 
+	 *
 	 * When `false`, 3D objects get embedded in the PDF and do not become 2 dimensional.
-	 * 
+	 *
 	 * Default is `false`.
 	 */
 	No3DInPDF: boolean;
 
 	/**
 	 * When `true`, the Flash content in the PDF becomes static.
-	 * 
+	 *
 	 * When `false`, Flash objects get embedded in the PDF and are playable.
-	 * 
+	 *
 	 * Default is `false`.
 	 */
 	NoFlashInPDF: boolean;
 
 	/**
 	 * When `true`, the Rich Media (audio and video) objects in the PDF become static.
-	 * 
+	 *
 	 * When `false`, Rich Media objects get embedded in the PDF and are playable.
-	 * 
+	 *
 	 * Default is `false`.
 	 */
 	NoMultiMediaInPDF: boolean;
@@ -419,7 +418,12 @@ interface Session {
 	ProductIsStructured: boolean;
 
 	/** The FrameMaker product name. The names for FrameMaker+SGML indicate FrameMaker running under the structured product interface. FrameViewer is retained for backward compatibility. */
-	ProductName: 'FrameMaker' | 'FrameMaker+SGML' | 'FrameViewer' | 'DemoMaker' | 'DemoMaker+SGML';
+	ProductName:
+		| 'FrameMaker'
+		| 'FrameMaker+SGML'
+		| 'FrameViewer'
+		| 'DemoMaker'
+		| 'DemoMaker+SGML';
 
 	/** 1 if reformatting is enabled. */
 	Reformatting: 0 | 1;
@@ -450,7 +454,7 @@ interface Session {
 
 	/**
 	 * Sets the properties of a specified object. The method does not return anything on success.
-	 * 
+	 *
 	 * @param setVal The property list.
 	 */
 	SetProps(setVal: PropVals): void;
@@ -526,7 +530,6 @@ interface Session {
 
 	/** @todo UNDOCUMENTED */
 	XmlIsBook: boolean;
-
 }
 
 /** The global app object. */
@@ -539,9 +542,9 @@ declare var app: Session;
  * * Constants.FV_MENU_CUSTOM (3)
  */
 type MenuSetType =
-	Constants['FV_MENU_QUICK'] |
-	Constants['FV_MENU_COMPLETE'] |
-	Constants['FV_MENU_CUSTOM'];
+	| Constants['FV_MENU_QUICK']
+	| Constants['FV_MENU_COMPLETE']
+	| Constants['FV_MENU_CUSTOM'];
 
 /**
  * Can be one of:
@@ -559,15 +562,15 @@ type MenuSetType =
  * * Constants.FV_LANG_KOREAN (21)
  */
 type SessionLanguage =
-	Constants['FV_LANG_NOLANGUAGE'] |
-	Constants['FV_LANG_ENGLISH'] |
-	Constants['FV_LANG_BRITISH'] |
-	Constants['FV_LANG_GERMAN'] |
-	Constants['FV_LANG_FRENCH'] |
-	Constants['FV_LANG_SPANISH'] |
-	Constants['FV_LANG_ITALIAN'] |
-	Constants['FV_LANG_SWEDISH'] |
-	Constants['FV_LANG_JAPANESE'] |
-	Constants['FV_LANG_TRADITIONAL_CHINESE'] |
-	Constants['FV_LANG_SIMPLIFIED_CHINESE'] |
-	Constants['FV_LANG_KOREAN'];
+	| Constants['FV_LANG_NOLANGUAGE']
+	| Constants['FV_LANG_ENGLISH']
+	| Constants['FV_LANG_BRITISH']
+	| Constants['FV_LANG_GERMAN']
+	| Constants['FV_LANG_FRENCH']
+	| Constants['FV_LANG_SPANISH']
+	| Constants['FV_LANG_ITALIAN']
+	| Constants['FV_LANG_SWEDISH']
+	| Constants['FV_LANG_JAPANESE']
+	| Constants['FV_LANG_TRADITIONAL_CHINESE']
+	| Constants['FV_LANG_SIMPLIFIED_CHINESE']
+	| Constants['FV_LANG_KOREAN'];
