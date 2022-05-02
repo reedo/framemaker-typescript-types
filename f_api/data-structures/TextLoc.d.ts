@@ -4,7 +4,8 @@
 /** Specifies a location within the text of a paragraph or a graphic text line. */
 interface TextLoc {
 	/** `FO_Pgf` (31) or `FO_TextLine` (18) object. */
-	obj: TextLocObjType;
+	// @ts-expect-error
+	obj: Pgf | TextLine;
 
 	/** Characters from the beginning of the object. */
 	offset: number;
@@ -12,15 +13,9 @@ interface TextLoc {
 
 interface TextLocConstructor {
 	new (): TextLoc;
-	new (obj: TextLocObjType, offset: number): TextLoc;
+	// @ts-expect-error
+	new (obj: Pgf | TextLine, offset: number): TextLoc;
 	readonly prototype: TextLoc;
 }
 
 declare const TextLoc: TextLocConstructor;
-
-/**
- * Can be one of:
- * * Constants.FO_TextLine (18)
- * * Constants.FO_Pgf (31)
- */
-type TextLocObjType = Constants['FO_TextLine'] | Constants['FO_Pgf'];

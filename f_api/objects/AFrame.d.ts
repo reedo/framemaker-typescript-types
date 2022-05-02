@@ -25,10 +25,10 @@ interface AFrame extends Frame {
 	AFrameIsFloating: boolean;
 
 	/** Indicates how the anchored frame is aligned. */
-	Alignment: AlignmentType;
+	Alignment: number;
 
 	/** Indicates the location where the frame is anchored. */
-	AnchorType: AnchorType;
+	AnchorType: number;
 
 	/** @todo UNDOCUMENTED */
 	BaselineOffset: number;
@@ -45,7 +45,7 @@ interface AFrame extends Frame {
 	InTextObj: FMObject;
 
 	/** @todo UNDOCUMENTED */
-	NewFmtRuleClauses(): void;
+	NewFmtRuleClauses(...args: any): any;
 
 	/** Contains the next anchored frame in the text frame. */
 	NextAFrame: AFrame;
@@ -64,7 +64,3 @@ interface AFrame extends Frame {
 }
 
 declare const AFrame: AFrame;
-
-type AlignmentType = number;
-
-type AnchorType = number;

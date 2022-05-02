@@ -2,10 +2,10 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 /** @todo UNDOCUMENTED */
-declare function AddCommand(): void;
+declare function AddCommand(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function AddLocationToProject(): void;
+declare function AddLocationToProject(...args: any): any;
 
 /**
  * Adds a menu to a specified menu.
@@ -18,7 +18,7 @@ declare function AddMenu(
 	toMenu: string,
 	menu: string,
 	label: string
-): Constants['FE_Success'] | void;
+): FE_Success | void;
 
 /**
  * Displays an alert box with a message. Depending on the constant you specify for the type parameter, the alert displays either the OK and Cancel buttons, Yes and No buttons or a Continue button.
@@ -28,7 +28,7 @@ declare function AddMenu(
  *
  * @returns 0 if the user clicked OK, Continue, or Yes. -1 if the user clicked Cancel or No.
  */
-declare function Alert(message: string, type: AlertType): 0 | -1;
+declare function Alert(message: string, type: number): 0 | -1;
 
 /**
  * Checks whether the current asynchronous client has a connection with a FrameMaker process. Call this method after registering the asynchronous client using `WinConnectSession()`.
@@ -49,22 +49,22 @@ declare function Alive(): number;
 declare function AllocatePropVals(numProps?: number): PropVals;
 
 /** @todo UNDOCUMENTED */
-declare function AppendIntProp(): void;
+declare function AppendIntProp(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function AppendMetricProp(): void;
+declare function AppendMetricProp(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function AppendStringProp(): void;
+declare function AppendStringProp(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function AppendStringsProp(): void;
+declare function AppendStringsProp(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function AppendVal(): void;
+declare function AppendVal(...args: any): any;
 
 /** @todo Move to ExtendScript globals. */
-declare function BridgeTalk(): void;
+declare function BridgeTalk(...args: any): any;
 
 /**
  * Allows a client to call another client. The method is useful for calling FrameMaker clients, such as the structure generator and the element catalog manager.
@@ -76,10 +76,7 @@ declare function BridgeTalk(): void;
  *
  * @returns `Constants.FE_Success` or the value specified by the target client’s last call to `ReturnValue()`.
  */
-declare function CallClient(
-	clname: string,
-	arg: string
-): Constants['FE_Success'] | number;
+declare function CallClient(clname: string, arg: string): FE_Success | number;
 
 /**
  * Allows a client to call another client. The method is useful for calling FrameMaker clients, such as the structure generator and the element catalog manager.
@@ -94,7 +91,7 @@ declare function CallClient(
 declare function CallClientEx(
 	clname: string,
 	arg: string
-): Constants['FE_Success'] | TypedVal;
+): FE_Success | TypedVal;
 
 /**
  * Checks the scripts returned by `Open()`, `Import()`, `Save()`, and `UpdateBook()` to determine if a specified status bit is set.
@@ -104,7 +101,7 @@ declare function CallClientEx(
  *
  * @returns Returns 1 if the bit is set, else returns 0.
  */
-declare function CheckStatus(p: PropVals, statusBit: number): 0 | 1;
+declare function CheckStatus(p: PropVals, statusBit: number): boolean;
 
 /**
  * Displays dialog boxes similar to a FrameMaker’s Open and Save dialog boxes. The method displays directories and files in a scroll list and allows the user to choose a file or directory.
@@ -120,7 +117,7 @@ declare function ChooseFile(
 	title: string,
 	directory: string,
 	stuffVal: string,
-	mode: ChooseFileMode
+	mode: number
 ): number;
 
 /** @returns The name of the current ESTK client’s directory. */
@@ -130,10 +127,10 @@ declare function ClientDir(): string;
 declare function ClientName(): string;
 
 /** @todo UNDOCUMENTED */
-declare function ClientNumber(): void;
+declare function ClientNumber(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function CloseModalDialog(): void;
+declare function CloseModalDialog(...args: any): any;
 
 /** The global `Command` object. */
 // @ts-expect-error
@@ -161,7 +158,7 @@ declare function CMSAddMenuEntry(menuId: number, menuEntry: number): CMSObject;
 declare function CMSGetCmsIdFromName(cmsName: number): CMSObject;
 
 /** @todo UNDOCUMENTED */
-declare function CMSLogin(): void;
+declare function CMSLogin(...args: any): any;
 
 /**
  * Registers a CMS client.
@@ -200,7 +197,6 @@ declare function Console(message: string): void;
  *
  * @returns The new document.
  */
-// @ts-expect-error
 declare function CustomDoc(
 	width: number,
 	height: number,
@@ -210,15 +206,16 @@ declare function CustomDoc(
 	botMargin: number,
 	leftinsideMargin: number,
 	rightoutsideMargin: number,
-	sidedness: CustomDocSidedness,
+	sidedness: number,
 	makeVisible: boolean
+	// @ts-expect-error
 ): Doc;
 
 /** @todo UNDOCUMENTED */
-declare function DefineCommand(): void;
+declare function DefineCommand(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function DefineCommandEx(): void;
+declare function DefineCommandEx(...args: any): any;
 
 /**
  * Defines a menu (`FO_Menu` object). After you define a menu, you can add it to a menu or a menu bar with `AddMenuToMenu()`.
@@ -233,29 +230,29 @@ declare function DefineCommandEx(): void;
  * @returns The new menu.
  */
 // @ts-expect-error
-declare function DefineMenu(name: string, label: string): FO_Menu;
+declare function DefineMenu(name: string, label: string): Menu;
 
 /** @todo UNDOCUMENTED */
-declare function DeleteComponentFromProject(): void;
+declare function DeleteComponentFromProject(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function DialogAction(): void;
+declare function DialogAction(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function DialogEvent(): void;
+declare function DialogEvent(...args: any): any;
 
 /**
  * Ends communication with a FrameMaker product process.
  *
  * @returns `Constants.FE_Success` if it succeeds, or a system error code if an error occurs.
  */
-declare function DisconnectFromSession(): Constants['FE_Success'] | number;
+declare function DisconnectFromSession(): FE_Success | number;
 
 /** @todo UNDOCUMENTED */
-declare function EditComponentOfProject(): void;
+declare function EditComponentOfProject(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function Emergency(): void;
+declare function Emergency(...args: any): any;
 
 /**
  * Prints the client’s name and a message to the console.
@@ -274,10 +271,10 @@ declare function Err(message: string): void;
 declare function ErrorName(i?: number): string;
 
 /** @todo UNDOCUMENTED */
-declare function ExploreComponentOfProject(): void;
+declare function ExploreComponentOfProject(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function Externalize(): void;
+declare function Externalize(...args: any): any;
 
 /** The current value of FA_errno. */
 declare var FA_errno: number;
@@ -298,10 +295,10 @@ declare function FamilyFonts(family: number): Fonts;
  *
  * This is an ExtendScript located in the startup folder.
  */
-declare function FarsiToNConverter(): void;
+declare function FarsiToNConverter(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function FCMarker(): void;
+declare function FCMarker(...args: any): any;
 
 /**
  * @todo UNDOCUMENTED
@@ -319,11 +316,18 @@ declare function Fcodes(codes: FCodes[]): void;
 declare function FileScrollBox(title: string, directory: string): string | null;
 
 /** @todo UNDOCUMENTED */
-declare function Find(): void;
+declare function Find(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function FindChangeInDocSelection(): void;
+declare function FindChangeInDocSelection(...args: any): any;
 
+declare type FontEncoding =
+	| 'FrameRoman'
+	| 'JISX0208.ShiftJIS'
+	| 'BIG5'
+	| 'GB2312-80.EUC'
+	| 'KSC5601-1992'
+	| 'Multiple';
 /**
  * Returns the encoding that FrameMaker uses for the font family.
  *
@@ -335,15 +339,7 @@ declare function FindChangeInDocSelection(): void;
  *
  * @param family The font family for which the encoding is to be retrieved.
  */
-declare function GetEncodingForFamily(
-	family: number
-):
-	| 'FrameRoman'
-	| 'JISX0208.ShiftJIS'
-	| 'BIG5'
-	| 'GB2312-80.EUC'
-	| 'KSC5601-1992'
-	| 'Multiple';
+declare function GetEncodingForFamily(family: number): FontEncoding;
 
 /**
  * Returns the encoding that FrameMaker uses for a specific font with a specific combination of weight, angle, and variation.
@@ -351,29 +347,22 @@ declare function GetEncodingForFamily(
  * @param font
  */
 // @ts-expect-error
-declare function GetEncodingForFont(
-	font: Font
-):
-	| 'FrameRoman'
-	| 'JISX0208.ShiftJIS'
-	| 'BIG5'
-	| 'GB2312-80.EUC'
-	| 'KSC5601-1992';
+declare function GetEncodingForFont(font: Font): FontEncoding;
 
 /** Returns the PropVals structure containing the default export parameters. */
 declare function GetExportDefaultParams(): PropVals;
 
 /** @todo UNDOCUMENTED */
-declare function GetFontAngleValue(): void;
+declare function GetFontAngleValue(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function GetFontFamilyValue(): void;
+declare function GetFontFamilyValue(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function GetFontVariationValue(): void;
+declare function GetFontVariationValue(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function GetFontWeightValue(): void;
+declare function GetFontWeightValue(...args: any): any;
 
 /**
  * Gets a default property list that you can use to call `Import()`.
@@ -383,7 +372,7 @@ declare function GetFontWeightValue(): void;
 declare function GetImportDefaultParams(): PropVals;
 
 /** @todo UNDOCUMENTED */
-declare function GetIteratorDefaultParams(): void;
+declare function GetIteratorDefaultParams(...args: any): any;
 
 /**
  * Finds a key catalog with the specified 'tag'.
@@ -394,7 +383,7 @@ declare function GetIteratorDefaultParams(): void;
 declare function GetKeyCatalog(tag: string): KeyCatalog;
 
 /** @todo UNDOCUMENTED */
-declare function GetLocalizationStrings(): void;
+declare function GetLocalizationStrings(...args: any): any;
 
 /** Generates default open-parameters for `NewXML()`. */
 declare function GetNewXMLDefaultParams(): PropVals;
@@ -414,16 +403,13 @@ declare function GetOpenDefaultParams(): PropVals;
  * @param propVals The property list.
  * @param propNum  The property for which the index is to be retrieved.
  */
-declare function GetPropIndex(
-	propVals: PropVals,
-	propNum: number
-): Constants['FE_BadPropNum'] | number;
+declare function GetPropIndex(propVals: PropVals, propNum: number): number;
 
 /** Gets a default property list that you can use to call `Save()`. */
 declare function GetSaveDefaultParams(): PropVals;
 
 /** @todo UNDOCUMENTED */
-declare function GetSearchSurface(): void;
+declare function GetSearchSurface(...args: any): any;
 
 /** Returns the font encodings supported for the current session. */
 declare function GetSupportedEncodings(): Strings;
@@ -435,35 +421,35 @@ declare function GetUpdateBookDefaultParams(): PropVals;
 declare function GetWorkspaceName(): string;
 
 /** @todo UNDOCUMENTED */
-declare function GlineObj(): void;
+declare function GlineObj(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function HtmlDialogEventEx(): void;
+declare function HtmlDialogEventEx(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function HtmlDialogEx(): void;
+declare function HtmlDialogEx(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function HtmlNotifyPropertyChange(): void;
+declare function HtmlNotifyPropertyChange(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function HtmlUpdateUrl(): void;
+declare function HtmlUpdateUrl(...args: any): any;
 
 /**
  * @todo UNDOCUMENTED
  *
  * This is an ExtendScript located in the startup folder.
  */
-declare function IndicToNConverter(): void;
+declare function IndicToNConverter(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function InitializationName(): void;
+declare function InitializationName(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function IsDataDifferentFromTemplateData(): void;
+declare function IsDataDifferentFromTemplateData(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function IsDRL(): void;
+declare function IsDRL(...args: any): any;
 
 /**
  * Checks whether the specified encoding is supported for the current session.
@@ -477,7 +463,7 @@ declare function IsDRL(): void;
 declare function IsEncodingSupported(encodingName: string): boolean;
 
 /** @todo UNDOCUMENTED */
-declare function IsFileValid(): void;
+declare function IsFileValid(...args: any): any;
 
 /** The JSON parser. */
 // @ts-expect-error
@@ -496,23 +482,23 @@ declare var JSON: JSON;
 declare function LoadMenuCustomizationFile(
 	pathname: string,
 	silent: boolean
-): Constants['FE_Success'] | void;
+): FE_Success | void;
 
 /** An object of strings. */
 declare var locStrings: object;
 
 /** @todo UNDOCUMENTED */
-declare function LogFMPIPEvent(): void;
+declare function LogFMPIPEvent(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function Menu(): void;
+declare function Menu(...args: any): any;
 
 /**
  * Indicates whether a specified menu exists.
  *
  * @param menu The menu to be checked for existence.
  */
-declare function MenuExists(menu: string): 0 | 1;
+declare function MenuExists(menu: string): boolean;
 
 /** @todo UNDOCUMENTED */
 // @ts-expect-error
@@ -527,7 +513,7 @@ declare var mMenu: Menu;
 declare function NewKeyCatalog(tag: string): KeyCatalog;
 
 /** @todo UNDOCUMENTED */
-declare function NewProject(): void;
+declare function NewProject(...args: any): any;
 
 /**
  * Creates a new, untitled XML.
@@ -535,10 +521,10 @@ declare function NewProject(): void;
  * @param opennewXMLParams   A property list telling the FrameMaker product how to open the file and how to respond to errors and other conditions. To use the default list, specify null.
  * @param newXMLReturnParams A property list that returns the filename and provides information about how the FrameMaker product opened the file. It must be initialized before you call `NewXML()`.
  */
-// @ts-expect-error
 declare function NewXML(
 	opennewXMLParams: PropVals,
 	newXMLReturnParams: PropVals
+	// @ts-expect-error
 ): Doc;
 
 /**
@@ -552,35 +538,33 @@ declare function NewXML(
  * @param state        Specifies whether to turn notification on or off. 1 turns it on, and 0 turns it off.
  */
 declare function Notification(
-	notification: NotificationType,
-	state: 0 | 1
-): Constants['FE_Success'] | void;
+	notification: number,
+	state: boolean
+): FE_Success | void;
 
 /**
  * @todo Document this.
- *
- * __NOTE:__ Seems to crash FM 15.0.3.
  *
  * @param i
  */
 declare function NotificationName(i: number): string;
 
 /** @todo UNDOCUMENTED */
-declare function Notify(): void;
+declare function Notify(...args: any): any;
 
 /**
  * @todo UNDOCUMENTED
  *
  * This is an ExtendScript located in the startup folder.
  */
-declare function NToFarsiConverter(): void;
+declare function NToFarsiConverter(...args: any): any;
 
 /**
  * @todo UNDOCUMENTED
  *
  * This is an ExtendScript located in the startup folder.
  */
-declare function NToIndicConverter(): void;
+declare function NToIndicConverter(...args: any): any;
 
 /**
  * Opens a document or book. It can also create a new document.
@@ -603,24 +587,24 @@ declare function NToIndicConverter(): void;
  *
  * @returns The document or book if it opens it successfully, or 0 if an error occurs.
  */
-// @ts-expect-error
 declare function Open(
 	fileName: string,
 	openParams: PropVals,
 	openReturnParams: PropVals
+	// @ts-expect-error
 ): Book | Doc | 0;
 
 /** @todo UNDOCUMENTED */
-declare function OpenAnyHow(): void;
+declare function OpenAnyHow(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function OpenProject(): void;
+declare function OpenProject(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function OpenXML(): void;
+declare function OpenXML(...args: any): any;
 
 /** Pops the Clipboard stack, moving the entry on the top of the stack to the Clipboard. */
-declare function PopClipboard(): Constants['FE_Success'] | void;
+declare function PopClipboard(): FE_Success | void;
 
 /**
  * Prints the value of `FA_errno` to the console.
@@ -655,10 +639,10 @@ declare function PrintFAErrno(): void;
 declare function PrintImportStatus(p: PropVals): void;
 
 /** @todo UNDOCUMENTED */
-declare function PrintInitialization(): void;
+declare function PrintInitialization(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function PrintNotification(): void;
+declare function PrintNotification(...args: any): any;
 
 /**
  * Prints status flags returned by `Open()`. It is useful for debugging your clients.
@@ -710,10 +694,10 @@ declare function PrintTextItems(textItems: TextItems): void;
 declare function PrintUpdateBookStatus(p: PropVals): void;
 
 /** @todo UNDOCUMENTED */
-declare function ProgressBarEx(): void;
+declare function ProgressBarEx(...args: any): any;
 
 /** @todo Move to ExtendScript globals. */
-declare function prompt(): void;
+declare function prompt(...args: any): void;
 
 /**
  * Displays a dialog box that prompts the user for a single integer value. It allows you to provide a default value, which appears in the entry field when the dialog box appears. The dialog box has OK and Cancel buttons.
@@ -765,13 +749,10 @@ declare function PushClipboard(): void;
  * @param fromMenu The parent menu from which the menu is to be deleted.
  * @param label    The menu to delete.
  */
-declare function RemoveMenu(
-	fromMenu: string,
-	label: string
-): Constants['FE_Success'] | void;
+declare function RemoveMenu(fromMenu: string, label: string): FE_Success | void;
 
 /** @todo UNDOCUMENTED */
-declare function RenameComponentofProject(): void;
+declare function RenameComponentofProject(...args: any): any;
 
 /**
  * Sets a return value for a client-defined callback. The method allows a client to provide status information to the FrameMaker product or client that called the callback. You can call this method in the following callbacks: `DialogEvent()`, `Notify()`.
@@ -795,13 +776,13 @@ declare function RenameComponentofProject(): void;
 declare function ReturnValue(retvalue: number): number | void;
 
 /** @todo UNDOCUMENTED */
-declare function Run(): void;
+declare function Run(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function SaveAs(): void;
+declare function SaveAs(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function SaveProject(): void;
+declare function SaveProject(...args: any): any;
 
 /**
  * Displays an array of items and allows the user to choose one.
@@ -832,7 +813,7 @@ declare function ScrollBox(
 declare function Service(): number;
 
 /** @todo UNDOCUMENTED */
-declare function Session(): void;
+declare function Session(): any;
 
 /**
  * Sets the current workspace to the specified string.
@@ -842,20 +823,20 @@ declare function Session(): void;
 declare function SetCurrentWorkspace(str: string): null;
 
 /** @todo UNDOCUMENTED */
-declare function SetDdeInstance(): void;
+declare function SetDdeInstance(...args: any): any;
 
 /**
  * Indicates whether a specified command exists.
  *
  * @param shortcut The command to be checked for existence.
  */
-declare function ShortcutExists(shortcut: string): 0 | 1;
+declare function ShortcutExists(shortcut: string): boolean;
 
 /** Closes an ESTK client’s connection. */
 declare function ShutDown(): void;
 
 /** @todo UNDOCUMENTED */
-declare function SilentNewBook(): void;
+declare function SilentNewBook(...args: any): any;
 
 /**
  * Creates a new document from a specified template.
@@ -880,29 +861,29 @@ declare function SimpleNewDoc(templateName: string, interactive: boolean): Doc;
  * @param fileName    The absolute pathname of the file to open.
  * @param interactive Specifies whether the FrameMaker product displays messages and warnings to the user. true instructs the FrameMaker product to display messages and warnings.
  */
-// @ts-expect-error
 declare function SimpleOpen(
 	fileName: string,
 	interactive: boolean
+	// @ts-expect-error
 ): Book | Doc | 0;
 
 /** @todo UNDOCUMENTED */
-declare function Sleep(): void;
+declare function Sleep(...args: any): any;
 
 /** @todo UNDOCUMENTED */
 declare var sMsg: string;
 
 /** @todo UNDOCUMENTED */
-declare function StringLen(): void;
+declare function StringLen(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function TableObj(): void;
+declare function TableObj(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function TextObj(): void;
+declare function TextObj(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function updateMathml(): void;
+declare function updateMathml(...args: any): any;
 
 /**
  * Updates the top order menu set.
@@ -923,403 +904,7 @@ declare function UpdateMenus(): void;
 declare function UserCancel(): boolean;
 
 /** @todo UNDOCUMENTED */
-declare function USleep(): void;
+declare function USleep(...args: any): any;
 
 /** @todo UNDOCUMENTED */
-declare function WinInstallDefaultMessageFilter(): void;
-
-/**
- * Can be one of:
- * * Constants.FF_ALERT_OK_DEFAULT (0)
- * * Constants.FF_ALERT_CANCEL_DEFAULT (1)
- * * Constants.FF_ALERT_CONTINUE_NOTE (2)
- * * Constants.FF_ALERT_CONTINUE_WARN (3)
- * * Constants.FF_ALERT_YES_DEFAULT (4)
- * * Constants.FF_ALERT_NO_DEFAULT (5)
- * * Constants.FF_ALERT_YES_NO_CANCEL (6)
- * * Constants.FF_ALERT_DNS_OK (7)
- */
-type AlertType =
-	| Constants['FF_ALERT_OK_DEFAULT']
-	| Constants['FF_ALERT_CANCEL_DEFAULT']
-	| Constants['FF_ALERT_CONTINUE_NOTE']
-	| Constants['FF_ALERT_CONTINUE_WARN']
-	| Constants['FF_ALERT_YES_DEFAULT']
-	| Constants['FF_ALERT_NO_DEFAULT']
-	| Constants['FF_ALERT_YES_NO_CANCEL']
-	| Constants['FF_ALERT_DNS_OK'];
-
-/**
- * Can be one of:
- * * Constants.FV_ChooseSelect (0)
- * * Constants.FV_ChooseOpen (1)
- * * Constants.FV_ChooseSave (2)
- * * Constants.FV_ChooseOpenDir (4)
- * * Constants.FV_ChooseMultiSelect (8)
- * * Constants.FV_ChooseMultiOpen (16)
- */
-type ChooseFileMode =
-	| Constants['FV_ChooseSelect']
-	| Constants['FV_ChooseOpen']
-	| Constants['FV_ChooseSave']
-	| Constants['FV_ChooseOpenDir']
-	| Constants['FV_ChooseMultiSelect']
-	| Constants['FV_ChooseMultiOpen'];
-
-/**
- * Can be one of:
- * * Constants.FF_Custom_SingleSided (0)
- * * Constants.FF_Custom_FirstPageRight (1)
- * * Constants.FF_Custom_FirstPageLeft (2)
- */
-type CustomDocSidedness =
-	| Constants['FF_Custom_SingleSided']
-	| Constants['FF_Custom_FirstPageRight']
-	| Constants['FF_Custom_FirstPageLeft'];
-
-/**
- * Can be one of:
- * * Constants.FA_Note_PreOpenDoc (1)
- * * Constants.FA_Note_PostOpenDoc (2)
- * * Constants.FA_Note_PreOpenMIF (3)
- * * Constants.FA_Note_PostOpenMIF (4)
- * * Constants.FA_Note_PreSaveDoc (5)
- * * Constants.FA_Note_PostSaveDoc (6)
- * * Constants.FA_Note_PreSaveMIF (7)
- * * Constants.FA_Note_PostSaveMIF (8)
- * * Constants.FA_Note_PreFileType (9)
- * * Constants.FA_Note_PostFileType (10)
- * * Constants.FA_Note_PreQuitDoc (11)
- * * Constants.FA_Note_DirtyDoc (12)
- * * Constants.FA_Note_ClientCall (13)
- * * Constants.FA_Note_FilterIn (14)
- * * Constants.FA_Note_FilterOut (15)
- * * Constants.FA_Note_PreOpenBook (16)
- * * Constants.FA_Note_PostOpenBook (17)
- * * Constants.FA_Note_PreOpenBookMIF (18)
- * * Constants.FA_Note_PostOpenBookMIF (19)
- * * Constants.FA_Note_PreSaveBook (20)
- * * Constants.FA_Note_PostSaveBook (21)
- * * Constants.FA_Note_PreSaveBookMIF (22)
- * * Constants.FA_Note_PostSaveBookMIF (23)
- * * Constants.FA_Note_PreQuitBook (24)
- * * Constants.FA_Note_DirtyBook (25)
- * * Constants.FA_Note_PreQuitSession (26)
- * * Constants.FA_Note_PostQuitSession (27)
- * * Constants.FA_Note_PreRevertDoc (28)
- * * Constants.FA_Note_PostRevertDoc (29)
- * * Constants.FA_Note_PreRevertBook (30)
- * * Constants.FA_Note_PostRevertBook (31)
- * * Constants.FA_Note_PreAutoSaveDoc (32)
- * * Constants.FA_Note_PostAutoSaveDoc (33)
- * * Constants.FA_Note_BackToUser (34)
- * * Constants.FA_Note_DisplayClientTiDialog (35)
- * * Constants.FA_Note_UpdateAllClientTi (36)
- * * Constants.FA_Note_UpdateClientTi (37)
- * * Constants.FA_Note_PreImport (38)
- * * Constants.FA_Note_PostImport (39)
- * * Constants.FA_Note_PostQuitDoc (40)
- * * Constants.FA_Note_PostQuitBook (41)
- * * Constants.FA_Note_PreFunction (42)
- * * Constants.FA_Note_PostFunction (43)
- * * Constants.FA_Note_PreMouseCommand (44)
- * * Constants.FA_Note_PostMouseCommand (45)
- * * Constants.FA_Note_PreHypertext (46)
- * * Constants.FA_Note_PostHypertext (47)
- * * Constants.FA_Note_PrePrint (48)
- * * Constants.FA_Note_PostPrint (49)
- * * Constants.FA_Note_BodyPageAdded (50)
- * * Constants.FA_Note_BodyPageDeleted (51)
- * * Constants.FA_Note_PreInsertElement (52)
- * * Constants.FA_Note_PostInsertElement (53)
- * * Constants.FA_Note_PreChangeElement (54)
- * * Constants.FA_Note_PostChangeElement (55)
- * * Constants.FA_Note_PreWrapElement (56)
- * * Constants.FA_Note_PostWrapElement (57)
- * * Constants.FA_Note_PreDragElement (58)
- * * Constants.FA_Note_PostDragElement (59)
- * * Constants.FA_Note_PreCopyElement (60)
- * * Constants.FA_Note_PostCopyElement (61)
- * * Constants.FA_Note_PreSetAttrValue (62)
- * * Constants.FA_Note_PostSetAttrValue (63)
- * * Constants.FA_Note_PreImportElemDefs (64)
- * * Constants.FA_Note_PostImportElemDefs (65)
- * * Constants.FA_Note_ECMInternal (66)
- * * Constants.FA_Note_PreExport (67)
- * * Constants.FA_Note_PostExport (68)
- * * Constants.FA_Note_PreInlineTypeIn (69)
- * * Constants.FA_Note_PostInlineTypeIn (70)
- * * Constants.FA_Note_PreSaveAsPDFDialog (71)
- * * Constants.FA_Note_PostSaveAsPDFDialog (72)
- * * Constants.FA_Note_PreDistill (73)
- * * Constants.FA_Note_PostDistill (74)
- * * Constants.FA_Note_FilterFileToFile (75)
- * * Constants.FA_Note_PreBookComponentOpen (76)
- * * Constants.FA_Note_PostBookComponentOpen (77)
- * * Constants.FA_Note_PreGenerate (78)
- * * Constants.FA_Note_PostGenerate (79)
- * * Constants.FA_Note_PreGoToXrefSrc (80)
- * * Constants.FA_Note_PostGoToXrefSrc (81)
- * * Constants.FA_Note_PreOpenSGML (82)
- * * Constants.FA_Note_PostOpenSGML (83)
- * * Constants.FA_Note_Dialog (84)
- * * Constants.FA_Note_Alert (85)
- * * Constants.FA_Note_Palette (86)
- * * Constants.FA_Note_ToolBar (87)
- * * Constants.FA_Note_ConsoleMessage (88)
- * * Constants.FA_Note_Help (89)
- * * Constants.FA_Note_URL (90)
- * * Constants.FA_Note_CursorChange (91)
- * * Constants.FA_Note_FontSubstitution (92)
- * * Constants.FA_Note_UndoCheckpoint (93)
- * * Constants.FA_Note_FileOpen (94)
- * * Constants.FA_Note_PreOpenXML (95)
- * * Constants.FA_Note_PostOpenXML (96)
- * * Constants.FA_Note_PreSaveXML (97)
- * * Constants.FA_Note_PostSaveXML (98)
- * * Constants.FA_Note_PreSaveSGML (99)
- * * Constants.FA_Note_PostSaveSGML (100)
- * * Constants.FA_Note_U3DCommand (101)
- * * Constants.FA_Note_Not_U3DCommand (102)
- * * Constants.FA_Note_Not_RSC_Supported_File (103)
- * * Constants.FA_Note_RSC_Supported_File (104)
- * * Constants.FA_Note_PostActiveDocChange (105)
- * * Constants.FA_Note_PreUpdateXRefs (106)
- * * Constants.FA_Note_PostUpdateXRefs (107)
- * * Constants.FA_Note_DisplayClientXRefDialog (108)
- * * Constants.FA_Note_QuitModelessDialog (109)
- * * Constants.FA_Note_InsertTopicRef (110)
- * * Constants.FA_Note_InsertConRef (111)
- * * Constants.FA_Note_GenerateFM (112)
- * * Constants.FA_Note_OpenAllTopicrefs (113)
- * * Constants.FA_Note_UpdateRefs (114)
- * * Constants.FA_Note_AssignId (115)
- * * Constants.FA_Note_DITAOptions (116)
- * * Constants.FA_Note_NewDitamapFile (117)
- * * Constants.FA_Note_NewBookmapFile (118)
- * * Constants.FA_Note_NewTopicFile (119)
- * * Constants.FA_Note_NewTaskFile (120)
- * * Constants.FA_Note_NewConceptFile (121)
- * * Constants.FA_Note_NewReferenceFile (122)
- * * Constants.FA_Note_NewGlossEntryFile (123)
- * * Constants.FA_Note_SWF_File (124)
- * * Constants.FA_Note_Not_SWF_File (125)
- * * Constants.FA_Note_Enable_Disable_DITA_Menu_Commands (126)
- * * Constants.FA_Note_Dialog_Create (127)
- * * Constants.FA_Note_SetAttrValue (128)
- * * Constants.FA_Note_UpdateRefs_On_Save (129)
- * * Constants.FA_Note_Read_Struct_App (130)
- * * Constants.FA_Note_Struct_Wizard (131)
- * * Constants.FA_Note_Open_Dtd (132)
- * * Constants.FA_Note_Open_Schema (133)
- * * Constants.FA_Note_Open_EDD_For_App (134)
- * * Constants.FA_Note_PostSetPropertyValue (135)
- * * Constants.FA_Note_Not_AI_Supported_File (136)
- * * Constants.FA_Note_AI_Supported_File (137)
- * * Constants.FA_Note_Poster_Applied (138)
- * * Constants.FA_Note_PrePublishDitamap (139)
- * * Constants.FA_Note_PostPublishDitamap (140)
- * * Constants.FA_Note_UpdateDITAReference (141)
- * * Constants.FA_Note_UpdateDITAReferences (142)
- * * Constants.FA_Note_LoadKeyCatalog (143)
- * * Constants.FA_Note_ReLoadKeyCatalog (144)
- * * Constants.FA_Note_EnumeratedComponent (145)
- * * Constants.FA_Note_PreSwitchView (146)
- * * Constants.FA_Note_PostSwitchView (147)
- * * Constants.FA_Note_IsCommandEnabled (148)
- * * Constants.FA_Note_MATHML_Selected (149)
- * * Constants.FA_Note_MATHML_Deselected (150)
- * * Constants.FA_Note_MATHML_DblClicked (151)
- * * Constants.FA_Note_MATHML_GenerateImage (152)
- * * Constants.FA_Note_MATHML_PopulateObj (153)
- * * Constants.FA_Note_PreCreateMML (154)
- * * Constants.FA_Note_PostCreateMML (155)
- * * Constants.FA_Note_MATHML_CHANGE_NSPREFIX (156)
- * * Constants.FA_Note_SetUniqueAttr (157)
- * * Constants.FA_Note_PreSetPropertyValue (158)
- * * Constants.FA_Note_GraphicPropChanged (159)
- * * Constants.FA_Note_In_App_Message (160)
- * * Constants.FA_Note_Reset_Client_State (161)
- * * Constants.FA_Note_Frame_Idle_State (162)
- * * Constants.FA_Note_CMS_PreCheckOutItem (163)
- * * Constants.FA_Note_CMS_PostCheckOutItem (164)
- * * Constants.FA_Note_CMS_PreOpenItem (165)
- * * Constants.FA_Note_CMS_PostOpenItem (166)
- * * Constants.FA_Note_RTL_NumberUtility (167)
- * * Constants.FA_Note_MATHML_CHANGE_XML_PROPERTY (168)
- * * Constants.FA_Note_WelcomeScreen_Command (169)
- * * Constants.FA_Note_HtmlNotify (170)
- * * Constants.FA_Note_Num (171)
- */
-type NotificationType =
-	| Constants['FA_Note_PreOpenDoc']
-	| Constants['FA_Note_PostOpenDoc']
-	| Constants['FA_Note_PreOpenMIF']
-	| Constants['FA_Note_PostOpenMIF']
-	| Constants['FA_Note_PreSaveDoc']
-	| Constants['FA_Note_PostSaveDoc']
-	| Constants['FA_Note_PreSaveMIF']
-	| Constants['FA_Note_PostSaveMIF']
-	| Constants['FA_Note_PreFileType']
-	| Constants['FA_Note_PostFileType']
-	| Constants['FA_Note_PreQuitDoc']
-	| Constants['FA_Note_DirtyDoc']
-	| Constants['FA_Note_ClientCall']
-	| Constants['FA_Note_FilterIn']
-	| Constants['FA_Note_FilterOut']
-	| Constants['FA_Note_PreOpenBook']
-	| Constants['FA_Note_PostOpenBook']
-	| Constants['FA_Note_PreOpenBookMIF']
-	| Constants['FA_Note_PostOpenBookMIF']
-	| Constants['FA_Note_PreSaveBook']
-	| Constants['FA_Note_PostSaveBook']
-	| Constants['FA_Note_PreSaveBookMIF']
-	| Constants['FA_Note_PostSaveBookMIF']
-	| Constants['FA_Note_PreQuitBook']
-	| Constants['FA_Note_DirtyBook']
-	| Constants['FA_Note_PreQuitSession']
-	| Constants['FA_Note_PostQuitSession']
-	| Constants['FA_Note_PreRevertDoc']
-	| Constants['FA_Note_PostRevertDoc']
-	| Constants['FA_Note_PreRevertBook']
-	| Constants['FA_Note_PostRevertBook']
-	| Constants['FA_Note_PreAutoSaveDoc']
-	| Constants['FA_Note_PostAutoSaveDoc']
-	| Constants['FA_Note_BackToUser']
-	| Constants['FA_Note_DisplayClientTiDialog']
-	| Constants['FA_Note_UpdateAllClientTi']
-	| Constants['FA_Note_UpdateClientTi']
-	| Constants['FA_Note_PreImport']
-	| Constants['FA_Note_PostImport']
-	| Constants['FA_Note_PostQuitDoc']
-	| Constants['FA_Note_PostQuitBook']
-	| Constants['FA_Note_PreFunction']
-	| Constants['FA_Note_PostFunction']
-	| Constants['FA_Note_PreMouseCommand']
-	| Constants['FA_Note_PostMouseCommand']
-	| Constants['FA_Note_PreHypertext']
-	| Constants['FA_Note_PostHypertext']
-	| Constants['FA_Note_PrePrint']
-	| Constants['FA_Note_PostPrint']
-	| Constants['FA_Note_BodyPageAdded']
-	| Constants['FA_Note_BodyPageDeleted']
-	| Constants['FA_Note_PreInsertElement']
-	| Constants['FA_Note_PostInsertElement']
-	| Constants['FA_Note_PreChangeElement']
-	| Constants['FA_Note_PostChangeElement']
-	| Constants['FA_Note_PreWrapElement']
-	| Constants['FA_Note_PostWrapElement']
-	| Constants['FA_Note_PreDragElement']
-	| Constants['FA_Note_PostDragElement']
-	| Constants['FA_Note_PreCopyElement']
-	| Constants['FA_Note_PostCopyElement']
-	| Constants['FA_Note_PreSetAttrValue']
-	| Constants['FA_Note_PostSetAttrValue']
-	| Constants['FA_Note_PreImportElemDefs']
-	| Constants['FA_Note_PostImportElemDefs']
-	| Constants['FA_Note_ECMInternal']
-	| Constants['FA_Note_PreExport']
-	| Constants['FA_Note_PostExport']
-	| Constants['FA_Note_PreInlineTypeIn']
-	| Constants['FA_Note_PostInlineTypeIn']
-	| Constants['FA_Note_PreSaveAsPDFDialog']
-	| Constants['FA_Note_PostSaveAsPDFDialog']
-	| Constants['FA_Note_PreDistill']
-	| Constants['FA_Note_PostDistill']
-	| Constants['FA_Note_FilterFileToFile']
-	| Constants['FA_Note_PreBookComponentOpen']
-	| Constants['FA_Note_PostBookComponentOpen']
-	| Constants['FA_Note_PreGenerate']
-	| Constants['FA_Note_PostGenerate']
-	| Constants['FA_Note_PreGoToXrefSrc']
-	| Constants['FA_Note_PostGoToXrefSrc']
-	| Constants['FA_Note_PreOpenSGML']
-	| Constants['FA_Note_PostOpenSGML']
-	| Constants['FA_Note_Dialog']
-	| Constants['FA_Note_Alert']
-	| Constants['FA_Note_Palette']
-	| Constants['FA_Note_ToolBar']
-	| Constants['FA_Note_ConsoleMessage']
-	| Constants['FA_Note_Help']
-	| Constants['FA_Note_URL']
-	| Constants['FA_Note_CursorChange']
-	| Constants['FA_Note_FontSubstitution']
-	| Constants['FA_Note_UndoCheckpoint']
-	| Constants['FA_Note_FileOpen']
-	| Constants['FA_Note_PreOpenXML']
-	| Constants['FA_Note_PostOpenXML']
-	| Constants['FA_Note_PreSaveXML']
-	| Constants['FA_Note_PostSaveXML']
-	| Constants['FA_Note_PreSaveSGML']
-	| Constants['FA_Note_PostSaveSGML']
-	| Constants['FA_Note_U3DCommand']
-	| Constants['FA_Note_Not_U3DCommand']
-	| Constants['FA_Note_Not_RSC_Supported_File']
-	| Constants['FA_Note_RSC_Supported_File']
-	| Constants['FA_Note_PostActiveDocChange']
-	| Constants['FA_Note_PreUpdateXRefs']
-	| Constants['FA_Note_PostUpdateXRefs']
-	| Constants['FA_Note_DisplayClientXRefDialog']
-	| Constants['FA_Note_QuitModelessDialog']
-	| Constants['FA_Note_InsertTopicRef']
-	| Constants['FA_Note_InsertConRef']
-	| Constants['FA_Note_GenerateFM']
-	| Constants['FA_Note_OpenAllTopicrefs']
-	| Constants['FA_Note_UpdateRefs']
-	| Constants['FA_Note_AssignId']
-	| Constants['FA_Note_DITAOptions']
-	| Constants['FA_Note_NewDitamapFile']
-	| Constants['FA_Note_NewBookmapFile']
-	| Constants['FA_Note_NewTopicFile']
-	| Constants['FA_Note_NewTaskFile']
-	| Constants['FA_Note_NewConceptFile']
-	| Constants['FA_Note_NewReferenceFile']
-	| Constants['FA_Note_NewGlossEntryFile']
-	| Constants['FA_Note_SWF_File']
-	| Constants['FA_Note_Not_SWF_File']
-	| Constants['FA_Note_Enable_Disable_DITA_Menu_Commands']
-	| Constants['FA_Note_Dialog_Create']
-	| Constants['FA_Note_SetAttrValue']
-	| Constants['FA_Note_UpdateRefs_On_Save']
-	| Constants['FA_Note_Read_Struct_App']
-	| Constants['FA_Note_Struct_Wizard']
-	| Constants['FA_Note_Open_Dtd']
-	| Constants['FA_Note_Open_Schema']
-	| Constants['FA_Note_Open_EDD_For_App']
-	| Constants['FA_Note_PostSetPropertyValue']
-	| Constants['FA_Note_Not_AI_Supported_File']
-	| Constants['FA_Note_AI_Supported_File']
-	| Constants['FA_Note_Poster_Applied']
-	| Constants['FA_Note_PrePublishDitamap']
-	| Constants['FA_Note_PostPublishDitamap']
-	| Constants['FA_Note_UpdateDITAReference']
-	| Constants['FA_Note_UpdateDITAReferences']
-	| Constants['FA_Note_LoadKeyCatalog']
-	| Constants['FA_Note_ReLoadKeyCatalog']
-	| Constants['FA_Note_EnumeratedComponent']
-	| Constants['FA_Note_PreSwitchView']
-	| Constants['FA_Note_PostSwitchView']
-	| Constants['FA_Note_IsCommandEnabled']
-	| Constants['FA_Note_MATHML_Selected']
-	| Constants['FA_Note_MATHML_Deselected']
-	| Constants['FA_Note_MATHML_DblClicked']
-	| Constants['FA_Note_MATHML_GenerateImage']
-	| Constants['FA_Note_MATHML_PopulateObj']
-	| Constants['FA_Note_PreCreateMML']
-	| Constants['FA_Note_PostCreateMML']
-	| Constants['FA_Note_MATHML_CHANGE_NSPREFIX']
-	| Constants['FA_Note_SetUniqueAttr']
-	| Constants['FA_Note_PreSetPropertyValue']
-	| Constants['FA_Note_GraphicPropChanged']
-	| Constants['FA_Note_In_App_Message']
-	| Constants['FA_Note_Reset_Client_State']
-	| Constants['FA_Note_Frame_Idle_State']
-	| Constants['FA_Note_CMS_PreCheckOutItem']
-	| Constants['FA_Note_CMS_PostCheckOutItem']
-	| Constants['FA_Note_CMS_PreOpenItem']
-	| Constants['FA_Note_CMS_PostOpenItem']
-	| Constants['FA_Note_RTL_NumberUtility']
-	| Constants['FA_Note_MATHML_CHANGE_XML_PROPERTY']
-	| Constants['FA_Note_WelcomeScreen_Command']
-	| Constants['FA_Note_HtmlNotify']
-	| Constants['FA_Note_Num'];
+declare function WinInstallDefaultMessageFilter(...args: any): void;

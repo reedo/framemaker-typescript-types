@@ -7,7 +7,7 @@ interface TextItem {
 	offset: number;
 
 	/** Type of the text item. */
-	dataType: FTI_Constant;
+	dataType: number;
 
 	/** Denotes the text item if the text item is a string. */
 	sdata: string;
@@ -21,7 +21,7 @@ interface TextItem {
 
 interface TextItemConstructor {
 	new (): TextItem;
-	new (dataType: FTI_Constant, data: number | string | FMObject): TextItem;
+	new (dataType: number, data: number | string | FMObject): TextItem;
 	readonly prototype: TextItem;
 }
 

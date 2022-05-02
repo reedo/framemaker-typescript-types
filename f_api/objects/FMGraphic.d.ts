@@ -2,7 +2,7 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 /** Any FrameMaker graphic object. */
-interface FMGraphic extends FMObject {
+interface FMGraphic extends FMUniqueObject {
 	/** Indicates the angle of rotation of the graphic object. */
 	Angle: number;
 
@@ -20,16 +20,13 @@ interface FMGraphic extends FMObject {
 	ArrowScaleFactor: number | false;
 
 	/** Set to 1 if arrowhead is scaled as the line width changes. Set to 0, otherwise. */
-	ArrowScaleHead: 0 | 1;
+	ArrowScaleHead: boolean;
 
 	/** Denotes the arrowhead tip angle in degrees. */
 	ArrowTipAngle: number;
 
 	/** Denotes the style of the arrowhead. */
-	ArrowType:
-		| Constants['FV_ARROW_STICK']
-		| Constants['FV_ARROW_HOLLOW']
-		| Constants['FV_ARROW_FILLED'];
+	ArrowType: number;
 
 	/**
 	 * Indicates the border width specified in points.
@@ -39,6 +36,7 @@ interface FMGraphic extends FMObject {
 	BorderWidth: number;
 
 	/** Denotes the spot color. */
+	// @ts-expect-error
 	Color: Color;
 
 	/**
@@ -60,14 +58,7 @@ interface FMGraphic extends FMObject {
 	 *
 	 * For example, if you delete a frame, all objects within the frame are also deleted.
 	 */
-	Delete():
-		| Constants['FE_Success']
-		| Constants['FE_BadDocId']
-		| Constants['FE_BadObjId']
-		| Constants['FE_BadDelete']
-		| Constants['FE_BadOperation']
-		| Constants['FE_BadParameter']
-		| Constants['FE_NotMenu'];
+	Delete(): number;
 
 	/**
 	 * Denotes the fill pattern (numbers between 0 and 15).
@@ -77,26 +68,27 @@ interface FMGraphic extends FMObject {
 	 * * `Constants.FV_FILL_WHITE` (7)
 	 * * `Constants.FV_FILL_CLEAR` (15)
 	 */
-	Fill: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15;
+	Fill: number;
 
 	/** Denotes the frame containing the graphic object. */
 	FrameParent: FMGraphic;
 
 	/** Set to 1 if the graphic object cannot be selected. Set to 0, otherwise. */
-	GraphicCantBeSelected: 0 | 1;
+	GraphicCantBeSelected: boolean;
 
 	/** Set to 1, if the graphic object is selected. Else, set to 0. */
-	GraphicIsSelected: 0 | 1;
+	GraphicIsSelected: boolean;
 
 	/**
 	 * Specifies the group to which the object belongs.
 	 *
 	 * __Note__: Anchored frames do NOT have this property.
 	 */
-	GroupParent: Group;
+	// @ts-expect-error
+	GroupParent?: Group;
 
 	/** Set to 1 if the line has an arrow head. Set to 0, otherwise. */
-	HeadArrow: 0 | 1;
+	HeadArrow: boolean;
 
 	/**
 	 * Denotes the height of the object denoted in points.
@@ -123,10 +115,7 @@ interface FMGraphic extends FMObject {
 	IsHotspot: number;
 
 	/** Specifies the type of the end of the line. */
-	LineCap:
-		| Constants['FV_CAP_BUTT']
-		| Constants['FV_CAP_ROUND']
-		| Constants['FV_CAP_SQUARE'];
+	LineCap: number;
 
 	/**
 	 * Specifies the distance of the object from the left side of the parent frame (in inches).
@@ -176,10 +165,7 @@ interface FMGraphic extends FMObject {
 	ObjectAttributes: Strings;
 
 	/** Specifies the overprint settings for the object. */
-	Overprint:
-		| Constants['FV_KNOCKOUT']
-		| Constants['FV_OVERPRINT']
-		| Constants['FV_FROMCOLOR'];
+	Overprint: number;
 
 	/**
 	 * Specifies the pen pattern (numbers between 0 and 7).
@@ -189,7 +175,7 @@ interface FMGraphic extends FMObject {
 	 * * `Constants.FV_FILL_WHITE` (7)
 	 * * `Constants.FV_FILL_CLEAR` (15)
 	 */
-	Pen: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15;
+	Pen: number;
 
 	/** Denotes the previous graphic object in the frame. */
 	PrevGraphicInFrame: FMGraphic;
@@ -198,10 +184,7 @@ interface FMGraphic extends FMObject {
 	PrevGraphicInGroup: FMGraphic;
 
 	/** Specifies whether text can flow around the object and, if so, whether the text follows the contour of the object or a box shape surrounding the object. */
-	Runaround:
-		| Constants['FV_TR_NONE']
-		| Constants['FV_TR_CONTOUR']
-		| Constants['FV_TR_BBOX'];
+	Runaround: number;
 
 	/** Denotes the width of the runaround gap, if the object is a runaround object. */
 	RunaroundGap: number;
@@ -210,13 +193,10 @@ interface FMGraphic extends FMObject {
 	StyleTag: string;
 
 	/** Set to 1 if the arrowhead is enabled at the begining of the line; Set to 0 otherwise. */
-	TailArrow: 0 | 1;
+	TailArrow: boolean;
 
 	/** Specifies the tint percentage. */
 	TintPercent: number;
-
-	/** Indicates the graphic object's internal unique number. */
-	Unique: number;
 
 	/**
 	 * Denotes the width of the object.

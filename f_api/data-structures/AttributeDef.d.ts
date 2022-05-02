@@ -4,7 +4,7 @@
 /** Describes a single attribute definition. */
 interface AttributeDef {
 	/** Denotes the attribute value’s type. */
-	attrType: FV_AT_Constant;
+	attrType: number;
 
 	/** The choices from which to select, if the `attrType` parameter is set to `Constants.FV_AT_CHOICES` (2). */
 	choices: Strings;
@@ -13,7 +13,7 @@ interface AttributeDef {
 	defValues: Strings;
 
 	/** The flag value determines whether an attribute is hidden, read-only or neither. */
-	flags: FV_AF_Constant;
+	flags: number;
 
 	/** Name of the attribute. */
 	name: string;
@@ -25,20 +25,18 @@ interface AttributeDef {
 	rangeMin: string;
 
 	/**
-	 * Set to 1 if the attribute is required.
-	 *
-	 * Else, set to 0.
+	 * True if the attribute is required.
 	 */
-	required: 0 | 1;
+	required: boolean;
 }
 
 interface AttributeDefConstructor {
 	new (): AttributeDef;
 	new (
 		name: string,
-		required: 0 | 1,
-		flags: FV_AF_Constant,
-		attrType: FV_AT_Constant,
+		required: boolean,
+		flags: number,
+		attrType: number,
 		choices: Strings,
 		defValues: Strings,
 		rangeMin: string,

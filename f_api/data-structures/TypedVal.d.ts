@@ -4,8 +4,7 @@
 /** Specifies an individual property value. */
 interface TypedVal {
 	/** Indicates the type of value the structure provides. */
-	// @ts-expect-error
-	valType: TypedValConstant;
+	valType: number;
 
 	/** An integer. */
 	ival: number;

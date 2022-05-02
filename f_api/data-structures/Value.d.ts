@@ -10,7 +10,7 @@ interface Value {
 	sval: string;
 
 	/** The type of the value. `FT_Integer` or `FT_String`. */
-	valType: ValueValType;
+	valType: number;
 }
 
 interface ValueConstructor {
@@ -20,10 +20,3 @@ interface ValueConstructor {
 }
 
 declare const Value: ValueConstructor;
-
-/**
- * Can be one of:
- * * Constants.FT_Integer (1)
- * * Constants.FT_String (3)
- */
-type ValueValType = Constants['FT_Integer'] | Constants['FT_String'];

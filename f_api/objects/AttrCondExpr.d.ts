@@ -3,10 +3,10 @@
 
 interface AttrCondExpr extends FMObject {
 	/** Applies the attribute expression to the document. */
-	Apply(): Constants['FE_Success'] | FE_Constant;
+	Apply(): number;
 
 	/** Applies the attribute expression to the document. */
-	ApplyAttributeExpression(): Constants['FE_Success'] | FE_Constant;
+	ApplyAttributeExpression(): number;
 
 	/**
 	 * Set to `true` if this expression is applied to the document.
@@ -18,7 +18,7 @@ interface AttrCondExpr extends FMObject {
 	AttrCondExprIsActive: boolean;
 
 	/** The AttrCondExpr expression in string format. */
-	AttrCondExprStr: string | null;
+	AttrCondExprStr?: string;
 
 	/** Indicates the next AttrCondExpr object in the document. */
 	NextAttrCondExprInDoc: AttrCondExpr;

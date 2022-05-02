@@ -25,13 +25,13 @@ interface Session {
 	AllowNewFileURL: boolean;
 
 	/** 1 if element reformatting is enabled. */
-	ApplyFormatRules: 0 | 1;
+	ApplyFormatRules: boolean;
 
 	/** 1 if Automatic Backup is enabled. */
-	AutoBackup: 0 | 1;
+	AutoBackup: boolean;
 
 	/** 1 if Automatic Save is enabled. */
-	AutoSave: 0 | 1;
+	AutoSave: boolean;
 
 	/** Time between automatic saves in seconds (60 seconds to 10800 seconds). */
 	AutoSaveSeconds: number;
@@ -65,7 +65,7 @@ interface Session {
 	CurrentDir: string;
 
 	/** Type of menu set. */
-	CurrentMenuSet: MenuSetType;
+	CurrentMenuSet: number;
 
 	/**
 	 * Default Key Catalog for the current workflow.
@@ -82,7 +82,7 @@ interface Session {
 	DefaultVectorFormatForXMLExport: string;
 
 	/** 0 if screen refresh is completely turned off. */
-	Displaying: 0 | 1;
+	Displaying: boolean;
 
 	/** The name of the display on which the FrameMaker product session is running. */
 	DisplayName: string;
@@ -94,7 +94,7 @@ interface Session {
 	DoNotExportInvalidXML: boolean;
 
 	/** When 1, the FrameMaker error log is not generated. */
-	DoNotGenerateErrorLog: 0 | 1;
+	DoNotGenerateErrorLog: boolean;
 
 	/** `true` when FrameMaker is set not to show the Welcome screen. */
 	DontShowWelcomeScreen: boolean;
@@ -229,7 +229,7 @@ interface Session {
 	GetProps(): PropVals;
 
 	/** 1 if Gravity is turned on for the session. */
-	Gravity: 0 | 1;
+	Gravity: boolean;
 
 	/** Size at which to greek text. */
 	GreekSize: number;
@@ -248,7 +248,7 @@ interface Session {
 	 *
 	 * Changing this property affects only the documents that are opened subsequently; it does not affect documents that are already open.
 	 */
-	IconBarOn: 0 | 1;
+	IconBarOn: boolean;
 
 	/** Temporary id of the FrameMaker session. */
 	id: number;
@@ -269,23 +269,23 @@ interface Session {
 	IsFormViewEnabled: boolean;
 
 	/** 1 if the FrameMaker product window is iconified. */
-	IsIconified: 0 | 1;
+	IsIconified: boolean;
 
 	/**
 	 * 1 if the FrameMaker product window is in front of other application windows.
 	 *
 	 * You can use this property to bring the FrameMaker product to the front or back.
 	 */
-	IsInFront: 0 | 1;
+	IsInFront: boolean;
 
 	/** 1 if the FrameMaker product window is visible on the screen. */
-	IsOnScreen: 0 | 1;
+	IsOnScreen: boolean;
 
 	/** Maybe setting this to 1 gives you a free copy of FrameMaker? */
-	IsTechnicalSuiteLicensed: 0 | 1;
+	IsTechnicalSuiteLicensed: boolean;
 
 	/** Gets whether temporary open/save is in progress. Temporary open/save happens during view switching operations. */
-	IsTempOpenSave: 0 | 1;
+	IsTempOpenSave: boolean;
 
 	/** Current workflow related to Key Catalogs. */
 	KeyCatalogWorkflow: number;
@@ -294,7 +294,7 @@ interface Session {
 	Label: string;
 
 	/** Product language. */
-	Language: SessionLanguage;
+	Language: number;
 
 	/**
 	 * List of standard marker types for the current session.
@@ -388,7 +388,7 @@ interface Session {
 	/**
 	 * @returns `true` if the object exists in the FrameMaker session.
 	 */
-	ObjectValid(): 0 | 1;
+	ObjectValid(): boolean;
 
 	/** @todo UNDOCUMENTED */
 	OpenAndSaveXmlBookComponentDoc: boolean;
@@ -426,10 +426,10 @@ interface Session {
 		| 'DemoMaker+SGML';
 
 	/** 1 if reformatting is enabled. */
-	Reformatting: 0 | 1;
+	Reformatting: boolean;
 
 	/** 1 if Remember Missing Font Names is activated. */
-	RememberMissingFontNames: 0 | 1;
+	RememberMissingFontNames: boolean;
 
 	/** When `true`, the extra while spaces are removed while importing XML. */
 	RemoveExtraWhiteSpacesOnXMLImport: boolean;
@@ -463,7 +463,7 @@ interface Session {
 	SgmlDir: string;
 
 	/** 1 if Snap is turned on for the session. */
-	Snap: 0 | 1;
+	Snap: boolean;
 
 	/** @todo UNDOCUMENTED */
 	StackWarningLevel: number;
@@ -502,7 +502,7 @@ interface Session {
 	UserString: string;
 
 	/** 1 if validation is enabled (FrameMaker only). */
-	Validating: 0 | 1;
+	Validating: boolean;
 
 	/** Frame version number (before the decimal). */
 	VersionMajor: number;
@@ -514,10 +514,10 @@ interface Session {
 	VersionRevision: number;
 
 	/** 1 if the formatting bar is visible. */
-	ViewFormattingBar: 0 | 1;
+	ViewFormattingBar: boolean;
 
 	/** 1 if the QuickAccess bar is visible. */
-	ViewQuickAccessBar: 0 | 1;
+	ViewQuickAccessBar: boolean;
 
 	/** @todo UNDOCUMENTED */
 	VisualCaretMovement: boolean;
@@ -534,43 +534,3 @@ interface Session {
 
 /** The global app object. */
 declare var app: Session;
-
-/**
- * Can be one of:
- * * Constants.FV_MENU_QUICK (1)
- * * Constants.FV_MENU_COMPLETE (2)
- * * Constants.FV_MENU_CUSTOM (3)
- */
-type MenuSetType =
-	| Constants['FV_MENU_QUICK']
-	| Constants['FV_MENU_COMPLETE']
-	| Constants['FV_MENU_CUSTOM'];
-
-/**
- * Can be one of:
- * * Constants.FV_LANG_NOLANGUAGE (0)
- * * Constants.FV_LANG_ENGLISH (1)
- * * Constants.FV_LANG_BRITISH (2)
- * * Constants.FV_LANG_GERMAN (3)
- * * Constants.FV_LANG_FRENCH (5)
- * * Constants.FV_LANG_SPANISH (7)
- * * Constants.FV_LANG_ITALIAN (9)
- * * Constants.FV_LANG_SWEDISH (17)
- * * Constants.FV_LANG_JAPANESE (18)
- * * Constants.FV_LANG_TRADITIONAL_CHINESE (19)
- * * Constants.FV_LANG_SIMPLIFIED_CHINESE (20)
- * * Constants.FV_LANG_KOREAN (21)
- */
-type SessionLanguage =
-	| Constants['FV_LANG_NOLANGUAGE']
-	| Constants['FV_LANG_ENGLISH']
-	| Constants['FV_LANG_BRITISH']
-	| Constants['FV_LANG_GERMAN']
-	| Constants['FV_LANG_FRENCH']
-	| Constants['FV_LANG_SPANISH']
-	| Constants['FV_LANG_ITALIAN']
-	| Constants['FV_LANG_SWEDISH']
-	| Constants['FV_LANG_JAPANESE']
-	| Constants['FV_LANG_TRADITIONAL_CHINESE']
-	| Constants['FV_LANG_SIMPLIFIED_CHINESE']
-	| Constants['FV_LANG_KOREAN'];

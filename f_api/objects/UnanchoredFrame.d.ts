@@ -6,5 +6,6 @@ interface UnanchoredFrame extends Page {
 	Name: string;
 
 	/** The page that the unanchored frame belongs to, if the unanchored frame is a page frame. */
+	// @ts-expect-error
 	PageFramePage: BodyPage | HiddenPage | MasterPage | RefPage;
 }

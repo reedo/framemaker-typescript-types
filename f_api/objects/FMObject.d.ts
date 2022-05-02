@@ -10,7 +10,7 @@ interface FMObject {
 	id: number;
 
 	/** Indicates whether an object is valid or not. */
-	ObjectValid(): 0 | 1;
+	ObjectValid(): boolean;
 
 	/**
 	 * Sets the properties of a specified object.
@@ -20,5 +20,5 @@ interface FMObject {
 	SetProps(setVal: PropVals): void;
 
 	/** Constant representing the object type. */
-	type: FO_Constant;
+	type: number;
 }

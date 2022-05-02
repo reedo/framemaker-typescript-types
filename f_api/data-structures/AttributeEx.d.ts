@@ -16,7 +16,7 @@ interface AttributeExConstructor {
 		name: string,
 		values: Strings,
 		valflags: number,
-		allow: 0 | 1
+		allow: boolean
 	): AttributeEx;
 	readonly prototype: AttributeEx;
 }

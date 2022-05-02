@@ -11,7 +11,7 @@ interface Tab {
 	x: number;
 
 	/** Type of tab. */
-	type: FV_TAB_Constant;
+	type: number;
 
 	/** String that appears before the tab. */
 	leader: string;
@@ -22,7 +22,7 @@ interface Tab {
 
 interface TabConstructor {
 	new (): Tab;
-	new (x: number, type: FV_TAB_Constant, leader: string, decimal: number): Tab;
+	new (x: number, type: number, leader: string, decimal: number): Tab;
 	readonly prototype: Tab;
 }
 

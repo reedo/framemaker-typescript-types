@@ -4,7 +4,7 @@
 /** Describes a single attribute. */
 interface Attribute {
 	/** Allow error as special case to suppress reporting by validation. */
-	allow: number;
+	allow: boolean;
 
 	/** The name of the attribute. */
 	name: string;
@@ -22,7 +22,7 @@ interface AttributeConstructor {
 		name: string,
 		values: Strings,
 		valflags: number,
-		allow: number
+		allow: boolean
 	): Attribute;
 	readonly prototype: Attribute;
 }
