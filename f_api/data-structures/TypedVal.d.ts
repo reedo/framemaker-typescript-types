@@ -31,7 +31,7 @@ interface TypedVal {
 	trval: TextRange;
 
 	/** Element Catalog values. */
-	// @ts-expect-error
+
 	csval: ElementCatalogEntries;
 
 	/** Set of integers. */
@@ -59,7 +59,6 @@ interface TypedValConstructor {
 			| Tabs
 			| TextLoc
 			| TextRange
-			// @ts-expect-error
 			| ElementCatalogEntries
 			| Ints
 			| UInts

@@ -4,11 +4,11 @@
 /** The global `app` object. */
 interface Session {
 	/** The book with input focus. */
-	// @ts-expect-error
+
 	ActiveBook: Book;
 
 	/** The document with input focus. */
-	// @ts-expect-error
+
 	ActiveDoc: Doc;
 
 	/** Sets the current view. */
@@ -75,7 +75,7 @@ interface Session {
 	 * * KeyCatalogWorkflowPublishing
 	 * * KeyCatalogWorkflowSearching
 	 */
-	// @ts-expect-error
+
 	DefaultKeyCatalog: KeyCatalog;
 
 	/** @todo UNDOCUMENTED */
@@ -112,23 +112,23 @@ interface Session {
 	EnableAutoSpellCheck: boolean;
 
 	/** First command in the list of commands in the session. */
-	// @ts-expect-error
+
 	FirstCommandInSession: Command;
 
 	/** First Key Catalog in the session. */
-	// @ts-expect-error
+
 	FirstKeyCatalogInSession: KeyCatalog;
 
 	/** First menu item or menu in the list of menus, menu items, and menu item separators in the session. */
-	// @ts-expect-error
+
 	FirstMenuItemInSession: Command | Menu | MenuItemSeparator;
 
 	/** First open book in session. */
-	// @ts-expect-error
+
 	FirstOpenBook: Book;
 
 	/** First open document in session. */
-	// @ts-expect-error
+
 	FirstOpenDoc: Doc;
 
 	/** The FrameMaker console string. */
@@ -171,7 +171,7 @@ interface Session {
 	 *
 	 * @returns The named book.
 	 */
-	// @ts-expect-error
+
 	GetNamedBook(name: string): Book;
 
 	/**
@@ -181,7 +181,7 @@ interface Session {
 	 *
 	 * @returns The named Command.
 	 */
-	// @ts-expect-error
+
 	GetNamedCommand(name: string): Command;
 
 	/**
@@ -191,7 +191,7 @@ interface Session {
 	 *
 	 * @returns The named Menu.
 	 */
-	// @ts-expect-error
+
 	GetNamedMenu(name: string): Menu;
 
 	/**
@@ -201,7 +201,7 @@ interface Session {
 	 *
 	 * @returns The named MenuItemSeparator.
 	 */
-	// @ts-expect-error
+
 	GetNamedMenuItemSeparator(name: string): MenuItemSeparator;
 
 	/**
@@ -212,7 +212,7 @@ interface Session {
 	 *
 	 * @returns The object, or 0.
 	 */
-	// @ts-expect-error
+
 	GetNamedObject(objType: FO_Constant, name: string): FMObject | 0;
 
 	/**
@@ -315,7 +315,7 @@ interface Session {
 	 *
 	 * @returns The newly created Book.
 	 */
-	// @ts-expect-error
+
 	NewNamedBook(name: string): Book;
 
 	/**
@@ -325,7 +325,7 @@ interface Session {
 	 *
 	 * @returns The newly created Command.
 	 */
-	// @ts-expect-error
+
 	NewNamedCommand(name: string): Command;
 
 	/**
@@ -335,7 +335,7 @@ interface Session {
 	 *
 	 * @returns The newly created Menu.
 	 */
-	// @ts-expect-error
+
 	NewNamedMenu(name: string): Menu;
 
 	/**
@@ -345,7 +345,7 @@ interface Session {
 	 *
 	 * @returns The newly created MenuItemSeparator.
 	 */
-	// @ts-expect-error
+
 	NewNamedMenuItemSeparator(name: string): MenuItemSeparator;
 
 	/**

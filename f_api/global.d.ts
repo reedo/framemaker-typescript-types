@@ -133,7 +133,7 @@ declare function ClientNumber(...args: any): any;
 declare function CloseModalDialog(...args: any): any;
 
 /** The global `Command` object. */
-// @ts-expect-error
+
 declare var Cmd: Command;
 
 /**
@@ -144,7 +144,7 @@ declare var Cmd: Command;
  * @param menuId    The ID of the Parent menu.
  * @param menuEntry The `CMSMenuItem` structure describes a custom menu definition.
  */
-// @ts-expect-error
+
 declare function CMSAddMenuEntry(menuId: number, menuEntry: number): CMSObject;
 
 /**
@@ -154,7 +154,7 @@ declare function CMSAddMenuEntry(menuId: number, menuEntry: number): CMSObject;
  *
  * @param cmsName The Name of the CMS.
  */
-// @ts-expect-error
+
 declare function CMSGetCmsIdFromName(cmsName: number): CMSObject;
 
 /** @todo UNDOCUMENTED */
@@ -167,11 +167,11 @@ declare function CMSLogin(...args: any): any;
  *
  * @param cmsName Name of the CMS to register.
  */
-// @ts-expect-error
+
 declare function CMSRegister(cmsName: number): CMSObject;
 
 /** The global Command object. */
-// @ts-expect-error
+
 declare var Command: Command;
 
 /**
@@ -208,7 +208,6 @@ declare function CustomDoc(
 	rightoutsideMargin: number,
 	sidedness: number,
 	makeVisible: boolean
-	// @ts-expect-error
 ): Doc;
 
 /** @todo UNDOCUMENTED */
@@ -229,7 +228,7 @@ declare function DefineCommandEx(...args: any): any;
  *
  * @returns The new menu.
  */
-// @ts-expect-error
+
 declare function DefineMenu(name: string, label: string): Menu;
 
 /** @todo UNDOCUMENTED */
@@ -287,7 +286,7 @@ declare var FA_Note_All: number;
  *
  * @param family The index of the font family (in the list of fonts in the session).
  */
-// @ts-expect-error
+
 declare function FamilyFonts(family: number): Fonts;
 
 /**
@@ -346,7 +345,7 @@ declare function GetEncodingForFamily(family: number): FontEncoding;
  *
  * @param font
  */
-// @ts-expect-error
+
 declare function GetEncodingForFont(font: Font): FontEncoding;
 
 /** Returns the PropVals structure containing the default export parameters. */
@@ -379,7 +378,7 @@ declare function GetIteratorDefaultParams(...args: any): any;
  *
  * @param tag The tag of the new Key Catalog being created.
  */
-// @ts-expect-error
+
 declare function GetKeyCatalog(tag: string): KeyCatalog;
 
 /** @todo UNDOCUMENTED */
@@ -466,7 +465,7 @@ declare function IsEncodingSupported(encodingName: string): boolean;
 declare function IsFileValid(...args: any): any;
 
 /** The JSON parser. */
-// @ts-expect-error
+
 declare var JSON: JSON;
 
 /**
@@ -501,7 +500,7 @@ declare function Menu(...args: any): any;
 declare function MenuExists(menu: string): boolean;
 
 /** @todo UNDOCUMENTED */
-// @ts-expect-error
+
 declare var mMenu: Menu;
 
 /**
@@ -509,7 +508,7 @@ declare var mMenu: Menu;
  *
  * @param tag The tag of the new Key Catalog being created.
  */
-// @ts-expect-error
+
 declare function NewKeyCatalog(tag: string): KeyCatalog;
 
 /** @todo UNDOCUMENTED */
@@ -524,7 +523,6 @@ declare function NewProject(...args: any): any;
 declare function NewXML(
 	opennewXMLParams: PropVals,
 	newXMLReturnParams: PropVals
-	// @ts-expect-error
 ): Doc;
 
 /**
@@ -591,7 +589,6 @@ declare function Open(
 	fileName: string,
 	openParams: PropVals,
 	openReturnParams: PropVals
-	// @ts-expect-error
 ): Book | Doc | 0;
 
 /** @todo UNDOCUMENTED */
@@ -846,7 +843,7 @@ declare function SilentNewBook(...args: any): any;
  * @param templateName The absolute pathname of the template to use.
  * @param interactive  Specifies whether FrameMaker displays messages and warnings to the user.
  */
-// @ts-expect-error
+
 declare function SimpleNewDoc(templateName: string, interactive: boolean): Doc;
 
 /**
@@ -864,7 +861,6 @@ declare function SimpleNewDoc(templateName: string, interactive: boolean): Doc;
 declare function SimpleOpen(
 	fileName: string,
 	interactive: boolean
-	// @ts-expect-error
 ): Book | Doc | 0;
 
 /** @todo UNDOCUMENTED */

@@ -36,7 +36,7 @@ interface FMGraphic extends FMUniqueObject {
 	BorderWidth: number;
 
 	/** Denotes the spot color. */
-	// @ts-expect-error
+
 	Color: Color;
 
 	/**
@@ -84,7 +84,7 @@ interface FMGraphic extends FMUniqueObject {
 	 *
 	 * __Note__: Anchored frames do NOT have this property.
 	 */
-	// @ts-expect-error
+
 	GroupParent?: Group;
 
 	/** Set to 1 if the line has an arrow head. Set to 0, otherwise. */

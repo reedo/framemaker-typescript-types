@@ -4,7 +4,7 @@
 /** Specifies a location within the text of a paragraph or a graphic text line. */
 interface TextLoc {
 	/** `FO_Pgf` (31) or `FO_TextLine` (18) object. */
-	// @ts-expect-error
+
 	obj: Pgf | TextLine;
 
 	/** Characters from the beginning of the object. */
@@ -13,7 +13,7 @@ interface TextLoc {
 
 interface TextLocConstructor {
 	new (): TextLoc;
-	// @ts-expect-error
+
 	new (obj: Pgf | TextLine, offset: number): TextLoc;
 	readonly prototype: TextLoc;
 }
