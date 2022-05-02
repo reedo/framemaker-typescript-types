@@ -1,7 +1,7 @@
 // Type definitions for FrameMaker Book object
 // Definitions by Dan Reed <https://danreed.dev>
 
-interface Book {
+interface Book extends FMNamedObject {
 	AcrobatBookmarkDisplayTags: number;
 
 	BookDontUpdateReferences: boolean;
@@ -53,8 +53,6 @@ interface Book {
 	IsOnScreen: boolean;
 
 	Label: string;
-
-	Name: string;
 
 	NewElemAttrDisplay: number;
 
@@ -194,10 +192,6 @@ interface Book {
 
 	XmlWellFormed: number;
 
-	readonly id: number;
-
-	readonly type: number;
-
 	ApplyConditionalSettings(settings: PropVals): FrameErrorCode;
 
 	Close(flags: number): FrameErrorCode;
@@ -219,8 +213,6 @@ interface Book {
 	GetConditionalSettings(): PropVals;
 
 	GetDependencies(...args: any): unknown;
-
-	GetProps(): PropVals;
 
 	GetUniqueObject(
 		objType: FO_Constant,
@@ -255,8 +247,6 @@ interface Book {
 		previous: FMSeriesObject
 	): FMSeriesObject | FrameErrorCode;
 
-	ObjectValid(): boolean;
-
 	Save(
 		saveAsName: string,
 		saveParams: PropVals,
@@ -264,8 +254,6 @@ interface Book {
 	): Book | FrameErrorCode;
 
 	SaveAsHtml(...args: any): unknown;
-
-	SetProps(props: PropVals): void;
 
 	SilentPrintDoc(): FrameErrorCode;
 

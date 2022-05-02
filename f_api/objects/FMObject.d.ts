@@ -7,7 +7,7 @@ interface FMObject {
 	GetProps(): PropVals;
 
 	/** Temporary ID. Lasts until the object leaves the FM session. */
-	id: number;
+	readonly id: number;
 
 	/** Indicates whether an object is valid or not. */
 	ObjectValid(): boolean;
@@ -15,10 +15,13 @@ interface FMObject {
 	/**
 	 * Sets the properties of a specified object.
 	 *
-	 * @param setVal An array containing the values of the object to be set.
+	 * @param props An array containing the values of the object to be set.
 	 */
-	SetProps(setVal: PropVals): void;
+	SetProps(props: PropVals): void;
 
 	/** Constant representing the object type. */
-	type: number;
+	readonly type: number;
+
+	/** An object containing details about this object. */
+	readonly reflect: Reflection;
 }

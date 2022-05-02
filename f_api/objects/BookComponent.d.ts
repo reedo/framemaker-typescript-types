@@ -1,7 +1,7 @@
 // Type definitions for FrameMaker BookComponent object
 // Definitions by Dan Reed <https://danreed.dev>
 
-interface BookComponent {
+interface BookComponent extends FMSeriesObject {
 	readonly BookComponentFileType: number;
 
 	readonly BookComponentIsFolderWithTemplate: boolean;
@@ -126,17 +126,7 @@ interface BookComponent {
 
 	XmlApplicationForBookComponent: string;
 
-	readonly id: number;
-
-	readonly type: number;
-
 	Delete(): FrameErrorCode;
 
-	GetProps(): PropVals;
-
 	MoveComponent(moveAction: FA_COMPONENT_MOVE_ACTION): FrameErrorCode;
-
-	ObjectValid(): boolean;
-
-	SetProps(props: PropVals): void;
 }
