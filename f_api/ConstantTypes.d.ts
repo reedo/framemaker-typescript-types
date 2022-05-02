@@ -3652,6 +3652,7 @@ declare type FV_FN_POS_SUB = 0x02;
 declare type FV_FN_POS_SUPER = 0x00;
 declare type FV_FORMATBAR_CLOSE = 5;
 declare type FV_FORMATBAR_OPEN = 4;
+
 declare type FV_FO_CONTAINER = 1;
 declare type FV_FO_EQN = 7;
 declare type FV_FO_FOOTNOTE = 5;
@@ -3672,6 +3673,29 @@ declare type FV_FO_TBL_TITLE = 9;
 declare type FV_FO_TEXTNODE = 0;
 declare type FV_FO_UNSPECIFIED = 0;
 declare type FV_FO_XREF = 3;
+
+declare type ElementType =
+	| FV_FO_CONTAINER
+	| FV_FO_EQN
+	| FV_FO_FOOTNOTE
+	| FV_FO_GRAPHIC
+	| FV_FO_MARKER
+	| FV_FO_MMLEQN
+	| FV_FO_NUMTYPES
+	| FV_FO_RUBI
+	| FV_FO_RUBI_GROUP
+	| FV_FO_SYS_VAR
+	| FV_FO_TBL
+	| FV_FO_TBL_BODY
+	| FV_FO_TBL_CELL
+	| FV_FO_TBL_FOOTING
+	| FV_FO_TBL_HEADING
+	| FV_FO_TBL_ROW
+	| FV_FO_TBL_TITLE
+	| FV_FO_TEXTNODE
+	| FV_FO_UNSPECIFIED
+	| FV_FO_XREF;
+
 declare type FV_FROMCOLOR = 0x02;
 declare type FV_FTON = 2;
 declare type FV_FileAlreadyOpen = 48;

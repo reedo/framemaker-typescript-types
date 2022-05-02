@@ -2,7 +2,7 @@
 	var BASE_DIR =
 		'C:/Vistair/FMConfig/FM16/ExtendScripts/types/framemaker-typescript-types/f_api/objects/';
 
-	var objectName = 'Doc';
+	var objectName = 'Element';
 
 	var fileStr =
 		'// Type definitions for FrameMaker ' +
@@ -14,8 +14,14 @@
 		objectName +
 		' {\n';
 
+	// ==================================================
 	// Setup an instance of the target object.
-	var targetObj = app.ActiveDoc;
+	// ==================================================
+
+	var doc = app.ActiveDoc;
+	var targetObj = doc.ElementSelection.beg.parent;
+
+	// ==================================================
 
 	/** @type {ReflectionInfo[]} */
 	var props = targetObj.reflect.properties;
