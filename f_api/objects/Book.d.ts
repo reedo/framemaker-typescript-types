@@ -202,7 +202,7 @@ interface Book extends FMNamedObject {
 		deleteCondTag: string,
 		replaceText: string,
 		compareThreshold: number
-	): CompareRet;
+	): CompareRet | FrameErrorCode;
 
 	EmbedAttachFileInFMAtCursor(...args: any): unknown;
 
