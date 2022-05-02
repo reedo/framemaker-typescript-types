@@ -59,6 +59,11 @@ type AttributesEx = FMObjectArray<AttributeEx>;
 type AttributesExConstructor = FMObjectArrayConstructor<AttributeEx>;
 declare const AttributesEx: AttributesExConstructor;
 
+type ElementCatalogEntries = FMObjectArray<ElementCatalogEntry>;
+type ElementCatalogEntriesConstructor =
+	FMObjectArrayConstructor<ElementCatalogEntry>;
+declare const ElementCatalogEntries: ElementCatalogEntriesConstructor;
+
 type IdValuePairs = FMObjectArray<IdValuePair>;
 type IdValuePairsConstructor = FMObjectArrayConstructor<IdValuePair>;
 declare const IdValuePairs: IdValuePairsConstructor;
