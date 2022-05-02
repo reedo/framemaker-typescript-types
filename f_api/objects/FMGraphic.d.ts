@@ -140,16 +140,16 @@ interface FMGraphic extends FMUniqueObject {
 	LocY: number;
 
 	/** Denotes the next graphic object in the document. */
-	NextGraphicInDoc: FMGraphic;
+	readonly NextGraphicInDoc: FMGraphic;
 
 	/** Denotes the next graphic object in the frame. */
-	NextGraphicInFrame: FMGraphic;
+	readonly NextGraphicInFrame: FMGraphic;
 
 	/** Denotes the next graphic object in the group. */
-	NextGraphicInGroup: FMGraphic;
+	readonly NextGraphicInGroup: FMGraphic;
 
 	/** Denotes the next selected graphic object in the document. */
-	NextSelectedGraphicInDoc: FMGraphic;
+	readonly NextSelectedGraphicInDoc: FMGraphic;
 
 	/**
 	 * A list of strings.
@@ -178,10 +178,10 @@ interface FMGraphic extends FMUniqueObject {
 	Pen: number;
 
 	/** Denotes the previous graphic object in the frame. */
-	PrevGraphicInFrame: FMGraphic;
+	readonly PrevGraphicInFrame: FMGraphic;
 
 	/** Denotes the previous graphic object in the group. */
-	PrevGraphicInGroup: FMGraphic;
+	readonly PrevGraphicInGroup: FMGraphic;
 
 	/** Specifies whether text can flow around the object and, if so, whether the text follows the contour of the object or a box shape surrounding the object. */
 	Runaround: number;
