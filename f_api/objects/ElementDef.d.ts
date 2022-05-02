@@ -28,7 +28,7 @@ interface ElementDef extends FMNamedObject {
 
 	Exclusions: Strings;
 
-	readonly FirstPgfRules: FmtRule[];
+	readonly FirstPgfRules: FMObjectArray<FmtRule>;
 
 	GeneralRule: string;
 
@@ -38,17 +38,17 @@ interface ElementDef extends FMNamedObject {
 
 	InitStructurePattern: string;
 
-	readonly LastPgfRules: FmtRule[];
+	readonly LastPgfRules: FMObjectArray<FmtRule>;
 
 	readonly NextElementDefInDoc: ElementDef;
 
-	readonly ObjectFmtRules: FmtRule[];
+	readonly ObjectFmtRules: FMObjectArray<FmtRule>;
 
-	readonly PrefixRules: FmtRule[];
+	readonly PrefixRules: FMObjectArray<FmtRule>;
 
-	readonly SuffixRules: FmtRule[];
+	readonly SuffixRules: FMObjectArray<FmtRule>;
 
-	readonly TextFmtRules: FmtRule[];
+	readonly TextFmtRules: FMObjectArray<FmtRule>;
 
 	ValidHighestLevel: boolean;
 

@@ -64,17 +64,17 @@ interface Element extends FMUniqueObject {
 
 	readonly LastChildElement: Element;
 
-	readonly MatchingFirstPgfClauses: FmtRuleClause[];
+	readonly MatchingFirstPgfClauses: FMObjectArray<FmtRuleClause>;
 
-	readonly MatchingLastPgfClauses: FmtRuleClause[];
+	readonly MatchingLastPgfClauses: FMObjectArray<FmtRuleClause>;
 
-	readonly MatchingObjectClauses: FmtRuleClause[];
+	readonly MatchingObjectClauses: FMObjectArray<FmtRuleClause>;
 
-	readonly MatchingPrefixClauses: FmtRuleClause[];
+	readonly MatchingPrefixClauses: FMObjectArray<FmtRuleClause>;
 
-	readonly MatchingSuffixClauses: FmtRuleClause[];
+	readonly MatchingSuffixClauses: FMObjectArray<FmtRuleClause>;
 
-	readonly MatchingTextClauses: FmtRuleClause[];
+	readonly MatchingTextClauses: FMObjectArray<FmtRuleClause>;
 
 	Namespace: Strings;
 
