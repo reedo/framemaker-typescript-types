@@ -2,7 +2,7 @@
 	var BASE_DIR =
 		'C:/Vistair/FMConfig/FM16/ExtendScripts/types/framemaker-typescript-types/f_api/objects/';
 
-	var objectName = 'Book';
+	var objectName = 'BookComponent';
 
 	var fileStr =
 		'// Type definitions for FrameMaker ' +
@@ -15,10 +15,11 @@
 		' {\n';
 
 	// Setup an instance of the target object.
-	var targetObj = SimpleOpen(
+	/** @type {Book} */ var book = SimpleOpen(
 		'C:/SVN/Vistair/templates/StyleGuides/VST/Approved/VST-ALL-SG/VST-ALL-SG.book',
 		false
 	);
+	var targetObj = book.FirstComponentInBook;
 
 	/** @type {ReflectionInfo[]} */
 	var props = targetObj.reflect.properties;
