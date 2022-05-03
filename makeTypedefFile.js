@@ -2,7 +2,7 @@
 	var BASE_DIR =
 		'C:/Vistair/FMConfig/FM16/ExtendScripts/types/framemaker-typescript-types/f_api/objects/';
 
-	var objectName = 'Menu';
+	var objectName = 'MenuItemSeparator';
 
 	var fileStr =
 		'// Type definitions for FrameMaker ' +
@@ -20,6 +20,9 @@
 
 	var doc = app.ActiveDoc;
 	var targetObj = app.FirstMenuItemInSession;
+	while (targetObj.constructor.name !== 'MenuItemSeparator') {
+		targetObj = targetObj.NextMenuItemInSession;
+	}
 
 	// ==================================================
 
