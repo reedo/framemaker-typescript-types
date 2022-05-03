@@ -68,6 +68,10 @@ type ElementCatalogEntriesConstructor =
 	FMObjectArrayConstructor<ElementCatalogEntry>;
 declare const ElementCatalogEntries: ElementCatalogEntriesConstructor;
 
+type Fonts = FMObjectArray<Font>;
+type FontsConstructor = FMObjectArrayConstructor<Font>;
+declare const Fonts: FontsConstructor;
+
 type IdValuePairs = FMObjectArray<IdValuePair>;
 type IdValuePairsConstructor = FMObjectArrayConstructor<IdValuePair>;
 declare const IdValuePairs: IdValuePairsConstructor;
