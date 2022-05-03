@@ -19,7 +19,7 @@
 	// ==================================================
 
 	var doc = app.ActiveDoc;
-	var targetObj = new FilterArgs();
+	var targetObj = true;
 
 	// ==================================================
 
