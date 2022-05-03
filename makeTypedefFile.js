@@ -2,7 +2,7 @@
 	var BASE_DIR =
 		'C:/Vistair/FMConfig/FM16/ExtendScripts/types/framemaker-typescript-types/f_api/objects/';
 
-	var objectName = 'FilterArgs';
+	var objectName = 'PgfFmt';
 
 	var fileStr =
 		'// Type definitions for FrameMaker ' +
@@ -19,7 +19,7 @@
 	// ==================================================
 
 	var doc = app.ActiveDoc;
-	var targetObj = true;
+	var targetObj = doc.FirstPgfFmtInDoc;
 
 	// ==================================================
 
