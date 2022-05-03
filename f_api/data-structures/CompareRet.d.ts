@@ -12,12 +12,7 @@ interface CompareRet {
 
 interface CompareRetConstructor {
 	new (): CompareRet;
-	new (
-		name: string,
-		values: Strings,
-		valflags: number,
-		allow: boolean
-	): CompareRet;
+	new (sum: Doc, comp: Doc): CompareRet;
 	readonly prototype: CompareRet;
 }
 
