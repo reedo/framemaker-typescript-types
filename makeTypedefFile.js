@@ -19,7 +19,7 @@
 	// ==================================================
 
 	var doc = app.ActiveDoc;
-	var targetObj = doc.GetNamedColor('Red');
+	var targetObj = doc.MainFlowInDoc.FirstTextFrameInFlow;
 
 	// ==================================================
 
