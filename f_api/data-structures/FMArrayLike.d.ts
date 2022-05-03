@@ -59,6 +59,10 @@ type AttributesEx = FMObjectArray<AttributeEx>;
 type AttributesExConstructor = FMObjectArrayConstructor<AttributeEx>;
 declare const AttributesEx: AttributesExConstructor;
 
+type CombinedFonts = FMObjectArray<CombinedFont>;
+type CombinedFontsConstructor = FMObjectArrayConstructor<CombinedFont>;
+declare const CombinedFonts: CombinedFontsConstructor;
+
 type ElementCatalogEntries = FMObjectArray<ElementCatalogEntry>;
 type ElementCatalogEntriesConstructor =
 	FMObjectArrayConstructor<ElementCatalogEntry>;
