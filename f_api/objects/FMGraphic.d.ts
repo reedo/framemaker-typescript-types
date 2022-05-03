@@ -36,7 +36,6 @@ interface FMGraphic extends FMUniqueObject {
 	BorderWidth: number;
 
 	/** Denotes the spot color. */
-
 	Color: Color;
 
 	/**

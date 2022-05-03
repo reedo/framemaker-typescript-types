@@ -20,7 +20,7 @@ interface FMObject {
 	SetProps(props: PropVals): void;
 
 	/** Constant representing the object type. */
-	readonly type: number;
+	readonly type: FO_Constant;
 
 	/** An object containing details about this object. */
 	readonly reflect: Reflection;
