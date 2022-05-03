@@ -46,7 +46,7 @@ interface Doc extends FMNamedObject {
 
 	CondFmtIsShown: number;
 
-	CurrentPage: BodyPage | MasterPage | RefPage;
+	CurrentPage: Page;
 
 	readonly CustomCharFmtList: Strings;
 

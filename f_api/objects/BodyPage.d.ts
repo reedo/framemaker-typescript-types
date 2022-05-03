@@ -1,7 +1,7 @@
 // Type definitions for FrameMaker BodyPage object
 // Definitions by Dan Reed <https://danreed.dev>
 
-interface BodyPage extends Page {
+interface BodyPage extends FMSeriesObject {
 	/**
 	 * Applies the layout of one page to another page.
 	 *
