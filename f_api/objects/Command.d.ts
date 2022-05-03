@@ -40,7 +40,7 @@ interface Command extends FMNamedObject {
 
 	readonly NextMenuItemInSession: Command | Menu | MenuItemSeparator;
 
-	ParentMenuId: InvalidObject;
+	ParentMenuId: Menu;
 
 	PrevMenuItemInMenu: Command | Menu | MenuItemSeparator;
 
