@@ -2,7 +2,7 @@
 	var BASE_DIR =
 		'C:/Vistair/FMConfig/FM16/ExtendScripts/types/framemaker-typescript-types/f_api/objects/';
 
-	var objectName = 'FmtChangeList';
+	var objectName = 'CombinedFontDefn';
 
 	var fileStr =
 		'// Type definitions for FrameMaker ' +
@@ -21,7 +21,7 @@
 	var doc = app.ActiveDoc;
 	var targetObj = doc.ElementSelection.beg.child.ElementDef.NewFirstPgfRules()
 		.NewFmtRuleClauses()
-		.NewFmtChangeList();
+		.NewFmtChangeList().CombinedFontFamily;
 
 	// ==================================================
 
