@@ -2,8 +2,7 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 /** Represents a file-system folder or directory in a platform-independent manner. All properties and methods resolve file system aliases automatically and act on the original file unless otherwise noted. */
-interface Folder {
-
+interface Folder extends ESObject {
 	/** The full path name for the referenced folder in URI notation. */
 	readonly absoluteURI: string;
 
@@ -124,14 +123,13 @@ interface Folder {
 	 * @returns If the user clicks OK, returns a File or Folder object for the selected file or folder. If the user cancels, returns null.
 	 */
 	selectDlg(prompt: string): File | Folder | null;
-
 }
 
-interface FolderConstructor {
+interface FolderConstructor extends ESObject {
 	(): File | Folder;
 	(path: string): File | Folder;
-	new(): Folder;
-	new(path: string): Folder;
+	new (): Folder;
+	new (path: string): Folder;
 	readonly prototype: Folder;
 
 	/** A Folder object for the folder that contains application data for all users. Value of %APPDATA%. */
@@ -209,7 +207,6 @@ interface FolderConstructor {
 
 	/** A Folder object for the folder that contains application data for the current user. Value of %USERDATA%. */
 	readonly userData: Folder;
-
 }
 
 declare const Folder: FolderConstructor;

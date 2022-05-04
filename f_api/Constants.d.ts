@@ -4,7 +4,7 @@
 /**
  * Constants for FrameMaker.
  */
-interface Constants {
+interface Constants extends ESObject {
 	readonly FDK_LIBRARY_VERSION: FDK_LIBRARY_VERSION;
 	readonly FMV_CMDSUPPORTED: FMV_CMDSUPPORTED;
 	readonly oldFT_ElementFmts: oldFT_ElementFmts;

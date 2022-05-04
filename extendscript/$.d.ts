@@ -18,25 +18,24 @@ interface Screen {
  *
  * The methods allow you to output text to the JavaScript Console during script execution, control execution and other ExtendScript behavior programmatically, and gather statistics on object use.
  */
-interface $ {
-
+interface $ extends ESObject {
 	/** Displays the About box for the ExtendScript component, and returns the text of the About box as a string. */
 	about(): string;
 
 	/**
-   * The Internet name of the application’s default character encoding, such as “CP1252” or “X-SHIFT-JIS”. Valid values are implementation- and OS-dependent.
+	 * The Internet name of the application’s default character encoding, such as “CP1252” or “X-SHIFT-JIS”. Valid values are implementation- and OS-dependent.
 	 *
-   * Set to change the default encoding for the application. The returned value can differ from the value set. In Windows, for example, if set to “x-latin1”, the returned value is the synonymous “ISO-8859-1”.
-   */
+	 * Set to change the default encoding for the application. The returned value can differ from the value set. In Windows, for example, if set to “x-latin1”, the returned value is the synonymous “ISO-8859-1”.
+	 */
 	appEncoding: string;
 
 	/**
-   * Executes a breakpoint at the current position.
+	 * Executes a breakpoint at the current position.
 	 *
-   * If no condition is needed, it is recommended that you use the JavaScript debugger statement in the script, rather than this method.
+	 * If no condition is needed, it is recommended that you use the JavaScript debugger statement in the script, rather than this method.
 	 *
-   * @param condition A string containing a JavaScript statement to be used as a condition. If the statement evaluates to true or nonzero when this point is reached, execution stops.
-   */
+	 * @param condition A string containing a JavaScript statement to be used as a condition. If the statement evaluates to true or nonzero when this point is reached, execution stops.
+	 */
 	bp(condition?: string): void;
 
 	/** The version information for the current ExtendScript build. */
@@ -46,10 +45,10 @@ interface $ {
 	readonly buildDate: Date;
 
 	/**
-   * Invokes the platform-specific color selection dialog, and returns the selected color as a hexadecimal RGB value: 0xRRGGBB.
+	 * Invokes the platform-specific color selection dialog, and returns the selected color as a hexadecimal RGB value: 0xRRGGBB.
 	 *
-   * @param name The color to be preselected in the dialog, as a hexadecimal RGB value (0xRRGGBB), or -1 for the platform default.
-   */
+	 * @param name The color to be preselected in the dialog, as a hexadecimal RGB value (0xRRGGBB), or -1 for the platform default.
+	 */
 	colorPicker(name: number): number;
 
 	/** The character used in formatted numeric output for a decimal point, for the current locale. */
@@ -62,48 +61,48 @@ interface $ {
 	readonly engineName: string;
 
 	/**
-   * The most recent run-time error information, contained in a JavaScript Error object.
+	 * The most recent run-time error information, contained in a JavaScript Error object.
 	 *
-   * Assigning error text to this property generates a run-time error; however, the preferred way to generate a run-time error is to throw an Error object.
-   */
+	 * Assigning error text to this property generates a run-time error; however, the preferred way to generate a run-time error is to throw an Error object.
+	 */
 	error: Error | string;
 
 	/**
-   * Loads a JavaScript script file from disk, evaluates it, and returns the result of evaluation.
+	 * Loads a JavaScript script file from disk, evaluates it, and returns the result of evaluation.
 	 *
-   * @param path The name and location of the file.
-   * @param timeout A number of milliseconds to wait before returning undefined, if the script cannot be evaluated. Default is 10000 milliseconds.
-   */
+	 * @param path The name and location of the file.
+	 * @param timeout A number of milliseconds to wait before returning undefined, if the script cannot be evaluated. Default is 10000 milliseconds.
+	 */
 	evalFile(path: File | string, timeout?: number): any;
 
 	/** The file name of the current script. */
 	readonly fileName: string;
 
 	/**
-   * Gets or sets low-level debug output flags.
+	 * Gets or sets low-level debug output flags.
 	 *
-   * A logical AND of bit flag values:
+	 * A logical AND of bit flag values:
 	 *
 	 * Hex | Decimal | Description
 	 * :---: | :---: | :---
 	 * 0x0002 | 2 | Displays each line with its line number as it is executed.
-   * 0x0040 | 64 | Enables excessive garbage collection. Usually, garbage collection starts when the number of objects has increased by a certain amount since the last garbage collection. This flag causes ExtendScript to garbage collect after almost every statement. This impairs performance severely, but is useful when you suspect that an object gets released too soon.
-   * 0x0080 | 128 | Displays all calls with their arguments and the return value.
-   * 0x0100 | 256 | Enables extended error handling (see strict).
-   * 0x0200 | 512 | Enables the localization feature of the toString method. Equivalent to the localize property.
+	 * 0x0040 | 64 | Enables excessive garbage collection. Usually, garbage collection starts when the number of objects has increased by a certain amount since the last garbage collection. This flag causes ExtendScript to garbage collect after almost every statement. This impairs performance severely, but is useful when you suspect that an object gets released too soon.
+	 * 0x0080 | 128 | Displays all calls with their arguments and the return value.
+	 * 0x0100 | 256 | Enables extended error handling (see strict).
+	 * 0x0200 | 512 | Enables the localization feature of the toString method. Equivalent to the localize property.
 	 *
-   * __NOTE__: Other bit values are not public and should not be used.
-   */
+	 * __NOTE__: Other bit values are not public and should not be used.
+	 */
 	flags: number;
 
 	/** Initiates garbage collection in the JavaScript engine. */
 	gc(): void;
 
 	/**
-   * Retrieves the value of the specified environment variable, or null if no such variable is defined.
+	 * Retrieves the value of the specified environment variable, or null if no such variable is defined.
 	 *
-   * @param envname The name of the environment variable.
-   */
+	 * @param envname The name of the environment variable.
+	 */
 	getenv(envname: string): string | null;
 
 	/** Provides access to the Global object, which contains the JavaScript global namespace. */
@@ -147,20 +146,20 @@ interface $ {
 	screens: Screen[];
 
 	/**
-   * Sets the value of the specified environment variable, if no such variable is defined.
+	 * Sets the value of the specified environment variable, if no such variable is defined.
 	 *
-   * @param envname The name of the environment variable.
-   * @param value The new value, a string.
-   */
+	 * @param envname The name of the environment variable.
+	 * @param value The new value, a string.
+	 */
 	setenv(envname: string, value: string): void;
 
 	/**
-   * Suspends the calling thread for the given number of milliseconds.
+	 * Suspends the calling thread for the given number of milliseconds.
 	 *
-   * During a sleep period, checks at 100 millisecond intervals to see whether the sleep should be terminated. This can happen if there is a break request, or if the script timeout has expired.
+	 * During a sleep period, checks at 100 millisecond intervals to see whether the sleep should be terminated. This can happen if there is a break request, or if the script timeout has expired.
 	 *
-   * @param milliseconds The number of milliseconds to wait.
-   */
+	 * @param milliseconds The number of milliseconds to wait.
+	 */
 	sleep(milliseconds: number): void;
 
 	/** The current stack trace. */
@@ -176,11 +175,11 @@ interface $ {
 	readonly version: string;
 
 	/**
-   * Writes the specified text to the JavaScript Console.
+	 * Writes the specified text to the JavaScript Console.
 	 *
-   * @param text A text string to write.
-   * @param rest Any number of additional strings. All are concatenated to form a single string.
-   */
+	 * @param text A text string to write.
+	 * @param rest Any number of additional strings. All are concatenated to form a single string.
+	 */
 	write(text: string, ...rest: string[]): void;
 
 	/**

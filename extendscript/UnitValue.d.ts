@@ -2,11 +2,55 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 /** A valid string for a UnitType type. */
-type UnitValueUnit = 'in' | 'inch' | 'inches' | 'ft' | 'foot' | 'feet' | 'yd' | 'yard' | 'yards' | 'mi' | 'mile' | 'miles' | 'mm' | 'millimeter' | 'millimeters' | 'cm' | 'centimeter' | 'centimeters' | 'm' | 'meter' | 'meters' | 'km' | 'kilometer' | 'kilometers' | 'pt' | 'point' | 'points' | 'pc' | 'pica' | 'picas' | 'tpt' | 'traditional point' | 'traditional points' | 'tpc' | 'traditional pica' | 'traditional picas' | 'ci' | 'cicero' | 'ciceros' | 'px' | 'pixel' | 'pixels' | '%' | 'percent' | '?';
+type UnitValueUnit =
+	| 'in'
+	| 'inch'
+	| 'inches'
+	| 'ft'
+	| 'foot'
+	| 'feet'
+	| 'yd'
+	| 'yard'
+	| 'yards'
+	| 'mi'
+	| 'mile'
+	| 'miles'
+	| 'mm'
+	| 'millimeter'
+	| 'millimeters'
+	| 'cm'
+	| 'centimeter'
+	| 'centimeters'
+	| 'm'
+	| 'meter'
+	| 'meters'
+	| 'km'
+	| 'kilometer'
+	| 'kilometers'
+	| 'pt'
+	| 'point'
+	| 'points'
+	| 'pc'
+	| 'pica'
+	| 'picas'
+	| 'tpt'
+	| 'traditional point'
+	| 'traditional points'
+	| 'tpc'
+	| 'traditional pica'
+	| 'traditional picas'
+	| 'ci'
+	| 'cicero'
+	| 'ciceros'
+	| 'px'
+	| 'pixel'
+	| 'pixels'
+	| '%'
+	| 'percent'
+	| '?';
 
 /** Represents measurement values that contain both the numeric magnitude and the unit of measurement. */
-interface UnitValue {
-
+interface UnitValue extends ESObject {
 	'~'(): UnitValue;
 
 	'!'(): UnitValue;
@@ -57,20 +101,18 @@ interface UnitValue {
 
 	/** The numeric measurement value. */
 	value: number;
-
 }
 
-interface UnitValueConstructor {
+interface UnitValueConstructor extends ESObject {
 	(): UnitValue;
 	(value: number, unit: UnitValue): UnitValue;
 	(value: number, unit: UnitValueUnit): UnitValue;
 	(valueUnit: string): UnitValue;
-	new(): UnitValue;
-	new(value: number, unit: UnitValue): UnitValue;
-	new(value: number, unit: UnitValueUnit): UnitValue;
-	new(valueUnit: string): UnitValue;
+	new (): UnitValue;
+	new (value: number, unit: UnitValue): UnitValue;
+	new (value: number, unit: UnitValueUnit): UnitValue;
+	new (valueUnit: string): UnitValue;
 	readonly prototype: UnitValue;
-
 }
 
 declare const UnitValue: UnitValueConstructor;

@@ -464,10 +464,6 @@ declare function IsEncodingSupported(encodingName: string): boolean;
 /** @todo UNDOCUMENTED */
 declare function IsFileValid(...args: any): any;
 
-/** The JSON parser. */
-
-declare var JSON: JSON;
-
 /**
  * Loads a menu customization file.
  *

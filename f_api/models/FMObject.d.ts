@@ -2,7 +2,7 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 /** Any FrameMaker object. */
-interface FMObject {
+interface FMObject extends ESObject {
 	/** Retrieves the complete property list for a specified object. */
 	GetProps(): PropVals;
 
@@ -20,7 +20,7 @@ interface FMObject {
 	SetProps(props: PropVals): void;
 
 	/** Constant representing the object type. */
-	readonly type: number;
+	readonly type: FO_Constant;
 
 	/** An object containing details about this object. */
 	readonly reflect: Reflection;

@@ -7,9 +7,8 @@
  * It provides calls like `open()` and `close()` to establish or to terminate a connection, and `read()` or `write()` to transfer data.
  *
  * The `listen()` method establishes a simple Internet server; the server uses the method `poll()` to check for incoming connections.
-*/
-interface Socket {
-
+ */
+interface Socket extends ESObject {
 	/**
 	 * Terminates the open connection. Deleting the object also closes the connection, but not until JavaScript garbage-collects the object. The connection might stay open longer than you wish if you do not close it explicitly.
 	 *
@@ -99,19 +98,16 @@ interface Socket {
 	 * @param text Any number of string values. All arguments are concatenated to form the string to be written.
 	 */
 	writeln(text: string, ...rest: string[]): boolean;
-
 }
 
-interface SocketConstructor {
-
+interface SocketConstructor extends ESObject {
 	/** Creates and returns a new Socket object. */
 	(): Socket;
 
 	/** Creates and returns a new Socket object. */
-	new(): Socket;
+	new (): Socket;
 
 	readonly prototype: Socket;
-
 }
 
 declare const Socket: SocketConstructor;

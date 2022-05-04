@@ -2,8 +2,7 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 /** A javascript object containing five properties, which correspond to the five XML class properties. */
-interface XMLSettings {
-
+interface XMLSettings extends ESObject {
 	/** When true, comments are stripped from the XML during parsing. Default is false. */
 	ignoreComments: boolean;
 
@@ -18,7 +17,6 @@ interface XMLSettings {
 
 	/** When true, toXMLString() uses indenting and line feeds to create the XML string. Default is true. */
 	prettyPrinting: boolean;
-
 }
 
 /**
@@ -29,18 +27,16 @@ interface XMLSettings {
  * Refer to 'JavaScript Tools Guide CC' for this object's methods and usage.
  */
 interface XML {
-
 	[subXML: string]: XML | Function;
 
 	[n: number]: XML;
-
 }
 
-interface XMLConstructor {
+interface XMLConstructor extends ESObject {
 	(): XML;
 	(xmlCode: string | XML): XML;
-	new(): XML;
-	new(xmlCode: string | XML): XML;
+	new (): XML;
+	new (xmlCode: string | XML): XML;
 	readonly prototype: XML;
 
 	/** Retrieves the default global option settings that control how XML is parsed and generated. */
@@ -70,7 +66,6 @@ interface XMLConstructor {
 
 	/** Retrieves the current global option settings that control how XML is parsed and generated. */
 	settings(): XMLSettings;
-
 }
 
 declare const XML: XMLConstructor;
