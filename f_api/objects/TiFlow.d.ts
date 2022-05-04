@@ -1,10 +1,18 @@
-// Type definitions for FrameMaker TiText object
+// Type definitions for FrameMaker TiFlow object
 // Definitions by Dan Reed <https://danreed.dev>
 
-interface TiText extends FMUniqueObject {
-	TiEOLisEOP: boolean;
+interface TiFlow extends FMUniqueObject {
+	TiFlowName: string;
 
-	TiTextEncoding: string;
+	TiFlowPageSpace: number;
+
+	TiFormat: number;
+
+	TiMainFlow: boolean;
+
+	TiRemovePageBreaks: boolean;
+
+	TiRemoveOverrides: boolean;
 
 	ImportHint: string;
 
