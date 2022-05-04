@@ -12,8 +12,7 @@
  *
  * In the corresponding namespace, the prefix is adobe, and the URI is http://www.adobe.com/test.
  */
-interface Namespace {
-
+interface Namespace extends ESObject {
 	/**
 	 * The element-name prefix associated with the namespace URI.
 	 *
@@ -23,10 +22,9 @@ interface Namespace {
 
 	/** The location of the namespace definition, a URI. */
 	uri: string;
-
 }
 
-interface NamespaceConstructor {
+interface NamespaceConstructor extends ESObject {
 	/** Creates a namespace with an empty prefix and URI. */
 	(): Namespace;
 
@@ -40,33 +38,32 @@ interface NamespaceConstructor {
 	 * Creates a copy of the given Namespace object.
 	 *
 	 * If the `Namespace()` function is called without the new operator, and the only argument is a Namespace object, the function simply returns that object, rather than creating a copy.
-	*/
+	 */
 	(ns: Namespace): Namespace;
 
 	/** Creates a Namespace object with the given prefix and the given URI. */
 	(prefix: string, uri: string): Namespace;
 
 	/** Creates a namespace with an empty prefix and URI. */
-	new(): Namespace;
+	new (): Namespace;
 
 	/** Creates a Namespace object with an empty prefix and the given URI. */
-	new(uri: string): Namespace;
+	new (uri: string): Namespace;
 
 	/** Creates a namespace with an empty prefix and the URI set to the URI of the QName object (if the QName object contains a URI). */
-	new(prefix: QName): Namespace;
+	new (prefix: QName): Namespace;
 
 	/**
 	 * Creates a copy of the given Namespace object.
 	 *
 	 * If the `Namespace()` function is called without the new operator, and the only argument is a Namespace object, the function simply returns that object, rather than creating a copy.
-	*/
-	new(ns: Namespace): Namespace;
+	 */
+	new (ns: Namespace): Namespace;
 
 	/** Creates a Namespace object with the given prefix and the given URI. */
-	new(prefix: string, uri: string): Namespace;
+	new (prefix: string, uri: string): Namespace;
 
 	readonly prototype: Namespace;
-
 }
 
 declare const Namespace: NamespaceConstructor;

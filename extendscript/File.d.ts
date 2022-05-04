@@ -2,8 +2,7 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 /** Represents a file in the local file system in a platform-independent manner. All properties and methods resolve file system aliases automatically and act on the original file unless otherwise noted. */
-interface File {
-
+interface File extends ESObject {
 	/** The full path name for the referenced file in URI notation. */
 	readonly absoluteURI: string;
 
@@ -129,7 +128,11 @@ interface File {
 	 * @param filter A filter that limits the types of files displayed in the dialog. In Windows, a filter expression, such as "JavaScript:\*.jsx;All files:\*.\*".
 	 * @param multiSelect When true, the user can select multiple files and the return value is an array. Default is false.
 	 */
-	openDlg(prompt?: string, filter?: string, multiSelect?: boolean): File | Folder | (File | Folder)[] | null;
+	openDlg(
+		prompt?: string,
+		filter?: string,
+		multiSelect?: boolean
+	): File | Folder | (File | Folder)[] | null;
 
 	/** The Folder object for the folder that contains this file. */
 	readonly parent: Folder;
@@ -244,14 +247,13 @@ interface File {
 	 * @param rest Any number of additional strings.
 	 */
 	writeln(text: string, ...rest: string[]): boolean;
-
 }
 
-interface FileConstructor {
+interface FileConstructor extends ESObject {
 	(): File | Folder;
 	(path: string): File | Folder;
-	new(): File;
-	new(path: string): File;
+	new (): File;
+	new (path: string): File;
 	readonly prototype: File;
 
 	/**
@@ -291,7 +293,11 @@ interface FileConstructor {
 	 * @param filter A filter that limits the types of files displayed in the dialog. In Windows, a filter expression, such as `JavaScript:*.jsx;All files:*.*`.
 	 * @param multiSelect When true, the user can select multiple files and the return value is an array. Default is false.
 	 */
-	openDialog(prompt?: string, filter?: string, multiSelect?: boolean): File | null;
+	openDialog(
+		prompt?: string,
+		filter?: string,
+		multiSelect?: boolean
+	): File | null;
 
 	/**
 	 * Opens the built-in platform-specific file-browsing dialog in which a user can select an existing file location to which to save information, and creates a new File object to represent the selected file location.

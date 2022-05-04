@@ -1,7 +1,7 @@
 // Type definitions for FrameMaker FCodes object
 // Definitions by Dan Reed <https://danreed.dev>
 
-interface FCodes {
+interface FCodes extends ESObject {
 	readonly ALT_GFX_INSET: 0xb12;
 	readonly ALT_TXT_INSET: 0xb11;
 

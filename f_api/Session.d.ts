@@ -2,7 +2,7 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 /** The global `app` object. */
-interface Session {
+interface Session extends ESObject {
 	/** The book with input focus. */
 
 	ActiveBook: Book;

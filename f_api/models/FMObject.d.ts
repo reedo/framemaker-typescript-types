@@ -2,7 +2,7 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 /** Any FrameMaker object. */
-interface FMObject {
+interface FMObject extends ESObject {
 	/** Retrieves the complete property list for a specified object. */
 	GetProps(): PropVals;
 

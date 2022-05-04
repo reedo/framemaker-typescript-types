@@ -1,7 +1,7 @@
 // Type definitions for FrameMaker GraphicsFmt object
 // Definitions by Dan Reed <https://danreed.dev>
 
-interface GraphicsFmt {
+interface GraphicsFmt extends ESObject {
 	/**
 	 * Indicates whether the anchored frame is cropped or not.
 	 *
