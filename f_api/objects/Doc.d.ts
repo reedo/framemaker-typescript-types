@@ -845,9 +845,9 @@ interface Doc extends FMNamedObject {
 
 	GetNamedXRefFmt(name: string): XRefFmt;
 
-	GetTextForRange(tr: TextRange, flags: number): TextItems;
+	GetTextForRange(tr: TextRange, flags?: number): TextItems;
 
-	GetTextForRange2(tr: TextRange, flags: number, flags2: number): TextItems;
+	GetTextForRange2(tr: TextRange, flags?: number, flags2?: number): TextItems;
 
 	GetTextPropVal(textLoc: TextLoc, propNum: number): PropVal;
 
