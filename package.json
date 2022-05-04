@@ -1,5 +1,5 @@
 {
-	"name": "framemaker-typescript-types",
+	"name": "@types/framemaker-typescript-types",
 	"version": "1.0.0",
 	"description": "Contains all definitions up to FrameMaker 2020.\r For newer functions, the version it was introduced will be noted at the top of the function.",
 	"scripts": {
