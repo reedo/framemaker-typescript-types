@@ -2,7 +2,7 @@
 	var BASE_DIR =
 		'C:/Vistair/FMConfig/FM16/ExtendScripts/types/framemaker-typescript-types/f_api/objects/';
 
-	var objectName = 'TiText';
+	var objectName = 'TiFlow';
 
 	var fileStr =
 		'// Type definitions for FrameMaker ' +
