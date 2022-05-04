@@ -2,7 +2,7 @@
 	var BASE_DIR =
 		'C:/Vistair/FMConfig/FM16/ExtendScripts/types/framemaker-typescript-types/f_api/objects/';
 
-	var objectName = 'InlineComponent';
+	var objectName = 'Inset';
 
 	var fileStr =
 		'// Type definitions for FrameMaker ' +
@@ -19,12 +19,7 @@
 	// ==================================================
 
 	var doc = app.ActiveDoc;
-	var targetObj = doc.NewInlineComponentOfType(
-		0,
-		new Strings(),
-		0,
-		doc.TextSelection.beg
-	);
+	var targetObj = doc.FirstSelectedGraphicInDoc;
 
 	// ==================================================
 
