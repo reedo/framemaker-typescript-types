@@ -132,6 +132,52 @@ interface ObjectConstructor {
 
 	/** A reference to the prototype for a class of objects. */
 	readonly prototype: Object;
+
+	/**
+	 * Copy the values of all of the enumerable own properties from one or more source objects to a
+	 * target object. Returns the target object.
+	 * @param target The target object to copy to.
+	 * @param source The source object from which to copy properties.
+	 */
+	assign<T, U>(target: T, source: U): T & U;
+
+	/**
+	 * Copy the values of all of the enumerable own properties from one or more source objects to a
+	 * target object. Returns the target object.
+	 * @param target The target object to copy to.
+	 * @param source1 The first source object from which to copy properties.
+	 * @param source2 The second source object from which to copy properties.
+	 */
+	assign<T, U, V>(target: T, source1: U, source2: V): T & U & V;
+
+	/**
+	 * Copy the values of all of the enumerable own properties from one or more source objects to a
+	 * target object. Returns the target object.
+	 * @param target The target object to copy to.
+	 * @param source1 The first source object from which to copy properties.
+	 * @param source2 The second source object from which to copy properties.
+	 * @param source3 The third source object from which to copy properties.
+	 */
+	assign<T, U, V, W>(
+		target: T,
+		source1: U,
+		source2: V,
+		source3: W
+	): T & U & V & W;
+
+	/**
+	 * Copy the values of all of the enumerable own properties from one or more source objects to a
+	 * target object. Returns the target object.
+	 * @param target The target object to copy to.
+	 * @param sources One or more source objects from which to copy properties
+	 */
+	assign(target: object, ...sources: any[]): any;
+
+	/**
+	 * Returns the names of the enumerable string properties and methods of an object.
+	 * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+	 */
+	keys(o: object): string[];
 }
 
 /**
@@ -166,6 +212,7 @@ interface Function {
 	// Non-standard extensions
 	arguments: any;
 	caller: Function;
+	callee: Function;
 }
 
 interface FunctionConstructor {
@@ -277,6 +324,13 @@ interface String {
 	concat(...strings: string[]): string;
 
 	/**
+	 * Returns true if the sequence of elements of searchString converted to a String is the
+	 * same as the corresponding elements of this object (converted to a String) starting at
+	 * endPosition – length(this). Otherwise returns false.
+	 */
+	endsWith(searchString: string, endPosition?: number): boolean;
+
+	/**
 	 * Returns the position of the first occurrence of a substring.
 	 * @param searchString The substring to search for in the string
 	 * @param position The index at which to begin searching the String object. If omitted, search starts at the beginning of the string.
@@ -341,6 +395,13 @@ interface String {
 	split(separator: string | RegExp, limit?: number): string[];
 
 	/**
+	 * Returns true if the sequence of elements of searchString converted to a String is the
+	 * same as the corresponding elements of this object (converted to a String) starting at
+	 * position. Otherwise returns false.
+	 */
+	startsWith(searchString: string, position?: number): boolean;
+
+	/**
 	 * Returns the substring at the specified location within a String object.
 	 * @param start The zero-based index number indicating the beginning of the substring.
 	 * @param end Zero-based index number indicating the end of the substring. The substring includes the characters up to, but not including, the character indicated by end.
@@ -359,6 +420,9 @@ interface String {
 
 	/** Returns a string where all alphabetic characters have been converted to uppercase, taking into account the host environment's current locale. */
 	toLocaleUpperCase(locales?: string | string[]): string;
+
+	/** Removes the leading and trailing white space and line terminator characters from a string. */
+	trim(): string;
 
 	/** Returns the length of a String object. */
 	readonly length: number;
@@ -727,6 +791,8 @@ interface Date {
 	setUTCFullYear(year: number, month?: number, date?: number): number;
 	/** Returns a date converted to a string using Universal Coordinated Time (UTC). */
 	toUTCString(): string;
+	/** Returns a date as a string value in ISO format. */
+	toISOString(): string;
 	/** Used by the JSON.stringify method to enable the transformation of an object's data for JavaScript Object Notation (JSON) serialization. */
 	toJSON(key?: any): string;
 }
@@ -951,6 +1017,138 @@ interface ReadonlyArray<T> {
 	 * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the search starts at the last index in the array.
 	 */
 	lastIndexOf(searchElement: T, fromIndex?: number): number;
+	/**
+	 * Determines whether all the members of an array satisfy the specified test.
+	 * @param callbackfn A function that accepts up to three arguments. The every method calls
+	 * the callbackfn function for each element in the array until the callbackfn returns a value
+	 * which is coercible to the Boolean value false, or until the end of the array.
+	 * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+	 * If thisArg is omitted, undefined is used as the this value.
+	 */
+	every(
+		callbackfn: (value: T, index: number, array: readonly T[]) => unknown,
+		thisArg?: any
+	): boolean;
+	/**
+	 * Determines whether the specified callback function returns true for any element of an array.
+	 * @param callbackfn A function that accepts up to three arguments. The some method calls
+	 * the callbackfn function for each element in the array until the callbackfn returns a value
+	 * which is coercible to the Boolean value true, or until the end of the array.
+	 * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+	 * If thisArg is omitted, undefined is used as the this value.
+	 */
+	some(
+		callbackfn: (value: T, index: number, array: readonly T[]) => unknown,
+		thisArg?: any
+	): boolean;
+	/**
+	 * Performs the specified action for each element in an array.
+	 * @param callbackfn  A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array.
+	 * @param thisArg  An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+	 */
+	forEach(
+		callbackfn: (value: T, index: number, array: readonly T[]) => void,
+		thisArg?: any
+	): void;
+	/**
+	 * Calls a defined callback function on each element of an array, and returns an array that contains the results.
+	 * @param callbackfn A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
+	 * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+	 */
+	map<U>(
+		callbackfn: (value: T, index: number, array: readonly T[]) => U,
+		thisArg?: any
+	): U[];
+	/**
+	 * Returns the elements of an array that meet the condition specified in a callback function.
+	 * @param callbackfn A function that accepts up to three arguments. The filter method calls the callbackfn function one time for each element in the array.
+	 * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+	 */
+	filter<S extends T>(
+		callbackfn: (value: T, index: number, array: readonly T[]) => value is S,
+		thisArg?: any
+	): S[];
+	/**
+	 * Returns the elements of an array that meet the condition specified in a callback function.
+	 * @param callbackfn A function that accepts up to three arguments. The filter method calls the callbackfn function one time for each element in the array.
+	 * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+	 */
+	filter(
+		callbackfn: (value: T, index: number, array: readonly T[]) => unknown,
+		thisArg?: any
+	): T[];
+	/**
+	 * Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+	 * @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
+	 * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+	 */
+	reduce(
+		callbackfn: (
+			previousValue: T,
+			currentValue: T,
+			currentIndex: number,
+			array: readonly T[]
+		) => T
+	): T;
+	reduce(
+		callbackfn: (
+			previousValue: T,
+			currentValue: T,
+			currentIndex: number,
+			array: readonly T[]
+		) => T,
+		initialValue: T
+	): T;
+	/**
+	 * Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+	 * @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
+	 * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+	 */
+	reduce<U>(
+		callbackfn: (
+			previousValue: U,
+			currentValue: T,
+			currentIndex: number,
+			array: readonly T[]
+		) => U,
+		initialValue: U
+	): U;
+	/**
+	 * Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+	 * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
+	 * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+	 */
+	reduceRight(
+		callbackfn: (
+			previousValue: T,
+			currentValue: T,
+			currentIndex: number,
+			array: readonly T[]
+		) => T
+	): T;
+	reduceRight(
+		callbackfn: (
+			previousValue: T,
+			currentValue: T,
+			currentIndex: number,
+			array: readonly T[]
+		) => T,
+		initialValue: T
+	): T;
+	/**
+	 * Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+	 * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
+	 * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+	 */
+	reduceRight<U>(
+		callbackfn: (
+			previousValue: U,
+			currentValue: T,
+			currentIndex: number,
+			array: readonly T[]
+		) => U,
+		initialValue: U
+	): U;
 
 	readonly [n: number]: T;
 }
@@ -1053,6 +1251,138 @@ interface Array<T> {
 	 * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the search starts at the last index in the array.
 	 */
 	lastIndexOf(searchElement: T, fromIndex?: number): number;
+	/**
+	 * Determines whether all the members of an array satisfy the specified test.
+	 * @param callbackfn A function that accepts up to three arguments. The every method calls
+	 * the callbackfn function for each element in the array until the callbackfn returns a value
+	 * which is coercible to the Boolean value false, or until the end of the array.
+	 * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+	 * If thisArg is omitted, undefined is used as the this value.
+	 */
+	every(
+		callbackfn: (value: T, index: number, array: T[]) => unknown,
+		thisArg?: any
+	): boolean;
+	/**
+	 * Determines whether the specified callback function returns true for any element of an array.
+	 * @param callbackfn A function that accepts up to three arguments. The some method calls
+	 * the callbackfn function for each element in the array until the callbackfn returns a value
+	 * which is coercible to the Boolean value true, or until the end of the array.
+	 * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+	 * If thisArg is omitted, undefined is used as the this value.
+	 */
+	some(
+		callbackfn: (value: T, index: number, array: T[]) => unknown,
+		thisArg?: any
+	): boolean;
+	/**
+	 * Performs the specified action for each element in an array.
+	 * @param callbackfn  A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array.
+	 * @param thisArg  An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+	 */
+	forEach(
+		callbackfn: (value: T, index: number, array: T[]) => void,
+		thisArg?: any
+	): void;
+	/**
+	 * Calls a defined callback function on each element of an array, and returns an array that contains the results.
+	 * @param callbackfn A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
+	 * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+	 */
+	map<U>(
+		callbackfn: (value: T, index: number, array: T[]) => U,
+		thisArg?: any
+	): U[];
+	/**
+	 * Returns the elements of an array that meet the condition specified in a callback function.
+	 * @param callbackfn A function that accepts up to three arguments. The filter method calls the callbackfn function one time for each element in the array.
+	 * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+	 */
+	filter<S extends T>(
+		callbackfn: (value: T, index: number, array: T[]) => value is S,
+		thisArg?: any
+	): S[];
+	/**
+	 * Returns the elements of an array that meet the condition specified in a callback function.
+	 * @param callbackfn A function that accepts up to three arguments. The filter method calls the callbackfn function one time for each element in the array.
+	 * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+	 */
+	filter(
+		callbackfn: (value: T, index: number, array: T[]) => unknown,
+		thisArg?: any
+	): T[];
+	/**
+	 * Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+	 * @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
+	 * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+	 */
+	reduce(
+		callbackfn: (
+			previousValue: T,
+			currentValue: T,
+			currentIndex: number,
+			array: T[]
+		) => T
+	): T;
+	reduce(
+		callbackfn: (
+			previousValue: T,
+			currentValue: T,
+			currentIndex: number,
+			array: T[]
+		) => T,
+		initialValue: T
+	): T;
+	/**
+	 * Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+	 * @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
+	 * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+	 */
+	reduce<U>(
+		callbackfn: (
+			previousValue: U,
+			currentValue: T,
+			currentIndex: number,
+			array: T[]
+		) => U,
+		initialValue: U
+	): U;
+	/**
+	 * Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+	 * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
+	 * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+	 */
+	reduceRight(
+		callbackfn: (
+			previousValue: T,
+			currentValue: T,
+			currentIndex: number,
+			array: T[]
+		) => T
+	): T;
+	reduceRight(
+		callbackfn: (
+			previousValue: T,
+			currentValue: T,
+			currentIndex: number,
+			array: T[]
+		) => T,
+		initialValue: T
+	): T;
+	/**
+	 * Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+	 * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
+	 * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+	 */
+	reduceRight<U>(
+		callbackfn: (
+			previousValue: U,
+			currentValue: T,
+			currentIndex: number,
+			array: T[]
+		) => U,
+		initialValue: U
+	): U;
 
 	[n: number]: T;
 }
