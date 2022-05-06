@@ -15,9 +15,9 @@ declare function AddLocationToProject(...args: any): any;
  * @param label  The name by which the newly added menu is visible.
  */
 declare function AddMenu(
-	toMenu: string,
-	menu: string,
-	label: string
+  toMenu: string,
+  menu: string,
+  label: string
 ): FE_Success | void;
 
 /**
@@ -89,8 +89,8 @@ declare function CallClient(clname: string, arg: string): FE_Success | number;
  * @returns `Constants.FE_Success` or the value specified by the target client’s last call to `ReturnValue()`.
  */
 declare function CallClientEx(
-	clname: string,
-	arg: string
+  clname: string,
+  arg: string
 ): FE_Success | TypedVal;
 
 /**
@@ -114,10 +114,10 @@ declare function CheckStatus(p: PropVals, statusBit: number): boolean;
  * @returns 0 if the user clicked Open, Select, Use, or Save; a nonzero value if the user clicked Cancel or an error occurred.
  */
 declare function ChooseFile(
-	title: string,
-	directory: string,
-	stuffVal: string,
-	mode: number
+  title: string,
+  directory: string,
+  stuffVal: string,
+  mode: number
 ): number;
 
 /** @returns The name of the current ESTK client’s directory. */
@@ -198,16 +198,16 @@ declare function Console(message: string): void;
  * @returns The new document.
  */
 declare function CustomDoc(
-	width: number,
-	height: number,
-	numCols: number,
-	columnGap: number,
-	topMargin: number,
-	botMargin: number,
-	leftinsideMargin: number,
-	rightoutsideMargin: number,
-	sidedness: number,
-	makeVisible: boolean
+  width: number,
+  height: number,
+  numCols: number,
+  columnGap: number,
+  topMargin: number,
+  botMargin: number,
+  leftinsideMargin: number,
+  rightoutsideMargin: number,
+  sidedness: number,
+  makeVisible: boolean
 ): Doc;
 
 /** @todo UNDOCUMENTED */
@@ -304,7 +304,7 @@ declare function FCMarker(...args: any): any;
  *
  * @param codes An array of FCodes.
  */
-declare function Fcodes(codes: FCodes[]): void;
+declare function Fcodes(codes: number[]): void;
 
 /**
  * Displays a file scrollbox using the given title and the given directory as the path.
@@ -321,12 +321,12 @@ declare function Find(...args: any): any;
 declare function FindChangeInDocSelection(...args: any): any;
 
 declare type FontEncoding =
-	| 'FrameRoman'
-	| 'JISX0208.ShiftJIS'
-	| 'BIG5'
-	| 'GB2312-80.EUC'
-	| 'KSC5601-1992'
-	| 'Multiple';
+  | 'FrameRoman'
+  | 'JISX0208.ShiftJIS'
+  | 'BIG5'
+  | 'GB2312-80.EUC'
+  | 'KSC5601-1992'
+  | 'Multiple';
 /**
  * Returns the encoding that FrameMaker uses for the font family.
  *
@@ -475,8 +475,8 @@ declare function IsFileValid(...args: any): any;
  * @param silent   Specifies whether to display the Menu Customization File dialog box and allow the user to choose the file. To display the dialog box and allow the user to choose the file, specify `false`. To use the file specified by pathname without asking the user, specify `true`.
  */
 declare function LoadMenuCustomizationFile(
-	pathname: string,
-	silent: boolean
+  pathname: string,
+  silent: boolean
 ): FE_Success | void;
 
 /** An object of strings. */
@@ -517,8 +517,8 @@ declare function NewProject(...args: any): any;
  * @param newXMLReturnParams A property list that returns the filename and provides information about how the FrameMaker product opened the file. It must be initialized before you call `NewXML()`.
  */
 declare function NewXML(
-	opennewXMLParams: PropVals,
-	newXMLReturnParams: PropVals
+  opennewXMLParams: PropVals,
+  newXMLReturnParams: PropVals
 ): Doc;
 
 /**
@@ -532,8 +532,8 @@ declare function NewXML(
  * @param state        Specifies whether to turn notification on or off. 1 turns it on, and 0 turns it off.
  */
 declare function Notification(
-	notification: number,
-	state: boolean
+  notification: number,
+  state: boolean
 ): FE_Success | void;
 
 /**
@@ -582,9 +582,9 @@ declare function NToIndicConverter(...args: any): any;
  * @returns The document or book if it opens it successfully, or 0 if an error occurs.
  */
 declare function Open(
-	fileName: string,
-	openParams: PropVals,
-	openReturnParams: PropVals
+  fileName: string,
+  openParams: PropVals,
+  openReturnParams: PropVals
 ): Book | Doc | 0;
 
 /** @todo UNDOCUMENTED */
@@ -714,9 +714,9 @@ declare function PromptInt(message?: string, stuffVal?: string): number | null;
  * @param defaultunit The metric unit to use if the user does not specify one.
  */
 declare function PromptMetric(
-	message: string,
-	stuffVal: string,
-	defaultunit: number
+  message: string,
+  stuffVal: string,
+  defaultunit: number
 ): number | null;
 
 /**
@@ -789,9 +789,9 @@ declare function SaveProject(...args: any): any;
  * @returns 0 if the user clicked OK, or a nonzero value if the user clicked Cancel or an error occurred.
  */
 declare function ScrollBox(
-	title: string,
-	stringslist: Strings | string[],
-	_default: number
+  title: string,
+  stringslist: Strings | string[],
+  _default: number
 ): number;
 
 /**
@@ -855,8 +855,8 @@ declare function SimpleNewDoc(templateName: string, interactive: boolean): Doc;
  * @param interactive Specifies whether the FrameMaker product displays messages and warnings to the user. true instructs the FrameMaker product to display messages and warnings.
  */
 declare function SimpleOpen(
-	fileName: string,
-	interactive: boolean
+  fileName: string,
+  interactive: boolean
 ): Book | Doc | 0;
 
 /** @todo UNDOCUMENTED */
