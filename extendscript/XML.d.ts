@@ -27,7 +27,7 @@ interface XMLSettings extends ESObject {
  * Refer to 'JavaScript Tools Guide CC' for this object's methods and usage.
  */
 interface XML {
-  [key: number | string]: unknown;
+  [key: number | string]: any;
 }
 
 interface XMLConstructor extends ESObject {
