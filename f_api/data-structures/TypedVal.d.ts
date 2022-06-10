@@ -31,7 +31,6 @@ interface TypedVal {
   trval: TextRange;
 
   /** Element Catalog values. */
-
   csval: ElementCatalogEntries;
 
   /** Set of integers. */
