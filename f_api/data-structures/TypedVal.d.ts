@@ -15,7 +15,7 @@ declare type TypedValType =
   | UInts
   | AttributeDefs
   | Attributes
-  | TypedVal
+  | TypedVals
   | FMObject;
 
 /** Specifies an individual property value. */
@@ -63,7 +63,7 @@ interface TypedVal {
   asval: Attributes;
 
   /** Set of typed vals. */
-  valsval: TypedVal;
+  valsval: TypedVals;
 
   /** A FrameMaker object. */
   obj: FMObject;
