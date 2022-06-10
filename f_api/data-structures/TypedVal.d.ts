@@ -1,6 +1,23 @@
 // Type definitions for the TypedVal FMObject
 // Definitions by: Dan Reed <http://danreed.dev>
 
+declare type TypedValType =
+  | number
+  | string
+  | Metrics
+  | Strings
+  | Points
+  | Tabs
+  | TextLoc
+  | TextRange
+  | ElementCatalogEntries
+  | Ints
+  | UInts
+  | AttributeDefs
+  | Attributes
+  | TypedVal
+  | FMObject;
+
 /** Specifies an individual property value. */
 interface TypedVal {
   /** Indicates the type of value the structure provides. */
@@ -54,24 +71,7 @@ interface TypedVal {
 
 interface TypedValConstructor {
   new (): TypedVal;
-  new (
-    item:
-      | number
-      | string
-      | Metrics
-      | Strings
-      | Points
-      | Tabs
-      | TextLoc
-      | TextRange
-      | ElementCatalogEntries
-      | Ints
-      | UInts
-      | AttributeDefs
-      | Attributes
-      | TypedVal
-      | FMObject
-  ): TypedVal;
+  new (item: TypedValType): TypedVal;
 }
 
 declare const TypedVal: TypedValConstructor;
