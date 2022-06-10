@@ -70,7 +70,7 @@ interface TypedValConstructor {
       | UInts
       | AttributeDefs
       | Attributes
-      | TypedVals
+      | TypedVal
       | FMObject
   ): TypedVal;
 }
