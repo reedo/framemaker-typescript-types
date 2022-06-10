@@ -47,7 +47,7 @@ interface TypedVal {
   asval: Attributes;
 
   /** Set of typed vals. */
-  valsval: TypedVals;
+  valsval: TypedVal;
 
   /** A FrameMaker object. */
   obj: FMObject;
