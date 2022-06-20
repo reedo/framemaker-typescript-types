@@ -251,7 +251,7 @@ interface File extends ESObject {
 
 interface FileConstructor extends ESObject {
   (): File;
-  (path: string): File;
+  (path: string | File): File;
   new (): File;
   new (path: string): File;
   readonly prototype: File;

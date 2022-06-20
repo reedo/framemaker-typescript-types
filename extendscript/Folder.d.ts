@@ -127,7 +127,7 @@ interface Folder extends ESObject {
 
 interface FolderConstructor extends ESObject {
   (): Folder;
-  (path: string): Folder;
+  (path: string | Folder): Folder;
   new (): Folder;
   new (path: string): Folder;
   readonly prototype: Folder;
