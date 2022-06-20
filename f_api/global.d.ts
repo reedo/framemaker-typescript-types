@@ -839,7 +839,7 @@ declare function SilentNewBook(...args: any): any;
  * @param interactive  Specifies whether FrameMaker displays messages and warnings to the user.
  */
 
-declare function SimpleNewDoc(templateName: string, interactive: boolean): Doc;
+declare function SimpleNewDoc(templateName: string, interactive?: boolean): Doc;
 
 /**
  * Opens a document or book.
