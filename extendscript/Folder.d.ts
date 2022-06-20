@@ -129,7 +129,7 @@ interface FolderConstructor extends ESObject {
   (): Folder;
   (path: string | Folder): Folder;
   new (): Folder;
-  new (path: string): Folder;
+  new (path: string | Folder): Folder;
   readonly prototype: Folder;
 
   /** A Folder object for the folder that contains application data for all users. Value of %APPDATA%. */

@@ -253,7 +253,7 @@ interface FileConstructor extends ESObject {
   (): File;
   (path: string | File): File;
   new (): File;
-  new (path: string): File;
+  new (path: string | File): File;
   readonly prototype: File;
 
   /**
