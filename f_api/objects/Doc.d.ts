@@ -855,7 +855,7 @@ interface Doc extends FMNamedObject {
 
   GetTextVal(textLoc: TextLoc, propNum: number): TypedVal;
 
-  GetUniqueObject(objType: FO_Constant): FMUniqueObject;
+  GetUniqueObject(objType: FO_Constant, id: number): FMUniqueObject;
 
   HypertextCommand(hypertext: string): FrameErrorCode;
 
