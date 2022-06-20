@@ -228,7 +228,6 @@ declare function DefineCommandEx(...args: any): any;
  *
  * @returns The new menu.
  */
-
 declare function DefineMenu(name: string, label: string): Menu;
 
 /** @todo UNDOCUMENTED */

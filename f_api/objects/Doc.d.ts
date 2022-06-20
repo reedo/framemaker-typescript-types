@@ -2,1070 +2,1070 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Doc extends FMNamedObject {
-	AcrobatBookmarkDisplayTags: boolean;
+  AcrobatBookmarkDisplayTags: boolean;
 
-	AutoChangeBars: boolean;
+  AutoChangeBars: boolean;
 
-	BannerTextDisplay: boolean;
+  BannerTextDisplay: boolean;
 
-	BooleanConditionExpression: string;
+  BooleanConditionExpression: string;
 
-	BooleanConditionExpressionTag: string;
+  BooleanConditionExpressionTag: string;
 
-	BooleanConditionState: number;
+  BooleanConditionState: number;
 
-	BottomMargin: number;
+  BottomMargin: number;
 
-	Capitalization: number;
+  Capitalization: number;
 
-	ChangeBar: number;
+  ChangeBar: number;
 
-	ChangeBarColor: Color;
+  ChangeBarColor: Color;
 
-	ChangeBarDistance: number;
+  ChangeBarDistance: number;
 
-	ChangeBarPosition: number;
+  ChangeBarPosition: number;
 
-	ChangeBarThickness: number;
+  ChangeBarThickness: number;
 
-	ChapNumComputeMethod: number;
+  ChapNumComputeMethod: number;
 
-	ChapterNumStyle: number;
+  ChapterNumStyle: number;
 
-	ChapterNumText: string;
+  ChapterNumText: string;
 
-	ChapterNumber: number;
+  ChapterNumber: number;
 
-	CharTag: string;
+  CharTag: string;
 
-	ColGap: number;
+  ColGap: number;
 
-	Color: Color;
+  Color: Color;
 
-	CombinedFontFamily: CombinedFontDefn;
+  CombinedFontFamily: CombinedFontDefn;
 
-	CondFmtIsShown: number;
+  CondFmtIsShown: number;
 
-	CurrentPage: Page;
+  CurrentPage: Page;
 
-	readonly CustomCharFmtList: Strings;
+  readonly CustomCharFmtList: Strings;
 
-	CustomElementList: Strings;
+  CustomElementList: Strings;
 
-	readonly CustomPgfFmtList: Strings;
+  readonly CustomPgfFmtList: Strings;
 
-	readonly CustomTblFmtList: Strings;
+  readonly CustomTblFmtList: Strings;
 
-	DefaultExclusions: Strings;
+  DefaultExclusions: Strings;
 
-	DefaultInclusions: Strings;
+  DefaultInclusions: Strings;
 
-	Dictionary: Strings;
+  Dictionary: Strings;
 
-	Direction: number;
+  Direction: number;
 
-	DocAcrobatColumnArticleThreads: number;
+  DocAcrobatColumnArticleThreads: number;
 
-	DocAcrobatDefaultsChanged: number;
+  DocAcrobatDefaultsChanged: number;
 
-	DocAcrobatElementList: Strings;
+  DocAcrobatElementList: Strings;
 
-	DocAcrobatElements: number;
+  DocAcrobatElements: number;
 
-	DocAcrobatNoArticleThreads: number;
+  DocAcrobatNoArticleThreads: number;
 
-	DocFluidFlow: Flow;
+  DocFluidFlow: Flow;
 
-	readonly DocFonts: Strings;
+  readonly DocFonts: Strings;
 
-	DocIsDoubleSided: number;
+  DocIsDoubleSided: number;
 
-	readonly DocIsModified: number;
+  readonly DocIsModified: boolean;
 
-	DocIsViewOnly: number;
+  DocIsViewOnly: number;
 
-	readonly DocOpenType: number;
+  readonly DocOpenType: number;
 
-	readonly DocSaveType: number;
+  readonly DocSaveType: number;
 
-	DontUpdateTextInsets: number;
+  DontUpdateTextInsets: number;
 
-	DontUpdateXRefs: number;
+  DontUpdateXRefs: number;
 
-	DownloadFonts: number;
+  DownloadFonts: number;
 
-	ElementBoundaryDisplay: number;
+  ElementBoundaryDisplay: number;
 
-	readonly ElementCatalog: ElementCatalogEntries;
+  readonly ElementCatalog: ElementCatalogEntries;
 
-	ElementCatalogDisplay: number;
+  ElementCatalogDisplay: number;
 
-	ElementSelection: ElementRange;
+  ElementSelection: ElementRange;
 
-	EqnIntegralSizeLarge: number;
+  EqnIntegralSizeLarge: number;
 
-	EqnIntegralSizeMed: number;
+  EqnIntegralSizeMed: number;
 
-	EqnIntegralSizeSmall: number;
+  EqnIntegralSizeSmall: number;
 
-	EqnLevel1SizeLarge: number;
+  EqnLevel1SizeLarge: number;
 
-	EqnLevel1SizeMed: number;
+  EqnLevel1SizeMed: number;
 
-	EqnLevel1SizeSmall: number;
+  EqnLevel1SizeSmall: number;
 
-	EqnLevel2SizeLarge: number;
+  EqnLevel2SizeLarge: number;
 
-	EqnLevel2SizeMed: number;
+  EqnLevel2SizeMed: number;
 
-	EqnLevel2SizeSmall: number;
+  EqnLevel2SizeSmall: number;
 
-	EqnLevel3SizeLarge: number;
+  EqnLevel3SizeLarge: number;
 
-	EqnLevel3SizeMed: number;
+  EqnLevel3SizeMed: number;
 
-	EqnLevel3SizeSmall: number;
+  EqnLevel3SizeSmall: number;
 
-	EqnSigmaSizeLarge: number;
+  EqnSigmaSizeLarge: number;
 
-	EqnSigmaSizeMed: number;
+  EqnSigmaSizeMed: number;
 
-	EqnSigmaSizeSmall: number;
+  EqnSigmaSizeSmall: number;
 
-	readonly FirstAttrCondExprInDoc: AttrCondExpr;
+  readonly FirstAttrCondExprInDoc: AttrCondExpr;
 
-	readonly FirstBodyPageInDoc: BodyPage;
+  readonly FirstBodyPageInDoc: BodyPage;
 
-	readonly FirstCharFmtInDoc: CharFmt;
+  readonly FirstCharFmtInDoc: CharFmt;
 
-	readonly FirstColorInDoc: Color;
+  readonly FirstColorInDoc: Color;
 
-	readonly FirstCombinedFontDefnInDoc: CombinedFontDefn;
+  readonly FirstCombinedFontDefnInDoc: CombinedFontDefn;
 
-	readonly FirstCondFmtInDoc: CondFmt;
+  readonly FirstCondFmtInDoc: CondFmt;
 
-	readonly FirstDITAConrefElementInDoc: Element;
+  readonly FirstDITAConrefElementInDoc: Element;
 
-	readonly FirstDITALinkElementInDoc: Element;
+  readonly FirstDITALinkElementInDoc: Element;
 
-	readonly FirstDITATopicrefElementInDoc: Element;
+  readonly FirstDITATopicrefElementInDoc: Element;
 
-	readonly FirstDITATopicsetrefElementInDoc: Element;
+  readonly FirstDITATopicsetrefElementInDoc: Element;
 
-	readonly FirstDITAXrefElementInDoc: Element;
+  readonly FirstDITAXrefElementInDoc: Element;
 
-	readonly FirstElementDefInDoc: ElementDef;
+  readonly FirstElementDefInDoc: ElementDef;
 
-	readonly FirstFlowInDoc: Flow;
+  readonly FirstFlowInDoc: Flow;
 
-	FirstFmtChangeListInDoc: FmtChangeList;
+  FirstFmtChangeListInDoc: FmtChangeList;
 
-	readonly FirstFnInDoc: Fn;
+  readonly FirstFnInDoc: Fn;
 
-	readonly FirstGraphicInDoc: FMGraphic;
+  readonly FirstGraphicInDoc: FMGraphic;
 
-	readonly FirstGraphicsFmtInDoc: GraphicsFmt;
+  readonly FirstGraphicsFmtInDoc: GraphicsFmt;
 
-	readonly FirstInlineComponentInDoc: InlineComponent;
+  readonly FirstInlineComponentInDoc: InlineComponent;
 
-	readonly FirstMarkerInDoc: Marker;
+  readonly FirstMarkerInDoc: Marker;
 
-	readonly FirstMarkerTypeInDoc: MarkerType;
+  readonly FirstMarkerTypeInDoc: MarkerType;
 
-	readonly FirstMasterPageInDoc: MasterPage;
+  readonly FirstMasterPageInDoc: MasterPage;
 
-	FirstPageNum: number;
+  FirstPageNum: number;
 
-	FirstPageVerso: number;
+  FirstPageVerso: number;
 
-	readonly FirstPgfFmtInDoc: PgfFmt;
+  readonly FirstPgfFmtInDoc: PgfFmt;
 
-	readonly FirstPgfInDoc: Pgf;
+  readonly FirstPgfInDoc: Pgf;
 
-	readonly FirstRefPageInDoc: RefPage;
+  readonly FirstRefPageInDoc: RefPage;
 
-	readonly FirstRubiInDoc: Rubi;
+  readonly FirstRubiInDoc: Rubi;
 
-	readonly FirstRulingFmtInDoc: RulingFmt;
+  readonly FirstRulingFmtInDoc: RulingFmt;
 
-	readonly FirstSelectedGraphicInDoc: FMGraphic;
+  readonly FirstSelectedGraphicInDoc: FMGraphic;
 
-	readonly FirstSelectedTiInDoc: FMObject;
+  readonly FirstSelectedTiInDoc: FMObject;
 
-	readonly FirstTblFmtInDoc: TblFmt;
+  readonly FirstTblFmtInDoc: TblFmt;
 
-	readonly FirstTblInDoc: Tbl;
+  readonly FirstTblInDoc: Tbl;
 
-	readonly FirstTiInDoc: InvalidObject;
+  readonly FirstTiInDoc: Ti;
 
-	readonly FirstVarFmtInDoc: VarFmt;
+  readonly FirstVarFmtInDoc: VarFmt;
 
-	readonly FirstVarInDoc: Var;
+  readonly FirstVarInDoc: Var;
 
-	readonly FirstXRefFmtInDoc: XRefFmt;
+  readonly FirstXRefFmtInDoc: XRefFmt;
 
-	readonly FirstXRefInDoc: XRef;
+  readonly FirstXRefInDoc: XRef;
 
-	FnCustNumString: string;
+  FnCustNumString: string;
 
-	FnFirstNum: number;
+  FnFirstNum: number;
 
-	FnFmt: string;
+  FnFmt: string;
 
-	FnHeightPerCol: number;
+  FnHeightPerCol: number;
 
-	FnInstancePosition: number;
+  FnInstancePosition: number;
 
-	FnInstancePrefix: string;
+  FnInstancePrefix: string;
 
-	FnInstanceSuffix: string;
+  FnInstanceSuffix: string;
 
-	FnNumComputeMethod: number;
+  FnNumComputeMethod: number;
 
-	FnNumStyle: number;
+  FnNumStyle: number;
 
-	FnNumberingPerPage: number;
+  FnNumberingPerPage: number;
 
-	FnRefPosition: number;
+  FnRefPosition: number;
 
-	FnRefPrefix: string;
+  FnRefPrefix: string;
 
-	FnRefSuffix: string;
+  FnRefSuffix: string;
 
-	FontAngle: number;
+  FontAngle: number;
 
-	readonly FontEncodingName: string;
+  readonly FontEncodingName: string;
 
-	FontFamily: number;
+  FontFamily: number;
 
-	FontPlatformName: string;
+  FontPlatformName: string;
 
-	FontPostScriptName: string;
+  FontPostScriptName: string;
 
-	FontSize: number;
+  FontSize: number;
 
-	FontVariation: number;
+  FontVariation: number;
 
-	FontWeight: number;
+  FontWeight: number;
 
-	FormatOverride: number;
+  FormatOverride: number;
 
-	Functions: string;
+  Functions: string;
 
-	GenerateAcrobatInfo: number;
+  GenerateAcrobatInfo: number;
 
-	readonly HiddenPage: HiddenPage;
+  readonly HiddenPage: HiddenPage;
 
-	HypertextCommandText: string;
+  HypertextCommandText: string;
 
-	HypertextDoValidate: boolean;
+  HypertextDoValidate: boolean;
 
-	readonly HypertextParseBadParam: number;
+  readonly HypertextParseBadParam: number;
 
-	readonly HypertextParseErr: number;
+  readonly HypertextParseErr: number;
 
-	readonly HypertextParseErrMsg: string;
+  readonly HypertextParseErrMsg: string;
 
-	readonly HypertextParsedClientName: string;
+  readonly HypertextParsedClientName: string;
 
-	readonly HypertextParsedCmdCode: number;
+  readonly HypertextParsedCmdCode: number;
 
-	readonly HypertextParsedCmdDest: number;
+  readonly HypertextParsedCmdDest: number;
 
-	readonly HypertextParsedCmdDestObjID: number;
+  readonly HypertextParsedCmdDestObjID: number;
 
-	readonly HypertextParsedCmdDestObjType: number;
+  readonly HypertextParsedCmdDestObjType: number;
 
-	readonly HypertextParsedCmdMatrixColumns: number;
+  readonly HypertextParsedCmdMatrixColumns: number;
 
-	readonly HypertextParsedCmdMatrixRows: number;
+  readonly HypertextParsedCmdMatrixRows: number;
 
-	readonly HypertextParsedDIFileName: string;
+  readonly HypertextParsedDIFileName: string;
 
-	readonly HypertextParsedFlowName: string;
+  readonly HypertextParsedFlowName: string;
 
-	readonly HypertextParsedLinkName: string;
+  readonly HypertextParsedLinkName: string;
 
-	readonly HypertextParsedMessage: string;
+  readonly HypertextParsedMessage: string;
 
-	readonly HypertextParsedPageName: string;
+  readonly HypertextParsedPageName: string;
 
-	readonly HypertextParsedTitle: string;
+  readonly HypertextParsedTitle: string;
 
-	readonly HypertextValidateErr: number;
+  readonly HypertextValidateErr: number;
 
-	InCond: CondFmt[];
+  InCond: CondFmt[];
 
-	IsIconified: boolean;
+  IsIconified: boolean;
 
-	IsInFront: boolean;
+  IsInFront: boolean;
 
-	IsOnScreen: boolean;
+  IsOnScreen: boolean;
 
-	KernX: number;
+  KernX: number;
 
-	KernY: number;
+  KernY: number;
 
-	readonly KeyCatalog: KeyCatalog;
+  readonly KeyCatalog: KeyCatalog;
 
-	KeyCatalogType: number;
+  KeyCatalogType: number;
 
-	Label: string;
+  Label: string;
 
-	readonly LastBodyPageInDoc: BodyPage;
+  readonly LastBodyPageInDoc: BodyPage;
 
-	readonly LastMasterPageInDoc: MasterPage;
+  readonly LastMasterPageInDoc: MasterPage;
 
-	readonly LastRefPageInDoc: RefPage;
+  readonly LastRefPageInDoc: RefPage;
 
-	LeftMargin: number;
+  LeftMargin: number;
 
-	readonly LeftMasterPage: MasterPage;
+  readonly LeftMasterPage: MasterPage;
 
-	LineBreakAfter: string;
+  LineBreakAfter: string;
 
-	LineNumDistance: number;
+  LineNumDistance: number;
 
-	LineNumRestart: boolean;
+  LineNumRestart: boolean;
 
-	LineNumShow: boolean;
+  LineNumShow: boolean;
 
-	readonly MainFlowInDoc: Flow;
+  readonly MainFlowInDoc: Flow;
 
-	readonly MarkerTypeNames: Strings;
+  readonly MarkerTypeNames: Strings;
 
-	MaxBottomMargin: number;
+  MaxBottomMargin: number;
 
-	MaxFirstIndent: number;
+  MaxFirstIndent: number;
 
-	MaxFontSize: number;
+  MaxFontSize: number;
 
-	MaxLeading: number;
+  MaxLeading: number;
 
-	MaxLeftIndent: number;
+  MaxLeftIndent: number;
 
-	MaxLeftMargin: number;
+  MaxLeftMargin: number;
 
-	MaxRightIndent: number;
+  MaxRightIndent: number;
 
-	MaxRightMargin: number;
+  MaxRightMargin: number;
 
-	MaxSpaceAbove: number;
+  MaxSpaceAbove: number;
 
-	MaxSpaceBelow: number;
+  MaxSpaceBelow: number;
 
-	MaxSpread: number;
+  MaxSpread: number;
 
-	MaxStretch: number;
+  MaxStretch: number;
 
-	MaxTabPosition: number;
+  MaxTabPosition: number;
 
-	MaxTopMargin: number;
+  MaxTopMargin: number;
 
-	MenuBar: Menu;
+  MenuBar: Menu;
 
-	MinBottomMargin: number;
+  MinBottomMargin: number;
 
-	MinFirstIndent: number;
+  MinFirstIndent: number;
 
-	MinFontSize: number;
+  MinFontSize: number;
 
-	MinLeading: number;
+  MinLeading: number;
 
-	MinLeftIndent: number;
+  MinLeftIndent: number;
 
-	MinLeftMargin: number;
+  MinLeftMargin: number;
 
-	MinRightIndent: number;
+  MinRightIndent: number;
 
-	MinRightMargin: number;
+  MinRightMargin: number;
 
-	MinSpaceAbove: number;
+  MinSpaceAbove: number;
 
-	MinSpaceBelow: number;
+  MinSpaceBelow: number;
 
-	MinSpread: number;
+  MinSpread: number;
 
-	MinStretch: number;
+  MinStretch: number;
 
-	MinTabPosition: number;
+  MinTabPosition: number;
 
-	MinTopMargin: number;
+  MinTopMargin: number;
 
-	NarrowRubiSpaceForOther: number;
+  NarrowRubiSpaceForOther: number;
 
-	NewElemAttrDisplay: number;
+  NewElemAttrDisplay: number;
 
-	NewElemAttrEditing: number;
+  NewElemAttrEditing: number;
 
-	readonly NextOpenDocInSession: Doc;
+  readonly NextOpenDocInSession: Doc;
 
-	readonly NumCols: number;
+  readonly NumCols: number;
 
-	Numbers: string;
+  Numbers: string;
 
-	Overline: number;
+  Overline: number;
 
-	PDFAllNamedDestinations: number;
+  PDFAllNamedDestinations: number;
 
-	PDFBookmark: boolean;
+  PDFBookmark: boolean;
 
-	PDFBookmarksOpenLevel: number;
+  PDFBookmarksOpenLevel: number;
 
-	PDFConvertCMYKtoRGB: number;
+  PDFConvertCMYKtoRGB: number;
 
-	PDFDestsMarked: number;
+  PDFDestsMarked: number;
 
-	readonly PDFDistillerAbsent: number;
+  readonly PDFDistillerAbsent: number;
 
-	PDFDocInfo: Strings;
+  PDFDocInfo: Strings;
 
-	PDFEndPage: string;
+  PDFEndPage: string;
 
-	PDFGenerateForReview: number;
+  PDFGenerateForReview: number;
 
-	PDFJobOption: string;
+  PDFJobOption: string;
 
-	readonly PDFJobOptionsAbsent: number;
+  readonly PDFJobOptionsAbsent: number;
 
-	PDFOpenPage: string;
+  PDFOpenPage: string;
 
-	PDFPageHeight: number;
+  PDFPageHeight: number;
 
-	PDFPageWidth: number;
+  PDFPageWidth: number;
 
-	PDFPrintPageRange: number;
+  PDFPrintPageRange: number;
 
-	PDFRegistrationMarks: number;
+  PDFRegistrationMarks: number;
 
-	PDFSeparateFiles: number;
+  PDFSeparateFiles: number;
 
-	PDFStartPage: string;
+  PDFStartPage: string;
 
-	PDFStructure: number;
+  PDFStructure: number;
 
-	PDFViewPDF: number;
+  PDFViewPDF: number;
 
-	PDFZoomFactor: number;
+  PDFZoomFactor: number;
 
-	PDFZoomType: number;
+  PDFZoomType: number;
 
-	PageHeight: number;
+  PageHeight: number;
 
-	PageNumComputeMethod: number;
+  PageNumComputeMethod: number;
 
-	PageNumStyle: number;
+  PageNumStyle: number;
 
-	PageRounding: number;
+  PageRounding: number;
 
-	PageWidth: number;
+  PageWidth: number;
 
-	PairKern: number;
+  PairKern: number;
 
-	PgfNumComputeMethod: number;
+  PgfNumComputeMethod: number;
 
-	PointPageNumStyle: number;
+  PointPageNumStyle: number;
 
-	Position: number;
+  Position: number;
 
-	PreviewState: number;
+  PreviewState: number;
 
-	PrintBlankPages: number;
+  PrintBlankPages: number;
 
-	PrintCollated: number;
+  PrintCollated: number;
 
-	PrintCols: number;
+  PrintCols: number;
 
-	PrintDitavalFileName: string;
+  PrintDitavalFileName: string;
 
-	PrintEmulsion: number;
+  PrintEmulsion: number;
 
-	PrintEndPage: number;
+  PrintEndPage: number;
 
-	PrintEndPageName: number;
+  PrintEndPageName: number;
 
-	PrintEndPoint: number;
+  PrintEndPoint: number;
 
-	PrintEvenPages: number;
+  PrintEvenPages: number;
 
-	PrintFileName: string;
+  PrintFileName: string;
 
-	PrintImaging: number;
+  PrintImaging: number;
 
-	PrintLastSheetFirst: number;
+  PrintLastSheetFirst: number;
 
-	PrintLowRes: number;
+  PrintLowRes: number;
 
-	PrintManualFeed: number;
+  PrintManualFeed: number;
 
-	PrintNumCopies: number;
+  PrintNumCopies: number;
 
-	PrintOddPages: number;
+  PrintOddPages: number;
 
-	PrintPaperHeight: number;
+  PrintPaperHeight: number;
 
-	PrintPaperWidth: number;
+  PrintPaperWidth: number;
 
-	PrintRegistrationMarks: number;
+  PrintRegistrationMarks: number;
 
-	PrintRows: number;
+  PrintRows: number;
 
-	PrintScale: number;
+  PrintScale: number;
 
-	PrintScope: number;
+  PrintScope: number;
 
-	PrintSeps: number;
+  PrintSeps: number;
 
-	PrintStartPage: number;
+  PrintStartPage: number;
 
-	PrintStartPageName: number;
+  PrintStartPageName: number;
 
-	PrintStartPoint: number;
+  PrintStartPoint: number;
 
-	PrintThumbnails: number;
+  PrintThumbnails: number;
 
-	PrintToFile: number;
+  PrintToFile: number;
 
-	PrinterName: string;
+  PrinterName: string;
 
-	readonly ResolvedDirection: number;
+  readonly ResolvedDirection: number;
 
-	ReviewerName: string;
+  ReviewerName: string;
 
-	readonly ReviewerNameList: Strings;
+  readonly ReviewerNameList: Strings;
 
-	RightMargin: number;
+  RightMargin: number;
 
-	readonly RightMasterPage: MasterPage;
+  readonly RightMasterPage: MasterPage;
 
-	RubiFixedSize: number;
+  RubiFixedSize: number;
 
-	RubiOverhang: number;
+  RubiOverhang: number;
 
-	RubiSize: number;
+  RubiSize: number;
 
-	ScreenHeight: number;
+  ScreenHeight: number;
 
-	ScreenWidth: number;
+  ScreenWidth: number;
 
-	ScreenX: number;
+  ScreenX: number;
 
-	ScreenY: number;
+  ScreenY: number;
 
-	SecNumComputeMethod: number;
+  SecNumComputeMethod: number;
 
-	SectionNumStyle: number;
+  SectionNumStyle: number;
 
-	SectionNumText: string;
+  SectionNumText: string;
 
-	SectionNumber: number;
+  SectionNumber: number;
 
-	readonly SelectedTbl: Tbl;
+  readonly SelectedTbl: Tbl;
 
-	SepOverride: Color;
+  SepOverride: Color;
 
-	SeparateInclusions: number;
+  SeparateInclusions: number;
 
-	ShowAll: number;
+  ShowAll: number;
 
-	ShowCondIndicators: number;
+  ShowCondIndicators: number;
 
-	ShowElementDescriptiveNames: boolean;
+  ShowElementDescriptiveNames: boolean;
 
-	SkipBlankSeps: number;
+  SkipBlankSeps: number;
 
-	SmallCapsSize: number;
+  SmallCapsSize: number;
 
-	SmallCapsStretch: number;
+  SmallCapsStretch: number;
 
-	SmartQuotes: number;
+  SmartQuotes: number;
 
-	SmartSpaces: number;
+  SmartSpaces: number;
 
-	SnapAngle: number;
+  SnapAngle: number;
 
-	SnapGridUnits: number;
+  SnapGridUnits: number;
 
-	SpecifiedKeyCatalog: KeyCatalog;
+  SpecifiedKeyCatalog: KeyCatalog;
 
-	SpotColorView: number;
+  SpotColorView: number;
 
-	Spread: number;
+  Spread: number;
 
-	StatusLine: string;
+  StatusLine: string;
 
-	Stretch: number;
+  Stretch: number;
 
-	Strikethrough: number;
+  Strikethrough: number;
 
-	Strings: string;
+  Strings: string;
 
-	StructuredApplication: string;
+  StructuredApplication: string;
 
-	StructuredApplicationForOpen: string;
+  StructuredApplicationForOpen: string;
 
-	readonly StyleOverrides: number;
+  readonly StyleOverrides: number;
 
-	SubScriptShift: number;
+  SubScriptShift: number;
 
-	SubScriptSize: number;
+  SubScriptSize: number;
 
-	SubScriptStretch: number;
+  SubScriptStretch: number;
 
-	SubsecNumComputeMethod: number;
+  SubsecNumComputeMethod: number;
 
-	SubsectionNumStyle: number;
+  SubsectionNumStyle: number;
 
-	SubsectionNumText: string;
+  SubsectionNumText: string;
 
-	SubsectionNumber: number;
+  SubsectionNumber: number;
 
-	SuperScriptShift: number;
+  SuperScriptShift: number;
 
-	SuperScriptSize: number;
+  SuperScriptSize: number;
 
-	SuperScriptStretch: number;
+  SuperScriptStretch: number;
 
-	Symbols: string;
+  Symbols: string;
 
-	readonly SymbolsList: Strings;
+  readonly SymbolsList: Strings;
 
-	TblFnCellPosition: number;
+  TblFnCellPosition: number;
 
-	TblFnCellPrefix: string;
+  TblFnCellPrefix: string;
 
-	TblFnCellSuffix: string;
+  TblFnCellSuffix: string;
 
-	TblFnCustNumString: string;
+  TblFnCustNumString: string;
 
-	TblFnFmt: string;
+  TblFnFmt: string;
 
-	TblFnNumStyle: number;
+  TblFnNumStyle: number;
 
-	TblFnPosition: number;
+  TblFnPosition: number;
 
-	TblFnPrefix: string;
+  TblFnPrefix: string;
 
-	TblFnSuffix: string;
+  TblFnSuffix: string;
 
-	TextSelection: TextRange;
+  TextSelection: TextRange;
 
-	TopMargin: number;
+  TopMargin: number;
 
-	TrackChangesAddedColor: Color;
+  TrackChangesAddedColor: Color;
 
-	TrackChangesDeletedColor: Color;
+  TrackChangesDeletedColor: Color;
 
-	TrackChangesOn: boolean;
+  TrackChangesOn: boolean;
 
-	TrapwiseCompatibility: boolean;
+  TrapwiseCompatibility: boolean;
 
-	Underlining: number;
+  Underlining: number;
 
-	Untouchable: number;
+  Untouchable: number;
 
-	UseInitialStructure: number;
+  UseInitialStructure: number;
 
-	UseInitialStructureOfAutoInsertedElements: boolean;
+  UseInitialStructureOfAutoInsertedElements: boolean;
 
-	UseSepOverride: number;
+  UseSepOverride: number;
 
-	UserString: string;
+  UserString: string;
 
-	Variables: string;
+  Variables: string;
 
-	ViewBorders: number;
+  ViewBorders: number;
 
-	ViewDisplayUnits: number;
+  ViewDisplayUnits: number;
 
-	ViewFontSizeUnits: number;
+  ViewFontSizeUnits: number;
 
-	ViewGrid: number;
+  ViewGrid: number;
 
-	ViewGridUnits: number;
+  ViewGridUnits: number;
 
-	ViewHotspotIndicators: number;
+  ViewHotspotIndicators: number;
 
-	ViewNoGraphics: number;
+  ViewNoGraphics: number;
 
-	ViewOnlyDeadCodes: UInts;
+  ViewOnlyDeadCodes: UInts;
 
-	ViewOnlyMenuBar: Menu;
+  ViewOnlyMenuBar: Menu;
 
-	ViewOnlySelect: number;
+  ViewOnlySelect: number;
 
-	ViewOnlyWinBorders: number;
+  ViewOnlyWinBorders: number;
 
-	ViewOnlyWinMenubar: number;
+  ViewOnlyWinMenubar: number;
 
-	ViewOnlyWinPalette: number;
+  ViewOnlyWinPalette: number;
 
-	ViewOnlyWinPopup: number;
+  ViewOnlyWinPopup: number;
 
-	ViewOnlyXRef: number;
+  ViewOnlyXRef: number;
 
-	ViewPageScrolling: number;
+  ViewPageScrolling: number;
 
-	ViewRulerUnits: number;
+  ViewRulerUnits: number;
 
-	ViewRulers: number;
+  ViewRulers: number;
 
-	ViewTextSymbols: number;
+  ViewTextSymbols: number;
 
-	VolNumComputeMethod: number;
+  VolNumComputeMethod: number;
 
-	VolumeNumStyle: number;
+  VolumeNumStyle: number;
 
-	VolumeNumText: string;
+  VolumeNumText: string;
 
-	VolumeNumber: number;
+  VolumeNumber: number;
 
-	WideRubiSpaceForOther: number;
+  WideRubiSpaceForOther: number;
 
-	XmlDocType: string;
+  XmlDocType: string;
 
-	XmlEncoding: string;
+  XmlEncoding: string;
 
-	XmlFileEncoding: string;
+  XmlFileEncoding: string;
 
-	XmlPublicId: string;
+  XmlPublicId: string;
 
-	XmlStandAlone: number;
+  XmlStandAlone: number;
 
-	XmlStyleSheet: string;
+  XmlStyleSheet: string;
 
-	XmlStyleSheetList: Strings;
+  XmlStyleSheetList: Strings;
 
-	XmlSystemId: string;
+  XmlSystemId: string;
 
-	XmlUseBOM: number;
+  XmlUseBOM: number;
 
-	XmlVersion: string;
+  XmlVersion: string;
 
-	XmlWellFormed: number;
+  XmlWellFormed: number;
 
-	Zoom: number;
+  Zoom: number;
 
-	AddText(textLoc: TextLoc, text: string): TextLoc | FrameErrorCode;
+  AddText(textLoc: TextLoc, text: string): TextLoc | FrameErrorCode;
 
-	AddNewBuildExpr(exprName: string, exprCondition: string): FrameErrorCode;
+  AddNewBuildExpr(exprName: string, exprCondition: string): FrameErrorCode;
 
-	AddTableVariables(...args: any): unknown;
+  AddTableVariables(...args: any): unknown;
 
-	CenterOnText(textRange: TextRange): FrameErrorCode;
+  CenterOnText(textRange: TextRange): FrameErrorCode;
 
-	Clear(flags: number): FrameErrorCode;
+  Clear(flags: number): FrameErrorCode;
 
-	ClearAllChangebars(): FrameErrorCode;
+  ClearAllChangebars(): FrameErrorCode;
 
-	Close(flags: number): FrameErrorCode;
+  Close(flags: number): FrameErrorCode;
 
-	Compare(
-		newerDoc: Doc,
-		flags: number,
-		insertCondTag: string,
-		deleteCondTag: string,
-		replaceText: string,
-		compareThreshold: number
-	): CompareRet | FrameErrorCode;
+  Compare(
+    newerDoc: Doc,
+    flags: number,
+    insertCondTag: string,
+    deleteCondTag: string,
+    replaceText: string,
+    compareThreshold: number
+  ): CompareRet | FrameErrorCode;
 
-	Copy(flags?: number): FrameErrorCode;
+  Copy(flags?: number): FrameErrorCode;
 
-	Cut(flags?: number): FrameErrorCode;
+  Cut(flags?: number): FrameErrorCode;
 
-	DeleteBuildExpr(exprName: string): FrameErrorCode;
+  DeleteBuildExpr(exprName: string): FrameErrorCode;
 
-	DeleteText(textRange: TextRange): FrameErrorCode;
+  DeleteText(textRange: TextRange): FrameErrorCode;
 
-	DeleteUndefinedAttribute(...args: any): unknown;
+  DeleteUndefinedAttribute(...args: any): unknown;
 
-	DeleteUnusedCharFmt(): FrameErrorCode;
+  DeleteUnusedCharFmt(): FrameErrorCode;
 
-	DeleteUnusedFmts(objType: FO_Constant): FrameErrorCode;
+  DeleteUnusedFmts(objType: FO_Constant): FrameErrorCode;
 
-	DeleteUnusedGraphicsFmt(...args: any): unknown;
+  DeleteUnusedGraphicsFmt(...args: any): unknown;
 
-	DeleteUnusedPgfFmt(): FrameErrorCode;
+  DeleteUnusedPgfFmt(): FrameErrorCode;
 
-	DeleteUnusedTblFmt(): FrameErrorCode;
+  DeleteUnusedTblFmt(): FrameErrorCode;
 
-	DemoteElement(): FrameErrorCode;
+  DemoteElement(): FrameErrorCode;
 
-	ElementLocToTextLoc(eloc: ElementLoc): TextLoc;
+  ElementLocToTextLoc(eloc: ElementLoc): TextLoc;
 
-	EmbedAttachFileInFMAtCursor(...args: any): unknown;
+  EmbedAttachFileInFMAtCursor(...args: any): unknown;
 
-	Export(...args: any): unknown;
+  Export(...args: any): unknown;
 
-	Find(textLoc: TextLoc, findParams: PropVals): TextRange;
+  Find(textLoc: TextLoc, findParams: PropVals): TextRange;
 
-	GenerateQrCode(...args: any): unknown;
+  GenerateQrCode(...args: any): unknown;
 
-	GetActiveBuildExpr(): string;
+  GetActiveBuildExpr(): string;
 
-	GetBuildExpr(exprName: string): string;
+  GetBuildExpr(exprName: string): string;
 
-	GetBuildExprCatalog(): Strings;
+  GetBuildExprCatalog(): Strings;
 
-	GetDependencies(...args: any): unknown;
+  GetDependencies(...args: any): unknown;
 
-	GetNamedAttrCondExpr(name: string): AttrCondExpr;
+  GetNamedAttrCondExpr(name: string): AttrCondExpr;
 
-	GetNamedCharFmt(name: string): CharFmt;
+  GetNamedCharFmt(name: string): CharFmt;
 
-	GetNamedColor(name: string): Color;
+  GetNamedColor(name: string): Color;
 
-	GetNamedCombinedFontDefn(name: string): CombinedFontDefn;
+  GetNamedCombinedFontDefn(name: string): CombinedFontDefn;
 
-	GetNamedCondFmt(name: string): CondFmt;
+  GetNamedCondFmt(name: string): CondFmt;
 
-	GetNamedElementDef(name: string): ElementDef;
+  GetNamedElementDef(name: string): ElementDef;
 
-	GetNamedFmtChangeList(name: string): FmtChangeList;
+  GetNamedFmtChangeList(name: string): FmtChangeList;
 
-	GetNamedGraphicsFmt(name: string): GraphicsFmt;
+  GetNamedGraphicsFmt(name: string): GraphicsFmt;
 
-	GetNamedMarkerType(name: string): MarkerType;
+  GetNamedMarkerType(name: string): MarkerType;
 
-	GetNamedMasterPage(name: string): MasterPage;
+  GetNamedMasterPage(name: string): MasterPage;
 
-	GetNamedObject(objType: FO_Constant, name: string): FMNamedObject;
+  GetNamedObject(objType: FO_Constant, name: string): FMNamedObject;
 
-	GetNamedPgfFmt(name: string): PgfFmt;
+  GetNamedPgfFmt(name: string): PgfFmt;
 
-	GetNamedRefPage(name: string): RefPage;
+  GetNamedRefPage(name: string): RefPage;
 
-	GetNamedRulingFmt(name: string): RulingFmt;
+  GetNamedRulingFmt(name: string): RulingFmt;
 
-	GetNamedTblFmt(name: string): TblFmt;
+  GetNamedTblFmt(name: string): TblFmt;
 
-	GetNamedUnanchoredFrame(name: string): UnanchoredFrame;
+  GetNamedUnanchoredFrame(name: string): UnanchoredFrame;
 
-	GetNamedVarFmt(name: string): VarFmt;
+  GetNamedVarFmt(name: string): VarFmt;
 
-	GetNamedXRefFmt(name: string): XRefFmt;
+  GetNamedXRefFmt(name: string): XRefFmt;
 
-	GetTextForRange(tr: TextRange, flags?: number): TextItems;
+  GetTextForRange(tr: TextRange, flags?: number): TextItems;
 
-	GetTextForRange2(tr: TextRange, flags?: number, flags2?: number): TextItems;
+  GetTextForRange2(tr: TextRange, flags?: number, flags2?: number): TextItems;
 
-	GetTextPropVal(textLoc: TextLoc, propNum: number): PropVal;
+  GetTextPropVal(textLoc: TextLoc, propNum: number): PropVal;
 
-	GetTextProps(textLoc: TextLoc): PropVals;
+  GetTextProps(textLoc: TextLoc): PropVals;
 
-	GetTextVal(textLoc: TextLoc, propNum: number): TypedVal;
+  GetTextVal(textLoc: TextLoc, propNum: number): TypedVal;
 
-	GetUniqueObject(objType: FO_Constant): FMUniqueObject;
+  GetUniqueObject(objType: FO_Constant): FMUniqueObject;
 
-	HypertextCommand(hypertext: string): FrameErrorCode;
+  HypertextCommand(hypertext: string): FrameErrorCode;
 
-	Import(
-		textLocP: TextLoc,
-		filename: string,
-		importParams: PropVals,
-		importReturnParams: PropVals
-	): FMObject;
+  Import(
+    textLocP: TextLoc,
+    filename: string,
+    importParams: PropVals,
+    importReturnParams: PropVals
+  ): FMObject;
 
-	MergeIntoFirst(): FrameErrorCode;
+  MergeIntoFirst(): FrameErrorCode;
 
-	MergeIntoLast(): FrameErrorCode;
+  MergeIntoLast(): FrameErrorCode;
 
-	NewAnchoredAFrame(textLoc: TextLoc): AFrame;
+  NewAnchoredAFrame(textLoc: TextLoc): AFrame;
 
-	NewAnchoredFn(textLoc: TextLoc): Fn;
+  NewAnchoredFn(textLoc: TextLoc): Fn;
 
-	NewAnchoredFormattedObject(
-		objType: FO_Constant,
-		format: string,
-		textLoc: TextLoc
-	): Tbl | Var | XRef;
+  NewAnchoredFormattedObject(
+    objType: FO_Constant,
+    format: string,
+    textLoc: TextLoc
+  ): Tbl | Var | XRef;
 
-	NewAnchoredFormattedTbl(format: string, textLoc: TextLoc): Tbl;
+  NewAnchoredFormattedTbl(format: string, textLoc: TextLoc): Tbl;
 
-	NewAnchoredFormattedVar(format: string, textLoc: TextLoc): Var;
+  NewAnchoredFormattedVar(format: string, textLoc: TextLoc): Var;
 
-	NewAnchoredFormattedXRef(format: string, textLoc: TextLoc): XRef;
+  NewAnchoredFormattedXRef(format: string, textLoc: TextLoc): XRef;
 
-	NewAnchoredMarker(textLoc: TextLoc): Marker;
+  NewAnchoredMarker(textLoc: TextLoc): Marker;
 
-	NewAnchoredObject(
-		objType: FO_Constant,
-		textLoc: TextLoc
-	): AFrame | Fn | Marker | Tbl | TiApiClient;
+  NewAnchoredObject(
+    objType: FO_Constant,
+    textLoc: TextLoc
+  ): AFrame | Fn | Marker | Tbl | TiApiClient;
 
-	NewAnchoredTbl(textLoc: TextLoc): Tbl;
+  NewAnchoredTbl(textLoc: TextLoc): Tbl;
 
-	NewAnchoredTiApiClient(textLoc: TextLoc): TiApiClient;
+  NewAnchoredTiApiClient(textLoc: TextLoc): TiApiClient;
 
-	NewArc(parent: FMGraphic): Arc;
+  NewArc(parent: FMGraphic): Arc;
 
-	NewEllipse(parent: FMGraphic): Ellipse;
+  NewEllipse(parent: FMGraphic): Ellipse;
 
-	NewFlow(parent: FMGraphic): Flow;
+  NewFlow(parent: FMGraphic): Flow;
 
-	NewGraphicObject(objType: FO_Constant, parent: FMGraphic): FMGraphic;
+  NewGraphicObject(objType: FO_Constant, parent: FMGraphic): FMGraphic;
 
-	NewGroup(parent: FMGraphic): Group;
+  NewGroup(parent: FMGraphic): Group;
 
-	NewInlineComponentOfType(
-		inlineCompType: number,
-		tags: Strings,
-		hyperLinks: number,
-		textLocP: TextLoc
-	): void;
+  NewInlineComponentOfType(
+    inlineCompType: number,
+    tags: Strings,
+    hyperLinks: number,
+    textLocP: TextLoc
+  ): void;
 
-	NewInset(parent: FMGraphic): Inset;
+  NewInset(parent: FMGraphic): Inset;
 
-	NewIterator(...args: any): unknown;
+  NewIterator(...args: any): unknown;
 
-	NewLine(parent: FMGraphic): Line;
+  NewLine(parent: FMGraphic): Line;
 
-	NewMath(parent: FMGraphic): Math;
+  NewMath(parent: FMGraphic): Math;
 
-	NewMathML(parent: FMGraphic): MathML;
+  NewMathML(parent: FMGraphic): MathML;
 
-	NewNamedAttrCondExpr(name: string): AttrCondExpr;
+  NewNamedAttrCondExpr(name: string): AttrCondExpr;
 
-	NewNamedCharFmt(name: string): CharFmt;
+  NewNamedCharFmt(name: string): CharFmt;
 
-	NewNamedColor(name: string): Color;
+  NewNamedColor(name: string): Color;
 
-	NewNamedCombinedFontDefn(name: string): CombinedFontDefn;
+  NewNamedCombinedFontDefn(name: string): CombinedFontDefn;
 
-	NewNamedCondFmt(name: string): CondFmt;
+  NewNamedCondFmt(name: string): CondFmt;
 
-	NewNamedElementDef(name: string): ElementDef;
+  NewNamedElementDef(name: string): ElementDef;
 
-	NewNamedFmtChangeList(name: string): FmtChangeList;
+  NewNamedFmtChangeList(name: string): FmtChangeList;
 
-	NewNamedGraphicsFmt(name: string): GraphicsFmt;
+  NewNamedGraphicsFmt(name: string): GraphicsFmt;
 
-	NewNamedMarkerType(name: string): MarkerType;
+  NewNamedMarkerType(name: string): MarkerType;
 
-	NewNamedMasterPage(name: string): MasterPage;
+  NewNamedMasterPage(name: string): MasterPage;
 
-	NewNamedObject(objType: FO_Constant, name: string): FMNamedObject;
+  NewNamedObject(objType: FO_Constant, name: string): FMNamedObject;
 
-	NewNamedPgfFmt(name: string): PgfFmt;
+  NewNamedPgfFmt(name: string): PgfFmt;
 
-	NewNamedRefPage(name: string): RefPage;
+  NewNamedRefPage(name: string): RefPage;
 
-	NewNamedRulingFmt(name: string): RulingFmt;
+  NewNamedRulingFmt(name: string): RulingFmt;
 
-	NewNamedTblFmt(name: string): TblFmt;
+  NewNamedTblFmt(name: string): TblFmt;
 
-	NewNamedVarFmt(name: string): VarFmt;
+  NewNamedVarFmt(name: string): VarFmt;
 
-	NewNamedXRefFmt(name: string): XRefFmt;
+  NewNamedXRefFmt(name: string): XRefFmt;
 
-	NewPolygon(parent: FMGraphic): Polygon;
+  NewPolygon(parent: FMGraphic): Polygon;
 
-	NewPolyline(parent: FMGraphic): Polyline;
+  NewPolyline(parent: FMGraphic): Polyline;
 
-	NewRectangle(parent: FMGraphic): Rectangle;
+  NewRectangle(parent: FMGraphic): Rectangle;
 
-	NewRoundRect(parent: FMGraphic): RoundRect;
+  NewRoundRect(parent: FMGraphic): RoundRect;
 
-	NewSeriesBodyPage(previous: BodyPage): BodyPage;
+  NewSeriesBodyPage(previous: BodyPage): BodyPage;
 
-	NewSeriesObject(
-		objType: FO_Constant,
-		previous: FMSeriesObject
-	): FMSeriesObject;
+  NewSeriesObject(
+    objType: FO_Constant,
+    previous: FMSeriesObject
+  ): FMSeriesObject;
 
-	NewSeriesPgf(previous: Pgf): Pgf;
+  NewSeriesPgf(previous: Pgf): Pgf;
 
-	NewTable(
-		format: string,
-		numCols: number,
-		numBodyRows: number,
-		numHeaderRows: number,
-		numFooterRows: number,
-		textLoc: TextLoc
-	): Tbl | FrameErrorCode;
+  NewTable(
+    format: string,
+    numCols: number,
+    numBodyRows: number,
+    numHeaderRows: number,
+    numFooterRows: number,
+    textLoc: TextLoc
+  ): Tbl | FrameErrorCode;
 
-	NewTextFrame(parent: FMGraphic): TextFrame;
+  NewTextFrame(parent: FMGraphic): TextFrame;
 
-	NewTextLine(parent: FMGraphic): TextLine;
+  NewTextLine(parent: FMGraphic): TextLine;
 
-	NewUnanchoredFrame(parent: FMGraphic): UnanchoredFrame;
+  NewUnanchoredFrame(parent: FMGraphic): UnanchoredFrame;
 
-	Paste(): FrameErrorCode;
+  Paste(): FrameErrorCode;
 
-	PromoteElement(): FrameErrorCode;
+  PromoteElement(): FrameErrorCode;
 
-	QuickSelect(prompt: string, stringlist: Strings): number | FrameErrorCode;
+  QuickSelect(prompt: string, stringlist: Strings): number | FrameErrorCode;
 
-	ReEvaluateConditions(): FrameErrorCode;
+  ReEvaluateConditions(): FrameErrorCode;
 
-	Redisplay(): FrameErrorCode;
+  Redisplay(): FrameErrorCode;
 
-	Reformat(): FrameErrorCode;
+  Reformat(): FrameErrorCode;
 
-	Rehyphenate(): FrameErrorCode;
+  Rehyphenate(): FrameErrorCode;
 
-	ResetEqnSettings(): FrameErrorCode;
+  ResetEqnSettings(): FrameErrorCode;
 
-	ResetReferenceFrames(): FrameErrorCode;
+  ResetReferenceFrames(): FrameErrorCode;
 
-	RestartPgfNumbering(): FrameErrorCode;
+  RestartPgfNumbering(): FrameErrorCode;
 
-	Save(
-		saveAsName: string,
-		saveParams: PropVals,
-		saveReturnParams: PropVals
-	): Doc;
+  Save(
+    saveAsName: string,
+    saveParams: PropVals,
+    saveReturnParams: PropVals
+  ): Doc;
 
-	SaveAsHtml(...args: any): unknown;
+  SaveAsHtml(...args: any): unknown;
 
-	ScrollToText(textRange: TextRange): FrameErrorCode;
+  ScrollToText(textRange: TextRange): FrameErrorCode;
 
-	SetActiveBuildExpr(exprName: string): FrameErrorCode;
+  SetActiveBuildExpr(exprName: string): FrameErrorCode;
 
-	SetAttributeSimple(...args: any): unknown;
+  SetAttributeSimple(...args: any): unknown;
 
-	SetElementRange(propNum: number, setVal: ElementRange): void;
+  SetElementRange(propNum: number, setVal: ElementRange): void;
 
-	SetTextPropVal(textRange: TextRange, setVal: PropVals): void;
+  SetTextPropVal(textRange: TextRange, setVal: PropVals): void;
 
-	SetTextProps(textRange: TextRange, setVal: PropVals): void;
+  SetTextProps(textRange: TextRange, setVal: PropVals): void;
 
-	SetTextVal(textRange: TextRange, propNum: number, setVal: PropVals): void;
+  SetTextVal(textRange: TextRange, propNum: number, setVal: PropVals): void;
 
-	SilentPrintDoc(): FrameErrorCode;
+  SilentPrintDoc(): FrameErrorCode;
 
-	SimpleImportElementDefs(
-		fromDocOrBook: Book | Doc,
-		importFlags: number
-	): FrameErrorCode;
+  SimpleImportElementDefs(
+    fromDocOrBook: Book | Doc,
+    importFlags: number
+  ): FrameErrorCode;
 
-	SimpleImportFormats(fromDoc: Doc, formatFlags: number): FrameErrorCode;
+  SimpleImportFormats(fromDoc: Doc, formatFlags: number): FrameErrorCode;
 
-	SimpleSave(saveAsName: string, interactive: boolean): Doc;
+  SimpleSave(saveAsName: string, interactive: boolean): Doc;
 
-	SplitElement(): void;
+  SplitElement(): void;
 
-	TextLocToElementLoc(tloc: TextLoc): ElementLoc;
+  TextLocToElementLoc(tloc: TextLoc): ElementLoc;
 
-	TrackChangesAcceptAll(): FrameErrorCode;
+  TrackChangesAcceptAll(): FrameErrorCode;
 
-	TrackChangesRejectAll(): FrameErrorCode;
+  TrackChangesRejectAll(): FrameErrorCode;
 
-	UnWrapElement(): void;
+  UnWrapElement(): void;
 
-	UndoCancel(...args: any): unknown;
+  UndoCancel(...args: any): unknown;
 
-	UndoEndCheckPoint(...args: any): unknown;
+  UndoEndCheckPoint(...args: any): unknown;
 
-	UndoStartCheckPoint(...args: any): unknown;
+  UndoStartCheckPoint(...args: any): unknown;
 
-	UpdateDITAReference(type: number, flags: number): void;
+  UpdateDITAReference(type: number, flags: number): void;
 
-	UpdateDITAReferences(flags: number): void;
+  UpdateDITAReferences(flags: number): void;
 
-	UpdateVariables(): FrameErrorCode;
+  UpdateVariables(): FrameErrorCode;
 
-	UpdateXRef(srcDoc: Doc, xref: XRef): FrameErrorCode;
+  UpdateXRef(srcDoc: Doc, xref: XRef): FrameErrorCode;
 
-	UpdateXRefs(updateXRefFlags: number): FrameErrorCode;
+  UpdateXRefs(updateXRefFlags: number): FrameErrorCode;
 }
