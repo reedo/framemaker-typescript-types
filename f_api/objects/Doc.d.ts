@@ -662,7 +662,7 @@ interface Doc extends FMNamedObject {
 
   Underlining: number;
 
-  Untouchable: number;
+  Untouchable: boolean;
 
   UseInitialStructure: number;
 
