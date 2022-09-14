@@ -2,37 +2,37 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface XRef extends FMUniqueObject {
-	readonly Element: Element;
+  readonly Element: Element;
 
-	Locked: boolean;
+  Locked: boolean;
 
-	readonly NextXRefInDoc: XRef;
+  readonly NextXRefInDoc: XRef;
 
-	readonly TextRange: TextRange;
+  readonly TextRange: TextRange;
 
-	UserString: string;
+  UserString: string;
 
-	XRefAltText: string;
+  XRefAltText: string;
 
-	XRefClientName: string;
+  XRefClientName: string;
 
-	XRefClientType: string;
+  XRefClientType: string;
 
-	XRefFile: string;
+  XRefFile: string;
 
-	XRefFmt: XRefFmt;
+  XRefFmt: XRefFmt;
 
-	readonly XRefIsUnresolved: boolean;
+  readonly XRefIsUnresolved: boolean;
 
-	XRefSrcElemNonUniqueId: string;
+  XRefSrcElemNonUniqueId: string;
 
-	XRefSrcIsElem: boolean;
+  XRefSrcIsElem: boolean;
 
-	XRefSrcText: string;
+  XRefSrcText: string;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 
-	GetText(flags: number): TextItems;
+  GetText(flags: number): TextItems;
 
-	GetText2(flags: number, flags2: number): TextItems;
+  GetText2(flags: number, flags2: number): TextItems;
 }

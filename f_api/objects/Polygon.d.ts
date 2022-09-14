@@ -2,9 +2,9 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Polygon extends FMGraphic {
-	NumPoints: number;
+  NumPoints: number;
 
-	Points: Points;
+  Points: Points;
 
-	PolyIsBezier: boolean;
+  PolyIsBezier: boolean;
 }

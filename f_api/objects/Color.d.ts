@@ -2,33 +2,33 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Color extends FMNamedObject {
-	Black: number;
+  Black: number;
 
-	ColorOverprint: number;
+  ColorOverprint: number;
 
-	ColorPrintCtl: number;
+  ColorPrintCtl: number;
 
-	ColorTintPercent: number;
+  ColorTintPercent: number;
 
-	ColorViewCtl: number;
+  ColorViewCtl: number;
 
-	Cyan: number;
+  Cyan: number;
 
-	FamilyName: string;
+  FamilyName: string;
 
-	InkName: string;
+  InkName: string;
 
-	Magenta: number;
+  Magenta: number;
 
-	readonly NextColorInDoc: Color;
+  readonly NextColorInDoc: Color;
 
-	ReservedColor: number;
+  ReservedColor: number;
 
-	TintBaseColor: Color;
+  TintBaseColor: Color;
 
-	UserString: string;
+  UserString: string;
 
-	Yellow: number;
+  Yellow: number;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

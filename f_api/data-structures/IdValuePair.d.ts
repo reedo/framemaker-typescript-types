@@ -3,17 +3,17 @@
 
 /** A single integer or string value. */
 interface IdValuePair {
-	/** The ID. */
-	id: number;
+  /** The ID. */
+  id: number;
 
-	/** The value. */
-	value: Value;
+  /** The value. */
+  value: Value;
 }
 
 interface IdValuePairConstructor {
-	new (): IdValuePair;
-	new (id: number, value: Value): IdValuePair;
-	readonly prototype: IdValuePair;
+  new (): IdValuePair;
+  new (id: number, value: Value): IdValuePair;
+  readonly prototype: IdValuePair;
 }
 
 declare const IdValuePair: IdValuePairConstructor;

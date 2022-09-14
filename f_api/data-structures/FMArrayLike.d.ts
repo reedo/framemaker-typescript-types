@@ -3,48 +3,48 @@
 
 /** Array-like collection of FrameMaker objects or data structures. */
 interface FMObjectArray<T> {
-	/**
-	 * The original array is unchanged. If an array is provided as a parameter to `concat()`, each of its elements are appended as separate array elements at the end of the new array.
-	 *
-	 * @param value Can also be arrays.
-	 *
-	 * @returns A new array, the result of concatenation the given values to the end of the original array.
-	 */
-	concat(value: T | T[] | FMObjectArray<T>): FMObjectArray<T>;
+  /**
+   * The original array is unchanged. If an array is provided as a parameter to `concat()`, each of its elements are appended as separate array elements at the end of the new array.
+   *
+   * @param value Can also be arrays.
+   *
+   * @returns A new array, the result of concatenation the given values to the end of the original array.
+   */
+  concat(value: T | T[] | FMObjectArray<T>): FMObjectArray<T>;
 
-	/** The length of the array. */
-	len: number;
+  /** The length of the array. */
+  len: number;
 
-	/** The length of the array. */
-	length: number;
+  /** The length of the array. */
+  length: number;
 
-	/**
-	 * @returns The last element from the array.
-	 */
-	pop(): T | undefined;
+  /**
+   * @returns The last element from the array.
+   */
+  pop(): T | undefined;
 
-	/**
-	 * Appends a new element to an array.
-	 *
-	 * @param value The value to push into the array.
-	 *
-	 * @returns The new length of the array.
-	 */
-	push(value: T): number;
+  /**
+   * Appends a new element to an array.
+   *
+   * @param value The value to push into the array.
+   *
+   * @returns The new length of the array.
+   */
+  push(value: T): number;
 
-	/**
-	 * @returns A string representation of an array.
-	 */
-	toString(): string;
+  /**
+   * @returns A string representation of an array.
+   */
+  toString(): string;
 
-	[n: number]: T;
+  [n: number]: T;
 }
 
 interface FMObjectArrayConstructor<T> {
-	new (): FMObjectArray<T>;
-	new (items: T[] | FMObjectArray<T>): FMObjectArray<T>;
-	new (...items: T[]): FMObjectArray<T>;
-	readonly prototype: FMObjectArray<T>;
+  new (): FMObjectArray<T>;
+  new (items: T[] | FMObjectArray<T>): FMObjectArray<T>;
+  new (...items: T[]): FMObjectArray<T>;
+  readonly prototype: FMObjectArray<T>;
 }
 
 type Attributes = FMObjectArray<Attribute>;
@@ -65,7 +65,7 @@ declare const CombinedFonts: CombinedFontsConstructor;
 
 type ElementCatalogEntries = FMObjectArray<ElementCatalogEntry>;
 type ElementCatalogEntriesConstructor =
-	FMObjectArrayConstructor<ElementCatalogEntry>;
+  FMObjectArrayConstructor<ElementCatalogEntry>;
 declare const ElementCatalogEntries: ElementCatalogEntriesConstructor;
 
 type Fonts = FMObjectArray<Font>;

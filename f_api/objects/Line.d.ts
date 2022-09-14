@@ -2,7 +2,7 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Line extends FMGraphic {
-	NumPoints: number;
+  NumPoints: number;
 
-	Points: Points;
+  Points: Points;
 }

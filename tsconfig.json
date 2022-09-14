@@ -1,7 +1,7 @@
 {
-	"compilerOptions": {
-		"module": "none",
-		"strict": true,
-		"noLib": true
-	}
+  "compilerOptions": {
+    "module": "none",
+    "strict": true,
+    "noLib": true
+  }
 }

@@ -2,15 +2,15 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface TiFlow extends FMTiObject {
-	TiFlowName: string;
+  TiFlowName: string;
 
-	TiFlowPageSpace: number;
+  TiFlowPageSpace: number;
 
-	TiFormat: number;
+  TiFormat: number;
 
-	TiMainFlow: boolean;
+  TiMainFlow: boolean;
 
-	TiRemovePageBreaks: boolean;
+  TiRemovePageBreaks: boolean;
 
-	TiRemoveOverrides: boolean;
+  TiRemoveOverrides: boolean;
 }

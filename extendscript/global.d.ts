@@ -4,10 +4,8 @@
 // ---- LOCALISATION -----
 
 interface Localization {
-
-	/** A locale name is an identifier string in that contains an ISO 639 language specifier, and optionally an ISO 3166 region specifier, separated from the language specifier by an underscore. */
-	[localeName: string]: string;
-
+  /** A locale name is an identifier string in that contains an ISO 639 language specifier, and optionally an ISO 3166 region specifier, separated from the language specifier by an underscore. */
+  [localeName: string]: string;
 }
 
 /**
@@ -43,7 +41,11 @@ declare function localize(zString: string): string;
  * @param title A string to appear as the title of the dialog. The default title string is "Script Alert".
  * @param errorIcon When true, the platform-standard alert icon is replaced by the platform-standard error icon in the dialog. Default is false.
  */
-declare function alert(message: string, title?: string, errorIcon?: boolean): undefined;
+declare function alert(
+  message: string,
+  title?: string,
+  errorIcon?: boolean
+): undefined;
 
 /**
  * Displays a platform-standard dialog containing a short message and two buttons labeled __Yes__ and __No__.
@@ -54,7 +56,11 @@ declare function alert(message: string, title?: string, errorIcon?: boolean): un
  *
  * @returns True if the user clicked __Yes__, false if the user clicked __No__.
  */
-declare function confirm(message: string, noAsDflt?: boolean, title?: string): boolean;
+declare function confirm(
+  message: string,
+  noAsDflt?: boolean,
+  title?: string
+): boolean;
 
 /**
  * Displays a platform-standard dialog containing a short message, a text edit field, and two buttons labeled __OK__ and __Cancel__.
@@ -65,7 +71,11 @@ declare function confirm(message: string, noAsDflt?: boolean, title?: string): b
  *
  * @returns The value of the text edit field if the user clicked __OK__, `null` if the user clicked __Cancel__.
  */
-declare function prompt(message: string, preset: string, title?: string): string | null;
+declare function prompt(
+  message: string,
+  preset: string,
+  title?: string
+): string | null;
 
 // ----- XML RELATED FUNCTIONS -----
 

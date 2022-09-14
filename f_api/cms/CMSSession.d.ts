@@ -2,15 +2,15 @@
 // Definitions by: Dan Reed <https://danreed.dev>
 
 interface CMSSession {
-	CMSSession: any;
+  CMSSession: any;
 
-	CMSLogout(): void;
+  CMSLogout(): void;
 
-	GetCMSObjectFromPath(urlPath: string): CMSObject;
+  GetCMSObjectFromPath(urlPath: string): CMSObject;
 
-	CMSShowBrowseRepositoryUI(showContainerOnly: boolean): CMSObject;
+  CMSShowBrowseRepositoryUI(showContainerOnly: boolean): CMSObject;
 
-	CMSCreateObject(): CMSObject;
+  CMSCreateObject(): CMSObject;
 
-	CMSGetCmsIdFromSession(): CMSRegistration;
+  CMSGetCmsIdFromSession(): CMSRegistration;
 }

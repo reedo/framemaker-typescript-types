@@ -2,129 +2,129 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Element extends FMUniqueObject {
-	AllowAsSpecialCase: boolean;
+  AllowAsSpecialCase: boolean;
 
-	AttrDisplay: number;
+  AttrDisplay: number;
 
-	AttributeValueInvalid: boolean;
+  AttributeValueInvalid: boolean;
 
-	Attributes: Attributes;
+  Attributes: Attributes;
 
-	AttributesEx: AttributesEx;
+  AttributesEx: AttributesEx;
 
-	readonly BookComponent: BookComponent;
+  readonly BookComponent: BookComponent;
 
-	readonly BookComponentMissing: boolean;
+  readonly BookComponentMissing: boolean;
 
-	readonly ContentIsLooselyValid: boolean;
+  readonly ContentIsLooselyValid: boolean;
 
-	readonly ContentIsStrictlyValid: boolean;
+  readonly ContentIsStrictlyValid: boolean;
 
-	readonly ContentMustBeEmpty: boolean;
+  readonly ContentMustBeEmpty: boolean;
 
-	readonly ContentNeededAtBegin: boolean;
+  readonly ContentNeededAtBegin: boolean;
 
-	readonly ContentNeededAtEnd: boolean;
+  readonly ContentNeededAtEnd: boolean;
 
-	readonly ContextLabel: string;
+  readonly ContextLabel: string;
 
-	Direction: number;
+  Direction: number;
 
-	ElementDef: ElementDef;
+  ElementDef: ElementDef;
 
-	ElementIsCollapsed: boolean;
+  ElementIsCollapsed: boolean;
 
-	readonly ElementIsExcludedInContext: boolean;
+  readonly ElementIsExcludedInContext: boolean;
 
-	readonly ElementIsInvalidInParent: boolean;
+  readonly ElementIsInvalidInParent: boolean;
 
-	readonly ElementIsInvalidInPosition: boolean;
+  readonly ElementIsInvalidInPosition: boolean;
 
-	readonly ElementIsTopicGroup: boolean;
+  readonly ElementIsTopicGroup: boolean;
 
-	readonly ElementIsTopicHead: boolean;
+  readonly ElementIsTopicHead: boolean;
 
-	readonly ElementIsTopicRef: boolean;
+  readonly ElementIsTopicRef: boolean;
 
-	readonly ElementIsUndefined: boolean;
+  readonly ElementIsUndefined: boolean;
 
-	ElementMarkedForNamedDestination: boolean;
+  ElementMarkedForNamedDestination: boolean;
 
-	readonly ElementType: ElementType;
+  readonly ElementType: ElementType;
 
-	readonly ErrorInBookComponent: boolean;
+  readonly ErrorInBookComponent: boolean;
 
-	readonly FirstChildElement: Element;
+  readonly FirstChildElement: Element;
 
-	readonly FormatOverride: boolean;
+  readonly FormatOverride: boolean;
 
-	readonly HoleBeforeElement: boolean;
+  readonly HoleBeforeElement: boolean;
 
-	readonly InvalidHighestLevel: boolean;
+  readonly InvalidHighestLevel: boolean;
 
-	readonly LastChildElement: Element;
+  readonly LastChildElement: Element;
 
-	readonly MatchingFirstPgfClauses: FMObjectArray<FmtRuleClause>;
+  readonly MatchingFirstPgfClauses: FMObjectArray<FmtRuleClause>;
 
-	readonly MatchingLastPgfClauses: FMObjectArray<FmtRuleClause>;
+  readonly MatchingLastPgfClauses: FMObjectArray<FmtRuleClause>;
 
-	readonly MatchingObjectClauses: FMObjectArray<FmtRuleClause>;
+  readonly MatchingObjectClauses: FMObjectArray<FmtRuleClause>;
 
-	readonly MatchingPrefixClauses: FMObjectArray<FmtRuleClause>;
+  readonly MatchingPrefixClauses: FMObjectArray<FmtRuleClause>;
 
-	readonly MatchingSuffixClauses: FMObjectArray<FmtRuleClause>;
+  readonly MatchingSuffixClauses: FMObjectArray<FmtRuleClause>;
 
-	readonly MatchingTextClauses: FMObjectArray<FmtRuleClause>;
+  readonly MatchingTextClauses: FMObjectArray<FmtRuleClause>;
 
-	Namespace: Strings;
+  Namespace: Strings;
 
-	readonly NamespaceScope: Element;
+  readonly NamespaceScope: Element;
 
-	readonly NextDITAConrefElementInDoc: Element;
+  readonly NextDITAConrefElementInDoc: Element;
 
-	readonly NextDITALinkElementInDoc: Element;
+  readonly NextDITALinkElementInDoc: Element;
 
-	readonly NextDITATopicrefElementInDoc: Element;
+  readonly NextDITATopicrefElementInDoc: Element;
 
-	readonly NextDITATopicsetrefElementInDoc: Element;
+  readonly NextDITATopicsetrefElementInDoc: Element;
 
-	readonly NextDITAXrefElementInDoc: Element;
+  readonly NextDITAXrefElementInDoc: Element;
 
-	readonly NextElementDFS: Element;
+  readonly NextElementDFS: Element;
 
-	readonly NextInvalidElement: Element;
+  readonly NextInvalidElement: Element;
 
-	readonly NextSiblingElement: Element;
+  readonly NextSiblingElement: Element;
 
-	readonly NumNamespaces: number;
+  readonly NumNamespaces: number;
 
-	readonly Object: FMObject;
+  readonly Object: FMObject;
 
-	readonly ParentElement: Element;
+  readonly ParentElement: Element;
 
-	readonly PrevElementDFS: Element;
+  readonly PrevElementDFS: Element;
 
-	readonly PrevSiblingElement: Element;
+  readonly PrevSiblingElement: Element;
 
-	ResolvedDirection: number;
+  ResolvedDirection: number;
 
-	readonly TextIsInvalidInElement: boolean;
+  readonly TextIsInvalidInElement: boolean;
 
-	readonly TextRange: TextRange;
+  readonly TextRange: TextRange;
 
-	readonly TopicRefAbsoluteFilePath: string;
+  readonly TopicRefAbsoluteFilePath: string;
 
-	UserString: string;
+  UserString: string;
 
-	readonly ValidationFlags: number;
+  readonly ValidationFlags: number;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 
-	GetAttributes(): Attributes;
+  GetAttributes(): Attributes;
 
-	GetText(flags: number): TextItems;
+  GetText(flags: number): TextItems;
 
-	GetText2(flags: number, flags2: number): TextItems;
+  GetText2(flags: number, flags2: number): TextItems;
 
-	UpdateDITAReference(): FrameErrorCode;
+  UpdateDITAReference(): FrameErrorCode;
 }

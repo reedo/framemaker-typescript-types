@@ -3,28 +3,28 @@
 
 /** Describes a single attribute. */
 interface Attribute {
-	/** Allow error as special case to suppress reporting by validation. */
-	allow: boolean;
+  /** Allow error as special case to suppress reporting by validation. */
+  allow: boolean;
 
-	/** The name of the attribute. */
-	name: string;
+  /** The name of the attribute. */
+  name: string;
 
-	/** The validation error flags. */
-	readonly valflags: number;
+  /** The validation error flags. */
+  readonly valflags: number;
 
-	/** The attribute values. */
-	values: Strings;
+  /** The attribute values. */
+  values: Strings;
 }
 
 interface AttributeConstructor {
-	new (): Attribute;
-	new (
-		name: string,
-		values: Strings,
-		valflags: number,
-		allow: boolean
-	): Attribute;
-	readonly prototype: Attribute;
+  new (): Attribute;
+  new (
+    name: string,
+    values: Strings,
+    valflags: number,
+    allow: boolean
+  ): Attribute;
+  readonly prototype: Attribute;
 }
 
 declare const Attribute: AttributeConstructor;

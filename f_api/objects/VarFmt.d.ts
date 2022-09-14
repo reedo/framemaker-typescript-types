@@ -2,11 +2,11 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface VarFmt extends FMNamedObject {
-	Fmt: string;
+  Fmt: string;
 
-	readonly NextVarFmtInDoc: VarFmt;
+  readonly NextVarFmtInDoc: VarFmt;
 
-	readonly SystemVar: number;
+  readonly SystemVar: number;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

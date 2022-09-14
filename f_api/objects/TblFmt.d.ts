@@ -2,97 +2,97 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface TblFmt extends FMNamedObject {
-	Direction: number;
+  Direction: number;
 
-	readonly NextTblFmtInDoc: TblFmt;
+  readonly NextTblFmtInDoc: TblFmt;
 
-	OrphanRows: number;
+  OrphanRows: number;
 
-	readonly ResolvedDirection: number;
+  readonly ResolvedDirection: number;
 
-	TblAlignment: number;
+  TblAlignment: number;
 
-	TblBodyFirstColor: Color;
+  TblBodyFirstColor: Color;
 
-	TblBodyFirstFill: number;
+  TblBodyFirstFill: number;
 
-	TblBodyFirstPeriod: number;
+  TblBodyFirstPeriod: number;
 
-	TblBodyNextColor: Color;
+  TblBodyNextColor: Color;
 
-	TblBodyNextFill: number;
+  TblBodyNextFill: number;
 
-	TblBodyNextPeriod: number;
+  TblBodyNextPeriod: number;
 
-	TblBodyRowRuling: RulingFmt;
+  TblBodyRowRuling: RulingFmt;
 
-	TblBodyRowRulingPeriod: number;
+  TblBodyRowRulingPeriod: number;
 
-	TblBodyShadeBy: boolean;
+  TblBodyShadeBy: boolean;
 
-	TblBottomRuling: RulingFmt;
+  TblBottomRuling: RulingFmt;
 
-	TblCatalogEntry: boolean;
+  TblCatalogEntry: boolean;
 
-	TblCellBottomMargin: number;
+  TblCellBottomMargin: number;
 
-	TblCellLeftMargin: number;
+  TblCellLeftMargin: number;
 
-	TblCellRightMargin: number;
+  TblCellRightMargin: number;
 
-	TblCellTopMargin: number;
+  TblCellTopMargin: number;
 
-	TblColRuling: RulingFmt;
+  TblColRuling: RulingFmt;
 
-	TblColRulingPeriod: number;
+  TblColRulingPeriod: number;
 
-	TblHFColor: Color;
+  TblHFColor: Color;
 
-	TblHFFill: number;
+  TblHFFill: number;
 
-	TblHFRowRuling: RulingFmt;
+  TblHFRowRuling: RulingFmt;
 
-	TblHFSeparatorRuling: RulingFmt;
+  TblHFSeparatorRuling: RulingFmt;
 
-	TblInitNumBodyRows: number;
+  TblInitNumBodyRows: number;
 
-	TblInitNumCols: number;
+  TblInitNumCols: number;
 
-	TblInitNumFRows: number;
+  TblInitNumFRows: number;
 
-	TblInitNumHRows: number;
+  TblInitNumHRows: number;
 
-	TblLastBodyRuling: boolean;
+  TblLastBodyRuling: boolean;
 
-	TblLeftIndent: number;
+  TblLeftIndent: number;
 
-	TblLeftRuling: RulingFmt;
+  TblLeftRuling: RulingFmt;
 
-	TblNumbering: number;
+  TblNumbering: number;
 
-	TblOtherBodyRowRuling: RulingFmt;
+  TblOtherBodyRowRuling: RulingFmt;
 
-	TblOtherColRuling: RulingFmt;
+  TblOtherColRuling: RulingFmt;
 
-	TblPlacement: number;
+  TblPlacement: number;
 
-	TblRightIndent: number;
+  TblRightIndent: number;
 
-	TblRightRuling: RulingFmt;
+  TblRightRuling: RulingFmt;
 
-	TblSpaceAbove: number;
+  TblSpaceAbove: number;
 
-	TblSpaceBelow: number;
+  TblSpaceBelow: number;
 
-	TblTag: string;
+  TblTag: string;
 
-	TblTitleGap: number;
+  TblTitleGap: number;
 
-	TblTitlePosition: number;
+  TblTitlePosition: number;
 
-	TblTopRuling: RulingFmt;
+  TblTopRuling: RulingFmt;
 
-	UserString: string;
+  UserString: string;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

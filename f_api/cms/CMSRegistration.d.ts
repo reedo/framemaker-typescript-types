@@ -2,13 +2,13 @@
 // Definitions by: Dan Reed <https://danreed.dev>
 
 interface CMSRegistration {
-	CMSRegistration: any;
+  CMSRegistration: any;
 
-	CMSGetCMSInfo(cmsId: number): CMSInfo;
+  CMSGetCMSInfo(cmsId: number): CMSInfo;
 
-	CMSConfigLoginUI(
-		cmsId: number,
-		userFields: Strings,
-		userLoginUI: boolean
-	): void;
+  CMSConfigLoginUI(
+    cmsId: number,
+    userFields: Strings,
+    userLoginUI: boolean
+  ): void;
 }

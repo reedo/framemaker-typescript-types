@@ -2,5 +2,5 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Ellipse extends FMGraphic {
-	readonly RectangleIsSmoothed: boolean;
+  readonly RectangleIsSmoothed: boolean;
 }

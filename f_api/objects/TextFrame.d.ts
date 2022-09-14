@@ -2,45 +2,45 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface TextFrame extends FMGraphic {
-	ColGapWidth: number;
+  ColGapWidth: number;
 
-	ColumnsAreBalanced: boolean;
+  ColumnsAreBalanced: boolean;
 
-	readonly FirstAFrame: AFrame;
+  readonly FirstAFrame: AFrame;
 
-	readonly FirstCell: Cell;
+  readonly FirstCell: Cell;
 
-	readonly FirstFn: Fn;
+  readonly FirstFn: Fn;
 
-	readonly FirstPgf: Pgf;
+  readonly FirstPgf: Pgf;
 
-	readonly FirstSubCol: SubCol;
+  readonly FirstSubCol: SubCol;
 
-	readonly Flow: Flow;
+  readonly Flow: Flow;
 
-	readonly LastAFrame: AFrame;
+  readonly LastAFrame: AFrame;
 
-	readonly LastCell: Cell;
+  readonly LastCell: Cell;
 
-	readonly LastFn: Fn;
+  readonly LastFn: Fn;
 
-	readonly LastPgf: Pgf;
+  readonly LastPgf: Pgf;
 
-	readonly LastSubCol: SubCol;
+  readonly LastSubCol: SubCol;
 
-	NextTextFrameInFlow: TextFrame;
+  NextTextFrameInFlow: TextFrame;
 
-	NumColumns: number;
+  NumColumns: number;
 
-	PrevTextFrameInFlow: TextFrame;
+  PrevTextFrameInFlow: TextFrame;
 
-	SideHeadGap: number;
+  SideHeadGap: number;
 
-	SideHeadPlacement: number;
+  SideHeadPlacement: number;
 
-	SideHeadWidth: number;
+  SideHeadWidth: number;
 
-	GetText(flags: number): TextItems;
+  GetText(flags: number): TextItems;
 
-	GetText2(flags: number, flags2: number): TextItems;
+  GetText2(flags: number, flags2: number): TextItems;
 }

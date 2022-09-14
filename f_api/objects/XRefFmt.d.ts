@@ -2,9 +2,9 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface XRefFmt extends FMNamedObject {
-	Fmt: string;
+  Fmt: string;
 
-	readonly NextXRefFmtInDoc: XRefFmt;
+  readonly NextXRefFmtInDoc: XRefFmt;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

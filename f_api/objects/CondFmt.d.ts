@@ -2,23 +2,23 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface CondFmt extends FMNamedObject {
-	BkColor: Color;
+  BkColor: Color;
 
-	CondFmtIsShown: boolean;
+  CondFmtIsShown: boolean;
 
-	readonly NextCondFmtInDoc: CondFmt;
+  readonly NextCondFmtInDoc: CondFmt;
 
-	SepOverride: Color;
+  SepOverride: Color;
 
-	StyleOverride: number;
+  StyleOverride: number;
 
-	UseBkColor: boolean;
+  UseBkColor: boolean;
 
-	UseSepOverride: boolean;
+  UseSepOverride: boolean;
 
-	UserString: string;
+  UserString: string;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 
-	DeleteCondTag(...args: any): unknown;
+  DeleteCondTag(...args: any): unknown;
 }

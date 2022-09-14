@@ -2,5 +2,5 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Rectangle extends FMGraphic {
-	RectangleIsSmoothed: number;
+  RectangleIsSmoothed: number;
 }

@@ -2,19 +2,19 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface RulingFmt extends FMNamedObject {
-	readonly NextRulingFmtInDoc: RulingFmt;
+  readonly NextRulingFmtInDoc: RulingFmt;
 
-	Pen: number;
+  Pen: number;
 
-	RulingGap: number;
+  RulingGap: number;
 
-	RulingLines: number;
+  RulingLines: number;
 
-	RulingPenWidth: number;
+  RulingPenWidth: number;
 
-	RulingSep: Color;
+  RulingSep: Color;
 
-	UserString: string;
+  UserString: string;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

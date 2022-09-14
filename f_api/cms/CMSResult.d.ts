@@ -2,11 +2,11 @@
 // Definitions by: Dan Reed <https://danreed.dev>
 
 interface CMSResult {
-	status: number;
+  status: number;
 
-	opResult: number;
+  opResult: number;
 
-	message: String;
+  message: String;
 
-	cmsItems: CMSObject;
+  cmsItems: CMSObject;
 }

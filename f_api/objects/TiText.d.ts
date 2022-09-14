@@ -2,7 +2,7 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface TiText extends FMTiObject {
-	TiEOLisEOP: boolean;
+  TiEOLisEOP: boolean;
 
-	TiTextEncoding: string;
+  TiTextEncoding: string;
 }

@@ -3,12 +3,12 @@
 
 /** Any FrameMaker frame object. */
 interface Frame extends FMGraphic {
-	/** @todo UNDOCUMENTED */
-	ApplyFitToFrame(): void;
+  /** @todo UNDOCUMENTED */
+  ApplyFitToFrame(): void;
 
-	/** First object in the frame (backmost object). */
-	FirstGraphicInFrame: FMGraphic;
+  /** First object in the frame (backmost object). */
+  FirstGraphicInFrame: FMGraphic;
 
-	/** Last object in the frame (frontmost object). */
-	LastGraphicInFrame: FMGraphic;
+  /** Last object in the frame (frontmost object). */
+  LastGraphicInFrame: FMGraphic;
 }

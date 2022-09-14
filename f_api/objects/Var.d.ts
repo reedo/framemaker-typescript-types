@@ -2,21 +2,21 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Var extends FMUniqueObject {
-	readonly Element: Element;
+  readonly Element: Element;
 
-	Locked: boolean;
+  Locked: boolean;
 
-	readonly NextVarInDoc: Var;
+  readonly NextVarInDoc: Var;
 
-	readonly TextRange: TextRange;
+  readonly TextRange: TextRange;
 
-	UserString: string;
+  UserString: string;
 
-	VarFmt: VarFmt;
+  VarFmt: VarFmt;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 
-	GetText(flags: number): TextItems;
+  GetText(flags: number): TextItems;
 
-	GetText2(flags: number, flags2: number): TextItems;
+  GetText2(flags: number, flags2: number): TextItems;
 }

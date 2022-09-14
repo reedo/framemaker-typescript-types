@@ -2,19 +2,19 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface MasterPage extends FMNamedObject {
-	readonly PageFrame: UnanchoredFrame;
+  readonly PageFrame: UnanchoredFrame;
 
-	readonly PageHeight: number;
+  readonly PageHeight: number;
 
-	readonly PageNext: MasterPage;
+  readonly PageNext: MasterPage;
 
-	readonly PageNum: number;
+  readonly PageNum: number;
 
-	readonly PagePrev: MasterPage;
+  readonly PagePrev: MasterPage;
 
-	readonly PageWidth: number;
+  readonly PageWidth: number;
 
-	ApplyPageLayout(srcPage: Page): FrameErrorCode;
+  ApplyPageLayout(srcPage: Page): FrameErrorCode;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

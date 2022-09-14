@@ -2,101 +2,101 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface CharFmt extends FMNamedObject {
-	BkColor: Color;
+  BkColor: Color;
 
-	Capitalization: number;
+  Capitalization: number;
 
-	ChangeBar: boolean;
+  ChangeBar: boolean;
 
-	CharTag: string;
+  CharTag: string;
 
-	Color: Color;
+  Color: Color;
 
-	CombinedFontFamily: CombinedFontDefn;
+  CombinedFontFamily: CombinedFontDefn;
 
-	FontAngle: number;
+  FontAngle: number;
 
-	readonly FontEncodingName: string;
+  readonly FontEncodingName: string;
 
-	FontFamily: number;
+  FontFamily: number;
 
-	FontPlatformName: string;
+  FontPlatformName: string;
 
-	FontPostScriptName: string;
+  FontPostScriptName: string;
 
-	FontSize: number;
+  FontSize: number;
 
-	FontVariation: number;
+  FontVariation: number;
 
-	FontWeight: number;
+  FontWeight: number;
 
-	KernX: number;
+  KernX: number;
 
-	KernY: number;
+  KernY: number;
 
-	Language: number;
+  Language: number;
 
-	readonly NextCharFmtInDoc: CharFmt;
+  readonly NextCharFmtInDoc: CharFmt;
 
-	Overline: boolean;
+  Overline: boolean;
 
-	PairKern: boolean;
+  PairKern: boolean;
 
-	Position: number;
+  Position: number;
 
-	ReviewTime: number;
+  ReviewTime: number;
 
-	ReviewerName: object;
+  ReviewerName: object;
 
-	Spread: number;
+  Spread: number;
 
-	Stretch: number;
+  Stretch: number;
 
-	Strikethrough: boolean;
+  Strikethrough: boolean;
 
-	Underlining: number;
+  Underlining: number;
 
-	UseBkColor: boolean;
+  UseBkColor: boolean;
 
-	UseCapitalization: boolean;
+  UseCapitalization: boolean;
 
-	UseChangeBar: boolean;
+  UseChangeBar: boolean;
 
-	UseColor: boolean;
+  UseColor: boolean;
 
-	UseFontAngle: boolean;
+  UseFontAngle: boolean;
 
-	UseFontFamily: boolean;
+  UseFontFamily: boolean;
 
-	UseFontSize: boolean;
+  UseFontSize: boolean;
 
-	UseFontVariation: boolean;
+  UseFontVariation: boolean;
 
-	UseFontWeight: boolean;
+  UseFontWeight: boolean;
 
-	UseKernX: boolean;
+  UseKernX: boolean;
 
-	UseKernY: boolean;
+  UseKernY: boolean;
 
-	UseOverline: boolean;
+  UseOverline: boolean;
 
-	UsePairKern: boolean;
+  UsePairKern: boolean;
 
-	UsePosition: boolean;
+  UsePosition: boolean;
 
-	UseSpread: boolean;
+  UseSpread: boolean;
 
-	UseStretch: boolean;
+  UseStretch: boolean;
 
-	UseStrikethrough: boolean;
+  UseStrikethrough: boolean;
 
-	UseUnderlining: boolean;
+  UseUnderlining: boolean;
 
-	UserString: string;
+  UserString: string;
 
-	WesternFontPlatformName: string;
+  WesternFontPlatformName: string;
 
-	WesternFontPostScriptName: string;
+  WesternFontPostScriptName: string;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

@@ -2,9 +2,9 @@
 // Definitions by: Dan Reed <https://danreed.dev>
 
 interface CMSMenuItem {
-	id: number;
+  id: number;
 
-	name: string;
+  name: string;
 
-	flags: number;
+  flags: number;
 }

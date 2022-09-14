@@ -2,23 +2,23 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface CombinedFontDefn extends FMNamedObject {
-	BaseFamily: number;
+  BaseFamily: number;
 
-	readonly FontEncodingName: string;
+  readonly FontEncodingName: string;
 
-	readonly NextCombinedFontDefnInDoc: CombinedFontDefn;
+  readonly NextCombinedFontDefnInDoc: CombinedFontDefn;
 
-	UserString: string;
+  UserString: string;
 
-	ViewHotspotIndicators: boolean;
+  ViewHotspotIndicators: boolean;
 
-	WesternFamily: number;
+  WesternFamily: number;
 
-	WesternShift: number;
+  WesternShift: number;
 
-	WesternSize: number;
+  WesternSize: number;
 
-	CombinedFamilyFonts(): CombinedFonts;
+  CombinedFamilyFonts(): CombinedFonts;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

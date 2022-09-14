@@ -2,41 +2,41 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Flow extends FMNamedObject {
-	Direction: number;
+  Direction: number;
 
-	readonly FirstTextFrameInFlow: TextFrame;
+  readonly FirstTextFrameInFlow: TextFrame;
 
-	FlowIsAutoConnect: boolean;
+  FlowIsAutoConnect: boolean;
 
-	FlowIsFeathered: boolean;
+  FlowIsFeathered: boolean;
 
-	FlowIsPostScript: boolean;
+  FlowIsPostScript: boolean;
 
-	FlowIsSynchronized: boolean;
+  FlowIsSynchronized: boolean;
 
-	readonly HighestLevelElement: Element;
+  readonly HighestLevelElement: Element;
 
-	readonly LastTextFrameInFlow: TextFrame;
+  readonly LastTextFrameInFlow: TextFrame;
 
-	MaxInterPgfPadding: number;
+  MaxInterPgfPadding: number;
 
-	MaxInterlinePadding: number;
+  MaxInterlinePadding: number;
 
-	MinHang: number;
+  MinHang: number;
 
-	readonly NextFlowInDoc: Flow;
+  readonly NextFlowInDoc: Flow;
 
-	readonly ResolvedDirection: number;
+  readonly ResolvedDirection: number;
 
-	SideHeadRoomInFlow: boolean;
+  SideHeadRoomInFlow: boolean;
 
-	Spacing: number;
+  Spacing: number;
 
-	UserString: string;
+  UserString: string;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 
-	GetText(flags: number): TextItems;
+  GetText(flags: number): TextItems;
 
-	GetText2(flags: number, flags2: number): TextItems;
+  GetText2(flags: number, flags2: number): TextItems;
 }

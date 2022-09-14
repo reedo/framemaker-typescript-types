@@ -3,22 +3,22 @@
 
 /** @todo UNDOCUMENTED */
 interface AttributeEx extends Attribute {
-	/** @todo UNDOCUMENTED */
-	originalValues: Strings;
+  /** @todo UNDOCUMENTED */
+  originalValues: Strings;
 
-	/** @todo UNDOCUMENTED */
-	overriddenFlags: number;
+  /** @todo UNDOCUMENTED */
+  overriddenFlags: number;
 }
 
 interface AttributeExConstructor {
-	new (): AttributeEx;
-	new (
-		name: string,
-		values: Strings,
-		valflags: number,
-		allow: boolean
-	): AttributeEx;
-	readonly prototype: AttributeEx;
+  new (): AttributeEx;
+  new (
+    name: string,
+    values: Strings,
+    valflags: number,
+    allow: boolean
+  ): AttributeEx;
+  readonly prototype: AttributeEx;
 }
 
 declare const AttributeEx: AttributeExConstructor;

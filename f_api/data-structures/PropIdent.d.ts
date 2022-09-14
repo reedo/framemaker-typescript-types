@@ -15,18 +15,18 @@
  * If a property is identified by a number, `PropIdent.name` is set to a null string.
  */
 interface PropIdent {
-	/** The property number. */
-	num: number;
+  /** The property number. */
+  num: number;
 
-	/** The property name. */
-	name: string;
+  /** The property name. */
+  name: string;
 }
 
 interface PropIdentConstructor {
-	new (): PropIdent;
-	new (val: number | string): PropIdent;
-	new (num: number, name: string): PropIdent;
-	readonly prototype: PropIdent;
+  new (): PropIdent;
+  new (val: number | string): PropIdent;
+  new (num: number, name: string): PropIdent;
+  readonly prototype: PropIdent;
 }
 
 declare const PropIdent: PropIdentConstructor;

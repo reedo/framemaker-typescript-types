@@ -2,7 +2,7 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Group extends FMGraphic {
-	readonly FirstGraphicInGroup: FMGraphic;
+  readonly FirstGraphicInGroup: FMGraphic;
 
-	readonly LastGraphicInGroup: FMGraphic;
+  readonly LastGraphicInGroup: FMGraphic;
 }

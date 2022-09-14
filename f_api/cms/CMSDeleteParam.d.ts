@@ -2,7 +2,7 @@
 // Definitions by: Dan Reed <https://danreed.dev>
 
 interface CMSDeleteParam {
-	deleteAllVersion: boolean;
+  deleteAllVersion: boolean;
 
-	deleteAllDependents: boolean;
+  deleteAllDependents: boolean;
 }

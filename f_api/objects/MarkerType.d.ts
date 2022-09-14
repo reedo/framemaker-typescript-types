@@ -2,15 +2,15 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface MarkerType extends FMNamedObject {
-	InvariantName: string;
+  InvariantName: string;
 
-	NextMarkerTypeInDoc: MarkerType;
+  NextMarkerTypeInDoc: MarkerType;
 
-	Public: boolean;
+  Public: boolean;
 
-	readonly Required: boolean;
+  readonly Required: boolean;
 
-	Transient: boolean;
+  Transient: boolean;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

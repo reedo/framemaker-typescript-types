@@ -2,274 +2,274 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Book extends FMNamedObject {
-	AcrobatBookmarkDisplayTags: number;
+  AcrobatBookmarkDisplayTags: number;
 
-	BookDontUpdateReferences: boolean;
+  BookDontUpdateReferences: boolean;
 
-	readonly BookIsModified: boolean;
+  readonly BookIsModified: boolean;
 
-	BookIsSelected: boolean;
+  BookIsSelected: boolean;
 
-	BookIsViewOnly: boolean;
+  BookIsViewOnly: boolean;
 
-	BookOverrideBookmarkLevelWithDocument: boolean;
+  BookOverrideBookmarkLevelWithDocument: boolean;
 
-	CustomElementList: Strings;
+  CustomElementList: Strings;
 
-	DocAcrobatColumnArticleThreads: boolean;
+  DocAcrobatColumnArticleThreads: boolean;
 
-	DocAcrobatDefaultsChanged: boolean;
+  DocAcrobatDefaultsChanged: boolean;
 
-	DocAcrobatElementList: Strings;
+  DocAcrobatElementList: Strings;
 
-	DocAcrobatElements: boolean;
+  DocAcrobatElements: boolean;
 
-	DocAcrobatNoArticleThreads: boolean;
+  DocAcrobatNoArticleThreads: boolean;
 
-	readonly ElementCatalog: ElementCatalogEntries;
+  readonly ElementCatalog: ElementCatalogEntries;
 
-	ElementCatalogDisplay: number;
+  ElementCatalogDisplay: number;
 
-	ElementSelection: ElementRange;
+  ElementSelection: ElementRange;
 
-	FileExtensionOverride: string;
+  FileExtensionOverride: string;
 
-	FirstComponentInBook: BookComponent;
+  FirstComponentInBook: BookComponent;
 
-	readonly FirstElementDefInDoc: ElementDef;
+  readonly FirstElementDefInDoc: ElementDef;
 
-	FirstFmtChangeListInDoc: FmtChangeList;
+  FirstFmtChangeListInDoc: FmtChangeList;
 
-	FirstSelectedComponentInBook: BookComponent;
+  FirstSelectedComponentInBook: BookComponent;
 
-	GenerateAcrobatInfo: boolean;
+  GenerateAcrobatInfo: boolean;
 
-	readonly HighestLevelElement: Element;
+  readonly HighestLevelElement: Element;
 
-	IsIconified: boolean;
+  IsIconified: boolean;
 
-	IsInFront: boolean;
+  IsInFront: boolean;
 
-	IsOnScreen: boolean;
+  IsOnScreen: boolean;
 
-	Label: string;
+  Label: string;
 
-	NewElemAttrDisplay: number;
+  NewElemAttrDisplay: number;
 
-	NewElemAttrEditing: number;
+  NewElemAttrEditing: number;
 
-	readonly NextOpenBookInSession: Book;
+  readonly NextOpenBookInSession: Book;
 
-	PDFAllNamedDestinations: boolean;
+  PDFAllNamedDestinations: boolean;
 
-	PDFBookmark: boolean;
+  PDFBookmark: boolean;
 
-	PDFBookmarksOpenLevel: number;
+  PDFBookmarksOpenLevel: number;
 
-	PDFConvertCMYKtoRGB: boolean;
+  PDFConvertCMYKtoRGB: boolean;
 
-	PDFDestsMarked: boolean;
+  PDFDestsMarked: boolean;
 
-	readonly PDFDistillerAbsent: boolean;
+  readonly PDFDistillerAbsent: boolean;
 
-	PDFDocInfo: Strings;
+  PDFDocInfo: Strings;
 
-	PDFEndPage: string;
+  PDFEndPage: string;
 
-	PDFGenerateForReview: boolean;
+  PDFGenerateForReview: boolean;
 
-	PDFJobOption: string;
+  PDFJobOption: string;
 
-	readonly PDFJobOptionsAbsent: boolean;
+  readonly PDFJobOptionsAbsent: boolean;
 
-	PDFOpenPage: string;
+  PDFOpenPage: string;
 
-	PDFPageHeight: number;
+  PDFPageHeight: number;
 
-	PDFPageWidth: number;
+  PDFPageWidth: number;
 
-	PDFPrintPageRange: number;
+  PDFPrintPageRange: number;
 
-	PDFRegistrationMarks: number;
+  PDFRegistrationMarks: number;
 
-	PDFSeparateFiles: boolean;
+  PDFSeparateFiles: boolean;
 
-	PDFStartPage: string;
+  PDFStartPage: string;
 
-	PDFZoomFactor: number;
+  PDFZoomFactor: number;
 
-	PDFZoomType: number;
+  PDFZoomType: number;
 
-	PrintBlankPages: boolean;
+  PrintBlankPages: boolean;
 
-	PrintCollated: boolean;
+  PrintCollated: boolean;
 
-	PrintDownloadAsianFonts: boolean;
+  PrintDownloadAsianFonts: boolean;
 
-	PrintDownloadTrueTypeAsType1: boolean;
+  PrintDownloadTrueTypeAsType1: boolean;
 
-	PrintEmulsion: number;
+  PrintEmulsion: number;
 
-	PrintEvenPages: boolean;
+  PrintEvenPages: boolean;
 
-	PrintFileName: string;
+  PrintFileName: string;
 
-	PrintImaging: number;
+  PrintImaging: number;
 
-	PrintLastSheetFirst: boolean;
+  PrintLastSheetFirst: boolean;
 
-	PrintLowRes: boolean;
+  PrintLowRes: boolean;
 
-	PrintNumCopies: number;
+  PrintNumCopies: number;
 
-	PrintOddPages: boolean;
+  PrintOddPages: boolean;
 
-	PrintPaperHeight: number;
+  PrintPaperHeight: number;
 
-	PrintPaperWidth: number;
+  PrintPaperWidth: number;
 
-	PrintRegistrationMarks: boolean;
+  PrintRegistrationMarks: boolean;
 
-	PrintScale: number;
+  PrintScale: number;
 
-	PrintSeps: boolean;
+  PrintSeps: boolean;
 
-	PrintToFile: boolean;
+  PrintToFile: boolean;
 
-	PrinterName: string;
+  PrinterName: string;
 
-	ScreenHeight: number;
+  ScreenHeight: number;
 
-	ScreenWidth: number;
+  ScreenWidth: number;
 
-	ScreenX: number;
+  ScreenX: number;
 
-	ScreenY: number;
+  ScreenY: number;
 
-	SeparateInclusions: boolean;
+  SeparateInclusions: boolean;
 
-	ShowElementDescriptiveNames: boolean;
+  ShowElementDescriptiveNames: boolean;
 
-	SkipBlankSeps: boolean;
+  SkipBlankSeps: boolean;
 
-	StatusLine: string;
+  StatusLine: string;
 
-	StructuredApplication: string;
+  StructuredApplication: string;
 
-	TypeOfDisplayText: number;
+  TypeOfDisplayText: number;
 
-	UseInitialStructure: boolean;
+  UseInitialStructure: boolean;
 
-	UseInitialStructureOfAutoInsertedElements: boolean;
+  UseInitialStructureOfAutoInsertedElements: boolean;
 
-	ViewOnlyDeadCodes: UInts;
+  ViewOnlyDeadCodes: UInts;
 
-	ViewOnlyWinBorders: boolean;
+  ViewOnlyWinBorders: boolean;
 
-	ViewOnlyWinMenubar: boolean;
+  ViewOnlyWinMenubar: boolean;
 
-	ViewOnlyWinPopup: boolean;
+  ViewOnlyWinPopup: boolean;
 
-	XmlDocType: string;
+  XmlDocType: string;
 
-	XmlEncoding: string;
+  XmlEncoding: string;
 
-	XmlFileEncoding: string;
+  XmlFileEncoding: string;
 
-	XmlPublicId: string;
+  XmlPublicId: string;
 
-	XmlStandAlone: number;
+  XmlStandAlone: number;
 
-	XmlStyleSheet: string;
+  XmlStyleSheet: string;
 
-	XmlStyleSheetList: Strings;
+  XmlStyleSheetList: Strings;
 
-	XmlSystemId: string;
+  XmlSystemId: string;
 
-	XmlUseBOM: number;
+  XmlUseBOM: number;
 
-	XmlVersion: string;
+  XmlVersion: string;
 
-	XmlWellFormed: number;
+  XmlWellFormed: number;
 
-	ApplyConditionalSettings(settings: PropVals): FrameErrorCode;
+  ApplyConditionalSettings(settings: PropVals): FrameErrorCode;
 
-	Close(flags: number): FrameErrorCode;
+  Close(flags: number): FrameErrorCode;
 
-	Compare(
-		newerDoc: Doc,
-		flags: number,
-		deleteCondTag: string,
-		replaceText: string,
-		compareThreshold: number
-	): CompareRet | FrameErrorCode;
+  Compare(
+    newerDoc: Doc,
+    flags: number,
+    deleteCondTag: string,
+    replaceText: string,
+    compareThreshold: number
+  ): CompareRet | FrameErrorCode;
 
-	EmbedAttachFileInFMAtCursor(...args: any): unknown;
+  EmbedAttachFileInFMAtCursor(...args: any): unknown;
 
-	Export(...args: any): unknown;
+  Export(...args: any): unknown;
 
-	GetConditionalExpression(exprName: string): unknown;
+  GetConditionalExpression(exprName: string): unknown;
 
-	GetConditionalSettings(): PropVals;
+  GetConditionalSettings(): PropVals;
 
-	GetDependencies(...args: any): unknown;
+  GetDependencies(...args: any): unknown;
 
-	GetUniqueObject(
-		objType: FO_Constant,
-		unique: number
-	): FMUniqueObject | FrameErrorCode;
+  GetUniqueObject(
+    objType: FO_Constant,
+    unique: number
+  ): FMUniqueObject | FrameErrorCode;
 
-	Import(
-		textLocP: TextLoc,
-		filename: string,
-		importParams: PropVals,
-		importReturnParams: PropVals
-	): FMObject | FrameErrorCode;
+  Import(
+    textLocP: TextLoc,
+    filename: string,
+    importParams: PropVals,
+    importReturnParams: PropVals
+  ): FMObject | FrameErrorCode;
 
-	ManageConditionalExpressions(settings: PropVals): FrameErrorCode;
+  ManageConditionalExpressions(settings: PropVals): FrameErrorCode;
 
-	NewBookComponentInHierarchy(compName: string, elemLoc: ElementLoc): Element;
+  NewBookComponentInHierarchy(compName: string, elemLoc: ElementLoc): Element;
 
-	NewBookComponentOfTypeInHierarchy(
-		compName: string,
-		compType: BookComponentType,
-		elemLoc: ElementLoc
-	): BookComponent | FrameErrorCode;
+  NewBookComponentOfTypeInHierarchy(
+    compName: string,
+    compType: BookComponentType,
+    elemLoc: ElementLoc
+  ): BookComponent | FrameErrorCode;
 
-	NewIterator(...args: any): unknown;
+  NewIterator(...args: any): unknown;
 
-	NewSeriesBookComponent(
-		previous: FMSeriesObject
-	): BookComponent | FrameErrorCode;
+  NewSeriesBookComponent(
+    previous: FMSeriesObject
+  ): BookComponent | FrameErrorCode;
 
-	NewSeriesObject(
-		objType: FO_Constant,
-		previous: FMSeriesObject
-	): FMSeriesObject | FrameErrorCode;
+  NewSeriesObject(
+    objType: FO_Constant,
+    previous: FMSeriesObject
+  ): FMSeriesObject | FrameErrorCode;
 
-	Save(
-		saveAsName: string,
-		saveParams: PropVals,
-		saveReturnParams: PropVals
-	): Book | FrameErrorCode;
+  Save(
+    saveAsName: string,
+    saveParams: PropVals,
+    saveReturnParams: PropVals
+  ): Book | FrameErrorCode;
 
-	SaveAsHtml(...args: any): unknown;
+  SaveAsHtml(...args: any): unknown;
 
-	SilentPrintDoc(): FrameErrorCode;
+  SilentPrintDoc(): FrameErrorCode;
 
-	SimpleGenerate(interactive: boolean, makeVisible: boolean): FrameErrorCode;
+  SimpleGenerate(interactive: boolean, makeVisible: boolean): FrameErrorCode;
 
-	SimpleImportElementDefs(
-		fromDocOrBook: Book | Doc,
-		importFlags: number
-	): FrameErrorCode;
+  SimpleImportElementDefs(
+    fromDocOrBook: Book | Doc,
+    importFlags: number
+  ): FrameErrorCode;
 
-	SimpleImportFormats(fromDoc: Doc, formatFlags: number): FrameErrorCode;
+  SimpleImportFormats(fromDoc: Doc, formatFlags: number): FrameErrorCode;
 
-	SimpleSave(saveAsName: string, interactive: boolean): Book | FrameErrorCode;
+  SimpleSave(saveAsName: string, interactive: boolean): Book | FrameErrorCode;
 
-	UpdateBook(
-		updateParams: PropVals,
-		updateReturnParams: PropVals
-	): FrameErrorCode;
+  UpdateBook(
+    updateParams: PropVals,
+    updateReturnParams: PropVals
+  ): FrameErrorCode;
 }

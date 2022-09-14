@@ -3,6 +3,6 @@
 
 /** Any FrameMaker object. */
 interface FMNamedObject extends FMObject {
-	/** The name of the object. */
-	Name: string;
+  /** The name of the object. */
+  Name: string;
 }

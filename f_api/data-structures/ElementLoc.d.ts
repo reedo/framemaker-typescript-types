@@ -3,23 +3,23 @@
 
 /** ElementLoc specifies a location within the structure of a document or book. */
 interface ElementLoc {
-	/** The parent element. */
+  /** The parent element. */
 
-	parent: Element;
+  parent: Element;
 
-	/** The child element. */
+  /** The child element. */
 
-	child: Element;
+  child: Element;
 
-	/** Offset within the parent or child element. */
-	offset: number;
+  /** Offset within the parent or child element. */
+  offset: number;
 }
 
 interface ElementLocConstructor {
-	new (): ElementLoc;
+  new (): ElementLoc;
 
-	new (parent: Element, child: Element, offset: number): ElementLoc;
-	readonly prototype: ElementLoc;
+  new (parent: Element, child: Element, offset: number): ElementLoc;
+  readonly prototype: ElementLoc;
 }
 
 declare const ElementLoc: ElementLocConstructor;

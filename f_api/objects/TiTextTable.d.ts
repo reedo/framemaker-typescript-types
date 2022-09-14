@@ -2,19 +2,19 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface TiTextTable extends FMTiObject {
-	TiByRows: boolean;
+  TiByRows: boolean;
 
-	TiTblTag: string;
+  TiTblTag: string;
 
-	TiHeadersEmpty: boolean;
+  TiHeadersEmpty: boolean;
 
-	TiNumSeparators: number;
+  TiNumSeparators: number;
 
-	TiSeparator: string;
+  TiSeparator: string;
 
-	TiNumCols: number;
+  TiNumCols: number;
 
-	TiNumHeaderRows: number;
+  TiNumHeaderRows: number;
 
-	TiTextEncoding: string;
+  TiTextEncoding: string;
 }

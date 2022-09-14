@@ -2,163 +2,163 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface PgfFmt extends FMNamedObject {
-	AcrobatLevel: number;
+  AcrobatLevel: number;
 
-	AdjHyphens: number;
+  AdjHyphens: number;
 
-	AsianComposer: boolean;
+  AsianComposer: boolean;
 
-	AutoNumChar: string;
+  AutoNumChar: string;
 
-	AutoNumString: string;
+  AutoNumString: string;
 
-	BkColor: Color;
+  BkColor: Color;
 
-	BlockLines: number;
+  BlockLines: number;
 
-	BottomSeparator: string;
+  BottomSeparator: string;
 
-	Capitalization: number;
+  Capitalization: number;
 
-	CellBottomMargin: number;
+  CellBottomMargin: number;
 
-	CellLeftMargin: number;
+  CellLeftMargin: number;
 
-	CellMarginsFixed: number;
+  CellMarginsFixed: number;
 
-	CellRightMargin: number;
+  CellRightMargin: number;
 
-	CellTopMargin: number;
+  CellTopMargin: number;
 
-	CellVAlignment: number;
+  CellVAlignment: number;
 
-	ChangeBar: boolean;
+  ChangeBar: boolean;
 
-	Color: Color;
+  Color: Color;
 
-	CombinedFontFamily: CombinedFontDefn;
+  CombinedFontFamily: CombinedFontDefn;
 
-	Direction: number;
+  Direction: number;
 
-	FirstIndent: number;
+  FirstIndent: number;
 
-	FontAngle: number;
+  FontAngle: number;
 
-	readonly FontEncodingName: string;
+  readonly FontEncodingName: string;
 
-	FontFamily: number;
+  FontFamily: number;
 
-	FontPlatformName: string;
+  FontPlatformName: string;
 
-	FontPostScriptName: string;
+  FontPostScriptName: string;
 
-	FontSize: number;
+  FontSize: number;
 
-	FontVariation: number;
+  FontVariation: number;
 
-	FontWeight: number;
+  FontWeight: number;
 
-	HyphMinPrefix: number;
+  HyphMinPrefix: number;
 
-	HyphMinSuffix: number;
+  HyphMinSuffix: number;
 
-	HyphMinWord: number;
+  HyphMinWord: number;
 
-	Hyphenate: boolean;
+  Hyphenate: boolean;
 
-	KeepWithNext: boolean;
+  KeepWithNext: boolean;
 
-	KeepWithPrev: boolean;
+  KeepWithPrev: boolean;
 
-	KernX: number;
+  KernX: number;
 
-	KernY: number;
+  KernY: number;
 
-	Language: number;
+  Language: number;
 
-	Leading: number;
+  Leading: number;
 
-	LeftIndent: number;
+  LeftIndent: number;
 
-	LetterSpace: boolean;
+  LetterSpace: boolean;
 
-	LineSpacing: number;
+  LineSpacing: number;
 
-	MaxJLetSpace: number;
+  MaxJLetSpace: number;
 
-	MaxJRomSpace: number;
+  MaxJRomSpace: number;
 
-	MaxSpace: number;
+  MaxSpace: number;
 
-	MinJLetSpace: number;
+  MinJLetSpace: number;
 
-	MinJRomSpace: number;
+  MinJRomSpace: number;
 
-	MinSpace: number;
+  MinSpace: number;
 
-	readonly NextPgfFmtInDoc: PgfFmt;
+  readonly NextPgfFmtInDoc: PgfFmt;
 
-	NextTag: string;
+  NextTag: string;
 
-	NumAtEnd: boolean;
+  NumAtEnd: boolean;
 
-	readonly NumTabs: number;
+  readonly NumTabs: number;
 
-	OptJLetSpace: number;
+  OptJLetSpace: number;
 
-	OptJRomSpace: number;
+  OptJRomSpace: number;
 
-	OptSpace: number;
+  OptSpace: number;
 
-	Overline: boolean;
+  Overline: boolean;
 
-	PDFStructureLevel: number;
+  PDFStructureLevel: number;
 
-	PairKern: boolean;
+  PairKern: boolean;
 
-	PgfAlignment: number;
+  PgfAlignment: number;
 
-	PgfBoxColor: Color;
+  PgfBoxColor: Color;
 
-	PgfIsAutoNum: boolean;
+  PgfIsAutoNum: boolean;
 
-	PgfMarkedForNamedDestination: boolean;
+  PgfMarkedForNamedDestination: boolean;
 
-	Placement: number;
+  Placement: number;
 
-	Position: number;
+  Position: number;
 
-	readonly ResolvedDirection: number;
+  readonly ResolvedDirection: number;
 
-	RightIndent: number;
+  RightIndent: number;
 
-	RunInSeparator: string;
+  RunInSeparator: string;
 
-	SpaceAbove: number;
+  SpaceAbove: number;
 
-	SpaceBelow: number;
+  SpaceBelow: number;
 
-	Spread: number;
+  Spread: number;
 
-	Start: number;
+  Start: number;
 
-	Stretch: number;
+  Stretch: number;
 
-	Strikethrough: boolean;
+  Strikethrough: boolean;
 
-	Tabs: Tabs;
+  Tabs: Tabs;
 
-	TopSeparator: string;
+  TopSeparator: string;
 
-	Underlining: number;
+  Underlining: number;
 
-	UseBkColor: boolean;
+  UseBkColor: boolean;
 
-	UseNextTag: boolean;
+  UseNextTag: boolean;
 
-	UserString: string;
+  UserString: string;
 
-	YakumonoType: number;
+  YakumonoType: number;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

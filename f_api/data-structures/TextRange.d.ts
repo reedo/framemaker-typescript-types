@@ -11,17 +11,17 @@
  * __NOTE__: `Constants.FV_OBJ_END_OFFSET` (0x50000000) specifies the offset of the last character in the object containing the text range.
  */
 interface TextRange {
-	/** The beginning of the text range. */
-	beg: TextLoc;
+  /** The beginning of the text range. */
+  beg: TextLoc;
 
-	/** The end of the text range. */
-	end: TextLoc;
+  /** The end of the text range. */
+  end: TextLoc;
 }
 
 interface TextRangeConstructor {
-	new (): TextRange;
-	new (beg: TextLoc, end: TextLoc): TextRange;
-	readonly prototype: TextRange;
+  new (): TextRange;
+  new (beg: TextLoc, end: TextLoc): TextRange;
+  readonly prototype: TextRange;
 }
 
 declare const TextRange: TextRangeConstructor;

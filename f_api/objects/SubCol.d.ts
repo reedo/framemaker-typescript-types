@@ -2,47 +2,47 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface SubCol extends FMUniqueObject {
-	readonly ContentHeight: number;
+  readonly ContentHeight: number;
 
-	readonly FirstAFrame: AFrame;
+  readonly FirstAFrame: AFrame;
 
-	readonly FirstCell: Cell;
+  readonly FirstCell: Cell;
 
-	readonly FirstFn: Fn;
+  readonly FirstFn: Fn;
 
-	readonly FirstPgf: Pgf;
+  readonly FirstPgf: Pgf;
 
-	readonly FrameParent: TextFrame;
+  readonly FrameParent: TextFrame;
 
-	readonly Height: number;
+  readonly Height: number;
 
-	readonly LastAFrame: AFrame;
+  readonly LastAFrame: AFrame;
 
-	readonly LastCell: Cell;
+  readonly LastCell: Cell;
 
-	readonly LastFn: Fn;
+  readonly LastFn: Fn;
 
-	readonly LastPgf: Pgf;
+  readonly LastPgf: Pgf;
 
-	readonly LocX: number;
+  readonly LocX: number;
 
-	readonly LocY: number;
+  readonly LocY: number;
 
-	readonly NextSubCol: SubCol;
+  readonly NextSubCol: SubCol;
 
-	readonly Overflowed: boolean;
+  readonly Overflowed: boolean;
 
-	readonly ParentTextFrame: TextFrame;
+  readonly ParentTextFrame: TextFrame;
 
-	readonly PrevSubCol: SubCol;
+  readonly PrevSubCol: SubCol;
 
-	UserString: string;
+  UserString: string;
 
-	readonly Width: number;
+  readonly Width: number;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 
-	GetText(flags: number): TextItems;
+  GetText(flags: number): TextItems;
 
-	GetText2(flags: number, flags2: number): TextItems;
+  GetText2(flags: number, flags2: number): TextItems;
 }

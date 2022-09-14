@@ -3,20 +3,20 @@
 
 /** A single integer or string value. */
 interface Value {
-	/** The integer value. */
-	ival: number;
+  /** The integer value. */
+  ival: number;
 
-	/** The string value. */
-	sval: string;
+  /** The string value. */
+  sval: string;
 
-	/** The type of the value. `FT_Integer` or `FT_String`. */
-	valType: number;
+  /** The type of the value. `FT_Integer` or `FT_String`. */
+  valType: number;
 }
 
 interface ValueConstructor {
-	new (): Value;
-	new (value: number | string): Value;
-	readonly prototype: Value;
+  new (): Value;
+  new (value: number | string): Value;
+  readonly prototype: Value;
 }
 
 declare const Value: ValueConstructor;

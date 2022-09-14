@@ -2,19 +2,19 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface TextLine extends FMGraphic {
-	BasePointX: number;
+  BasePointX: number;
 
-	BasePointY: number;
+  BasePointY: number;
 
-	Direction: number;
+  Direction: number;
 
-	Language: number;
+  Language: number;
 
-	readonly ResolvedDirection: number;
+  readonly ResolvedDirection: number;
 
-	TextLineType: number;
+  TextLineType: number;
 
-	GetText(flags: number): TextItems;
+  GetText(flags: number): TextItems;
 
-	GetText2(flags: number, flags2: number): TextItems;
+  GetText2(flags: number, flags2: number): TextItems;
 }

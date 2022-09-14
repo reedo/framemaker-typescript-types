@@ -2,19 +2,19 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface RefPage extends FMNamedObject {
-	readonly PageFrame: UnanchoredFrame;
+  readonly PageFrame: UnanchoredFrame;
 
-	readonly PageHeight: number;
+  readonly PageHeight: number;
 
-	readonly PageNext: RefPage;
+  readonly PageNext: RefPage;
 
-	readonly PageNum: number;
+  readonly PageNum: number;
 
-	readonly PagePrev: RefPage;
+  readonly PagePrev: RefPage;
 
-	readonly PageWidth: number;
+  readonly PageWidth: number;
 
-	ApplyPageLayout(srcPage: Page): FrameErrorCode;
+  ApplyPageLayout(srcPage: Page): FrameErrorCode;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

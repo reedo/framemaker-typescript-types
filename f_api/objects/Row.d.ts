@@ -2,51 +2,51 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Row extends FMObject {
-	CondFmtIsShown: boolean;
+  CondFmtIsShown: boolean;
 
-	readonly Element: Element;
+  readonly Element: Element;
 
-	readonly FirstCellInRow: Cell;
+  readonly FirstCellInRow: Cell;
 
-	readonly Height: number;
+  readonly Height: number;
 
-	InCond: FMObjectArray<CondFmt>;
+  InCond: FMObjectArray<CondFmt>;
 
-	readonly LocX: number;
+  readonly LocX: number;
 
-	readonly LocY: number;
+  readonly LocY: number;
 
-	readonly NextRowInTbl: Row;
+  readonly NextRowInTbl: Row;
 
-	readonly PrevRowInTbl: Row;
+  readonly PrevRowInTbl: Row;
 
-	readonly RowIsShown: boolean;
+  readonly RowIsShown: boolean;
 
-	RowKeepWithNext: boolean;
+  RowKeepWithNext: boolean;
 
-	RowKeepWithPrev: boolean;
+  RowKeepWithPrev: boolean;
 
-	RowMaxHeight: number;
+  RowMaxHeight: number;
 
-	RowMinHeight: number;
+  RowMinHeight: number;
 
-	RowStart: number;
+  RowStart: number;
 
-	readonly RowTbl: Tbl;
+  readonly RowTbl: Tbl;
 
-	readonly RowType: number;
+  readonly RowType: number;
 
-	SepOverride: Color;
+  SepOverride: Color;
 
-	StyleOverrides: number;
+  StyleOverrides: number;
 
-	UseSepOverride: boolean;
+  UseSepOverride: boolean;
 
-	UserString: string;
+  UserString: string;
 
-	readonly Width: number;
+  readonly Width: number;
 
-	AddRows(direction: number, numNewRows: number): FrameErrorCode;
+  AddRows(direction: number, numNewRows: number): FrameErrorCode;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

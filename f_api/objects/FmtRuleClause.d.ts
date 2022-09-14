@@ -2,35 +2,35 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface FmtRuleClause extends FMObject {
-	ContextLabel: string;
+  ContextLabel: string;
 
-	ElemPrefixSuffix: string;
+  ElemPrefixSuffix: string;
 
-	readonly FmtChangeList: FmtChangeList;
+  readonly FmtChangeList: FmtChangeList;
 
-	FmtChangeListTag: string;
+  FmtChangeListTag: string;
 
-	readonly FmtRule: FmtRule;
+  readonly FmtRule: FmtRule;
 
-	FormatTag: string;
+  FormatTag: string;
 
-	IsTextRange: boolean;
+  IsTextRange: boolean;
 
-	readonly RuleClauseType:
-		| FV_RC_TAG
-		| FV_RC_SUB_FMTRULE
-		| FV_RC_CHANGELIST
-		| FV_RC_CHANGELIST_TAG;
+  readonly RuleClauseType:
+    | FV_RC_TAG
+    | FV_RC_SUB_FMTRULE
+    | FV_RC_CHANGELIST
+    | FV_RC_CHANGELIST_TAG;
 
-	Specification: string;
+  Specification: string;
 
-	readonly SpecificationForCSS: Strings;
+  readonly SpecificationForCSS: Strings;
 
-	readonly SubFmtRule: FmtRule;
+  readonly SubFmtRule: FmtRule;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 
-	NewFmtChangeList(): FmtChangeList;
+  NewFmtChangeList(): FmtChangeList;
 
-	NewSubFmtRule(): FmtRule;
+  NewSubFmtRule(): FmtRule;
 }

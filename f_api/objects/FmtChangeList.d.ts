@@ -2,181 +2,181 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface FmtChangeList extends FMNamedObject {
-	AdjHyphens: number;
+  AdjHyphens: number;
 
-	AutoNumChar: string;
+  AutoNumChar: string;
 
-	AutoNumString: string;
+  AutoNumString: string;
 
-	BkColor: Color;
+  BkColor: Color;
 
-	BlockLines: number;
+  BlockLines: number;
 
-	BottomSepAtIndent: boolean;
+  BottomSepAtIndent: boolean;
 
-	BottomSeparator: string;
+  BottomSeparator: string;
 
-	Capitalization: number;
+  Capitalization: number;
 
-	CellBottomMargin: number;
+  CellBottomMargin: number;
 
-	CellBottomMarginChange: number;
+  CellBottomMarginChange: number;
 
-	CellBottomMarginFixed: boolean;
+  CellBottomMarginFixed: boolean;
 
-	CellLeftMargin: number;
+  CellLeftMargin: number;
 
-	CellLeftMarginChange: number;
+  CellLeftMarginChange: number;
 
-	CellLeftMarginFixed: boolean;
+  CellLeftMarginFixed: boolean;
 
-	CellRightMargin: number;
+  CellRightMargin: number;
 
-	CellRightMarginFixed: boolean;
+  CellRightMarginFixed: boolean;
 
-	CellTopMargin: number;
+  CellTopMargin: number;
 
-	CellTopMarginChange: number;
+  CellTopMarginChange: number;
 
-	CellTopMarginFixed: boolean;
+  CellTopMarginFixed: boolean;
 
-	CellVAlignment: number;
+  CellVAlignment: number;
 
-	ChangeBar: boolean;
+  ChangeBar: boolean;
 
-	Color: Color;
+  Color: Color;
 
-	CombinedFontFamily: CombinedFontDefn;
+  CombinedFontFamily: CombinedFontDefn;
 
-	FirstIndent: number;
+  FirstIndent: number;
 
-	FirstIndentChange: number;
+  FirstIndentChange: number;
 
-	FirstIndentIsRelative: boolean;
+  FirstIndentIsRelative: boolean;
 
-	FirstIndentRelPos: number;
+  FirstIndentRelPos: number;
 
-	FmtChangeListInCatalog: boolean;
+  FmtChangeListInCatalog: boolean;
 
-	FontAngle: number;
+  FontAngle: number;
 
-	FontFamily: number;
+  FontFamily: number;
 
-	FontSize: number;
+  FontSize: number;
 
-	FontSizeChange: number;
+  FontSizeChange: number;
 
-	FontVariation: number;
+  FontVariation: number;
 
-	FontWeight: number;
+  FontWeight: number;
 
-	HyphMinPrefix: number;
+  HyphMinPrefix: number;
 
-	HyphMinSuffix: number;
+  HyphMinSuffix: number;
 
-	HyphMinWord: number;
+  HyphMinWord: number;
 
-	Hyphenate: boolean;
+  Hyphenate: boolean;
 
-	KeepWithNext: boolean;
+  KeepWithNext: boolean;
 
-	KeepWithPrev: boolean;
+  KeepWithPrev: boolean;
 
-	KernX: number;
+  KernX: number;
 
-	KernY: number;
+  KernY: number;
 
-	Language: number;
+  Language: number;
 
-	Leading: number;
+  Leading: number;
 
-	LeadingChange: number;
+  LeadingChange: number;
 
-	LeftIndent: number;
+  LeftIndent: number;
 
-	LeftIndentChange: number;
+  LeftIndentChange: number;
 
-	LetterSpace: boolean;
+  LetterSpace: boolean;
 
-	LineSpacingFixed: boolean;
+  LineSpacingFixed: boolean;
 
-	MaxJLetSpace: number;
+  MaxJLetSpace: number;
 
-	MaxJRomSpace: number;
+  MaxJRomSpace: number;
 
-	MaxSpace: number;
+  MaxSpace: number;
 
-	MinJLetSpace: number;
+  MinJLetSpace: number;
 
-	MinJRomSpace: number;
+  MinJRomSpace: number;
 
-	MinSpace: number;
+  MinSpace: number;
 
-	MoveTabs: number;
+  MoveTabs: number;
 
-	NextFmtChangeListInDoc: FmtChangeList;
+  NextFmtChangeListInDoc: FmtChangeList;
 
-	NumAtEnd: boolean;
+  NumAtEnd: boolean;
 
-	NumTabs: number;
+  NumTabs: number;
 
-	OptJLetSpace: number;
+  OptJLetSpace: number;
 
-	OptJRomSpace: number;
+  OptJRomSpace: number;
 
-	OptSpace: number;
+  OptSpace: number;
 
-	Overline: boolean;
+  Overline: boolean;
 
-	PairKern: boolean;
+  PairKern: boolean;
 
-	PgfAlignment: number;
+  PgfAlignment: number;
 
-	PgfBoxColor: Color;
+  PgfBoxColor: Color;
 
-	PgfCatalogReference: string;
+  PgfCatalogReference: string;
 
-	PgfIsAutoNum: boolean;
+  PgfIsAutoNum: boolean;
 
-	Placement: number;
+  Placement: number;
 
-	Position: number;
+  Position: number;
 
-	RightIndent: number;
+  RightIndent: number;
 
-	RightIndentChange: number;
+  RightIndentChange: number;
 
-	RunInSeparator: string;
+  RunInSeparator: string;
 
-	SpaceAbove: number;
+  SpaceAbove: number;
 
-	SpaceAboveChange: number;
+  SpaceAboveChange: number;
 
-	SpaceBelow: number;
+  SpaceBelow: number;
 
-	SpaceBelowChange: number;
+  SpaceBelowChange: number;
 
-	Spread: number;
+  Spread: number;
 
-	SpreadChange: number;
+  SpreadChange: number;
 
-	Start: number;
+  Start: number;
 
-	Stretch: number;
+  Stretch: number;
 
-	StretchChange: number;
+  StretchChange: number;
 
-	Strikethrough: boolean;
+  Strikethrough: boolean;
 
-	Tabs: Tabs;
+  Tabs: Tabs;
 
-	TopSepAtIndent: boolean;
+  TopSepAtIndent: boolean;
 
-	TopSeparator: string;
+  TopSeparator: string;
 
-	Underlining: number;
+  Underlining: number;
 
-	YakumonoType: number;
+  YakumonoType: number;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

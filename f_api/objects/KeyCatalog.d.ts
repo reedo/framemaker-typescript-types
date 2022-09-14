@@ -2,45 +2,45 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface KeyCatalog extends FMNamedObject {
-	readonly IsDefault: boolean;
+  readonly IsDefault: boolean;
 
-	IsStale: boolean;
+  IsStale: boolean;
 
-	KeyCatalogClientName: string;
+  KeyCatalogClientName: string;
 
-	readonly KeyCount: number;
+  readonly KeyCount: number;
 
-	readonly NextKeyCatalogInSession: KeyCatalog;
+  readonly NextKeyCatalogInSession: KeyCatalog;
 
-	NotLoaded: boolean;
+  NotLoaded: boolean;
 
-	Source: string;
+  Source: string;
 
-	SourceType: number;
+  SourceType: number;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 
-	DeleteAllKeyDefinitions(): FrameErrorCode;
+  DeleteAllKeyDefinitions(): FrameErrorCode;
 
-	GetAllKeyDefinitions(
-		filterType: FV_KeyDefFieldsTypePrimary | FV_KeyDefFieldsTypeAll
-	): TypedVals;
+  GetAllKeyDefinitions(
+    filterType: FV_KeyDefFieldsTypePrimary | FV_KeyDefFieldsTypeAll
+  ): TypedVals;
 
-	GetAllKeys(): Strings;
+  GetAllKeys(): Strings;
 
-	GetKeyDefinition(key: string, keyField: number): TypedVal;
+  GetKeyDefinition(key: string, keyField: number): TypedVal;
 
-	NewKeyDefinition(
-		key: string,
-		href: string,
-		srcType: FV_KeySrcTypeNone | FV_KeySrcTypeDitamap,
-		srcFile: string,
-		flags: number
-	): FrameErrorCode;
+  NewKeyDefinition(
+    key: string,
+    href: string,
+    srcType: FV_KeySrcTypeNone | FV_KeySrcTypeDitamap,
+    srcFile: string,
+    flags: number
+  ): FrameErrorCode;
 
-	UpdateKeyDefinition(
-		key: string,
-		keyField: number,
-		valuep: string | number | AttributesEx
-	): FrameErrorCode;
+  UpdateKeyDefinition(
+    key: string,
+    keyField: number,
+    valuep: string | number | AttributesEx
+  ): FrameErrorCode;
 }

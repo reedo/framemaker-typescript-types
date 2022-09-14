@@ -2,13 +2,13 @@
 // Definitions by: Dan Reed <https://danreed.dev>
 
 interface CMSCheckinParam {
-	version: number;
+  version: number;
 
-	versionLabel: string;
+  versionLabel: string;
 
-	description: string;
+  description: string;
 
-	checkinComment: string;
+  checkinComment: string;
 
-	makeThisCurrentVersion: boolean;
+  makeThisCurrentVersion: boolean;
 }

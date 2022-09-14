@@ -7,17 +7,17 @@
  * FrameMaker measures coordinates from the upper-left corner of the parent frame.
  */
 interface Point {
-	/** X coordinate. */
-	x: number;
+  /** X coordinate. */
+  x: number;
 
-	/** Y coordinate */
-	y: number;
+  /** Y coordinate */
+  y: number;
 }
 
 interface PointConstructor {
-	new (): Point;
-	new (x: number, y: number): Point;
-	readonly prototype: Point;
+  new (): Point;
+  new (x: number, y: number): Point;
+  readonly prototype: Point;
 }
 
 declare const Point: PointConstructor;

@@ -2,19 +2,19 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Column extends FMObject {
-	readonly ColumnIsShown: boolean;
+  readonly ColumnIsShown: boolean;
 
-	readonly ColumnTbl: Tbl;
+  readonly ColumnTbl: Tbl;
 
-	InCond: FMObjectArray<CondFmt>;
+  InCond: FMObjectArray<CondFmt>;
 
-	readonly NextColumnInTbl: Column;
+  readonly NextColumnInTbl: Column;
 
-	readonly NextVisibleColumnInTbl: Column;
+  readonly NextVisibleColumnInTbl: Column;
 
-	readonly PrevColumnInTbl: Column;
+  readonly PrevColumnInTbl: Column;
 
-	readonly PrevVisibleColumnInTbl: Column;
+  readonly PrevVisibleColumnInTbl: Column;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

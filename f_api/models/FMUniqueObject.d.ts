@@ -3,6 +3,6 @@
 
 /** Any FrameMaker object. */
 interface FMUniqueObject extends FMObject {
-	/** UID. Persists between sessions and is written into the file. */
-	readonly Unique: number;
+  /** UID. Persists between sessions and is written into the file. */
+  readonly Unique: number;
 }

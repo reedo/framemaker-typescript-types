@@ -3,35 +3,35 @@
 
 /** A FrameMaker text inset object. */
 interface FMTiObject extends FMUniqueObject {
-	ImportHint: string;
+  ImportHint: string;
 
-	LastUpdate: number;
+  LastUpdate: number;
 
-	Name: string;
+  Name: string;
 
-	readonly NextTiInDoc: Ti;
+  readonly NextTiInDoc: Ti;
 
-	readonly TextRange: TextRange;
+  readonly TextRange: TextRange;
 
-	TiAutomaticUpdate: boolean;
+  TiAutomaticUpdate: boolean;
 
-	TiFile: string;
+  TiFile: string;
 
-	TiFileModDate: object;
+  TiFileModDate: object;
 
-	TiLocked: boolean;
+  TiLocked: boolean;
 
-	ConvertToText(): void;
+  ConvertToText(): void;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 
-	DeletePropByName(propName: string): FrameErrorCode;
+  DeletePropByName(propName: string): FrameErrorCode;
 
-	DeleteTextInsetContents(): FrameErrorCode;
+  DeleteTextInsetContents(): FrameErrorCode;
 
-	GetText(flags: number): TextItems;
+  GetText(flags: number): TextItems;
 
-	GetText2(flags: number, flags2: number): TextItems;
+  GetText2(flags: number, flags2: number): TextItems;
 
-	UpdateTextInset(): FrameErrorCode;
+  UpdateTextInset(): FrameErrorCode;
 }

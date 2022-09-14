@@ -1,18 +1,22 @@
 {
-	"name": "@types/framemaker-typescript-types",
-	"version": "1.0.0",
-	"description": "Contains all definitions up to FrameMaker 2020.\r For newer functions, the version it was introduced will be noted at the top of the function.",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/reedo/framemaker-typescript-types.git"
-	},
-	"author": "reedo",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/reedo/framemaker-typescript-types/issues"
-	},
-	"homepage": "https://github.com/reedo/framemaker-typescript-types#readme"
+  "name": "@types/framemaker-typescript-types",
+  "version": "1.0.0",
+  "description": "Contains all definitions up to FrameMaker 2020.\r For newer functions, the version it was introduced will be noted at the top of the function.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "endOfLine": "auto"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reedo/framemaker-typescript-types.git"
+  },
+  "author": "reedo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reedo/framemaker-typescript-types/issues"
+  },
+  "homepage": "https://github.com/reedo/framemaker-typescript-types#readme"
 }

@@ -2,17 +2,17 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Rubi extends FMUniqueObject {
-	readonly Element: Element;
+  readonly Element: Element;
 
-	readonly NextRubiInDoc: Rubi;
+  readonly NextRubiInDoc: Rubi;
 
-	readonly OyamojiTextRange: TextRange;
+  readonly OyamojiTextRange: TextRange;
 
-	readonly RubiElement: Element;
+  readonly RubiElement: Element;
 
-	readonly RubiTextRange: TextRange;
+  readonly RubiTextRange: TextRange;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 
-	GetText2(flags: number, flags2: number): TextItems;
+  GetText2(flags: number, flags2: number): TextItems;
 }

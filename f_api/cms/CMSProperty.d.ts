@@ -2,15 +2,15 @@
 // Definitions by: Dan Reed <https://danreed.dev>
 
 interface CMSProperty {
-	prop: number;
+  prop: number;
 
-	label: string;
+  label: string;
 
-	isMultiValue: boolean;
+  isMultiValue: boolean;
 
-	isEditable: boolean;
+  isEditable: boolean;
 
-	values: TypedVals;
+  values: TypedVals;
 }
 
 type CMSProperties = FMObjectArray<CMSProperty>;

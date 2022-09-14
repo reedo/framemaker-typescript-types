@@ -2,77 +2,77 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface ElementDef extends FMNamedObject {
-	AllowedDataRange: unknown;
+  AllowedDataRange: unknown;
 
-	AlsoInsert: Strings;
+  AlsoInsert: Strings;
 
-	AlsoInserts: TypedVal;
+  AlsoInserts: TypedVal;
 
-	AttributeDefs: AttributeDefs;
+  AttributeDefs: AttributeDefs;
 
-	BannerText: string;
+  BannerText: string;
 
-	Comment: string;
+  Comment: string;
 
-	DescriptiveTag: string;
+  DescriptiveTag: string;
 
-	ElementDataType: number;
+  ElementDataType: number;
 
-	ElementDefType: ElementType;
+  ElementDefType: ElementType;
 
-	ElementDescription: string;
+  ElementDescription: string;
 
-	ElementInCatalog: boolean;
+  ElementInCatalog: boolean;
 
-	ElementPgfFormat: string;
+  ElementPgfFormat: string;
 
-	Exclusions: Strings;
+  Exclusions: Strings;
 
-	readonly FirstPgfRules: FMObjectArray<FmtRule>;
+  readonly FirstPgfRules: FMObjectArray<FmtRule>;
 
-	GeneralRule: string;
+  GeneralRule: string;
 
-	readonly GeneralRuleErrorOffsets: Ints;
+  readonly GeneralRuleErrorOffsets: Ints;
 
-	Inclusions: Strings;
+  Inclusions: Strings;
 
-	InitStructurePattern: string;
+  InitStructurePattern: string;
 
-	readonly LastPgfRules: FMObjectArray<FmtRule>;
+  readonly LastPgfRules: FMObjectArray<FmtRule>;
 
-	readonly NextElementDefInDoc: ElementDef;
+  readonly NextElementDefInDoc: ElementDef;
 
-	readonly ObjectFmtRules: FMObjectArray<FmtRule>;
+  readonly ObjectFmtRules: FMObjectArray<FmtRule>;
 
-	readonly PrefixRules: FMObjectArray<FmtRule>;
+  readonly PrefixRules: FMObjectArray<FmtRule>;
 
-	readonly SuffixRules: FMObjectArray<FmtRule>;
+  readonly SuffixRules: FMObjectArray<FmtRule>;
 
-	readonly TextFmtRules: FMObjectArray<FmtRule>;
+  readonly TextFmtRules: FMObjectArray<FmtRule>;
 
-	ValidHighestLevel: boolean;
+  ValidHighestLevel: boolean;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 
-	ElementDefIsText(): boolean;
+  ElementDefIsText(): boolean;
 
-	GetAttributeDefs(): AttributeDefs;
+  GetAttributeDefs(): AttributeDefs;
 
-	NewElement(textLoc: TextLoc): Element;
+  NewElement(textLoc: TextLoc): Element;
 
-	NewElementInHierarchy(elemLoc: ElementLoc): Element;
+  NewElementInHierarchy(elemLoc: ElementLoc): Element;
 
-	NewFirstPgfRules(): FmtRule;
+  NewFirstPgfRules(): FmtRule;
 
-	NewLastPgfRules(): FmtRule;
+  NewLastPgfRules(): FmtRule;
 
-	NewObjectFmtRules(): FmtRule;
+  NewObjectFmtRules(): FmtRule;
 
-	NewPrefixRules(): FmtRule;
+  NewPrefixRules(): FmtRule;
 
-	NewSuffixRules(): FmtRule;
+  NewSuffixRules(): FmtRule;
 
-	NewTextFmtRules(): FmtRule;
+  NewTextFmtRules(): FmtRule;
 
-	WrapElement(): void;
+  WrapElement(): void;
 }

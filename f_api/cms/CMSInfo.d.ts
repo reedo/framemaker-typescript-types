@@ -2,9 +2,9 @@
 // Definitions by: Dan Reed <https://danreed.dev>
 
 interface CMSInfo {
-	cmsName: string;
+  cmsName: string;
 
-	userFields: string;
+  userFields: string;
 
-	userLoginUi: boolean;
+  userLoginUi: boolean;
 }

@@ -2,19 +2,19 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface FmtRule extends FMObject {
-	CountElements: Strings;
+  CountElements: Strings;
 
-	ElementDef: ElementDef;
+  ElementDef: ElementDef;
 
-	FmtRuleClause: FmtRuleClause;
+  FmtRuleClause: FmtRuleClause;
 
-	readonly FmtRuleClauses: FMObjectArray<FmtRuleClause>;
+  readonly FmtRuleClauses: FMObjectArray<FmtRuleClause>;
 
-	FmtRuleType: FV_CONTEXT_RULE | FV_LEVEL_RULE;
+  FmtRuleType: FV_CONTEXT_RULE | FV_LEVEL_RULE;
 
-	StopCountingAt: string;
+  StopCountingAt: string;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 
-	NewFmtRuleClauses(): FmtRuleClause;
+  NewFmtRuleClauses(): FmtRuleClause;
 }

@@ -2,15 +2,15 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface TiApiClient extends FMTiObject {
-	TiClientData: string;
+  TiClientData: string;
 
-	TiClientName: string;
+  TiClientName: string;
 
-	TiClientSource: string;
+  TiClientSource: string;
 
-	TiClientType: string;
+  TiClientType: string;
 
-	TiIsUnresolved: boolean;
+  TiIsUnresolved: boolean;
 
-	readonly TiMacEdition: number;
+  readonly TiMacEdition: number;
 }

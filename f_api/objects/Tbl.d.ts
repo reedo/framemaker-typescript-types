@@ -2,170 +2,170 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Tbl extends FMUniqueObject {
-	readonly BottomRowSelection: Row;
+  readonly BottomRowSelection: Row;
 
-	readonly ContentHeight: number;
+  readonly ContentHeight: number;
 
-	Direction: number;
+  Direction: number;
 
-	readonly Element: Element;
+  readonly Element: Element;
 
-	readonly FirstColumnInSelection: Column;
+  readonly FirstColumnInSelection: Column;
 
-	readonly FirstColumnInTbl: Column;
+  readonly FirstColumnInTbl: Column;
 
-	readonly FirstPgf: Pgf;
+  readonly FirstPgf: Pgf;
 
-	readonly FirstRowInTbl: Row;
+  readonly FirstRowInTbl: Row;
 
-	readonly FirstVisibleColumnInTbl: Column;
+  readonly FirstVisibleColumnInTbl: Column;
 
-	readonly HighestLevelElement: Element;
+  readonly HighestLevelElement: Element;
 
-	readonly LastColumnInSelection: Column;
+  readonly LastColumnInSelection: Column;
 
-	readonly LastColumnInTbl: Column;
+  readonly LastColumnInTbl: Column;
 
-	readonly LastPgf: Pgf;
+  readonly LastPgf: Pgf;
 
-	readonly LastRowInTbl: Row;
+  readonly LastRowInTbl: Row;
 
-	readonly LastVisibleColumnInTbl: Column;
+  readonly LastVisibleColumnInTbl: Column;
 
-	readonly LeftColNum: number;
+  readonly LeftColNum: number;
 
-	Locked: boolean;
+  Locked: boolean;
 
-	readonly NextTblInDoc: Tbl;
+  readonly NextTblInDoc: Tbl;
 
-	OrphanRows: number;
+  OrphanRows: number;
 
-	readonly Overflowed: boolean;
+  readonly Overflowed: boolean;
 
-	readonly ResolvedDirection: number;
+  readonly ResolvedDirection: number;
 
-	readonly RightColNum: number;
+  readonly RightColNum: number;
 
-	TblAlignment: number;
+  TblAlignment: number;
 
-	readonly TblBodyElement: Element;
+  readonly TblBodyElement: Element;
 
-	TblBodyFirstColor: Color;
+  TblBodyFirstColor: Color;
 
-	TblBodyFirstFill: number;
+  TblBodyFirstFill: number;
 
-	TblBodyFirstPeriod: number;
+  TblBodyFirstPeriod: number;
 
-	TblBodyNextColor: Color;
+  TblBodyNextColor: Color;
 
-	TblBodyNextFill: number;
+  TblBodyNextFill: number;
 
-	TblBodyNextPeriod: number;
+  TblBodyNextPeriod: number;
 
-	TblBodyRowRuling: RulingFmt;
+  TblBodyRowRuling: RulingFmt;
 
-	TblBodyRowRulingPeriod: number;
+  TblBodyRowRulingPeriod: number;
 
-	TblBodyShadeBy: boolean;
+  TblBodyShadeBy: boolean;
 
-	TblBottomRuling: number;
+  TblBottomRuling: number;
 
-	readonly TblCatalogEntry: number;
+  readonly TblCatalogEntry: number;
 
-	TblCellBottomMargin: number;
+  TblCellBottomMargin: number;
 
-	TblCellLeftMargin: number;
+  TblCellLeftMargin: number;
 
-	TblCellRightMargin: number;
+  TblCellRightMargin: number;
 
-	TblCellTopMargin: number;
+  TblCellTopMargin: number;
 
-	TblColRuling: RulingFmt;
+  TblColRuling: RulingFmt;
 
-	TblColRulingPeriod: number;
+  TblColRulingPeriod: number;
 
-	TblColWidths: Metrics;
+  TblColWidths: Metrics;
 
-	readonly TblElement: Element;
+  readonly TblElement: Element;
 
-	readonly TblFooterElement: Element;
+  readonly TblFooterElement: Element;
 
-	TblHFColor: Color;
+  TblHFColor: Color;
 
-	TblHFFill: number;
+  TblHFFill: number;
 
-	TblHFRowRuling: RulingFmt;
+  TblHFRowRuling: RulingFmt;
 
-	TblHFSeparatorRuling: RulingFmt;
+  TblHFSeparatorRuling: RulingFmt;
 
-	readonly TblHeaderElement: Element;
+  readonly TblHeaderElement: Element;
 
-	TblInLockedTi: boolean;
+  TblInLockedTi: boolean;
 
-	TblLastBodyRuling: boolean;
+  TblLastBodyRuling: boolean;
 
-	TblLeftIndent: number;
+  TblLeftIndent: number;
 
-	TblLeftRuling: RulingFmt;
+  TblLeftRuling: RulingFmt;
 
-	readonly TblNumCols: number;
+  readonly TblNumCols: number;
 
-	readonly TblNumRows: number;
+  readonly TblNumRows: number;
 
-	TblNumbering: number;
+  TblNumbering: number;
 
-	TblOtherBodyRowRuling: RulingFmt;
+  TblOtherBodyRowRuling: RulingFmt;
 
-	TblOtherColRuling: RulingFmt;
+  TblOtherColRuling: RulingFmt;
 
-	TblPlacement: number;
+  TblPlacement: number;
 
-	TblRightIndent: number;
+  TblRightIndent: number;
 
-	TblRightRuling: RulingFmt;
+  TblRightRuling: RulingFmt;
 
-	TblSpaceAbove: number;
+  TblSpaceAbove: number;
 
-	TblSpaceBelow: number;
+  TblSpaceBelow: number;
 
-	TblTag: string;
+  TblTag: string;
 
-	readonly TblTitleElement: Element;
+  readonly TblTitleElement: Element;
 
-	TblTitleGap: number;
+  TblTitleGap: number;
 
-	TblTitlePosition: number;
+  TblTitlePosition: number;
 
-	readonly TblTitleSelected: boolean;
+  readonly TblTitleSelected: boolean;
 
-	TblTopRuling: RulingFmt;
+  TblTopRuling: RulingFmt;
 
-	readonly TblWidth: number;
+  readonly TblWidth: number;
 
-	TextLoc: TextLoc;
+  TextLoc: TextLoc;
 
-	readonly TopRowSelection: Row;
+  readonly TopRowSelection: Row;
 
-	UserString: string;
+  UserString: string;
 
-	AddCols(
-		refColNum: number,
-		direction: number,
-		numNewCols: number
-	): FrameErrorCode;
+  AddCols(
+    refColNum: number,
+    direction: number,
+    numNewCols: number
+  ): FrameErrorCode;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 
-	DeleteCols(delColNum: number, numDelCols: number): FrameErrorCode;
+  DeleteCols(delColNum: number, numDelCols: number): FrameErrorCode;
 
-	DeleteRows(refRow: Row, numDelRows: number): FrameErrorCode;
+  DeleteRows(refRow: Row, numDelRows: number): FrameErrorCode;
 
-	GetTableColumnByColNum(table: Tbl, colNum: number): Column;
+  GetTableColumnByColNum(table: Tbl, colNum: number): Column;
 
-	MakeTblSelection(
-		topRow: number,
-		bottomRow: number,
-		leftCol: number,
-		rightCol: number
-	): FrameErrorCode;
+  MakeTblSelection(
+    topRow: number,
+    bottomRow: number,
+    leftCol: number,
+    rightCol: number
+  ): FrameErrorCode;
 }

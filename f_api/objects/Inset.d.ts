@@ -2,61 +2,61 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Inset extends FMGraphic {
-	ImportHint: string;
+  ImportHint: string;
 
-	InsetDpi: number;
+  InsetDpi: number;
 
-	InsetEditor: string;
+  InsetEditor: string;
 
-	InsetFile: string;
+  InsetFile: string;
 
-	InsetGfxActiveInPdf: boolean;
+  InsetGfxActiveInPdf: boolean;
 
-	InsetGfxName: string;
+  InsetGfxName: string;
 
-	InsetGfxPlayWindowInPdf: boolean;
+  InsetGfxPlayWindowInPdf: boolean;
 
-	InsetIsFixedSize: boolean;
+  InsetIsFixedSize: boolean;
 
-	InsetIsFlippedSideways: boolean;
+  InsetIsFlippedSideways: boolean;
 
-	InsetJavaScriptAttached: boolean;
+  InsetJavaScriptAttached: boolean;
 
-	InsetJavaScriptFile: string;
+  InsetJavaScriptFile: string;
 
-	InsetMonikerFilePath: string;
+  InsetMonikerFilePath: string;
 
-	InsetOpacity: number;
+  InsetOpacity: number;
 
-	InsetPosterFile: string;
+  InsetPosterFile: string;
 
-	InsetSaveFacetToFile: Strings;
+  InsetSaveFacetToFile: Strings;
 
-	readonly InsetU3dAnimationList: Strings;
+  readonly InsetU3dAnimationList: Strings;
 
-	readonly InsetU3dPartList: Strings;
+  readonly InsetU3dPartList: Strings;
 
-	readonly InsetU3dViewList: Strings;
+  readonly InsetU3dViewList: Strings;
 
-	InsetUpdater: never;
+  InsetUpdater: never;
 
-	PageNum: number;
+  PageNum: number;
 
-	ApplyFitToFrame(): void;
+  ApplyFitToFrame(): void;
 
-	DeletePropByName(propName: string): void;
+  DeletePropByName(propName: string): void;
 
-	GetIntByName(propName: string): number;
+  GetIntByName(propName: string): number;
 
-	GetMetricByName(propName: string): number;
+  GetMetricByName(propName: string): number;
 
-	GetPDFInsetPageNumber(): number;
+  GetPDFInsetPageNumber(): number;
 
-	GetUBytesByName(propName: string): UBytes;
+  GetUBytesByName(propName: string): UBytes;
 
-	SetIntByName(propName: string, setVal: number): void;
+  SetIntByName(propName: string, setVal: number): void;
 
-	SetMetricByName(propName: string, setVal: number): void;
+  SetMetricByName(propName: string, setVal: number): void;
 
-	SetUBytesByName(propName: string, setVal: UBytes): void;
+  SetUBytesByName(propName: string, setVal: UBytes): void;
 }

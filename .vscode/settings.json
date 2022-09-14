@@ -1,11 +1,7 @@
 {
-	"editor.formatOnSave": true,
-	"editor.detectIndentation": false,
-	"editor.insertSpaces": false,
-	"editor.links": false,
-	"editor.tabSize": 2,
-	// FILE ASSSOCIATION
-	"files.associations": {
-		"*.jsx": "javascript",
-	}
+  "editor.formatOnSave": true,
+  // FILE ASSSOCIATION
+  "files.associations": {
+    "*.jsx": "javascript"
+  }
 }

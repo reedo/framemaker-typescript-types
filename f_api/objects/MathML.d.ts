@@ -2,23 +2,23 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface MathML extends FMGraphic {
-	MathMLApplyPgfStyle: number;
+  MathMLApplyPgfStyle: number;
 
-	MathMLComposeDpi: number;
+  MathMLComposeDpi: number;
 
-	MathMLData: Strings;
+  MathMLData: Strings;
 
-	MathMLDpi: number;
+  MathMLDpi: number;
 
-	MathMLFontSize: number;
+  MathMLFontSize: number;
 
-	MathMLInline: number;
+  MathMLInline: number;
 
-	MathMLIsFixedSize: boolean;
+  MathMLIsFixedSize: boolean;
 
-	MathMLIsFlippedSideways: boolean;
+  MathMLIsFlippedSideways: boolean;
 
-	MathMLIsInverted: boolean;
+  MathMLIsInverted: boolean;
 
-	MathMLXmlData: string;
+  MathMLXmlData: string;
 }

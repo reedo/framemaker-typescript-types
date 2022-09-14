@@ -2,37 +2,37 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Fn extends FMUniqueObject {
-	readonly ContentHeight: number;
+  readonly ContentHeight: number;
 
-	readonly Element: Element;
+  readonly Element: Element;
 
-	readonly FirstPgf: Pgf;
+  readonly FirstPgf: Pgf;
 
-	readonly FnAnchorString: string;
+  readonly FnAnchorString: string;
 
-	readonly FnNum: number;
+  readonly FnNum: number;
 
-	readonly InTextFrame: TextFrame;
+  readonly InTextFrame: TextFrame;
 
-	readonly InTextObj: SubCol;
+  readonly InTextObj: SubCol;
 
-	readonly LastPgf: Pgf;
+  readonly LastPgf: Pgf;
 
-	readonly NextFn: Fn;
+  readonly NextFn: Fn;
 
-	readonly NextFnInDoc: Fn;
+  readonly NextFnInDoc: Fn;
 
-	readonly Overflowed: boolean;
+  readonly Overflowed: boolean;
 
-	readonly PrevFn: Fn;
+  readonly PrevFn: Fn;
 
-	readonly TextLoc: TextLoc;
+  readonly TextLoc: TextLoc;
 
-	UserString: string;
+  UserString: string;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 
-	GetText(flags: number): TextItems;
+  GetText(flags: number): TextItems;
 
-	GetText2(flags: number, flags2: number): TextItems;
+  GetText2(flags: number, flags2: number): TextItems;
 }

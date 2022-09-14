@@ -2,19 +2,19 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Marker extends FMUniqueObject {
-	readonly Element: Element;
+  readonly Element: Element;
 
-	MarkerText: string;
+  MarkerText: string;
 
-	MarkerTypeId: MarkerType;
+  MarkerTypeId: MarkerType;
 
-	readonly NextMarkerInDoc: Marker;
+  readonly NextMarkerInDoc: Marker;
 
-	OldTypeNum: number;
+  OldTypeNum: number;
 
-	readonly TextLoc: TextLoc;
+  readonly TextLoc: TextLoc;
 
-	UserString: string;
+  UserString: string;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

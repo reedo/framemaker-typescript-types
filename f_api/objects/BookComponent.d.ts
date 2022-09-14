@@ -2,131 +2,131 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface BookComponent extends FMSeriesObject {
-	readonly BookComponentFileType: number;
+  readonly BookComponentFileType: number;
 
-	readonly BookComponentIsFolderWithTemplate: boolean;
+  readonly BookComponentIsFolderWithTemplate: boolean;
 
-	readonly BookComponentIsFolderWithoutTemplate: boolean;
+  readonly BookComponentIsFolderWithoutTemplate: boolean;
 
-	readonly BookComponentIsGeneratable: number;
+  readonly BookComponentIsGeneratable: number;
 
-	readonly BookComponentParent: BookComponent;
+  readonly BookComponentParent: BookComponent;
 
-	BookComponentTemplatePath: string;
+  BookComponentTemplatePath: string;
 
-	BookComponentTitle: string;
+  BookComponentTitle: string;
 
-	BookComponentType: BookComponentType;
+  BookComponentType: BookComponentType;
 
-	readonly BookParent: Book;
+  readonly BookParent: Book;
 
-	ChapNumComputeMethod: number;
+  ChapNumComputeMethod: number;
 
-	ChapterNumStyle: number;
+  ChapterNumStyle: number;
 
-	ChapterNumText: string;
+  ChapterNumText: string;
 
-	ChapterNumber: number;
+  ChapterNumber: number;
 
-	ComponentDisplayText: string;
+  ComponentDisplayText: string;
 
-	readonly ComponentElement: Element;
+  readonly ComponentElement: Element;
 
-	readonly ComponentIsDitaMap: boolean;
+  readonly ComponentIsDitaMap: boolean;
 
-	ComponentIsSelected: boolean;
+  ComponentIsSelected: boolean;
 
-	readonly ComponentType: number;
+  readonly ComponentType: number;
 
-	CorrespondingXmlPath: string;
+  CorrespondingXmlPath: string;
 
-	ExcludeBookComponent: number;
+  ExcludeBookComponent: number;
 
-	ExtractElementTags: Strings;
+  ExtractElementTags: Strings;
 
-	ExtractTags: Strings;
+  ExtractTags: Strings;
 
-	FirstComponentInBookComponent: BookComponent;
+  FirstComponentInBookComponent: BookComponent;
 
-	FirstPageNum: number;
+  FirstPageNum: number;
 
-	FnCustNumString: string;
+  FnCustNumString: string;
 
-	FnFirstNum: object;
+  FnFirstNum: object;
 
-	FnNumComputeMethod: number;
+  FnNumComputeMethod: number;
 
-	FnNumStyle: number;
+  FnNumStyle: number;
 
-	GenerateInclude: boolean;
+  GenerateInclude: boolean;
 
-	ImportFmtInclude: boolean;
+  ImportFmtInclude: boolean;
 
-	InsertLinks: boolean;
+  InsertLinks: boolean;
 
-	Name: string;
+  Name: string;
 
-	readonly NextBookComponentInDFSOrder: BookComponent;
+  readonly NextBookComponentInDFSOrder: BookComponent;
 
-	NextComponentInBook: BookComponent;
+  NextComponentInBook: BookComponent;
 
-	readonly NextSelectedComponentInBook: BookComponent;
+  readonly NextSelectedComponentInBook: BookComponent;
 
-	PageNumComputeMethod: number;
+  PageNumComputeMethod: number;
 
-	PageNumStyle: number;
+  PageNumStyle: number;
 
-	PagePrefix: string;
+  PagePrefix: string;
 
-	PageSide: number;
+  PageSide: number;
 
-	PageSuffix: string;
+  PageSuffix: string;
 
-	PgfNumComputeMethod: number;
+  PgfNumComputeMethod: number;
 
-	readonly PrevBookComponentInDFSOrder: BookComponent;
+  readonly PrevBookComponentInDFSOrder: BookComponent;
 
-	PrevComponentInBook: BookComponent;
+  PrevComponentInBook: BookComponent;
 
-	PrintInclude: boolean;
+  PrintInclude: boolean;
 
-	SecNumComputeMethod: number;
+  SecNumComputeMethod: number;
 
-	SectionNumStyle: number;
+  SectionNumStyle: number;
 
-	SectionNumText: string;
+  SectionNumText: string;
 
-	SectionNumber: number;
+  SectionNumber: number;
 
-	SubsecNumComputeMethod: number;
+  SubsecNumComputeMethod: number;
 
-	SubsectionNumStyle: number;
+  SubsectionNumStyle: number;
 
-	SubsectionNumText: string;
+  SubsectionNumText: string;
 
-	SubsectionNumber: number;
+  SubsectionNumber: number;
 
-	TblFnCustNumString: string;
+  TblFnCustNumString: string;
 
-	TblFnNumComputeMethod: number;
+  TblFnNumComputeMethod: number;
 
-	TblFnNumStyle: number;
+  TblFnNumStyle: number;
 
-	Unique: number;
+  Unique: number;
 
-	UserString: string;
+  UserString: string;
 
-	VolNumComputeMethod: number;
+  VolNumComputeMethod: number;
 
-	VolumeNumStyle: number;
+  VolumeNumStyle: number;
 
-	VolumeNumText: string;
+  VolumeNumText: string;
 
-	VolumeNumber: number;
+  VolumeNumber: number;
 
-	XmlApplicationForBookComponent: string;
+  XmlApplicationForBookComponent: string;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 
-	MoveComponent(moveAction: FA_COMPONENT_MOVE_ACTION): FrameErrorCode;
+  MoveComponent(moveAction: FA_COMPONENT_MOVE_ACTION): FrameErrorCode;
 }

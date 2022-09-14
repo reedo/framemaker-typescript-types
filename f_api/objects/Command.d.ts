@@ -2,55 +2,55 @@
 // Definitions by Dan Reed <https://danreed.dev>
 
 interface Command extends FMNamedObject {
-	CanHaveCheckMark: boolean;
+  CanHaveCheckMark: boolean;
 
-	CheckMarkIsOn: boolean;
+  CheckMarkIsOn: boolean;
 
-	CommandNum: number;
+  CommandNum: number;
 
-	EnabledWhen: number;
+  EnabledWhen: number;
 
-	readonly ExpandOMaticParent: Command;
+  readonly ExpandOMaticParent: Command;
 
-	readonly Fcode: number;
+  readonly Fcode: number;
 
-	readonly Fcodes: UInts;
+  readonly Fcodes: UInts;
 
-	HasShiftOrUnshiftCommand: number;
+  HasShiftOrUnshiftCommand: number;
 
-	HelpLink: string;
+  HelpLink: string;
 
-	KeyboardShortcutLabel: string;
+  KeyboardShortcutLabel: string;
 
-	KeyboardShortcuts: Strings;
+  KeyboardShortcuts: Strings;
 
-	Label: string;
+  Label: string;
 
-	Labels: Strings;
+  Labels: Strings;
 
-	readonly MenuItemIsEnabled: boolean;
+  readonly MenuItemIsEnabled: boolean;
 
-	readonly MenuItemType: number;
+  readonly MenuItemType: number;
 
-	readonly Mode: number;
+  readonly Mode: number;
 
-	readonly NextCommandInSession: Command;
+  readonly NextCommandInSession: Command;
 
-	NextMenuItemInMenu: Command | Menu | MenuItemSeparator;
+  NextMenuItemInMenu: Command | Menu | MenuItemSeparator;
 
-	readonly NextMenuItemInSession: Command | Menu | MenuItemSeparator;
+  readonly NextMenuItemInSession: Command | Menu | MenuItemSeparator;
 
-	ParentMenuId: Menu;
+  ParentMenuId: Menu;
 
-	PrevMenuItemInMenu: Command | Menu | MenuItemSeparator;
+  PrevMenuItemInMenu: Command | Menu | MenuItemSeparator;
 
-	Product: number;
+  Product: number;
 
-	ShiftOrUnshiftCommand: Command;
+  ShiftOrUnshiftCommand: Command;
 
-	View: number;
+  View: number;
 
-	Window: number;
+  Window: number;
 
-	Delete(): FrameErrorCode;
+  Delete(): FrameErrorCode;
 }

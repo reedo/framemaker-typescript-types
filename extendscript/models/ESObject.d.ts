@@ -3,6 +3,6 @@
 
 /** Any ExtendScript object. */
 interface ESObject {
-	/** An object containing details about this object. */
-	readonly reflect: Reflection;
+  /** An object containing details about this object. */
+  readonly reflect: Reflection;
 }
