@@ -8,31 +8,28 @@
       "type": "extendscript-debug",
       "request": "launch",
       "name": "Current script",
-      "targetSpecifier": "framemaker-16.0",
+      "hostAppSpecifier": "framemaker-16.0",
       "engineName": "main",
-      "program": "${file}",
-      "excludes": ["builtin", "prototype"],
-      "stopOnEntry": false
+      "script": "${file}",
+      "hiddenTypes": ["builtin", "prototype"]
     },
     {
       "type": "extendscript-debug",
       "request": "launch",
       "name": "View All Data",
-      "targetSpecifier": "framemaker-16.0",
+      "hostAppSpecifier": "framemaker-16.0",
       "engineName": "main",
-      "program": "${file}",
-      "excludes": [],
-      "stopOnEntry": false
+      "script": "${file}",
+      "hiddenTypes": []
     },
     {
       "type": "extendscript-debug",
       "request": "launch",
       "name": "Exclude All Data",
-      "targetSpecifier": "framemaker-16.0",
+      "hostAppSpecifier": "framemaker-16.0",
       "engineName": "main",
-      "program": "${file}",
-      "excludes": ["builtin", "Function", "prototype", "undefined"],
-      "stopOnEntry": false
+      "script": "${file}",
+      "hiddenTypes": ["builtin", "Function", "prototype", "undefined"]
     }
   ]
 }

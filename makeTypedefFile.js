@@ -1,6 +1,5 @@
 (function () {
-  var BASE_DIR =
-    'C:/Vistair/FMConfig/FM16/ExtendScripts/types/framemaker-typescript-types/f_api/objects/';
+  var BASE_DIR = '';
 
   var objectName = 'TiFlow';
 
