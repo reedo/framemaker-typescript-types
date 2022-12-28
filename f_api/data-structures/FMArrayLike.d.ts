@@ -104,8 +104,8 @@ type TextItems = FMObjectArray<TextItem>;
 type TextItemsConstructor = FMObjectArrayConstructor<TextItem>;
 declare const TextItems: TextItemsConstructor;
 
-type TypedVals = FMObjectArray<TypedVal>;
-type TypedValsConstructor = FMObjectArrayConstructor<TypedVal>;
+type TypedVals = FMObjectArray<TypedVal<TypedValType>>;
+type TypedValsConstructor = FMObjectArrayConstructor<TypedVal<TypedValType>>;
 declare const TypedVals: TypedValsConstructor;
 
 type UBytes = FMObjectArray<number>;

@@ -7,12 +7,12 @@ interface PropVal {
   propIdent: PropIdent;
 
   /** The property value. */
-  propVal: TypedVal;
+  propVal: TypedVal<TypedValType>;
 }
 
 interface PropValConstructor {
   new (): PropVal;
-  new (propIdent: PropIdent, propVal: TypedVal): PropVal;
+  new (propIdent: PropIdent, propVal: TypedVal<TypedValType>): PropVal;
   readonly prototype: PropVal;
 }
 

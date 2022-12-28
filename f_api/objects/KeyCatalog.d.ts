@@ -28,7 +28,7 @@ interface KeyCatalog extends FMNamedObject {
 
   GetAllKeys(): Strings;
 
-  GetKeyDefinition(key: string, keyField: number): TypedVal;
+  GetKeyDefinition(key: string, keyField: number): TypedVal<TypedValType>;
 
   NewKeyDefinition(
     key: string,

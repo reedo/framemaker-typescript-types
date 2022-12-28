@@ -19,7 +19,7 @@ declare type TypedValType =
   | FMObject;
 
 /** Specifies an individual property value. */
-interface TypedVal {
+interface TypedVal<TypedValType> {
   /** Indicates the type of value the structure provides. */
   valType: number;
 
@@ -70,8 +70,8 @@ interface TypedVal {
 }
 
 interface TypedValConstructor {
-  new (): TypedVal;
-  new (item: TypedValType): TypedVal;
+  new (): TypedVal<TypedValType>;
+  new (item: TypedValType): TypedVal<TypedValType>;
 }
 
 declare const TypedVal: TypedValConstructor;

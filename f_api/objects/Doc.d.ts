@@ -853,7 +853,7 @@ interface Doc extends FMNamedObject {
 
   GetTextProps(textLoc: TextLoc): PropVals;
 
-  GetTextVal(textLoc: TextLoc, propNum: number): TypedVal;
+  GetTextVal(textLoc: TextLoc, propNum: number): TypedVal<TypedValType>;
 
   GetUniqueObject(objType: FO_Constant, id: number): FMUniqueObject;
 

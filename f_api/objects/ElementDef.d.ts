@@ -6,7 +6,7 @@ interface ElementDef extends FMNamedObject {
 
   AlsoInsert: Strings;
 
-  AlsoInserts: TypedVal;
+  AlsoInserts: TypedVal<TypedValType>;
 
   AttributeDefs: AttributeDefs;
 

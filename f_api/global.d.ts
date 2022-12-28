@@ -91,7 +91,7 @@ declare function CallClient(clname: string, arg: string): FE_Success | number;
 declare function CallClientEx(
   clname: string,
   arg: string
-): FE_Success | TypedVal;
+): FE_Success | TypedVal<TypedValType>;
 
 /**
  * Checks the scripts returned by `Open()`, `Import()`, `Save()`, and `UpdateBook()` to determine if a specified status bit is set.
