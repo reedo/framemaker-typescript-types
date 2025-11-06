@@ -1,3 +1,10 @@
+// This is a scipt for generating a typescript definitions file for any object that the FrameMaker API provides to you.
+//
+// Set `objectName` just below to the object you want to generate types for.
+// Then copy the generated file into any folder within your ExtendScript project (usually a root `types` folder).
+//
+// Results may vary. These `ReflectionInfo` objects FramMaker provides are incomplete at the best of times!
+
 (function () {
   var BASE_DIR = '';
 
